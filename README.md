@@ -57,7 +57,7 @@ Repository secrets (Settings ▸ Secrets and variables ▸ Actions):
 | `app/_home/` | the homepage deck — one band per screen, with all copy in `copy.tsx`; the hero art is `ui-stage.tsx`, markup and CSS only |
 | `app/styles/` | `tokens.css` (the only place a colour is declared), `base.css`, `docs.css`, `home.css` |
 | `components/mdx/` | the site's own MDX components, registered globally in `mdx-components.tsx` |
-| `lib/dui.tmLanguage.json` | the `.dui` grammar, copied from the VS Code extension (`dreamui-language-support/syntaxes`), so a ```` ```dui ```` fence is coloured as the editor colours it |
+| `lib/dui.tmLanguage.json` | the `.dui` grammar, copied from the VS Code extension (`dreamgui-language-support/syntaxes`), so a ```` ```dui ```` fence is coloured as the editor colours it |
 | `scripts/` | the reference and diagnostics syncs, and the link checker |
 
 ### MDX components

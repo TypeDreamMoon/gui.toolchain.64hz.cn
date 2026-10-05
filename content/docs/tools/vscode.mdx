@@ -1,22 +1,27 @@
 ---
 title: VS Code 扩展
-description: DreamUI Language Support 的安装、它能做什么、补全数据 DUI/.dui-symbols.json 从哪来、和正在运行的编辑器之间的桥，以及命令和设置。
+description: DreamGUI Language Support 的安装、它能做什么、补全数据 DUI/.dui-symbols.json 从哪来、和正在运行的编辑器之间的桥，以及命令和设置。
 ---
 
-[DreamUI Language Support](https://github.com/TypeDreamMoon/dreamui-language-support) 是 `.dui` 的 VS Code
+[DreamGUI Language Support](https://github.com/TypeDreamMoon/dreamgui-language-support) 是 `.dui` 的 VS Code
 扩展：高亮、补全、悬停、跳转、重命名、格式化、诊断，以及一座通往正在运行的 Unreal 编辑器的桥。它从不猜语言——
 补全的数据来自插件导出的符号文件，语义层面的判断来自编译器自己的诊断。
 
 ## 安装
 
-扩展的 id 是 `typedreammoon.dreamui-language-support`，需要 VS Code 1.85 或更新。从仓库的 GitHub Release 下载
-`.vsix`，然后：
+扩展的 id 是 `typedreammoon.dreamgui-language-support`，需要 VS Code 1.85 或更新。它在
+[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=typedreammoon.dreamgui-language-support)
+上：在扩展视图里搜 *DreamGUI Language Support*，或者：
 
 ```powershell
-code --install-extension dreamui-language-support-<version>.vsix
+code --install-extension typedreammoon.dreamgui-language-support
 ```
 
-或者在 VS Code 里用 *Extensions: Install from VSIX...*。
+也可以从仓库的 GitHub Release 下载 `.vsix`，用 `code --install-extension dreamgui-language-support-<version>.vsix`
+或 VS Code 里的 *Extensions: Install from VSIX...* 安装。
+
+0.9.1 及更早的版本 id 是 `typedreammoon.dreamui-language-support`（Marketplace 上这个名字已被占用，0.9.2 起改名）。
+VS Code 把它当成另一个扩展，两份同时启用时每条诊断和补全都会出现两次：装新版后把旧的卸载，扩展启动时发现旧的也会提示。
 
 ### 从编辑器打开工作区
 

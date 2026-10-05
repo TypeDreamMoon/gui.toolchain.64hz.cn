@@ -1,23 +1,29 @@
 ---
 title: The VS Code extension
-description: Installing DreamUI Language Support, what it does, where its completion data DUI/.dui-symbols.json comes from, the bridge to the running editor, and its commands and settings.
+description: Installing DreamGUI Language Support, what it does, where its completion data DUI/.dui-symbols.json comes from, the bridge to the running editor, and its commands and settings.
 ---
 
-[DreamUI Language Support](https://github.com/TypeDreamMoon/dreamui-language-support) is the VS Code extension for
+[DreamGUI Language Support](https://github.com/TypeDreamMoon/dreamgui-language-support) is the VS Code extension for
 `.dui`: highlighting, completion, hover, navigation, rename, formatting, diagnostics, and a bridge to the running Unreal
 editor. It never guesses at the language — its completion data comes from the symbol file the plugin exports, and its
 semantic verdicts come from the compiler's own diagnostics.
 
 ## Installing
 
-The extension's id is `typedreammoon.dreamui-language-support`, and it needs VS Code 1.85 or later. Download the
-`.vsix` from the repository's GitHub releases, then:
+The extension's id is `typedreammoon.dreamgui-language-support`, and it needs VS Code 1.85 or later. It is on the
+[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=typedreammoon.dreamgui-language-support):
+search the Extensions view for *DreamGUI Language Support*, or:
 
 ```powershell
-code --install-extension dreamui-language-support-<version>.vsix
+code --install-extension typedreammoon.dreamgui-language-support
 ```
 
-or use *Extensions: Install from VSIX...* inside VS Code.
+The `.vsix` is also on the repository's GitHub releases, for `code --install-extension
+dreamgui-language-support-<version>.vsix` or *Extensions: Install from VSIX...* inside VS Code.
+
+Up to 0.9.1 the id was `typedreammoon.dreamui-language-support` (the Marketplace had that name taken, so 0.9.2 renamed
+it). VS Code treats it as another extension, and with both enabled every diagnostic and completion comes twice:
+uninstall the old one after installing the new; the extension also says so when it finds it.
 
 ### Opening the workspace from the editor
 

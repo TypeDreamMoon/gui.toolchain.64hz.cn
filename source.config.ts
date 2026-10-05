@@ -7,7 +7,7 @@ export const docs = defineDocs({
 
 /**
  * ```dui fences are highlighted with the grammar the VS Code extension ships
- * (lib/dui.tmLanguage.json, copied from dreamui-language-support/syntaxes), so the
+ * (lib/dui.tmLanguage.json, copied from dreamgui-language-support/syntaxes), so the
  * docs colour a file exactly as the editor does.
  *
  * Lazy loading only ever loads the bundled languages, so a grammar of our own is

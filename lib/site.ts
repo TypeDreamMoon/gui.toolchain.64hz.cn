@@ -9,7 +9,7 @@ export const SITE_DESCRIPTION_EN =
 export const GITHUB_URL = 'https://github.com/TypeDreamMoon/DreamGUI';
 
 export const VSCODE_EXTENSION_URL =
-  'https://github.com/TypeDreamMoon/dreamui-language-support';
+  'https://github.com/TypeDreamMoon/dreamgui-language-support';
 
 /** The toolchain portal, which lists the sister sites. */
 export const PORTAL_URL = 'https://toolchain.64hz.cn';

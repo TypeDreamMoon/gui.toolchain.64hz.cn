@@ -1,0 +1,155 @@
+---
+title: Bindings and routes
+description: The three arrows that connect the tree to the class's code — a binding drives a property, a route calls a handler, a two-way binding mirrors a variable — and Shown, which every widget has.
+---
+
+Three arrows connect the tree to the class's code:
+
+| Written | Direction | Example |
+| --- | --- | --- |
+| `Prop <- Expr` | class to tree: the property follows the expression | `Text <- GetTitle()` |
+| `Event -> Handler` | tree to class: the event calls a function of the class | `OnClicked -> HandleConfirm` |
+| `Prop <-> Var` | both ways: the property and a variable mirror each other | `Value <-> Volume` |
+
+"The class" is the user widget the tree compiles into — which is where UMG puts event handling too. Its functions and
+variables may be written in C++ or in the Blueprint's graph.
+
+## `<-` drives a property
+
+```dui
+class /Game/UI/WBP_Inventory
+
+Widget Root {
+    + VerticalBox { Spacing = 8 }
+    Text Title { Text <- GetTitle() }
+    Image Glow { RenderOpacity <- Fade() * 0.8 }
+    Widget Badge { Shown <- Count() > 0 && !IsLocked() }
+}
+```
+
+The right side is an expression, re-evaluated as the class runs. It may hold:
+
+- a call to a function of the class, `Func()` or `Func(a, b)`;
+- a variable of the class, `Volume` — including a `props` entry;
+- a literal: a number, a string, `true`, `false`, or `@Resource`;
+- operators, loosest first: `||`; `&&`; `==` `!=`; `<` `<=` `>` `>=`; `+` `-`; `*` `%`; and the prefixes `!` and `-`.
+  Parentheses group.
+
+There is no `/` — it belongs to paths and comments — and no `? :`, no indexing `Items[0]`, no array or dictionary
+literals. Every operator added to the expressions has to be lowered into a Blueprint graph, taught to the VS Code
+extension's scanner and documented in three places, so a division or a choice is a function on the class, and an index is
+a function that takes one; for widgets, a choice is an [`if`](/en/docs/dui/control-flow).
+
+A bare `Func()` binds that function directly; anything richer is compiled into a generated function. What the target
+property needs:
+
+- A setter ([DUI5005](/en/docs/diagnostics/dui5xxx#dui5005)) — a component's prop excepted, see
+  [Writing a component](/en/docs/dui/components).
+- To be a **whole** property of the widget, its visual or a behaviour
+  ([DUI5008](/en/docs/diagnostics/dui5xxx#dui5008)): not a slot property, not a container's, not a field inside a struct
+  (`AnchorData.SizeDelta <- …` is refused).
+
+| Code | When |
+| --- | --- |
+| [DUI2011](/en/docs/diagnostics/dui2xxx#dui2011) | the right side does not parse |
+| [DUI5004](/en/docs/diagnostics/dui5xxx#dui5004) | a function the class lacks, or a bare-bound one that takes parameters |
+| [DUI5011](/en/docs/diagnostics/dui5xxx#dui5011) | an expression the compiler cannot lower into a function |
+
+In VS Code, with the editor running, completion after `<-` asks the editor what the class really declares, calls get
+signature help, and hovering a function or variable shows its type.
+
+## `->` routes an event
+
+```dui
+class /Game/UI/WBP_Dialog
+
+Widget Root {
+    + HorizontalBox { Spacing = 16 }
+    Native.Button Confirm { OnClicked -> HandleConfirm }
+    Widget Cancel {
+        + UIButton { OnClick -> HandleCancel }
+    }
+}
+```
+
+The left side is an event of the widget, its visual or a behaviour: a `BlueprintAssignable` delegate (what the `Controls/`
+family declares), or an `FDreamUIEventDelegate` property (what the older `Interaction/` behaviours declare). Every widget
+has `OnVisibilityChanged`, `OnFocusReceived` and `OnFocusLost`. The right side is a function of the class (no
+parentheses), or `emit` of an event the class declares (see [Writing a component](/en/docs/dui/components)):
+
+```dui
+class /Game/UI/Components/WBP_Row
+
+events {
+    Picked(Number Index)
+}
+
+Widget Root {
+    + UIButton { OnClick -> emit Picked(0) }
+}
+```
+
+| Code | When |
+| --- | --- |
+| [DUI5010](/en/docs/diagnostics/dui5xxx#dui5010) | the left side is not an event of the destination |
+| [DUI6004](/en/docs/diagnostics/dui6xxx#dui6004) | a handler the class does not have |
+| [DUI6005](/en/docs/diagnostics/dui6xxx#dui6005) | a handler whose parameters are not the event's |
+
+The compiler resolves every route into `UDreamWidgetBlueprint::EventBindings`, and `UDreamUserWidget::BindEventBindings`
+attaches them at Initialize. In the designer the same thing is the *Events* section of the details panel: its `+` creates
+a custom event with the right signature and the route that names it.
+
+<Callout type="warn">
+  `FDreamUIEventDelegate`'s own per-instance event list is legacy and read-only. Bindings saved in it still fire and can
+  still be removed from the panel, but new ones are not authored there: a binding of that kind calls a function on an
+  arbitrary object with a literal argument, which UMG has no equivalent of and `.dui` has no syntax for. Opening a panel
+  that holds one logs a warning naming it. Nothing is rewritten automatically — turning "call `Foo` on that behaviour with
+  this value" into "call a handler on the user widget" would change what the game does — so re-author those as routes
+  when you touch them.
+</Callout>
+
+## `<->` mirrors both ways
+
+```dui
+class /Game/UI/WBP_Audio
+
+Widget Root {
+    + VerticalBox { Spacing = 8 }
+    Native.Slider Volume { Value <-> MasterVolume }
+    Native.Toggle Mute { bIsOn <-> bMuted }
+}
+```
+
+The property follows the variable, and a change the control makes is written back into it. The variable must be a
+FieldNotify variable of the class.
+
+`<->` is two halves: forward, a generated getter, standing where any bound function stands; backward, a generated route
+`OnValueChangedBP -> generated setter`. Every value control broadcasts its changes under that one conventional name, and a
+destination without it is DUI5010. A name after `<->` that is not a variable of the class (as of the previous compile) is
+DUI5011.
+
+In VS Code, completion after `<->` lists the class's variables, FieldNotify ones first.
+
+## `Shown`
+
+Every widget has `Shown`: `true` is Visible, `false` is Collapsed. It keeps nothing of its own — reading it reads
+`Visibility`, writing it writes `Visibility` — and it is what a condition binds:
+
+```dui
+class /Game/UI/WBP_Detail
+
+Widget Root {
+    + VerticalBox { }
+    Widget Detail {
+        Shown <- HasDetail()
+    }
+    Text Empty {
+        Text = "Nothing selected"
+        Shown = false
+    }
+}
+```
+
+A widget that is Hidden or hit-test invisible counts as shown, and keeps that state while `Shown` is `true`; it is not
+made Visible. An `if` binds `Shown` on each widget of its branches; see [if and for](/en/docs/dui/control-flow). `Shown`
+and `Visibility` are one value, and the designer's write-back compares only the face the file spells.

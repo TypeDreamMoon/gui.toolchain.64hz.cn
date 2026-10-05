@@ -1,0 +1,11 @@
+{
+  "title": "Tools",
+  "pages": [
+    "designer",
+    "vscode",
+    "debugging",
+    "tests",
+    "bench",
+    "scripting"
+  ]
+}

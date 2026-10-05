@@ -1,0 +1,139 @@
+---
+title: Designer write-back
+description: The designer is a front end for the .dui — which line an edit is written into, how a hand-written file is left alone, and which edits it refuses (DUI7xxx).
+---
+
+The designer is a front end for the file: a change made there is a change to the text, written into the line that holds
+the value — or a new line after the node's others — with everything else byte for byte as it was. How to use the
+designer itself is in [Designer](/en/docs/tools/designer).
+
+## What is written, and what is not
+
+The write-back compares **values**, never source text. For every property that might have changed, the question it asks
+is: **would a rebuild from the current text produce the value the tree now holds?** If yes, the file already says this
+and nothing is written, whatever the spelling. So:
+
+- Opening a hand-written file in the designer writes nothing. Your `(400,240)` does not become `(400, 240)`, nor `0.50`
+  `0.5`.
+- The baseline it compares against is a tree built from the current text by the same builder the compiler uses, so
+  styles, class defaults, enum spellings and localization are answered exactly as a compile answers them.
+- A property whose value comes from a style, once changed, is written as an override **on the node**, never silently into
+  a style that other nodes wear.
+- A value with no `.dui` spelling — an object reference, a struct with no short form — is skipped rather than guessed at.
+  Writing a plausible wrong literal into the author's file is worse than a missing feature.
+- One flush is one undo step. When nothing changed nothing is written at all: an empty undo step makes Ctrl+Z appear to
+  do nothing, so the user presses it again and loses the edit before.
+- When the text does not parse or does not build, nothing is written: without a baseline every property looks changed,
+  and a flush would rewrite the whole file over an error the author is in the middle of fixing.
+
+What is written is spelled the way the VS Code extension's formatter spells it (one space around `=` and the arrows, `}`
+on its own line, and so on), so the two never fight.
+
+An edit lands on the line that holds the value whatever the node's type is written as (a container type, an alias, an
+unnamed node alike); inside the node's `@slot { … }` block when it has one; and on an unnamed node by the id made for it.
+The contents of a nested component instance belong to another file and are not written here; the copies a `for` makes at
+run time are nobody's line and are not written either.
+
+When the file changes on disk underneath (saved from VS Code, say), the recompile that follows takes the **file**'s side
+and does not flush the designer's older values back over it. An edit pending in the designer when the file changed under
+it writes nothing ([DUI7002](/en/docs/diagnostics/dui7xxx#dui7002)).
+
+## Changes to the structure
+
+A widget added in the designer is written with the type this file would use: its `use … as` alias when the class has one
+here, a container type for a plain widget that lays out children (`VerticalBox Column`).
+
+One dropped into a named slot of a component instance is written into that slot's fill, `slot Detail { … }`, which is
+written first when the instance has none.
+
+An unnamed node renamed in the designer gets its first id, written after its type. Before:
+
+```dui
+Widget Root {
+    + HorizontalBox { Spacing = 14 }
+    Text { Text = "Status" }
+}
+```
+
+After renaming that `Text` to `Status` in the designer:
+
+```dui
+Widget Root {
+    + HorizontalBox { Spacing = 14 }
+    Text Status { Text = "Status" }
+}
+```
+
+A named node renamed in the designer gets `(was: OldId)`, so the next compile carries graph references, bindings and
+animation tracks across (see [Nodes and values](/en/docs/dui/nodes-and-values)). The template of a `for` or an `each` is not
+removed or moved out of its loop: a loop with nothing to repeat does not build.
+
+## The `@fill` shorthand
+
+A new weight replaces the number in `@fill 2`, and a bare `@fill` given another rule becomes `@slot SizeRule = …`. Before:
+
+```dui
+Widget Root {
+    + HorizontalBox { }
+    Text Label {
+        Text = "Volume"
+        @fill
+    }
+}
+```
+
+After setting `Label`'s `SizeRule` to Auto in the designer:
+
+```dui
+Widget Root {
+    + HorizontalBox { }
+    Text Label {
+        Text = "Volume"
+        @slot SizeRule = Auto
+    }
+}
+```
+
+## What the designer refuses to write
+
+A few things have no line to write into, and the designer says so ([DUI7004](/en/docs/diagnostics/dui7xxx#dui7004))
+instead of inventing one:
+
+- **The visibility of a widget an `if` shows or hides.** Change the condition, or move the widget out of the branch. See
+  [if and for](/en/docs/dui/control-flow).
+- **A `SizeRule` other than Fill on `@fill 2`.** Write `@slot SizeRule = …` and `@slot FillWeight = 2` in its place.
+- **Anything on a row of a `rows` table but a column's value or a line of the row's own block.** The row's line spells
+  only its columns. A column's value is replaced in its cell; but a row is not removed, moved, named or given a `+` block
+  from the designer, and no node is placed beside a table (the place would be inside it) — edit the text. See
+  [rows tables](/en/docs/dui/rows).
+
+A value a node takes from its style's `+ Component` line is not written either
+([DUI7005](/en/docs/diagnostics/dui7xxx#dui7005)): the style is shared, and the node has no `+` line of its own to hold the
+change. Add one to the node (`+ VerticalBox { Spacing = 20 }`), or change the style:
+
+```dui
+style Column {
+    + VerticalBox { Spacing = 8 }
+}
+
+Widget Root {
+    + HorizontalBox { }
+    Widget Left : Column {
+        + VerticalBox { Spacing = 20 }
+    }
+}
+```
+
+## Write-back diagnostics
+
+<Wide>
+
+| Code | When | What to do |
+| --- | --- | --- |
+| [DUI7001](/en/docs/diagnostics/dui7xxx#dui7001) | an edit with no home in the file: an unknown node, a bound property, a slot with no block | a bound property follows its binding, so change the binding; otherwise give the edit a home in the text |
+| [DUI7002](/en/docs/diagnostics/dui7xxx#dui7002) | the file changed under a pending edit; nothing was written | make the edit again once the designer shows the new text |
+| [DUI7003](/en/docs/diagnostics/dui7xxx#dui7003) | a value the language cannot spell (a non-finite number); its line is left alone | use a finite value |
+| [DUI7004](/en/docs/diagnostics/dui7xxx#dui7004) | an edit to something no line spells: a visibility an `if` decides, a shorthand that cannot take the change, a table row | edit the text as above |
+| [DUI7005](/en/docs/diagnostics/dui7xxx#dui7005) | an edit to a value a style's `+` line gives the node | add the line to the node, or change the style |
+
+</Wide>

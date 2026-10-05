@@ -1,0 +1,15 @@
+{
+  "title": "DreamGUI",
+  "pages": [
+    "index",
+    "start",
+    "concepts",
+    "dui",
+    "controls",
+    "tools",
+    "guides",
+    "diagnostics",
+    "reference",
+    "changelog"
+  ]
+}

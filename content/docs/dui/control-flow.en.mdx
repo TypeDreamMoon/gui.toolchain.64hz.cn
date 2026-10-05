@@ -1,0 +1,131 @@
+---
+title: if and for
+description: if / else if / else switches which branch is shown, for and each repeat one template from the class's data, and the rules both keep.
+---
+
+`.dui` has two control statements, both written inside a node's block: `if` decides from a condition which branch's widgets
+are shown, and `for` / `each` repeat one template from the class's data. Both are **run-time**: every widget the file
+writes goes into the class, and the switching and the repeating happen as the class runs.
+
+## `if` and `else`
+
+```dui
+class /Game/UI/WBP_Title
+use "UI/Components/Row.dui" as Row
+
+VerticalBox Root {
+    Spacing = 12
+    if HasSave() {
+        Row Continue { Label = "Continue" }
+    } else if IsLoading() {
+        Native.Throbber Spinner { }
+    } else {
+        Text NoSave { Text = "No save data" }
+    }
+    Row NewGame { Label = "New game" }
+}
+```
+
+The condition is a binding expression (written as in [Bindings and routes](/en/docs/dui/bindings)). Each branch holds
+widgets. Every widget of every branch becomes a child of the enclosing node, in order, with a `Shown` bound to "this
+branch is the one taken":
+
+| Widget | Its `Shown` |
+| --- | --- |
+| `Continue` | `HasSave()` |
+| `Spinner` | `!HasSave() && IsLoading()` |
+| `NoSave` | `!HasSave() && !IsLoading()` |
+
+Switching is therefore a change of visibility: a branch not taken is collapsed, not destroyed, and keeps its state. It also
+means `if` is not a compile-time condition: every branch is built, and nothing in a file leaves a widget out of the class.
+A variant that must not exist at all is a second class.
+
+- A branch holds widgets only: a property, a slot line or a `+` block in one is
+  [DUI2018](/en/docs/diagnostics/dui2xxx#dui2018), and so is a slot declaration or a loop.
+- A widget in a branch that writes a `Shown` of its own is shown when its branch is taken **and** its own condition holds.
+- `if` belongs inside a node. At the top of a file, or an `else` with no `if` before it, is DUI2018; so is an `if` without
+  its condition or its block.
+- `else` may stand on the line the `}` closed or on the next one.
+- `if` and `else` are keywords only where they lead a branch: a property named `if` is still a property.
+
+This is refused, because the branch holds a property rather than a widget:
+
+```text
+Widget Root {
+    if HasSave() {
+        Text = "Continue"
+    }
+}
+```
+
+Changing, in the designer, the visibility of a widget an `if` shows or hides is refused by the write-back
+([DUI7004](/en/docs/diagnostics/dui7xxx#dui7004)): no line spells it. Change the condition, or move the widget out of the
+branch. See [Designer write-back](/en/docs/dui/write-back).
+
+## `for` and `each`
+
+Both repeat one template widget per item of a **source**. The source is a function, `GetOptions()`, or a variable,
+`Options` — a FieldNotify array refreshes the copies when it changes. Inside the body, `Prop <- Item.Member` binds a
+property of each copy to a member of its item.
+
+### `for`: copies in the panel
+
+```dui
+class /Game/UI/WBP_Options
+use "UI/Components/Row.dui" as Row
+
+VerticalBox Options {
+    Text Header { Text = "Options" }
+    for Option in GetOptions() {
+        Row { Label <- Option.Label  Kind <- Option.Kind }
+    }
+    Text Footer { Text = "Press A to change" }
+}
+```
+
+At run time the template stays in the tree, collapsed, and one copy per item takes its place among the host's children, in
+item order — between whatever siblings surround the `for`. Nothing is virtualized and nothing else is made: the host's own
+container arranges the copies like any children. Use it for short lists: a settings page's options, a tab bar.
+
+### `each`: a list view's cells
+
+```dui
+class /Game/UI/WBP_Inventory
+use "UI/Components/Row.dui" as Row
+
+Widget Inventory {
+    + UIListView { }
+    each Item in GetItems() {
+        Row Cell { Label <- Item.Name }
+    }
+}
+```
+
+`each` fills the list view of the widget it is written in: the cells are made and recycled as the list scrolls. Use it for
+long lists.
+
+### The rules both keep
+
+- The body is **exactly one** widget, the template ([DUI5021](/en/docs/diagnostics/dui5xxx#dui5021),
+  [DUI5012](/en/docs/diagnostics/dui5xxx#dui5012)). Wrap several in a container.
+- A loop is not the root, and does not nest in another loop (DUI5021, DUI5012). The way to nest is a component whose own
+  file has the inner loop, given its list through a `props` entry.
+- A `for` needs a host that takes any number of children (not one with fixed room, DUI5021); an `each` needs a
+  `+ UIListView` (or a recyclable scroll view) on its host, or it is DUI5012.
+- In the body, the only binding is the single hop `Item.Member`; an expression or a `<->` there is
+  [DUI5014](/en/docs/diagnostics/dui5xxx#dui5014). Nor can the body `emit`
+  ([DUI6012](/en/docs/diagnostics/dui6xxx#dui6012)).
+- The source must exist on the class ([DUI6006](/en/docs/diagnostics/dui6xxx#dui6006)) and be an array of objects
+  ([DUI6007](/en/docs/diagnostics/dui6xxx#dui6007)).
+
+The other codes that concern loops:
+
+| Code | When |
+| --- | --- |
+| [DUI2010](/en/docs/diagnostics/dui2xxx#dui2010) | a loop header that is not `<keyword> Var in Source` or `Source()` |
+| [DUI3008](/en/docs/diagnostics/dui3xxx#dui3008) | a loop variable that hides an enclosing loop's (a warning) |
+| [DUI5007](/en/docs/diagnostics/dui5xxx#dui5007) | a loop built by a caller with nowhere to record it, and skipped (a warning) |
+
+The copies a `for` makes at run time are nobody's line, and the designer's write-back leaves them out; nor does the
+designer remove the template of a loop or move it out — a loop with nothing to repeat does not build. In VS Code, typing
+`Item.` inside an `each` body completes the members of the source's element type.

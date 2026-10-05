@@ -1,0 +1,329 @@
+---
+title: Nodes and values
+description: How a node is written, the rules an id keeps, nodes with no id, the order node types resolve in, and every kind of value a property takes.
+---
+
+A tree is made of nodes. A node is a **type**, an **id** and an optional **block**:
+
+```dui
+Widget Root {
+    Text Title {
+        Text = "Settings"
+    }
+    Image Divider
+}
+```
+
+The block holds, in any order: properties, `@slot` lines (see [Slot lines and components](/en/docs/dui/slots-and-components)),
+`+ Component` blocks, child nodes, and the control statements `if` and `for` / `each` (see
+[if and for](/en/docs/dui/control-flow)). A node with nothing to say needs no block: `Image Divider` alone on a line is a
+node.
+
+## The id
+
+The id is the node's identity. It names the widget, the class member variable a Blueprint graph reads, the key a binding
+resolves through, and the localization key of the node's strings. So:
+
+- It is a C++ identifier: letters, digits and `_`, not starting with a digit
+  ([DUI3002](/en/docs/diagnostics/dui3xxx#dui3002)). Characters outside ASCII are letters, so an id may be Chinese.
+- It is unique in the file, compared **without regard to case** ([DUI3001](/en/docs/diagnostics/dui3xxx#dui3001)) — the
+  variable it becomes is an `FName`, which ignores case.
+- It is not a keyword: `class`, `style`, `resources`, `slot`, `for`, `each`, `in`, `was`, `use`, `timeline`, `external`,
+  `ease`.
+
+```dui
+Widget Root {
+    Text 标题 { Text = "设置" }
+    Text Subtitle { Text = "Audio and display" }
+}
+```
+
+This is DUI3001 — `title` and `Title` are one id:
+
+```text
+Widget Root {
+    Text Title
+    Text title
+}
+```
+
+A name longer than an `FName` holds is [DUI1006](/en/docs/diagnostics/dui1xxx#dui1006).
+
+### The style and rename clauses
+
+Two clauses may follow the id, in either order:
+
+- `: StyleName` — the node wears a style; see [Styles and resources](/en/docs/dui/styles-and-resources).
+- `(was: OldId)` — the node was renamed. The next compile moves what pointed at the old id — graph references, bindings,
+  animation tracks — to the new one.
+
+```dui
+style Caption { FontSize = 14 }
+
+Widget Root {
+    Text Heading (was: Title) : Caption { Text = "Settings" }
+}
+```
+
+Keep the clause until the file has been compiled once. A second rename before that keeps the **first** old id. The ways a
+rename can be refused:
+
+| Code | When |
+| --- | --- |
+| [DUI3010](/en/docs/diagnostics/dui3xxx#dui3010) | `(was: X)` while X is still an id in the file |
+| [DUI3011](/en/docs/diagnostics/dui3xxx#dui3011) | two nodes claim `(was: X)` |
+| [DUI3012](/en/docs/diagnostics/dui3xxx#dui3012) | `(was: X)` on the node called X |
+| [DUI3013](/en/docs/diagnostics/dui3xxx#dui3013) | the old id is also another member's name, so graph references are not moved (a warning) |
+| [DUI2008](/en/docs/diagnostics/dui2xxx#dui2008) | `(was: …)` holding something other than one id |
+
+Renaming a node with F2 in VS Code writes the clause for you, and renaming it back removes it; a rename in the designer
+writes it too.
+
+## Nodes with no id
+
+A node nothing refers to by name may leave the id out, as long as a block or a style clause follows the type:
+
+```dui
+style Caption { FontSize = 14 }
+
+Widget Root {
+    HorizontalBox {
+        Spacing = 14
+        Text { Text = "Status" }
+        Text : Caption { Text = "Ready" }
+    }
+}
+```
+
+The parser gives such a node an id of its own: `<parent id>__<type><n>` — the id of the nearest enclosing node that has
+one (or `Root`), two underscores, the type with every character an id cannot hold made `_`, and the count of earlier
+unnamed siblings of that type. Above, the `HorizontalBox` is `Root__HorizontalBox0` and its two texts are
+`Root__HorizontalBox0__Text0` and `Root__HorizontalBox0__Text1`. A type `nier.Row` reads `nier_Row` in an id, and `@Row`
+reads `_Row`. A made id that collides with one the author wrote is bumped with a further `_<n>`.
+
+The same text always gives the same ids, so they are as stable as written ones while the file keeps its shape; adding an
+unnamed sibling of the same type **before** one renumbers the ones after it. Hovering an unnamed node in VS Code shows the
+id it compiles to.
+
+An unnamed node still has a class member variable — the run time finds a binding's widget through it — but a hidden one:
+Blueprint graphs cannot see it. Give a node an id when code needs it. An unnamed node cannot carry `(was: …)`
+([DUI2004](/en/docs/diagnostics/dui2xxx#dui2004)): there is nothing to rename from.
+
+A type alone on a line, with no id, no block and no style (`Text`), is still DUI2004: it is as likely a property whose `=`
+went missing.
+
+```text
+Widget Root {
+    Text
+}
+```
+
+## Node types
+
+What a node's type means is decided in this order; the first match wins:
+
+1. **A built-in tag**: `Widget` (a rect with no visual, the ordinary container), or the tag of a visual — `Text`, `Image`,
+   `RectBlock`, `Sprite`, `Texture`, `Ring`, `Polygon`, `PolygonLine`, `Line2DRaw`, `Line2DChildren`, `Empty`,
+   `StaticMesh`, `BackgroundBlur`, `BackgroundPixelate`, `PixelSort`, `PostProcessRenderElement`,
+   `PostProcessRenderElementText`, `CanvasRenderTargetPreviewer`, `UMGWidget`. A plugin adds a visual with
+   `DECLARE_DREAM_GUI_VISUAL`.
+2. **A layout container**: `VerticalBox`, `HorizontalBox`, `StackBox`, `Overlay`, `CanvasPanel`, `GridPanel`,
+   `UniformGridPanel`, `WrapBox`, `SizeBox`, `ScaleBox`, `SafeZone`, `ScrollBox`, `WidgetSwitcher`, `Border`,
+   `MenuAnchor`. The node is a plain widget carrying that container, and its own lines set the container's properties as
+   well as the widget's.
+3. **A component alias**: a name given by `use … as` — `Row`, or `nier.Row` for one a namespace brought. See
+   [`use`](/en/docs/dui/use).
+4. **`@Name`**: the widget class an `Asset` entry of a `resources` block names. The older way to name a component by a
+   short name; `use … as` is the one to reach for.
+5. **A registry tag**: `Scope.Name`, a widget class registered with `DECLARE_DREAM_GUI_WIDGET`. The plugin's controls are
+   under `Native`: `Native.Button`, `Native.Toggle`, `Native.Slider`, `Native.SpinBox`, `Native.ProgressBar`,
+   `Native.Dropdown`, `Native.TextInput`, `Native.EditableText`, `Native.MultiLineEditableText`, `Native.RichText`,
+   `Native.ScrollBox`, `Native.ScrollBar`, `Native.List`, `Native.TileView`, `Native.TreeView`, `Native.TabView`,
+   `Native.ExpandableArea`, `Native.Border`, `Native.Dialog`, `Native.MenuAnchor`, `Native.RingMenu`,
+   `Native.RadioButton`, `Native.InputKeySelector`, `Native.Throbber`, `Native.NativeWidgetHost`. See
+   [Controls](/en/docs/controls).
+6. **An asset path**: `/Game/UI/WBP_Row`, or `/Script/MyGame.MyWidget` for a native class.
+
+All six together:
+
+```dui
+use "UI/Components/Row.dui" as Row
+use "UI/Common.dui" as ui
+
+resources {
+    Asset Badge = /Game/UI/WBP_Badge
+}
+
+VerticalBox Root {
+    Text Title { Text = "Types" }                       // 1 a built-in tag
+    HorizontalBox Bar { Spacing = 8 }                   // 2 a layout container
+    Row Audio { Label = "Audio" }                       // 3 a component alias
+    ui.Row Video { Label = "Video" }                    // 3 an alias from a namespace
+    @Badge NewBadge { }                                 // 4 an Asset resource
+    Native.Button Confirm { }                           // 5 a registry tag
+    /Game/UI/WBP_Row Language { Label = "Language" }    // 6 an asset path
+}
+```
+
+A type that is none of these is [DUI3003](/en/docs/diagnostics/dui3xxx#dui3003).
+
+### A container as the type
+
+```dui
+use "UI/Components/Row.dui" as Row
+
+style Lists { AnchorData.SizeDelta = (0, 400) }
+
+VerticalBox Categories : Lists {
+    Spacing = 29
+    Row Audio { Label = "Audio" }
+}
+```
+
+is the same tree as:
+
+```dui
+use "UI/Components/Row.dui" as Row
+
+style Lists { AnchorData.SizeDelta = (0, 400) }
+
+Widget Categories : Lists {
+    + VerticalBox { Spacing = 29 }
+    Row Audio { Label = "Audio" }
+}
+```
+
+A name the widget and the container both have means the widget's. A node has one layout container: `+ HorizontalBox` on a
+node whose type is already a container is [DUI5022](/en/docs/diagnostics/dui5xxx#dui5022).
+
+### Component instances
+
+A node typed by a class (3 to 6 above) is an **instance** of a component: its contents come from that class, and its lines
+set that class's properties. The class must be a concrete DreamUI user widget
+([DUI5006](/en/docs/diagnostics/dui5xxx#dui5006)); a path that does not load is
+[DUI5001](/en/docs/diagnostics/dui5xxx#dui5001). How to write one is in [Writing a component](/en/docs/dui/components).
+
+Because tags and containers are asked first, an alias can never change what `Text` or `VerticalBox` means; an alias that
+tries is refused ([DUI3018](/en/docs/diagnostics/dui3xxx#dui3018)).
+
+`DUI/.dui-symbols.json`, which the editor writes on start and on `DreamUI.ExportSymbols`, lists every tag, container and
+registered widget with its properties, for an editor's completion.
+
+## Properties
+
+```dui
+Widget Root {
+    AnchorData.SizeDelta = (400, 240)
+    + Overlay { }
+    Text Title { FontSize = 24 }
+}
+```
+
+`Name = Value` (a property with no `=` or arrow, or nothing after it, is
+[DUI2005](/en/docs/diagnostics/dui2xxx#dui2005)). A name is a reflected property, or a dotted path into a struct property (`AnchorData.SizeDelta`). A bare
+name is looked for on the widget first, then on its visual, then — for a container-typed node — on its container, then on
+its behaviours; the first that has it takes it.
+
+- A name nothing has is [DUI4001](/en/docs/diagnostics/dui4xxx#dui4001), with the nearest match suggested. `Width = 400`,
+  for one, points at `AnchorData.SizeDelta`.
+- A dotted path whose head resolves and whose tail does not is [DUI4002](/en/docs/diagnostics/dui4xxx#dui4002).
+- A property of a visual the node's type does not create is [DUI5002](/en/docs/diagnostics/dui5xxx#dui5002).
+- A property text cannot write — transient, deprecated, part of the object graph, a delegate — is
+  [DUI4006](/en/docs/diagnostics/dui4xxx#dui4006).
+
+When a block names a property twice, the later line wins. A node's own lines win over its style's.
+
+## Values
+
+<Wide>
+
+| Kind | Examples | Notes |
+| --- | --- | --- |
+| Number | `24`, `0.95`, `-3`, `1e-45` | Read against the property's numeric type. |
+| String | `"Settings"`, `"a \"quote\""` | Escapes: `\"`, `\\`, `\n`, `\t`, `\r`. On an `FText` the string is localized. |
+| Colour | `#FFF`, `#FFFF`, `#1E1E1E`, `#1E1E1EFF` | 3, 4, 6 or 8 hex digits. sRGB. |
+| Tuple | `(400, 240)`, `(0, 8, 0, 0)` | A vector, a margin, a rotator — whatever struct the property is. May span lines. |
+| Word | `Left`, `Collapsed`, `true`, `None` | An enum value, a bool, or `None` for an empty reference. |
+| Asset path | `/Game/UI/T_Icon`, `"/Game/UI/T_Icon.T_Icon"` | An object or class reference. Quoted works too. |
+| Resource | `@Accent` | The value of a `resources` entry; see [Styles and resources](/en/docs/dui/styles-and-resources). |
+| Node id | `CheckMark` | On a property that holds a widget, a visual or a behaviour: the node of that id in this file. |
+
+</Wide>
+
+The parser records a value's **shape**, never its meaning: `Left` is a word and `(400, 240)` a two-element tuple when they
+are read. Whether they become an enum value or an `FVector2D` is decided by the property they are written on.
+
+```dui
+class /Game/UI/WBP_Values
+
+resources {
+    Color Accent = #FF6600
+}
+
+Widget Root {
+    AnchorData.SizeDelta = (400, 240)                // a tuple, into the AnchorData struct
+    + Overlay { }
+
+    Text Title {
+        Text     = "Settings"                        // a string; on an FText it is localized
+        FontSize = 24                                // a number
+        Color    = @Accent                           // a resource
+        Font     = /DreamGUI/DefaultFont_DistanceField   // an asset path
+        HAlign   = Center                            // a word: an enum value
+    }
+
+    Image Swatch {
+        Brush.TintColor = #1E1E1EFF                  // a colour
+        @slot Padding = (0, 8,
+                         0, 0)                       // a tuple may span lines
+    }
+
+    Widget Mute {
+        + UIToggle {
+            bIsOn = false                            // a word: a bool
+            ToggleTransitionTarget = Check           // a node id: the visual of the Image below
+        }
+        Image Check
+    }
+}
+```
+
+How each kind goes wrong:
+
+- A **number** that cannot be read — two decimal points, a trailing dot, a unit glued on (`24px`) — is
+  [DUI1004](/en/docs/diagnostics/dui1xxx#dui1004).
+- A **string** that reaches the end of its line without its closing quote is
+  [DUI1002](/en/docs/diagnostics/dui1xxx#dui1002). There is no `\uXXXX`: `.dui` files are UTF-8, so write the character.
+- A **colour** whose digit count is not 3, 4, 6 or 8 is [DUI1005](/en/docs/diagnostics/dui1xxx#dui1005).
+- A **tuple** with the wrong number of elements is [DUI4004](/en/docs/diagnostics/dui4xxx#dui4004); a value whose shape
+  cannot be the property's type at all is [DUI4003](/en/docs/diagnostics/dui4xxx#dui4003).
+- A **word** the property's enum does not declare is [DUI4005](/en/docs/diagnostics/dui4xxx#dui4005).
+- An **asset path** that does not load is [DUI5001](/en/docs/diagnostics/dui5xxx#dui5001); one longer than an `FName` holds
+  is [DUI1007](/en/docs/diagnostics/dui1xxx#dui1007).
+- A **resource** name with no entry is [DUI4007](/en/docs/diagnostics/dui4xxx#dui4007).
+- A **node id** that names no node in the file is [DUI5013](/en/docs/diagnostics/dui5xxx#dui5013).
+
+### Flags enums
+
+The language has no `|`. A combination of a flags enum is written as **the number its flags add up to**. The compiler
+validates that number against the enum, and the write-back prints it back as a number, so the round trip is whole.
+
+### Localization keys
+
+A string can carry the key it is localized under:
+
+```dui
+class /Game/UI/WBP_Dialog
+
+Widget Root {
+    + HorizontalBox { Spacing = 16 }
+    Text Confirm { Text = "OK" @key("Dialog.Confirm") }
+    Text Hint { Text = "Press any key" }
+}
+```
+
+Without one the key is `<node id>.<property>` (`Hint.Text` above); for a line of a `+` block, the component's class and
+position go between the two. The namespace is the path the `class` line gives (`/Game/UI/WBP_Dialog` here), or the file's
+name when there is no `class` line. So changing a node's id changes its keys: VS Code says so when you rename, and tells
+you `@key` can pin the old ones. `@key(…)` holding something other than one string, or following a value that is not a
+string, is [DUI2009](/en/docs/diagnostics/dui2xxx#dui2009).

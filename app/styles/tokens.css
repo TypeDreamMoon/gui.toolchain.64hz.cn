@@ -1,0 +1,223 @@
+/* =============================================================================
+   tokens — the single source of truth for colour, type, space, radius, motion.
+
+   Light values live in `@theme` (the fumadocs surface palette, so Tailwind's
+   `*-fd-*` utilities resolve to the DreamGUI palette) and in `:root` (brand and
+   derived tokens). Dark values live in `.dark`. Nothing below this file
+   re-declares a raw colour.
+
+   The brand is glass blue — the panels a UI is made of — with an amber accent
+   for focus and highlight. The surface ramp carries the same blue hue at low
+   saturation, so the chrome never fights the content.
+   ============================================================================= */
+
+@theme {
+  /* fumadocs surface palette — light */
+  --color-fd-background: hsl(222 46% 98%);
+  --color-fd-foreground: hsl(222 42% 13%);
+  --color-fd-muted: hsl(222 34% 94%);
+  --color-fd-muted-foreground: hsl(222 18% 39%);
+  --color-fd-popover: hsl(0 0% 100%);
+  --color-fd-card: hsl(222 44% 96%);
+  --color-fd-card-foreground: hsl(222 42% 13%);
+  --color-fd-border: hsl(222 32% 78% / 0.62);
+  --color-fd-primary: hsl(222 74% 56%);
+  --color-fd-primary-foreground: hsl(222 60% 98%);
+  --color-fd-secondary: hsl(222 40% 93%);
+  --color-fd-secondary-foreground: hsl(222 44% 17%);
+  --color-fd-accent: hsl(222 46% 89% / 0.72);
+  --color-fd-accent-foreground: hsl(222 62% 20%);
+  --color-fd-ring: hsl(222 80% 62%);
+  --color-fd-overlay: hsl(222 52% 10% / 0.22);
+}
+
+:root {
+  /* --- brand ------------------------------------------------------------- */
+  --dream-flux: #2f6bff; /* primary — glass blue, the panels */
+  --dream-spark: #ffaa33; /* amber — focus and highlight */
+  --dream-cyan: #22c8e8;
+  --dream-pink: #ff5c7a;
+  --dream-yellow: #ffc861;
+  --dream-ink: #0c1424;
+
+  /* --- type -------------------------------------------------------------- */
+  --dgui-font-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+
+  /* modest ~1.2 ratio; body sits at 15px so an h3 still reads as a divider */
+  --dgui-text-2xs: 0.6875rem; /* 11 */
+  --dgui-text-xs: 0.75rem; /* 12 */
+  --dgui-text-sm: 0.8125rem; /* 13 */
+  --dgui-text-base: 0.9375rem; /* 15 */
+  --dgui-text-md: 1.0625rem; /* 17 */
+  --dgui-text-lg: 1.1875rem; /* 19 */
+  --dgui-text-xl: 1.5rem; /* 24 */
+  --dgui-text-2xl: 1.8125rem; /* 29 */
+  --dgui-text-3xl: 2.25rem; /* 36 */
+
+  --dgui-leading-tight: 1.2;
+  --dgui-leading-snug: 1.45;
+  --dgui-leading-body: 1.78;
+
+  /* comfortable measure on the docs column */
+  --dgui-measure: 76ch;
+
+  /* --- space ------------------------------------------------------------- */
+  --dgui-space-1: 0.25rem;
+  --dgui-space-2: 0.5rem;
+  --dgui-space-3: 0.75rem;
+  --dgui-space-4: 1rem;
+  --dgui-space-5: 1.5rem;
+  --dgui-space-6: 2rem;
+  --dgui-space-7: 3rem;
+  --dgui-space-8: 4rem;
+
+  /* --- radius ------------------------------------------------------------ */
+  --dgui-radius-xs: 4px;
+  --dgui-radius-sm: 6px;
+  --dgui-radius-md: 8px;
+  --dgui-radius-lg: 12px;
+  --dgui-radius-pill: 999px;
+
+  /* --- layout ------------------------------------------------------------ */
+  --dgui-nav-height: 3.5rem; /* fumadocs' #nd-nav is h-14 */
+
+  /* --- motion ------------------------------------------------------------ */
+  --dgui-ease: cubic-bezier(0.22, 0.9, 0.3, 1);
+  --dgui-dur-fast: 160ms;
+  --dgui-dur-mid: 320ms;
+  --dgui-dur-slow: 720ms;
+
+  /* --- derived: brand ink, contrast-checked against the light background -- */
+  --dgui-brand-text: color-mix(in oklab, var(--dream-flux) 84%, black);
+  --dgui-cyan-text: color-mix(in oklab, var(--dream-cyan) 58%, black);
+  --dgui-pink-text: color-mix(in oklab, var(--dream-pink) 68%, black);
+  --dgui-yellow-text: color-mix(in oklab, var(--dream-yellow) 50%, black);
+  --dgui-spark-text: color-mix(in oklab, var(--dream-spark) 62%, black);
+  /* ink that sits on top of a full-strength brand fill, both themes */
+  --dgui-on-brand: hsl(222 60% 97%);
+
+  /* --- derived: rules and surfaces --------------------------------------- */
+  --dgui-rule-faint: color-mix(in oklab, var(--color-fd-border) 52%, transparent);
+  --dgui-rule: color-mix(in oklab, var(--dream-flux) 14%, var(--color-fd-border));
+  --dgui-rule-strong: color-mix(in oklab, var(--dream-flux) 45%, var(--color-fd-border));
+
+  --dgui-surface-raised: color-mix(in oklab, var(--color-fd-card) 74%, white);
+  --dgui-surface-sunken: color-mix(in oklab, var(--dream-flux) 5%, var(--color-fd-card));
+  --dgui-tint-weak: color-mix(in oklab, var(--dream-flux) 7%, transparent);
+  --dgui-tint-hover: color-mix(in oklab, var(--dream-flux) 6%, transparent);
+
+  --dgui-shadow-soft: 0 14px 34px color-mix(in oklab, var(--dream-ink) 12%, transparent);
+  --dgui-shadow-lift: 0 12px 28px color-mix(in oklab, var(--dream-ink) 16%, transparent);
+  --dgui-scroll-shadow: color-mix(in oklab, var(--dream-ink) 20%, transparent);
+  --dgui-scrollbar-thumb: color-mix(in oklab, var(--dream-flux) 40%, transparent);
+  --dgui-focus-ring: color-mix(in oklab, var(--dream-flux) 78%, var(--dream-ink));
+
+  /* --- derived: code ------------------------------------------------------ */
+  --dgui-code-inline-bg: color-mix(in oklab, var(--dream-flux) 11%, transparent);
+  --dgui-code-inline-fg: color-mix(in oklab, var(--dream-spark) 26%, var(--dgui-brand-text));
+  --dgui-code-surface: color-mix(in oklab, var(--color-fd-card) 60%, white);
+  --dgui-synopsis-surface: color-mix(in oklab, var(--dream-flux) 5%, var(--color-fd-card));
+  --dgui-synopsis-fg: color-mix(in oklab, var(--color-fd-foreground) 76%, transparent);
+
+  /* --- derived: tables ---------------------------------------------------- */
+  --dgui-table-head-bg: color-mix(in oklab, var(--dream-flux) 8%, var(--color-fd-card));
+  --dgui-table-row-hover: color-mix(in oklab, var(--dream-flux) 5%, transparent);
+  --dgui-table-max-block: min(76vh, 44rem);
+
+  /* --- derived: version pills --------------------------------------------- */
+  --dgui-since-bg: color-mix(in oklab, var(--dream-flux) 13%, transparent);
+  --dgui-since-fg: var(--dgui-brand-text);
+  --dgui-since-ue-bg: color-mix(in oklab, var(--dream-cyan) 15%, transparent);
+  --dgui-since-ue-fg: var(--dgui-cyan-text);
+
+  /* --- derived: diagnostic severities ------------------------------------- */
+  --dgui-sev-error-bg: color-mix(in oklab, var(--dream-pink) 15%, transparent);
+  --dgui-sev-error-fg: var(--dgui-pink-text);
+  --dgui-sev-warning-bg: color-mix(in oklab, var(--dream-yellow) 24%, transparent);
+  --dgui-sev-warning-fg: var(--dgui-yellow-text);
+  --dgui-sev-info-bg: color-mix(in oklab, var(--dream-cyan) 15%, transparent);
+  --dgui-sev-info-fg: var(--dgui-cyan-text);
+
+  /* --- callout intents ----------------------------------------------------
+     fumadocs reads these through `--callout-color`, so the intents map straight
+     onto the brand palette. Declared unlayered so they win over the preset's
+     `@theme static` defaults. */
+  --color-fd-info: var(--dgui-cyan-text);
+  --color-fd-warning: var(--dgui-yellow-text);
+  --color-fd-error: var(--dgui-pink-text);
+  --color-fd-success: var(--dgui-brand-text);
+  --color-fd-idea: var(--dgui-spark-text);
+}
+
+.dark {
+  /* fumadocs surface palette — dark */
+  --color-fd-background: hsl(222 34% 8%);
+  --color-fd-foreground: hsl(222 32% 92%);
+  --color-fd-muted: hsl(222 28% 13%);
+  --color-fd-muted-foreground: hsl(220 18% 70%);
+  --color-fd-popover: hsl(222 32% 10%);
+  --color-fd-card: hsl(222 30% 11%);
+  --color-fd-card-foreground: hsl(222 32% 92%);
+  --color-fd-border: hsl(222 48% 62% / 0.24);
+  --color-fd-primary: hsl(222 96% 78%);
+  --color-fd-primary-foreground: hsl(222 60% 10%);
+  --color-fd-secondary: hsl(222 28% 14%);
+  --color-fd-secondary-foreground: hsl(222 32% 92%);
+  --color-fd-accent: hsl(222 44% 30% / 0.48);
+  --color-fd-accent-foreground: hsl(222 82% 89%);
+  --color-fd-ring: hsl(222 96% 78%);
+  --color-fd-overlay: hsl(222 62% 3% / 0.5);
+
+  /* brand ink — lifted toward white so the raw hues clear 5:1 on the dark bg */
+  --dgui-brand-text: color-mix(in oklab, var(--dream-flux) 48%, white);
+  --dgui-cyan-text: color-mix(in oklab, var(--dream-cyan) 88%, white);
+  --dgui-pink-text: color-mix(in oklab, var(--dream-pink) 90%, white);
+  --dgui-yellow-text: var(--dream-yellow);
+  --dgui-spark-text: color-mix(in oklab, var(--dream-spark) 88%, white);
+
+  --dgui-rule-faint: color-mix(in oklab, var(--color-fd-border) 60%, transparent);
+  --dgui-rule: color-mix(in oklab, var(--dream-flux) 14%, var(--color-fd-border));
+  --dgui-rule-strong: color-mix(in oklab, var(--dream-flux) 36%, var(--color-fd-border));
+
+  --dgui-surface-raised: color-mix(in oklab, var(--color-fd-card) 86%, white);
+  --dgui-surface-sunken: color-mix(in oklab, var(--color-fd-background) 80%, black);
+  --dgui-tint-weak: color-mix(in oklab, var(--dream-flux) 13%, transparent);
+  --dgui-tint-hover: color-mix(in oklab, var(--dream-flux) 12%, transparent);
+
+  --dgui-shadow-soft: 0 18px 42px hsl(222 80% 3% / 0.46);
+  --dgui-shadow-lift: 0 12px 28px hsl(222 80% 3% / 0.56);
+  --dgui-scroll-shadow: hsl(222 80% 2% / 0.55);
+  --dgui-scrollbar-thumb: color-mix(in oklab, var(--dream-flux) 40%, transparent);
+  --dgui-focus-ring: color-mix(in oklab, var(--dream-flux) 60%, white);
+
+  --dgui-code-inline-bg: color-mix(in oklab, var(--dream-flux) 20%, transparent);
+  --dgui-code-inline-fg: color-mix(in oklab, var(--dream-spark) 22%, var(--dgui-brand-text));
+  --dgui-code-surface: color-mix(in oklab, var(--color-fd-background) 70%, black);
+  --dgui-synopsis-surface: color-mix(in oklab, var(--dream-flux) 8%, var(--dgui-code-surface));
+  --dgui-synopsis-fg: color-mix(in oklab, var(--color-fd-foreground) 72%, transparent);
+
+  --dgui-table-head-bg: color-mix(in oklab, var(--dream-flux) 9%, var(--color-fd-card));
+  --dgui-table-row-hover: color-mix(in oklab, var(--dream-flux) 9%, transparent);
+
+  --dgui-since-bg: color-mix(in oklab, var(--dream-flux) 22%, transparent);
+  --dgui-since-ue-bg: color-mix(in oklab, var(--dream-cyan) 18%, transparent);
+
+  --dgui-sev-error-bg: color-mix(in oklab, var(--dream-pink) 20%, transparent);
+  --dgui-sev-warning-bg: color-mix(in oklab, var(--dream-yellow) 20%, transparent);
+  --dgui-sev-info-bg: color-mix(in oklab, var(--dream-cyan) 20%, transparent);
+
+  --color-fd-info: var(--dgui-cyan-text);
+  --color-fd-warning: var(--dgui-yellow-text);
+  --color-fd-error: var(--dgui-pink-text);
+  --color-fd-success: var(--dgui-brand-text);
+  --color-fd-idea: var(--dgui-spark-text);
+}
+
+/* the sidebar keeps its own muted ramp so it separates from the page in dark */
+.dark #nd-sidebar {
+  --color-fd-muted: hsl(222 28% 13%);
+  --color-fd-secondary: hsl(222 28% 14%);
+  --color-fd-muted-foreground: hsl(220 18% 70%);
+}

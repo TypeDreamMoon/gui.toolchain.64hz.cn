@@ -1,0 +1,17 @@
+{
+  "title": ".dui 语言",
+  "pages": [
+    "overview",
+    "nodes-and-values",
+    "slots-and-components",
+    "styles-and-resources",
+    "use",
+    "components",
+    "bindings",
+    "control-flow",
+    "rows",
+    "timelines",
+    "write-back",
+    "example"
+  ]
+}

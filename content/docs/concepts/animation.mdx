@@ -1,0 +1,123 @@
+---
+title: 动画
+description: 三种动画方式：DreamTween 模块的补间（面板里的控件用 RenderOffsetTo、RenderScaleTo、RenderAngleTo、RenderTranslationTo，EDreamTweenEase，DreamTween.MaxStepSeconds），控件动画（UDreamWidgetAnimation 与 Sequencer），以及 .dui 里的 timeline。
+---
+
+DreamGUI 里让东西动起来有三种方式，各管一类事：
+
+| 方式 | 适合 | 在哪 |
+| --- | --- | --- |
+| **补间** | 代码里临时起意的动：入场、悬停、数值变化 | `DreamTween` 模块，`UDreamTweener` |
+| **控件动画** | 设计好的、可在 Sequencer 里编辑的动画 | `UDreamWidgetAnimation`，嵌在类里 |
+| **`.dui` timeline** | 由文本拥有、每次编译重建的控件动画 | `.dui` 文件里的 `timeline` 块 |
+
+## 补间
+
+`DreamTween` 是一个独立的底层模块。每个 `*To` 函数返回一个 `UDreamTweener`，可以链式设置：`SetEase`、`SetDelay`、
+`SetLoop`（`Once`、`Restart`、`Yoyo`、`Incremental`，次数 `-1` 为无限）、`SetTimeScale`、`SetAutoKill`，以及回调 `OnStart`、`OnUpdate`、
+`OnCycleStart`、`OnCycleComplete`、`OnComplete`、`OnKill`；控制用 `Pause`、`Resume`、`Restart`、`Goto`、`ForceComplete`、`Kill`。
+
+控件、视觉和行为自带补间：
+
+| 在哪 | 补间 |
+| --- | --- |
+| `UDreamWidget` | `AnchoredPositionTo`、`SizeDeltaTo`、`WidthTo`、`HeightTo`、`RenderOpacityTo`、`LocalPositionTo`、`LocalScaleTo`、`LocalRotatorTo`、`WorldPositionTo`……以及下一节的渲染变换补间 |
+| `UDreamVisual` | `ColorTo`、`AlphaTo` |
+| `UDreamTextPaintLibrary` | `PaintPhaseTo`、`PaintAngleTo`、`PlayShimmer`（见[文本](/docs/concepts/text)） |
+| `UDreamTweenBPLibrary` | 通用的 `FloatTo`、`Vector3To`、`ColorTo`、`MaterialScalarParameterTo`、`DelayCall`、`SpringFloat`……也有给 UMG 控件用的 `UMG_*` 补间 |
+
+缓动是 `EDreamTweenEase` 里的一个**名字**，整个插件共用这一张表：`Linear`，`In` / `Out` / `InOut` 加上 `Quad`、`Cubic`、`Quart`、`Sine`、
+`Expo`、`Circ`、`Elastic`、`Back`、`Bounce`，以及用曲线的 `CurveFloat`（`SetCurveFloat`）。控件补间的默认缓动是 `OutCubic`，默认时长 0.5 秒。
+
+几条容易踩到的规则：
+
+- **完成和被杀掉的补间会退役**：句柄变为无效，持有它的 UPROPERTY 在下一次垃圾回收时被置空；对退役的补间 `Kill`、`ForceComplete`、`Goto`
+  什么也不做，`Restart` 只警告。想在结束后重新播放，在开始前 `SetAutoKill(false)`，或者在它自己的 `OnComplete` 里 `Restart`（这会让它继续运行）。
+- 弹簧（`SpringFloat`）默认在静止时保持；`SetTarget` 唤醒它。
+- 主人已经不在的补间被丢弃，不调用回调。
+
+### 暂停与时间膨胀
+
+控件的补间跟随项目设置：在屏幕上的 UI 看 `bScreenSpaceUIAffectByGamePause` 和 `bScreenSpaceUIAffectByTimeDilation`（默认都关），
+其他的看 `bWorldSpaceUIAffectByGamePause` 和 `bWorldSpaceUIAffectByTimeDilation`（默认都开）。布局动画和嵌入的 UMG 控件遵守同一条规则。
+
+`DreamTween.MaxStepSeconds`（控制台变量，`0` 为关，默认关）给一帧推进补间的步长设上限：比它长的一帧 —— 加载资源的界面、新文字的第一次绘制 ——
+只把世界驱动的补间推进这么多。于是一个恰好在卡顿之前开始的入场动画会从原处接着播，而不是直接出现在终点。手动 tick 从不受限。
+
+## 面板里的控件：用渲染变换做动画
+
+面板会在下一轮把子控件的锚定位置和尺寸写回去，所以对一个面板放置的控件用 `AnchoredPositionTo` 或 `LocalPositionTo`，
+动画和布局只会轮流改它。要动的应该是**画出来的样子**，而不是布局：
+
+| 补间 | 动什么 |
+| --- | --- |
+| `RenderTranslationTo(FVector)` | 本地空间的平移：X 是深度、Y 向右、Z 向上 |
+| `RenderOffsetTo(FVector2D)` | 同样的移动，但在画布平面上（x 向右、y 向上），深度不变 |
+| `RenderScaleTo(FVector)` | 绕 `RenderTransformPivot` 缩放 |
+| `RenderAngleTo(float)` | 画布平面内的角度（`SetRenderTransformAngle`） |
+
+它们只动画法、从不动布局，兄弟也不会让位。渲染变换持续变化的控件会被画布做成渲染层，在 GPU 上移动（见[渲染](/docs/concepts/rendering)）。
+
+```cpp
+// Card 在一个 VerticalBox 里：动的是画出来的样子，不是它的槽
+Card->SetRenderOpacity(0.0f);
+Card->SetRenderTranslation(FVector(0.0, 0.0, -40.0));   // 比布局放的位置低 40
+Card->RenderOpacityTo(1.0f, 0.25f);
+Card->RenderOffsetTo(FVector2D::ZeroVector, 0.35f, 0.0f, EDreamTweenEase::OutCubic)
+    ->OnComplete([]() { /* 落定 */ });
+
+// 一直呼吸的图标
+Icon->RenderScaleTo(FVector(1.15, 1.15, 1.0), 0.6f, 0.0f, EDreamTweenEase::InOutSine)
+    ->SetLoop(EDreamTweenLoop::Yoyo, -1);
+```
+
+在 `.dui` 写的组件里也是一样：面板里的组件实例通过渲染变换来动。
+
+## 控件动画
+
+`UDreamWidgetAnimation` 是嵌在类里的一个 `UMovieSceneSequence`，放在根控件的动画组件里（`UDreamWidgetAnimationComponent`），
+像其他动画一样有自己的类成员变量，在 Sequencer 里编辑。播放走 `UDreamUserWidget` 上和 UMG 同名的入口：`PlayAnimation`、`PlayAnimationByName`、
+`PlayAnimationForward`、`PlayAnimationReverse`、`PlayAnimationTimeRange`、`QueuePlayAnimation`、`PauseAnimation`、`GetAnimationByName`、
+`BindToAnimationStarted` / `BindToAnimationFinished`、`FlushAnimations`。播放返回一个 `FDreamUIAnimationHandle`，可以安全地保留：
+实例结束后它就不再有效（`UDreamUIAnimationLibrary::IsAnimationHandleValid`）。
+
+- **轨道能驱动什么**：标了 `Interp` 的属性。在控件上有 `RenderTranslation`、`RenderRotation`、`RenderScale`、`RelativeLocation`、
+  `RelativeRotationEuler`（四元数没有属性轨道，所以旋转用这个欧拉镜像）、`RelativeScale`、`PerspectiveFieldOfView`、`PerspectiveOrigin`；
+  视觉的 `Color`；文本的 paint 相位和 `PaintAngleOffset`。锚点那一块是结构体，结构体没有属性轨道，所以控件有一组可动画的镜像，
+  在轨道上显示为 Width、Height、Anchor Left 等（`AnimatableWidth`、`AnimatableHeight`、`AnimatableAnchorLeft`……）。
+- **事件轨道**：DreamUI Event 轨道上的关键帧在播放经过时通过 `OnAnimationEvent` 广播。
+- **C++ 绑定**：`meta = (BindDreamWidgetAnim)` 声明类的代码要播一个同名动画，层级里没有就是编译错误；`BindDreamWidgetAnimOptional` 不报错。
+- **播放器**：只由普通属性轨道组成的动画由 DreamGUI 自己的播放器直接从通道求值，而不是走 Sequencer 的实体系统
+  （`DreamUI.Animation.DirectEvaluation`、`DreamUI.Animation.LitePlayer`，默认都开）。
+
+放进关卡的 `ADreamWorldWidgetActor` 还可以直接被 Level Sequence 占有，组件上的 `WidgetOpacity`、`WidgetOffset`、`bWidgetVisible`
+都能打关键帧（见[世界空间 UI](/docs/concepts/world-space)）。
+
+## `.dui` 里的 timeline
+
+`.dui` 文件里的 `timeline` 块是一个由文件拥有的控件动画。每行一条轨道：节点 id 组成的路径、它驱动的属性、关键帧（`时间 = 值`，可带
+`ease` 和缓动名）。`@时间 -> 名字` 是事件轨道上的一个关键帧。
+
+```dui
+timeline Pulse {
+    duration = 0.6
+    loop     = PingPong
+
+    Icon.RenderScale            : 0.0 = (1, 1, 1), 0.3 = (1.25, 1.25, 1) ease InOutQuad, 0.6 = (1, 1, 1)
+    Row/Title.RenderTranslation : 0.0 = (-40, 0, 0), 0.2 = (0, 0, 0) ease OutCubic
+    @0.3 -> Landed
+}
+
+timeline Celebrate external
+
+Widget Root {
+    Image Icon { }
+    Widget Row {
+        Text Title { Text = "Ready" }
+    }
+}
+```
+
+块编译成根的动画组件里的一个 `UDreamWidgetAnimation`，和别的动画一样有成员变量、走同样的入口播放。因为文件拥有它，每次编译都会重建，
+**动画编辑器以只读方式打开它** —— 要改就改 `.dui`，或者写成 `timeline Name external` 把它永久交给 Sequencer。轨道能驱动的正是动画编辑器提供的那些
+属性，缓动是 `EDreamTweenEase` 里的名字而不是切线。完整规则见 [`.dui` timeline](/docs/dui/timelines)。

@@ -27,7 +27,7 @@ import sys
 
 SITE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(SITE, "content", "docs", "reference")
-DEFAULT_PLUGIN = r"C:\Users\10678\Documents\Unreal Projects\58\DevProject\Plugins\Dream\DreamGUI"
+DEFAULT_PLUGIN = r"I:\UnrealProject_Moon\DEV_58\DevTest\Plugins\DreamGUI"
 
 # The plugin index's groups, in its order, with the Chinese sidebar label for each.
 GROUP_ZH = {

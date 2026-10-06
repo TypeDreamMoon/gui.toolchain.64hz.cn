@@ -27,7 +27,7 @@ import sys
 SITE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(SITE, "content", "docs", "diagnostics")
-DEFAULT_PLUGIN = r"C:\Users\10678\Documents\Unreal Projects\58\DevProject\Plugins\Dream\DreamGUI"
+DEFAULT_PLUGIN = r"I:\UnrealProject_Moon\DEV_58\DevTest\Plugins\DreamGUI"
 
 FAMILIES = [
     ("1", "词法", "Lexer", "一串字符构不成任何记号。", "A character sequence that is not a token."),

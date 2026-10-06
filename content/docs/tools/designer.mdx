@@ -1,6 +1,6 @@
 ---
 title: Widget 设计器
-description: 对照 UMG 设计器重建的 DreamUI Designer：按矩形拾取、缩放手柄与锚点徽章、框选与拖放重挂、调色板、撤销、源文件菜单、事件路由，以及对 .dui 支撑的类它能改什么、不能改什么。
+description: 对照 UMG 设计器重建的 DreamUI Designer：按矩形拾取、缩放手柄与锚点徽章、框选与拖放重挂、调色板、细节面板、组件、撤销、源文件菜单、事件路由、内容浏览器里的菜单和缩略图，以及对 .dui 支撑的类它能改什么、不能改什么。
 ---
 
 打开一个 Dream Widget Blueprint，就进入 **DreamUI Designer**。它有两个模式：*Designer*（画布、调色板、层级、
@@ -34,10 +34,53 @@ description: 对照 UMG 设计器重建的 DreamUI Designer：按矩形拾取、
 
 ## 调色板
 
-调色板列出可以放进来的东西：基础 widget、布局容器、控件库、项目里的 widget Blueprint。
+调色板列出可以放进来的东西，分组和 UMG 的调色板一样：**Basic**（Widget、Text、Image、RectBlock）、Panels、Common、Input、Lists、
+Scrolling、Containers、Primitive、Shapes、Effects、Components、Modifiers、Advanced、**User Created**（项目里的 widget Blueprint），最后是
+**Legacy**。
 
-- **收藏**：常用的条目可以收藏，收藏组排在最前面；
+- 每组里的条目按名字排序；面板去掉了 "UMG " 前缀。
+- **Legacy** 放的是控件库取代掉的东西——LGUI 时代的行为、Blueprint 预设，以及 Tile View 和 Scroll Box 两个行为——留着是为了让建在它们上面的
+  widget 还能看懂。它总在最后，默认折叠；打开过一次，设计器会记住。
+- User Created 不列插件自己的预设目录。
+- 层级面板的 *Create* 菜单用的是同一套分组和顺序。
+- **收藏**：常用的条目可以收藏，收藏组排在最前面；注册键没变，所以以前的收藏都还在；
 - **搜索**：搜索框过滤条目，过滤时所有分组展开。
+
+项目自己注册的控件，分类在 DreamGUI 的分类之后、按注册顺序排列。分类名来自 `DreamUIPaletteCategory`（`DreamUIControlRegistry.h`）；
+以前拿 `FDreamUIControlDescriptor::Category` 去和 "Controls"、"Post Process"、"Extensions" 或某个旧分类名比较的扩展代码，要改用那里的名字。
+
+## 细节面板
+
+选中一个 widget 时，分类按一个 widget 的构成排列：先是它放在哪（Slot、Canvas、Layout），再是它是什么（Visual、Panel、Self Layout），
+然后是它怎么表现（Appearance、Behavior），最后是 Render Transform，以及默认折叠的 Perspective、Navigation、Accessibility 和 Localization。
+Is Enabled 在 Behavior 里。以前排在最下面、把 Layout 的行原样重复一遍的 Transform 和锚点数据分类已经去掉了。
+
+视觉自己的行也按用途排：
+
+- **Text** 以 Text、Font、Font Size、Font Style、Color、对齐、Overflow Type、Auto Wrap Text 和 Rich Text 开头；其余的——Wrapping、
+  Typography（包括语言选择）、Text Style / Paint、Rendering（覆盖材质、预设材质、混合模式、网格尺寸、小字栅格化等）——放在默认折叠的组里。
+- **Image** 的刷子排在最前，射线检测的行排在最后。
+- **Sprite** 和 **Texture** 的颜色在 sprite / 纹理的下面。
+
+## 组件
+
+*Add Component* 只列出选中 widget 支持的组件——以前它在每个 widget 上列出所有组件类，加上去之后什么都不做：
+
+| 组件 | 要求 |
+| --- | --- |
+| 网格修饰器 | 一个会建网格的视觉（`UDreamVisualBatchMesh`） |
+| `UISpriteSequencePlayer` | Sprite 视觉 |
+| `UISpriteSheetTexturePlayer` | Texture 视觉 |
+| `UITextHyperlink`、文字动画 | Text 视觉 |
+| `UDreamUMGWidgetInteraction` | UMG Widget 视觉 |
+| `UDreamRetainerBox`、`UDreamInvalidationBox` | widget 上已经有画布（`UDreamCanvas`） |
+| 画布、导航、动画组件、具名槽位、内容 widget、Retainer Box、Invalidation Box | 每个 widget 一个 |
+| 可选择对象（`UUISelectable` 一族）、滚动视图（`UUIScrollView` 一族） | 每个 widget 只能是一种 |
+| 内容 widget | 不提供给有多个子节点的 widget |
+
+粘贴、复制，以及拖到面板上的组件资产，遵守同样的规则；被拒绝的拖放会说出原因。规则写在 `FDreamUIComponentSupport`（`DreamGUIEditor` 模块）
+里：为一个类注册的规则对它的每个子类都成立，包括 Blueprint 子类。项目在自己编辑器模块的 `StartupModule` 里，用 `RequireVisual`、
+`RequireComponent`、`OnePerWidget` 或 `AddRule` 为自己的组件加规则。
 
 ## 视口工具栏
 
@@ -144,3 +187,13 @@ timeline Celebrate external
 `external` 不构建任何东西，它是一条清单：动画活在资产里，Sequencer 随便编辑，而文件仍然列着它——这让"这个类有哪些
 动画"可以靠读文件回答。材质参数轨道、手调曲线这类 timeline 写不出来的东西，本来就该是 `external`。见
 [timeline](/docs/dui/timelines)。
+
+## 内容浏览器
+
+**添加菜单。** **DreamGUI Widget** 在 *添加* 菜单最上面一组，和引擎的 Blueprint Class、Material 排在一起。下面的 **DreamGUI** 子菜单分节：
+Basic（DreamGUI Widget、Widget Animation）、Fonts、Graphics、Rich Text，每一项是一个短名字加一行提示。位图字体已经不再开发，它显示为
+Legacy Bitmap Font，提示里指向距离场字体。资产的类型名——磁贴上、过滤器里的那个——没有变。
+
+**缩略图。** 一个 widget Blueprint 的磁贴画的是它编写的那个界面：缩略图像设计器的预览一样把 widget 建出来、按设计画布的尺寸排好、画出来，
+和 UMG 画 widget 缩略图的方式一样。它在资产还没有干净的缩略图时和保存时画，不会在指针停在磁贴上的每一帧都画，所以大界面不会卡住内容浏览器。
+已经存进资产里的旧缩略图（锚点线框）会一直显示，直到资产下一次被修改并保存；还没有编译出类的 Blueprint 仍然画线框。

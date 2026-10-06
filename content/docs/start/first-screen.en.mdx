@@ -27,7 +27,8 @@ A `.dui` is source, not an asset, so it does not go under `Content/`. See [Proje
 <Step>
 ### Make a widget Blueprint
 
-Right-click in the Content Browser → **DreamUI** → **DreamUI Widget Blueprint**. Two pickers follow:
+The Content Browser's **Add** menu (or a right-click on empty space) → **DreamGUI Widget**, in the top group beside the
+engine's Blueprint Class and Material; it is also first in the **DreamGUI** submenu. Two pickers follow:
 
 - **Parent class**: pick **DreamUI Text User Widget** (`UDreamTextUserWidget`). Only a widget Blueprint with that parent
   builds its tree from a `.dui`; with any other parent the designer does not show the source-file button at all.
@@ -62,9 +63,14 @@ classes built from it.
 <Step>
 ### Show it
 
-In a Blueprint, the **Add Widget Of Class To Viewport** node (`UDreamUIBPLibrary::AddWidgetOfClassToViewport`) — on the
-level Blueprint's BeginPlay, for instance — with `WBP_HelloDreamGUI` as the class. From C++ it is the same call, with a
-dependency on the `DreamGUI` module:
+In a Blueprint — the level Blueprint's BeginPlay, for instance — a **Create Dream Widget** node with `WBP_HelloDreamGUI`
+as its class, its return value wired into **Add to Viewport**, as with UMG's Create Widget. Once the class is picked, the
+node has a pin for each of its Expose on Spawn properties (every `props` and `viewmodels` entry of a `.dui` is one) and
+an Owning Player pin; the pins are assigned **before** the widget initializes, so On Initialized and every binding's
+first value already see them. Add to Viewport's ZOrder orders it against other screen pages, and **Remove from Parent**
+takes it off again.
+
+From C++ one call does it, with a dependency on the `DreamGUI` module:
 
 ```cpp
 #include "DreamUIBPLibrary.h"

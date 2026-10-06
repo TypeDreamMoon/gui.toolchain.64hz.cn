@@ -10,8 +10,8 @@ description: 从 Blueprint 和 C++ 创建、显示、放进世界的入口（UDr
 
 | 想做的事 | UMG | DreamGUI |
 | --- | --- | --- |
-| 实例化一个 widget 类，先不放到任何地方 | `CreateWidget` | `CreateDreamWidgetOfClass` |
-| 创建并放上视口 | `CreateWidget` + `AddToViewport` | `AddWidgetOfClassToViewport` |
+| 实例化一个 widget 类，先不放到任何地方 | Create Widget 节点 / `CreateWidget` | Create Dream Widget 节点 / `CreateDreamWidgetOfClass` |
+| 创建并放上视口 | `CreateWidget` + `AddToViewport` | Create Dream Widget + `AddToViewport`，或者 `AddWidgetOfClassToViewport` |
 | 从视口拿掉 | `RemoveFromParent` | `RemoveFromViewport` |
 | 构造一个裸 widget | `WidgetTree::ConstructWidget<T>()` | `ConstructWidget` |
 | 立刻布局（同一帧要尺寸时） | `ForceLayoutPrepass` | `ForceLayoutPrepass` |
@@ -20,11 +20,17 @@ description: 从 Blueprint 和 C++ 创建、显示、放进世界的入口（UDr
 
 几个细节：
 
-- **返回引脚跟着类走**。`AddWidgetOfClassToViewport` 和 `CreateDreamWidgetOfClass` 的返回值形状由 `InWidgetClass` 决定，
+- **Create Dream Widget 节点**。和 UMG 的 Create Widget 节点一样：选了类之后为它的每个 Expose on Spawn 属性开一个引脚，另有
+  Owning Player 引脚。引脚在 widget 初始化之前赋值，Pre Construct、On Initialized 和每个绑定的第一次取值都看得到。它编译成
+  `BeginDeferredCreateDreamWidget`、各个赋值、`FinishDeferredCreateDreamWidget`；C++ 里对应的是 `BeginCreateDreamWidget` /
+  `FinishCreateDreamWidget`（`Core/DreamUserWidget.h`）。`CreateDreamWidgetOfClass` 因此和 UMG 的 `Create` 一样标成了
+  BlueprintInternalUseOnly：蓝图菜单里没有它，已经调用它的图照常编译，**Python 里也没有它了**——编辑器脚本要创建实例，
+  就用 `add_widget_of_class_to_viewport`，或者从 C++ 暴露自己的函数。
+- **返回引脚跟着类走**。Create Dream Widget、`AddWidgetOfClassToViewport` 和 `CreateDreamWidgetOfClass` 的返回值形状由类决定，
   Blueprint 子类自己的变量和函数不用 Cast 就能用，和 UMG 的 Create Widget 节点一样。
 - **屏幕根是按需创建的**。第一次放上视口时，共享的屏幕空间根（`GetOrCreateScreenSpaceUIRoot`）、射线检测器和事件系统
   都会自动建好，不需要任何配置。`AddWidgetOfClassToScreen` 是带"变活之前回调"和排序参数的版本，`IsInViewport` 查询。
-- **"停放"状态**。`ConstructWidget` 和 `CreateDreamWidgetOfClass` 创建的 widget 存在、但不在屏幕上：不画、行为不运行，直到
+- **"停放"状态**。`ConstructWidget`、`CreateDreamWidgetOfClass` 和 Create Dream Widget 创建的 widget 存在、但不在屏幕上：不画、行为不运行，直到
   你把它交给 `AddChild` 或放上视口。这期间它被 UI 管理器持有，不会在你配置它时被回收。`IsWidgetParked` 查询这个状态，
   控制台命令 `dreamgui.ListPendingWidgets` 列出所有停放的 widget。
 - **放进世界**。`AttachWidgetToSceneComponent(Root, Component)` 是世界空间版的 AddToViewport：根必须带一个 DreamCanvas（画布决定

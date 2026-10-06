@@ -24,7 +24,8 @@ description: 用插件自带的 HelloDreamGUI.dui 走一遍从文本到屏幕的
 <Step>
 ### 建一个控件蓝图
 
-内容浏览器里右键 → **DreamUI** → **DreamUI Widget Blueprint**。会先后弹出两个选择框：
+内容浏览器的 **添加** 菜单（或在空白处右键）→ 最上面一组里的 **DreamGUI Widget**，和引擎的 Blueprint Class、Material 排在一起；
+**DreamGUI** 子菜单的第一节里也有它。会先后弹出两个选择框：
 
 - **父类**：选 **DreamUI Text User Widget**（`UDreamTextUserWidget`）。只有以它为父类的控件蓝图才从 `.dui` 构建自己的树；
   父类是别的时，设计器工具栏上根本不会出现选源文件的按钮。
@@ -55,8 +56,12 @@ description: 用插件自带的 HelloDreamGUI.dui 走一遍从文本到屏幕的
 <Step>
 ### 显示出来
 
-蓝图里用 **Add Widget Of Class To Viewport** 节点（`UDreamUIBPLibrary::AddWidgetOfClassToViewport`），
-比如放在关卡蓝图的 BeginPlay 里，类选 `WBP_HelloDreamGUI`。C++ 里是同一个调用，模块依赖 `DreamGUI`：
+蓝图里——比如关卡蓝图的 BeginPlay——放一个 **Create Dream Widget** 节点，Class 选 `WBP_HelloDreamGUI`，再把它的返回值接到
+**Add to Viewport**，和 UMG 的 Create Widget 一样。选好类之后，节点上会为它的每个 Expose on Spawn 属性开一个引脚（`.dui` 的每个
+`props` 和 `viewmodels` 条目都是一个），另有一个 Owning Player 引脚；这些引脚在 widget 初始化**之前**赋值，所以 On Initialized
+和每个绑定的第一次取值都能看到它们。Add to Viewport 的 ZOrder 决定它和别的屏幕页的前后，拿下来用 **Remove from Parent**。
+
+C++ 里一个调用就够，模块依赖 `DreamGUI`：
 
 ```cpp
 #include "DreamUIBPLibrary.h"

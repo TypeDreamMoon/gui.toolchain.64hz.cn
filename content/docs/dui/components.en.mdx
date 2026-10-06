@@ -75,7 +75,9 @@ Widget Root {
 
 One property per line: a type, a name, and optionally `= default`. The types are `Text`, `String`, `Number`, `Integer`,
 `Bool`, `Color`, `Vector2`, `Asset`, `Class`, and `Enum` followed by the enum's path. Each becomes a Blueprint variable of
-the class, editable on instances; a C++ parent's property of the same name and type is used instead of declaring one.
+the class, editable on instances and Expose on Spawn — creating the class with **Create Dream Widget** in a graph gives
+the node a pin for each prop, assigned before the widget initializes; a C++ parent's property of the same name and type
+is used instead of declaring one.
 
 A host sets them like any property, and the component binds them (`Text <- Label` in the component). A host may **bind** a
 prop as well:

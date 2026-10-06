@@ -74,7 +74,8 @@ Widget Root {
 ```
 
 每行一个属性：一个类型、一个名字，可选的 `= 默认值`。类型有 `Text`、`String`、`Number`、`Integer`、`Bool`、`Color`、
-`Vector2`、`Asset`、`Class`，以及后面跟着枚举路径的 `Enum`。每一个都会成为这个类的一个 Blueprint 变量，可以在实例上编辑；
+`Vector2`、`Asset`、`Class`，以及后面跟着枚举路径的 `Enum`。每一个都会成为这个类的一个 Blueprint 变量，可以在实例上编辑，
+也是 Expose on Spawn 的——在蓝图里用 **Create Dream Widget** 创建这个类时，每个 prop 都是节点上的一个引脚，在 widget 初始化之前赋值；
 如果 C++ 父类已经有同名同类型的属性，就直接用它，不再声明一个。
 
 宿主像设置别的属性一样设置它们，组件用绑定读它们（组件里的 `Text <- Label`）。宿主也可以**绑定** prop：

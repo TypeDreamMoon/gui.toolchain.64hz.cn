@@ -222,7 +222,8 @@ panel.
 | `DestroyChild` / `DestroyWidget` | Tears the subtree down; `IsValid` answers false afterwards |
 | `FindChildByDisplayName` | Finds a child by display name, paths included: `"Content/ListItem/NameLabel"` |
 
-An instance of a widget Blueprint is made with `UDreamUIBPLibrary::CreateDreamWidgetOfClass` or
-`AddWidgetOfClassToViewport`; see [Widget Blueprints](/en/docs/concepts/widget-blueprints). Every property and function is
+An instance of a widget Blueprint is made with the **Create Dream Widget** node in a graph, and with
+`UDreamUIBPLibrary::CreateDreamWidgetOfClass` or `AddWidgetOfClassToViewport` in C++; see
+[Widget Blueprints](/en/docs/concepts/widget-blueprints). Every property and function is
 listed in the [`UDreamWidget` reference](/en/docs/reference/dreamwidget), which ends with a member-by-member comparison
 with UMG's `UWidget`.

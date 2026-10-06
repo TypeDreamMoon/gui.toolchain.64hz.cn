@@ -11,7 +11,7 @@ name — the same shape as UMG's widget Blueprints, compiled by DreamGUI's own `
 
 | | What it is |
 | --- | --- |
-| `UDreamWidgetBlueprint` | The authoring asset (**DreamUI Widget Blueprint** in the Content Browser), holding the tree the designer edits (`WidgetTree`) and the graphs |
+| `UDreamWidgetBlueprint` | The authoring asset (its type reads **DreamUI Widget Blueprint** in the Content Browser, and the *Add* menu offers it as **DreamGUI Widget**), holding the tree the designer edits (`WidgetTree`) and the graphs |
 | `UDreamWidgetGeneratedClass` | What it compiles into. The compile copies the tree onto the class as the template (archetype) instances are built from |
 | `UDreamUserWidget` | An instance. It is itself a `UDreamWidget`, exactly as a `UUserWidget` is a `UWidget` |
 
@@ -180,8 +180,12 @@ How to write one: [`.dui` overview](/en/docs/dui/overview).
 
 | Call | Does |
 | --- | --- |
-| `UDreamUIBPLibrary::AddWidgetOfClassToViewport` | UMG's Create Widget + Add to Viewport in one node; the return pin takes the shape of the class |
-| `UDreamUIBPLibrary::CreateDreamWidgetOfClass` | Instances it without putting it anywhere (the same not-on-screen state as `ConstructWidget`) |
+| The **Create Dream Widget** node | UMG's Create Widget node: picking a class gives it a pin for each Expose on Spawn property (every `props` and `viewmodels` entry of a `.dui` is one) and an Owning Player pin, and types its result as that class. The pins are assigned **before** the widget initializes, so Pre Construct, On Initialized, On Construct and the first value of every binding already see them; UMG assigns after Create, which is too late for On Initialized |
+| `UDreamUserWidget::AddToViewport` | UMG's Add to Viewport: on the owning player's screen (the first local player's when none was named), switched on. As in UMG, a widget that already has a parent is refused. `RemoveFromParent` takes it off again |
+| `UDreamUserWidget::AddToPlayerScreen` | The same, refused when there is no owning player rather than falling back to screen 0 |
+| `UDreamUIBPLibrary::AddWidgetOfClassToViewport` | Create and put on the viewport in one call; the return pin takes the shape of the class |
+| `UDreamUIBPLibrary::CreateDreamWidgetOfClass` | Instances it without putting it anywhere (the same not-on-screen state as `ConstructWidget`). Like UMG's `Create`, not in the Blueprint menu — the Create Dream Widget node stands for it; graphs that already call it keep compiling |
+| `BeginCreateDreamWidget` / `FinishCreateDreamWidget` | C++: the node's two halves. Write the new widget's own properties in between (`SetViewModel`, say), before it initializes |
 | `UDreamScreenUISubsystem::CreateWidgetOnScreen` / `AddToPlayerScreen` | A named player's screen |
 | `UDreamWorldWidgetComponent::SetWidgetClass` | Into a level; see [World-space UI](/en/docs/concepts/world-space) |
 

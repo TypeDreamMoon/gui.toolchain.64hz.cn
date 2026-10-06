@@ -205,6 +205,6 @@ Widget Root {
 | `DestroyChild` / `DestroyWidget` | 拆掉整棵子树，之后 `IsValid` 为假 |
 | `FindChildByDisplayName` | 按显示名找孩子，支持路径，如 `"Content/ListItem/NameLabel"` |
 
-一个 Widget Blueprint 的实例用 `UDreamUIBPLibrary::CreateDreamWidgetOfClass` 或 `AddWidgetOfClassToViewport` 建，
+一个 Widget Blueprint 的实例在蓝图里用 **Create Dream Widget** 节点建，C++ 里用 `UDreamUIBPLibrary::CreateDreamWidgetOfClass` 或 `AddWidgetOfClassToViewport` 建，
 见 [Widget Blueprint](/docs/concepts/widget-blueprints)。每个属性和函数的完整列表在
 [`UDreamWidget` 参考](/docs/reference/dreamwidget)，末尾有与 UMG `UWidget` 的逐项对照。

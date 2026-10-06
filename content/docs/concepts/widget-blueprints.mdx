@@ -11,7 +11,7 @@ Widget Blueprint 是同一个形状，只是由 DreamGUI 自己的 `FDreamWidget
 
 | | 是什么 |
 | --- | --- |
-| `UDreamWidgetBlueprint` | 编写用的资产（内容浏览器里的 **DreamUI Widget Blueprint**），持有设计器编辑的那棵树（`WidgetTree`）和图表 |
+| `UDreamWidgetBlueprint` | 编写用的资产（内容浏览器里的类型名是 **DreamUI Widget Blueprint**，*添加* 菜单里叫 **DreamGUI Widget**），持有设计器编辑的那棵树（`WidgetTree`）和图表 |
 | `UDreamWidgetGeneratedClass` | 编译产物。编译把树复制到类上作为模板（archetype），实例由它构建 |
 | `UDreamUserWidget` | 实例。它本身就是一个 `UDreamWidget`，正如 `UUserWidget` 是一个 `UWidget` |
 
@@ -156,8 +156,12 @@ protected:
 
 | 调用 | 做什么 |
 | --- | --- |
-| `UDreamUIBPLibrary::AddWidgetOfClassToViewport` | UMG 的 Create Widget + Add to Viewport，一个节点；返回值的类型跟着类走 |
-| `UDreamUIBPLibrary::CreateDreamWidgetOfClass` | 只实例化，不放到任何地方（不在屏幕上的状态，和 `ConstructWidget` 一样） |
+| **Create Dream Widget** 节点 | UMG 的 Create Widget 节点：选了类之后为它的每个 Expose on Spawn 属性开一个引脚（`.dui` 的每个 `props` 和 `viewmodels` 条目都是一个），另有 Owning Player 引脚，返回值的类型就是这个类。引脚在 widget 初始化**之前**赋值，所以 Pre Construct、On Initialized、On Construct 和每个绑定的第一次取值都已经看得到它们；UMG 在 Create 之后才赋值，对 On Initialized 来说太晚了 |
+| `UDreamUserWidget::AddToViewport` | UMG 的 Add to Viewport：放上拥有者玩家的屏幕并打开它（没指定玩家时是第一个本地玩家的）。和 UMG 一样，已经有父节点的 widget 会被拒绝。拿下来用 `RemoveFromParent` |
+| `UDreamUserWidget::AddToPlayerScreen` | 同上，但没有拥有者玩家时拒绝，而不是退回到 0 号屏幕 |
+| `UDreamUIBPLibrary::AddWidgetOfClassToViewport` | 创建并放上视口，一个调用；返回值的类型跟着类走 |
+| `UDreamUIBPLibrary::CreateDreamWidgetOfClass` | 只实例化，不放到任何地方（不在屏幕上的状态，和 `ConstructWidget` 一样）。和 UMG 的 `Create` 一样不出现在蓝图菜单里——Create Dream Widget 节点代表它；已经调用它的图照常编译 |
+| `BeginCreateDreamWidget` / `FinishCreateDreamWidget` | C++：节点的两半。中间写新 widget 自己的属性（比如 `SetViewModel`），赶在它初始化之前 |
 | `UDreamScreenUISubsystem::CreateWidgetOnScreen` / `AddToPlayerScreen` | 指定玩家的屏幕 |
 | `UDreamWorldWidgetComponent::SetWidgetClass` | 放进关卡，见[世界空间 UI](/docs/concepts/world-space) |
 

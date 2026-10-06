@@ -10,8 +10,8 @@ The run-time entry points are gathered in [`UDreamUIBPLibrary`](/en/docs/referen
 
 | To do this | UMG | DreamGUI |
 | --- | --- | --- |
-| Instantiate a widget class without putting it anywhere | `CreateWidget` | `CreateDreamWidgetOfClass` |
-| Create it and put it on the viewport | `CreateWidget` + `AddToViewport` | `AddWidgetOfClassToViewport` |
+| Instantiate a widget class without putting it anywhere | the Create Widget node / `CreateWidget` | the Create Dream Widget node / `CreateDreamWidgetOfClass` |
+| Create it and put it on the viewport | `CreateWidget` + `AddToViewport` | Create Dream Widget + `AddToViewport`, or `AddWidgetOfClassToViewport` |
 | Take it off the viewport | `RemoveFromParent` | `RemoveFromViewport` |
 | Construct a bare widget | `WidgetTree::ConstructWidget<T>()` | `ConstructWidget` |
 | Lay out now (a size needed this frame) | `ForceLayoutPrepass` | `ForceLayoutPrepass` |
@@ -20,13 +20,21 @@ The run-time entry points are gathered in [`UDreamUIBPLibrary`](/en/docs/referen
 
 Details worth knowing:
 
-- **The return pin follows the class.** The return of `AddWidgetOfClassToViewport` and `CreateDreamWidgetOfClass` takes
-  the shape of `InWidgetClass`, so a Blueprint subclass's own variables and functions are reachable without a Cast, as with
-  UMG's Create Widget node.
+- **The Create Dream Widget node.** UMG's Create Widget node: picking a class gives it a pin for each Expose on Spawn
+  property and an Owning Player pin. The pins are assigned before the widget initializes, so Pre Construct, On
+  Initialized and every binding's first value see them. It compiles to `BeginDeferredCreateDreamWidget`, the
+  assignments, then `FinishDeferredCreateDreamWidget`; C++ has the same two halves as `BeginCreateDreamWidget` /
+  `FinishCreateDreamWidget` (`Core/DreamUserWidget.h`). `CreateDreamWidgetOfClass` is therefore BlueprintInternalUseOnly,
+  as UMG marks `Create`: it is not in the Blueprint menu, graphs that already call it keep compiling, and **it is gone from
+  Python** — an editor script that needs an instance uses `add_widget_of_class_to_viewport`, or a function of its own
+  exposed from C++.
+- **The return pin follows the class.** The return of Create Dream Widget, `AddWidgetOfClassToViewport` and
+  `CreateDreamWidgetOfClass` takes the shape of the class, so a Blueprint subclass's own variables and functions are
+  reachable without a Cast, as with UMG's Create Widget node.
 - **The screen root is made on demand.** The first time something goes on the viewport, the shared screen-space root
   (`GetOrCreateScreenSpaceUIRoot`), the raycaster and the event system are created; nothing needs configuring.
   `AddWidgetOfClassToScreen` is the variant with a before-alive callback and a sort order; `IsInViewport` asks.
-- **The parked state.** A widget made by `ConstructWidget` or `CreateDreamWidgetOfClass` exists but is not on screen: it
+- **The parked state.** A widget made by `ConstructWidget`, `CreateDreamWidgetOfClass` or Create Dream Widget exists but is not on screen: it
   draws nothing and its behaviours do not run until you hand it to `AddChild` or put it on the viewport. Meanwhile the UI
   manager holds it, so it is not collected out from under you while you configure it. `IsWidgetParked` asks, and the
   console command `dreamgui.ListPendingWidgets` lists every parked widget.

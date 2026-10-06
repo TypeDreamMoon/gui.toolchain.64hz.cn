@@ -70,6 +70,7 @@ At the top level a file holds:
 | `resources { … }` | Named constants. | [Styles and resources](/en/docs/dui/styles-and-resources) |
 | `props { … }` | Properties this file's class declares. | [Writing a component](/en/docs/dui/components) |
 | `events { … }` | Events this file's class raises. | [Writing a component](/en/docs/dui/components) |
+| `viewmodels { … }` | The view models this file's class holds. | [View models](/en/docs/dui/viewmodels) |
 | `style Name { … }` | A named set of lines. | [Styles and resources](/en/docs/dui/styles-and-resources) |
 | `timeline Name { … }` | An animation. | [Timelines](/en/docs/dui/timelines) |
 | one node | The root of the tree. | [Nodes and values](/en/docs/dui/nodes-and-values) |
@@ -110,7 +111,7 @@ So give every component file a `class` line.
 <Step>
 ### Make a text-backed Blueprint
 
-Create a DreamUI widget Blueprint in the Content Browser and pick **DreamUI Text User Widget** (`UDreamTextUserWidget`)
+Create a widget Blueprint with the Content Browser's *Add ▸ DreamGUI Widget* and pick **DreamUI Text User Widget** (`UDreamTextUserWidget`)
 as its parent class. Only that class's descendants carry `SourceFile`; with a plain `UDreamUserWidget` parent the
 designer toolbar shows no Source File button. Put it where the file's `class` line says, or edit the line to match.
 </Step>
@@ -138,8 +139,9 @@ results as `DUInnnn` diagnostics. A file that does not exist or cannot be read i
 <Step>
 ### Show it
 
-`UDreamUIBPLibrary::AddWidgetOfClassToViewport` adds the class to the viewport. The screen root, the raycaster and the
-event system are created on demand; nothing else needs configuring. The full path is in
+In a graph, **Create Dream Widget** then **Add to Viewport**, as with UMG — the file's `props` and `viewmodels` entries
+are pins on the create node; in C++, `UDreamUIBPLibrary::AddWidgetOfClassToViewport`. The screen root, the raycaster and
+the event system are created on demand; nothing else needs configuring. The full path is in
 [Your first screen](/en/docs/start/first-screen).
 </Step>
 </Steps>

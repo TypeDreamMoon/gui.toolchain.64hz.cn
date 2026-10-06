@@ -65,6 +65,7 @@ Blueprint 把这个文件记作它的 *Source File*；编译 Blueprint 时读这
 | `resources { … }` | 具名常量。 | [样式与资源](/docs/dui/styles-and-resources) |
 | `props { … }` | 本文件的类声明的属性。 | [编写组件](/docs/dui/components) |
 | `events { … }` | 本文件的类会发出的事件。 | [编写组件](/docs/dui/components) |
+| `viewmodels { … }` | 本文件的类持有的视图模型。 | [视图模型](/docs/dui/viewmodels) |
 | `style Name { … }` | 一组具名的行。 | [样式与资源](/docs/dui/styles-and-resources) |
 | `timeline Name { … }` | 一个动画。 | [时间线](/docs/dui/timelines) |
 | 一个节点 | 树的根。 | [节点与值](/docs/dui/nodes-and-values) |
@@ -98,7 +99,7 @@ Blueprint 把这个文件记作它的 *Source File*；编译 Blueprint 时读这
 <Step>
 ### 建一个以文本为源的 Blueprint
 
-在内容浏览器里新建一个 DreamUI widget Blueprint，父类选 **DreamUI Text User Widget**（`UDreamTextUserWidget`）。
+在内容浏览器里用 *添加 ▸ DreamGUI Widget* 新建一个 widget Blueprint，父类选 **DreamUI Text User Widget**（`UDreamTextUserWidget`）。
 只有这个类的子类才带 `SourceFile`；父类是普通的 `UDreamUserWidget` 时，设计器工具栏上不会出现 Source File 按钮。
 放的位置要和文件里的 `class` 行一致，或者反过来改 `class` 行。
 </Step>
@@ -122,7 +123,8 @@ Blueprint 把这个文件记作它的 *Source File*；编译 Blueprint 时读这
 <Step>
 ### 显示出来
 
-`UDreamUIBPLibrary::AddWidgetOfClassToViewport` 把这个类加到视口上。screen root、raycaster 和 event system 都是按需创建的，
+蓝图里用 **Create Dream Widget** 接 **Add to Viewport**，和 UMG 一样——文件的 `props` 和 `viewmodels` 条目就是创建节点上的引脚；
+C++ 里用 `UDreamUIBPLibrary::AddWidgetOfClassToViewport`。screen root、raycaster 和 event system 都是按需创建的，
 不用另外配置。完整流程见[第一个界面](/docs/start/first-screen)。
 </Step>
 </Steps>

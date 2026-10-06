@@ -114,6 +114,8 @@ compares the two, logs the first difference and uses the fresh layout.
 | `DreamGUI.Diag.FindTreeBridges` | Lists every reference from an object the current world's levels keep (an actor, one of its components or sub-objects) into a DreamGUI widget tree, and whose tree it is. A play session's copy of the level follows such a reference into the tree |
 | `DreamGUI.Text.ShapeCacheFlush` | Empties the text shape cache; its counters are kept |
 | `DreamUI.ExportSymbols` | Rewrites `DUI/.dui-symbols.json` (editor); see [The VS Code extension](/en/docs/tools/vscode) |
+| `DreamUI.Binding.Dump` | Logs every live user widget with property bindings: how many are subscribed (updated on a change), polled every frame, constant and legacy, and for each polled one, the member that keeps it on the poll. See [When a binding updates](/en/docs/dui/bindings#when-a-binding-updates) |
+| `DreamUI.Binding.ForcePoll 1` | Every binding compiled with recorded dependencies is polled every frame instead, for the widgets initialized after it is set. For a value that does not update: it tells "nothing announces its change" from "it never changes". Default 0 |
 
 Tracing variables, which log when on: `dreamgui.LayoutTrace 1` (every panel arrange and every rect it commits),
 `dreamgui.ScrollBoxTrace 1` (every scroll-box drag delta and physics tick that changes state), and

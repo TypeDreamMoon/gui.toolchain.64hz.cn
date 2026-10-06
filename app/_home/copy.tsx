@@ -135,7 +135,7 @@ export const homeCopies: Record<Locale, HomeCopy> = {
       title: '写一棵树，放到屏幕或世界里',
       lead: '同一个类，既能是屏幕上的一层，也能是关卡里的一块面板。屏幕根、射线检测器和事件系统都按需创建，不用额外搭建。',
       steps: [
-        ['01', 'Author', '用 .dui 写节点、样式、组件、绑定、if / for 和时间轴；在设计器里改属性，改动会写回文本里那一行，两边不会分叉。'],
+        ['01', 'Author', '用 .dui 写节点、样式、组件、视图模型、绑定、if / for 和时间轴；在设计器里改属性，改动会写回文本里那一行，两边不会分叉。'],
         ['02', 'Compile', '.dui 编译进 UDreamWidgetBlueprint，生成的类是 UDreamUserWidget：可以继承，可以嵌套进另一棵树，按名字拿到子节点。'],
         ['03', 'Place', '屏幕上一行代码加到视口；拖进关卡就是 ADreamWorldWidgetActor，可以选 DreamGUI 自己的渲染器，也可以走引擎管线吃后处理和深度。'],
         ['04', 'Interact', '每个本地玩家有自己的指针、焦点和输入目标；Tab 与手柄导航、模态与弹出层、拖放和提示都在输入模块里，动画交给补间和 timeline。'],
@@ -179,7 +179,7 @@ export const homeCopies: Record<Locale, HomeCopy> = {
       routes: [
         ['快速上手', '安装插件，把第一个 .dui 编译成界面并显示出来。', '/docs/start/installation'],
         ['核心概念', '控件与画布、屏幕与世界空间、布局、文字、渲染、输入。', '/docs/concepts/widgets'],
-        ['.dui 语言', '节点、样式、组件、绑定、if / for、rows 和时间轴。', '/docs/dui/overview'],
+        ['.dui 语言', '节点、样式、组件、视图模型、绑定、if / for、rows 和时间轴。', '/docs/dui/overview'],
         ['控件库', '按钮、列表、对话框、标签页……以及与 UMG 的命名对照。', '/docs/controls'],
         ['诊断码', '每一条 DUInnnn，按流水线阶段分成七族。', '/docs/diagnostics'],
         ['更新日志', '每个版本改了什么，以及升级时要检查什么。', '/docs/changelog'],
@@ -224,7 +224,7 @@ export const homeCopies: Record<Locale, HomeCopy> = {
       title: 'Write a tree, put it on the screen or in the world',
       lead: 'The same class can be a layer on the screen or a panel in the level. The screen root, the raycaster and the event system are created on demand — nothing to set up first.',
       steps: [
-        ['01', 'Author', 'Write nodes, styles, components, bindings, if / for and timelines in .dui; change a property in the designer and the edit lands on its line in the text, so the two never fork.'],
+        ['01', 'Author', 'Write nodes, styles, components, view models, bindings, if / for and timelines in .dui; change a property in the designer and the edit lands on its line in the text, so the two never fork.'],
         ['02', 'Compile', 'A .dui compiles into a UDreamWidgetBlueprint whose class is a UDreamUserWidget: subclass it, nest it in another tree, reach its children by name.'],
         ['03', 'Place', 'One call adds it to the viewport; dragged into a level it is an ADreamWorldWidgetActor, drawn by DreamGUI\'s own renderer or sent through the engine\'s pipeline for post process and depth.'],
         ['04', 'Interact', 'Every local player has its own pointers, focus and text target; Tab and gamepad navigation, modals and popups, drag and drop and tooltips live in the input module, and motion in tweens and timelines.'],
@@ -268,7 +268,7 @@ export const homeCopies: Record<Locale, HomeCopy> = {
       routes: [
         ['Getting started', 'Install the plugin, compile a first .dui and put it on the screen.', '/docs/start/installation'],
         ['Concepts', 'Widgets and canvases, screen and world space, layout, text, rendering, input.', '/docs/concepts/widgets'],
-        ['The .dui language', 'Nodes, styles, components, bindings, if / for, rows and timelines.', '/docs/dui/overview'],
+        ['The .dui language', 'Nodes, styles, components, view models, bindings, if / for, rows and timelines.', '/docs/dui/overview'],
         ['Controls', 'Buttons, lists, dialogs, tab views … and how their names map to UMG\'s.', '/docs/controls'],
         ['Diagnostics', 'Every DUInnnn code, in seven families by pipeline stage.', '/docs/diagnostics'],
         ['Changelog', 'What changed in each version, and what to check when upgrading.', '/docs/changelog'],

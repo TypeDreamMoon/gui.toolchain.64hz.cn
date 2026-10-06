@@ -59,7 +59,30 @@ Widget Root {
 ## `for` 和 `each`
 
 两者都是按一个**源**的每一项重复一个模板 widget。源是一个函数 `GetOptions()`，或者一个变量 `Options`——FieldNotify 的数组变了，
-副本会跟着刷新。循环体里，`Prop <- Item.Member` 把每个副本的一个属性绑到它那一项的一个成员上。
+副本会跟着刷新——也可以经过一条成员路径，`Inventory.Items`、`Inventory.Filtered()`，路径上任何一处变了都会刷新。循环体里，
+`Prop <- Item.Member` 把每个副本的一个属性绑到它那一项的一个成员上，`Event -> Item.Func()` 把每个副本的一个事件路由到它那一项的一个函数上：
+
+```dui
+class /Game/UI/WBP_Inventory
+
+viewmodels {
+    InventoryVM Inventory = global
+}
+
+VerticalBox Root {
+    for Item in Inventory.Items {
+        HorizontalBox {
+            Text { Text <- Item.Name }
+            Native.Button { OnClicked += Item.Use() }
+        }
+    }
+}
+```
+
+`Item.Func()` 什么都不传；`Item.Func` 不带括号时把事件发出的东西交给它。在 `each` 里，列表视图回收一个单元格时，它的路由跟着挪到新的那一项上。
+
+一项宣布它的某个被副本显示的成员变了时（这一项实现了 `INotifyFieldValueChanged`，成员是 FieldNotify 的），只更新那一个副本，列表的其余部分不动。
+没人宣布的成员，在列表刷新时重新读。
 
 ### `for`：面板里的副本
 
@@ -103,9 +126,12 @@ Widget Inventory {
   `props` 条目交给它。
 - `for` 要求宿主能接任意多个子节点（固定格位的宿主不行，DUI5021）；`each` 要求宿主上有 `+ UIListView`（或者一个可回收的滚动视图），
   否则是 DUI5012。
-- 循环体里唯一能写的绑定是单跳的 `Item.Member`；写表达式或 `<->` 是 [DUI5014](/docs/diagnostics/dui5xxx#dui5014)。循环体里也不能
-  `emit`（[DUI6012](/docs/diagnostics/dui6xxx#dui6012)）。
+- 循环体里唯一能写的绑定是单跳的 `Item.Member`，唯一能写的对象路由是 `Item.Func` / `Item.Func()`；写表达式、`<->`、路由到别的对象，
+  是 [DUI5014](/docs/diagnostics/dui5xxx#dui5014)。循环体里也不能 `emit`（[DUI6012](/docs/diagnostics/dui6xxx#dui6012)）。
 - 源必须在类上存在（[DUI6006](/docs/diagnostics/dui6xxx#dui6006)），而且是一个对象数组（[DUI6007](/docs/diagnostics/dui6xxx#dui6007)）。
+- 数组的元素类已知时（`TArray<UItemVM*>`，而不是 `TArray<UObject*>`），`Item.Member` 必须是它的成员
+  （[DUI6021](/docs/diagnostics/dui6xxx#dui6021)），`Item.Func` 必须是它的函数，并且什么都不收或者收的恰好是事件发出的那些
+  （[DUI6022](/docs/diagnostics/dui6xxx#dui6022)）。元素是 `UObject` 的数组时，项的类要到运行时才知道，对不上的那一行在那时被跳过。
 
 其余相关的代码：
 

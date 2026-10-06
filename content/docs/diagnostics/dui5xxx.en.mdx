@@ -180,7 +180,7 @@ Widget Confirm {
 
 <Dui sev="error" msg={"An expression or a <-> inside a loop body."} raised="LoopBodyBindingUnsupported" />
 
-**How it happens**: a generated binding function belongs to the class, and a name in a loop body is known only to an iteration, so the body supports the single hop `Item.Member`, recorded cell by cell. Anything richer used to be dropped: the file compiled and the property was never driven. The expression is fine and the place is not, which is why it is not DUI5011.
+**How it happens**: a generated binding function belongs to the class, and a name in a loop body is known only to an iteration, so the body supports two shapes, recorded cell by cell: the single hop `Item.Member` as a binding, and a route to a function of the item itself — `Event -> Item.Func` (handing it what the event sends) or `Event -> Item.Func()` (calling it with nothing). Anything richer used to be dropped: the file compiled and the property was never driven. A route to another object (`Settings.Apply()`), one more than a hop deep (`Item.Owner.Use`), or one with arguments is this too. The expression is fine and the place is not, which is why it is not DUI5011.
 
 ```dui
 VerticalBox Options {
@@ -324,3 +324,53 @@ VerticalBox Column {
 ```
 
 **How to fix**: write the container's properties on the node itself; for another arrangement, nest a child widget.
+
+## DUI5023
+
+<Dui sev="error" msg={"A member path segment its class does not have, or does not show to Blueprint (an UnrealSharp property needs BlueprintReadOnly or BlueprintReadWrite)."} raised="MemberPathNotFound" />
+
+**How it happens**: a path such as `Player.Name` starts at a variable of the class — a `viewmodels` entry, a prop or a Blueprint variable, as of the previous compile — and every later segment is a member of the class the segment before it holds. A segment that does not exist, or exists where a graph cannot reach it — a property that is not `BlueprintReadOnly` / `BlueprintReadWrite`, a function that is not `BlueprintCallable` / `BlueprintPure` — is this, and the message names the segment and the class. An UnrealSharp property is visible to Blueprint only when its `[UProperty]` says `BlueprintReadOnly` or `BlueprintReadWrite`.
+
+```dui
+viewmodels {
+    PlayerVM Player
+}
+
+VerticalBox Root {
+    Text Name { Text <- Player.Nmae }
+}
+```
+
+**How to fix**: correct the member's name; give a C++ property `BlueprintReadOnly`, a C++ function `BlueprintCallable` or `BlueprintPure`.
+
+## DUI5024
+
+<Dui sev="error" msg={"A member path that goes on past a value that is not an object."} raised="MemberPathThroughNonObject" />
+
+**How it happens**: every segment of a path is read off the **object** the segment before it holds. In `Player.Health.Max`, `Health` is a float, which has no members to read. A struct is no different: a path goes through object references only.
+
+```dui
+viewmodels {
+    PlayerVM Player
+}
+
+VerticalBox Root {
+    Text Hp { Text <- Player.Health.Max }
+}
+```
+
+**How to fix**: end the path at the value; have the view model offer what is derived from it as a member of its own (`MaxHealth`).
+
+## DUI5025
+
+<Dui sev="error" msg={"+= on a single-cast delegate, or = on a multicast event."} raised="RouteOperatorMismatch" />
+
+**How it happens**: `+=` adds a listener beside the others, so it takes only an event that holds several (a `BlueprintAssignable` multicast delegate, a `DreamUIEventDelegate`); `=` makes this the event's one listener, so it takes only a single-cast delegate — on a multicast event it would have to drop the listeners the control and the Blueprint graph added. `->` takes either kind and is never this. The route is not recorded: bound the other way, it would do something the line does not say.
+
+```dui
+VerticalBox Root {
+    Native.Button Apply { OnClicked = HandleApply }
+}
+```
+
+**How to fix**: `+=` for a multicast event, `=` for a single-cast delegate — or `->` for either.

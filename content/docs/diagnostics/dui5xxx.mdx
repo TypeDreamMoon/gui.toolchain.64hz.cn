@@ -178,9 +178,9 @@ Widget Confirm {
 
 ## DUI5014
 
-<Dui sev="error" msg={"一个写在循环体里的表达式或 <->。"} raised="LoopBodyBindingUnsupported" />
+<Dui sev="error" msg={"一个写在循环体里的表达式或 <->，或者一条通往别的对象的路由。"} raised="LoopBodyBindingUnsupported" />
 
-**怎么会出现**：生成的绑定函数是类的函数，而循环体里的名字只有每一次迭代才知道，所以循环体里只支持单跳的 `Item.Member`，按格逐个记录。更复杂的表达式和 `<->` 以前会被悄悄丢掉：文件编译通过，属性却从来没有被驱动。表达式本身没问题，问题在位置，所以它不是 DUI5011。
+**怎么会出现**：生成的绑定函数是类的函数，而循环体里的名字只有每一次迭代才知道，所以循环体里只支持两种按格逐个记录的写法：单跳的 `Item.Member` 绑定，和调用这一项自己函数的路由——`Event -> Item.Func`（把事件发出的东西交给它）或 `Event -> Item.Func()`（什么都不传）。更复杂的表达式和 `<->` 以前会被悄悄丢掉：文件编译通过，属性却从来没有被驱动。路由到 `Settings.Apply()` 这样的别的对象、走两段以上（`Item.Owner.Use`）、或者带实参，也是这一条。表达式本身没问题，问题在位置，所以它不是 DUI5011。
 
 ```dui
 VerticalBox Options {
@@ -324,3 +324,53 @@ VerticalBox Column {
 ```
 
 **怎么改**：容器的属性直接写在节点上；需要另一种排列，就嵌套一个子控件。
+
+## DUI5023
+
+<Dui sev="error" msg={"成员路径里的某一段，在它所在的类上找不到，或者 Blueprint 看不到。"} raised="MemberPathNotFound" />
+
+**怎么会出现**：`Player.Name` 这样的路径从类的一个变量开始——`viewmodels` 条目、prop 或者 Blueprint 变量（以上一次编译为准）——后面每一段都是前一段所持对象的类上的成员。某一段不存在，或者存在但图表够不着——属性不是 `BlueprintReadOnly` / `BlueprintReadWrite`，函数不是 `BlueprintCallable` / `BlueprintPure`——就是这一条，消息会点出是哪一段、在哪个类上。UnrealSharp 的属性只有在 `[UProperty]` 写了 `BlueprintReadOnly` 或 `BlueprintReadWrite` 时才算 Blueprint 可见。
+
+```dui
+viewmodels {
+    PlayerVM Player
+}
+
+VerticalBox Root {
+    Text Name { Text <- Player.Nmae }
+}
+```
+
+**怎么改**：修正成员名；C++ 的属性加上 `BlueprintReadOnly`，函数加上 `BlueprintCallable` 或 `BlueprintPure`。
+
+## DUI5024
+
+<Dui sev="error" msg={"一条越过非对象的值继续往下走的成员路径。"} raised="MemberPathThroughNonObject" />
+
+**怎么会出现**：路径的每一段都从前一段持有的**对象**上读。`Player.Health.Max` 里 `Health` 是一个 float，它上面没有可读的成员。结构体也一样：路径只穿过对象引用。
+
+```dui
+viewmodels {
+    PlayerVM Player
+}
+
+VerticalBox Root {
+    Text Hp { Text <- Player.Health.Max }
+}
+```
+
+**怎么改**：让路径停在值那里；需要的派生值由视图模型作为一个成员提供（比如 `MaxHealth`）。
+
+## DUI5025
+
+<Dui sev="error" msg={"事件接不住的路由运算符：单播委托上的 +=，或者多播事件上的 =。"} raised="RouteOperatorMismatch" />
+
+**怎么会出现**：`+=` 是在其他监听者旁边再加一个，所以只能用在能装多个监听者的事件上（`BlueprintAssignable` 多播委托、`DreamUIEventDelegate`）；`=` 是成为事件唯一的监听者，只能用在单播委托上——用在多播事件上，就得扔掉控件自己和 Blueprint 图表接上去的监听者。`->` 按事件的种类二者都行，永远不会是这一条。报了这一条的路由不会被记录：换一种方式接上，做的就不是这一行写的事了。
+
+```dui
+VerticalBox Root {
+    Native.Button Apply { OnClicked = HandleApply }
+}
+```
+
+**怎么改**：多播事件用 `+=`，单播委托用 `=`；或者两种都写 `->`。

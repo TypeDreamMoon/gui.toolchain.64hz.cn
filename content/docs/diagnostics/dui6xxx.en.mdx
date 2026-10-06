@@ -206,3 +206,147 @@ VerticalBox Root {
 ```
 
 **How to fix**: rename the event or the other member.
+
+## DUI6015
+
+<Dui sev="error" msg={"A viewmodels type that names no class, or two."} raised="ViewModelClassUnknown" />
+
+**How it happens**: the type is a class's reflected name (`PlayerVM` for a C++ `UPlayerVM`), a full path (`/Script/MyGame.PlayerVM`, `/Game/UI/BP_PlayerVM`), or a name a `use … as` gave. A short name that matches no class — misspelt, its module not loaded, the Blueprint not there yet — is this; so is one that two modules each have a class of, since the compiler does not pick for you.
+
+```dui
+viewmodels {
+    PlayrVM Player
+}
+```
+
+**How to fix**: correct the class name; when it is ambiguous, write the full path, or `use /Script/MyGame.PlayerVM as PlayerVM` and the name it gives.
+
+## DUI6016
+
+<Dui sev="error" msg={"A viewmodels name another member of the class already answers to."} raised="ViewModelNameTaken" />
+
+**How it happens**: each entry becomes a variable of the class, so its name must not already belong to a widget, a prop, a resource, an event, or a variable or function of this Blueprint. A parent's member of that name is one of two things. When the parent is a C++ class and the member is an object reference of this very class, the line describes that property — where its object comes from — rather than declaring a second one. When the parent's own `.dui` already declares the entry, or the member is not a reference to this class, it is this.
+
+```dui
+viewmodels {
+    PlayerVM Title
+}
+
+VerticalBox Root {
+    Text Title { Text = "Status" }
+}
+```
+
+**How to fix**: rename the entry or the other member; to use the entry a parent's `.dui` declares, remove the line — a subclass reads it as it is.
+
+## DUI6017
+
+<Dui sev="error" msg={"= new of an abstract class."} raised="ViewModelSourceInvalid" />
+
+**How it happens**: `= new` has the widget make one when it was given none, and an abstract class has nothing to make. `UDreamViewModel` itself is abstract; name a subclass of it. The entry still becomes a variable of the class, and bindings through it still compile; the run time is just never asked to fill it. (An empty name such as `global ""` is already DUI2021 when the file is parsed.)
+
+```dui
+viewmodels {
+    DreamViewModel State = new
+}
+```
+
+**How to fix**: name a concrete class, or leave the source out and have the host hand the object over.
+
+## DUI6018
+
+<Dui sev="error" msg={"-> Path.Func whose function the object's class does not have, or does not let Blueprint call."} raised="RouteMemberFunctionNotFound" />
+
+**How it happens**: the path on the right of a route reaches an object, and its last segment is a function of that object's class. A function that does not exist, is not `BlueprintCallable`, or is `BlueprintPure` — which only returns a value, so an event has nothing to call it for — is this.
+
+```dui
+viewmodels {
+    SettingsVM Settings
+}
+
+VerticalBox Root {
+    Native.Button Apply { OnClicked += Settings.Aply() }
+}
+```
+
+**How to fix**: correct the function's name; make a C++ function `UFUNCTION(BlueprintCallable)`.
+
+## DUI6019
+
+<Dui sev="error" msg={"-> Path.Func whose arguments do not fit the function, or, without parentheses, whose function takes something other than nothing or what the event sends."} raised="RouteArgumentMismatch" />
+
+**How it happens**: with parentheses, they hold the arguments — expressions over the class, with the event's own parameters in scope by name — and their count and types must match the function's parameters. Without them, the function must take nothing or exactly what the event sends.
+
+```dui
+viewmodels {
+    SettingsVM Settings
+}
+
+VerticalBox Root {
+    Native.Slider Volume { OnValueChanged += Settings.SetVolume(Value, 1) }
+}
+```
+
+**How to fix**: pass the arguments the function takes, or drop the parentheses and let it take what the event sends.
+
+## DUI6020
+
+<Dui sev="error" msg={"<-> Path.Member whose member cannot be written back: read-only, and no Set<Member>."} raised="TwoWayTargetReadOnly" />
+
+**How it happens**: `<->` writes the control's changes back into the member: through the object's `BlueprintCallable` `Set<Member>` (one parameter of the member's type) when the class has one, otherwise by writing the property and announcing it on that object. A property read-only to graphs (`BlueprintReadOnly`) with no such setter leaves neither way open — the slider would move and spring back — so the compiler refuses it.
+
+```dui
+viewmodels {
+    SettingsVM Settings
+}
+
+VerticalBox Root {
+    Native.Slider Volume { Value <-> Settings.MasterVolume }
+}
+```
+
+Here `MasterVolume` is `BlueprintReadOnly` and `SettingsVM` has no `SetMasterVolume`.
+
+**How to fix**: give the class a `BlueprintCallable` `SetMasterVolume(float)`, make the property `BlueprintReadWrite`, or bind it one way with `<-`.
+
+## DUI6021
+
+<Dui sev="error" msg={"Item.Member that the loop source's element class does not have."} raised="LoopItemMemberNotFound" />
+
+**How it happens**: when the source is an array of a concrete class (`TArray<UItemVM*>`), the compiler knows what each item is and checks `Item.Member` against it. With a `TArray<UObject*>` the class is known only at run time, which checks the line then and, as it always did, skips a copy it does not fit.
+
+```dui
+viewmodels {
+    InventoryVM Inventory
+}
+
+VerticalBox Root {
+    for Item in Inventory.Items {
+        Text { Text <- Item.Nmae }
+    }
+}
+```
+
+**How to fix**: correct the member's name, or add the member to the element class.
+
+## DUI6022
+
+<Dui sev="error" msg={"-> Item.Func that the element class does not have, or whose parameters fit neither nothing nor the event."} raised="LoopItemRouteMismatch" />
+
+**How it happens**: when the element class is known, `Event -> Item.Func` and `Event -> Item.Func()` need the function on it, taking nothing or exactly what the event sends.
+
+```dui
+viewmodels {
+    InventoryVM Inventory
+}
+
+VerticalBox Root {
+    for Item in Inventory.Items {
+        Native.Button { OnClicked += Item.Equip() }
+    }
+}
+```
+
+Here the element class `ItemVM` has no `Equip`.
+
+**How to fix**: correct the function's name or parameters; when it needs more, have the element class offer a version that takes nothing.

@@ -392,6 +392,21 @@ VerticalBox Menu {
 
 **怎么改**：让每一行的值数等于列数；某一行需要列以外的东西时，在这一行末尾加一个块。
 
+## DUI2021
+
+一行读不通的 `viewmodels`，或者一个写在节点里的 `viewmodels` 块。
+
+**怎么会出现**：`viewmodels` 块里每行声明一个视图模型：`类型 名字`，后面可以跟 `= new`、`= global`、`= global "Name"`、`= parent` 或 `= parent "Name"`。缺名字、`=` 后面不是这几种来源之一、一行里写了第二个声明，都是这一条。`global ""` 这样的空名字也是：它什么都不指，和不写名字的"只按类找"不是一回事。块写在节点里面同样是这一条：视图模型是类持有的东西，和 `props`、`events` 一样只能写在文件顶层。
+
+```dui
+viewmodels {
+    PlayerVM Player = global ""
+    SettingsVM = new
+}
+```
+
+**怎么改**：每行写成 `类型 名字`，再加可选的来源；只想按类从注册表里取，就只写 `global`；把块挪到文件顶层。
+
 ## DUI3001
 
 两个用了同一个 id 的节点。
@@ -722,6 +737,21 @@ VerticalBox Menu {
 
 **怎么改**：让各行的第一个值互不相同；需要按名字找到的行，写成单独的节点。
 
+## DUI3024
+
+两个同名的 `viewmodels` 条目。
+
+**怎么会出现**：每个条目会成为类上的一个变量，两个同名条目只能有一个变量。名字的比较不区分大小写，`Player` 和 `player` 是同一个变量。保留第一个。
+
+```dui
+viewmodels {
+    PlayerVM Player
+    PlayerVM player = global
+}
+```
+
+**怎么改**：给其中一个改名，或者删掉多余的那一行。
+
 ## DUI4001
 
 目标对象上没有这个名字的属性；消息会给出最接近的那个。
@@ -1015,9 +1045,9 @@ Widget Confirm {
 
 ## DUI5014
 
-一个写在循环体里的表达式或 `<->`。
+一个写在循环体里的表达式或 `<->`，或者一条通往别的对象的路由。
 
-**怎么会出现**：生成的绑定函数是类的函数，而循环体里的名字只有每一次迭代才知道，所以循环体里只支持单跳的 `Item.Member`，按格逐个记录。更复杂的表达式和 `<->` 以前会被悄悄丢掉：文件编译通过，属性却从来没有被驱动。表达式本身没问题，问题在位置，所以它不是 DUI5011。
+**怎么会出现**：生成的绑定函数是类的函数，而循环体里的名字只有每一次迭代才知道，所以循环体里只支持两种按格逐个记录的写法：单跳的 `Item.Member` 绑定，和调用这一项自己函数的路由——`Event -> Item.Func`（把事件发出的东西交给它）或 `Event -> Item.Func()`（什么都不传）。更复杂的表达式和 `<->` 以前会被悄悄丢掉：文件编译通过，属性却从来没有被驱动。路由到 `Settings.Apply()` 这样的别的对象、走两段以上（`Item.Owner.Use`）、或者带实参，也是这一条。表达式本身没问题，问题在位置，所以它不是 DUI5011。
 
 ```dui
 VerticalBox Options {
@@ -1161,6 +1191,56 @@ VerticalBox Column {
 ```
 
 **怎么改**：容器的属性直接写在节点上；需要另一种排列，就嵌套一个子控件。
+
+## DUI5023
+
+成员路径里的某一段，在它所在的类上找不到，或者 Blueprint 看不到。
+
+**怎么会出现**：`Player.Name` 这样的路径从类的一个变量开始——`viewmodels` 条目、prop 或者 Blueprint 变量（以上一次编译为准）——后面每一段都是前一段所持对象的类上的成员。某一段不存在，或者存在但图表够不着——属性不是 `BlueprintReadOnly` / `BlueprintReadWrite`，函数不是 `BlueprintCallable` / `BlueprintPure`——就是这一条，消息会点出是哪一段、在哪个类上。UnrealSharp 的属性只有在 `[UProperty]` 写了 `BlueprintReadOnly` 或 `BlueprintReadWrite` 时才算 Blueprint 可见。
+
+```dui
+viewmodels {
+    PlayerVM Player
+}
+
+VerticalBox Root {
+    Text Name { Text <- Player.Nmae }
+}
+```
+
+**怎么改**：修正成员名；C++ 的属性加上 `BlueprintReadOnly`，函数加上 `BlueprintCallable` 或 `BlueprintPure`。
+
+## DUI5024
+
+一条越过非对象的值继续往下走的成员路径。
+
+**怎么会出现**：路径的每一段都从前一段持有的**对象**上读。`Player.Health.Max` 里 `Health` 是一个 float，它上面没有可读的成员。结构体也一样：路径只穿过对象引用。
+
+```dui
+viewmodels {
+    PlayerVM Player
+}
+
+VerticalBox Root {
+    Text Hp { Text <- Player.Health.Max }
+}
+```
+
+**怎么改**：让路径停在值那里；需要的派生值由视图模型作为一个成员提供（比如 `MaxHealth`）。
+
+## DUI5025
+
+事件接不住的路由运算符：单播委托上的 `+=`，或者多播事件上的 `=`。
+
+**怎么会出现**：`+=` 是在其他监听者旁边再加一个，所以只能用在能装多个监听者的事件上（`BlueprintAssignable` 多播委托、`DreamUIEventDelegate`）；`=` 是成为事件唯一的监听者，只能用在单播委托上——用在多播事件上，就得扔掉控件自己和 Blueprint 图表接上去的监听者。`->` 按事件的种类二者都行，永远不会是这一条。报了这一条的路由不会被记录：换一种方式接上，做的就不是这一行写的事了。
+
+```dui
+VerticalBox Root {
+    Native.Button Apply { OnClicked = HandleApply }
+}
+```
+
+**怎么改**：多播事件用 `+=`，单播委托用 `=`；或者两种都写 `->`。
 
 ## DUI6001
 
@@ -1363,6 +1443,150 @@ VerticalBox Root {
 ```
 
 **怎么改**：给事件或另一个成员改名。
+
+## DUI6015
+
+`viewmodels` 里的一个类型，找不到类，或者找到不止一个。
+
+**怎么会出现**：类型可以是类的反射名（C++ 的 `UPlayerVM` 写作 `PlayerVM`）、完整路径（`/Script/MyGame.PlayerVM`、`/Game/UI/BP_PlayerVM`），或者 `use … as` 给的名字。短名字对不上任何类——拼错了、模块没加载、Blueprint 还不存在——是这一条；两个模块里各有一个同名的类时也是，编译器不替你挑。
+
+```dui
+viewmodels {
+    PlayrVM Player
+}
+```
+
+**怎么改**：修正类名；有歧义时写完整路径，或者写 `use /Script/MyGame.PlayerVM as PlayerVM`，再用这个名字。
+
+## DUI6016
+
+一个已经被类的另一个成员占用的 `viewmodels` 名字。
+
+**怎么会出现**：每个条目会变成类上的一个变量，所以名字不能已经属于一个控件、一个 prop、一个资源、一个事件，或者这个 Blueprint 自己的变量和函数。父类上有同名成员时分两种情况：父类是 C++ 类、那个成员正好是这个类的对象引用，这一行就是在描述那个属性（它的对象从哪来），不另建变量；父类自己的 `.dui` 已经声明过这个条目，或者同名成员不是这个类的引用，就是这一条。
+
+```dui
+viewmodels {
+    PlayerVM Title
+}
+
+VerticalBox Root {
+    Text Title { Text = "Status" }
+}
+```
+
+**怎么改**：给条目或另一个成员改名；要沿用父类 `.dui` 声明的条目，删掉这一行，子类会原样读它。
+
+## DUI6017
+
+一个没法兑现的来源：对抽象类写 `= new`。
+
+**怎么会出现**：`= new` 让控件在没被交到对象时自己建一个，而抽象类没有东西可建。`UDreamViewModel` 自己就是抽象的，要写的是它的子类。报错之后这个条目仍然是类上的一个变量，经过它的绑定照常编译，只是运行时不会去填它。（`global ""` 这样的空名字在解析时就已经是 DUI2021。）
+
+```dui
+viewmodels {
+    DreamViewModel State = new
+}
+```
+
+**怎么改**：写一个具体的类；或者去掉 `= new`，由宿主把对象交过来。
+
+## DUI6018
+
+`-> Path.Func` 的函数，在对象的类上没有，或者 Blueprint 不能调用。
+
+**怎么会出现**：路由右边的路径走到一个对象，最后一段是这个对象的类上的函数。函数不存在、不是 `BlueprintCallable`，或者是 `BlueprintPure`（纯函数只返回一个值，事件没有什么要它做的），都是这一条。
+
+```dui
+viewmodels {
+    SettingsVM Settings
+}
+
+VerticalBox Root {
+    Native.Button Apply { OnClicked += Settings.Aply() }
+}
+```
+
+**怎么改**：修正函数名；C++ 的函数写成 `UFUNCTION(BlueprintCallable)`。
+
+## DUI6019
+
+`-> Path.Func` 的实参和函数对不上。
+
+**怎么会出现**：带括号时，括号里就是实参：类上的表达式，事件自己的参数按名字可用；个数和类型要和函数的参数一致。不带括号时，函数要么什么都不收，要么收的恰好是事件发出的那些。
+
+```dui
+viewmodels {
+    SettingsVM Settings
+}
+
+VerticalBox Root {
+    Native.Slider Volume { OnValueChanged += Settings.SetVolume(Value, 1) }
+}
+```
+
+**怎么改**：按函数的参数传实参；或者去掉括号，让函数直接收事件的参数。
+
+## DUI6020
+
+`<-> Path.Member` 的成员写不回去。
+
+**怎么会出现**：`<->` 要把控件的变化写回这个成员：对象的类上有 `BlueprintCallable` 的 `Set<Member>`（收一个同类型的参数）时调用它，否则直接写属性并在对象上广播。属性对图表只读（`BlueprintReadOnly`）又没有这样的 setter 时，两条路都走不通——滑条会动一下又弹回去——所以编译时就拒绝。
+
+```dui
+viewmodels {
+    SettingsVM Settings
+}
+
+VerticalBox Root {
+    Native.Slider Volume { Value <-> Settings.MasterVolume }
+}
+```
+
+这里 `MasterVolume` 是 `BlueprintReadOnly`，`SettingsVM` 上也没有 `SetMasterVolume`。
+
+**怎么改**：给类加一个 `BlueprintCallable` 的 `SetMasterVolume(float)`；或者把属性改成 `BlueprintReadWrite`；只需要单向时写 `<-`。
+
+## DUI6021
+
+循环体里一个元素类上没有的 `Item.Member`。
+
+**怎么会出现**：循环源是某个具体类的对象数组（`TArray<UItemVM*>`）时，编译器知道每一项是什么类，就拿它来查 `Item.Member`。源是 `TArray<UObject*>` 时元素的类要到运行时才知道，这一行留给运行时去查，对不上的副本照旧静默跳过。
+
+```dui
+viewmodels {
+    InventoryVM Inventory
+}
+
+VerticalBox Root {
+    for Item in Inventory.Items {
+        Text { Text <- Item.Nmae }
+    }
+}
+```
+
+**怎么改**：修正成员名，或者给元素类加上这个成员。
+
+## DUI6022
+
+循环体里一个 `-> Item.Func`，元素类上没有这个函数，或者参数对不上。
+
+**怎么会出现**：元素类已知时，`Event -> Item.Func` 和 `Event -> Item.Func()` 要求函数在元素类上，并且要么什么都不收，要么收的恰好是事件发出的那些。
+
+```dui
+viewmodels {
+    InventoryVM Inventory
+}
+
+VerticalBox Root {
+    for Item in Inventory.Items {
+        Native.Button { OnClicked += Item.Equip() }
+    }
+}
+```
+
+这里元素类 `ItemVM` 上没有 `Equip`。
+
+**怎么改**：修正函数名或参数；需要额外的实参时，让元素类提供一个不带参数的版本。
 
 ## DUI7001
 

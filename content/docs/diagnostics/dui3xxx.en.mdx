@@ -334,3 +334,18 @@ VerticalBox Menu {
 ```
 
 **How to fix**: give the rows distinct first values; a row code needs by name is written as a node of its own.
+
+## DUI3024
+
+<Dui sev="error" msg={"Two viewmodels entries of one name."} raised="DuplicateViewModel" />
+
+**How it happens**: each entry becomes a variable of the class, and two entries of one name can only be one variable. Names compare without regard to case: `Player` and `player` are one variable. The first is kept.
+
+```dui
+viewmodels {
+    PlayerVM Player
+    PlayerVM player = global
+}
+```
+
+**How to fix**: rename one of them, or remove the extra line.

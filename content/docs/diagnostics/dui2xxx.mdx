@@ -307,3 +307,18 @@ VerticalBox Menu {
 ```
 
 **怎么改**：让每一行的值数等于列数；某一行需要列以外的东西时，在这一行末尾加一个块。
+
+## DUI2021
+
+<Dui sev="error" msg={"一行读不通的 viewmodels，或者一个写在节点里的 viewmodels 块。"} raised="MalformedViewModelsBlock" />
+
+**怎么会出现**：`viewmodels` 块里每行声明一个视图模型：`类型 名字`，后面可以跟 `= new`、`= global`、`= global "Name"`、`= parent` 或 `= parent "Name"`。缺名字、`=` 后面不是这几种来源之一、一行里写了第二个声明，都是这一条。`global ""` 这样的空名字也是：它什么都不指，和不写名字的"只按类找"不是一回事。块写在节点里面同样是这一条：视图模型是类持有的东西，和 `props`、`events` 一样只能写在文件顶层。
+
+```dui
+viewmodels {
+    PlayerVM Player = global ""
+    SettingsVM = new
+}
+```
+
+**怎么改**：每行写成 `类型 名字`，再加可选的来源；只想按类从注册表里取，就只写 `global`；把块挪到文件顶层。

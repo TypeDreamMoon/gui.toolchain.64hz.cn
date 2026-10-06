@@ -12,11 +12,11 @@ DreamGUI 处理 `.dui` 时说出的每一条消息都带一个 `DUInnnn` 码，�
 | | 阶段 | 说明 | 码数 |
 | --- | --- | --- | --- |
 | [DUI1xxx](/docs/diagnostics/dui1xxx) | 词法 | 一串字符构不成任何记号。 | 7 |
-| [DUI2xxx](/docs/diagnostics/dui2xxx) | 语法 | 记号拼不成语法。 | 20 |
-| [DUI3xxx](/docs/diagnostics/dui3xxx) | 语义 | 语法没错，但这棵树对不上：重复的 id、未知的类型。 | 23 |
+| [DUI2xxx](/docs/diagnostics/dui2xxx) | 语法 | 记号拼不成语法。 | 21 |
+| [DUI3xxx](/docs/diagnostics/dui3xxx) | 语义 | 语法没错，但这棵树对不上：重复的 id、未知的类型。 | 24 |
 | [DUI4xxx](/docs/diagnostics/dui4xxx) | 取值 | 值和它写在的属性对不上。 | 8 |
-| [DUI5xxx](/docs/diagnostics/dui5xxx) | 构建 | 反射拒绝了写入，或者目标对象不存在。 | 22 |
-| [DUI6xxx](/docs/diagnostics/dui6xxx) | 编译 | .dui 挂不到它的 Blueprint 上。 | 14 |
+| [DUI5xxx](/docs/diagnostics/dui5xxx) | 构建 | 反射拒绝了写入，或者目标对象不存在。 | 25 |
+| [DUI6xxx](/docs/diagnostics/dui6xxx) | 编译 | .dui 挂不到它的 Blueprint 上。 | 22 |
 | [DUI7xxx](/docs/diagnostics/dui7xxx) | 写回 | 设计器的改动没法写回文本。 | 5 |
 
 ## 全部诊断码
@@ -52,6 +52,7 @@ DreamGUI 处理 `.dui` 时说出的每一条消息都带一个 `DUInnnn` 码，�
 | [DUI2018](/docs/diagnostics/dui2xxx#dui2018) | `MalformedConditional` | 错误 | 一个缺了条件或块的 `if`、前面没有 `if` 的 `else`，或者一个装了控件以外东西的分支。 |
 | [DUI2019](/docs/diagnostics/dui2xxx#dui2019) | `MalformedSlotDeclaration` | 错误 | 一个写了两次 `default` 的 slot，或者一个既声明又填充的 slot 块。 |
 | [DUI2020](/docs/diagnostics/dui2xxx#dui2020) | `MalformedRows` | 错误 | 一个读不通的 `rows` 表：列清单不是属性名、某一列写了两次，或者某一行的值个数不对。 |
+| [DUI2021](/docs/diagnostics/dui2xxx#dui2021) | `MalformedViewModelsBlock` | 错误 | 一行读不通的 `viewmodels`，或者一个写在节点里的 `viewmodels` 块。 |
 | [DUI3001](/docs/diagnostics/dui3xxx#dui3001) | `DuplicateNodeId` | 错误 | 两个用了同一个 id 的节点。 |
 | [DUI3002](/docs/diagnostics/dui3xxx#dui3002) | `InvalidNodeId` | 错误 | 一个不是标识符、以数字开头或者是关键字的 id。 |
 | [DUI3003](/docs/diagnostics/dui3xxx#dui3003) | `UnknownNodeType` | 错误 | 一个既不是标签、容器、别名、注册控件，也不是路径的节点类型。 |
@@ -75,6 +76,7 @@ DreamGUI 处理 `.dui` 时说出的每一条消息都带一个 `DUInnnn` 码，�
 | [DUI3021](/docs/diagnostics/dui3xxx#dui3021) | `UnknownNamespace` | 错误 | 一个 `ns` 没有被任何 `use … as ns` 声明过的 `ns.Name`。 |
 | [DUI3022](/docs/diagnostics/dui3xxx#dui3022) | `MultipleDefaultSlots` | 错误 | 一个文件里不止一个 `slot … default`。 |
 | [DUI3023](/docs/diagnostics/dui3xxx#dui3023) | `DuplicateRowKey` | 警告 | 一个 `rows` 表里第一个值生成了同一个 id 的两行（警告）。 |
+| [DUI3024](/docs/diagnostics/dui3xxx#dui3024) | `DuplicateViewModel` | 错误 | 两个同名的 `viewmodels` 条目。 |
 | [DUI4001](/docs/diagnostics/dui4xxx#dui4001) | `UnknownProperty` | 错误 | 目标对象上没有这个名字的属性；消息会给出最接近的那个。 |
 | [DUI4002](/docs/diagnostics/dui4xxx#dui4002) | `UnknownPropertyPathSegment` | 错误 | 一条开头能解析、后面解析不了的带点路径。 |
 | [DUI4003](/docs/diagnostics/dui4xxx#dui4003) | `ValueTypeMismatch` | 错误 | 一个形状不可能成为该属性类型的值。 |
@@ -96,7 +98,7 @@ DreamGUI 处理 `.dui` 时说出的每一条消息都带一个 `DUInnnn` 码，�
 | [DUI5011](/docs/diagnostics/dui5xxx#dui5011) | `BindingExpressionUnsupported` | 错误 | 一个编译器无法转成函数的表达式。 |
 | [DUI5012](/docs/diagnostics/dui5xxx#dui5012) | `EachMisplaced` | 错误 | 一个放错了地方的 `each`：在根上、嵌套在另一个循环里、宿主没有列表视图，或者循环体不是恰好一个模板控件。 |
 | [DUI5013](/docs/diagnostics/dui5xxx#dui5013) | `NodeReferenceNotFound` | 错误 | 一个作为值写下、却没有指向文件里任何节点的节点 id。 |
-| [DUI5014](/docs/diagnostics/dui5xxx#dui5014) | `LoopBodyBindingUnsupported` | 错误 | 一个写在循环体里的表达式或 `<->`。 |
+| [DUI5014](/docs/diagnostics/dui5xxx#dui5014) | `LoopBodyBindingUnsupported` | 错误 | 一个写在循环体里的表达式或 `<->`，或者一条通往别的对象的路由。 |
 | [DUI5015](/docs/diagnostics/dui5xxx#dui5015) | `TimelineTargetNotFound` | 错误 | 一条路径没有指向任何节点的轨道。 |
 | [DUI5016](/docs/diagnostics/dui5xxx#dui5016) | `TimelinePropertyNotAnimatable` | 错误 | 一个没有任何动画轨道能驱动的轨道属性。 |
 | [DUI5017](/docs/diagnostics/dui5xxx#dui5017) | `UnknownEaseName` | 错误 | 一个缓动库里没有的 `ease` 名字。 |
@@ -105,6 +107,9 @@ DreamGUI 处理 `.dui` 时说出的每一条消息都带一个 `DUInnnn` 码，�
 | [DUI5020](/docs/diagnostics/dui5xxx#dui5020) | `UnknownSlotToFill` | 错误 | 一个指向组件没有声明的 slot 的填充。 |
 | [DUI5021](/docs/diagnostics/dui5xxx#dui5021) | `ForMisplaced` | 错误 | 一个放错了地方的 `for`：在根上、在另一个循环里、在容量固定的宿主里，或者循环体不是恰好一个模板。 |
 | [DUI5022](/docs/diagnostics/dui5xxx#dui5022) | `SecondLayoutContainer` | 错误 | 一个节点上的第二个布局容器。 |
+| [DUI5023](/docs/diagnostics/dui5xxx#dui5023) | `MemberPathNotFound` | 错误 | 成员路径里的某一段，在它所在的类上找不到，或者 Blueprint 看不到。 |
+| [DUI5024](/docs/diagnostics/dui5xxx#dui5024) | `MemberPathThroughNonObject` | 错误 | 一条越过非对象的值继续往下走的成员路径。 |
+| [DUI5025](/docs/diagnostics/dui5xxx#dui5025) | `RouteOperatorMismatch` | 错误 | 事件接不住的路由运算符：单播委托上的 `+=`，或者多播事件上的 `=`。 |
 | [DUI6001](/docs/diagnostics/dui6xxx#dui6001) | `SourceFileUnreadable` | 错误 | Blueprint 的 Source File 指向一个不存在或读不出来的文件。 |
 | [DUI6002](/docs/diagnostics/dui6xxx#dui6002) | `EmptyTree` | 错误 | 一个解析通过、却没有产生任何树的文件。 |
 | [DUI6003](/docs/diagnostics/dui6xxx#dui6003) | `ClassPathMismatch` | 警告 | 一个指向了另一个 Blueprint、而不是正在编译的这个的 `class` 行（警告）。 |
@@ -119,6 +124,14 @@ DreamGUI 处理 `.dui` 时说出的每一条消息都带一个 `DUInnnn` 码，�
 | [DUI6012](/docs/diagnostics/dui6xxx#dui6012) | `EmitRouteUnsupported` | 错误 | 一个无法生成处理函数的 `emit`：在循环体里，或者事件的参数 Blueprint 无法承载。 |
 | [DUI6013](/docs/diagnostics/dui6xxx#dui6013) | `PropDefaultInvalid` | 错误 | 一个声明的类型容纳不了的 `props` 默认值。 |
 | [DUI6014](/docs/diagnostics/dui6xxx#dui6014) | `EventNameTaken` | 错误 | 一个已经被类的另一个成员占用的 `events` 名字。 |
+| [DUI6015](/docs/diagnostics/dui6xxx#dui6015) | `ViewModelClassUnknown` | 错误 | `viewmodels` 里的一个类型，找不到类，或者找到不止一个。 |
+| [DUI6016](/docs/diagnostics/dui6xxx#dui6016) | `ViewModelNameTaken` | 错误 | 一个已经被类的另一个成员占用的 `viewmodels` 名字。 |
+| [DUI6017](/docs/diagnostics/dui6xxx#dui6017) | `ViewModelSourceInvalid` | 错误 | 一个没法兑现的来源：对抽象类写 `= new`。 |
+| [DUI6018](/docs/diagnostics/dui6xxx#dui6018) | `RouteMemberFunctionNotFound` | 错误 | `-> Path.Func` 的函数，在对象的类上没有，或者 Blueprint 不能调用。 |
+| [DUI6019](/docs/diagnostics/dui6xxx#dui6019) | `RouteArgumentMismatch` | 错误 | `-> Path.Func` 的实参和函数对不上。 |
+| [DUI6020](/docs/diagnostics/dui6xxx#dui6020) | `TwoWayTargetReadOnly` | 错误 | `<-> Path.Member` 的成员写不回去。 |
+| [DUI6021](/docs/diagnostics/dui6xxx#dui6021) | `LoopItemMemberNotFound` | 错误 | 循环体里一个元素类上没有的 `Item.Member`。 |
+| [DUI6022](/docs/diagnostics/dui6xxx#dui6022) | `LoopItemRouteMismatch` | 错误 | 循环体里一个 `-> Item.Func`，元素类上没有这个函数，或者参数对不上。 |
 | [DUI7001](/docs/diagnostics/dui7xxx#dui7001) | `PatchTargetNotFound` | 错误 | 设计器的一次编辑在文件里找不到落脚处：未知的节点、被绑定的属性、没有块的 slot。 |
 | [DUI7002](/docs/diagnostics/dui7xxx#dui7002) | `SourceFileChangedUnderEdit` | 错误 | 文件在一次待写入的编辑底下被改动了，于是什么都没有写入。 |
 | [DUI7003](/docs/diagnostics/dui7xxx#dui7003) | `PatchValueNotRepresentable` | 错误 | 一个这门语言写不出来的值（非有限的数），它所在的那一行保持原样。 |

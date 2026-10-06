@@ -334,3 +334,18 @@ VerticalBox Menu {
 ```
 
 **怎么改**：让各行的第一个值互不相同；需要按名字找到的行，写成单独的节点。
+
+## DUI3024
+
+<Dui sev="error" msg={"两个同名的 viewmodels 条目。"} raised="DuplicateViewModel" />
+
+**怎么会出现**：每个条目会成为类上的一个变量，两个同名条目只能有一个变量。名字的比较不区分大小写，`Player` 和 `player` 是同一个变量。保留第一个。
+
+```dui
+viewmodels {
+    PlayerVM Player
+    PlayerVM player = global
+}
+```
+
+**怎么改**：给其中一个改名，或者删掉多余的那一行。

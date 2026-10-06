@@ -307,3 +307,18 @@ VerticalBox Menu {
 ```
 
 **How to fix**: give every row as many values as there are columns; for what one row needs beyond the columns, end its line with a block.
+
+## DUI2021
+
+<Dui sev="error" msg={"A viewmodels line that is not Type Name, = new, = global [\"Name\"] or = parent [\"Name\"] (an empty \"\" name included), or a viewmodels block inside a node."} raised="MalformedViewModelsBlock" />
+
+**How it happens**: each line of a `viewmodels` block declares one view model: `Type Name`, optionally followed by `= new`, `= global`, `= global "Name"`, `= parent` or `= parent "Name"`. A missing name, something after `=` that is none of those sources, or a second declaration on the line is this. So is an empty name such as `global ""`: it names nothing, which is not the same as no name, "by class alone". A block written inside a node is this too: view models are what the class holds, so the block belongs at the top of the file, like `props` and `events`.
+
+```dui
+viewmodels {
+    PlayerVM Player = global ""
+    SettingsVM = new
+}
+```
+
+**How to fix**: write each line as `Type Name` with an optional source; to take the object from the registry by its class alone, write `global` by itself; move the block to the top of the file.

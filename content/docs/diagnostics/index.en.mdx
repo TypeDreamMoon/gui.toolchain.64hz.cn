@@ -12,11 +12,11 @@ Severity is decided where a diagnostic is raised, not by its range. Most codes a
 | | Stage | Meaning | Codes |
 | --- | --- | --- | --- |
 | [DUI1xxx](/en/docs/diagnostics/dui1xxx) | Lexer | A character sequence that is not a token. | 7 |
-| [DUI2xxx](/en/docs/diagnostics/dui2xxx) | Parser | Tokens that do not form the grammar. | 20 |
-| [DUI3xxx](/en/docs/diagnostics/dui3xxx) | Meaning | Grammatical, but the tree does not hold together: a duplicate id, an unknown type. | 23 |
+| [DUI2xxx](/en/docs/diagnostics/dui2xxx) | Parser | Tokens that do not form the grammar. | 21 |
+| [DUI3xxx](/en/docs/diagnostics/dui3xxx) | Meaning | Grammatical, but the tree does not hold together: a duplicate id, an unknown type. | 24 |
 | [DUI4xxx](/en/docs/diagnostics/dui4xxx) | Values | A value that does not fit the property it is written on. | 8 |
-| [DUI5xxx](/en/docs/diagnostics/dui5xxx) | Building the tree | Reflection refused the write, or the target object does not exist. | 22 |
-| [DUI6xxx](/en/docs/diagnostics/dui6xxx) | Compiling | The .dui could not be attached to its Blueprint. | 14 |
+| [DUI5xxx](/en/docs/diagnostics/dui5xxx) | Building the tree | Reflection refused the write, or the target object does not exist. | 25 |
+| [DUI6xxx](/en/docs/diagnostics/dui6xxx) | Compiling | The .dui could not be attached to its Blueprint. | 22 |
 | [DUI7xxx](/en/docs/diagnostics/dui7xxx) | Write-back | The designer's edit could not be put into the text. | 5 |
 
 ## Every code
@@ -52,6 +52,7 @@ Severity is decided where a diagnostic is raised, not by its range. Most codes a
 | [DUI2018](/en/docs/diagnostics/dui2xxx#dui2018) | `MalformedConditional` | error | An `if` without its condition or block, an `else` with no `if`, or a branch holding something other than widgets. |
 | [DUI2019](/en/docs/diagnostics/dui2xxx#dui2019) | `MalformedSlotDeclaration` | error | A slot with `default` twice, or a block that both declares and fills. |
 | [DUI2020](/en/docs/diagnostics/dui2xxx#dui2020) | `MalformedRows` | error | A `rows` table that does not read: a column list that is not names, a column twice, a row with the wrong number of values. |
+| [DUI2021](/en/docs/diagnostics/dui2xxx#dui2021) | `MalformedViewModelsBlock` | error | A `viewmodels` line that is not `Type Name`, `= new`, `= global ["Name"]` or `= parent ["Name"]` (an empty `""` name included), or a `viewmodels` block inside a node. |
 | [DUI3001](/en/docs/diagnostics/dui3xxx#dui3001) | `DuplicateNodeId` | error | Two nodes share an id. |
 | [DUI3002](/en/docs/diagnostics/dui3xxx#dui3002) | `InvalidNodeId` | error | An id that is not an identifier, starts with a digit, or is a keyword. |
 | [DUI3003](/en/docs/diagnostics/dui3xxx#dui3003) | `UnknownNodeType` | error | A type that is no tag, container, alias, registered widget or path. |
@@ -75,6 +76,7 @@ Severity is decided where a diagnostic is raised, not by its range. Most codes a
 | [DUI3021](/en/docs/diagnostics/dui3xxx#dui3021) | `UnknownNamespace` | error | `ns.Name` whose `ns` no `use … as ns` declares. |
 | [DUI3022](/en/docs/diagnostics/dui3xxx#dui3022) | `MultipleDefaultSlots` | error | More than one `slot … default` in one file. |
 | [DUI3023](/en/docs/diagnostics/dui3xxx#dui3023) | `DuplicateRowKey` | warning | Warning. Two rows of a `rows` table whose first values make the same id; the second's id then moves with the order. |
+| [DUI3024](/en/docs/diagnostics/dui3xxx#dui3024) | `DuplicateViewModel` | error | Two `viewmodels` entries of one name. |
 | [DUI4001](/en/docs/diagnostics/dui4xxx#dui4001) | `UnknownProperty` | error | No property of that name; the nearest one is suggested. |
 | [DUI4002](/en/docs/diagnostics/dui4xxx#dui4002) | `UnknownPropertyPathSegment` | error | A dotted path whose head resolves and whose tail does not. |
 | [DUI4003](/en/docs/diagnostics/dui4xxx#dui4003) | `ValueTypeMismatch` | error | A value whose shape cannot be the property's type. |
@@ -105,6 +107,9 @@ Severity is decided where a diagnostic is raised, not by its range. Most codes a
 | [DUI5020](/en/docs/diagnostics/dui5xxx#dui5020) | `UnknownSlotToFill` | error | A fill naming a slot the component does not declare. |
 | [DUI5021](/en/docs/diagnostics/dui5xxx#dui5021) | `ForMisplaced` | error | A `for` at the root, in another loop, in a host with fixed room, or without exactly one template. |
 | [DUI5022](/en/docs/diagnostics/dui5xxx#dui5022) | `SecondLayoutContainer` | error | A second layout container on one node. |
+| [DUI5023](/en/docs/diagnostics/dui5xxx#dui5023) | `MemberPathNotFound` | error | A member path segment its class does not have, or does not show to Blueprint (an UnrealSharp property needs `BlueprintReadOnly` or `BlueprintReadWrite`). |
+| [DUI5024](/en/docs/diagnostics/dui5xxx#dui5024) | `MemberPathThroughNonObject` | error | A member path that goes on past a value that is not an object. |
+| [DUI5025](/en/docs/diagnostics/dui5xxx#dui5025) | `RouteOperatorMismatch` | error | `+=` on a single-cast delegate, or `=` on a multicast event. |
 | [DUI6001](/en/docs/diagnostics/dui6xxx#dui6001) | `SourceFileUnreadable` | error | The Blueprint's Source File does not exist or cannot be read. |
 | [DUI6002](/en/docs/diagnostics/dui6xxx#dui6002) | `EmptyTree` | error | The file parsed and produced no tree. |
 | [DUI6003](/en/docs/diagnostics/dui6xxx#dui6003) | `ClassPathMismatch` | warning | The `class` line names another Blueprint than the one compiling (a warning). |
@@ -119,6 +124,14 @@ Severity is decided where a diagnostic is raised, not by its range. Most codes a
 | [DUI6012](/en/docs/diagnostics/dui6xxx#dui6012) | `EmitRouteUnsupported` | error | An `emit` where no handler can be generated: in a loop body, or for an event Blueprints cannot carry. |
 | [DUI6013](/en/docs/diagnostics/dui6xxx#dui6013) | `PropDefaultInvalid` | error | A `props` default its type cannot hold. |
 | [DUI6014](/en/docs/diagnostics/dui6xxx#dui6014) | `EventNameTaken` | error | An `events` name another member of the class already answers to. |
+| [DUI6015](/en/docs/diagnostics/dui6xxx#dui6015) | `ViewModelClassUnknown` | error | A `viewmodels` type that names no class, or two. |
+| [DUI6016](/en/docs/diagnostics/dui6xxx#dui6016) | `ViewModelNameTaken` | error | A `viewmodels` name another member of the class already answers to. |
+| [DUI6017](/en/docs/diagnostics/dui6xxx#dui6017) | `ViewModelSourceInvalid` | error | `= new` of an abstract class. |
+| [DUI6018](/en/docs/diagnostics/dui6xxx#dui6018) | `RouteMemberFunctionNotFound` | error | `-> Path.Func` whose function the object's class does not have, or does not let Blueprint call. |
+| [DUI6019](/en/docs/diagnostics/dui6xxx#dui6019) | `RouteArgumentMismatch` | error | `-> Path.Func` whose arguments do not fit the function, or, without parentheses, whose function takes something other than nothing or what the event sends. |
+| [DUI6020](/en/docs/diagnostics/dui6xxx#dui6020) | `TwoWayTargetReadOnly` | error | `<-> Path.Member` whose member cannot be written back: read-only, and no `Set<Member>`. |
+| [DUI6021](/en/docs/diagnostics/dui6xxx#dui6021) | `LoopItemMemberNotFound` | error | `Item.Member` that the loop source's element class does not have. |
+| [DUI6022](/en/docs/diagnostics/dui6xxx#dui6022) | `LoopItemRouteMismatch` | error | `-> Item.Func` that the element class does not have, or whose parameters fit neither nothing nor the event. |
 | [DUI7001](/en/docs/diagnostics/dui7xxx#dui7001) | `PatchTargetNotFound` | error | A designer edit with no home in the file: an unknown node, a bound property, a slot with no block. |
 | [DUI7002](/en/docs/diagnostics/dui7xxx#dui7002) | `SourceFileChangedUnderEdit` | error | The file changed under a pending edit; nothing was written. |
 | [DUI7003](/en/docs/diagnostics/dui7xxx#dui7003) | `PatchValueNotRepresentable` | error | A value the language cannot spell (a non-finite number); its line is left alone. |

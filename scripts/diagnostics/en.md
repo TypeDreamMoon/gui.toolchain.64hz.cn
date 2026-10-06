@@ -392,6 +392,21 @@ VerticalBox Menu {
 
 **How to fix**: give every row as many values as there are columns; for what one row needs beyond the columns, end its line with a block.
 
+## DUI2021
+
+A `viewmodels` line that does not read, or a `viewmodels` block inside a node.
+
+**How it happens**: each line of a `viewmodels` block declares one view model: `Type Name`, optionally followed by `= new`, `= global`, `= global "Name"`, `= parent` or `= parent "Name"`. A missing name, something after `=` that is none of those sources, or a second declaration on the line is this. So is an empty name such as `global ""`: it names nothing, which is not the same as no name, "by class alone". A block written inside a node is this too: view models are what the class holds, so the block belongs at the top of the file, like `props` and `events`.
+
+```dui
+viewmodels {
+    PlayerVM Player = global ""
+    SettingsVM = new
+}
+```
+
+**How to fix**: write each line as `Type Name` with an optional source; to take the object from the registry by its class alone, write `global` by itself; move the block to the top of the file.
+
 ## DUI3001
 
 Two nodes share an id.
@@ -722,6 +737,21 @@ VerticalBox Menu {
 
 **How to fix**: give the rows distinct first values; a row code needs by name is written as a node of its own.
 
+## DUI3024
+
+Two `viewmodels` entries of one name.
+
+**How it happens**: each entry becomes a variable of the class, and two entries of one name can only be one variable. Names compare without regard to case: `Player` and `player` are one variable. The first is kept.
+
+```dui
+viewmodels {
+    PlayerVM Player
+    PlayerVM player = global
+}
+```
+
+**How to fix**: rename one of them, or remove the extra line.
+
 ## DUI4001
 
 No property of that name; the nearest one is suggested.
@@ -1015,9 +1045,9 @@ Widget Confirm {
 
 ## DUI5014
 
-An expression or a `<->` inside a loop body.
+An expression or a `<->` inside a loop body, or a route there to another object.
 
-**How it happens**: a generated binding function belongs to the class, and a name in a loop body is known only to an iteration, so the body supports the single hop `Item.Member`, recorded cell by cell. Anything richer used to be dropped: the file compiled and the property was never driven. The expression is fine and the place is not, which is why it is not DUI5011.
+**How it happens**: a generated binding function belongs to the class, and a name in a loop body is known only to an iteration, so the body supports two shapes, recorded cell by cell: the single hop `Item.Member` as a binding, and a route to a function of the item itself — `Event -> Item.Func` (handing it what the event sends) or `Event -> Item.Func()` (calling it with nothing). Anything richer used to be dropped: the file compiled and the property was never driven. A route to another object (`Settings.Apply()`), one more than a hop deep (`Item.Owner.Use`), or one with arguments is this too. The expression is fine and the place is not, which is why it is not DUI5011.
 
 ```dui
 VerticalBox Options {
@@ -1161,6 +1191,56 @@ VerticalBox Column {
 ```
 
 **How to fix**: write the container's properties on the node itself; for another arrangement, nest a child widget.
+
+## DUI5023
+
+A member path segment its class does not have, or does not show to Blueprint.
+
+**How it happens**: a path such as `Player.Name` starts at a variable of the class — a `viewmodels` entry, a prop or a Blueprint variable, as of the previous compile — and every later segment is a member of the class the segment before it holds. A segment that does not exist, or exists where a graph cannot reach it — a property that is not `BlueprintReadOnly` / `BlueprintReadWrite`, a function that is not `BlueprintCallable` / `BlueprintPure` — is this, and the message names the segment and the class. An UnrealSharp property is visible to Blueprint only when its `[UProperty]` says `BlueprintReadOnly` or `BlueprintReadWrite`.
+
+```dui
+viewmodels {
+    PlayerVM Player
+}
+
+VerticalBox Root {
+    Text Name { Text <- Player.Nmae }
+}
+```
+
+**How to fix**: correct the member's name; give a C++ property `BlueprintReadOnly`, a C++ function `BlueprintCallable` or `BlueprintPure`.
+
+## DUI5024
+
+A member path that goes on past a value that is not an object.
+
+**How it happens**: every segment of a path is read off the **object** the segment before it holds. In `Player.Health.Max`, `Health` is a float, which has no members to read. A struct is no different: a path goes through object references only.
+
+```dui
+viewmodels {
+    PlayerVM Player
+}
+
+VerticalBox Root {
+    Text Hp { Text <- Player.Health.Max }
+}
+```
+
+**How to fix**: end the path at the value; have the view model offer what is derived from it as a member of its own (`MaxHealth`).
+
+## DUI5025
+
+A route operator the event cannot honour: `+=` on a single-cast delegate, or `=` on a multicast event.
+
+**How it happens**: `+=` adds a listener beside the others, so it takes only an event that holds several (a `BlueprintAssignable` multicast delegate, a `DreamUIEventDelegate`); `=` makes this the event's one listener, so it takes only a single-cast delegate — on a multicast event it would have to drop the listeners the control and the Blueprint graph added. `->` takes either kind and is never this. The route is not recorded: bound the other way, it would do something the line does not say.
+
+```dui
+VerticalBox Root {
+    Native.Button Apply { OnClicked = HandleApply }
+}
+```
+
+**How to fix**: `+=` for a multicast event, `=` for a single-cast delegate — or `->` for either.
 
 ## DUI6001
 
@@ -1363,6 +1443,150 @@ VerticalBox Root {
 ```
 
 **How to fix**: rename the event or the other member.
+
+## DUI6015
+
+A `viewmodels` type that names no class, or two.
+
+**How it happens**: the type is a class's reflected name (`PlayerVM` for a C++ `UPlayerVM`), a full path (`/Script/MyGame.PlayerVM`, `/Game/UI/BP_PlayerVM`), or a name a `use … as` gave. A short name that matches no class — misspelt, its module not loaded, the Blueprint not there yet — is this; so is one that two modules each have a class of, since the compiler does not pick for you.
+
+```dui
+viewmodels {
+    PlayrVM Player
+}
+```
+
+**How to fix**: correct the class name; when it is ambiguous, write the full path, or `use /Script/MyGame.PlayerVM as PlayerVM` and the name it gives.
+
+## DUI6016
+
+A `viewmodels` name another member of the class already answers to.
+
+**How it happens**: each entry becomes a variable of the class, so its name must not already belong to a widget, a prop, a resource, an event, or a variable or function of this Blueprint. A parent's member of that name is one of two things. When the parent is a C++ class and the member is an object reference of this very class, the line describes that property — where its object comes from — rather than declaring a second one. When the parent's own `.dui` already declares the entry, or the member is not a reference to this class, it is this.
+
+```dui
+viewmodels {
+    PlayerVM Title
+}
+
+VerticalBox Root {
+    Text Title { Text = "Status" }
+}
+```
+
+**How to fix**: rename the entry or the other member; to use the entry a parent's `.dui` declares, remove the line — a subclass reads it as it is.
+
+## DUI6017
+
+A source that cannot be honoured: `= new` of an abstract class.
+
+**How it happens**: `= new` has the widget make one when it was given none, and an abstract class has nothing to make. `UDreamViewModel` itself is abstract; name a subclass of it. The entry still becomes a variable of the class, and bindings through it still compile; the run time is just never asked to fill it. (An empty name such as `global ""` is already DUI2021 when the file is parsed.)
+
+```dui
+viewmodels {
+    DreamViewModel State = new
+}
+```
+
+**How to fix**: name a concrete class, or leave the source out and have the host hand the object over.
+
+## DUI6018
+
+`-> Path.Func` whose function the object's class does not have, or does not let Blueprint call.
+
+**How it happens**: the path on the right of a route reaches an object, and its last segment is a function of that object's class. A function that does not exist, is not `BlueprintCallable`, or is `BlueprintPure` — which only returns a value, so an event has nothing to call it for — is this.
+
+```dui
+viewmodels {
+    SettingsVM Settings
+}
+
+VerticalBox Root {
+    Native.Button Apply { OnClicked += Settings.Aply() }
+}
+```
+
+**How to fix**: correct the function's name; make a C++ function `UFUNCTION(BlueprintCallable)`.
+
+## DUI6019
+
+`-> Path.Func` whose arguments do not fit the function.
+
+**How it happens**: with parentheses, they hold the arguments — expressions over the class, with the event's own parameters in scope by name — and their count and types must match the function's parameters. Without them, the function must take nothing or exactly what the event sends.
+
+```dui
+viewmodels {
+    SettingsVM Settings
+}
+
+VerticalBox Root {
+    Native.Slider Volume { OnValueChanged += Settings.SetVolume(Value, 1) }
+}
+```
+
+**How to fix**: pass the arguments the function takes, or drop the parentheses and let it take what the event sends.
+
+## DUI6020
+
+`<-> Path.Member` whose member cannot be written back.
+
+**How it happens**: `<->` writes the control's changes back into the member: through the object's `BlueprintCallable` `Set<Member>` (one parameter of the member's type) when the class has one, otherwise by writing the property and announcing it on that object. A property read-only to graphs (`BlueprintReadOnly`) with no such setter leaves neither way open — the slider would move and spring back — so the compiler refuses it.
+
+```dui
+viewmodels {
+    SettingsVM Settings
+}
+
+VerticalBox Root {
+    Native.Slider Volume { Value <-> Settings.MasterVolume }
+}
+```
+
+Here `MasterVolume` is `BlueprintReadOnly` and `SettingsVM` has no `SetMasterVolume`.
+
+**How to fix**: give the class a `BlueprintCallable` `SetMasterVolume(float)`, make the property `BlueprintReadWrite`, or bind it one way with `<-`.
+
+## DUI6021
+
+`Item.Member` that the loop source's element class does not have.
+
+**How it happens**: when the source is an array of a concrete class (`TArray<UItemVM*>`), the compiler knows what each item is and checks `Item.Member` against it. With a `TArray<UObject*>` the class is known only at run time, which checks the line then and, as it always did, skips a copy it does not fit.
+
+```dui
+viewmodels {
+    InventoryVM Inventory
+}
+
+VerticalBox Root {
+    for Item in Inventory.Items {
+        Text { Text <- Item.Nmae }
+    }
+}
+```
+
+**How to fix**: correct the member's name, or add the member to the element class.
+
+## DUI6022
+
+`-> Item.Func` in a loop body that the element class does not have, or whose parameters fit neither nothing nor the event.
+
+**How it happens**: when the element class is known, `Event -> Item.Func` and `Event -> Item.Func()` need the function on it, taking nothing or exactly what the event sends.
+
+```dui
+viewmodels {
+    InventoryVM Inventory
+}
+
+VerticalBox Root {
+    for Item in Inventory.Items {
+        Native.Button { OnClicked += Item.Equip() }
+    }
+}
+```
+
+Here the element class `ItemVM` has no `Equip`.
+
+**How to fix**: correct the function's name or parameters; when it needs more, have the element class offer a version that takes nothing.
 
 ## DUI7001
 

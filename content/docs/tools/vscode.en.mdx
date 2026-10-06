@@ -44,8 +44,8 @@ project, loading the ones that are not loaded, after asking first.
 
 | Feature | What you get |
 | --- | --- |
-| Highlighting | The whole grammar, binding expressions, `<->`, `use`, the component syntax, `rows` tables and `timeline` blocks included; semantic highlighting by identity: a node id as the member variable it becomes, styles as classes, resources as read-only constants |
-| Completion | Built-in tags, layout containers, component classes, per-class properties, enum values, slot properties, resource types, `@` resource references, `->` event names; a component instance's props, events and slots; `use … as` aliases and namespaces |
+| Highlighting | The whole grammar, binding expressions, member paths, `<->`, `+=` / `=` routes, `use`, the component syntax, `viewmodels` blocks, `rows` tables and `timeline` blocks included; semantic highlighting by identity: a node id as the member variable it becomes, styles as classes, resources as read-only constants |
+| Completion | Built-in tags, layout containers, component classes, per-class properties, enum values, slot properties, resource types, `@` resource references, `->` event names; a component instance's props, events and slots; `use … as` aliases and namespaces; the types in a `viewmodels` block and the four sources after `=`; after `Player.`, the view model's members (properties with their type, whether they are FieldNotify and whether `<->` can write them back; functions with their parameters), filtered by what the path is for — a route offers functions, `<->` writable properties, a loop source arrays — and followed on through object members (`Player.Stats.`) and into a loop over a view model's list (`Item.` in `for Item in Player.Items`) (since 0.10.0) |
 | Hover | Property types and enum values, UPROPERTY tooltips and pasteable class defaults, what an alias resolves to, an `emit`'s signature, the id an unnamed node compiles to |
 | Outline and navigation | An outline of the widget tree (with `if` / `else` branches, loops, slots); go to definition for `@Name`, styles, aliases, `use` targets, `emit`, props, namespaced names; Ctrl+T over every id, style and resource in every `.dui` |
 | Rename and refactors | F2 renames a style or resource with every use; renaming a node id writes the `(was: OldId)` clause so the next compile migrates graph references, bindings and animations; extract to a resource, extract to a style, inline a style |
@@ -67,7 +67,10 @@ compiler knows into the project's `DUI/.dui-symbols.json`:
 - **tags** from the builder's own table (registry tags such as `Native.Button` included);
 - **properties** from the same reflection rules the write-back sweeps with;
 - **enum values** from their `UEnum`;
-- and the layout containers with their properties, events, property tooltips and class defaults.
+- and the layout containers with their properties, events, property tooltips and class defaults;
+- the classes a `viewmodels` line can name (subclasses of `UDreamViewModel`, and any class that is not a widget and
+  implements `INotifyFieldValueChanged`) with their members — what completion after `Player.` reads (version 2 of the
+  file; an older export completes nothing there, rather than guessing).
 
 It is written at two moments: **on editor startup** (once classes exist), and **on demand**, by a console command:
 

@@ -1,6 +1,6 @@
 ---
 title: 更新日志
-description: DreamGUI 每个版本改了什么：从首个公开版本 1.0.0，一直往前到 2.1.0 和 2.0.0 两个开发版。
+description: DreamGUI 每个版本改了什么：main 上还没发布的改动，首个公开版本 1.0.0，一直往前到 2.1.0 和 2.0.0 两个开发版。
 ---
 
 DreamGUI 每个版本改了什么，按它对一个项目意味着什么来分组。把项目从一个版本搬到下一个版本——哪些东西加载起来不一样了、
@@ -14,6 +14,68 @@ https://github.com/TypeDreamMoon/DreamGUI/blob/main/CHANGELOG.md
 整数 `Version` 一直在涨——2.1.0 是 3，1.0.0 是 100——所以引擎永远不会把 1.0.0 当成两者中较旧的那个。
 
 </Callout>
+
+## 未发布
+
+`main` 上、1.0.0 之后的改动，会随下一个版本发布。
+
+### 新增
+
+- **视图模型。** `.dui` 文件用 `viewmodels { … }` 块声明它的类持有的视图模型——写明类，以及每个从哪来：宿主给（创建节点上的引脚、
+  `SetViewModel`、宿主 `.dui` 里的一行）、`= new`、从新的 `UDreamViewModelSubsystem` 里 `= global` / `= global "Name"`，或者从最近一层外层
+  widget `= parent`。绑定、路由和循环通过成员路径到达它们：`Text <- Player.Name`、`Value <-> Settings.MasterVolume`、
+  `OnClicked += Settings.Apply()`、`OnValueChanged += Settings.SetVolume(Value)`、`for Item in Inventory.Items`。任何 UObject 类都可以当视图模型；
+  `UDreamViewModel` 是方便用的基类（C++ 的 setter 用 `DREAM_VM_SET`），任何实现了 `INotifyFieldValueChanged` 的东西——包括 UE 的
+  `UMVVMViewModelBase`——都会被订阅，而不依赖 ModelViewViewModel 插件。路径上的对象没有都设好时不求值，属性保留原来的值。见[视图模型](/docs/dui/viewmodels)。
+- **绑定在它读的东西变化时更新。** 编译器记下每个 `<-` 表达式读到的变量和成员；它们全都会宣布变化（FieldNotify）时，绑定就订阅它们，
+  变化之间不花任何代价。FieldNotify 变量上的 `Text <- Title`、`Shown <- Count > 0` 以前每帧读一次。`DreamUI.Binding.Dump` 列出哪些绑定每帧读、
+  为什么；`DreamUI.Binding.ForcePoll 1` 让它们重新全部每帧读。见[绑定什么时候更新](/docs/dui/bindings#绑定什么时候更新)。
+- **行各自更新。** 在 `for` 或 `each` 里，一项宣布它的某个被副本显示的成员变了时，只更新那一个副本，不刷新整个列表；`Event -> Item.Func()`
+  把每个副本的事件路由到它自己那一项——列表视图回收单元格时跟着挪过去。源是有类型的（`TArray<UItemVM*>`）时，编译器检查 `Item.Member`
+  （DUI6021）和 `Item.Func`（DUI6022）。
+- **C++ 的 `UDreamUserWidget` 子类可以声明 FieldNotify 成员。** `DreamUserWidget.h` 现在包含 `FieldNotificationDeclaration.h`——UHT 为它们
+  生成的代码需要它，UMG 的 `Widget.h` 也是这样；以前这样的类编译不过。`.dui` 里绑定到这种成员会通过它的描述符订阅，`DREAM_VM_SET` 就是它的 setter。
+- **事件上的 `+=` 和 `=`**，和 `->` 并列：`+=` 加一个监听者，只用于多播事件；`=` 是单播委托唯一的监听者——路由现在终于能指向单播委托了——
+  也只用于它；用错是 DUI5025。`->` 两种都接受。
+- **Create Dream Widget、Add to Viewport 和 Add to Player Screen**——UMG 的 Create Widget 节点，以及和它配套的两个 user widget 调用。在节点上
+  选一个类，它就为每个 Expose on Spawn 属性开一个引脚——.dui 文件的每个 `props` 条目都是一个——另有一个 Owning Player 引脚，并把返回值的类型
+  设成那个类。引脚在 widget 初始化之前赋值，所以 Pre Construct、On Initialized、On Construct 和每个绑定的第一次取值都已经能看到它们；UMG 在
+  Create 之后才赋值，对 On Initialized 来说太晚了。Add to Viewport 把 widget 放上它拥有者玩家的屏幕，并且和 UMG 一样，拒绝已经有父节点的 widget；
+  Add to Player Screen 还会拒绝没有拥有者玩家的 widget。Remove from Parent 本来就有。C++ 拿到节点的两半：`BeginCreateDreamWidget` 和
+  `FinishCreateDreamWidget`。
+- **Add Component 只列出选中 widget 支持的组件**（`FDreamUIComponentSupport`）。网格修饰器要一个会建网格的视觉，精灵播放器要 Sprite，精灵图集
+  播放器要 Texture，超链接和文字动画要 Text，UMG 交互要 UMG Widget 视觉；Retainer Box 和 Invalidation Box 要 widget 先有画布；画布、导航、动画组件、
+  具名槽位、内容 widget 每个 widget 一个，一个 widget 只能是一种可选择对象、一种滚动视图，有多个子节点的 widget 不提供内容 widget。这些以前哪里都
+  能加，加了之后什么都不做。粘贴、复制和拖到面板上的组件资产遵守同样的规则，被拒绝的拖放会说出原因。项目在自己的编辑器模块里为自己的组件加规则。
+  见[组件](/docs/tools/designer#组件)。
+
+### 变更
+
+- **只读 FieldNotify 变量的绑定不再每帧读**——在它的 Blueprint 重新编译之后，等变量宣布变化时才更新。C++ 给这样的变量赋值却不广播——FieldNotify
+  从来不允许——以前被轮询掩盖，现在不会了；`DreamUI.Binding.ForcePoll 1` 能把它找出来。
+- **Create Dream Widget Of Class 不在蓝图菜单里了**：Create Dream Widget 节点代表它，就像 UMG 的 Create Widget 节点代表
+  `UWidgetBlueprintLibrary::Create`。已经调用它的图照常编译。它是 BlueprintInternalUseOnly，所以 Python 里也没有了。
+- **内容浏览器的添加菜单在最上面提供 DreamGUI Widget**，和引擎的 Blueprint Class、Material 在一起，不再只在一级子菜单里。子菜单本身现在叫
+  DreamGUI，分节——Basic（DreamGUI Widget、Widget Animation）、Fonts、Graphics、Rich Text——每项一个短名字和一行提示，而不是一整列按类型名排序、
+  widget 排在最后、提示是类的代码注释的列表。不再开发的位图字体显示为 Legacy Bitmap Font，并指向距离场字体。资产的类型名——磁贴上、过滤器里的——不变。
+- **设计器的调色板按 UMG 的方式分组。** Basic、Panels、Common、Input、Lists、Scrolling、Containers、Primitive、Shapes、Effects、Components、
+  Modifiers、Advanced、User Created，最后是默认折叠的 Legacy——以前是一个三十多行、什么都有的 Controls 分类，旁边是十来个只差一个词的小分类。
+  条目按名字排序，面板去掉了 "UMG " 前缀，Tile View 和 Scroll Box 两个行为挪进 Legacy，和取代它们的控件放在一起。User Created 不再列插件自己的
+  预设目录。层级面板的 Create 菜单用同样的分组。注册键没变，收藏都还在；拿 `FDreamUIControlDescriptor::Category` 去和 "Controls"、"Post Process"、
+  "Extensions" 或旧分类名比较的项目扩展，改从 `DreamUIPaletteCategory` 读名字。见[调色板](/docs/tools/designer#调色板)。
+- **细节面板把 widget 是什么放在它放在哪的正下面。** Slot、Layout，然后 Visual、Panel、Self Layout，然后 Appearance 和 Behavior，然后 Render
+  Transform 和默认折叠的 Perspective、Navigation、Accessibility、Localization；以前视觉排在 Behavior、Appearance、Panel、Self Layout 之后。Text 的
+  行以 Text、Font、Size、Style、Color 和对齐开头，换行、排版、渲染设置放在默认折叠的组里；Sprite 和 Texture 的颜色在它的 sprite / 纹理下面。底部
+  重复 Layout 行的 Transform 和锚点数据分类去掉了，Is Enabled 进了 Behavior。见[细节面板](/docs/tools/designer#细节面板)。
+
+### 修复
+
+- **创建一个抽象类的 widget 会记一条错误**，而不是停在 NewObject 的断言上。从列表里选的类不会是抽象的，但由变量喂给类引脚或 Create Dream Widget
+  Of Class 调用的类可能是。
+- **DreamUI Widget Blueprint 的缩略图就是它编写的那个界面。** 内容浏览器的磁贴以前是编写时锚点矩形的线框，不知道布局把东西排到了哪里，所以大多数
+  界面画出来是一个灰框加一两条线。缩略图现在像设计器的预览一样建出 widget，在设计画布上排好、画出来，和 UMG 画 widget 缩略图一样；没有编译出类的
+  Blueprint 仍然画线框。它在资产没有干净的缩略图时和保存时画，不会在指针停在上面的每一帧都画，所以大界面不会卡住浏览器。已经存进资产的缩略图会一直
+  显示，直到资产下一次被修改并保存。见[内容浏览器](/docs/tools/designer#内容浏览器)。
 
 ## 1.0.0
 

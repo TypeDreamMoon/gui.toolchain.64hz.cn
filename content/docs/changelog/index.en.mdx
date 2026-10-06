@@ -1,6 +1,6 @@
 ---
 title: Changelog
-description: What changed in each DreamGUI version, from 1.0.0, the first public release, back through the 2.1.0 and 2.0.0 development builds.
+description: What changed in each DreamGUI version — what is on main and not yet released, 1.0.0, the first public release, and back through the 2.1.0 and 2.0.0 development builds.
 ---
 
 What changed in each version of DreamGUI, grouped by what it changes for a project. Moving a project from one version to
@@ -17,6 +17,95 @@ below is a development build, and older than 1.0.0. The descriptor's integer `Ve
 after 3 for 2.1.0 — so the engine never takes 1.0.0 for the older of the two.
 
 </Callout>
+
+## Unreleased
+
+What is on `main` after 1.0.0, and ships with the next version.
+
+### New
+
+- **View models.** A `.dui` file declares the view models its class holds in a `viewmodels { … }` block — by class,
+  with where each comes from: the host (a creation pin, `SetViewModel`, a host's `.dui` line), `= new`, `= global` /
+  `= global "Name"` from the new `UDreamViewModelSubsystem`, or `= parent` from the nearest enclosing widget. Bindings,
+  routes and loops reach into them through member paths: `Text <- Player.Name`, `Value <-> Settings.MasterVolume`,
+  `OnClicked += Settings.Apply()`, `OnValueChanged += Settings.SetVolume(Value)`, `for Item in Inventory.Items`. Any
+  UObject class can be one; `UDreamViewModel` is the convenient base (with `DREAM_VM_SET` for C++ setters), and anything
+  implementing `INotifyFieldValueChanged` — UE's `UMVVMViewModelBase` included — is subscribed to, with no dependency
+  on the ModelViewViewModel plugin. A path whose objects are not all set is not evaluated, and the property keeps its
+  value. See [View models](/en/docs/dui/viewmodels).
+- **Bindings update when what they read changes.** The compiler records every variable and member a `<-` expression
+  reads; when all of them announce their changes (FieldNotify), the binding is subscribed and costs nothing between
+  changes. `Text <- Title` and `Shown <- Count > 0` on FieldNotify variables used to be read every frame.
+  `DreamUI.Binding.Dump` lists which bindings are read every frame and why; `DreamUI.Binding.ForcePoll 1` reads them
+  all every frame again. See [When a binding updates](/en/docs/dui/bindings#when-a-binding-updates).
+- **Rows update alone.** In a `for` or an `each`, a copy whose item announces a change of a member it shows is updated
+  without refreshing the list, and `Event -> Item.Func()` routes each copy's event to its own item — moved along when a
+  list view recycles a cell. With a typed source (`TArray<UItemVM*>`) the compiler checks `Item.Member` (DUI6021) and
+  `Item.Func` (DUI6022).
+- **A C++ `UDreamUserWidget` subclass can declare FieldNotify members.** `DreamUserWidget.h` now includes
+  `FieldNotificationDeclaration.h`, which what UHT generates for them needs, as UMG's `Widget.h` does; such a class used
+  to fail to compile. A `.dui` binding to the member subscribes through its descriptor, and `DREAM_VM_SET` is its setter.
+- **`+=` and `=` on events**, beside `->`: `+=` adds a listener and takes only a multicast event, `=` is the one
+  listener of a single-cast delegate — which routes can now name at all — and takes only that; the wrong one is DUI5025.
+  `->` takes either.
+- **Create Dream Widget, Add to Viewport and Add to Player Screen**, UMG's Create Widget node and the two user widget
+  calls that go with it. Picking a class on the node gives it a pin for each Expose on Spawn property — every `props`
+  entry of a .dui file is one — and an Owning Player pin, and types its result as that class. The pins are assigned
+  before the widget initializes, so Pre Construct, On Initialized, On Construct and the first value of every binding
+  already see them; UMG assigns after Create, which is too late for On Initialized. Add to Viewport puts the widget on
+  its owning player's screen and, as in UMG, refuses one that already has a parent; Add to Player Screen also refuses a
+  widget with no owning player. Remove from Parent was already there. C++ gets the two halves of the node as
+  `BeginCreateDreamWidget` and `FinishCreateDreamWidget`.
+- **Add Component lists only the components the selected widget supports** (`FDreamUIComponentSupport`). A mesh
+  modifier needs a visual that builds a mesh, a sprite player a Sprite, a sprite-sheet player a Texture, a hyperlink or
+  the text animation a Text, a UMG interaction a UMG Widget visual; a retainer or invalidation box needs the widget's
+  canvas first; a canvas, navigation, animation component, named slot or content widget is one per widget, a widget is
+  one kind of selectable and one scroll view, and a content widget is not offered on a widget with several children.
+  Each of these used to be addable anywhere and then sat there doing nothing. Paste, duplicate and component assets
+  dropped on the panel follow the same rules; a refused drop says why. A project adds rules for its own components
+  from its editor module. See [Components](/en/docs/tools/designer#components).
+
+### Changed
+
+- **A binding that reads only FieldNotify variables no longer reads them every frame** once its Blueprint is
+  recompiled: it updates when they announce a change. C++ that assigns such a variable without broadcasting it — which
+  FieldNotify never allowed — is no longer covered up by the poll; `DreamUI.Binding.ForcePoll 1` finds it.
+- **Create Dream Widget Of Class is no longer in the Blueprint menu**: the Create Dream Widget node stands for it, as
+  UMG's Create Widget node stands for `UWidgetBlueprintLibrary::Create`. Graphs that already call it keep compiling.
+  Being BlueprintInternalUseOnly, it is also gone from Python.
+- **The Content Browser's Add menu offers DreamGUI Widget at its top**, beside the engine's Blueprint Class and
+  Material, rather than only one submenu down. The submenu itself, now labelled DreamGUI, is in sections — Basic
+  (DreamGUI Widget, Widget Animation), Fonts, Graphics, Rich Text — with short labels and a one-line tooltip each,
+  instead of one alphabetical list of type names with the widget last and the classes' code comments as tooltips. The
+  bitmap font, which is no longer developed, reads Legacy Bitmap Font and points to the distance-field font. Asset type
+  names, on tiles and in filters, are unchanged.
+- **The designer's Palette is grouped the way UMG's is.** Basic, Panels, Common, Input, Lists, Scrolling, Containers,
+  Primitive, Shapes, Effects, Components, Modifiers, Advanced, User Created, and last Legacy, which starts closed —
+  where there was one Controls category of thirty-odd rows of every kind beside a dozen small ones that differed by a
+  word. Rows are listed by name, the panels lose their "UMG " prefix, and the Tile View and Scroll Box behaviours moved
+  to Legacy beside the controls that replaced them. User Created no longer lists the plugin's own preset folder. The
+  hierarchy's Create menu uses the same groups. Registry keys are unchanged, so favourites keep their stars; a project
+  extension that compared `FDreamUIControlDescriptor::Category` with "Controls", "Post Process", "Extensions" or a legacy
+  category name reads the names from `DreamUIPaletteCategory` instead. See [The palette](/en/docs/tools/designer#the-palette).
+- **The details panel puts what a widget is right under where it sits.** Slot, Layout, then Visual, Panel and Self
+  Layout, then Appearance and Behavior, then Render Transform and — collapsed — Perspective, Navigation,
+  Accessibility and Localization; the visual used to come after Behavior, Appearance, Panel and Self Layout. A Text's
+  rows lead with Text, Font, Size, Style, Color and alignment, with its wrapping, typography and rendering settings in
+  groups that start closed, and a Sprite's or Texture's colour sits under its sprite or texture. The Transform and
+  anchor-data categories at the bottom, which repeated the Layout rows raw, are gone, and Is Enabled joined Behavior.
+  See [The details panel](/en/docs/tools/designer#the-details-panel).
+
+### Fixed
+
+- **Creating a widget of an abstract class logs an error** instead of stopping on NewObject's assert. A class picked
+  from a list cannot be abstract, but a class pin or a Create Dream Widget Of Class call fed from a variable can be.
+- **A DreamUI Widget Blueprint's thumbnail is the screen it authors.** The Content Browser tile was a wireframe of the
+  authored anchor rects, which knows nothing of what a layout arranges, so most screens came out as a grey box with a
+  line or two on it. The thumbnail now builds the widget the way the designer's preview does, lays it out on the design
+  canvas and draws it, as UMG draws its widget thumbnails; the wireframe is kept for a Blueprint with no compiled class.
+  It is drawn when an asset has no clean thumbnail and when it is saved, not on every frame the pointer rests on it, so
+  a large screen does not stall the browser. A thumbnail already saved in an asset stays until the asset is next
+  changed and saved. See [The Content Browser](/en/docs/tools/designer#the-content-browser).
 
 ## 1.0.0
 

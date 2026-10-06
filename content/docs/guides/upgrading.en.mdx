@@ -1,6 +1,6 @@
 ---
 title: Upgrading from the development builds
-description: What to know when a project on the 2.1 or 2.0 development build moves to 1.0.0 — what can look different, which defaults moved, which switches put the old behaviour back, and what your own C++ has to change.
+description: What to know when a project on the 2.1 or 2.0 development build moves to 1.0.0 — what can look different, which defaults moved, which switches put the old behaviour back, and what your own C++ has to change; and what to watch for when following main past 1.0.0.
 ---
 
 1.0.0 is the first public release. Before it, the fork's development builds were numbered the single-module 1.x, then
@@ -8,12 +8,35 @@ description: What to know when a project on the 2.1 or 2.0 development build mov
 is a development build and **older than 1.0.0**. The descriptor's integer `Version` keeps rising — 3 for 2.1.0, 100 for
 1.0.0 — so the engine never takes 1.0.0 for the older of the two.
 
+- On **1.0.0**, following `main`: read [From 1.0.0 to the next version](#from-100-to-the-next-version).
 - On **2.1**: read [From 2.1 to 1.0.0](#from-21-to-100).
 - On **2.0**: read [From 2.0 to 2.1](#from-20-to-21) first, then From 2.1 to 1.0.0.
 - Coming from LGUI, LexUI or the single-module 1.x builds: go through [Migration](/en/docs/guides/migration) first,
   then read this page top to bottom.
 
 What each version added is in the [changelog](/en/docs/changelog).
+
+## From 1.0.0 to the next version
+
+What is on `main` after 1.0.0 (not yet released) renames nothing: assets saved by 1.0.0 load as they are, and `.dui`
+files compile as they did — `viewmodels`, member paths, `+=` and `=` are new syntax beside the old. Watch for these:
+
+- **A binding that reads only FieldNotify variables is no longer read every frame.** Once a Blueprint is recompiled,
+  such bindings subscribe to their variables and update when they announce a change. C++ that assigns a FieldNotify
+  variable without broadcasting it looked as if it worked while the poll covered it, and the value shown no longer
+  follows. Use `DREAM_VM_SET` or `BroadcastFieldValueChanged`; to find which one, `DreamUI.Binding.ForcePoll 1` puts the
+  poll back and `DreamUI.Binding.Dump` lists how every binding is driven (see
+  [When a binding updates](/en/docs/dui/bindings#when-a-binding-updates)).
+- **Create Dream Widget Of Class is gone from the Blueprint menu, and from Python.** Graphs that already call it keep
+  compiling; new ones use the Create Dream Widget node. An editor script calling `create_dream_widget_of_class` needs
+  another call, such as `add_widget_of_class_to_viewport`, or a function of its own exposed from C++.
+- **The palette's categories were renamed.** Extension code that compared `FDreamUIControlDescriptor::Category` with
+  "Controls", "Post Process", "Extensions" or a legacy category name reads the names from `DreamUIPaletteCategory`
+  instead. Registry keys are unchanged, and favourites with them.
+- **Add Component refuses what a widget cannot use.** A component that used to be addable, and then did nothing, is no
+  longer offered, and a paste or drop of it is refused. A project whose own components have requirements registers
+  them with `FDreamUIComponentSupport` from its editor module (see [Components](/en/docs/tools/designer#components)).
+- **Thumbnails.** A wireframe thumbnail already saved in an asset stays until the asset is next changed and saved.
 
 ## From 2.1 to 1.0.0
 

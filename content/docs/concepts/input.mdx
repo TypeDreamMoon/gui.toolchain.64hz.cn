@@ -67,7 +67,7 @@ description: 输入系统：事件系统与预设 Actor、射线检测器与输�
 
 | 类 | 答什么问题 |
 | --- | --- |
-| `UDreamBaseEventData` | 基类（`SelectedComponent`、`EventType`） |
+| `UDreamBaseEventData` | 基类（`SelectedComponent`、`EventType` —— 后者是 `EDreamUIPointerEventType`） |
 | `UDreamPointerEventData` | **在哪** —— 指针位置／按下位置、进入与悬停栈、世界点与法线、滚轮轴、拖拽状态，以及三个时间戳与双击计数 |
 | `UDreamKeyEventData` | **哪个键、什么和弦、谁的** —— `KeyEventType`、`Key`、四个和弦位、`AnalogValue`、`bHandled`、`FocusedWidget` |
 | `UDreamGestureEventData` | **手势的结论** —— `GestureType`（`Pinch` / `Swipe`）及各自的分量 |
@@ -118,6 +118,8 @@ Tab 被关在里面的情况：模态、调暗了背景的对话框、`Cycle` �
 
 方向导航按 `DirectionKeys` 表移动焦点。每个控件可以有自己的方向规则（`UDreamWidgetNavigation`，用 `GetOrCreateNavigation` 拿到，
 `SetRule`、`SetExplicitTarget`、`SetCustomDelegate`、`SetAllNavigationRules`），对应 UMG 的 Navigation。
+`FDreamUINavigationScroll` 管另一件事：方向键把焦点移到**滚出视野**的控件时，**把它滚进来**。
+
 `bRestrictNavigationArea` 把导航限制在一个控件的孩子之内，`NavigationBoundaryRule` 决定走到边界时：`Stop`（不动）、`Wrap`（从另一边接上）、
 `Escape`（交给外面那一层，像列表把移动交还给页面）。
 
@@ -164,7 +166,20 @@ Tab 被关在里面的情况：模态、调暗了背景的对话框、`Cycle` �
 | | 做什么 |
 | --- | --- |
 | **`Elevate` / `Restore`** | **只管搬**：把控件从原父级挪到屏幕根（世界位置逐像素保住），再搬回原处 |
-| **`Push` / `Pop`** | 在搬的基础上**再加四样**：焦点归还、点外部关闭、Back、菜单嵌套，以及**每帧布局后跟随开者** |
+| **`Push` / `Pop`** | 在搬的基础上**再加四样**：焦点归还（`FDreamFocusReturn`）、点外部关闭、Back、菜单嵌套，以及**每帧布局后跟随开者** |
+
+`FDreamPopupParams` 是 `Push` 的参数，字段如下：
+
+| 字段 | 默认 | 说明 |
+| --- | --- | --- |
+| `Popup` / `Opener` | 空 | 弹出的控件，与开它的那个（焦点回哪、跟随谁、谁是父） |
+| `UserIndex` | `0` | 属于哪个玩家 |
+| `OutsideClick` | `Consume` | 见下 |
+| `bFocusOnOpen` / `InitialFocus` | true / 空 | 一开就把焦点迁进去（迁到 `InitialFocus` 或第一个可导航控件） |
+| `bRestoreOnDismiss` | true | 关时搬回原父级原位；false 让它留在上面演关闭动画 |
+| `TabBehavior` | `Cycle` | 官方那两句写的就是它的两档 |
+| `Place` | 空 | 每帧布局后摆它的委托；不绑就保持相对开者的偏移 |
+| `OnDismissed` / `OnClosing` | 空 | 关完之后 / 关之前（**焦点还在里面时**）的回调 |
 
 ⚠️ **`Push` 的返回值不能当「确实打开了」用**：它返回 `true` 只代表**调用返回时**它是打开的 —— 焦点迁进去时若跑了某个处理器、把弹层又关了，`Push` 也返回 `false`。要记「我开着」，看弹层自己的 `OnDismissed`。
 
@@ -205,7 +220,7 @@ Back 意味着"以 Back 结果关闭"。模态**可以嵌套**：一个模态还
 
 管线是**按「玩家 + 指针」逐个**跟随的 —— **触屏上两根手指拖两个物品是常态**，早期「全场一份」的写法会让第二根手指把第一根的视觉**瞬移**过去。
 
-**列表行版**（`UDreamListRowDragSource` / `UDreamListRowDropTarget` / `UDreamListRowButton`，都在 **`DreamGUIControls`**）是上面两端的**子类，不另起检测路径** —— 它们只补上「这是谁的哪一行」；落点额外给出**落区**（`AboveItem` / `OntoItem` / `BelowItem`）。列表上有三个开关：`bAllowDragging`（默认 **false**）、`bAllowDragDrop`（默认 **false**，**与前者故意分开** —— 只出不进的调色板要前者、只进不出的装备栏要后者）、以及 `FingerDrag`（手指拖行是**滚列表**还是**拾起行**）。
+**列表行版**（`UDreamListRowDragSource` / `UDreamListRowDropTarget` / `UDreamListRowButton`，都在 **`DreamGUIControls`**）是上面两端的**子类，不另起检测路径** —— 它们只补上「这是谁的哪一行」；落点额外给出**落区** `EDreamItemDropZone`（`AboveItem` / `OntoItem` / `BelowItem`）。列表上有三个开关：`bAllowDragging`（默认 **false**）、`bAllowDragDrop`（默认 **false**，**与前者故意分开** —— 只出不进的调色板要前者、只进不出的装备栏要后者）、以及 `FingerDrag`（`EDreamListFingerDrag`，手指拖行是**滚列表**还是**拾起行**）。
 
 ### 虚拟光标
 

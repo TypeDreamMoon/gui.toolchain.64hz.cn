@@ -163,6 +163,8 @@ DreamGUI 自己的材质就是用它在 `rgb * opacity`（给引擎渲染器）�
 **文本四边形在 `UV2.x` 里带一个 paint 槽**：`UV2.x += 128 * slot`。不绘制的文本槽是 0，它的顶点就是 2.0 写的那套。
 **要解码 `UV2.x` 的着色器必须先剥掉槽**（`DreamUIText.ush` 里的 `DreamUIText_UnpackPaintSlot`）；**要重写文本四边形 `UV2.x` 的网格修改器必须把它保住**。
 
+另有**五个全局缓冲资源**：全屏 quad 的顶点缓冲、索引缓冲、切片 quad 的索引缓冲（**三个都是 `TGlobalResource`、全局各一份** —— 用 `static` 会给**每个包含它的 `.cpp` 各造一份**、各占一组 GPU 缓冲），加上网格顶点缓冲 `FDreamUIMeshVertexBuffer` 与顶点声明 `FDreamUIMeshVertexDeclaration`。
+
 ### 索引是 16 位的
 
 索引默认 **16 位**（`FDreamUIMeshIndex` = `uint16`）：半个索引的内存与带宽，代价是**一个 draw call 最多 65535 个顶点**（约 16k 个 quad）。真要单个元素超过，就得定义 `LEXUI_USE_32BIT_INDEXBUFFER`。

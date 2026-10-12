@@ -205,7 +205,7 @@ Widget Root {
 | --- | --- | --- |
 | `SourceObject` / `SourceProperty` | 空 | 从谁读、读哪个属性 |
 | `TargetObject` / `TargetProperty` | 空 | 写给谁、写哪个属性 —— ⭐ **`TargetObject` 不填时默认是「拥有这个组件的那个 widget」** |
-| `UpdateMode` | **`OnAwake`** | `OnAwake` / `EveryFrame` / `Manual` |
+| `UpdateMode` | **`OnAwake`** | `EDreamBindingUpdateMode`：`OnAwake` / `EveryFrame` / `Manual` |
 
 入口是 `ApplyBinding()`（蓝图可调）。
 

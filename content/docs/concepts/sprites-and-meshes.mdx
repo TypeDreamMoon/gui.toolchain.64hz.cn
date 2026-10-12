@@ -85,7 +85,7 @@ description: 视觉表说"画成什么"，这一页说"那些几何与图像数�
 
 **静态图集**：`UDreamUIStaticSpriteAtlasData` 把多张精灵**在编辑器里**、以及 **cook 时**打进一张（或一**数组**）图集纹理。所以**运行期没有打包开销**，也**支持 mipmap**；代价是**运行期不能再加**。`MaxTextureSize` 默认 **2048×2048** —— **超过就放弃打包**。它是 `NotBlueprintable` / `NotBlueprintType`，**只能当资产**。
 
-**动态图集打包**：一张「动态图集」按 `PackingTag` 分组，**每组是若干页**（每页一张四方纹理），每页配一个 **MAXRECTS 装箱器**决定精灵摆哪。管理它的是 **`UDreamUIDynamicSpriteAtlasManager`** —— 一个 **`UEngineSubsystem`**，用 `PackingTag` 当键。
+**动态图集打包**：一张「动态图集」按 `PackingTag` 分组，**每组是若干页**（每页一张四方纹理），每页配一个 **MAXRECTS 装箱器**决定精灵摆哪（数据在 `FDreamUIDynamicSpriteAtlasData` 里）。管理它的是 **`UDreamUIDynamicSpriteAtlasManager`** —— 一个 **`UEngineSubsystem`**，用 `PackingTag` 当键。
 
 **为什么是引擎子系统**：头文件注释写了它**曾经**是某个 static 里 rooted 的对象、谁都不 unroot —— **活得比每个世界都长，只有进程结束才拆**。改成引擎子系统，是因为引擎会负责创建、拆除、并在 GC 时持有它。
 
@@ -134,6 +134,10 @@ CPU 侧算了一堆**每个控件一行/一块**的数据（控件属性、裁�
 → 所以**采样它的东西不用被告知就跟着走了** —— 不用重设参数、不用重建绘制调用、不用刷 RHI。
 
 而旧的 `UTexture2DDynamic` 是**换一个新对象**，于是**每个材质实例、每份渲染线程副本都得听通知** —— 没听到的就会拿着一张**被 GC 收走的纹理**去画。
+
+块格式是 `EDreamUIDataAsTexturePixelFormat`（`R8` / `R16` / `R32` / `R8G8B8A8` / `R16G16B16A16` / `R32G32B32A32`）。它**默认不是逐块写、而是攒一批**：`PrepareForBatchUpdate` → 若干 `UpdateBlock` → `Flush` 一次性送。
+
+写入走 `Upload`，一批 `FDreamUIDataTextureUpdate` —— 每条是**一行上的一段像素**、或同样的段重复若干行。
 
 ⚠️ 它的大小**故意不放在属性里**：运行时在 transient 包建、永不保存 / 复制。尺寸走 `Initialize` / `Grow`（**不会缩**）。
 

@@ -112,7 +112,7 @@ Icon->RenderScaleTo(FVector(1.15, 1.15, 1.0), 0.6f, 0.0f, EDreamTweenEase::InOut
 
 ### 弹簧：没有时长，重定目标保留速度
 
-`UDreamTweenerSpring` 不按时钟推进，而是**按弹簧**推进：没有时长、没有缓动，值被拉向目标，**静止即完成**。参数是质量 / 刚度 / 阻尼加两个静止阈值（`RestDistance` / `RestVelocity`）。
+`UDreamTweenerSpring` 不按时钟推进，而是**按弹簧**推进：没有时长、没有缓动，值被拉向目标，**静止即完成**。参数是 `FDreamSpringParams` 的质量 / 刚度 / 阻尼加两个静止阈值（`RestDistance` / `RestVelocity`）。
 
 另有 `UDreamSpringLibrary` 的 `StepSpring` / `IsSpringAtRest` 两个**纯函数**，不架控件也能算。
 

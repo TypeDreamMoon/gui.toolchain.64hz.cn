@@ -121,6 +121,54 @@ DreamGUI 自己的材质就是用它在 `rgb * opacity`（给引擎渲染器）�
 它们共用一套读取、裁剪、写回屏幕的方式，全在渲染图的纹理上。自己写的效果也走这条路：在 `FDreamVisualPostProcessRenderProxy` 里用
 `ReadScreen_RenderThread` 和 `GrabRegion_RenderThread` 读屏幕，在 `CreateWorkTexture` 建的纹理里干活，用 `WriteBack_RenderThread` 写回。
 
+### 把结果抓回来：`PostProcessRenderElement`
+
+上面三种是**读屏幕**的视觉。另有两个反过来 —— 把**后处理算出来的结果图像抓回来**，当一块几何显示在它所在的位置：
+
+| `.dui` 标签 | 类 |
+| --- | --- |
+| `PostProcessRenderElement` | `UDreamPostProcessRenderElement` |
+| `PostProcessRenderElementText` | `UDreamPostProcessRenderElement_Text` |
+
+⚠️ **一条必须知道的前提**（源码用 `NOTE!!!` 标出）：**只有目标后处理的 `RenderType` 是 `RenderTarget`、且 `bUseFullSize` 为 `false` 时才有效**。不满足时**它什么都不显示，而且不报错**。
+
+`UDreamPostProcessRenderElement` 的 UV 约定是：`UV0` 是矩形 UV（(0,0) 到 (1,1)），`UV1` 见上面的[顶点格式](#顶点格式)。它通过四个静态矩阵参数（`DreamUI_World2PostProcess_Row1` … `Row4`）把「世界 → 后处理」的变换交给材质 —— 这就是结果图像对齐到这块几何上的方式。
+
+⚠️ `PostProcessRenderElementText` **不是它的子类** —— 它在**独立文件**里、**继承 `UDreamText`**，是「宿主是一段文本视觉」的那个版本。注意它的标签名比类名**少一个下划线**。
+
+## 顶点格式
+
+自己写着色器或网格修改器的人只需要这一个结构体：`FDreamUIMeshVertex`，**恰好 64 字节**。
+源码里有一条 `static_assert` 钉住它 —— 顶点声明、上传和几何的逐字节比较都假定没有填充，**所以这是 ABI**。
+
+| 字段 | 属性 | 说明 |
+| --- | --- | --- |
+| `Position` | 0 | `FVector3f` |
+| `Color` | 1 | `FColor` |
+| `TextureCoordinate[0..3]` | 2–5 | UV0…UV3 |
+| `TangentX` / `TangentZ` | 6 / 7 | 打包法线 |
+| `UV4` | **8** | 第五个纹理坐标，**排在最后** |
+
+`UV4` 是 2.0 新加的（顶点从 56 变 64 字节）。它**排在属性 8 而不是插在中间**，是为了让之前的属性一个都没挪位。
+材质里当 `TexCoord(4)` 读，**文本用它装渐变绘制**（一个被绘制的字形四边形在它那个渐变盒子里的位置），其它一切写 `(0, 0)`。
+用构造函数 / `SetNum` / 整结构拷贝造出来的顶点自动是对的；**只有「先把顶点数组撑大、再逐字段填」的代码必须自己写 `UV4`**。
+
+两个默认 UV 通道另有含义：
+
+- **`UV0` 是纹理坐标**；
+- **`UV1` 是控件属性数据的坐标** —— x 是数据纹理里的剪裁数据坐标，y 是纹理数组的切片下标，主要给字体渲染用。
+
+⚠️ `UV1` 被画布占着（画布还会在同一次重建的后面把 x 盖回去），所以**一个把顶点位置写进 `UV1` 的网格修改器会丢一半、还破坏字形查找**。其余通道由各自的视觉定义（`DreamText`、`DreamRectBlock` 等）。
+
+**文本四边形在 `UV2.x` 里带一个 paint 槽**：`UV2.x += 128 * slot`。不绘制的文本槽是 0，它的顶点就是 2.0 写的那套。
+**要解码 `UV2.x` 的着色器必须先剥掉槽**（`DreamUIText.ush` 里的 `DreamUIText_UnpackPaintSlot`）；**要重写文本四边形 `UV2.x` 的网格修改器必须把它保住**。
+
+### 索引是 16 位的
+
+索引默认 **16 位**（`FDreamUIMeshIndex` = `uint16`）：半个索引的内存与带宽，代价是**一个 draw call 最多 65535 个顶点**（约 16k 个 quad）。真要单个元素超过，就得定义 `LEXUI_USE_32BIT_INDEXBUFFER`。
+
+这条也是「顶点预算」的出处：顶点多到一个绘制调用的索引装不下时，网格修改器会**每个只报一次错、然后不画那个副本**。
+
 ## 检查
 
 报告"画错了"或"没画出来"时，这两个控制台变量很有用（测试套件运行时两个都开着）：
@@ -133,4 +181,4 @@ DreamGUI 自己的材质就是用它在 `rgb * opacity`（给引擎渲染器）�
 `DreamUI.Capture` 把视口和每个渲染到目标的根画布存成 PNG，`DreamUI.Stats` 打印每个阶段的开销，`DreamGUI.Memory` 列出字体图集、
 精灵图集页和每个世界的画布网格段。完整的做法见[调试](/docs/tools/debugging)。
 
-自己写着色器或网格修改器的话：DreamUI 顶点是 64 字节，带第五个纹理坐标 `UV4`；文本四边形在 `UV2.x` 里带一个 paint 槽。细节见[迁移](/docs/guides/migration)。
+自己写着色器或网格修改器的话，从上面的[顶点格式](#顶点格式)开始。

@@ -38,6 +38,17 @@ description: 布局引擎怎么工作：测量是 const 的、与布置分开，
 | `InvalidateLayoutAndVolatility` / `UDreamUIBPLibrary::InvalidateLayout` | 请下一帧对它做一轮布局（"volatility"那一半在这里没有对应物） |
 | `UDreamPanelSlot::NotifySlotChanged(Reason)` | 槽改了；对齐、尺寸规则、填充权重、z 序传 `Arrange`，内边距、网格坐标、`bAutoSize` 保持默认的 `Measure` |
 
+## 自身布局：四个变体
+
+面板管**孩子**；控件自己「想要多大」由**自身布局**（`LayoutSelf`）回答 —— 它是个子对象，和面板互不相干：
+
+| 类 | 说明 |
+| --- | --- |
+| `UDreamLayoutSelf` | 默认的自身布局 |
+| `UDreamLayoutSelfAspectRatio` | 按宽高比约束自己 |
+| `UDreamLayoutSelfAuthoredSurface` | 用自绘表面 |
+| `UDreamLayoutSelfSpacer` | 占位、把剩余空间吃掉 |
+
 ## 面板
 
 面板都是 `UDreamPanelLayoutBase` 的子类，名字和行为对照 UMG。`.dui` 里容器名本身就是节点类型
@@ -65,7 +76,11 @@ description: 布局引擎怎么工作：测量是 const 的、与布置分开，
 
 一个面板只有一个布局容器：容器类型的节点上再写 `+ HorizontalBox` 是 DUI5022。有些容器需要控件上带着特定的行为才能和它镜像的
 UMG 面板一致（比如 SizeBox 需要 ContentWidget），给控件指定容器时缺的会自动加上。容器还可以带布局动画：`bUseAnimation` 加上
-`AnimationHandler`（`UDreamLayoutAnimation_CommonTween`、`UDreamLayoutAnimation_SlideIn`），让孩子换位置时补间过去。
+`AnimationHandler`，让孩子换位置时**补间**过去而不是跳过去。三个类同住 `Core/Components/DreamLayout.h`：
+`UDreamLayoutAnimation`（`UObject` 基类，`GetLayoutContainer()` 加蓝图事件 `OnApplyLayoutResults`）、
+`UDreamLayoutAnimation_CommonTween`（通用补间，`Duration` 默认 **0.3**、可换成曲线）、
+`UDreamLayoutAnimation_SlideIn`（滑入）。
+⚠️ 它们是 **`UObject` 不是 `UComponent`** —— 在「加到控件上的组件」里找不到。
 
 ```dui
 VerticalBox Settings {

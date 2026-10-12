@@ -5,7 +5,7 @@ Chinese is the default locale, English lives under `/en`.
 
 Built on the same stack as its sister sites [shader.toolchain.64hz.cn](https://shader.toolchain.64hz.cn)
 (DreamShader) and [fx.toolchain.64hz.cn](https://fx.toolchain.64hz.cn) (DreamFX): Next.js + fumadocs, a
-static export, and an SFTP deploy.
+static export, and rsync over SSH for CI deployment.
 
 ## Running it
 
@@ -19,6 +19,9 @@ npm run preview      # serve out/
 
 ## Deploying
 
+GitHub Actions uses incremental rsync deployment; see [DEPLOYMENT.md](DEPLOYMENT.md).
+The commands below retain the existing local SFTP uploader:
+
 ```bash
 cp .env.example .env       # fill in SFTP_PASSWORD or SFTP_KEY_PATH
 npm run deploy:sftp        # build, then upload out/ to the web root
@@ -31,8 +34,10 @@ remote directory outside `/www/wwwroot/`, and defaults to `/www/wwwroot/gui.tool
 ### GitHub Actions
 
 `.github/workflows/deploy.yml` runs `npm ci → typecheck → build → check-links` on every push and pull
-request, and uploads on a push to `main`/`master` (or a manual **Run workflow**). Pull requests build
-and check but never deploy, and `concurrency` keeps two deploys from racing inside the same web root.
+request, and syncs `out/` over SSH on a push to `main`/`master` (or a manual **Run workflow**).
+Pull requests build and check but never deploy. Publishing branches share a concurrency group,
+and an active deployment finishes before the next one starts. Select **dry_run** in a manual run
+to compare without changing server files.
 
 Repository secrets (Settings ▸ Secrets and variables ▸ Actions):
 
@@ -45,6 +50,7 @@ Repository secrets (Settings ▸ Secrets and variables ▸ Actions):
 | `SFTP_PORT` | optional | `22` |
 | `SFTP_USER` | recommended | `root` |
 | `SFTP_REMOTE_DIR` | recommended | `/www/wwwroot/gui.toolchain.64hz.cn` |
+| `SFTP_KNOWN_HOSTS` | only for a different host/port or host-key rotation | verified known-hosts entries; see [DEPLOYMENT.md](DEPLOYMENT.md) |
 
 ## Layout
 

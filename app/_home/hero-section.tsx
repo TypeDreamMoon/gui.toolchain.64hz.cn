@@ -2,7 +2,7 @@ import { localizedPath, type Locale } from '@/lib/i18n';
 import { GITHUB_URL } from '@/lib/site';
 import { BookOpen, ChevronDown, CodeXml, GitBranch } from 'lucide-react';
 import Link from 'next/link';
-import { UiStage } from './ui-stage';
+import { Character } from './character';
 import type { HomeCopy } from './copy';
 import { Particles } from './particles';
 
@@ -60,7 +60,7 @@ export function HeroSection({
         </div>
 
         <div className="dgui-hero-art">
-          <UiStage caption={copy.hero.artCaption} />
+          <Character alt={copy.hero.artAlt} caption={copy.hero.artCaption} />
         </div>
       </div>
 

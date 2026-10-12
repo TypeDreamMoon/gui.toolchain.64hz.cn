@@ -30,6 +30,7 @@ export type HomeCopy = {
     primary: string;
     secondary: string;
     versionsLabel: string;
+    artAlt: string;
     artCaption: string;
     scrollCue: string;
   };
@@ -105,6 +106,7 @@ export const homeCopies: Record<Locale, HomeCopy> = {
       primary: '开始阅读',
       secondary: 'GitHub',
       versionsLabel: '当前版本',
+      artAlt: 'DreamGUI 形象：一位银发少女坐在半空，指尖点向悬浮的界面面板',
       artCaption: 'DreamGUI · UI in the world',
       scrollCue: '往下看',
     },
@@ -194,6 +196,7 @@ export const homeCopies: Record<Locale, HomeCopy> = {
       primary: 'Read the docs',
       secondary: 'GitHub',
       versionsLabel: 'Current versions',
+      artAlt: 'The DreamGUI character: a silver-haired girl seated mid-air, pointing at floating UI panels',
       artCaption: 'DreamGUI · UI in the world',
       scrollCue: 'Scroll',
     },

@@ -32,7 +32,7 @@ html:has(.dgui-home) {
    JavaScript, the browser's own snap animation is the fallback. */
 
 /* an eased glide should not be redrawn from scratch every frame */
-.dgui-ui-plane,
+.dgui-art-figure,
 .dgui-cue svg {
   will-change: transform;
 }
@@ -316,7 +316,8 @@ html:has(.dgui-home) {
 
 @media (prefers-reduced-motion: reduce) {
   .dgui-glow,
-  .dgui-weave {
+  .dgui-weave,
+  .dgui-art-figure {
     animation: none;
   }
 }
@@ -618,6 +619,21 @@ html:has(.dgui-home) {
   display: grid;
   place-items: end center;
   isolation: isolate;
+}
+
+.dgui-art-figure {
+  position: relative;
+  z-index: 2;
+  display: block;
+  block-size: clamp(22rem, 66vh, 42rem);
+  inline-size: auto;
+  max-inline-size: 100%;
+  filter: drop-shadow(0 24px 44px color-mix(in oklab, var(--dream-ink) 34%, transparent));
+  animation: dgui-float 11s var(--dgui-ease) infinite;
+}
+
+.dark .dgui-art-figure {
+  filter: drop-shadow(0 24px 48px hsl(222 80% 3% / 0.6));
 }
 
 /* Absolutely positioned children of a grid container take their static position,
@@ -1254,8 +1270,7 @@ html:has(.dgui-home) {
     order: 2;
   }
 
-  .dgui-ui-world {
-    inline-size: min(24rem, 78vw);
+  .dgui-art-figure {
     block-size: clamp(18rem, 46vh, 26rem);
   }
 }
@@ -1279,318 +1294,5 @@ html:has(.dgui-home) {
   .dgui-code-line::before {
     width: 2.5rem;
     padding-inline-end: var(--dgui-space-3);
-  }
-}
-
-/* -----------------------------------------------------------------------------
-   the UI stage — panels at three depths in one perspective, turned toward the
-   reader and swaying slowly. Only transforms animate, so every frame is a
-   compositor job; under reduced motion the stage holds its first pose.
-   -------------------------------------------------------------------------- */
-
-.dgui-ui-world {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  /* a length of its own: the stage around it is sized by its content, so a
-     percentage here would resolve against a width that does not exist yet */
-  inline-size: min(30rem, 38vw);
-  block-size: clamp(22rem, 62vh, 36rem);
-  perspective: 1100px;
-  perspective-origin: 40% 30%;
-}
-
-.dgui-ui-plane {
-  position: relative;
-  inline-size: 74%;
-  aspect-ratio: 4 / 5;
-  transform-style: preserve-3d;
-  transform: rotateX(10deg) rotateY(-22deg) rotateZ(1deg);
-  animation: dgui-ui-sway 14s var(--dgui-ease) infinite;
-}
-
-@keyframes dgui-ui-sway {
-  0%,
-  100% {
-    transform: rotateX(10deg) rotateY(-22deg) rotateZ(1deg);
-  }
-  50% {
-    transform: rotateX(6deg) rotateY(-11deg) rotateZ(0deg) translateY(-0.6rem);
-  }
-}
-
-.dgui-ui-panel {
-  position: absolute;
-  border: 1px solid color-mix(in oklab, var(--dream-flux) 32%, var(--color-fd-border));
-  border-radius: var(--dgui-radius-lg);
-  background: linear-gradient(
-    160deg,
-    color-mix(in oklab, var(--color-fd-card) 92%, white),
-    color-mix(in oklab, var(--color-fd-card) 88%, var(--dream-flux))
-  );
-  box-shadow:
-    0 26px 52px color-mix(in oklab, var(--dream-ink) 20%, transparent),
-    inset 0 1px 0 color-mix(in oklab, white 55%, transparent);
-}
-
-.dark .dgui-ui-panel {
-  background: linear-gradient(
-    160deg,
-    color-mix(in oklab, var(--color-fd-card) 88%, var(--dream-flux)),
-    color-mix(in oklab, var(--color-fd-background) 90%, var(--dream-flux))
-  );
-  box-shadow:
-    0 26px 56px hsl(222 80% 3% / 0.6),
-    inset 0 1px 0 color-mix(in oklab, white 10%, transparent);
-}
-
-/* the main panel: a settings card */
-.dgui-ui-main {
-  inset: 8% 6% 12% 4%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.15rem 1.2rem;
-  transform: translateZ(0);
-}
-
-.dgui-ui-head {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding-block-end: 0.85rem;
-  border-block-end: 1px solid var(--dgui-rule);
-}
-
-.dgui-ui-dot {
-  inline-size: 0.7rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--dream-flux);
-  box-shadow: 0 0 0 4px color-mix(in oklab, var(--dream-flux) 18%, transparent);
-}
-
-.dgui-ui-title {
-  flex: 0 0 46%;
-  block-size: 0.7rem;
-  border-radius: var(--dgui-radius-pill);
-  background: color-mix(in oklab, var(--color-fd-foreground) 70%, transparent);
-}
-
-.dgui-ui-chip {
-  margin-inline-start: auto;
-  inline-size: 2.6rem;
-  block-size: 1rem;
-  border-radius: var(--dgui-radius-pill);
-  background: color-mix(in oklab, var(--dream-spark) 70%, transparent);
-}
-
-.dgui-ui-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.dgui-ui-label {
-  flex: 0 0 42%;
-  block-size: 0.55rem;
-  border-radius: var(--dgui-radius-pill);
-  background: color-mix(in oklab, var(--color-fd-muted-foreground) 55%, transparent);
-}
-
-.dgui-ui-label-short {
-  flex-basis: 30%;
-}
-
-.dgui-ui-toggle {
-  position: relative;
-  inline-size: 2.4rem;
-  block-size: 1.25rem;
-  border-radius: var(--dgui-radius-pill);
-  background: color-mix(in oklab, var(--dream-flux) 85%, transparent);
-}
-
-.dgui-ui-toggle > span {
-  position: absolute;
-  inset-block: 0.18rem;
-  inset-inline-end: 0.18rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: white;
-}
-
-.dgui-ui-slider {
-  position: relative;
-  flex: 0 0 46%;
-  block-size: 0.32rem;
-  border-radius: var(--dgui-radius-pill);
-  background: color-mix(in oklab, var(--color-fd-muted-foreground) 30%, transparent);
-}
-
-.dgui-ui-slider > span {
-  position: absolute;
-  inset-block: 0;
-  inset-inline-start: 0;
-  inline-size: 62%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--dream-flux), var(--dream-cyan));
-}
-
-.dgui-ui-slider > span::after {
-  position: absolute;
-  inset-block-start: 50%;
-  inset-inline-end: -0.45rem;
-  inline-size: 0.9rem;
-  aspect-ratio: 1;
-  border: 2px solid var(--dream-flux);
-  border-radius: 50%;
-  background: var(--color-fd-card);
-  content: "";
-  translate: 0 -50%;
-}
-
-.dgui-ui-select {
-  flex: 0 0 46%;
-  block-size: 1.45rem;
-  border: 1px solid var(--dgui-rule-strong);
-  border-radius: var(--dgui-radius-sm);
-}
-
-.dgui-ui-button {
-  margin-block-start: auto;
-  block-size: 2.2rem;
-  border-radius: var(--dgui-radius-md);
-  background: linear-gradient(
-    100deg,
-    var(--dream-flux),
-    color-mix(in oklab, var(--dream-cyan) 80%, var(--dream-flux))
-  );
-  box-shadow: 0 10px 22px color-mix(in oklab, var(--dream-flux) 34%, transparent);
-}
-
-/* a world-space label, nearer the reader than the card */
-.dgui-ui-tag {
-  inset-block-start: -2%;
-  inset-inline-end: -14%;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  inline-size: 44%;
-  padding: 0.7rem 0.8rem;
-  transform: translateZ(90px);
-}
-
-.dgui-ui-tag-mark {
-  flex: 0 0 auto;
-  inline-size: 1.4rem;
-  aspect-ratio: 1;
-  border: 2px solid var(--dream-spark);
-  border-radius: var(--dgui-radius-xs);
-  rotate: 45deg;
-  scale: 0.8;
-}
-
-.dgui-ui-tag-lines {
-  display: grid;
-  flex: 1;
-  gap: 0.35rem;
-}
-
-.dgui-ui-tag-lines > span {
-  block-size: 0.42rem;
-  border-radius: var(--dgui-radius-pill);
-  background: color-mix(in oklab, var(--color-fd-foreground) 55%, transparent);
-}
-
-.dgui-ui-tag-lines > span + span {
-  inline-size: 60%;
-  background: color-mix(in oklab, var(--color-fd-muted-foreground) 45%, transparent);
-}
-
-/* the source it was written in, nearer still */
-.dgui-ui-code {
-  inset-block-end: -4%;
-  inset-inline-start: -16%;
-  display: grid;
-  gap: 0.42rem;
-  inline-size: 52%;
-  padding: 0.85rem 0.9rem;
-  transform: translateZ(60px);
-}
-
-.dgui-ui-code-line {
-  block-size: 0.4rem;
-  border-radius: var(--dgui-radius-pill);
-  background: color-mix(in oklab, var(--dream-flux) 46%, transparent);
-}
-
-.dgui-ui-code-line:nth-child(2n) {
-  background: color-mix(in oklab, var(--dream-spark) 52%, transparent);
-}
-
-.dgui-ui-code-line.dgui-indent {
-  margin-inline-start: 0.9rem;
-}
-
-.dgui-w-30 {
-  inline-size: 30%;
-}
-
-.dgui-w-50 {
-  inline-size: 50%;
-}
-
-.dgui-w-60 {
-  inline-size: 60%;
-}
-
-.dgui-w-70 {
-  inline-size: 70%;
-}
-
-.dgui-w-80 {
-  inline-size: 80%;
-}
-
-/* a loading ring behind the card, two arcs turning against each other */
-.dgui-ui-orbit {
-  position: absolute;
-  inset: 16% -10% 26% 30%;
-  transform: translateZ(-90px);
-}
-
-.dgui-ui-orbit-arc {
-  position: absolute;
-  inset: 0;
-  border: 0.85rem solid transparent;
-  border-radius: 50%;
-}
-
-.dgui-ui-orbit-a {
-  border-block-start-color: color-mix(in oklab, var(--dream-flux) 40%, transparent);
-  border-inline-end-color: color-mix(in oklab, var(--dream-flux) 40%, transparent);
-  animation: dgui-ui-turn 18s linear infinite;
-}
-
-.dgui-ui-orbit-b {
-  inset: 9%;
-  border-width: 0.4rem;
-  border-block-end-color: color-mix(in oklab, var(--dream-cyan) 50%, transparent);
-  animation: dgui-ui-turn 26s linear infinite reverse;
-}
-
-@keyframes dgui-ui-turn {
-  to {
-    rotate: 360deg;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .dgui-ui-plane,
-  .dgui-ui-orbit-a,
-  .dgui-ui-orbit-b {
-    animation: none;
   }
 }

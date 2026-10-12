@@ -2,11 +2,15 @@
   "title": "核心概念",
   "pages": [
     "widgets",
+    "widget-tree",
     "canvas",
     "world-space",
     "widget-blueprints",
     "layout",
     "text",
+    "lyrics",
+    "mesh-modifiers",
+    "sprites-and-meshes",
     "rendering",
     "input",
     "animation"

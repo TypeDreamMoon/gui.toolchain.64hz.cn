@@ -69,8 +69,10 @@ CSS 的 `tab-size`）、`TextJustify` 和 `LastLineAlign`（两端对齐时额�
 
 ## 字体
 
-字体是资产，基类是用 FreeType 读字体文件的 `UDreamUIFontData_FreeTypeRender`，子类有距离场字体
-`UDreamUIFontData_DistanceField` 和位图字体 `UDreamUIFontData_Bitmap`。项目默认字体在 `UDreamGUISettings::DefaultFont`。
+字体是资产，一条继承链上是**四个**类型：抽象基类 **`UDreamUIFontData_BaseObject`**（「字体数据能做什么」的全部接口 ——
+要字形、要整形字体、要行高、要回退面），中间抽象子类 **`UDreamUIFontData_FreeTypeRender`**（用 FreeType 读字体文件），
+以及它的两个子类 —— 距离场字体 **`UDreamUIFontData_DistanceField`**（插件默认字体用这个）和位图字体 **`UDreamUIFontData_Bitmap`**。
+⚠️ `_Bitmap` 的源码批注写明它**已不再维护**，新功能不再实现。项目默认字体在 `UDreamGUISettings::DefaultFont`。
 
 - **默认字体就是 Slate 的**：Roboto，带真正的常规、粗体、斜体、粗斜体字面，CJK 用 DroidSansFallback，画在轮廓多通道距离场上
   （`/DreamGUI/DefaultFont_DistanceField`）。

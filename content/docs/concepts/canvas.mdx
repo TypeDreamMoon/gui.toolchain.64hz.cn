@@ -44,12 +44,16 @@ draw call。更新时画布只走那些请求了变化的控件，几何变了�
 
 | 属性 | 作用 |
 | --- | --- |
-| `ScaleMode` | `ConstantPixelSize`（1 单位 = 1 屏幕像素，默认）、`ScaleWithScreenSize`（按参考分辨率缩放）、`ScaleWithEngineDPI`（UMG 的规则：用引擎的 UI Scale Rule 和 DPI 曲线）、`Custom`（交给 `CustomScale`） |
+| `ScaleMode` | `ConstantPixelSize`（1 单位 = 1 屏幕像素，默认）、`ScaleWithScreenSize`（按参考分辨率缩放）、`ScaleWithEngineDPI`（UMG 的规则：用引擎的 UI Scale Rule 和 DPI 曲线）、`Custom`（交给 `CustomScale` —— 见下） |
 | `ReferenceResolution` | 参考分辨率，默认 `(1280, 720)` |
 | `MatchFromWidthToHeight`（显示为 Match） | `MatchWidthOrHeight` 下按宽还是按高匹配 |
 | `ScreenMatchMode` | `MatchWidthOrHeight`、`Expand`、`Shrink` |
 | `ScreenSpaceRenderScale` | 以视口的几分之几的分辨率画 UI，再放大；低于 1 用清晰度换填充率 |
 | `bFixedSizeInEditMode` / `SizeInEditMode` | 编辑模式下用固定尺寸，而不是跟着编辑器视口 |
+
+`Custom` 档交给一个**自定义缩放对象**（`UDreamCanvasCustomScale`）：`Init` 与 `CalculateSizeAndScale` 两个虚函数算出画布尺寸与缩放，另有双向的 `ConvertPositionFromViewportToCanvas` / `ConvertPositionFromCanvasToViewport`。
+
+它的位置换算拿到的是「**画布填的那块视口**」上的像素位置（整张视口，或分屏下属于某个玩家的一块，左上为零点），**画布已经把那一块的角算进去了** —— 也就是说它量的是**从自己那块角**起的位置。这些函数**只在根画布上成立**，非根画布返回失败。
 
 `ScaleWithEngineDPI` 下布局矩形在任何分辨率都保持曲线的设计尺寸，按设计尺寸排的界面永远不会因为空间不够而被裁掉，
 只是画得更小；项目调 DPI 曲线时 UMG 和 DreamUI 一起变。

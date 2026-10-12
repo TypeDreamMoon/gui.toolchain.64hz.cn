@@ -194,3 +194,32 @@ Widget Root {
 
 一个 Hidden 或命中测试不可见的 widget 也算“显示”，`Shown` 为 `true` 时它保持原来的状态，不会被改成 Visible。`if` 给每个分支里的 widget 绑的也是 `Shown`，见
 [if 与 for](/docs/dui/control-flow)。`Shown` 和 `Visibility` 是同一个值，设计器写回时只比较文件写出来的那一面。
+
+## 这两条是语言层的；运行时还有一条
+
+上面讲的 `<-` / `->` / `<->` 都是**语言层**的绑定 —— 由编译器解析，认 FieldNotify 与视图模型。
+
+另有一条**运行时**的路：`UDreamDataBinding` —— 一个**组件**，用**反射按属性名**连，所以它能接**任意两个 `UObject`**，不需要编译期知道类型；代价就是字符串属性名加反射。
+
+| 字段 | 默认 | 说明 |
+| --- | --- | --- |
+| `SourceObject` / `SourceProperty` | 空 | 从谁读、读哪个属性 |
+| `TargetObject` / `TargetProperty` | 空 | 写给谁、写哪个属性 —— ⭐ **`TargetObject` 不填时默认是「拥有这个组件的那个 widget」** |
+| `UpdateMode` | **`OnAwake`** | `EDreamBindingUpdateMode`：`OnAwake` / `EveryFrame` / `Manual` |
+
+入口是 `ApplyBinding()`（蓝图可调）。
+
+### 按尺寸改外观：`UDreamResponsiveBehaviour`
+
+同一文件里的 `UDreamResponsiveBehaviour` 是一条**断点**行为：按**父级尺寸**（在根上则按自己的尺寸）应用**第一个匹配的**规则。
+
+`FDreamResponsiveRule` 一条规则的字段：`Name`、`MinWidth` / `MaxWidth` / `MinHeight` / `MaxHeight`（默认 **0**）、`Visibility`、`RenderOpacity`（默认 **1**）。
+
+⭐ **类注释里那句话是这块最该记住的**：
+
+> 规则是对控件**编写时外观的覆盖**，不是对它的完整描述：**一个不匹配任何规则的尺寸会把控件放回原样**，而不是让它**穿着上一条规则的戏服**。
+
+`ActiveRule`（`Transient`）记当前生效的是哪一条；`bHasBaselineAppearance` 加 `BaselineVisibility` / `BaselineRenderOpacity` 存的是**规则首次覆盖它之前**的外观 —— 那是「**这个组件借了什么**」的记录，**故意不是 `UPROPERTY`**：跨加载没有意义（`ActiveRule` 也是 `Transient`），所以**在它再次拿走什么之前，什么都不欠**。
+
+⚠️ 这两个类型同住 `Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h` —— **文件名装的是 `UDreamDataBinding`**，别按名字去别处找。
+

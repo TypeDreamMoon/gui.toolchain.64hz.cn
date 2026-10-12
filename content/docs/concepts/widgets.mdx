@@ -139,6 +139,35 @@ Widget Root {
 `OnInteractableChanged` 这些回调；Blueprint 子类里同名的事件（`Awake`、`Tick`……）对应同样的时机。
 `bStartWithTickEnabled` 和 `bTickEvenWhenPaused` 控制它的 Tick。
 
+`Awake` 的顺序是**层级高的先跑** —— 挂在根控件上的脚本最先执行。
+
+六个时机之外还有**七个变更回调**：`OnTransformChanged`、`OnDimensionsChanged`、`OnChildDimensionsChanged`、
+`OnAttachmentChanged`、`OnSiblingIndexChanged`、`OnInteractableChanged`、`OnRaycastableChanged`。
+`OnDimensionsChanged` 会**逐项**告诉你改了哪个（`PivotChanged` / `WidthChanged` / `HeightChanged`）；
+`OnChildDimensionsChanged` 是**独立的一个** —— 父级要跟着**孩子**长大时用它，而不是用自己那个。
+有些回调想先于 `Awake` 跑，它们先被缓存起来（`CallbacksBeforeAwake`），等 `Awake` 时才执行。
+
+Blueprint 侧是 **13 个 `Receive*` 事件**（6 个时机 + 7 个回调），全部是 `BlueprintImplementableEvent`，
+而且**在蓝图里显示出来的名字不带 `Receive`** —— `ReceiveAwake` 就叫 `Awake`。
+
+### 声明「我不用」
+
+`bStartWithTickEnabled` / `bTickEvenWhenPaused` 是**运行时**开关；另有两个是**在构造函数里声明**的：
+
+| 声明 | 之后 |
+| --- | --- |
+| `DeclareTickUnused(InClass)` | 恰好是这个类的行为（以及由它派生的蓝图）**不进 UI 管理器的 tick 列表**，而不是每帧被白叫一次 |
+| `DeclareTransformChangedUnused(InClass)` | **不听控件的移动通知** —— 连带效应是「没人听它移动的控件」也不会被通知移动 |
+
+两条限制要记住：它**只覆盖「恰好是 `InClass`」这一个类**（C++ 子类可以重写 `Tick`，而**没有任何东西能替它声明** —— 子类照旧 tick，直到它自己的构造函数也声明一次）；它**不改变「可不可以 tick」**，那是 `SetCanExecuteTick` 管的，而且蓝图写了 `Tick` 事件照旧算数。
+
+### 两条子对象基类链
+
+挂在控件上的子对象有**两条**，重量不同。上面说的是重的那条；轻的是 `UDreamWidgetSubObjectBehaviour`
+（`BlueprintType`、`Abstract`、`DefaultToInstanced`、`EditInlineNew`，**没有** `ClassGroup`、**没有** `Blueprintable`），
+只提供 `OnRegister` / `OnUnregister`、`BeginPlay` / `EndPlay`、`IsRegistered`、`GetWidget`、`GetPathDisplayName` ——
+**面板槽**走这条。会每帧跑、或者要听控件变化的，走重的；纯粹是「挂在控件上的数据与逻辑」，走轻的。
+
 插件里大部分东西都是行为：画布本身（`UDreamCanvas`）、控件库里 `UI*` 那一族（`UIButton` 等，`Dream*` 控件由它们搭成）、
 导航作用域、命名槽（`UDreamNamedSlot`）、拖放的源和目标、网格修改器（阴影、描边、渐变色、文字动画）。
 代码里用 `AddComponent`、`GetComponent`、`GetComponents`、`GetComponentByInterface`、`RemoveComponent`、

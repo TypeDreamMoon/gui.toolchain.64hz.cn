@@ -119,6 +119,9 @@ Widget Root {
 | `StaticMesh` | `UDreamStaticMesh` | `DreamGUIExtensions` | 静态网格，自成一个 draw call |
 | `BackgroundBlur` / `BackgroundPixelate` / `PixelSort` | `UDreamBackgroundBlur` / `UDreamBackgroundPixelate` / `UDreamPixelSort` | `DreamGUIExtensions` | 屏幕效果，见[渲染](/docs/concepts/rendering) |
 | `CanvasRenderTargetPreviewer` | `UDreamCanvasRenderTargetPreviewer` | `DreamGUIExtensions` | 显示一个渲染目标画布的内容 |
+| `UMGWidget` | `UDreamUMGWidget` | `DreamGUIExtensions` | 把一个 UMG widget 渲染到渲染目标，再当作 DreamGUI 自己的几何画出来，见 [UMG 互操作](/docs/controls#umg-互操作) |
+| `PostProcessRenderElement` | `UDreamPostProcessRenderElement` | `DreamGUIExtensions` | 把某个后处理视觉的结果图像抓回来，当一块几何显示在这里 |
+| `PostProcessRenderElementText` | `UDreamPostProcessRenderElement_Text` | `DreamGUIExtensions` | 同上，但宿主是一段文本视觉 |
 
 </Wide>
 

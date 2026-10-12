@@ -117,6 +117,12 @@ compares the two, logs the first difference and uses the fresh layout.
 | `DreamUI.Binding.Dump` | Logs every live user widget with property bindings: how many are subscribed (updated on a change), polled every frame, constant and legacy, and for each polled one, the member that keeps it on the poll. See [When a binding updates](/en/docs/dui/bindings#when-a-binding-updates) |
 | `DreamUI.Binding.ForcePoll 1` | Every binding compiled with recorded dependencies is polled every frame instead, for the widgets initialized after it is set. For a value that does not update: it tells "nothing announces its change" from "it never changes". Default 0 |
 
+⚠️ **Not every DreamUI "command" is a console command.** On the editor side, two entry points from the same name family
+go through **the toolbar and the Tools menu**, not the console: `DreamUI.OpenWorkspace` (rewrites and opens
+`DUI/DreamUI.code-workspace`) and `DreamUI.RebuildAll` (recompiles every text-backed widget Blueprint in the project,
+**after a confirmation dialog**). Each has two ids, one for the toolbar and one for the Tools menu
+(`DreamUI.OpenWorkspaceTools` / `DreamUI.RebuildAllTools`); see [Designer](/en/docs/tools/designer).
+
 Tracing variables, which log when on: `dreamgui.LayoutTrace 1` (every panel arrange and every rect it commits),
 `dreamgui.ScrollBoxTrace 1` (every scroll-box drag delta and physics tick that changes state), and
 `dreamgui.DumpMaterialDraws 1` (which branch each screen-space material draw attempt took, until set back to 0).

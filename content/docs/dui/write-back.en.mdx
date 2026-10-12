@@ -137,3 +137,46 @@ Widget Root {
 | [DUI7005](/en/docs/diagnostics/dui7xxx#dui7005) | an edit to a value a style's `+` line gives the node | add the line to the node, or change the style |
 
 </Wide>
+
+## The seam that runs the other way
+
+What **translates designer edits into `.dui` lines** is **`FDreamUITextWriteBack`**. One rule runs through it: **compare
+values, never source text**.
+
+`FDreamUITextPatcher` edits **slices of text**; handing over every property the designer might have touched would rewrite
+lines **whose value never changed** — the author writes `(400,240)`, the printer spells the same value `(400, 240)`, and
+the line gets replaced. So a flush does not ask "where is it different" but: **"would a rebuild from the current text
+produce the value the tree holds now?"** The baseline is not parsed here; it is **a whole second tree built from the
+current text by the compiler's own `FDreamUITextBuilder`**.
+
+Two details of how it lands: **one flush is one undo step, or nothing** (when nothing changed there is no `SetContent` —
+an empty transaction is worse than none); and undo **only marks**, with the rebuild queued for the **next tick**
+(`FTransaction::Apply` broadcasts **in the middle of its loop**, and widgets in the same transaction may not be restored
+yet).
+
+## Where the text lives: `UDreamUIDocument`
+
+In the `.dui` direction, **the text is the only truth** and the designer is its graphical front end. The text is held by
+a `UCLASS(Transient)` `UObject`: **`UDreamUIDocument`** (in `DreamGUIEditor`). It does one thing: **hold the whole text of
+one `.dui` file** so that UE's transaction system can undo it.
+
+**Why it has to be a `UObject`**: UE's undo restores **objects**. If the text stayed outside the transaction, Ctrl+Z would
+put the widget back while the file's line still said the new value, and the next regeneration (a recompile, a reopen, the
+next unrelated edit) would bring the change back — **the undo looks as if it worked, then silently undoes itself**.
+
+Three contracts:
+
+1. **The caller owns the transaction.** `SetContent` only calls `Modify()` and **never opens one of its own**; with no
+   transaction to join it **complains loudly** instead of quietly producing an edit that cannot be undone.
+2. **Memory is the truth; disk is a projection that may lag.** A failed write (a read-only file, not checked out)
+   **keeps** the edit, reports it as it is, and **retries** on the next flush.
+3. **`FlushToDisk` never clears the read-only bit on its own** — in a version-controlled project read-only means "not
+   checked out", and a text editor that quietly makes files writable produces the kind of merge **no one has a changelist
+   for**.
+
+**One document per file, not per editor**: two toolkits with the same `.dui` open, each holding a document of its own,
+means two `Content`s and two disk hashes — A's undo writes the file, B's watcher sees text it never wrote, B reloads and
+pushes its own idea back, and **Ctrl+Z in the two windows by turns never converges** (while each document, seen from
+inside, is perfectly fine). That is what **`FDreamUIDocumentRegistry`** (keyed by **the normalized absolute path**) looks
+after; the registry's own references are **weak**, and users hold strong ones — **`FDreamUIDocumentHandle`**, a
+**move-only, non-copyable** scoped handle.

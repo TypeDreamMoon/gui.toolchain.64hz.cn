@@ -53,12 +53,21 @@ A screen-space root takes its size from the local player's viewport, and the can
 
 | Property | Does |
 | --- | --- |
-| `ScaleMode` | `ConstantPixelSize` (1 unit is 1 screen pixel; the default), `ScaleWithScreenSize` (scale against a reference resolution), `ScaleWithEngineDPI` (UMG's rule: the engine's UI Scale Rule and DPI curve), `Custom` (ask `CustomScale`) |
+| `ScaleMode` | `ConstantPixelSize` (1 unit is 1 screen pixel; the default), `ScaleWithScreenSize` (scale against a reference resolution), `ScaleWithEngineDPI` (UMG's rule: the engine's UI Scale Rule and DPI curve), `Custom` (ask `CustomScale` — see below) |
 | `ReferenceResolution` | The reference resolution, `(1280, 720)` by default |
 | `MatchFromWidthToHeight` (shown as Match) | Under `MatchWidthOrHeight`, whether width or height is matched |
 | `ScreenMatchMode` | `MatchWidthOrHeight`, `Expand`, `Shrink` |
 | `ScreenSpaceRenderScale` | Draw the UI at this fraction of the viewport's resolution and upscale; below 1 trades sharpness for fill rate |
 | `bFixedSizeInEditMode` / `SizeInEditMode` | A fixed size in edit mode instead of the editor viewport's |
+
+`Custom` hands the job to a **custom scale object** (`UDreamCanvasCustomScale`): two virtuals, `Init` and
+`CalculateSizeAndScale`, work out the canvas size and scale, and `ConvertPositionFromViewportToCanvas` /
+`ConvertPositionFromCanvasToViewport` convert positions in both directions.
+
+The positions it converts are pixel positions on **the part of the viewport the canvas fills** (the whole viewport, or one
+player's region in split screen, with zero at the top left). **The canvas has already taken that region's corner into
+account**, so the object measures from **its own region's corner**. These functions **only hold on a root canvas**; a
+non-root canvas returns failure.
 
 Under `ScaleWithEngineDPI` the layout rect keeps the curve's design size at every resolution, so a layout authored for it
 never runs out of room and gets clipped — it only renders smaller — and a project that tunes its DPI curve moves UMG and

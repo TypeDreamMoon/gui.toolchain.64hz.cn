@@ -42,6 +42,72 @@ and nothing has to be placed in a level.
 - **Cursor**: a hovered widget can drive the hardware cursor (`Cursor`; `Default` means "no opinion" and lets what is
   underneath decide); `ResetCursor` goes back to no opinion.
 
+## Raycasters and hit shapes
+
+Hit testing is done by "raycasters": a base class and four kinds of hit, with **the hit shape decided by the visual's
+`RaycastType`** (`Rect` / `Mesh` / `VisiblePixel` / `Custom`).
+
+⚠️ **Do not guess the module of any of them**: the base `UDreamBaseRaycaster`, the sector `UDreamRingSectorRaycast` and the
+custom `UDreamVisualCustomRaycast` are in the **core `DreamGUI` module**; the screen- and world-space raycasters are in
+`DreamGUIInput`; the visible-pixel subclass is in `DreamGUIExtensions`.
+
+**The base** (a `UCLASS(Abstract)` `UActorComponent`) splits hit testing into three pure virtuals: `GenerateRay` (make the
+ray), `Raycast` (the hit test) and `ShouldStartDrag` (whether this press becomes a drag); plus `IsWithinDoubleClickDistance`
+(`true` by default; the screen and world raycasters measure it by the drag threshold). It carries `UserIndex` (which player)
+and `PointerID` (`-1` applies to every pointer).
+The base runs a hit test in three stages: `GatherRaycastCandidates` (a coarse pass that **can run on other threads**) →
+`PrepareRaycastTree` (game thread; merges and solves the tree) → `RaycastCandidates` (the exact test, sorted **in draw
+order**).
+
+**Screen-space raycaster** defaults:
+
+| Property | Default |
+| --- | --- |
+| `RayLength` | 100000 |
+| `DragThreshold` | 5 (**measured in the target's local space**) |
+| `bHoldToDrag` / `HoldToDragTime` | false / 0.5 |
+
+⭐ "Moved far enough to be a drag" and "too far apart to be a double click" are **the same distance**.
+
+**World-space raycasters are one per player, not one per panel** — the ray is aimed from that player's view, and which
+canvases it can hit is answered by the manager (world-space roots whose `TraceChannel` matches), so **it never needs to be
+told about panels being added, removed or moved**. `PointerSource` sets the aim point (`Mouse` / `ScreenCenter`, the latter
+being a first-person crosshair); `bOccludeByWorld` is on by default, and **the nearest blocking hit is both the occluder and
+the target**.
+
+**The sector raycaster** (`UDreamRingSectorRaycast`) hits a **ring sector**, not the rect it was drawn into — every wedge of
+a ring menu is a ring-sized square, and under the default `Rect` hit **the topmost one answers for the whole circle**.
+Angles run **clockwise from twelve o'clock**; an `OuterRadius` of `0` means **unbounded** (a weapon wheel is exactly that).
+
+**Visible pixel** (`UDreamVisualCustomRaycast_VisiblePixel`) decides a hit by the pixel under the hit point
+(`VisibilityThreshold` defaults to `0.1`, `PixelChannel` to `3`).
+⚠️ It only supports visuals whose **pixels can be read from a texture** — a `UITexture` on a `Texture2D` is perfect; **a
+`UISprite` packed into a dynamic atlas is not**; **a `UIText` on a dynamic font is not** (the plugin's built-in fonts are all
+dynamic). Where it is not supported it falls back to the geometry hit.
+
+## Event data
+
+All four are `UObject`s (Blueprint types), all derived from `UDreamBaseEventData`:
+
+| Class | Answers |
+| --- | --- |
+| `UDreamBaseEventData` | The base (`SelectedComponent`, `EventType` — the latter an `EDreamUIPointerEventType`) |
+| `UDreamPointerEventData` | **Where** — pointer and press positions, the enter and hover stacks, world point and normal, scroll axis, drag state, plus three timestamps and the click count |
+| `UDreamKeyEventData` | **Which key, which chord, whose** — `KeyEventType`, `Key`, four chord bits, `AnalogValue`, `bHandled`, `FocusedWidget` |
+| `UDreamGestureEventData` | **What the gesture concluded** — `GestureType` (`Pinch` / `Swipe`) and its components |
+
+⭐ **All three timestamps are on the "pointer clock"** — the world's real time, which **does not stop for a pause or
+stretch with time dilation**. UI must still work while the game is paused: a hold in a pause menu is still a long press,
+and two clicks within a second are still a double click. Compare against `GetPointerClockSeconds`, **never the game
+clock**.
+
+**`UDreamKeyEventData`'s bubbling switch is called `bHandled`, not `EventType`**: the base already has an `EventType`
+holding pointer vocabulary, and UHT does not allow shadowing; the shape is wrong too — a pointer event asks "may this keep
+bubbling", a key asks "did anyone take it".
+
+**A gesture is not a pointer**: it has no pressed widget, no drag and no hover — it is a conclusion drawn from **pointers
+that have already dispatched their own events**, but it still goes down the same dispatch path.
+
 ## The action router
 
 "Which screen hears which key" used to be a static array of `FKey`s in the input actor's cpp: a project could not add an
@@ -92,7 +158,10 @@ DreamGUI's, so none of it moves the focus off the viewport into UMG.
 
 Directional navigation moves the focus by the `DirectionKeys` table. A widget can carry rules of its own per direction
 (`UDreamWidgetNavigation`, reached with `GetOrCreateNavigation`: `SetRule`, `SetExplicitTarget`, `SetCustomDelegate`,
-`SetAllNavigationRules`), as UMG's Navigation does. `bRestrictNavigationArea` keeps navigation among a widget's children,
+`SetAllNavigationRules`), as UMG's Navigation does. `FDreamUINavigationScroll` handles something else: when the arrows move
+the focus to a widget **scrolled out of view**, it **scrolls it in**.
+
+`bRestrictNavigationArea` keeps navigation among a widget's children,
 and `NavigationBoundaryRule` says what happens at the edge: `Stop`, `Wrap` (continue from the far side), or `Escape` (let
 what encloses it answer, the way a list hands the move back to its page).
 
@@ -145,6 +214,43 @@ the opener. A popup says what Tab does in it (`TabBehavior`): `Cycle` goes round
 takes the step from the opener (dropdown lists and menus). A press on a layer drawn **in front of** an open popup closes the
 popup and still reaches that layer.
 
+⚠️ "Lifted onto the screen root" is backed by **two APIs**; do not mix them up:
+
+| | Does |
+| --- | --- |
+| **`Elevate` / `Restore`** | **Only moves it**: from its parent onto the screen root (world position kept to the pixel), and back again |
+| **`Push` / `Pop`** | On top of the move, **four more things**: focus return (`FDreamFocusReturn`), close on outside click, Back, menu nesting — and **following the opener after every frame's layout** |
+
+`FDreamPopupParams` holds `Push`'s parameters:
+
+| Field | Default | Notes |
+| --- | --- | --- |
+| `Popup` / `Opener` | empty | The popup widget, and the one that opened it (where focus returns, whom it follows, who is the parent) |
+| `UserIndex` | `0` | Which player it belongs to |
+| `OutsideClick` | `Consume` | See below |
+| `bFocusOnOpen` / `InitialFocus` | true / empty | Move focus in on open (to `InitialFocus` or the first navigable widget) |
+| `bRestoreOnDismiss` | true | Move it back to its parent and place on close; false leaves it up to play a closing animation |
+| `TabBehavior` | `Cycle` | The two settings described above |
+| `Place` | empty | A delegate that places it after every frame's layout; unbound, it keeps its offset from the opener |
+| `OnDismissed` / `OnClosing` | empty | Callbacks after closing / before closing (**while focus is still inside**) |
+
+⚠️ **`Push`'s return value does not mean "it really opened"**: `true` only says it was open **when the call returned** —
+if moving focus in ran some handler that closed the popup again, `Push` returns `false` as well. To keep track of "I am
+open", watch the popup's own `OnDismissed`.
+
+`EDreamPopupOutsideClick` has **three settings**: `Consume` (close it; the press stops here), `PassThrough` (close it; the
+press **carries on to what is underneath** — what Slate's menu stack does) and `Ignore` (do nothing; wait for the owner /
+Back / the parent to close it).
+
+**There are eight dismiss reasons** (`EDreamPopupDismissReason`, passed to the owner's callback): `Explicit`,
+`OutsideClick`, `Back`, `ParentClosed`, `Replaced` (pushed out by a new top-level popup of the same player / a modal in
+front of them), `OpenerLost` (the opener was destroyed / left the tree / became invalid / hidden / non-interactive),
+`WorldTeardown`, `Tab`.
+
+There is also `DismissAll(UserIndex, Reason)` (close all of a player's popups **newest first** — exactly what a modal does
+for its own player) and `GetHomeSlot(Widget)` (a **copy** of the panel slot a lifted widget has **at home**, **read-only** —
+writing to it does not reach the widget).
+
 **Modals** (`UDreamUIModalSubsystem`): `ShowModal(DialogClass, OnResult, UserIndex)` shows a dialog and awaits its result;
 `CloseTopModal(Result)`, `CloseAllModals`, `IsModalActive`, `GetModalDepth`. The scrim eats every pointer event (its colour
 is `ModalScrimColor`), the scope confines gamepad focus and restores it afterwards, and Back means "close with the Back
@@ -152,16 +258,66 @@ result". Modals **nest**: a second `ShowModal` while one is up puts its dialog o
 closing it reveals the one underneath, still waiting for its own result. Showing a modal closes that player's open popups
 first.
 
+⚠️ **`UDreamDialogScope` and `ShowModal` split the work; do not stack them**: `UDreamDialogScope` only serves **the other
+arrangement (standalone)** — a dialog dropped into a `.dui` as an ordinary widget, with no subsystem layer above it, where
+it is the layer that lets Back close the dialog. **Opened through `ShowModal`, the scrim and Back belong to the modal
+layer's scope**; stacking a `UDreamDialogScope` on top then **quietly changes which result Back answers with**.
+
+Three promises not written down elsewhere: **`OnResult` fires exactly once** (failures such as "no screen root" or "the
+class could not be made" included); **modals are per player** — in split screen, player one's "Are you sure?" **does not
+cover** player two, **does not take** their focus and **is not closed** by their Back; and **why popups close first** —
+otherwise a popup left behind the scrim would take the modal's **first click** and **first Back**.
+
 **Tooltips**: every widget has `ToolTipText` and `ToolTipWidgetClass` (the latter wins, and is a **class**: instanced when
 the bubble appears, destroyed when it goes). `UDreamUITooltipSubsystem` finds the nearest ancestor under the pointer that
 offers one; a behaviour can implement `IDreamUITooltipSourceInterface` to offer a widget. Project settings:
 `TooltipDelaySeconds` (0.5), `TooltipOffset`, `TooltipMaxWidth`, `TooltipFontSize`.
+
+⚠️ **A finger never wakes a tooltip**: a tap, a hold past the delay, a finger dragged onto a widget — none of them brings
+up a bubble; but a finger **press still dismisses a bubble already up**. A touch game that wants tooltips on long press has
+to call `ShowTooltipFor(Source)` from its own long-press handler.
+
+⚠️ **It reads, never grabs**: the bubble sits on a canvas of its own **with raycasts off throughout** — a tooltip that
+could catch the pointer would hide itself for good.
 
 **Drag and drop**: a `UDreamUIDragSource` creates a `UDreamDragDropOperation` when a drag starts and writes it onto the
 pointer's event data; a `UDreamUIDropTarget` reads the operation off a drop, filters by `RequiredTag` and payload class,
 and on acceptance marks it handled and broadcasts. A drop a target refuses keeps bubbling, so nested targets behave like
 nested anything else. Without a source, a drag is pure geometry — exactly what a scroll view wants, and not what an
 inventory item does.
+
+Drag and drop reads clearly in **three layers**:
+
+| Layer | Who | Looks after |
+| --- | --- | --- |
+| **Meaning** | `UDreamDragDropOperation` (core `DreamGUI`) | **What** this drag is: the payload, tags, drag visual |
+| **Pipeline** | `UDreamUIDragDropSubsystem` (`DreamGUIInput`) | Follows each pointer's drag, lights up drop spots, moves the drag visual |
+| **Ends** | `UDreamUIDragSource` / `UDreamUIDropTarget` | What gets dragged, where it can land |
+
+The pipeline follows drags **per player and pointer** — **two fingers dragging two items on a touch screen is normal**, and
+the early "one for the whole screen" version let the second finger **teleport** the first one's visual.
+
+**The list-row versions** (`UDreamListRowDragSource` / `UDreamListRowDropTarget` / `UDreamListRowButton`, all in
+**`DreamGUIControls`**) are **subclasses of the two ends above, with no detection path of their own** — they only add "which
+row of whose list this is"; a drop also reports a **drop zone**, `EDreamItemDropZone` (`AboveItem` / `OntoItem` /
+`BelowItem`). A list has three switches: `bAllowDragging` (default **false**), `bAllowDragDrop` (default **false**, **kept
+separate from the former on purpose** — a palette you only drag out of wants the former, an equipment bar you only drop
+into wants the latter), and `FingerDrag` (`EDreamListFingerDrag`: whether dragging a row with a finger **scrolls the list**
+or **picks up the row**).
+
+### Virtual cursor
+
+`UDreamUIVirtualCursorSubsystem` (`DreamGUIInput`) makes a pointer for **a player who has none** — it solves "**four-way
+navigation cannot work a map, a skill tree or a crafting grid**".
+
+It integrates the player's **left stick** into a screen position, stands in for the OS mouse through **the override seam**
+of that player's input module, and treats **the confirm button as the left button**. Everything downstream — raycasts,
+hover, clicks, **drags**, tooltips — **cannot tell the difference**, and that is the whole design: pushing the stick while
+holding confirm walks the mouse's drag path too (a slider's handle, for one). One cursor per player, each driven by its own
+stick and drawn on its own screen.
+
+Call `ActivateVirtualCursor` / `DeactivateVirtualCursor` (and their `ForUser` versions) from the screens that need it, or
+turn on the project setting `bAutoVirtualCursorOnGamepad` (off by default) to let it follow the physical device.
 
 ## Text input and keyboard layouts
 

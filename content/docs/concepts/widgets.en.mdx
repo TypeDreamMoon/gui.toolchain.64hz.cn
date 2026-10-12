@@ -125,6 +125,9 @@ and `RaycastType` (`Rect`, `Mesh`, `VisiblePixel`, `Custom`).
 | `StaticMesh` | `UDreamStaticMesh` | `DreamGUIExtensions` | A static mesh, a draw call of its own |
 | `BackgroundBlur` / `BackgroundPixelate` / `PixelSort` | `UDreamBackgroundBlur` / `UDreamBackgroundPixelate` / `UDreamPixelSort` | `DreamGUIExtensions` | Screen effects; see [Rendering](/en/docs/concepts/rendering) |
 | `CanvasRenderTargetPreviewer` | `UDreamCanvasRenderTargetPreviewer` | `DreamGUIExtensions` | What a render-target canvas drew |
+| `UMGWidget` | `UDreamUMGWidget` | `DreamGUIExtensions` | Renders a UMG widget into a render target, then draws it as DreamGUI's own geometry; see [UMG interop](/en/docs/controls#umg-interop) |
+| `PostProcessRenderElement` | `UDreamPostProcessRenderElement` | `DreamGUIExtensions` | Grabs the result image of a post-process visual back and shows it as a piece of geometry here |
+| `PostProcessRenderElementText` | `UDreamPostProcessRenderElement_Text` | `DreamGUIExtensions` | The same, with a text visual as the host |
 
 </Wide>
 
@@ -142,6 +145,40 @@ Behaviours are subclasses of `UDreamUIBehaviour`, held in order in the widget's 
 life cycle — `Awake`, `OnEnable`, `Start`, `Tick`, `OnDisable`, `OnDestroy` — plus callbacks such as
 `OnDimensionsChanged`, `OnAttachmentChanged` and `OnInteractableChanged`; a Blueprint subclass gets events of the same
 names at the same moments. `bStartWithTickEnabled` and `bTickEvenWhenPaused` govern its tick.
+
+`Awake` runs **higher in the hierarchy first** — a script on the root widget runs before any other.
+
+Besides the six moments there are **seven change callbacks**: `OnTransformChanged`, `OnDimensionsChanged`,
+`OnChildDimensionsChanged`, `OnAttachmentChanged`, `OnSiblingIndexChanged`, `OnInteractableChanged`,
+`OnRaycastableChanged`. `OnDimensionsChanged` tells you **item by item** what changed (`PivotChanged` / `WidthChanged` /
+`HeightChanged`); `OnChildDimensionsChanged` is **a separate one** — use it when a parent has to grow with its
+**children**, not its own. Some callbacks would fire before `Awake`; those are cached (`CallbacksBeforeAwake`) and run
+at `Awake`.
+
+On the Blueprint side there are **13 `Receive*` events** (6 moments + 7 callbacks), all `BlueprintImplementableEvent`,
+and **the names shown in Blueprint drop the `Receive`** — `ReceiveAwake` is just `Awake`.
+
+### Declaring "I don't use it"
+
+`bStartWithTickEnabled` / `bTickEvenWhenPaused` are **run-time** switches; two more are **declared in the constructor**:
+
+| Declaration | Afterwards |
+| --- | --- |
+| `DeclareTickUnused(InClass)` | Behaviours of exactly this class (and Blueprints derived from it) **stay out of the UI manager's tick list** instead of being called for nothing every frame |
+| `DeclareTransformChangedUnused(InClass)` | **Does not listen to the widget's move notifications** — and as a knock-on effect, a widget no one listens to for moves is not notified of moves at all |
+
+Two limits to remember: it **only covers the class that is exactly `InClass`** (a C++ subclass can override `Tick`, and
+**nothing can declare on its behalf** — the subclass ticks as before until its own constructor declares too); and it
+**does not change whether the behaviour may tick** — that is `SetCanExecuteTick`'s job, and a Blueprint that implements
+the `Tick` event still counts.
+
+### Two sub-object base chains
+
+There are **two** chains of sub-objects hung on a widget, of different weight. Everything above is the heavy one; the
+light one is `UDreamWidgetSubObjectBehaviour` (`BlueprintType`, `Abstract`, `DefaultToInstanced`, `EditInlineNew`, with
+**no** `ClassGroup` and **no** `Blueprintable`), which only offers `OnRegister` / `OnUnregister`, `BeginPlay` / `EndPlay`,
+`IsRegistered`, `GetWidget` and `GetPathDisplayName` — **panel slots** use it. Something that runs every frame or
+listens to the widget's changes takes the heavy chain; plain "data and logic hung on a widget" takes the light one.
 
 Most of the plugin is behaviours: the canvas itself (`UDreamCanvas`), the `UI*` family the `Dream*` controls are built
 from (`UIButton` and its siblings), navigation scopes, named slots (`UDreamNamedSlot`), drag sources and drop targets, the

@@ -47,6 +47,18 @@ visual's intrinsic size, the content children and the authored rect, in that ord
 | `InvalidateLayoutAndVolatility` / `UDreamUIBPLibrary::InvalidateLayout` | Ask for a layout pass next frame (the "volatility" half has no counterpart here) |
 | `UDreamPanelSlot::NotifySlotChanged(Reason)` | The slot changed; alignment, size rule, fill weight and z-order pass `Arrange`, while padding, the grid coordinates and `bAutoSize` keep the default `Measure` |
 
+## Self layout: four variants
+
+A panel looks after its **children**; how big a widget itself wants to be is answered by its **self layout**
+(`LayoutSelf`) — a sub-object that has nothing to do with the panel:
+
+| Class | Notes |
+| --- | --- |
+| `UDreamLayoutSelf` | The default self layout |
+| `UDreamLayoutSelfAspectRatio` | Constrains itself to an aspect ratio |
+| `UDreamLayoutSelfAuthoredSurface` | Uses an authored surface |
+| `UDreamLayoutSelfSpacer` | A placeholder that takes up the remaining space |
+
 ## The panels
 
 Every panel is a subclass of `UDreamPanelLayoutBase`, named and behaving after its UMG counterpart. In a `.dui` the
@@ -75,8 +87,11 @@ container's name is itself a node type (`VerticalBox Column { Spacing = 29 }` is
 A widget has one layout container: `+ HorizontalBox` on a container-typed node is DUI5022. Some containers need a
 behaviour on the widget to match the UMG panel they mirror (a size box needs the ContentWidget, for example), and the
 missing ones are added when the container is assigned. A container can also animate its layout: `bUseAnimation` with an
-`AnimationHandler` (`UDreamLayoutAnimation_CommonTween`, `UDreamLayoutAnimation_SlideIn`) tweens children to their new
-places.
+`AnimationHandler` makes children **tween** to their new places instead of jumping. The three classes live together in
+`Core/Components/DreamLayout.h`: `UDreamLayoutAnimation` (the `UObject` base, with `GetLayoutContainer()` and the Blueprint
+event `OnApplyLayoutResults`), `UDreamLayoutAnimation_CommonTween` (a general tween; `Duration` defaults to **0.3** and can
+be swapped for a curve) and `UDreamLayoutAnimation_SlideIn` (slides in).
+⚠️ They are **`UObject`s, not components** — you will not find them among the components you add to a widget.
 
 ```dui
 VerticalBox Settings {

@@ -74,9 +74,12 @@ on top of them).
 
 ## Fonts
 
-A font is an asset. The base is `UDreamUIFontData_FreeTypeRender`, which reads a font file through FreeType; its
-subclasses are the distance-field font `UDreamUIFontData_DistanceField` and the bitmap font `UDreamUIFontData_Bitmap`. The
-project's default font is `UDreamGUISettings::DefaultFont`.
+A font is an asset, and **four** types sit on one inheritance chain: the abstract base **`UDreamUIFontData_BaseObject`**
+(the whole interface of what font data can do — glyphs, the shaping face, line height, fallback faces), the abstract
+intermediate **`UDreamUIFontData_FreeTypeRender`** (reads a font file through FreeType), and its two subclasses — the
+distance-field font **`UDreamUIFontData_DistanceField`** (the plugin's default font uses it) and the bitmap font
+**`UDreamUIFontData_Bitmap`**. ⚠️ The source annotates `_Bitmap` as **no longer maintained**; new features are not
+implemented for it. The project's default font is `UDreamGUISettings::DefaultFont`.
 
 - **The default font is Slate's**: Roboto in real regular, bold, italic and bold-italic faces, with DroidSansFallback for
   CJK, on the outline multi-channel distance field (`/DreamGUI/DefaultFont_DistanceField`).

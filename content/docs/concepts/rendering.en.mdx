@@ -146,6 +146,75 @@ They share one way to read, crop and write back the screen, on the render graph'
 same road: in an `FDreamVisualPostProcessRenderProxy`, read the screen with `ReadScreen_RenderThread` and
 `GrabRegion_RenderThread`, work in textures from `CreateWorkTexture`, and write back with `WriteBack_RenderThread`.
 
+### Grabbing the result back: `PostProcessRenderElement`
+
+The three above are visuals that **read the screen**. Two more go the other way — they **grab back the result image a
+post-process computed** and show it as a piece of geometry where they stand:
+
+| `.dui` tag | Class |
+| --- | --- |
+| `PostProcessRenderElement` | `UDreamPostProcessRenderElement` |
+| `PostProcessRenderElementText` | `UDreamPostProcessRenderElement_Text` |
+
+⚠️ **One precondition you must know** (the source marks it `NOTE!!!`): **it only works when the target post-process's
+`RenderType` is `RenderTarget` and its `bUseFullSize` is `false`**. Otherwise **it shows nothing, and reports nothing**.
+
+`UDreamPostProcessRenderElement`'s UV convention: `UV0` is the rect UV ((0,0) to (1,1)); for `UV1` see
+[Vertex format](#vertex-format) below. It hands the "world → post-process" transform to the material through four static
+matrix parameters (`DreamUI_World2PostProcess_Row1` … `Row4`) — that is how the result image lines up with this piece of
+geometry.
+
+⚠️ `PostProcessRenderElementText` is **not its subclass** — it lives in a **separate file** and **inherits `UDreamText`**:
+it is the version whose host is a text visual. Note that its tag has **one underscore fewer** than its class name.
+
+## Vertex format
+
+Writing your own shaders or mesh modifiers, this is the one struct you need: `FDreamUIMeshVertex`, **exactly 64 bytes**.
+A `static_assert` in the source pins it — the vertex declaration, the upload and the byte-for-byte geometry comparison all
+assume there is no padding, **so this is ABI**.
+
+| Field | Attribute | Notes |
+| --- | --- | --- |
+| `Position` | 0 | `FVector3f` |
+| `Color` | 1 | `FColor` |
+| `TextureCoordinate[0..3]` | 2–5 | UV0…UV3 |
+| `TangentX` / `TangentZ` | 6 / 7 | Packed normals |
+| `UV4` | **8** | The fifth texture coordinate, **placed last** |
+
+`UV4` is new in 2.0 (the vertex went from 56 to 64 bytes). It **sits at attribute 8 rather than in the middle** so that
+not one earlier attribute moved. A material reads it as `TexCoord(4)`; **text uses it for gradient paints** (where a
+painted glyph quad sits in its gradient box), and everything else writes `(0, 0)`. Vertices made by the constructor,
+`SetNum` or a whole-struct copy are right automatically; **only code that grows the vertex array first and then fills it
+field by field has to write `UV4` itself**.
+
+The two default UV channels have meanings of their own:
+
+- **`UV0` is the texture coordinate**;
+- **`UV1` is the coordinate of the widget's property data** — x is the clip data's coordinate in the data texture, y is
+  the slice index into the texture array, used mostly by font rendering.
+
+⚠️ `UV1` belongs to the canvas (and the canvas writes x back over it later in the same rebuild), so **a mesh modifier that
+writes vertex positions into `UV1` loses half of them and breaks glyph lookup**. The other channels are defined by each
+visual (`DreamText`, `DreamRectBlock` and so on).
+
+**Text quads carry a paint slot in `UV2.x`**: `UV2.x += 128 * slot`. A text slot with no paint is 0, and its vertices are
+the ones 2.0 writes. **A shader that decodes `UV2.x` must strip the slot first** (`DreamUIText_UnpackPaintSlot` in
+`DreamUIText.ush`); **a mesh modifier that rewrites a text quad's `UV2.x` must keep it**.
+
+There are also **five global buffer resources**: the full-screen quad's vertex buffer, its index buffer and the sliced
+quad's index buffer (**all three `TGlobalResource`, one of each globally** — a `static` would make **one per `.cpp` that
+includes it**, each holding its own set of GPU buffers), plus the mesh vertex buffer `FDreamUIMeshVertexBuffer` and the
+vertex declaration `FDreamUIMeshVertexDeclaration`.
+
+### Indices are 16-bit
+
+Indices are **16-bit** by default (`FDreamUIMeshIndex` = `uint16`): half the memory and bandwidth for indices, at the
+cost of **at most 65535 vertices per draw call** (about 16k quads). A single element that really needs more has to
+define `LEXUI_USE_32BIT_INDEXBUFFER`.
+
+This is also where the "vertex budget" comes from: when there are more vertices than one draw call's indices can hold,
+a mesh modifier **reports an error once per modifier and does not draw that copy**.
+
 ## Checks
 
 For a report of something drawn wrong or not drawn, two console variables help (the test suite runs with both on):
@@ -159,5 +228,4 @@ For a report of something drawn wrong or not drawn, two console variables help (
 prints what each stage cost, and `DreamGUI.Memory` lists font atlases, sprite atlas pages and each world's canvas mesh
 sections. The whole routine is on [Debugging](/en/docs/tools/debugging).
 
-For custom shaders and mesh modifiers: the DreamUI vertex is 64 bytes with a fifth texture coordinate, `UV4`, and text
-quads carry a paint slot in `UV2.x`. The details are in [Migration](/en/docs/guides/migration).
+For custom shaders and mesh modifiers, start from [Vertex format](#vertex-format) above.

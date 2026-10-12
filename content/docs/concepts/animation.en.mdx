@@ -81,6 +81,74 @@ Icon->RenderScaleTo(FVector(1.15, 1.15, 1.0), 0.6f, 0.0f, EDreamTweenEase::InOut
 
 The same goes for components written in `.dui`: inside a panel, animate an instance through its render transform.
 
+## Reusable tweens: PlayTween
+
+Use `*To` for a tween made up on the spot in code. For one that is **saved in an asset, tuned in the details panel and
+driven by a component**, use `UDreamUIPlayTween`. It is a **player**, not the tween itself: how to play is written down
+as serializable fields, and the `Tweener` is only made on `Start()`.
+
+| Field | Default | Notes |
+| --- | --- | --- |
+| `LoopType` | `Once` | |
+| `LoopCount` | **1** | Changed from `-1`; see below |
+| `EaseType` / `EaseCurve` | `Linear` | The curve only applies with `CurveFloat` |
+| `Duration` | 0.5 | |
+| `StartDelay` | — | |
+| Four events | — | `OnStart` / `OnUpdateProgress` / `OnComplete` / `OnCycleComplete` |
+| `bAffectByGamePause` / `bAffectByTimeDilation` | **false** | **The opposite of the widget's own tweens** (UI is usually not held back by a pause) |
+
+The entry points are `Start` / `Stop` / `GetTweener`. There are **10** typed subclasses: `Float`, `Double`, `Color`, `Int`,
+`LinearColor`, `Quaternion`, `Rotator`, `Vector2`, `Vector3`, `Vector4` — each adds a `From` / `To` pair and an
+`OnUpdateValue(interpolated value)`.
+
+The `LoopCount` default moved from `-1` to **1** on purpose: with an infinite default, the moment an author picks a loop
+type the tween **never ends** — it never leaves the manager, it keeps the player and the widget behind it alive, and a
+sequence component waiting on it never reaches its next step.
+
+Two components hang it on the tree (both `BlueprintSpawnableComponent`):
+
+| Component | Does |
+| --- | --- |
+| `UDreamUIPlayTweenComponent` | `Play()`s one play tween on `Awake` if asked (`bPlayOnStart` defaults to true) |
+| `UDreamUIPlayTweenSequenceComponent` | Plays the play tweens in its array **one after another** (`bPlayNextWhenCycleComplete`, `OnComplete`) |
+
+### Twenty-two tweeners, nineteen of them not public API
+
+The public face is the **base class `UDreamTweener`** in `Public/DreamTweener.h`. There are **22** in all: **1 base + 19
+concrete + 1 `Spring` + 1 `Sequence`**. By value, the concrete ones are `Float`, `Double`, `Integer`, `Color`,
+`LinearColor`, `Vector`, `Vector2D`, `Vector4`, `Quaternion`, `Rotator`, `RotationEuler`, `RotationQuat`, `Position`,
+`MaterialScalar`, `MaterialVector`, plus the valueless `Frame`, `Callback`, `Update` and `Virtual`.
+
+⚠️ **The headers of those 19 concrete tweeners are under `Private/Tweener/`** — they are **not public API**: do not treat
+them as classes to inherit from or `#include` directly. The only public faces are the base `UDreamTweener` and
+`UDreamTweenBPLibrary`.
+
+`UDreamTweenerSequence` strings several tweens onto one timeline: `Append` / `Insert` / `Prepend` / `Join`, plus
+`AppendCallback` / `InsertCallback`. It **does not take `Delay` / `DelayFrame` / `Virtual` tweens**, and **cannot be
+changed once it has started**.
+
+### Springs: no duration, and a retarget keeps the velocity
+
+`UDreamTweenerSpring` does not advance on a clock but **as a spring**: no duration, no easing; the value is pulled
+towards the target and **it is done when it comes to rest**. Its parameters are the mass / stiffness / damping of
+`FDreamSpringParams` plus two rest thresholds (`RestDistance` / `RestVelocity`).
+
+`UDreamSpringLibrary` also has two **pure functions**, `StepSpring` and `IsSpringAtRest`, so a spring can be computed
+without a widget.
+
+Three properties are its whole value: **a retarget keeps the velocity** (`SetTarget` can be called at any time in flight
+and the velocity carries on — that is how a column of lyric lines slides to a new place instead of starting over);
+**it settles by its damping** (`DampingRatio()` < 1 bounces, = 1 is critical, > 1 creeps); and **the trajectory does not
+depend on the frame length** (`FDreamSpring::Step` uses the **closed-form solution** of the damped harmonic oscillator,
+exact and stable at any step, with none of the blow-ups explicit integration has on long frames).
+
+### Who ticks them
+
+`DreamTween` is a separate low-level module that the engine does not tick on its own. It is driven by
+`UDreamTweenManager`, with `UDreamTweenTickHelperComponent` (when there is a widget to hang it on) or
+`UDreamTweenTickHelperWorldSubsystem` (when there is none). This is also what "manual ticks are never capped" above
+means — "manual" is advancing a tween outside this chain.
+
 ## Widget animations
 
 A `UDreamWidgetAnimation` is a `UMovieSceneSequence` embedded in the class, held in the root's animation component

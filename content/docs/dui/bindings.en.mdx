@@ -215,3 +215,41 @@ Widget Root {
 A widget that is Hidden or hit-test invisible counts as shown, and keeps that state while `Shown` is `true`; it is not
 made Visible. An `if` binds `Shown` on each widget of its branches; see [if and for](/en/docs/dui/control-flow). `Shown`
 and `Visibility` are one value, and the designer's write-back compares only the face the file spells.
+
+## Those are the language's; there is a run-time one too
+
+The `<-` / `->` / `<->` above are all **language-level** bindings — resolved by the compiler, aware of FieldNotify and
+view models.
+
+There is also a **run-time** route: `UDreamDataBinding` — a **component** that connects **by property name through
+reflection**, so it can join **any two `UObject`s** without knowing their types at compile time; the price is string
+property names and reflection.
+
+| Field | Default | Notes |
+| --- | --- | --- |
+| `SourceObject` / `SourceProperty` | empty | What to read from, and which property |
+| `TargetObject` / `TargetProperty` | empty | What to write to, and which property — ⭐ **with `TargetObject` empty, it defaults to the widget that owns this component** |
+| `UpdateMode` | **`OnAwake`** | `EDreamBindingUpdateMode`: `OnAwake` / `EveryFrame` / `Manual` |
+
+The entry point is `ApplyBinding()` (callable from Blueprint).
+
+### Changing the look by size: `UDreamResponsiveBehaviour`
+
+`UDreamResponsiveBehaviour`, in the same file, is a **breakpoint** behaviour: by the **parent's size** (its own size on
+the root) it applies **the first rule that matches**.
+
+The fields of one `FDreamResponsiveRule`: `Name`, `MinWidth` / `MaxWidth` / `MinHeight` / `MaxHeight` (default **0**),
+`Visibility`, `RenderOpacity` (default **1**).
+
+⭐ **The line in the class comment is the thing to remember here**:
+
+> A rule is an **override of the widget's authored look**, not a full description of it: **a size that matches no rule
+> puts the widget back as it was**, rather than leaving it **in the last rule's costume**.
+
+`ActiveRule` (`Transient`) records which rule is in effect; `bHasBaselineAppearance` with `BaselineVisibility` /
+`BaselineRenderOpacity` holds the look **from before a rule first overrode it** — the record of "**what this component
+borrowed**", and **deliberately not a `UPROPERTY`**: it means nothing across a load (`ActiveRule` is `Transient` too), so
+**until it takes something again, it owes nothing**.
+
+⚠️ Both types live in `Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h` — **that file holds
+`UDreamDataBinding` too**; do not go looking for it elsewhere by its name.

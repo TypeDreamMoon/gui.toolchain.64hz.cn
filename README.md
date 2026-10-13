@@ -1,5 +1,7 @@
 # gui.toolchain.64hz.cn — the DreamGUI documentation site
 
+文档维护采用插件原文同步、AI 中文翻译 PR 与人工合并发布，配置见 [DOCS_SYNC.md](DOCS_SYNC.md)。
+
 The manual for [DreamGUI](https://github.com/TypeDreamMoon/DreamGUI): a 3D UI system for Unreal Engine 5.8.
 Chinese is the default locale, English lives under `/en`.
 
@@ -56,7 +58,7 @@ Repository secrets (Settings ▸ Secrets and variables ▸ Actions):
 
 | | |
 | --- | --- |
-| `content/docs/` | the manual. `page.mdx` is Chinese, `page.en.mdx` is English, `meta.json` orders a section |
+| `content/docs/` | the manual. `page.md[x]` is Chinese, `page.en.md[x]` is English, `meta.json` orders a section |
 | `content/docs/reference/` | **generated** — the class reference, see below |
 | `content/docs/diagnostics/` | **generated** — the `DUInnnn` pages, see below |
 | `app/` | routes: `/` and `/docs` (zh), `/[lang]` and `/[lang]/docs` (en), plus the static search index |
@@ -85,26 +87,11 @@ Plus the fumadocs set: `Callout`, `Card(s)`, `Tab(s)`, `Step(s)`, `Accordion(s)`
 ### Links
 
 A Chinese page links `/docs/...`, an English page `/en/docs/...`. `scripts/check-links.py` reports an
-English page linking a Chinese route (and the reverse) as broken, as well as any route or anchor the
-export does not have.
+missing exported routes and anchors. Intentional links to the other locale are allowed.
 
-## Regenerating the generated pages
+## Updating documentation
 
-Both read the plugin; neither page set is to be hand-edited.
-
-```bash
-python scripts/reference/sync.py   --plugin <path to Plugins/DreamGUI>
-python scripts/diagnostics/sync.py --plugin <path to Plugins/DreamGUI>
-```
-
-- **Reference** — from the plugin's `Docs/Reference/*.md`, which the `DreamGUIReferenceDocs` commandlet
-  prints from reflection. The pages stay English in both locales (they are the headers' own comments);
-  the Chinese page says so at its top. HTML comments are dropped, indented code is fenced, `<` `{` `}`
-  are escaped, wide tables get a scroll container, and links between classes become site routes.
-- **Diagnostics** — from `EDreamUIDiagnosticCode` in `Source/DreamGUI/Public/Text/DreamUIDiagnostics.h`
-  (codes, names, comments), the table in `Docs/DuiLanguage.md` (each code's meaning) and the raise sites
-  in `Source/` (error or warning). The prose lives here, in `scripts/diagnostics/zh.md` and `en.md`,
-  under `## DUInnnn` headings; a code with no prose in either is a hard error.
+Use the unified pipeline in [DOCS_SYNC.md](DOCS_SYNC.md). English references and diagnostics come from plugin documents; Chinese edits belong to reviewed translation PRs. The older reference/diagnostics scripts are historical and must not overwrite the reviewed pages.
 
 ## Checking links
 

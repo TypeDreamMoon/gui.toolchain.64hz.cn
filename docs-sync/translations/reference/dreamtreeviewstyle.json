@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamTreeViewStyle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "6185d7143710126c5380137265dbe5d034d3bef5f159074e8fba71a3c90cd444"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamtreeviewstyle.md",
+  "translationHash": "d5eb2eac412f50d283c9bbaafc051e10dfad0c26b9b25e4adb01b9cbb462c6d4"
+}

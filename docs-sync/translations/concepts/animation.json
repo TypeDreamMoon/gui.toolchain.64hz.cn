@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/concepts/animation.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "8168bd8a13641532d543f6f9cfbeeca146167108afae82d378778a2b5853e1fd"
+    }
+  ],
+  "translationFile": "content/docs/concepts/animation.md",
+  "translationHash": "b7fe6ce0b0be7b19182fbba62d01013c59bf540dcfd30e1acdfe80cca137f2cd"
+}

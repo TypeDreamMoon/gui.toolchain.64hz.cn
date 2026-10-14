@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/tools/debugging.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "b6ab29c5c022696c0ae524960ec2870d876e5b022a3d45e795feb71aeaba0a90"
+    }
+  ],
+  "translationFile": "content/docs/tools/debugging.md",
+  "translationHash": "8520751e271ed75a7fb2d8782a51b59947915ff10acd714fe1ae5ffff27dc7e5"
+}

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamLayoutContainerSizeBox.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "b1be0175f125a1db50ffeadefac44c08d43ec006950f3197e7d287b698ecf5db"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamlayoutcontainersizebox.md",
+  "translationHash": "e502b172c773244c97df60f1afe6d82b2c4c92d4df3af7bbf0a0f64bd4ea2b80"
+}

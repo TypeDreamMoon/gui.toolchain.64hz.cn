@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamLyricsLibrary.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "6108b8bd7b6b897d43f90818478f1951de6712e7ec6a83753f67ed860bf79257"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamlyricslibrary.md",
+  "translationHash": "5869a966af7e92d2d8760b43add98398fa0e0aaf9de8ecba41ea71d0337c7b1a"
+}

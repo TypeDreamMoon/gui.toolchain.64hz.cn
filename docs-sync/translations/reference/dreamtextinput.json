@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamTextInput.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "9fdc86090a17554d28c0d252bd6aa309d4afa9a10a57626e4befcf2f14bbb7b5"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamtextinput.md",
+  "translationHash": "aa549f0d8c9c811f35b12d4784640559e6a31891a4b7fc562700d5a7439f6dcf"
+}

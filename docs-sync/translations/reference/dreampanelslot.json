@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamPanelSlot.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "81fd978aedeabbb4e532b156fd2f2f732808fc5da4727fee478eb8da68efd86b"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreampanelslot.md",
+  "translationHash": "70cd0aa78ffd7bc7401fb413c6dba8c0c3040b311f8dec04a98cf46d5d86adf0"
+}

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamLayoutContainerScrollBox.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "8c6acee5230c597364108961ebb35fb4de4f960688f98457945444c32ee192b8"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamlayoutcontainerscrollbox.md",
+  "translationHash": "23acd21dd131a4c0ae2662eec38ad453b0ab4d7205fcda5eb22254a6df52503c"
+}

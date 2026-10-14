@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/guides/fonts-and-packaging.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "1ed0edc3dc7fd23efc826103d53eed17617ad5f96335b736256a01e7ce9ff14d"
+    }
+  ],
+  "translationFile": "content/docs/guides/fonts-and-packaging.md",
+  "translationHash": "73fa327214023f355d129a584fceb9754dad9b9d08cedace9aeb4c00f5f1a9fc"
+}

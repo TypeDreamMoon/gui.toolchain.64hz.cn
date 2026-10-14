@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/concepts/widgets.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "6e5526a8f42b11dab72e4ab440db105b74a70df448d18339ee4a888514897544"
+    }
+  ],
+  "translationFile": "content/docs/concepts/widgets.md",
+  "translationHash": "71acffade95bc299373a4e52ea05f3e90e564d8338cb83367e017701fcd6ee0b"
+}

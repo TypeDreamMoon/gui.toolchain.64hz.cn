@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/getting-started/first-screen.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "6b622eb7e31a3dfb9bffc9879ab0d8167d1f6310379c3274d867e7bc44dcaa76"
+    }
+  ],
+  "translationFile": "content/docs/start/first-screen.md",
+  "translationHash": "7027c88fc49105e9b33e172fe089588d199a11b3ac66ba3f5a7482dacb56ed35"
+}

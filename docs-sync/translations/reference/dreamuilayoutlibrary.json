@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamUILayoutLibrary.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "ca86346ddc2ca2c03334a1ec959036438140fbcdb5628ae3c9ce599641a24e34"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamuilayoutlibrary.md",
+  "translationHash": "9ccdff96cfb05ce4a86237d501b5e3f592779ccfb4dd1c086acc157fccf11e09"
+}

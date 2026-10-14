@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamDialog.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "a4b095f539dfc21eb31c47cee010ab530237d9a0be4fa87c0b7e4f69238146a9"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamdialog.md",
+  "translationHash": "66210bbed92550c9aadf233122915462fc979110201d3c7d9cd2addf452e959f"
+}

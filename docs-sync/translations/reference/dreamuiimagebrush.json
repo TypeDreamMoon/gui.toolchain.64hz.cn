@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamUIImageBrush.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "aa0160a27121cd152901c5e8ccec41f5fef76310308450138718c2c7428b3819"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamuiimagebrush.md",
+  "translationHash": "b5771a48f0f7134c36f4f472ebe34a2b3cf40d693c9a1b5213f4775a2a9e07bb"
+}

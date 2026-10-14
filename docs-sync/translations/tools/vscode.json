@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/tools/vscode.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "ab9a1f54b2b69804d58984ee00ec7295bd112febc5149b8b7a0a445c99ddf423"
+    }
+  ],
+  "translationFile": "content/docs/tools/vscode.md",
+  "translationHash": "417543e7f5384617d619c082a088213408b9214014cd03f2e975d13d5e368b16"
+}

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/concepts/layout.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "1dcd43d857ab36dbbcccedfea17caaa7873f1a4280e0012c8d4bd914b01ae994"
+    }
+  ],
+  "translationFile": "content/docs/concepts/layout.md",
+  "translationHash": "4096b769bbf8a2ced8318ddaf306be2f2d5dcded9ed591f8cffaf1992396c7ee"
+}

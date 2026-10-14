@@ -1,0 +1,3055 @@
+{
+  "version": 1,
+  "repository": "TypeDreamMoon/DreamGUI",
+  "revision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "workingTree": false,
+  "translationSnapshotHash": "cee98ddf0e699955a0ae5ada3bac5dbcf52edccee6dad3a29558e244d3b3b35e",
+  "pages": {
+    "changelog/index": {
+      "hash": "e031de401376cdf51434e13f4f4627a30b9b3c9fd1c5e5f816a6cbc68da69967",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/changelog/index.en.md",
+      "outputHash": "edded1959a4e53ad0bdd728f38ad6d81722bdf60eb010f11ea1922681c2fb733",
+      "locale": "en",
+      "format": "md",
+      "title": "Changelog",
+      "sources": [
+        {
+          "path": "Docs/changelog/index.md",
+          "hash": "a9c87fc07740293ffad81c2ac68ec9d89aaab21e2ebf1e448c4405da4fba31fe"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/changelog/index.md",
+        "record": "docs-sync/translations/changelog/index.json",
+        "outputHash": "3fc58ab2fe375977b0b029ae4b6f3c62f498b5fa8bccd6a8f844ce79b62e4403",
+        "bodyHash": "39b19e4ea46b40e94e0457c7c2e2e825b8d1ca4c6c8d34a3edd600426005c2ff"
+      }
+    },
+    "concepts/animation": {
+      "hash": "5ecc260afbf95c850aff043982d68d05c4c77c9fad352eec10c8d65c086f490f",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/animation.en.md",
+      "outputHash": "a725483ef8180fc44aaf525a2878b28c5dc607c4401bf62fcfbbe6996cab8e7d",
+      "locale": "en",
+      "format": "md",
+      "title": "Animation",
+      "sources": [
+        {
+          "path": "Docs/concepts/animation.md",
+          "hash": "c425ed3f2484ce09184dda61641a0fdeba5a0d9a8fce90f651441af2ca17a8a2"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/animation.md",
+        "record": "docs-sync/translations/concepts/animation.json",
+        "outputHash": "b7fe6ce0b0be7b19182fbba62d01013c59bf540dcfd30e1acdfe80cca137f2cd",
+        "bodyHash": "52176247a900f3aac14029d0613fb2c398cd7c0cc95cf32b9247dc35272d5e67"
+      }
+    },
+    "concepts/canvas": {
+      "hash": "794194ddeca669dc8e52b98371bc46b4000b6c8384356e62ace8e9199176eb1c",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/canvas.en.md",
+      "outputHash": "e55d280ca5e026d3b71a2b6a327f16aa8e41ac20e44ca3c04d875e885edfce9e",
+      "locale": "en",
+      "format": "md",
+      "title": "Canvas",
+      "sources": [
+        {
+          "path": "Docs/concepts/canvas.md",
+          "hash": "722c66a50ca994d576c2723ae922c9fe056be89851eaed1c5fbea09455712432"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/canvas.md",
+        "record": "docs-sync/translations/concepts/canvas.json",
+        "outputHash": "4d8e46af1e1b059384ba4e7e80cabe311252c880ad68b2b4cab3f9e8e0a38099",
+        "bodyHash": "2e4df2f7da248571318ef1cef75bd3856b4b07e18cf075eab06336d2bde40707"
+      }
+    },
+    "concepts/input": {
+      "hash": "aa3c0fda047f808ef0122ab3ffa447c2990be9693cd81984a7a4a8700822161e",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/input.en.md",
+      "outputHash": "a95726829eed6e9be25d15e831c70ce4532f2f2d6a42bb8e4be9fba2cd575699",
+      "locale": "en",
+      "format": "md",
+      "title": "Input",
+      "sources": [
+        {
+          "path": "Docs/concepts/input.md",
+          "hash": "b5b7a15a6ca352a91f0b07c6a08971704813d68852ff9858cade2f24f2122e5e"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/input.md",
+        "record": "docs-sync/translations/concepts/input.json",
+        "outputHash": "e6fbfee4c0c02e6b42b3a7a30bf3d74076b8a6187f11ffbdc1de1f2a0bb369cc",
+        "bodyHash": "08b6ec7dbe3a31c7bcb5f6aa06ee2dd2745c406006505607ac8058ce183d5b11"
+      }
+    },
+    "concepts/layout": {
+      "hash": "aa721930dda6c38ea5dc411ed6fdc671583a30e24aba78ffc2ae072aa5f34447",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/layout.en.md",
+      "outputHash": "7fa9ff9abaa0a054bd97ed563ca73ebd37c2cd9d93dc41445dc7c35a4fe9b853",
+      "locale": "en",
+      "format": "md",
+      "title": "Layout",
+      "sources": [
+        {
+          "path": "Docs/concepts/layout.md",
+          "hash": "2e6c468d11a77d2f6aa9c10de5f2bfd482a32a551d93afa420040e922df63096"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/layout.md",
+        "record": "docs-sync/translations/concepts/layout.json",
+        "outputHash": "4096b769bbf8a2ced8318ddaf306be2f2d5dcded9ed591f8cffaf1992396c7ee",
+        "bodyHash": "c4d4dd36f52316f48dbd6092f4ad77ab8ee7d7d0a07498d8c967b9ed35cc19c3"
+      }
+    },
+    "concepts/lyrics": {
+      "hash": "7b1952dac39dc0491ca3b05f4a1505424fa707a86ef5b89f20cc5807f9879cbf",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/lyrics.en.md",
+      "outputHash": "ba6fefebd7ac156d1f8fd71142d7b6ce04e5b84530f1ccd419dacaba9a6b9500",
+      "locale": "en",
+      "format": "md",
+      "title": "Lyrics",
+      "sources": [
+        {
+          "path": "Docs/concepts/lyrics.md",
+          "hash": "6f596574d3de93deb4e3282b76c770af2c1f61f1badd5b01d503b63202c0cb4c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/lyrics.md",
+        "record": "docs-sync/translations/concepts/lyrics.json",
+        "outputHash": "e30f296293ae9657fa7d1dbc882009ed277c4f08d6ca15defa726ecd092597da",
+        "bodyHash": "d15b40e2d3deb4712e49b59dea8b0370561d7b0449fe36cf226e42e984377866"
+      }
+    },
+    "concepts/mesh-modifiers": {
+      "hash": "bb645ceaf187e68af8a8bf1597e2a00df69b400c53a469e7c79e5fb1d42eeac4",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/mesh-modifiers.en.md",
+      "outputHash": "f6de421a02cedd3206e66a8c2f2144dd1b737445cc9dbdf0a8f36c500e8786e7",
+      "locale": "en",
+      "format": "md",
+      "title": "Mesh modifiers and text animation",
+      "sources": [
+        {
+          "path": "Docs/concepts/mesh-modifiers.md",
+          "hash": "5df40a818f16281234bca25b4d55535132caecdadfbceeb3783fb7e84c8e1579"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/mesh-modifiers.md",
+        "record": "docs-sync/translations/concepts/mesh-modifiers.json",
+        "outputHash": "82dbca7245e3f47618372165b6597742639df27018462334b1966b38fd5b9dbb",
+        "bodyHash": "2b45608878722dae87fd894f108c0abb31f65106fa34314c10b13bf0b863832e"
+      }
+    },
+    "concepts/rendering": {
+      "hash": "a0867eecdd75c4d8bac7afa66ffc77dc103852ebd7d1c66bd68468184ae87fa1",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/rendering.en.md",
+      "outputHash": "d01289681becad61ba345aab6d78815b24aa082ac2bcde1807fbcb2b8862fe38",
+      "locale": "en",
+      "format": "md",
+      "title": "Rendering",
+      "sources": [
+        {
+          "path": "Docs/concepts/rendering.md",
+          "hash": "76947b873432531fd0e4716c306d0c810f1b8fe0287fa941696e50ebcb8630f1"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/rendering.md",
+        "record": "docs-sync/translations/concepts/rendering.json",
+        "outputHash": "680c70e136c73caf79d2a5f2ae56338d8df9ffb7bf8f56eeade298dc402948e4",
+        "bodyHash": "c8ffafba54c471213dde3d99f3b03fb2615164df3972306094df5a009704904c"
+      }
+    },
+    "concepts/sprites-and-meshes": {
+      "hash": "bee05aaf9b4962b5d45696f0e19c18829736605549744d3b011f9950247ce1c2",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/sprites-and-meshes.en.md",
+      "outputHash": "8cdbf9a5e09e9d46dcc40e0200b7d84701f21695133b5404df8da037befefd29",
+      "locale": "en",
+      "format": "md",
+      "title": "Custom meshes, sprites and atlases",
+      "sources": [
+        {
+          "path": "Docs/concepts/sprites-and-meshes.md",
+          "hash": "7e00a702ed5fea8d8a297dd1ffc70c04d31829173a432fd4af75b7fe894e6746"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/sprites-and-meshes.md",
+        "record": "docs-sync/translations/concepts/sprites-and-meshes.json",
+        "outputHash": "d82238d82cc71538704ebb40e68ff5b7a56e601568cfcef3949231025ed0e7e3",
+        "bodyHash": "7bdd3d312434b99194ab342999c37168abbf39a8478961c11ef69b5360daf652"
+      }
+    },
+    "concepts/text": {
+      "hash": "00ae1258b32e7ed9c0d7e2903be6d73f787c7e34a77b0e9d45b73790dbb61172",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/text.en.md",
+      "outputHash": "d5fb02141cc9ee90ec52ddfd4b18b71ef166ad2d5d0cb32a7d871571afb605ac",
+      "locale": "en",
+      "format": "md",
+      "title": "Text",
+      "sources": [
+        {
+          "path": "Docs/concepts/text.md",
+          "hash": "100aaf6406010d52b2694dc97c6827dc6ec5afa321eb087100aadd3d948b6e79"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/text.md",
+        "record": "docs-sync/translations/concepts/text.json",
+        "outputHash": "eb7f139947ff284698b813076c619f9dbf869bbbc33a335ca1057eedb94730db",
+        "bodyHash": "0b96250fe11e2238d2e86b064ba7928aa450fe5678327249645101478b350549"
+      }
+    },
+    "concepts/widget-blueprints": {
+      "hash": "c1e7891f0a0e61d29f67da7c510ac01f58ecb1573dda89791a1f4a52e1f6cdee",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/widget-blueprints.en.md",
+      "outputHash": "6aa0076978bcbce65849e0350a08176e33b5ac50c659add8a6681d9e542ee3bb",
+      "locale": "en",
+      "format": "md",
+      "title": "Widget Blueprints",
+      "sources": [
+        {
+          "path": "Docs/concepts/widget-blueprints.md",
+          "hash": "d8bf7b2181cbc7b86dececd32475518bcfdccc5290f0e48d0f651e09e48dbb99"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/widget-blueprints.md",
+        "record": "docs-sync/translations/concepts/widget-blueprints.json",
+        "outputHash": "90e82f1c2032701804b5f7de66596cc5d81eb7589694412a69375643fff44d65",
+        "bodyHash": "43039ad7c6bfb818fa34feee0f9ec9e595047bfee446386e3a925f99d0fb4ebb"
+      }
+    },
+    "concepts/widget-tree": {
+      "hash": "bb75a35cb77471290f1bd66e17845e504f914725ae488b5733b4b6b9259c1ba6",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/widget-tree.en.md",
+      "outputHash": "4100ce1153f2919901541e9b3179fa670b5a2b8e9fb849d7417f11df67ad9a06",
+      "locale": "en",
+      "format": "md",
+      "title": "The widget tree, parking and hosts",
+      "sources": [
+        {
+          "path": "Docs/concepts/widget-tree.md",
+          "hash": "34e2f7543e98d614aa81123ae2ecc875fa247a4a9b5c8a17aaaff00f5a1d93cb"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/widget-tree.md",
+        "record": "docs-sync/translations/concepts/widget-tree.json",
+        "outputHash": "69468d4224f90b3f32209bb9d41020361962676816f92f30017782369659d4fa",
+        "bodyHash": "03e3e951f0c75f6ba4c869461e077b3807251485cbd687052063ff52eece7ebb"
+      }
+    },
+    "concepts/widgets": {
+      "hash": "1312eab7b7ff5802914d332c852e25183e88fd97d1314b52c0146f1df62e09d6",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/widgets.en.md",
+      "outputHash": "6e72c43578f52c7b3d130a70d65bb2fb69efd4e69f7e5f9417d15ed6111fefbb",
+      "locale": "en",
+      "format": "md",
+      "title": "The widget model",
+      "sources": [
+        {
+          "path": "Docs/concepts/widgets.md",
+          "hash": "43205427c44b0a684b3d33a6f4b0d2c5ebc6a0121ce9ce086b2d84c8146cc39a"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/widgets.md",
+        "record": "docs-sync/translations/concepts/widgets.json",
+        "outputHash": "71acffade95bc299373a4e52ea05f3e90e564d8338cb83367e017701fcd6ee0b",
+        "bodyHash": "2cc1f3069ac83c4e38a0182fb7aa0c0237963c0b963fdb5a45ad26757988b6bd"
+      }
+    },
+    "concepts/world-space": {
+      "hash": "8b43590f9f47a3e801d86b48c66b09a4ac2736900efd9fe2cb1e2c2eb6b7e6d7",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/concepts/world-space.en.md",
+      "outputHash": "d4483af52b2c1a45ff9cd9a0e1ae3c642c313d86b49157ef4965b70252eb92d4",
+      "locale": "en",
+      "format": "md",
+      "title": "World-space UI",
+      "sources": [
+        {
+          "path": "Docs/concepts/world-space.md",
+          "hash": "300065503fbcc822d09395d40feaf51da4eba4d5ba7d1df3edab6eabeab87001"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/concepts/world-space.md",
+        "record": "docs-sync/translations/concepts/world-space.json",
+        "outputHash": "056705a92e05ef5130298d0045e3318e700f261bbb3ea674e23c872f6b0589af",
+        "bodyHash": "57f43b750546cee8aa7bc422e31965d80c17d7f1790e244e3d15e7b3d03ad669"
+      }
+    },
+    "controls/index": {
+      "hash": "ed5e6714fe709aa8878f1f51be053a65daa2fde6218374df64e888a9dc0cd877",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/controls/index.en.md",
+      "outputHash": "64c02f8933c35fbe022de3bd46fabb8e527d9c6b2975f2fe02752c9000a83225",
+      "locale": "en",
+      "format": "md",
+      "title": "The control library",
+      "sources": [
+        {
+          "path": "Docs/controls/index.md",
+          "hash": "d812326b6394dc698b146848fd5a300303ef9e89c0e0b0402cad73b5592cdb10"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/controls/index.md",
+        "record": "docs-sync/translations/controls/index.json",
+        "outputHash": "cc040a9de71e11c82676472a41a5a3a1d5b5841242eb56a93524968d114b8ba4",
+        "bodyHash": "0489305be47388931d79ad81e49db4c043ad1a58bf09944b71279986aab2e77b"
+      }
+    },
+    "controls/styles": {
+      "hash": "886a66c60030dfe5fbbee8eb5e95806e31793b82411c129fc23e433ea0d97fa3",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/controls/styles.en.md",
+      "outputHash": "fdf5fad5d1d287743980f1d2c2501ff0c47773ed7365c5d022aa438e51175a29",
+      "locale": "en",
+      "format": "md",
+      "title": "Styles and style sheets",
+      "sources": [
+        {
+          "path": "Docs/controls/styles.md",
+          "hash": "6178f17c6204599f272504811ec85d8e8c88bc79e91e12545149c66dfae5453b"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/controls/styles.md",
+        "record": "docs-sync/translations/controls/styles.json",
+        "outputHash": "0ced3ceeba7edf9d825376f5b06d62b9d5a608805d6ab2df7ce351f3a6889007",
+        "bodyHash": "5fca5c2a7a8ad3c408bbdc767bd3d6935d59891fca0b270cb7edbb8a1cb757e1"
+      }
+    },
+    "controls/umg-parity": {
+      "hash": "e7e8c5a5a9c2678c4ede7345832fa0c799a4f49af2a99c84f74cb25cd0397eb5",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/controls/umg-parity.en.md",
+      "outputHash": "41f710b62439740c08c094d8e1ad73f7e708522330475e7e8a2659a0768d836d",
+      "locale": "en",
+      "format": "md",
+      "title": "Coming from UMG: the names are the same",
+      "sources": [
+        {
+          "path": "Docs/controls/umg-parity.md",
+          "hash": "4370bcef80164622e1a00ea1da04ecd600bbde3bdd28809ff49fd15e8934d592"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/controls/umg-parity.md",
+        "record": "docs-sync/translations/controls/umg-parity.json",
+        "outputHash": "e106e22ddd43a2c1cd1262d236a573e78e0156513df675499a95928c9ec78f3b",
+        "bodyHash": "9064e2132a8c57067941259b3c286c7471782c4e234fe612344a96ea096ae92d"
+      }
+    },
+    "diagnostics/dui1xxx": {
+      "hash": "683508b153c4848a677f197ff91ba19f5d0b7520351fc804bdeaade5df15a329",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/diagnostics/dui1xxx.en.md",
+      "outputHash": "af5dffd207e5cead732ca1fba6fb66645d930f2e954034e49feff50659914ed9",
+      "locale": "en",
+      "format": "md",
+      "title": "DUI1xxx · Lexer",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI1",
+          "hash": "053e8811415eecc87d23977f4aa560d9b300056710c6cc707c30b7580a59e007"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/diagnostics/dui1xxx.md",
+        "record": "docs-sync/translations/diagnostics/dui1xxx.json",
+        "outputHash": "48a95ebc695ade3336b42641c668c97c59f7f4bf3fc2b3a033005c39b6bb64f6",
+        "bodyHash": "e9a9459ee3aec2e2c51bc29769b1922ec980734e59a5903e2cebfd4512296a25"
+      }
+    },
+    "diagnostics/dui2xxx": {
+      "hash": "d38bbff8119c52511418705d0b60f47ae8aee27cfae240e1cdb7527b68c38366",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/diagnostics/dui2xxx.en.md",
+      "outputHash": "f5a7a543772db202fb44061fd288bd9b68630840c3963d53afce42681fe91be3",
+      "locale": "en",
+      "format": "md",
+      "title": "DUI2xxx · Parser",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI2",
+          "hash": "7d05d3a418113d5619eb8cd8dc6eb81f703c745175c40872415bcabb075bd1db"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/diagnostics/dui2xxx.md",
+        "record": "docs-sync/translations/diagnostics/dui2xxx.json",
+        "outputHash": "b182ac56ed30da4d35252cdf66d6ab9800d07534c706548edc73be7c04259ba5",
+        "bodyHash": "089e41ca95f0730867810ace70a7e5784f011b7a0cd246494913e8eefdd440c1"
+      }
+    },
+    "diagnostics/dui3xxx": {
+      "hash": "470cdf91a1f4981d7773ad0e47dc2631303e106ee880e366c3ba83b700ef7cf0",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/diagnostics/dui3xxx.en.md",
+      "outputHash": "254ff47593c0d4b93fd4dd3dad35962f42c66b2b57c6a040cba65173462ec710",
+      "locale": "en",
+      "format": "md",
+      "title": "DUI3xxx · Meaning",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI3",
+          "hash": "5a5e870a974cffc5cae42e89361e462d55b30a54cfdcdcc7cdc9bac0d257e837"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/diagnostics/dui3xxx.md",
+        "record": "docs-sync/translations/diagnostics/dui3xxx.json",
+        "outputHash": "51da83e3f461a2be7d0edd768d87c1c45bab61e62c486f410e29124a427ce167",
+        "bodyHash": "8a1969edaf1f790e92c221117db713c46e3a17fdedd59fff02d179334980343e"
+      }
+    },
+    "diagnostics/dui4xxx": {
+      "hash": "710064bfd2e8fdce90bbd118139939ad3e88858bfb9d609c7036d2472ac07e66",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/diagnostics/dui4xxx.en.md",
+      "outputHash": "f4703f0d9a55688912640814550813ed991dd231f4b9bdc629266203c7e0447f",
+      "locale": "en",
+      "format": "md",
+      "title": "DUI4xxx · Values",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI4",
+          "hash": "e2e71b7229d170da429a8eb4bbff9d5c6426b048d9821694658d9f18460adb36"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/diagnostics/dui4xxx.md",
+        "record": "docs-sync/translations/diagnostics/dui4xxx.json",
+        "outputHash": "f0d8b5a6a10cb6f9843f74e9f04e20793a65d0bcd5e419eb1e39817be6b3934b",
+        "bodyHash": "8245d16b0b9d8a287792f4033271a6a917f1a1312e9fe1bffcf107f9be4d5f0f"
+      }
+    },
+    "diagnostics/dui5xxx": {
+      "hash": "4c4ec6351e57e5a262db5bb48790daec8c761ca274e3c05e2240c421eb0baa7a",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/diagnostics/dui5xxx.en.md",
+      "outputHash": "a3d18f045213f42ce4ad9e3561ae42a1c3c2aaa1a0140c0244688768df1e383b",
+      "locale": "en",
+      "format": "md",
+      "title": "DUI5xxx · Building the tree",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI5",
+          "hash": "4d126fa16785cba7440ce5625dd3307066d3a67dbe94dc09f0ddc7f476850725"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/diagnostics/dui5xxx.md",
+        "record": "docs-sync/translations/diagnostics/dui5xxx.json",
+        "outputHash": "f5dc53f95910d3f52886a7dc56f61e890b511369773209ea9f028c9dbb33421f",
+        "bodyHash": "cc23913c58efa3d9c4ba67e64c13f8590af74882b649a924c3ea488e0499b4d0"
+      }
+    },
+    "diagnostics/dui6xxx": {
+      "hash": "c7a19da45a3f43406a0bac96ef3a49fe9cb5efbd793c6bf42cbfe888929f5b20",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/diagnostics/dui6xxx.en.md",
+      "outputHash": "46e307a104e44b484b5af8c57a42caa8a35d7b74ab40e5bad5f4b5a33bf1adc6",
+      "locale": "en",
+      "format": "md",
+      "title": "DUI6xxx · Compiling",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI6",
+          "hash": "4877ac9f73b37c401a25e6530d7aa6ddf50db9d8714531496617048eb781492b"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/diagnostics/dui6xxx.md",
+        "record": "docs-sync/translations/diagnostics/dui6xxx.json",
+        "outputHash": "a145bd81d0a6061a9d63641cc74203dcff477502e00d674d152442e95d131091",
+        "bodyHash": "528bc19328aa3630c1e412679dec1b953d7c6e7fdf07092483e2672ee009f6ab"
+      }
+    },
+    "diagnostics/dui7xxx": {
+      "hash": "a292865b5384aaed8d6950b410af5b150ddfb90ec6cf5dab75d9dacdc423f262",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/diagnostics/dui7xxx.en.md",
+      "outputHash": "5ad035a8dc7764917c9c0d72ad08dedacb150d7306f3ba188dd581f8c3fde9fb",
+      "locale": "en",
+      "format": "md",
+      "title": "DUI7xxx · Write-back",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI7",
+          "hash": "487291c87339b5047e4b8cb28a8c33a8a2bd94d8c46050c081794c4ccea7c327"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/diagnostics/dui7xxx.md",
+        "record": "docs-sync/translations/diagnostics/dui7xxx.json",
+        "outputHash": "6ff310292cfc37e2d1be631abc95a43126514b2972eea4e4c2febe1ff45a1fde",
+        "bodyHash": "a10a7309a0e0911b8987b3e7747f7d63d2bd7125b0abb0b5b04d7b72754096c3"
+      }
+    },
+    "diagnostics/index": {
+      "hash": "cd31cb4cb115854a5b12f3ba3be33d7959e1ecf4ee908e49e35c4516ec61be4d",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/diagnostics/index.en.md",
+      "outputHash": "976391367937792d4288721a5a5a09283d124ae1237d8e4f823a92bf179bbed8",
+      "locale": "en",
+      "format": "md",
+      "title": "Diagnostics",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/index.md",
+          "hash": "d2eef2d86a248cee08ac96a1ecff00f7c55f5008737eb576cb4610bbc545f5ad"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/diagnostics/index.md",
+        "record": "docs-sync/translations/diagnostics/index.json",
+        "outputHash": "123c5a08880451b73a75cb3b9157e7cd9309dbf398cc1fb0a28f97038b1c6cee",
+        "bodyHash": "6abca01ba18625bc4d98d70ab9161121f56917259f15cb25fbd4fce5bdbcfedf"
+      }
+    },
+    "dui/bindings": {
+      "hash": "045c0d781fc997ede60542c7890d1934616a65bb2a58f58c821cd9ae9c6076ab",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/bindings.en.md",
+      "outputHash": "21650581950902e9062b0e4d7a4e8d590603edbab7af5ff49a1609c1a571a7af",
+      "locale": "en",
+      "format": "md",
+      "title": "Bindings and routes",
+      "sources": [
+        {
+          "path": "Docs/language/bindings.md",
+          "hash": "7dd633d3736f066acaabb3e685bc2a825abc8ebb7396964da6f7e421e003d70f"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/bindings.md",
+        "record": "docs-sync/translations/dui/bindings.json",
+        "outputHash": "e8b718a46eb0d1e8bb45d967f3efbb312865a24db5aaaa89630e29f2cec763f1",
+        "bodyHash": "f7142753dbbabc502708d203581205db4dff62701a32477617942649f6c96c19"
+      }
+    },
+    "dui/components": {
+      "hash": "9cd4a5db896e25cf8b8c478406ad011cfa450917a44e190743bd8490035a58f7",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/components.en.md",
+      "outputHash": "bff945e8187b879142fe4b825e893506c7ac2841e98981f08412b55905a34607",
+      "locale": "en",
+      "format": "md",
+      "title": "Writing a component",
+      "sources": [
+        {
+          "path": "Docs/language/components.md",
+          "hash": "f797da07639095235aa90cd9695c1fdb69c077de3987e9a65e77cac47ee85cc2"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/components.md",
+        "record": "docs-sync/translations/dui/components.json",
+        "outputHash": "37fbd560bd1ffb01550245c9bafad340706c43bdde87836a20e7425eb8e03d94",
+        "bodyHash": "49664908ee8d86d5a885f52dca9b7e610e56e73f9c98dbd130afb25fbc341ef7"
+      }
+    },
+    "dui/control-flow": {
+      "hash": "990d52b6aab45fb2c86145f41f6a516c379ff1c9d4f625be88a796ecdf8dcc12",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/control-flow.en.md",
+      "outputHash": "d672da54308e7ec38ea6776e811c966d860e05b83b2aaa2629cdbc8819d03cdc",
+      "locale": "en",
+      "format": "md",
+      "title": "if and for",
+      "sources": [
+        {
+          "path": "Docs/language/control-flow.md",
+          "hash": "9641e34728091c350d25eb5082ec1e883338d293aee5325ce76186fc0f55a4e1"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/control-flow.md",
+        "record": "docs-sync/translations/dui/control-flow.json",
+        "outputHash": "954c47a1847935a50f30a479edf227ca3669c62f11bffba34af559fbad313fbb",
+        "bodyHash": "71b47d57bfb7cd5194a7272cba34fd73533642e266454864e99df9d27d672783"
+      }
+    },
+    "dui/example": {
+      "hash": "a9e0d575076eaf8a06d33b31d9d9fba659c15dfb40b6fc72b560e01100220f7a",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/example.en.md",
+      "outputHash": "e62682e2e8af05ae2b47815e614ebc833a6c6b4132a06360b0e841f561ef4809",
+      "locale": "en",
+      "format": "md",
+      "title": "Worked example",
+      "sources": [
+        {
+          "path": "Docs/language/example.md",
+          "hash": "678abd5513bacb6ca16b9aa50a37462bf5f0a3e8bd3529ccb354233f78bae18b"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/example.md",
+        "record": "docs-sync/translations/dui/example.json",
+        "outputHash": "8ece33972f01843218186d8563d80c201f32ce214c624d41c4c24293a854ab64",
+        "bodyHash": "2bad86fcf2d04afcc955e3d0ae34eca672cb8c57014408c1409b46f0b87860ba"
+      }
+    },
+    "dui/nodes-and-values": {
+      "hash": "7a3f17d6ce7d79464546ca0259ba99236f29986edeed37911a96470652cd68b1",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/nodes-and-values.en.md",
+      "outputHash": "e7861c14c3fe7ce1e3e618beb6e27a3f9b9c8f3a175698a144acc3fb182941d0",
+      "locale": "en",
+      "format": "md",
+      "title": "Nodes and values",
+      "sources": [
+        {
+          "path": "Docs/language/nodes-and-values.md",
+          "hash": "d162503db55fd140f0bf6e5661bd31608a0ae3374d05b82ccaea6d10db69c799"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/nodes-and-values.md",
+        "record": "docs-sync/translations/dui/nodes-and-values.json",
+        "outputHash": "4cd155701bfda88e54a864c26fddf446b7923d77433500bad4d81ce386a6b04e",
+        "bodyHash": "ce5fbfbe99b451f90dc8af4d48a66e76eaa481620f31b5207a3abdf97475112d"
+      }
+    },
+    "dui/overview": {
+      "hash": "e70e5e0466ce723067e90861125c32d96217dac45edd0f72087ee274ade55c2c",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/overview.en.md",
+      "outputHash": "c7ae03aa7e99100ebef258af4dc1e1d22e726ce99f39369bfb40a93b9dc5564f",
+      "locale": "en",
+      "format": "md",
+      "title": "Overview",
+      "sources": [
+        {
+          "path": "Docs/language/overview.md",
+          "hash": "a12b2de99848a26f5c42b5693f31a11e185b91cd340cc2ea29ed7dffe92b5488"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/overview.md",
+        "record": "docs-sync/translations/dui/overview.json",
+        "outputHash": "ee1e8e3f8e18ab627c2a8c283c92749f2bfb7fe8a1da7f4508e5d7d90b6004e8",
+        "bodyHash": "e506725637dad2aa8de84ce77b27adee74e1951b0f5d9d3657d77eb66dbccde5"
+      }
+    },
+    "dui/rows": {
+      "hash": "dfd16429a0a25b86437a1f1d197b351276029281cd35dfce001bec5c12c91266",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/rows.en.md",
+      "outputHash": "f1e39d582c43cae7929cbd32476a7e63bbcc4da65bb4a891b546b540849ce293",
+      "locale": "en",
+      "format": "md",
+      "title": "rows tables",
+      "sources": [
+        {
+          "path": "Docs/language/rows.md",
+          "hash": "656fddeedd7db49c38aaa346beaa6cf84d46030de3f45eeda172b2fce72631d8"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/rows.md",
+        "record": "docs-sync/translations/dui/rows.json",
+        "outputHash": "03ea1adfce8ab8c4a1c4a143a7e083878079c8bfbd1db3d05f077aa9a2b2a2c0",
+        "bodyHash": "8ba1f79dc84c9606df8dac9c0a1c9d54f15c6b8c7ee1d8d570da4505fb2f642a"
+      }
+    },
+    "dui/slots-and-components": {
+      "hash": "a8882bc14bb2df3d028836b9c3c32805414d769041d106eaa56ce5c4b2f9ab1c",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/slots-and-components.en.md",
+      "outputHash": "f345a1afa281c9154f424a09f7d579e1f543d1325c32be35793d36b818ef9f07",
+      "locale": "en",
+      "format": "md",
+      "title": "Slot lines and components",
+      "sources": [
+        {
+          "path": "Docs/language/slots-and-components.md",
+          "hash": "8ecda3c42ab1b79f205f8940e1221f2dd8861b1c00289dd46ecf25dcfb517f0c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/slots-and-components.md",
+        "record": "docs-sync/translations/dui/slots-and-components.json",
+        "outputHash": "46e7cfbed80e909ec4221c568e255b78ec99282b612ea20a60e810c59e76d611",
+        "bodyHash": "218f044be1b003a4dc88c6963aeb08d9ef7fe30c2495b6965b36243898c2a645"
+      }
+    },
+    "dui/styles-and-resources": {
+      "hash": "fa8f790ddbd493d95cf252b4e7c0fc6d850baad05fc8c059296ebf760c88e25d",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/styles-and-resources.en.md",
+      "outputHash": "e4508239957aee4d7023a819a3f8688f245c9bd54a4b56c62234eb16a526ca1e",
+      "locale": "en",
+      "format": "md",
+      "title": "Styles and resources",
+      "sources": [
+        {
+          "path": "Docs/language/styles-and-resources.md",
+          "hash": "09f21d8d4939940a4a6545d3bbfdec450385c17efe392c5b236408d2893ed40c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/styles-and-resources.md",
+        "record": "docs-sync/translations/dui/styles-and-resources.json",
+        "outputHash": "b72d8b760640521a749c662a36adabb92a3b2fc431f29d287cacbde20b17638e",
+        "bodyHash": "f7349781d9a0caa8b268440b88bbeeafecdff1e4427f44a267228d26d490e04d"
+      }
+    },
+    "dui/timelines": {
+      "hash": "01c8ab87e7f328b2fd30d12675491551bcb3dcfb28d206abd4ecacf89d4eeb77",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/timelines.en.md",
+      "outputHash": "9cbeeedb3e2db7771555b5127cc55a041df50683e938f87a3d5667d4315e106a",
+      "locale": "en",
+      "format": "md",
+      "title": "Timelines",
+      "sources": [
+        {
+          "path": "Docs/language/timelines.md",
+          "hash": "d9136500a11afa4385a14c7c40a59e7860598c80e5a2f4ff7acce4b05167e86a"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/timelines.md",
+        "record": "docs-sync/translations/dui/timelines.json",
+        "outputHash": "09c93fc0cb9e5881831220bf4bf10ba359d47d4f4af1c75766b10d3d8025e83b",
+        "bodyHash": "033d70062414fa11454c9e0e00c82fa70ff68ea5f30541d6e4c20335bb9ec54d"
+      }
+    },
+    "dui/use": {
+      "hash": "73335c18072bcfdbc3dc68c235f9b73d25b1280856fc8127cd31f84e2f885ea3",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/use.en.md",
+      "outputHash": "fbb225c9769b785e4ecff9482d2dbf2c4722c8cd529902937f54d8b7b28fe0e5",
+      "locale": "en",
+      "format": "md",
+      "title": "use",
+      "sources": [
+        {
+          "path": "Docs/language/use.md",
+          "hash": "8f551a96ffe57d1166f8873bcd42502b9179eea476a96209fb3cbe73fd2ad9a3"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/use.md",
+        "record": "docs-sync/translations/dui/use.json",
+        "outputHash": "3e891c46795403379859b84559358766c418b4745100bf898e8e510115daead0",
+        "bodyHash": "418f582abcb9c1a7f9541a6466b1810c4d02dfe085021f1104024dd75cd440cc"
+      }
+    },
+    "dui/viewmodels": {
+      "hash": "13c4a7d5886ba864ac00321870fba8ad7c3d020b4999a2483bea88cc8880248d",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/viewmodels.en.md",
+      "outputHash": "0871c31b0c045e0cbb1377fff91ba48be6329fd7da63095fb456b89e5641b3a3",
+      "locale": "en",
+      "format": "md",
+      "title": "View models",
+      "sources": [
+        {
+          "path": "Docs/language/viewmodels.md",
+          "hash": "75bbc673f3117da86b73683e5724a6e41de15ae5ad5f465cf43a2095bdefdb10"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/viewmodels.md",
+        "record": "docs-sync/translations/dui/viewmodels.json",
+        "outputHash": "118582def5800b66d26d43148ba86a61080d45d25016062740cd15898893d0f3",
+        "bodyHash": "c7940c9ffae4934c2c7f29fd63c764a42d199c2b6f7ac5d0362f8bc935c0086a"
+      }
+    },
+    "dui/write-back": {
+      "hash": "728e538e2532cc11de30ef4a0f56449617603ccbbfa44b83a23755d8dab26d13",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/dui/write-back.en.md",
+      "outputHash": "142aa018efeae0c8a7c4dba571629f1796924a8f39cc083db0f094c1f99e6f10",
+      "locale": "en",
+      "format": "md",
+      "title": "Designer write-back",
+      "sources": [
+        {
+          "path": "Docs/language/write-back.md",
+          "hash": "7659610998dedcce44c4718bf2c4e082a6b8e878e1cb6b05e530a5f3897cc2c3"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/dui/write-back.md",
+        "record": "docs-sync/translations/dui/write-back.json",
+        "outputHash": "d0d0072b063732adaf88796675bfc225797be18c974558c42ed0593a48e43fcf",
+        "bodyHash": "175dd60908844411ac9b4116cf7e2b706846fcf41f75b9e7faf001736faa3a91"
+      }
+    },
+    "guides/fonts-and-packaging": {
+      "hash": "9c9671fedd00c8d1817ec1a8082ba1aca05b1b859a7670a8aa3ab3b692c87404",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/guides/fonts-and-packaging.en.md",
+      "outputHash": "2aae824616a698e4279f862ba1f9cc4c80d0ad72c7ea7c7c6c5aa86ff21f5572",
+      "locale": "en",
+      "format": "md",
+      "title": "Fonts and packaging",
+      "sources": [
+        {
+          "path": "Docs/guides/fonts-and-packaging.md",
+          "hash": "dbb61899820ea9f3a497143b924fefa562b69192965a951a85818c840c9edcd0"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/guides/fonts-and-packaging.md",
+        "record": "docs-sync/translations/guides/fonts-and-packaging.json",
+        "outputHash": "73fa327214023f355d129a584fceb9754dad9b9d08cedace9aeb4c00f5f1a9fc",
+        "bodyHash": "a3d4aff1c71857ce492171df79d992430084a08611ed6b37b6d94187470e5dc0"
+      }
+    },
+    "guides/migration": {
+      "hash": "34f100d2cb65c7a5312518c4ce057d1e2e7ae4eaf9aff2c2d1358ccb94db2991",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/guides/migration.en.md",
+      "outputHash": "6d4d3a0c5c7ebc32d39dd088d766dd23b75346c29f8ea63f90281747aa3cca5c",
+      "locale": "en",
+      "format": "md",
+      "title": "Migrating from LGUI, LexUI or early builds",
+      "sources": [
+        {
+          "path": "Docs/guides/migration.md",
+          "hash": "802b6cde2e7c195bdde4170ecb6b73f7720a2fcc0174e578898dcb85eb58e761"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/guides/migration.md",
+        "record": "docs-sync/translations/guides/migration.json",
+        "outputHash": "f7b4d7e3be4eaeefc6318a822e7b103d0091c045cbe9c6f9688779f9fd6bcff2",
+        "bodyHash": "3cb2a4253c7fdb950f6d288758a9b2709345c3b3ac26ebe7a270b730dffd97f8"
+      }
+    },
+    "guides/platforms": {
+      "hash": "a2bfd5379e36cad99c99723461c9f67008d27c0b759cd032be5771b17be71c11",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/guides/platforms.en.md",
+      "outputHash": "03db8edba0d296b2a7cd5b68cdc8a2c4ad2d56823778581e8b4391896e73d894",
+      "locale": "en",
+      "format": "md",
+      "title": "Platforms and status",
+      "sources": [
+        {
+          "path": "Docs/guides/platforms.md",
+          "hash": "574a326d42c5f62dd54ace23361379d457a89da875fbb31867c30f51442fd684"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/guides/platforms.md",
+        "record": "docs-sync/translations/guides/platforms.json",
+        "outputHash": "863684fc12e85cc1e5aaba7068a648dab2bc59c2391649c2cc78d55578918dac",
+        "bodyHash": "a6815aebdc16f30382af86582abde199e2163d9ced4cce70b2573db44c18f55d"
+      }
+    },
+    "guides/upgrading": {
+      "hash": "4241d3356b06b43db179039f48cf61b101f9b98ba5da5c1f89cc59472941c8c8",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/guides/upgrading.en.md",
+      "outputHash": "22682a2425546a570b92bcb6128690bb42750fa323f8ba4e31c1b83d04703450",
+      "locale": "en",
+      "format": "md",
+      "title": "Upgrading from the development builds",
+      "sources": [
+        {
+          "path": "Docs/guides/upgrading.md",
+          "hash": "2df25a4f5d1fc001f97d808b5200bd5ae42dbc3669025d86b0ec9bcfc4e9febc"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/guides/upgrading.md",
+        "record": "docs-sync/translations/guides/upgrading.json",
+        "outputHash": "1140205dc14c4b859fafd27d80789d2bd627d3b377db536de366ad604f3cd4c6",
+        "bodyHash": "f9a307550fb8cf37300cd93d146e798ec8f0b3bd350fd250e1f52b58f248dd42"
+      }
+    },
+    "index": {
+      "hash": "8d23a3a70414353162032a9379880b65f6fe176d813243bcf41b88edc7b2194e",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/index.en.md",
+      "outputHash": "c7c99a2412d2da063013a27e5e1d168388844290d8b7e3bdebefb3b99c8bddfa",
+      "locale": "en",
+      "format": "md",
+      "title": "Overview",
+      "sources": [
+        {
+          "path": "Docs/index.md",
+          "hash": "f77900bdda8b3033b7d1b3eec50b96eaab740d4ac950a642971f93545c070162"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/index.md",
+        "record": "docs-sync/translations/index.json",
+        "outputHash": "e90d326d98214715b53fa229d57bb835af1e42054ed7bf295b9b46498348fb04",
+        "bodyHash": "e1deb99421208aaed6617913baa5726b29cbdc2b42a2647da210e1a737c914f9"
+      }
+    },
+    "reference/dreamborder": {
+      "hash": "0cd2bfebaca06a04a8689582fa67c98742f5e3d10afcb2b34eb9d3359ac2c2d2",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamborder.en.md",
+      "outputHash": "497e8ae32f7bf9f5cdd6dc9cb816a6166327788f3c7e1c08548e3212a7c71c47",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamBorder",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamBorder.md",
+          "hash": "439c63689e67d5124409b6b5f4675ccdaa19fc2efb1d17e060e28ad932c20a5c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamborder.md",
+        "record": "docs-sync/translations/reference/dreamborder.json",
+        "outputHash": "eb216cc6a0eac67ab165314ce8f260ff2a33b9542ffb229d5f60283505bee3ca",
+        "bodyHash": "322a0c17638320dba9c776d64ad22ab68ded89449746af6934a77b00ce5c4035"
+      }
+    },
+    "reference/dreamborderstyle": {
+      "hash": "5d3a37af76abac608866db1838501068eaa58e662b38153ba77b2a5a7b63c3b2",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamborderstyle.en.md",
+      "outputHash": "91e816c4319367b79d7f0689b72c829668aafc180e4c10dc1855515bdea0d5f8",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamBorderStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamBorderStyle.md",
+          "hash": "a4927d1119d0c84dc9bd587d7fb9d191437708001b986c634990ef723d4e7932"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamborderstyle.md",
+        "record": "docs-sync/translations/reference/dreamborderstyle.json",
+        "outputHash": "6df6867da132ae59e27c3e6db08e9a82320998586e6c082734d6107f9f3631f7",
+        "bodyHash": "a0f03d1df19831df352945aa020b14f4d7e081d8382066f26f20a601d5820c1d"
+      }
+    },
+    "reference/dreambutton": {
+      "hash": "9165a5b48ae8804e754fcb1c4d44c796da6bea90dab71d9b0da815020ebf4ef2",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreambutton.en.md",
+      "outputHash": "f76a061a35c4d0a51761257791d37a18de4ecf7f63209bf03645c1230eeea301",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamButton",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamButton.md",
+          "hash": "d505b4dd7ae01f806e80153b6699b09540d920d1075a6cadc25ae6337fca8b9c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreambutton.md",
+        "record": "docs-sync/translations/reference/dreambutton.json",
+        "outputHash": "e98dbd6ca4b9dcb01c2fce8df9a31e35cccd6c008fe51ea267c9bc9e64c7cdb3",
+        "bodyHash": "98045258fe75e6e6e621984655791e5266ff704b798a139774647b4806cd3e6b"
+      }
+    },
+    "reference/dreambuttonstyle": {
+      "hash": "97f21831869fe78465f49bbc3de75dee4d05e8d6c014d751c991398779dda0c7",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreambuttonstyle.en.md",
+      "outputHash": "a7b4d5b77deccbf0abca9954009c134485866665d9d5a186bcf462de6e19ccb5",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamButtonStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamButtonStyle.md",
+          "hash": "a14faab7cbc02688e74d75d7153d76f57442841ab679e5647f0e9b0a876a3ca8"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreambuttonstyle.md",
+        "record": "docs-sync/translations/reference/dreambuttonstyle.json",
+        "outputHash": "1231dfa1079d10bb270ca67d3f54e8ef947412594e94d7d2c9cd1492a96fee69",
+        "bodyHash": "93f303fdd6624d978b6e0c8c699ef9d1353aab1a236e3be5d50f0f129318c523"
+      }
+    },
+    "reference/dreamdialog": {
+      "hash": "42fc852560d2b443083cc2b0c9989a56979eb09a8bb835c233f1d053e59f869c",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamdialog.en.md",
+      "outputHash": "51803caaa976eedd0b5b83a8a49e04e29219e0d9f9e485df524a312902cca7a0",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamDialog",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamDialog.md",
+          "hash": "2e1eef5c9a0bd9ff84326dc0b76fb3c1a8490535188f5345a56f5ccc1e1fe42d"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamdialog.md",
+        "record": "docs-sync/translations/reference/dreamdialog.json",
+        "outputHash": "66210bbed92550c9aadf233122915462fc979110201d3c7d9cd2addf452e959f",
+        "bodyHash": "e9502e2c85e7aa6ef4378e24e1a21d4eead99ec3bdfd40602b83a9461852fed6"
+      }
+    },
+    "reference/dreamdialogstyle": {
+      "hash": "029633c65ac831792c4ad6719c7cd110fe5cebf079ee641aa3711e1a1b9d202d",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamdialogstyle.en.md",
+      "outputHash": "07e70d26227f2c30a83e550004a2a874546b399bd4a4dbc78c5b7c4044b724ec",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamDialogStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamDialogStyle.md",
+          "hash": "6eccab4fdcef77784aa294d835781fe2a3803ab5d4731a4c6b1473925c958635"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamdialogstyle.md",
+        "record": "docs-sync/translations/reference/dreamdialogstyle.json",
+        "outputHash": "1e2d7c7d102a777aa7920f4f24184d280983877bf9adca1cd671e3a4d641eb53",
+        "bodyHash": "ec24eb5040d22eb8f732d1cfda482680e6163063f1033281ceb0026d54bbfa5d"
+      }
+    },
+    "reference/dreamdropdown": {
+      "hash": "b581e2a4e62e8dddcbc58295df0b13772adf388eb153e6b4dbfcd2250b36b076",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamdropdown.en.md",
+      "outputHash": "e7ce1033360f7a2e3d6820e366e896e51c43ef5e2d786843e91cdc118cd9894d",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamDropdown",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamDropdown.md",
+          "hash": "905c125a191a28781f74bd94badb7cbc85f522aadfa2a6bed5f005a25bf81e4b"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamdropdown.md",
+        "record": "docs-sync/translations/reference/dreamdropdown.json",
+        "outputHash": "bf9b1ac3e618009af58a870a9d7d992affc41024f23e095a333371b0401256f3",
+        "bodyHash": "0431404a68d1c2e9d3542ecb000793f1688df4762d5e22f8c94170e30c7d8f7d"
+      }
+    },
+    "reference/dreamdropdownstyle": {
+      "hash": "dd898434e37f6e8b9c280bd33fa56fb7d056a52993157b60b04793424bbad237",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamdropdownstyle.en.md",
+      "outputHash": "7116735b461e1fe7e033bfe77d24ce4697e8eed8527ae625c3b5aa7adc61ccd3",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamDropdownStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamDropdownStyle.md",
+          "hash": "7b90bf547d24787283b39cf4de08c42a4b7b3a07e37ee52aec20c98f0fdad097"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamdropdownstyle.md",
+        "record": "docs-sync/translations/reference/dreamdropdownstyle.json",
+        "outputHash": "21608b703cb2c1777c7ffc11739fa132891cfd31f29b42bf5a7404824655c35c",
+        "bodyHash": "383575d4aa612437e4d7fb9140c1d1235a5eee9e1c6187fc0cfb9a804acca623"
+      }
+    },
+    "reference/dreameditabletext": {
+      "hash": "2a624e6c78a0b286509bc0dd666417d579c27dd8aa3af175fd8abf0f0df513ab",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreameditabletext.en.md",
+      "outputHash": "b0ef83b68478e091b57eb6e65021e99388b1048d8eed0e9e9bdc8abbcd239e51",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamEditableText",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamEditableText.md",
+          "hash": "e094b44d6503d692089249e2b6568dff0fc867a3f62b2ca4fa20dd0f7feb73d8"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreameditabletext.md",
+        "record": "docs-sync/translations/reference/dreameditabletext.json",
+        "outputHash": "628b5e2280e1bf2a17414b88f8601d7c130eba14c9b5192e468a82360e17bde0",
+        "bodyHash": "4f0e1805ce59844ed4dc0b3e25becea21e9f6bb7466b94086035a3a1e55d8aa2"
+      }
+    },
+    "reference/dreamexpandablearea": {
+      "hash": "2ec8ae8b162b2aa091bfa0d204597385896f6ba9e5965288721bef709aa42a29",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamexpandablearea.en.md",
+      "outputHash": "d52f28751836a6942fe2cc4eaf55be82e36de11917262d767ff07774489a5b78",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamExpandableArea",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamExpandableArea.md",
+          "hash": "b3e658ca0e4150aad1607a0fd7914ee01e8b59f2a5bba0bb9b07617a99f671f1"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamexpandablearea.md",
+        "record": "docs-sync/translations/reference/dreamexpandablearea.json",
+        "outputHash": "8bb5bcf6a6ca59ed01650bb5b5fa1568abac1b442bd866847db2d1653aa43f41",
+        "bodyHash": "3114295675d9aeae7a490ae52e2b6eb4587980c6ae1b529335c54cdf08ce12db"
+      }
+    },
+    "reference/dreamexpandableareastyle": {
+      "hash": "76759063c64efb204fa18692aad0049e909b032fd9d3332b68e409bd8a2da90a",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamexpandableareastyle.en.md",
+      "outputHash": "64d10af10abf3cc68f786e0f1b25eea535448e2317454542727c998ab89a41ec",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamExpandableAreaStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamExpandableAreaStyle.md",
+          "hash": "b39c789623ed9d2877e31a2fc95a2d2bf94722c6b60f8d5ccd74b3ba92e83688"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamexpandableareastyle.md",
+        "record": "docs-sync/translations/reference/dreamexpandableareastyle.json",
+        "outputHash": "95a04688623ee125325637e253f0ab61f82ef4ae56e62d50905772c8b1c50805",
+        "bodyHash": "da013df66d9d2873d78fbe704d4fd0586519359983ee121c26510a9ba0f515ce"
+      }
+    },
+    "reference/dreaminputkeyselector": {
+      "hash": "6d8edec3b2a63b963b0c81b6b623e7a0d6f35d823a37ad289e83805c019b3ced",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreaminputkeyselector.en.md",
+      "outputHash": "84478ec9c0c7722f5df042bd055dd38760b59d7fa9c240b63608770332a6561c",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamInputKeySelector",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamInputKeySelector.md",
+          "hash": "81ebb5a76f5f2c5efa160d3b5c57ac5dc4dd864e03d60f8f08348dd5567aa856"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreaminputkeyselector.md",
+        "record": "docs-sync/translations/reference/dreaminputkeyselector.json",
+        "outputHash": "fe428f31d7ca64f7be67a9254fb2234a3e256301c4920f0963d085e12a14250e",
+        "bodyHash": "5f59711806141b14cc9c2f6b678b9c0fa26d83405d5dd776f5d6eeb82f0a37cc"
+      }
+    },
+    "reference/dreaminputkeyselectorstyle": {
+      "hash": "a23492d1d11c92e15efbcf9751e572144d6f6db525f3a84e645b4c258c004e0c",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreaminputkeyselectorstyle.en.md",
+      "outputHash": "0bc58ba0c57a337098f08c5e089afbe8daaf9b77109438df04eaf5f01caa660f",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamInputKeySelectorStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamInputKeySelectorStyle.md",
+          "hash": "a5d66fd34d8024a88d900242b2b3de3c76e38464043749041298bf5f534be182"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreaminputkeyselectorstyle.md",
+        "record": "docs-sync/translations/reference/dreaminputkeyselectorstyle.json",
+        "outputHash": "d62389a8395627501f72b31b617922877cad817cd1d3af3ffa1be933ccdbb086",
+        "bodyHash": "f21e1e3b26a2c944edf25204e8df9b354a668ca427c46c08426d7205980b4f84"
+      }
+    },
+    "reference/dreamlayoutcontainerborder": {
+      "hash": "c1aba0ae71ae30bd10b441a6f337359fdbca4d1adf29620836efd88a15282bc4",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainerborder.en.md",
+      "outputHash": "4c79d95a701857b79f561487c8d0ccb2fac41028b81e78125ed7399b42ac1b18",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerBorder",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerBorder.md",
+          "hash": "5b82662bdef51028dcef2717bfaae31681e094e177239b08003974d6736a643c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainerborder.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainerborder.json",
+        "outputHash": "202511a33b096e99624139f5b9320b17063e1b50b4a349e7c902fcb05406e7a5",
+        "bodyHash": "5150bb783c2a3142e4436e78a6cbe263d3d8af374df40feead49139dc5057445"
+      }
+    },
+    "reference/dreamlayoutcontainercanvaspanel": {
+      "hash": "9be2142f08081d8e4bca1689096a73df0a6b7ffb0a721af45f86dd67af49d616",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainercanvaspanel.en.md",
+      "outputHash": "f555e3fcac982577d89850202809c03e19cc37bd24ab9eaf0908d93f85114e08",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerCanvasPanel",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerCanvasPanel.md",
+          "hash": "282c823a1f2889a2c3c724ae6e90f956de21d4805035937a80012cf64c656d51"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainercanvaspanel.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainercanvaspanel.json",
+        "outputHash": "e33da70082025041e740600c275f19ac207e9dc47fc8b7b64bc3732c7660e62f",
+        "bodyHash": "f37d5e3509ef8e7059a0d21c8940e2e12277370c1a0970df089393dd695c49be"
+      }
+    },
+    "reference/dreamlayoutcontainergridpanel": {
+      "hash": "420d3c8ac19ee49c0e820608a4b35315584f1a7c15c6a57ef8685c6bb3fcb7f1",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainergridpanel.en.md",
+      "outputHash": "6e77d026c22c348b3ba0f1badc69de3c52544cd46199ef34d915e5f3d42e28ca",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerGridPanel",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerGridPanel.md",
+          "hash": "29218b3e91f26b0985644ca881c037c688db5b9d0bd93db7c74c793f63723ba9"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainergridpanel.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainergridpanel.json",
+        "outputHash": "390f18db5ab5e90a3ac161bbc9fc8f98c0026289be179e8358ed728889f0934f",
+        "bodyHash": "3199ce90e08dec0b5b8792353e69c3fade08f71f445be5f22ee7ae95d15d08b8"
+      }
+    },
+    "reference/dreamlayoutcontainerhorizontalbox": {
+      "hash": "310a1cac34bfdb6d19f14c6b55faa9debffd5a94adeec2be34b06307fa28e057",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainerhorizontalbox.en.md",
+      "outputHash": "1acb0cf3e752e99bd3c36eccde4612126c6fdcf8ab5350da956ba3fe7e2ac680",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerHorizontalBox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerHorizontalBox.md",
+          "hash": "8f695c8032bb8545dc2e87f3e86b981afe92aaa5c1f2c7f44c772a8dc96b9142"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainerhorizontalbox.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainerhorizontalbox.json",
+        "outputHash": "f55e0d2edab6e6dfb2c0722bae9c5bfeeb50a9e660151803186304aeafcb7a06",
+        "bodyHash": "0de977e43b013f579c19804cf76ac2163c1f7d39970c3e0ae39e954a35d7f917"
+      }
+    },
+    "reference/dreamlayoutcontainermenuanchor": {
+      "hash": "581acfae00736a7501707bbe228ec51562ca1152fdd511384adc86edde47f9dc",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainermenuanchor.en.md",
+      "outputHash": "b48221444a277ce7c90e6a90c0e5d8267e183a3b97284d7d22b463e8e16eb005",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerMenuAnchor",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerMenuAnchor.md",
+          "hash": "02654ade87c00730f2bd8266fb650b223db21391ed689694da14acee83d28c0c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainermenuanchor.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainermenuanchor.json",
+        "outputHash": "c9ceef4fef4ab5d5e19e5f63de6b4ab3090b68527d2d4cdbb32ba093cfa5f814",
+        "bodyHash": "5cd3d5e4c8cfee7af44e55998b84f33fad17d94ff58f882d67d05fa0950bc1b0"
+      }
+    },
+    "reference/dreamlayoutcontaineroverlay": {
+      "hash": "db6480cd771987df4b3e96028a522f93ea38ff3f0b3ca28061803fb2dd117a85",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontaineroverlay.en.md",
+      "outputHash": "aba6a8d20aea382e4b8095e3b29bd4c189e17b760c1cf1364aba9b7854618abc",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerOverlay",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerOverlay.md",
+          "hash": "60ecf3381be87b149217c1549a4b29d0549ad0307b3ee2c413d630d1e9bdf2e5"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontaineroverlay.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontaineroverlay.json",
+        "outputHash": "402771b88dda19f57369e73d5877b4abf5a346240cf2c8bbaa7adbdc790600ff",
+        "bodyHash": "e5d446473e1921a29857276dc67ed5385596c17702387d188b968a866b3bf719"
+      }
+    },
+    "reference/dreamlayoutcontainersafezone": {
+      "hash": "da391a4c042e421ad034b4b91c4eaf8b39c54fd784351fe8a2a959a08ec8d9f8",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainersafezone.en.md",
+      "outputHash": "a8e8c9cf3337b33efdc86e6f19c2919986eaf903767c33e1210a3b6b69d26fcf",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerSafeZone",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerSafeZone.md",
+          "hash": "6974f29c45f4be015cb0856a3aa866f805875a03491fe0717146ff276979159a"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainersafezone.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainersafezone.json",
+        "outputHash": "ab953e5e513b12823be3d21ea9eaa0a8beef405a65452e961b0f80e54a3358fc",
+        "bodyHash": "b92609170005fc361b6760ffa6e54107f1d22514dd129337c013202570c6829f"
+      }
+    },
+    "reference/dreamlayoutcontainerscalebox": {
+      "hash": "9142369d91f6b9da35a0fc3b488a8d64f5e98e3652117892d5190026f9a0b0ec",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainerscalebox.en.md",
+      "outputHash": "93e59eebafef258e3612004a5ae40b4a0224bcc41190e65a2341d95737b3993a",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerScaleBox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerScaleBox.md",
+          "hash": "a64297d7402697159641a20384b9796d8513770022a587f4e5a33c2f0d459f76"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainerscalebox.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainerscalebox.json",
+        "outputHash": "8878fe0fa96387d90cbbc8ac28d8dbc4c05f166c70a643a2859c0c666f372e48",
+        "bodyHash": "a72f5414ed4ead4f90b498bf7925727dea96ea86c034bdfcd4f4197606cedff8"
+      }
+    },
+    "reference/dreamlayoutcontainerscrollbox": {
+      "hash": "a8aae2f0e0facc2ab6161fe791a56d392b35cc09882f77aa33ae88af32e8a52b",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainerscrollbox.en.md",
+      "outputHash": "bfefd31934ecebb2d907e4ec1c49113b1704872f53b6d13319c7e61573be902a",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerScrollBox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerScrollBox.md",
+          "hash": "4493c3a9aaafb40c8963ffa210cc6ab76878dc9cd4eb9f19c1cd1500512db8a5"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainerscrollbox.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainerscrollbox.json",
+        "outputHash": "23acd21dd131a4c0ae2662eec38ad453b0ab4d7205fcda5eb22254a6df52503c",
+        "bodyHash": "0e126a7a05d2f42b0cc81bb35b714b71c5f98956f5d0ec6ded68de7d93695233"
+      }
+    },
+    "reference/dreamlayoutcontainersizebox": {
+      "hash": "b552afd0dbd6c286a286d28792a0fa6096d00180e4d942f7e3c2a1f062a92a06",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainersizebox.en.md",
+      "outputHash": "c87ec0ce969b45955dc81249a3146a0bba0602a2baf17964465fef8cdae6d2c8",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerSizeBox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerSizeBox.md",
+          "hash": "61e6ac18b1e21875fbe90de56190249f9f5937634f40e3f7faef056bdb757577"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainersizebox.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainersizebox.json",
+        "outputHash": "e502b172c773244c97df60f1afe6d82b2c4c92d4df3af7bbf0a0f64bd4ea2b80",
+        "bodyHash": "0e198908982c8177974fd8fc0a0d551ada842b52180132107bb0c29fc7bbf26c"
+      }
+    },
+    "reference/dreamlayoutcontainerstackbox": {
+      "hash": "6fb2a618827ac58edeb2683065f05c48c03c03ffa23176f59fca9848269f3a18",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainerstackbox.en.md",
+      "outputHash": "5ed1fe0025e625cd1d9349830b23c13878cf47264c2a365ea8f1315ca6e5a98a",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerStackBox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerStackBox.md",
+          "hash": "511683f6a032cd71150ea9a4cf4375a53c31cffffccfeefda7c5206fb9cd9e29"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainerstackbox.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainerstackbox.json",
+        "outputHash": "78e283a2e5a02bcb68d5307cc1067aa2dba3e6cadd26eb973a1820779d5065f7",
+        "bodyHash": "474eb59e6411c7f3960e1620dcab2ce8655cf46646dd6bce38dbe481563b70d5"
+      }
+    },
+    "reference/dreamlayoutcontaineruniformgridpanel": {
+      "hash": "56545df487aa7d2fb284d9ae42773a1a15badb282039ed0a1c54bc4a850a666a",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontaineruniformgridpanel.en.md",
+      "outputHash": "1d53eb21bcddcedc87e9e0311b1bac5f37ee2202caefef5e2834bdfecc3d3571",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerUniformGridPanel",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerUniformGridPanel.md",
+          "hash": "30cb69cfbf73694be7b30865f9f1b0ab653aa4cf4eb90c074066a1996ed0b7eb"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontaineruniformgridpanel.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontaineruniformgridpanel.json",
+        "outputHash": "c5149c85032234397962bd4782000998abc7fc28e6cdbf2aee695b6d629aac76",
+        "bodyHash": "3862b7b2dfcaec667a99160af9e17f97e49a7fd9c83996b27177132154bc2e93"
+      }
+    },
+    "reference/dreamlayoutcontainerverticalbox": {
+      "hash": "1a235235c426cae59f31b07ac412ea58bdd2265f2ed672c1643702e760b1331b",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainerverticalbox.en.md",
+      "outputHash": "035808da760b8656ca1ce70babb2fe0dd0534a634a4af76c1ad1d2c5be8e6574",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerVerticalBox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerVerticalBox.md",
+          "hash": "ac07bd7d09c8f11564d84ef862fd19e42d110702ed715475f5d2093f7d1f1702"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainerverticalbox.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainerverticalbox.json",
+        "outputHash": "538d1f9944edb29fc957c0d74d59523df49cb611ad252b48afedc26f0e01b4e9",
+        "bodyHash": "37766399eeb060dc24c7a1d654d7febd7aeec582c2f005dd4eaa0c5945cb6094"
+      }
+    },
+    "reference/dreamlayoutcontainerwidgetswitcher": {
+      "hash": "c7f9fdd61d59fda9b1e19cda08775b843ddc9858b88bd71068599121a82edcbf",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainerwidgetswitcher.en.md",
+      "outputHash": "b775af4a8a29464e6b3615a517af3c7c5279417c39252d9b251e01edfc8ec949",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerWidgetSwitcher",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerWidgetSwitcher.md",
+          "hash": "c8c42de8155fcd8a9579916ee85076358ceba6b2b6be89947451dc4d84cb3a9e"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainerwidgetswitcher.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainerwidgetswitcher.json",
+        "outputHash": "43874d59b13ad563211ef8f6ee6972004802bc947969fa13a18949648b08ff94",
+        "bodyHash": "9dc605b586727f6422e12cf8105185351390c8dc316f9983b4ec96f1a8096489"
+      }
+    },
+    "reference/dreamlayoutcontainerwrapbox": {
+      "hash": "a9bc6f23c7f0991d6f586746f32c80c7c45ebabb9fcd7fa42de3b37fa301bc55",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlayoutcontainerwrapbox.en.md",
+      "outputHash": "8e96b2d2202fe5411028a6ef5769c14b9dec0be3ad5989a349b2665a322d2e66",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLayoutContainerWrapBox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerWrapBox.md",
+          "hash": "e8c043966cf4da71ae712878b65171d739f1f55f2f84469e02e6c65bf00d8cb6"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlayoutcontainerwrapbox.md",
+        "record": "docs-sync/translations/reference/dreamlayoutcontainerwrapbox.json",
+        "outputHash": "cc0ecceb7ff1985f6649ee623b7bb6545ce736186a641d344dcf42b6bf53a700",
+        "bodyHash": "91449d6f66e634fbb149d5dc01865cb2255a2f3b83e59ae949083f3125410283"
+      }
+    },
+    "reference/dreamliststyle": {
+      "hash": "9bf03e05686286d451cbcb71a757b73f49a19ded5fe174e5ba9b711c32136ba8",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamliststyle.en.md",
+      "outputHash": "7d5502bcd94ece2e36b8a08aedfadc62df80c7fcf0da29d0003d2edfe0130e75",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamListStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamListStyle.md",
+          "hash": "f8b613aa552345631fe6536136f5cd49ee811b4a271b1bb28bf0a247ec5db34c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamliststyle.md",
+        "record": "docs-sync/translations/reference/dreamliststyle.json",
+        "outputHash": "788f70b9d06a33a617112f0df7d4316b8c14a594e41963e57ad3523252fd5c63",
+        "bodyHash": "d8b5960dee2444eabf1b3b4ef77ba66dd22ecb797c007fe1b76ec68f208b9266"
+      }
+    },
+    "reference/dreamlistview": {
+      "hash": "88b6dbc3386fbe9beac7a11790d93fab5624a882c8242e1bc0e26b389aa0c01d",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlistview.en.md",
+      "outputHash": "d6e029985721b6890c573e036eaebb8341e6b4e1ccb33a7fc19de0a584eb03e1",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamListView",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamListView.md",
+          "hash": "0561aa45349844891ff8a4ecce87cb9be94cbcaa792012a4fb5646e47a674e0a"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlistview.md",
+        "record": "docs-sync/translations/reference/dreamlistview.json",
+        "outputHash": "283a48c63e987fe4bfb9c22480cf6e868fb1307e85268ef23e2bd5d87077ac99",
+        "bodyHash": "e170c2c238826692fa96386f7969a98dbf2e74d8ad6869d646c5f7e7f38a2c4d"
+      }
+    },
+    "reference/dreamlistviewbase": {
+      "hash": "0654de2c4378ebb6afcaec0108bd9026a9436ddba0a246d772ff6aca38d4512d",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlistviewbase.en.md",
+      "outputHash": "e89d71b3ae01dfd4471095764b4b2c6aa80df2ebc7b6d244b7c94e941f7550df",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamListViewBase",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamListViewBase.md",
+          "hash": "00bfc59eda062d51b907ae7381e570b5316f1e0b89185c2fca90d35bffc0b43f"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlistviewbase.md",
+        "record": "docs-sync/translations/reference/dreamlistviewbase.json",
+        "outputHash": "be59cd774de8660539110bea7c525a5900178e660d58a202ddd1a8dfddfa944a",
+        "bodyHash": "ee4c351a1ab72b508c725decae33aeabeffb13d28959f212217ae0be6fcca7c5"
+      }
+    },
+    "reference/dreamlyricslibrary": {
+      "hash": "ea9bd2843f6caf45ce843f9a4c6d58d4d0ccc19b10f0e7f8566f9288bec848c8",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamlyricslibrary.en.md",
+      "outputHash": "3deff6648784f45041b13ee68834b80b13add32435cff8d9776930c7e6b4e660",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamLyricsLibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLyricsLibrary.md",
+          "hash": "577d10ad00a7b60b4f3be07834b7be254df4c7e3e5ce3fd4ad4420e3261fa73d"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamlyricslibrary.md",
+        "record": "docs-sync/translations/reference/dreamlyricslibrary.json",
+        "outputHash": "5869a966af7e92d2d8760b43add98398fa0e0aaf9de8ecba41ea71d0337c7b1a",
+        "bodyHash": "e605513b6a81142f92fc23e7aeade7ff9e6ee2e2552f4e047db23c63b20f4a42"
+      }
+    },
+    "reference/dreammenuanchor": {
+      "hash": "46c996131836bd2b5d1f7c40c47f9e61e7e90b8a10ebf5ef0707a179e70e5841",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreammenuanchor.en.md",
+      "outputHash": "06aae8f36f1fccb15ab7314fd8126ce3c4b634ba29551ee30cc838762d99b0ed",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamMenuAnchor",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamMenuAnchor.md",
+          "hash": "50b669bb7312d2e91a5c8c2562c398857539980c82a32a680593c7c7078712b2"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreammenuanchor.md",
+        "record": "docs-sync/translations/reference/dreammenuanchor.json",
+        "outputHash": "1de953871bdcc3057fc39f993daab2d9b40ab5545c3cec74c0254ccedfd145e0",
+        "bodyHash": "a1bbe9f05730361d03d92dd5e7c0c1da92b3222cf9b04899893a2315a4282c14"
+      }
+    },
+    "reference/dreammenuanchorstyle": {
+      "hash": "32615934fbc121c519329da66ce1774a37eaf75f5d68f29221fdf6bb8a0bd8df",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreammenuanchorstyle.en.md",
+      "outputHash": "ccb27c2a362aae89b3999201e0e8a1b76d124662af884807f7a7a99456cf683f",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamMenuAnchorStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamMenuAnchorStyle.md",
+          "hash": "eeab9238acfc0c1b830abe709ebd05c788674c83b7575d603599e3300528759d"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreammenuanchorstyle.md",
+        "record": "docs-sync/translations/reference/dreammenuanchorstyle.json",
+        "outputHash": "5f52d37990d4bd0a90d54fb598e4960819eccce759d6babc877c790c52fab733",
+        "bodyHash": "acf0a8b508b5e604d3a705ba6880f03f67badb2bf01863427d5a98080c50ff2d"
+      }
+    },
+    "reference/dreammultilineeditabletext": {
+      "hash": "0f56ee3b7e2ed27dbfd405484f6bb5eb53eae8bda9cd1e0df709e0b5d1ab24ef",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreammultilineeditabletext.en.md",
+      "outputHash": "6c6f4ce903d96b24b89d55fbdba91b5d65cec397506ad37db3bd5c0ab608310a",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamMultiLineEditableText",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamMultiLineEditableText.md",
+          "hash": "cb8caa1718b8defee0fe7c776154a99a0b3ace01a3120c20d5e9e4d1a047273a"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreammultilineeditabletext.md",
+        "record": "docs-sync/translations/reference/dreammultilineeditabletext.json",
+        "outputHash": "c6284730c6b6453e4f0456c4142125a4038b2f5f60f72b843842e1d7346b8c3b",
+        "bodyHash": "542610463d557fbd185a2a829c9fd7bd99b2c3122587f977a4e5dcdf1533e74a"
+      }
+    },
+    "reference/dreamnativewidgethost": {
+      "hash": "a0682992353f0cfa6ede40f42d2f38928382bd37f882ef1cbcde3e30146ad08f",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamnativewidgethost.en.md",
+      "outputHash": "c9aaeee9834fd7b3f3b4c21232a1b129e8e49f0df7d87ee729b098c8b285d899",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamNativeWidgetHost",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamNativeWidgetHost.md",
+          "hash": "ee437c8a4e8f98153aba56e8a91db9dc7c424d7639ffb3712bb276f07e754405"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamnativewidgethost.md",
+        "record": "docs-sync/translations/reference/dreamnativewidgethost.json",
+        "outputHash": "b96dfb4fcef2c466c7bfdcb65939f84f836f87e8cb49169295ab7316bbb7928d",
+        "bodyHash": "9dc2cf70354ff6d0e6ec725b78630c6895097948b79e9e917216b5c0c0833c06"
+      }
+    },
+    "reference/dreampanellayoutbase": {
+      "hash": "b549007226be6e928e49fd8e8ff5cbd8f7c1a5a698bf25c68973a6105589cd1c",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreampanellayoutbase.en.md",
+      "outputHash": "f0b24599143a6e869177f518ebb678e100018a1df53ae5f0b597e750eda4711a",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamPanelLayoutBase",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamPanelLayoutBase.md",
+          "hash": "3edef95a8d97170c8cd61ccbc141b2d4e34ccce134a1550da71da16b477980e2"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreampanellayoutbase.md",
+        "record": "docs-sync/translations/reference/dreampanellayoutbase.json",
+        "outputHash": "df822cbbe27c737b35436278db097dc86e43b2830069eaf9ca9597ba6c1d2873",
+        "bodyHash": "a9dca90dfa45bff74d61d7642587f388977dcc9b5719d158aef39fe994ac34b7"
+      }
+    },
+    "reference/dreampanelslot": {
+      "hash": "93e1b0778b9b67179321ec10874fd5f6cd57f2a1ca33a216179ffe39f0f7f9e6",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreampanelslot.en.md",
+      "outputHash": "fc4031ddff5de0925a2dc3b91d8167a47feda1c5c9d0193bcc9ad46c85e5c8a6",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamPanelSlot",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamPanelSlot.md",
+          "hash": "9fb2eee0d434cd49e002b88783cd09f9782a8a3dea1d9e0a4edbeaf1c894b836"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreampanelslot.md",
+        "record": "docs-sync/translations/reference/dreampanelslot.json",
+        "outputHash": "70cd0aa78ffd7bc7401fb413c6dba8c0c3040b311f8dec04a98cf46d5d86adf0",
+        "bodyHash": "2f56b38bd4e80b7bbffa990c50c02a5f06ab78287c6060f4f45fd636b1e86285"
+      }
+    },
+    "reference/dreamprogressbar": {
+      "hash": "7c78af06e8750bc6f7277908901b278a0e73e95facb106d03d0d793f34bf88ab",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamprogressbar.en.md",
+      "outputHash": "3d5473179cb73eda472596a4091286094ae034eca964fd13d8dd08ed4e47eb71",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamProgressBar",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamProgressBar.md",
+          "hash": "f02f32584cdbea7f423459aca469422d246cf5586aeb6a16087649c55aeacc32"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamprogressbar.md",
+        "record": "docs-sync/translations/reference/dreamprogressbar.json",
+        "outputHash": "b20efeefba94d630e0f15dd53f7536ee1f2f64c9ab60e9d59825a1ceff433932",
+        "bodyHash": "bc6e8d566e12a843c7db492036a5bf92f1e541493ce300761574e93546c3980a"
+      }
+    },
+    "reference/dreamprogressbarstyle": {
+      "hash": "24a1ada155996740bde55b535eb5aa191bd50caa4e82c79f0c14f0225112abb6",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamprogressbarstyle.en.md",
+      "outputHash": "658b6d8f3af4745e885e657b979dd2f1cabf8c62eec025476c21ae1c570295a8",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamProgressBarStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamProgressBarStyle.md",
+          "hash": "53ebf32b8a7c3cd709a2c4e3a51c1357ac3ff26e8748615ac6dfd6b8015d3bc2"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamprogressbarstyle.md",
+        "record": "docs-sync/translations/reference/dreamprogressbarstyle.json",
+        "outputHash": "fb513a33745ead890de0463acb48fbb429367e42a0a59500c36dc1ff36dd4dc8",
+        "bodyHash": "afc274b30f091603c412d991b8c953482398ad821a9ce38c97749d0e856876d3"
+      }
+    },
+    "reference/dreamradiobutton": {
+      "hash": "bbc63229d54bd704c7182e38d675f50ebd5533f68abad3bb5ef27dd5d077709e",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamradiobutton.en.md",
+      "outputHash": "e57ec34997eb024afced153a8111084b5c36e3d161307f99e59911b685b0f8d6",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamRadioButton",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRadioButton.md",
+          "hash": "798c4e6eae5802ada96da3228bf88f6904d01f6ab26fc250d3562acd6bfa8cd8"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamradiobutton.md",
+        "record": "docs-sync/translations/reference/dreamradiobutton.json",
+        "outputHash": "0c5dac3a4fbcac2baf0df1127cc4d9515ef95416f8fd4f8d69ea8852e2792652",
+        "bodyHash": "546f17c4a8ef0e2b67c8433caac9480c137c1aca3f59bdabc1a8153b4d67b4d8"
+      }
+    },
+    "reference/dreamradiobuttonstyle": {
+      "hash": "2690daaeb56225c53fc0dca23e0f89be6772393cf31fb3ead71e3255f0c29fb1",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamradiobuttonstyle.en.md",
+      "outputHash": "2f5f83d0208ed6ae09f14439e0e1dcf6a1f7016c166ee30f5140231175f3cb03",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamRadioButtonStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRadioButtonStyle.md",
+          "hash": "22aed1123b87c9462a2d507ecfe95179c7ea66d6a3630b1320cc96c0d032e938"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamradiobuttonstyle.md",
+        "record": "docs-sync/translations/reference/dreamradiobuttonstyle.json",
+        "outputHash": "74c0beea5615a06cfdba641a68a068d86f1dc76c8ee87ad38fc4e7699b6a30ff",
+        "bodyHash": "6c990f5bf4e4c2c93c1b17160b365f7d87f6d96ac48be86ccdb73d229fc88b53"
+      }
+    },
+    "reference/dreamrichtextblock": {
+      "hash": "8299f05474b095a380a14fbef088de616bda59af3f6106850aab20f080728395",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamrichtextblock.en.md",
+      "outputHash": "95c12c45cfc44e4e1203b59529b44e6d0824d45f2ec297875a75fc3284324dbf",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamRichTextBlock",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRichTextBlock.md",
+          "hash": "b221290fbb0590c367624726fde8358e4c5dc8264aff3c16e17a345481828473"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamrichtextblock.md",
+        "record": "docs-sync/translations/reference/dreamrichtextblock.json",
+        "outputHash": "0785e590ae0c5243b8c93296f76c82e8eaf35c88c8fd282de6a1e1dd931eb029",
+        "bodyHash": "b5a3dc289608956a54253eb2c7cd23021ff4cc9b5ea965ec4f4d2a75deeb9f02"
+      }
+    },
+    "reference/dreamrichtextstyle": {
+      "hash": "c2a66f6d7091b058dd9dc944d7cde6b3c490d145f95017a9e4fe7b0bdec3bf2f",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamrichtextstyle.en.md",
+      "outputHash": "93ee8806c8642ea78e529a78108fbeae0b2de124d65c66e4f18816224fbbfa52",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamRichTextStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRichTextStyle.md",
+          "hash": "e7f127687c5f58543b638186e284c9021deaabdb2beaf33c192ef450a785e436"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamrichtextstyle.md",
+        "record": "docs-sync/translations/reference/dreamrichtextstyle.json",
+        "outputHash": "cf4838987260f0994d54938fc44fb43bde70ea07b5cb7ab5d2fd30e2bbec927d",
+        "bodyHash": "5cf90e1f58f19c13453daa655a0cd40a3015fcb0782fd2fd7c95af79a2f0e00d"
+      }
+    },
+    "reference/dreamringmenu": {
+      "hash": "33e9c5198e50c5fe81e80bc23f5fbb2cc95ae4028c9c98f84b518e657a6f4d79",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamringmenu.en.md",
+      "outputHash": "32feab7390980b05c5e83f1e50a791f9082a3b8b72d6c43e0b0c99944e5ae0cf",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamRingMenu",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRingMenu.md",
+          "hash": "72557bdcdbd7e66331613e11f4762ab6240fccbdcaa86e8bfa3a1a67cfabf3eb"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamringmenu.md",
+        "record": "docs-sync/translations/reference/dreamringmenu.json",
+        "outputHash": "6a7170bb4b0eaeb2b8ec0e16f4eca4ccd6b0afabdc0408c5c805804f429b8a34",
+        "bodyHash": "97185a642ab9df0cdb20ec8d593711997da7af61fd156aa7237225e374403dc7"
+      }
+    },
+    "reference/dreamringmenustyle": {
+      "hash": "e09e95a382028416a59361d579a142fcf348eafa98a6afe77c9a2be225eeb9fe",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamringmenustyle.en.md",
+      "outputHash": "ebec3f519e9bdee2bff43c4c1f0a2d224c2e8ed94db29df6c43a9be757423a25",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamRingMenuStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRingMenuStyle.md",
+          "hash": "8aa276670d832731c4b371e425a7180df18fc51de62f3349d262dcd3371fee9e"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamringmenustyle.md",
+        "record": "docs-sync/translations/reference/dreamringmenustyle.json",
+        "outputHash": "d28c18b5012004cb64bac4c5fe7a90314c193c9dbf0a51e68bb9088897824527",
+        "bodyHash": "134f9953c043e8b91b60620ba114077e2bad4ac3707b67df17163e8faec16f88"
+      }
+    },
+    "reference/dreamscrollbar": {
+      "hash": "4d95e741a6fba196eb33a588791c6dd1b3c8ca53894bc1f8ecdd5c6a4063944e",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamscrollbar.en.md",
+      "outputHash": "b14909d56787dfef33b6ce187d29631c4ea6f95704352c94c19e94a2ec3ac316",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamScrollBar",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamScrollBar.md",
+          "hash": "9139b2aef29d9035ead4384082c248feeaffa8dc25582c3388ed15e412fe148a"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamscrollbar.md",
+        "record": "docs-sync/translations/reference/dreamscrollbar.json",
+        "outputHash": "d17bbfb094f6444238a9f42f813677f23c954837e65041d5b3581ee9abcc6220",
+        "bodyHash": "c4e73fa0e4202d51fc200da439bbb33034a99da4a6be917038abc39a3d061fc3"
+      }
+    },
+    "reference/dreamscrollbarstyle": {
+      "hash": "fa98968462335c36442829471880ef9787adedd25f18f7e41d6d30a54c9501e9",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamscrollbarstyle.en.md",
+      "outputHash": "cecee618606495e0fd672fd589292f70e220df70d4445d7f0e522ac506c39e87",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamScrollBarStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamScrollBarStyle.md",
+          "hash": "31428d1796b028a347d028c7ba344b3e8a13804d93bdf4d3b165ba16b0d0cb79"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamscrollbarstyle.md",
+        "record": "docs-sync/translations/reference/dreamscrollbarstyle.json",
+        "outputHash": "84cd803f83ec5850d79ce3cdba24bb27e6cf4194c0779c9527296bb869dde43b",
+        "bodyHash": "f3f6ac7bcb626199d4c48f9b7f88daf86d7ecf4bfa9e34c76a6ebf87259c5782"
+      }
+    },
+    "reference/dreamscrollbox": {
+      "hash": "5764e71095f070d97e12cb7206ca8a5f5dc88999d935166cf21c2b4d388287c3",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamscrollbox.en.md",
+      "outputHash": "b4ca6fb6ebb6f77b9e34bbb51111809504f03d2dac45d549095afeba39008b4d",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamScrollBox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamScrollBox.md",
+          "hash": "473b21ac44a5a3a022498e0cb9ce6028e2671146a9fbbb343ea88eca365520e6"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamscrollbox.md",
+        "record": "docs-sync/translations/reference/dreamscrollbox.json",
+        "outputHash": "944cd367cffdc450dc19578314b0539f5b583d0a4ab4d8f0ef152a63c4a28dcc",
+        "bodyHash": "a717ce332c46e68ad22f39fe0eef65a4b5b4a551e312a6923e520b302c1a2a7e"
+      }
+    },
+    "reference/dreamscrollboxstyle": {
+      "hash": "c4661a8f0d37ab575d53cae0ad82cba587e76fe2e54465d26120025780695a86",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamscrollboxstyle.en.md",
+      "outputHash": "aa4fadeded49b06299c35d9296d5e652da7dff3c07fd3945f1fb74faf6c433ec",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamScrollBoxStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamScrollBoxStyle.md",
+          "hash": "fc980c61051b30b5bd746049bdd6aa0f95bf2cb2db45913509d5c7f386e9d617"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamscrollboxstyle.md",
+        "record": "docs-sync/translations/reference/dreamscrollboxstyle.json",
+        "outputHash": "e1838851d05427ee6f1f37421879e0838818de984685f8e54c8e12beff962b55",
+        "bodyHash": "c4a48bebc7d17013b877b0d9e164793ba666ed7733b9229a851ab97a393cd249"
+      }
+    },
+    "reference/dreamslider": {
+      "hash": "8308c360b2676656b4ac80d596989007d748928704d52e2f4c0bae04e8837c2b",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamslider.en.md",
+      "outputHash": "41341d707249507e8f0435fcb3e9df5860418f66adc44092e0fc194178e6494d",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamSlider",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamSlider.md",
+          "hash": "ca7fc6f77626b01ce8823a40fa9aa20b6a15dae18dfdcf4b04bbea22854c0050"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamslider.md",
+        "record": "docs-sync/translations/reference/dreamslider.json",
+        "outputHash": "ae1270bcd392a670469c23cc101d4c651e6e74e6ba92aedf63e708be8c896993",
+        "bodyHash": "85679bb0cb04379080f9cce56cb33f5eee867a460eef23f8e37158e402ac473d"
+      }
+    },
+    "reference/dreamsliderstyle": {
+      "hash": "e75f3d22595ea826ae26e7a5796b917fcef538354fad30a22ccadde4bbbe5eeb",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamsliderstyle.en.md",
+      "outputHash": "acb4740a37668fac9086dbfd06a99ae95d429f8a9b67ae990f2050380486c1fd",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamSliderStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamSliderStyle.md",
+          "hash": "d1678a73bf174769903a5701487be8f34bce3a668472ce6434a25ce46ac65a38"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamsliderstyle.md",
+        "record": "docs-sync/translations/reference/dreamsliderstyle.json",
+        "outputHash": "a47a905658a5b1d62ce8714b75035d5c6b6e74f7c2910c75ce8cfa1ef62fbe0e",
+        "bodyHash": "2ac6f827fae99e79d42f145462b89477c2809caffc9a039e169410ccef9f5ec9"
+      }
+    },
+    "reference/dreamspinbox": {
+      "hash": "3fdf16be07076fa533c839b805e2d63311992b3139f797255713a74a1a9e214d",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamspinbox.en.md",
+      "outputHash": "0af54fb05baf4d8a90348d4fb15bc548102a4cff691277b50ed51326a0ba6d96",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamSpinBox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamSpinBox.md",
+          "hash": "28db7bffc9a69e8c6ce287b3b92afa8f4f670bfc1185fd8701f5fd746b9a5cb8"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamspinbox.md",
+        "record": "docs-sync/translations/reference/dreamspinbox.json",
+        "outputHash": "186902187ca90eb975713c846950b2dbd42b442667a8a1ca161b25568f50009f",
+        "bodyHash": "931232d8f1908e4f45d485c5d912e4e75f3d2e237095cd821d815e037abbd086"
+      }
+    },
+    "reference/dreamspinboxstyle": {
+      "hash": "6c6124e922501f659aa5f09dad54df785098a52f1a695e07a1d3fbae1cbcdfbf",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamspinboxstyle.en.md",
+      "outputHash": "2325d82cd54e5f80a3e6b91324ff9334d8df9bf7395846053d87a11f8a57ce8e",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamSpinBoxStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamSpinBoxStyle.md",
+          "hash": "2eb208338121fbd3473cf058dd21d26d427de6d90bc49602517636afea5349da"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamspinboxstyle.md",
+        "record": "docs-sync/translations/reference/dreamspinboxstyle.json",
+        "outputHash": "9e626154498cd3f0a424339815f3a43215c487af69438930d7b8336e6083b778",
+        "bodyHash": "07e29640e0f213ce82c1dea6ac0ac8e9a19fed651ecb7ba15f5da0fbb27ff798"
+      }
+    },
+    "reference/dreamtabview": {
+      "hash": "ca3286ddc5dcbdf7a4e247aec31f96afc9dd2e4c594383b2804a6534847fef1f",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtabview.en.md",
+      "outputHash": "9ab6bd3d63b2ffd86ae78dddb056ebe429caa76c575f4b0291c01ac0b1ba26c9",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamTabView",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTabView.md",
+          "hash": "3729cae7e17b2b571e6a20acc9b0dfc2272608c3144871ee0d7af2c06a3a268f"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtabview.md",
+        "record": "docs-sync/translations/reference/dreamtabview.json",
+        "outputHash": "8f9b13e9dd27c0bdd33f9bf5267137deea28bdd40a958a539ace78f281ba224d",
+        "bodyHash": "7100a02506d143f5de876888b92c5b5093e9cc08f208831955ad82e93e122ec7"
+      }
+    },
+    "reference/dreamtabviewstyle": {
+      "hash": "f0177d5a05c2e201a7f7344922779b744131e81bffb47b470ff3c42b2e92748e",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtabviewstyle.en.md",
+      "outputHash": "872e09cf7ecee877ae312c98236dae2b50d07483f2b7f6ee0bbbf9032a5f6a5f",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamTabViewStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTabViewStyle.md",
+          "hash": "11f9e8bc8211be01c222d6a7709e84883fecabf4103e5fc9b97de9cbc59a05ae"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtabviewstyle.md",
+        "record": "docs-sync/translations/reference/dreamtabviewstyle.json",
+        "outputHash": "aa1fef66e4b0cf50228a7622be9cc4f5738d4d06da63f2c1559ca392e22a18a1",
+        "bodyHash": "d18c86f1d2837ce5351c30927fc0ae3442732664c16dc781a81bd71c5225fe03"
+      }
+    },
+    "reference/dreamtextinput": {
+      "hash": "d486888545115bff42c8d47d4c692360de308f1a60f6a0af75fb44ea0ffc7ca2",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtextinput.en.md",
+      "outputHash": "fd6a795d61b064effbef4b1eef188601fdfe10521535821bfc238da921ed51aa",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamTextInput",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTextInput.md",
+          "hash": "6fc7c8ef67bafa44926a6ffd328e021006a75b4fd92a4f2f7ee40b206e07810d"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtextinput.md",
+        "record": "docs-sync/translations/reference/dreamtextinput.json",
+        "outputHash": "aa549f0d8c9c811f35b12d4784640559e6a31891a4b7fc562700d5a7439f6dcf",
+        "bodyHash": "45404bc0cec927af65b9f3c93887f09a06e96ae93264e033577f65c4efd070cb"
+      }
+    },
+    "reference/dreamtextinputstyle": {
+      "hash": "2d45b469285e838b9ee0f1b189dd15c78303433eedd90d71308c51eaf20387bb",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtextinputstyle.en.md",
+      "outputHash": "f2ee1ea02810a45d43b8a1c90b0aedf156ab8ccd5e71483d949a8a761c10347d",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamTextInputStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTextInputStyle.md",
+          "hash": "3c5626a9164c6dcac06ce936f3c3cdcf3454abb810f1fb62f2893f53d82fa5ed"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtextinputstyle.md",
+        "record": "docs-sync/translations/reference/dreamtextinputstyle.json",
+        "outputHash": "a7d9745a2d4c53379d0f749ec034cbde8b98723d971fe4d8becda889acc54461",
+        "bodyHash": "f9092b461ac16750444f10f2e48f2cd36a8b303ae756d7ca888f68416eddeaeb"
+      }
+    },
+    "reference/dreamtextpaintlibrary": {
+      "hash": "740669a4961f42df7cd57adcd3d829340d94105c6962010566192bd35ec446c9",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtextpaintlibrary.en.md",
+      "outputHash": "69b37a7977459b230222d2bfa247a232139790af15f6d001635da2294e0ddcc6",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamTextPaintLibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTextPaintLibrary.md",
+          "hash": "a114e40fd4932572522b162ad5e2a8614c28bb2d21a93f31f11ad12b658e3dc0"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtextpaintlibrary.md",
+        "record": "docs-sync/translations/reference/dreamtextpaintlibrary.json",
+        "outputHash": "3ff5f143710ce2253ae55448777212c700cb40472c0e8ede78a306b2e1e8ee56",
+        "bodyHash": "7caa13971d800c60b034a0880d62a17ee533ed83e801fb60f78bd6c7fad9efb5"
+      }
+    },
+    "reference/dreamtextstyle": {
+      "hash": "35a36a357dc7bbf81a7dd40839a60861ec63b1b3390f99e1a4ea88c3581058ae",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtextstyle.en.md",
+      "outputHash": "40ade8a0cf051d863876250f8e669ea1b7f3a960e3faa330cf69c1e3ff567790",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamTextStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTextStyle.md",
+          "hash": "3af4492aee10eaa12e0a2cebac56f8396172f1cf2b539950bd0eca26e56e3762"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtextstyle.md",
+        "record": "docs-sync/translations/reference/dreamtextstyle.json",
+        "outputHash": "42dfeef42c5a0bb0b67541e30a05f65656cea359bd48cf3428f31c638dd7cfa5",
+        "bodyHash": "83dc4584c58d7ea0d4279117ab801113bbe04aedd8cf4f037a23e9f2d2b94d83"
+      }
+    },
+    "reference/dreamthrobber": {
+      "hash": "e0420acdd68204ef66853250bba415d70f7aa5de3ea1f4dcad1509bdf48839d7",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamthrobber.en.md",
+      "outputHash": "bdd5984e7183f7a5b86da3b64bd4b821ebd3890be283e7f2d95b7f4728503ab3",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamThrobber",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamThrobber.md",
+          "hash": "7a9a1baf2e84b57ad9350730bfebf6d5042b8725bddbc00b0dde97cb192de5ad"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamthrobber.md",
+        "record": "docs-sync/translations/reference/dreamthrobber.json",
+        "outputHash": "715cca577f0235f0e25c201620d41a4a5543abf487b52b1ece918cd9cb7b2475",
+        "bodyHash": "419702e16da15588955abc45b89a2b39d23137506fd7e9e3d4cce9bb2e8e72b9"
+      }
+    },
+    "reference/dreamthrobberstyle": {
+      "hash": "566a8dd9e72c0749ebb23ec14c27067fc0db1d132163b7221f21392239024f20",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamthrobberstyle.en.md",
+      "outputHash": "d9084b79d477e3e36e06de4f39f1ade272d524f185f02802f434aadae1b4ec5f",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamThrobberStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamThrobberStyle.md",
+          "hash": "ab1449a80f3b41d4aab5396340e1017c8e2131d4a3874270a211a0c23d2be25c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamthrobberstyle.md",
+        "record": "docs-sync/translations/reference/dreamthrobberstyle.json",
+        "outputHash": "cd01a90997e520cdb83fc05c7dc209f99a46e283fb97b730e02b8ba6240523f3",
+        "bodyHash": "c7983197b01feff183dad13c5f9237260653bfb4d56c6742d2af46c8aca917f7"
+      }
+    },
+    "reference/dreamtileview": {
+      "hash": "01e771e57f685868b3cc1e5f92604684e995f2a726ff3197f95f417664fffcfc",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtileview.en.md",
+      "outputHash": "ede45c40720fbc561ca0116fb5e5ea753f9736209da1de83e893309dd2f5a6a5",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamTileView",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTileView.md",
+          "hash": "abd6d8002be8279b13f934037067d7fd53adea85bd85069b6feb8f4711089149"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtileview.md",
+        "record": "docs-sync/translations/reference/dreamtileview.json",
+        "outputHash": "9f3db30903bdb4a05d994dca6326c7c890c9b649489631624268ff7be5a12b54",
+        "bodyHash": "c1ebafecda3d25792917ab2ee4ee774b982304429fc1113e4938d113ad90b88a"
+      }
+    },
+    "reference/dreamtileviewstyle": {
+      "hash": "be011b4fa3dc059860b9eaec83bdc0a92fe9dd96a4f56cc8c1adb4ccfd6d9900",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtileviewstyle.en.md",
+      "outputHash": "91b003e20e97bb8c4622cdfe5faf51de28ea611372a642470877799c8255e0b8",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamTileViewStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTileViewStyle.md",
+          "hash": "4c0cd4b6863bdfefe1a02331ca3a5722256ee7cee8fa214a11b12f8ffaba3d12"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtileviewstyle.md",
+        "record": "docs-sync/translations/reference/dreamtileviewstyle.json",
+        "outputHash": "8acd7286e8832d0e658c84f59d9d0b750e6710b62879f5572ed46e66fbfe5fff",
+        "bodyHash": "0bb0ea4f140ab08866e38e68f91b575fed13b03f9b0a6f984334263d4f5a4260"
+      }
+    },
+    "reference/dreamtoggle": {
+      "hash": "7920eed72765fe3aab38df182425a37151396108b35570de0e1f7dedad0459af",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtoggle.en.md",
+      "outputHash": "0830ceedd3baf53e4efd74a68353a51dd54de6d062bd6be0f65d8854388148f2",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamToggle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamToggle.md",
+          "hash": "9b4c67e7e229f3587c8591b786b399f2369144d7fcc6aa29ce39dfc936476e6f"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtoggle.md",
+        "record": "docs-sync/translations/reference/dreamtoggle.json",
+        "outputHash": "6121467c57d963f767e5f5c6586ea1d8c041e4439ccd767232924c98dd0f5fb9",
+        "bodyHash": "0e79fbe975b3f49bad2a995a821948383fb6e6dbd4000519f73160f52fcc5768"
+      }
+    },
+    "reference/dreamtogglestyle": {
+      "hash": "1c228cbd73d168f6fa7b284fb37160730a3a368c82540925fe9dfe2285ea8f2e",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtogglestyle.en.md",
+      "outputHash": "9564a8c9758f5e88d51f2bde4e8c525146b77e2aa1cbb342eb4cb9865f298f47",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamToggleStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamToggleStyle.md",
+          "hash": "f2480f7b646985b398f23463ea5a440d71395056d10c277085237e0958b5fbb8"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtogglestyle.md",
+        "record": "docs-sync/translations/reference/dreamtogglestyle.json",
+        "outputHash": "6b15362b3979f52adf2a06d05509a0095da668ba399bf97085f25cc30929f567",
+        "bodyHash": "4206adb412b49f67d17874717ec7725031f572a536b32e0a3fbf0158fba74f9a"
+      }
+    },
+    "reference/dreamtreeview": {
+      "hash": "b1c10bd3d66b92746744bd49e71fa91bb7421f288a4b570ab658b969fb3801c4",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtreeview.en.md",
+      "outputHash": "ad9a4fc7c2e28573f10a6d985438141b589368ef97028a66d61f7ca22e135b01",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamTreeView",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTreeView.md",
+          "hash": "a2e1ce32bcf07d6441e560a139526b9ff8523dadc22a8f1c08c84a3643667dad"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtreeview.md",
+        "record": "docs-sync/translations/reference/dreamtreeview.json",
+        "outputHash": "bbac4193069e42e64291650b3be16a1b75a8aa06d24228fa6dabad552d4eea6c",
+        "bodyHash": "ff82b968a8703f8f0dfa0e95b2e1e56e4729d05a4e71541333fc9ef6a02d973f"
+      }
+    },
+    "reference/dreamtreeviewstyle": {
+      "hash": "b75aac78ef17bbfb00bcc6470ae020b4559849a0f717477b242d2e27e723d956",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamtreeviewstyle.en.md",
+      "outputHash": "bec07a46cb163fb0c24896e3cefd413235bc7aee8eed9472dafee7c5a03ead9b",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamTreeViewStyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTreeViewStyle.md",
+          "hash": "75438fbb783bb21c0e6e0cbddb67ad3fd537a77de838e5e19f54abe911c0c34e"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamtreeviewstyle.md",
+        "record": "docs-sync/translations/reference/dreamtreeviewstyle.json",
+        "outputHash": "d5eb2eac412f50d283c9bbaafc051e10dfad0c26b9b25e4adb01b9cbb462c6d4",
+        "bodyHash": "d502b1f92ac7def97f724fa885dd1c17114a72b8c35a68539e96f79e6eb16af3"
+      }
+    },
+    "reference/dreamuianimationlibrary": {
+      "hash": "8b6a1fb5d847614eee69f18fa5e64802bc258bba5faaa9a8b9bd2e45a7259e0a",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuianimationlibrary.en.md",
+      "outputHash": "c1716c2b46bbe1176943dbf266c5f52a2fee380d3a9edf938a5c910b893c8101",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamUIAnimationLibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIAnimationLibrary.md",
+          "hash": "9fb8b7bf4db05277a61b5b8f76a3e3a547ecf5a9132820a0e3633fdfabdd6188"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuianimationlibrary.md",
+        "record": "docs-sync/translations/reference/dreamuianimationlibrary.json",
+        "outputHash": "3f3bcc010d2ef4105c265c84f46428e7797818c6bf20d433a72202bc9f4a7184",
+        "bodyHash": "53b55d102dd62789c68c1db6551e2e32885a8163eca2536529b3971d21399b47"
+      }
+    },
+    "reference/dreamuibplibrary": {
+      "hash": "c452ce1616ab7cd9bcf5aaa3683d20679920f8cacd9279079e5b0547b974d616",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuibplibrary.en.md",
+      "outputHash": "443b556cfff34d099ccade2654fafe22638cb8134d5383cac8d9ddb097ef640d",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamUIBPLibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIBPLibrary.md",
+          "hash": "e7ac03f1661cb230f34631db7bbd371b956876b5d0316185fa100f2c35a3de08"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuibplibrary.md",
+        "record": "docs-sync/translations/reference/dreamuibplibrary.json",
+        "outputHash": "2c374c99bcd6ab04434e2dcaa03b5b8a9a8432d3bdb9d24b0c53aa97275480f5",
+        "bodyHash": "125e1993df70101ec7eb29f736c967702d6da6328f32aa207c43ad9f9b6b8b80"
+      }
+    },
+    "reference/dreamuicapturelibrary": {
+      "hash": "b3e56a69c3ee73017dc2fab631701880b89b9b726ff8c0f9e851a71a8112c5f2",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuicapturelibrary.en.md",
+      "outputHash": "6ec682e621a8e90bd418f22f4e6fbccc9af6d168cca12ef889907dc80a4bf17f",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamUICaptureLibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUICaptureLibrary.md",
+          "hash": "ab95363be445981afbf1487a46a4213ab90db04ea5dc677109fe2efe0715e685"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuicapturelibrary.md",
+        "record": "docs-sync/translations/reference/dreamuicapturelibrary.json",
+        "outputHash": "8d431dc563288e94daa6dd4509e33513efcc74b0946ff7db39c7a20ff1012f89",
+        "bodyHash": "0b6d742933f726960b21ec43f97d20fdbdd9d0025e6921df4136e6fd2b13639a"
+      }
+    },
+    "reference/dreamuicontrol": {
+      "hash": "607e67cd4762b13178894cedb983c68e0c68dda1d54307f36333b68c4337f290",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuicontrol.en.md",
+      "outputHash": "a3514f0ff837cd0ef6559e5859f5ac378aadc9d2029f8a33a59060756a653229",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamUIControl",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIControl.md",
+          "hash": "97eeff036041af00cf55375d7ae5a7da2d5cf8f649caf42554b555200008981f"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuicontrol.md",
+        "record": "docs-sync/translations/reference/dreamuicontrol.json",
+        "outputHash": "fc5a866c935fdfadeb94d78d3b6867b5869fa68a61abd95e2baa314d1b30fb60",
+        "bodyHash": "ed2a823f944905f3c40eb9bc42c57edcf7f7aa880d79c051f83b9cc170bb49ec"
+      }
+    },
+    "reference/dreamuifacebrush": {
+      "hash": "a29159120e412f128ff49942141348ec4b0c3a09cacb43772613e8baae49fb38",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuifacebrush.en.md",
+      "outputHash": "86e8dd319012d508703341fc220027d177d88374961e71bbe0651e707e1a0e39",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamUIFaceBrush",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIFaceBrush.md",
+          "hash": "e911a092616bbae891bd3d249c0c8ae70a1133c6d18f110b4541d388fae49af5"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuifacebrush.md",
+        "record": "docs-sync/translations/reference/dreamuifacebrush.json",
+        "outputHash": "dc944f1e7f403e0d1e3e0fc1d17883e5ffb3ded75c31bfd538691e594bdb28e7",
+        "bodyHash": "27371e284e38f0c03be7b4be060f4445d38f412507759171c79f47fe57fb0a12"
+      }
+    },
+    "reference/dreamuiimagebrush": {
+      "hash": "51c1bb475a3f0f3d7cd42956d7d01d20d2c18411e70c89b2acd686917d1f1507",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuiimagebrush.en.md",
+      "outputHash": "75999f87b7fb8a37bf396fe70ba4c6954c87a150a2480ec7f7cbfdbfce35f5b3",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamUIImageBrush",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIImageBrush.md",
+          "hash": "8a4c8e1dcdb4ba83d713f7639b339235748da45af5a6176de9ca171cee633dfa"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuiimagebrush.md",
+        "record": "docs-sync/translations/reference/dreamuiimagebrush.json",
+        "outputHash": "b5771a48f0f7134c36f4f472ebe34a2b3cf40d693c9a1b5213f4775a2a9e07bb",
+        "bodyHash": "6c5a088c6a4f572293ac25703061daf8ce1bf126e5868c4985b99d573454b6d7"
+      }
+    },
+    "reference/dreamuiinputmodelibrary": {
+      "hash": "fadbc5cbb57baaa22d6c4feb9b56eba6b913901b8de58b05b443104620cc2502",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuiinputmodelibrary.en.md",
+      "outputHash": "ae38fd611c4551137f376b0a4d2f3867f94effd5033caa3f8ff3a8fcbd31cfb1",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamUIInputModeLibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIInputModeLibrary.md",
+          "hash": "a3438591940b5ada4e93e6c0dbbdbd7bed3a61130e6f90e9eab34bf606243e0c"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuiinputmodelibrary.md",
+        "record": "docs-sync/translations/reference/dreamuiinputmodelibrary.json",
+        "outputHash": "a076bd689b9392ad86de3bac745442b4971dcca230e546c399467212cb043712",
+        "bodyHash": "beee047d1c99de2fec0ec50150a1914ed7632f45aacca023b687594bfe8d6ab9"
+      }
+    },
+    "reference/dreamuilayoutlibrary": {
+      "hash": "2ab99e8ebad0831da2fba3cafc89085a5a561e998306a4ec5f9b9ac92f071ca3",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuilayoutlibrary.en.md",
+      "outputHash": "6ac30cc4d478279287339e383354020bc9a99274cbd8222095c90cdfb2f9a437",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamUILayoutLibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUILayoutLibrary.md",
+          "hash": "f6101dea76d9c35d11e66fdbe5c593aefcb60d34450ccf8a88e8eaf38bac0ec6"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuilayoutlibrary.md",
+        "record": "docs-sync/translations/reference/dreamuilayoutlibrary.json",
+        "outputHash": "9ccdff96cfb05ce4a86237d501b5e3f592779ccfb4dd1c086acc157fccf11e09",
+        "bodyHash": "c78708895f36e8f742506ad5c52aaa07e7ff8fa2df78b30e39b6d4dcc317639e"
+      }
+    },
+    "reference/dreamuistatefaces": {
+      "hash": "291c33a1f1336fd051855e86c4bd05294da6b2501e1f8fca2f3ef21baa28a4cc",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuistatefaces.en.md",
+      "outputHash": "dfc233eabf36565c606886522bc1347adbf39826a6eb38395df2343165ff2e85",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamUIStateFaces",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIStateFaces.md",
+          "hash": "dbbe8f1f4c4bedcfb81226258bacfe85b5b71f96245943c9a37182645e9f30de"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuistatefaces.md",
+        "record": "docs-sync/translations/reference/dreamuistatefaces.json",
+        "outputHash": "42e2e810f697a9daf5e1332c0805c3c9874856aef49033b7f374c9a06798f850",
+        "bodyHash": "d57634ca8fdb1b2d2d5d464f5b8ffcdffba8d0d2783e36f334842fb1bca5e3c3"
+      }
+    },
+    "reference/dreamuiwidgetgeometry": {
+      "hash": "db9c9c968462a030e05c427b70c255a8f2e181f1a66ccc787ee1ec442e6cb670",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuiwidgetgeometry.en.md",
+      "outputHash": "49be99a88ea7bcee7449aad1370a284809b368a71de960b405b0abe87d71d3d1",
+      "locale": "en",
+      "format": "md",
+      "title": "FDreamUIWidgetGeometry",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIWidgetGeometry.md",
+          "hash": "4327cb46d87fc9b9c37c74cf28c08cbb2195ecad8581979becc3c82a4f23a537"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuiwidgetgeometry.md",
+        "record": "docs-sync/translations/reference/dreamuiwidgetgeometry.json",
+        "outputHash": "69471bdf90ea38ec93a718993c5ae71c544aa0b59ecaac0ef89827d06b2ef4b0",
+        "bodyHash": "f9c25310bde795caa02b33b54d798b4455f76e1ed39faba7a4df5625a29fe0e2"
+      }
+    },
+    "reference/dreamuiwidgetgeometrylibrary": {
+      "hash": "5209452a3e8492fbf675637d69c284b3c6ff564dfcafefb2938c56b1816d7d08",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuiwidgetgeometrylibrary.en.md",
+      "outputHash": "1c6197659edb4e7bacde0ee5c18dc265894953f9d0d7990ae5f31c95999fbd8e",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamUIWidgetGeometryLibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIWidgetGeometryLibrary.md",
+          "hash": "495ad16cd6da7695e3cfd5d8eff411774b6bff5155df41dca558ec04ccb9d298"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuiwidgetgeometrylibrary.md",
+        "record": "docs-sync/translations/reference/dreamuiwidgetgeometrylibrary.json",
+        "outputHash": "9ba727548b233e0c75190eec35d45fea9e850c268f7dc21ee281c1cbf2cc6bda",
+        "bodyHash": "e377227683014ba184b08e6e605d22645b35bc9910dc28c337d88cec6732ffaf"
+      }
+    },
+    "reference/dreamuiwidgetlibrary": {
+      "hash": "2fb0a57481dd1f380228f1829ce33d5577fb2dd680e82afa77470096fa88002c",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuiwidgetlibrary.en.md",
+      "outputHash": "7278405b0bdea7c4dfb36888484da3979cbe17a7242ba5cb36ed5a1bc2313407",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamUIWidgetLibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIWidgetLibrary.md",
+          "hash": "9aaad25bb6462e6789e3e6ec17cd77d19bd46fd4752204113bd52ef332f1f1e0"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuiwidgetlibrary.md",
+        "record": "docs-sync/translations/reference/dreamuiwidgetlibrary.json",
+        "outputHash": "3457aac50f75de233a7011624dd524028a755df6cc32b404da9b1610440e49fd",
+        "bodyHash": "86a32084962b73549d92b0e6b0123efc6948ba70e63185b4d1a086d289f50e74"
+      }
+    },
+    "reference/dreamuserwidget": {
+      "hash": "239e52d02e000683e1e5ab0bce5870c2d232ec6ef8b24b5e3f36dec8edd22331",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamuserwidget.en.md",
+      "outputHash": "6839eb21732a66a35e955f4b8af45581002ab3ec3361d646dbc7fe34f62329a4",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamUserWidget",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUserWidget.md",
+          "hash": "3dbeb744cc9aa2c7f9d33f4ed2f6face2c465b4e71da66481984e7802bd3ea5f"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamuserwidget.md",
+        "record": "docs-sync/translations/reference/dreamuserwidget.json",
+        "outputHash": "ef4856ded44807d6cb346ee4bfb787624761a3a3048fce85cc3517029d1e225d",
+        "bodyHash": "b2c91cbc193d2ed0196c2c465cf3a844b77d676225deb55918f3e3557b853801"
+      }
+    },
+    "reference/dreamwidget": {
+      "hash": "d25c321261f42f252716471115fec1f47ff0a5c431c817ffcee920cf0f67d079",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/dreamwidget.en.md",
+      "outputHash": "e86e186350c42f31ab7c61ad12b5e403ff901da097dad136ffecdeb0463cfd2a",
+      "locale": "en",
+      "format": "md",
+      "title": "UDreamWidget",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamWidget.md",
+          "hash": "a4f38b0101904c419a5657564d263417b6d50eac63ec294416a41478d83b63a3"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/dreamwidget.md",
+        "record": "docs-sync/translations/reference/dreamwidget.json",
+        "outputHash": "07fdc8aab7e38e1e57783a201ba2596ad1a7bada7182181893e2f033405b042f",
+        "bodyHash": "43dad5b5977a784f0d2823d992a5600f55a60071901eb912c7cd68f05f10b2cf"
+      }
+    },
+    "reference/index": {
+      "hash": "0b980a4e41f6002376966aa7c2d594b256d97baad25a1c9c2e11d203c8a176a0",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/reference/index.en.md",
+      "outputHash": "0543e610446c7ca5c2607afcb4afc0923db869797fb8a13a394ee8e2be3afb40",
+      "locale": "en",
+      "format": "md",
+      "title": "Class reference",
+      "sources": [
+        {
+          "path": "Docs/Reference/index.md",
+          "hash": "bf390c95b4a36824eb07c0b64f7630a960b21582510f1401b6b98763c4be3d3d"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/reference/index.md",
+        "record": "docs-sync/translations/reference/index.json",
+        "outputHash": "f10912fa79a7027cca04bdb57d275ca82932f181f80605b22a36039ae5dd70c2",
+        "bodyHash": "5d717a0fcddb09e85f902e3d1d566bdf41a4699081744e9b0429e618b1e4b2be"
+      }
+    },
+    "start/about": {
+      "hash": "bda3385ed590b230a9ebcf9c354a021c29d55b97c02f8344eb341ec20bc2b235",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/start/about.en.md",
+      "outputHash": "6618100fdf6e5070986cdc78d2306b597176f060956f081e6941928f8c7ca4d7",
+      "locale": "en",
+      "format": "md",
+      "title": "How it differs",
+      "sources": [
+        {
+          "path": "Docs/getting-started/about.md",
+          "hash": "59fcd9b0e478a9d95fb6a6f6aa6f8d74e23b3a5684f280cd6523e89166311f00"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/start/about.md",
+        "record": "docs-sync/translations/start/about.json",
+        "outputHash": "a6b82243c2b6859a8d15695d5810a0cf69a4e5973552d3a90ac04be22717ba44",
+        "bodyHash": "376584ad8ef650e0d631168816db8f1c57f98cf87995655e8c7cd342558a3e71"
+      }
+    },
+    "start/first-screen": {
+      "hash": "fd91edee65a6c6702bfd64808fef5b8ab36741466c27f41bab60ef2e945b9085",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/start/first-screen.en.md",
+      "outputHash": "14d988529b968c01d7cd27b70e3305458a749e29ff30ac7fbf6251fd5a5ae3c0",
+      "locale": "en",
+      "format": "md",
+      "title": "Your first screen",
+      "sources": [
+        {
+          "path": "Docs/getting-started/first-screen.md",
+          "hash": "96b323e4aefc390e1cee7fc95ad99bd9d69b080c188c612d1f8906ffad22edc2"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/start/first-screen.md",
+        "record": "docs-sync/translations/start/first-screen.json",
+        "outputHash": "7027c88fc49105e9b33e172fe089588d199a11b3ac66ba3f5a7482dacb56ed35",
+        "bodyHash": "1783d02af32fee9516fb1a648f53b219140dd3d103c74e7c87bef1fa67a4a4fc"
+      }
+    },
+    "start/installation": {
+      "hash": "b631a3cf9ba1805c18cb68bf88614f4d155e91374ac64c65416bf6a0e31b7d3d",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/start/installation.en.md",
+      "outputHash": "647d80806b4d362e12b92bab7d9c479e780ad8ac76df9ebbe92f5465a03338e9",
+      "locale": "en",
+      "format": "md",
+      "title": "Installation",
+      "sources": [
+        {
+          "path": "Docs/getting-started/installation.md",
+          "hash": "ef45ca214cf2dcbafd0f1c8b93d341a47501ae6392a5b6fab05371a745f901d1"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/start/installation.md",
+        "record": "docs-sync/translations/start/installation.json",
+        "outputHash": "1ae8166ea2e1c35527e4edc09df8e51d8b73bb8b890655744e499835cd7130f9",
+        "bodyHash": "ee1d965bc2799ebdd4d14dab01042d77fb6a3653dcf1559819e894a5d070c833"
+      }
+    },
+    "start/project-layout": {
+      "hash": "7eb081b5849fac521755c0e3bc4ff3356068eedaac3478e80990eeec680733fe",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/start/project-layout.en.md",
+      "outputHash": "ae5d30d831956ec8b7dc73e0c145ddd790b77df27542ae0d63f83e6d862a180d",
+      "locale": "en",
+      "format": "md",
+      "title": "Project layout",
+      "sources": [
+        {
+          "path": "Docs/getting-started/project-layout.md",
+          "hash": "e488b6b953a197c581f22db5c2b24ddfb3dc2f88a96b71aafd9dbdd9d24d66b1"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/start/project-layout.md",
+        "record": "docs-sync/translations/start/project-layout.json",
+        "outputHash": "ff13b5a92d77d63cac01647d56b5f6dcfd34195c6f8ae0b0fbf9db0077442ade",
+        "bodyHash": "6ed6e5b8eeaa8fc74cd38ff27b5c1458572c09e17be9f9d283477a5155daf0d6"
+      }
+    },
+    "start/workflow": {
+      "hash": "0182e26f83c8ddc467c2405cafbc9cbe4305cec1db48f3b344ec191ce1b9ad6a",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/start/workflow.en.md",
+      "outputHash": "47e10675c01704b59a3b9e0dd44e2229a85505c4ab535805836cb8ba0d8d6af8",
+      "locale": "en",
+      "format": "md",
+      "title": "Workflow",
+      "sources": [
+        {
+          "path": "Docs/getting-started/workflow.md",
+          "hash": "e0d21b6bbc9496488c38ce13ddeea3e35217bc525d78c5f7c6caa5b014b271e8"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/start/workflow.md",
+        "record": "docs-sync/translations/start/workflow.json",
+        "outputHash": "800279e39b5617e4ca9beeb9097e3061e8de223e6f4d3dcd646f2e484fbd8efa",
+        "bodyHash": "84d2f40255bb6869bbfc6be229d6069801ed454d48e1dc89f75df594ff2a01ec"
+      }
+    },
+    "tools/bench": {
+      "hash": "929dcbbaaecce94ada988710ae0adca71295680e038ca2ac4eee4df449bc3894",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/tools/bench.en.md",
+      "outputHash": "3b30e8ce510fe9daef85329cf1ca44317304f8fd94f9697776ea5c71da2e44b6",
+      "locale": "en",
+      "format": "md",
+      "title": "Benchmarks",
+      "sources": [
+        {
+          "path": "Docs/tools/bench.md",
+          "hash": "ad91f1ca9e1a835b98aee9e24393ad51f776b624dd7ec044e2e00db974e2abec"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/tools/bench.md",
+        "record": "docs-sync/translations/tools/bench.json",
+        "outputHash": "736705ad794c2c2811ed4c8f832bfeadfba75859b0ba72b7bd47e3bbf1b1c1ca",
+        "bodyHash": "600caeba19b62f6648735ae5d541987c609e4acb7749fc2ce12de52e89362f74"
+      }
+    },
+    "tools/debugging": {
+      "hash": "261420a10acdf4c771a9cbc64f02a6cdcd12b79362bb9fcc7a31c26bc5f2c636",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/tools/debugging.en.md",
+      "outputHash": "efbf942eab3374cc4bec5ed5f08425da56eebef6595c1a61af59ada26557a33c",
+      "locale": "en",
+      "format": "md",
+      "title": "Debugging and measuring",
+      "sources": [
+        {
+          "path": "Docs/tools/debugging.md",
+          "hash": "c81c5cb3921b63ad820520e689a4dde38eb93b3fe09d89ab50a856eb27ac460d"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/tools/debugging.md",
+        "record": "docs-sync/translations/tools/debugging.json",
+        "outputHash": "8520751e271ed75a7fb2d8782a51b59947915ff10acd714fe1ae5ffff27dc7e5",
+        "bodyHash": "67ffda2f7f06489f4a1c3f90a8b9a58d4b85b5a91a4a69e3b335f55543c13d01"
+      }
+    },
+    "tools/designer": {
+      "hash": "fec6dfeae0fb47599d757cc19d3fa27024123b5f43a8a475f3a226ad8ce0c98b",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/tools/designer.en.md",
+      "outputHash": "733fb14a8138899588feab61d791af71a3dfedce2d3213c20b9885d5367dfd2b",
+      "locale": "en",
+      "format": "md",
+      "title": "The widget designer",
+      "sources": [
+        {
+          "path": "Docs/tools/designer.md",
+          "hash": "242fba44aa12af62df6d249a8552edbc90676147f9c8ad3e5be5473310bdb5f1"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/tools/designer.md",
+        "record": "docs-sync/translations/tools/designer.json",
+        "outputHash": "93a172df3ab60b69900998bf6955f529d24ee90892d161eda878e60c56dfc356",
+        "bodyHash": "34d4c76cc597b4c75bcea108eb9eaab820ff748c74509f3e8c5456eec396ca18"
+      }
+    },
+    "tools/scripting": {
+      "hash": "20916cc20ab084277aa0896b4bd8b0547167dd370329ba4ca9a4d9c8f4b30f94",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/tools/scripting.en.md",
+      "outputHash": "989f6b046b06e1494bb3353108e7671adf39a27f8db671bee81e0d8ea4e06229",
+      "locale": "en",
+      "format": "md",
+      "title": "Scripting and code entry points",
+      "sources": [
+        {
+          "path": "Docs/tools/scripting.md",
+          "hash": "638749d1c111e2891028ce6172e3db4221d7b9007b9aa1ecef1afa315dac9f6d"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/tools/scripting.md",
+        "record": "docs-sync/translations/tools/scripting.json",
+        "outputHash": "c99b9d157a82fefa4bb28ce95003be99b45b4b8c466fbf1d5a87e510b6c492b2",
+        "bodyHash": "6408abee27111a942aa592b74b757ed580167504b843517d06f29dcaa24c0b65"
+      }
+    },
+    "tools/tests": {
+      "hash": "cc2c8ee3cfa135590d866ea04198cf24ee6a7f2dcc0e6bb9c7584cb068abcf3b",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/tools/tests.en.md",
+      "outputHash": "527761aba34eff664b3f0321cff19765dcf0330c896c033f3812644fb57a0ec9",
+      "locale": "en",
+      "format": "md",
+      "title": "The automation suite",
+      "sources": [
+        {
+          "path": "Docs/tools/tests.md",
+          "hash": "afbc0f2485c19b3573835b33df2a5820702c7d33036973560b9a5e27cdb6fcb2"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/tools/tests.md",
+        "record": "docs-sync/translations/tools/tests.json",
+        "outputHash": "b947930c79636b65fb226634ec2a78b305ba7a83b9b259ddf649301e0dc1c2d0",
+        "bodyHash": "9eb22d27be73c87b39ef8be6ee436dcbca3646e2ea4d321ebcc418a2571fef93"
+      }
+    },
+    "tools/vscode": {
+      "hash": "53400805a34c94d32ba1a73a1c813b862c2ca55e57a94acace833e274e9c37a0",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/tools/vscode.en.md",
+      "outputHash": "d1fd7502a7ed8643b4817bfa97ad8684cd033d1b79e4d367ea1e30bc80951534",
+      "locale": "en",
+      "format": "md",
+      "title": "The VS Code extension",
+      "sources": [
+        {
+          "path": "Docs/tools/vscode.md",
+          "hash": "4630faf52deac6292c2c885d4d773fbfb0accb6310ebf18f862d923fee1c5389"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/tools/vscode.md",
+        "record": "docs-sync/translations/tools/vscode.json",
+        "outputHash": "417543e7f5384617d619c082a088213408b9214014cd03f2e975d13d5e368b16",
+        "bodyHash": "9a10c0fdce554882fc0c54f6381d863adba2b92fb4ce8c99a0c7a506fdf00f38"
+      }
+    },
+    "plugin/duilanguage": {
+      "hash": "62cb799f8dcd3eacb8479539085fa38e44c3836b3502cba42734f61e045b0b74",
+      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "output": "content/docs/plugin/duilanguage.en.md",
+      "outputHash": "217587ce67185b1ec24401787bbd3753874046fa3b53d3c5d6c0c17d89651837",
+      "locale": "en",
+      "format": "md",
+      "title": "The `.dui` language",
+      "sources": [
+        {
+          "path": "Docs/language/index.md",
+          "hash": "ebbde6c01fef37d468363ed797368220f4e49c5f2c7cf0ef750c1c4d27ec645f"
+        }
+      ],
+      "translation": {
+        "status": "missing"
+      }
+    }
+  }
+}

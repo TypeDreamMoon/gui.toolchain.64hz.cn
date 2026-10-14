@@ -1,0 +1,1560 @@
+{
+  "version": 1,
+  "repository": "TypeDreamMoon/DreamGUI",
+  "branch": "main",
+  "siteOnly": [],
+  "pages": [
+    {
+      "id": "changelog/index",
+      "sources": [
+        {
+          "path": "Docs/changelog/index.md"
+        }
+      ],
+      "format": "md",
+      "title": "Changelog",
+      "description": "What changed in each DreamGUI version — what is on main and not yet released, 1.0.0, the first public release, and back through the 2.1.0 and 2.0.0 development builds."
+    },
+    {
+      "id": "concepts/animation",
+      "sources": [
+        {
+          "path": "Docs/concepts/animation.md"
+        }
+      ],
+      "format": "md",
+      "title": "Animation",
+      "description": "The three ways to animate — tweens from the DreamTween module (RenderOffsetTo, RenderScaleTo, RenderAngleTo and RenderTranslationTo for widgets inside panels, EDreamTweenEase, DreamTween.MaxStepSeconds), widget animations (UDreamWidgetAnimation and Sequencer), and .dui timelines."
+    },
+    {
+      "id": "concepts/canvas",
+      "sources": [
+        {
+          "path": "Docs/concepts/canvas.md"
+        }
+      ],
+      "format": "md",
+      "title": "Canvas",
+      "description": "What UDreamCanvas does — batch a subtree into draw calls — with root and nested canvases, the four render modes, scaling and projection, sort order, what per-widget perspective needs, the screen root made on demand, and what DreamUI.Stats measures."
+    },
+    {
+      "id": "concepts/input",
+      "sources": [
+        {
+          "path": "Docs/concepts/input.md"
+        }
+      ],
+      "format": "md",
+      "title": "Input",
+      "description": "The input system — event systems and preset actors, raycasters and input modules, each player's own pointers, focus and text target, the action router, navigation (Tab, navigation scopes, the focus look, the platform's accept and back, shoulder buttons switching tabs), popups, modals, tooltips and drag and drop, text input and keyboard layouts, and the Slate input source."
+    },
+    {
+      "id": "concepts/layout",
+      "sources": [
+        {
+          "path": "Docs/concepts/layout.md"
+        }
+      ],
+      "format": "md",
+      "title": "Layout",
+      "description": "How the layout engine works — measurement is const and separate from arranging, arranging produces an immutable fragment committed in one write, desired size is memoised for a pass, invalidation carries a reason — plus the UMG-shaped panels, panel slots, the deleted Lex layout family, and why a wrapping text in a fill slot wants WrapTextAt."
+    },
+    {
+      "id": "concepts/lyrics",
+      "sources": [
+        {
+          "path": "Docs/concepts/lyrics.md"
+        }
+      ],
+      "format": "md",
+      "title": "Lyrics",
+      "description": "UDreamLyricsView — a word-by-word, spring-driven lyrics view, its two inputs (LRC and TTML), and its parameters by group."
+    },
+    {
+      "id": "concepts/mesh-modifiers",
+      "sources": [
+        {
+          "path": "Docs/concepts/mesh-modifiers.md"
+        }
+      ],
+      "format": "md",
+      "title": "Mesh modifiers and text animation",
+      "description": "Adding to the geometry a visual hands over — the seven modifiers, the three dimensions of the text-animation family and its twenty classes, and their vertex budget and UV channel constraints."
+    },
+    {
+      "id": "concepts/rendering",
+      "sources": [
+        {
+          "path": "Docs/concepts/rendering.md"
+        }
+      ],
+      "format": "md",
+      "title": "Rendering",
+      "description": "How the renderer works — the DreamGUIRenderer view extension, the two renderers for world canvases, draw-call batching, render layers, materials on visuals (render-thread proxies, DreamUI_IsRenderByDreamUIRenderer, blending on sRGB-encoded values with the renderer doing its own premultiply), render-target canvases, screen effects, and the r.DreamUI.Verify* checks."
+    },
+    {
+      "id": "concepts/sprites-and-meshes",
+      "sources": [
+        {
+          "path": "Docs/concepts/sprites-and-meshes.md"
+        }
+      ],
+      "format": "md",
+      "title": "Custom meshes, sprites and atlases",
+      "description": "The visual table says \"what it draws\"; this page says \"where that geometry and image data comes from\" — custom meshes, sprites and two kinds of atlas, data textures, the static mesh cache."
+    },
+    {
+      "id": "concepts/text",
+      "sources": [
+        {
+          "path": "Docs/concepts/text.md"
+        }
+      ],
+      "format": "md",
+      "title": "Text",
+      "description": "The text system — the distance-field (MTSDF) default font, small text from hinted coverage glyphs, fallback faces and colour emoji, box-first overflow with Margin, LineHeightPercentage, WrapTextAt and Best Fit, rich text, gradient text, culture-aware line breaking, incremental layout, and the DreamGUI.Text.* console variables."
+    },
+    {
+      "id": "concepts/widget-blueprints",
+      "sources": [
+        {
+          "path": "Docs/concepts/widget-blueprints.md"
+        }
+      ],
+      "format": "md",
+      "title": "Widget Blueprints",
+      "description": "A UI tree is a class — UDreamWidgetBlueprint compiles into a UDreamUserWidget — with subclassing and nesting, named slots, binding to children by name, a designer that edits the class with no apply step, the prefab model it replaced, and .dui as a Blueprint's source file."
+    },
+    {
+      "id": "concepts/widget-tree",
+      "sources": [
+        {
+          "path": "Docs/concepts/widget-tree.md"
+        }
+      ],
+      "format": "md",
+      "title": "The widget tree, parking and hosts",
+      "description": "Widgets live on a tree, and the tree decides who looks after them — plus the state on it that is easiest to misread, \"parked\". Also the host contract and the presenter base class."
+    },
+    {
+      "id": "concepts/widgets",
+      "sources": [
+        {
+          "path": "Docs/concepts/widgets.md"
+        }
+      ],
+      "format": "md",
+      "title": "The widget model",
+      "description": "What a UDreamWidget is — a UObject with a rect, anchors and a pivot, carrying a visual, a layout, a slot and behaviours, arranged in a tree — plus render transforms, opacity and visibility, and the sizing difference from UMG."
+    },
+    {
+      "id": "concepts/world-space",
+      "sources": [
+        {
+          "path": "Docs/concepts/world-space.md"
+        }
+      ],
+      "format": "md",
+      "title": "World-space UI",
+      "description": "Putting the same widget Blueprint in a level — ADreamWorldWidgetActor and the properties of UDreamWorldWidgetComponent, the two render backends, interaction that needs no setup, attaching to a scene component from code, and what a Level Sequence can key."
+    },
+    {
+      "id": "controls/index",
+      "sources": [
+        {
+          "path": "Docs/controls/index.md"
+        }
+      ],
+      "format": "md",
+      "title": "The control library",
+      "description": "What DreamGUIControls holds — the Dream* controls by kind, the UI* behaviours they are built from, the action bar, the UMG interop, and how to place a control from .dui."
+    },
+    {
+      "id": "controls/styles",
+      "sources": [
+        {
+          "path": "Docs/controls/styles.md"
+        }
+      ],
+      "format": "md",
+      "title": "Styles and style sheets",
+      "description": "Each control's F…Style struct, StyleSource and where a look comes from, the project style sheet UDreamUIStyleSheet with its named variants, and the face brushes, state faces and image brushes."
+    },
+    {
+      "id": "controls/umg-parity",
+      "sources": [
+        {
+          "path": "Docs/controls/umg-parity.md"
+        }
+      ],
+      "format": "md",
+      "title": "Coming from UMG: the names are the same",
+      "description": "The structure differs and the vocabulary deliberately does not — one table per UMG class in Resources/UMGParity, adopt / map / reject, the automation suite holding them against UMG's reflection both ways, and Docs/Reference printed from reflection."
+    },
+    {
+      "id": "diagnostics/dui1xxx",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI1"
+        }
+      ],
+      "format": "md",
+      "title": "DUI1xxx · Lexer",
+      "description": "A character sequence that is not a token.",
+      "titleZh": "DUI1xxx · 词法",
+      "descriptionZh": "一串字符构不成任何记号。"
+    },
+    {
+      "id": "diagnostics/dui2xxx",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI2"
+        }
+      ],
+      "format": "md",
+      "title": "DUI2xxx · Parser",
+      "description": "Tokens that do not form the grammar.",
+      "titleZh": "DUI2xxx · 语法",
+      "descriptionZh": "记号拼不成语法。"
+    },
+    {
+      "id": "diagnostics/dui3xxx",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI3"
+        }
+      ],
+      "format": "md",
+      "title": "DUI3xxx · Meaning",
+      "description": "Grammatical, but the tree does not hold together: a duplicate id, an unknown type.",
+      "titleZh": "DUI3xxx · 语义",
+      "descriptionZh": "语法没错，但这棵树对不上：重复的 id、未知的类型。"
+    },
+    {
+      "id": "diagnostics/dui4xxx",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI4"
+        }
+      ],
+      "format": "md",
+      "title": "DUI4xxx · Values",
+      "description": "A value that does not fit the property it is written on.",
+      "titleZh": "DUI4xxx · 取值",
+      "descriptionZh": "值和它写在的属性对不上。"
+    },
+    {
+      "id": "diagnostics/dui5xxx",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI5"
+        }
+      ],
+      "format": "md",
+      "title": "DUI5xxx · Building the tree",
+      "description": "Reflection refused the write, or the target object does not exist.",
+      "titleZh": "DUI5xxx · 构建",
+      "descriptionZh": "反射拒绝了写入，或者目标对象不存在。"
+    },
+    {
+      "id": "diagnostics/dui6xxx",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI6"
+        }
+      ],
+      "format": "md",
+      "title": "DUI6xxx · Compiling",
+      "description": "The .dui could not be attached to its Blueprint.",
+      "titleZh": "DUI6xxx · 编译",
+      "descriptionZh": ".dui 挂不到它的 Blueprint 上。"
+    },
+    {
+      "id": "diagnostics/dui7xxx",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI7"
+        }
+      ],
+      "format": "md",
+      "title": "DUI7xxx · Write-back",
+      "description": "The designer's edit could not be put into the text.",
+      "titleZh": "DUI7xxx · 写回",
+      "descriptionZh": "设计器的改动没法写回文本。"
+    },
+    {
+      "id": "diagnostics/index",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/index.md"
+        }
+      ],
+      "format": "md",
+      "title": "Diagnostics",
+      "description": "Every DUInnnn diagnostic: what it means, how it happens, how to fix it."
+    },
+    {
+      "id": "dui/bindings",
+      "sources": [
+        {
+          "path": "Docs/language/bindings.md"
+        }
+      ],
+      "format": "md",
+      "title": "Bindings and routes",
+      "description": "The three arrows that connect the tree to the class's code — a binding drives a property, a route calls a handler, a two-way binding mirrors a variable — member paths, when a binding updates, and Shown, which every widget has."
+    },
+    {
+      "id": "dui/components",
+      "sources": [
+        {
+          "path": "Docs/language/components.md"
+        }
+      ],
+      "format": "md",
+      "title": "Writing a component",
+      "description": "A widget Blueprint used inside other trees, written in .dui — props, events and emit, default and named slots, and how a host sets, hears and fills them."
+    },
+    {
+      "id": "dui/control-flow",
+      "sources": [
+        {
+          "path": "Docs/language/control-flow.md"
+        }
+      ],
+      "format": "md",
+      "title": "if and for",
+      "description": "if / else if / else switches which branch is shown, for and each repeat one template from the class's data, and the rules both keep."
+    },
+    {
+      "id": "dui/example",
+      "sources": [
+        {
+          "path": "Docs/language/example.md"
+        }
+      ],
+      "format": "md",
+      "title": "Worked example",
+      "description": "A settings screen built from three files — one row component, a library and the screen — walked through to show which rule of the language each part relies on."
+    },
+    {
+      "id": "dui/nodes-and-values",
+      "sources": [
+        {
+          "path": "Docs/language/nodes-and-values.md"
+        }
+      ],
+      "format": "md",
+      "title": "Nodes and values",
+      "description": "How a node is written, the rules an id keeps, nodes with no id, the order node types resolve in, and every kind of value a property takes."
+    },
+    {
+      "id": "dui/overview",
+      "sources": [
+        {
+          "path": "Docs/language/overview.md"
+        }
+      ],
+      "format": "md",
+      "title": "Overview",
+      "description": "What a .dui file is, where it lives, the statements it is made of, and how it becomes a widget Blueprint's hierarchy."
+    },
+    {
+      "id": "dui/rows",
+      "sources": [
+        {
+          "path": "Docs/language/rows.md"
+        }
+      ],
+      "format": "md",
+      "title": "rows tables",
+      "description": "Many instances of one component as a table — the type, the style and the property names written once, one line per instance, each named from its first value."
+    },
+    {
+      "id": "dui/slots-and-components",
+      "sources": [
+        {
+          "path": "Docs/language/slots-and-components.md"
+        }
+      ],
+      "format": "md",
+      "title": "Slot lines and components",
+      "description": "Telling the parent panel where a node goes with @slot and @fill, and attaching behaviours, layout containers and layout-self objects with + Class."
+    },
+    {
+      "id": "dui/styles-and-resources",
+      "sources": [
+        {
+          "path": "Docs/language/styles-and-resources.md"
+        }
+      ],
+      "format": "md",
+      "title": "Styles and resources",
+      "description": "A style is a named set of lines that can inherit and carry components and slot lines; a resource is a typed, named constant."
+    },
+    {
+      "id": "dui/timelines",
+      "sources": [
+        {
+          "path": "Docs/language/timelines.md"
+        }
+      ],
+      "format": "md",
+      "title": "Timelines",
+      "description": "Animations the file owns — tracks, keys, ease names, the event track, loop modes, and external for an animation edited in Sequencer."
+    },
+    {
+      "id": "dui/use",
+      "sources": [
+        {
+          "path": "Docs/language/use.md"
+        }
+      ],
+      "format": "md",
+      "title": "use",
+      "description": "Merging a library, giving a component or a class a short name, putting a library under a namespace, aliases that travel with their library, and the older @Name."
+    },
+    {
+      "id": "dui/viewmodels",
+      "sources": [
+        {
+          "path": "Docs/language/viewmodels.md"
+        }
+      ],
+      "format": "md",
+      "title": "View models",
+      "description": "The viewmodels block declares the view models a class holds and where each comes from; bindings, routes and loops reach them through member paths; how to write one, and when a binding through it updates."
+    },
+    {
+      "id": "dui/write-back",
+      "sources": [
+        {
+          "path": "Docs/language/write-back.md"
+        }
+      ],
+      "format": "md",
+      "title": "Designer write-back",
+      "description": "The designer is a front end for the .dui — which line an edit is written into, how a hand-written file is left alone, and which edits it refuses (DUI7xxx)."
+    },
+    {
+      "id": "guides/fonts-and-packaging",
+      "sources": [
+        {
+          "path": "Docs/guides/fonts-and-packaging.md"
+        }
+      ],
+      "format": "md",
+      "title": "Fonts and packaging",
+      "description": "What a DreamGUI text needs to look in a packaged game the way it does in the editor — which fonts ship by themselves, how to add colour emoji, which ICU data to package, and how to check a package."
+    },
+    {
+      "id": "guides/migration",
+      "sources": [
+        {
+          "path": "Docs/guides/migration.md"
+        }
+      ],
+      "format": "md",
+      "title": "Migrating from LGUI, LexUI or early builds",
+      "description": "Moving assets saved against LGUI / LexUI, a project on the early single-module 1.x builds, and C++ written against the plugin to DreamGUI — before you open the project, install, what the redirects borrowed from 2.1.0 carry, what no longer exists, behaviour to check, C++ changes, and what to do when something does not come across."
+    },
+    {
+      "id": "guides/platforms",
+      "sources": [
+        {
+          "path": "Docs/guides/platforms.md"
+        }
+      ],
+      "format": "md",
+      "title": "Platforms and status",
+      "description": "What is claimed and what has been run, listed apart — Win64 is the only platform built and run; the release gate, what mobile and dedicated servers actually amount to, test coverage and the known gaps."
+    },
+    {
+      "id": "guides/upgrading",
+      "sources": [
+        {
+          "path": "Docs/guides/upgrading.md"
+        }
+      ],
+      "format": "md",
+      "title": "Upgrading from the development builds",
+      "description": "What to know when a project on the 2.1 or 2.0 development build moves to 1.0.0 — what can look different, which defaults moved, which switches put the old behaviour back, and what your own C++ has to change; and what to watch for when following main past 1.0.0."
+    },
+    {
+      "id": "index",
+      "sources": [
+        {
+          "path": "Docs/index.md"
+        }
+      ],
+      "format": "md",
+      "title": "Overview",
+      "description": "DreamGUI is a 3D UI plugin for Unreal Engine 5.8 — widgets are UObjects with a rect, a pivot and anchors in a tree, batched by a canvas, on the screen or standing in the level."
+    },
+    {
+      "id": "reference/dreamborder",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamBorder.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamBorder",
+      "description": "A border whose hierarchy is code, not an asset: a face, a padding, and a hole to put things in."
+    },
+    {
+      "id": "reference/dreamborderstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamBorderStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamBorderStyle",
+      "description": "A border: a brush, a padding and one child."
+    },
+    {
+      "id": "reference/dreambutton",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamButton.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamButton",
+      "description": "A button whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreambuttonstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamButtonStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamButtonStyle",
+      "description": "A button: one face, three pointer states, a label."
+    },
+    {
+      "id": "reference/dreamdialog",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamDialog.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamDialog",
+      "description": "A dialog whose hierarchy is code, not an asset: a dimmer, a centred panel, a title, a content"
+    },
+    {
+      "id": "reference/dreamdialogstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamDialogStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamDialogStyle",
+      "description": "A dialog: a dimmer over the screen, a panel on it, a title, content and buttons."
+    },
+    {
+      "id": "reference/dreamdropdown",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamDropdown.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamDropdown",
+      "description": "A dropdown whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamdropdownstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamDropdownStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamDropdownStyle",
+      "description": "A dropdown: a button-shaped face, and the list it opens."
+    },
+    {
+      "id": "reference/dreameditabletext",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamEditableText.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamEditableText",
+      "description": "A text field with no box: UMG's EditableText, where Native.TextInput is its EditableTextBox."
+    },
+    {
+      "id": "reference/dreamexpandablearea",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamExpandableArea.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamExpandableArea",
+      "description": "A header that toggles, and the content it hides."
+    },
+    {
+      "id": "reference/dreamexpandableareastyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamExpandableAreaStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamExpandableAreaStyle",
+      "description": "An expandable area: a header that toggles, and the content it hides."
+    },
+    {
+      "id": "reference/dreaminputkeyselector",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamInputKeySelector.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamInputKeySelector",
+      "description": "A button whose label is a bound key, and which listens for the next one when clicked."
+    },
+    {
+      "id": "reference/dreaminputkeyselectorstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamInputKeySelectorStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamInputKeySelectorStyle",
+      "description": "A key binder: a button whose label is the bound key, and which listens when pressed."
+    },
+    {
+      "id": "reference/dreamlayoutcontainerborder",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerBorder.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerBorder",
+      "description": "UMG's UBorder: one child, padded, aligned by the BORDER rather than by the child's slot."
+    },
+    {
+      "id": "reference/dreamlayoutcontainercanvaspanel",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerCanvasPanel.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerCanvasPanel",
+      "description": "UMG Canvas Panel"
+    },
+    {
+      "id": "reference/dreamlayoutcontainergridpanel",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerGridPanel.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerGridPanel",
+      "description": "UMG Grid Panel"
+    },
+    {
+      "id": "reference/dreamlayoutcontainerhorizontalbox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerHorizontalBox.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerHorizontalBox",
+      "description": "UMG Horizontal Box"
+    },
+    {
+      "id": "reference/dreamlayoutcontainermenuanchor",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerMenuAnchor.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerMenuAnchor",
+      "description": "UMG's UMenuAnchor, layout side."
+    },
+    {
+      "id": "reference/dreamlayoutcontaineroverlay",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerOverlay.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerOverlay",
+      "description": "UMG Overlay"
+    },
+    {
+      "id": "reference/dreamlayoutcontainersafezone",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerSafeZone.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerSafeZone",
+      "description": "UMG Safe Zone"
+    },
+    {
+      "id": "reference/dreamlayoutcontainerscalebox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerScaleBox.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerScaleBox",
+      "description": "UMG Scale Box"
+    },
+    {
+      "id": "reference/dreamlayoutcontainerscrollbox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerScrollBox.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerScrollBox",
+      "description": "UMG Scroll Box"
+    },
+    {
+      "id": "reference/dreamlayoutcontainersizebox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerSizeBox.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerSizeBox",
+      "description": "UMG Size Box"
+    },
+    {
+      "id": "reference/dreamlayoutcontainerstackbox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerStackBox.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerStackBox",
+      "description": "UMG Stack Box"
+    },
+    {
+      "id": "reference/dreamlayoutcontaineruniformgridpanel",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerUniformGridPanel.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerUniformGridPanel",
+      "description": "UMG Uniform Grid Panel"
+    },
+    {
+      "id": "reference/dreamlayoutcontainerverticalbox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerVerticalBox.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerVerticalBox",
+      "description": "UMG Vertical Box"
+    },
+    {
+      "id": "reference/dreamlayoutcontainerwidgetswitcher",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerWidgetSwitcher.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerWidgetSwitcher",
+      "description": "UMG Widget Switcher"
+    },
+    {
+      "id": "reference/dreamlayoutcontainerwrapbox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLayoutContainerWrapBox.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLayoutContainerWrapBox",
+      "description": "UMG Wrap Box"
+    },
+    {
+      "id": "reference/dreamliststyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamListStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamListStyle",
+      "description": "A list: rows built from a source, in a scrolling viewport."
+    },
+    {
+      "id": "reference/dreamlistview",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamListView.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamListView",
+      "description": "A list whose hierarchy is code, not an asset: rows built from a source, in a scrolling viewport."
+    },
+    {
+      "id": "reference/dreamlistviewbase",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamListViewBase.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamListViewBase",
+      "description": "Everything a list and a tree have in common, which is nearly all of it."
+    },
+    {
+      "id": "reference/dreamlyricslibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamLyricsLibrary.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamLyricsLibrary",
+      "description": "Dream Lyrics Library"
+    },
+    {
+      "id": "reference/dreammenuanchor",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamMenuAnchor.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamMenuAnchor",
+      "description": "A place a menu opens from, and the thing that puts it away again."
+    },
+    {
+      "id": "reference/dreammenuanchorstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamMenuAnchorStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamMenuAnchorStyle",
+      "description": "A menu anchor: the popup's look, and how it is placed against whatever opened it."
+    },
+    {
+      "id": "reference/dreammultilineeditabletext",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamMultiLineEditableText.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamMultiLineEditableText",
+      "description": "The same field over several lines: UMG's MultiLineEditableText."
+    },
+    {
+      "id": "reference/dreamnativewidgethost",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamNativeWidgetHost.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamNativeWidgetHost",
+      "description": "A hole in a DreamGUI hierarchy that a UMG widget fills."
+    },
+    {
+      "id": "reference/dreampanellayoutbase",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamPanelLayoutBase.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamPanelLayoutBase",
+      "description": "Dream Panel Layout Base"
+    },
+    {
+      "id": "reference/dreampanelslot",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamPanelSlot.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamPanelSlot",
+      "description": "UMG-style per-child layout data owned by the child widget."
+    },
+    {
+      "id": "reference/dreamprogressbar",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamProgressBar.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamProgressBar",
+      "description": "A progress bar whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamprogressbarstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamProgressBarStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamProgressBarStyle",
+      "description": "A progress bar: a track and the filled part of it."
+    },
+    {
+      "id": "reference/dreamradiobutton",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRadioButton.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamRadioButton",
+      "description": "A radio button whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamradiobuttonstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRadioButtonStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamRadioButtonStyle",
+      "description": "A radio button: the toggle's anatomy -- a box, a mark inside it, a label beside it -- with the"
+    },
+    {
+      "id": "reference/dreamrichtextblock",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRichTextBlock.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamRichTextBlock",
+      "description": "A rich text block whose hierarchy is code, not an asset: one paragraph that reads markup."
+    },
+    {
+      "id": "reference/dreamrichtextstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRichTextStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamRichTextStyle",
+      "description": "A rich text block: one paragraph that reads markup."
+    },
+    {
+      "id": "reference/dreamringmenu",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRingMenu.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamRingMenu",
+      "description": "A ring menu whose hierarchy is code, not an asset: wedges around a hub, picked by direction."
+    },
+    {
+      "id": "reference/dreamringmenustyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamRingMenuStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamRingMenuStyle",
+      "description": "A ring menu: wedges around a hub, and the geometry that decides where they sit."
+    },
+    {
+      "id": "reference/dreamscrollbar",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamScrollBar.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamScrollBar",
+      "description": "A scroll bar whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamscrollbarstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamScrollBarStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamScrollBarStyle",
+      "description": "A scroll box: a clipped viewport, the content that slides inside it, and the bars beside it."
+    },
+    {
+      "id": "reference/dreamscrollbox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamScrollBox.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamScrollBox",
+      "description": "A scroll box whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamscrollboxstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamScrollBoxStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamScrollBoxStyle",
+      "description": "Dream Scroll Box Style"
+    },
+    {
+      "id": "reference/dreamslider",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamSlider.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamSlider",
+      "description": "A slider whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamsliderstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamSliderStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamSliderStyle",
+      "description": "A slider: a track, the filled part of it, and the handle riding it."
+    },
+    {
+      "id": "reference/dreamspinbox",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamSpinBox.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamSpinBox",
+      "description": "A spin box whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamspinboxstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamSpinBoxStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamSpinBoxStyle",
+      "description": "A spin box: a numeric field between a decrement face and an increment face."
+    },
+    {
+      "id": "reference/dreamtabview",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTabView.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamTabView",
+      "description": "A tab view whose hierarchy is code, not an asset: a strip of tabs over a switcher of pages."
+    },
+    {
+      "id": "reference/dreamtabviewstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTabViewStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamTabViewStyle",
+      "description": "A tab view: a strip of tabs over a switcher of pages."
+    },
+    {
+      "id": "reference/dreamtextinput",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTextInput.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamTextInput",
+      "description": "A text field whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamtextinputstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTextInputStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamTextInputStyle",
+      "description": "A text field: the box, the text in it, and the placeholder shown while there is none."
+    },
+    {
+      "id": "reference/dreamtextpaintlibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTextPaintLibrary.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamTextPaintLibrary",
+      "description": "Tweens that move a text's paints (FDreamTextPaint) without repainting it: each drives one of UDreamText's paint"
+    },
+    {
+      "id": "reference/dreamtextstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTextStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamTextStyle",
+      "description": "How the built-in shader draws a text's glyphs beyond the plain face: outline, underlay (drop"
+    },
+    {
+      "id": "reference/dreamthrobber",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamThrobber.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamThrobber",
+      "description": "A throbber whose hierarchy is code, not an asset: N pieces that pulse, saying only \"something is"
+    },
+    {
+      "id": "reference/dreamthrobberstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamThrobberStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamThrobberStyle",
+      "description": "A throbber: N identical pieces, animating, saying only \"something is happening\"."
+    },
+    {
+      "id": "reference/dreamtileview",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTileView.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamTileView",
+      "description": "A tile view whose hierarchy is code, not an asset: a list whose rows are laid out across as well"
+    },
+    {
+      "id": "reference/dreamtileviewstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTileViewStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamTileViewStyle",
+      "description": "A tile view: a list whose rows are a grid of tiles."
+    },
+    {
+      "id": "reference/dreamtoggle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamToggle.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamToggle",
+      "description": "A toggle whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamtogglestyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamToggleStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamToggleStyle",
+      "description": "What a toggle looks like, separated from what it is."
+    },
+    {
+      "id": "reference/dreamtreeview",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTreeView.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamTreeView",
+      "description": "A tree whose hierarchy is code, not an asset: a list whose rows carry an indent and a twisty."
+    },
+    {
+      "id": "reference/dreamtreeviewstyle",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamTreeViewStyle.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamTreeViewStyle",
+      "description": "A tree: a list whose rows carry an indent and a twisty."
+    },
+    {
+      "id": "reference/dreamuianimationlibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIAnimationLibrary.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamUIAnimationLibrary",
+      "description": "The Blueprint-side helpers for FDreamUIAnimationHandle, which a struct cannot carry itself."
+    },
+    {
+      "id": "reference/dreamuibplibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIBPLibrary.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamUIBPLibrary",
+      "description": "Dream UIBPLibrary"
+    },
+    {
+      "id": "reference/dreamuicapturelibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUICaptureLibrary.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamUICaptureLibrary",
+      "description": "Pictures of what DreamGUI draws, written out as PNG files -- a render target, a canvas that renders into one, or a"
+    },
+    {
+      "id": "reference/dreamuicontrol",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIControl.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamUIControl",
+      "description": "A control whose hierarchy is code, not an asset."
+    },
+    {
+      "id": "reference/dreamuifacebrush",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIFaceBrush.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamUIFaceBrush",
+      "description": "An optional skin for a control part's procedural-rect face."
+    },
+    {
+      "id": "reference/dreamuiimagebrush",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIImageBrush.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamUIImageBrush",
+      "description": "Dream UIImage Brush"
+    },
+    {
+      "id": "reference/dreamuiinputmodelibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIInputModeLibrary.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamUIInputModeLibrary",
+      "description": "Input mode and cursor control, addressed by DreamGUI's user index rather than by a raw controller."
+    },
+    {
+      "id": "reference/dreamuilayoutlibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUILayoutLibrary.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamUILayoutLibrary",
+      "description": "The viewport, the mouse and the screen -- this framework's UWidgetLayoutLibrary."
+    },
+    {
+      "id": "reference/dreamuistatefaces",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIStateFaces.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamUIStateFaces",
+      "description": "One face drawn five ways -- Slate's FButtonStyle shape, which is the thing a control style here"
+    },
+    {
+      "id": "reference/dreamuiwidgetgeometry",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIWidgetGeometry.md"
+        }
+      ],
+      "format": "md",
+      "title": "FDreamUIWidgetGeometry",
+      "description": "A widget's measured rect, and the handle every coordinate conversion below is asked through --"
+    },
+    {
+      "id": "reference/dreamuiwidgetgeometrylibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIWidgetGeometryLibrary.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamUIWidgetGeometryLibrary",
+      "description": "Coordinate conversions between a widget's own space, the viewport and the screen -- this"
+    },
+    {
+      "id": "reference/dreamuiwidgetlibrary",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUIWidgetLibrary.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamUIWidgetLibrary",
+      "description": "Finding widgets, driving a drag, and building an image brush from Blueprint -- the parts of"
+    },
+    {
+      "id": "reference/dreamuserwidget",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamUserWidget.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamUserWidget",
+      "description": "A widget hierarchy that is a CLASS rather than an asset instance -- the counterpart to UMG's"
+    },
+    {
+      "id": "reference/dreamwidget",
+      "sources": [
+        {
+          "path": "Docs/Reference/DreamWidget.md"
+        }
+      ],
+      "format": "md",
+      "title": "UDreamWidget",
+      "description": "Base class for almost all UI related things."
+    },
+    {
+      "id": "reference/index",
+      "sources": [
+        {
+          "path": "Docs/Reference/index.md"
+        }
+      ],
+      "format": "md",
+      "title": "Class reference",
+      "description": "Every public DreamGUI class's properties, functions and events, printed from reflection, with its UMG comparison."
+    },
+    {
+      "id": "start/about",
+      "sources": [
+        {
+          "path": "Docs/getting-started/about.md"
+        }
+      ],
+      "format": "md",
+      "title": "How it differs",
+      "description": "The structural differences from UMG (text overflow above all), why the names are UMG's and the parity tables, which upstream commit the fork starts from and what it rebuilt, and credits and license."
+    },
+    {
+      "id": "start/first-screen",
+      "sources": [
+        {
+          "path": "Docs/getting-started/first-screen.md"
+        }
+      ],
+      "format": "md",
+      "title": "Your first screen",
+      "description": "Take the plugin's HelloDreamGUI.dui from text to the screen, read the file line by line, then stand the same class up in a level."
+    },
+    {
+      "id": "start/installation",
+      "sources": [
+        {
+          "path": "Docs/getting-started/installation.md"
+        }
+      ],
+      "format": "md",
+      "title": "Installation",
+      "description": "Requirements, cloning the plugin into Plugins/, the two settings worth deciding right after (the game viewport client for keyboard layouts, the Slate input source), and where settings live."
+    },
+    {
+      "id": "start/project-layout",
+      "sources": [
+        {
+          "path": "Docs/getting-started/project-layout.md"
+        }
+      ],
+      "format": "md",
+      "title": "Project layout",
+      "description": "The runtime module layers and what each holds, which module your Build.cs adds, where .dui files live, what each plugin folder is, and the log categories."
+    },
+    {
+      "id": "start/workflow",
+      "sources": [
+        {
+          "path": "Docs/getting-started/workflow.md"
+        }
+      ],
+      "format": "md",
+      "title": "Workflow",
+      "description": "The whole loop of authoring a screen — text and designer writing back to each other, save-to-recompile, placing it on the screen or in the world, wiring interaction, animating, and looking when something is off."
+    },
+    {
+      "id": "tools/bench",
+      "sources": [
+        {
+          "path": "Docs/tools/bench.md"
+        }
+      ],
+      "format": "md",
+      "title": "Benchmarks",
+      "description": "The two walls of buttons in Tools/Bench — a screen of 5000 buttons and a level of 2688 world-space panels — how to run them in PIE or -game, how to read the CSV profiles and traces they leave, and the rules for reading the numbers."
+    },
+    {
+      "id": "tools/debugging",
+      "sources": [
+        {
+          "path": "Docs/tools/debugging.md"
+        }
+      ],
+      "format": "md",
+      "title": "Debugging and measuring",
+      "description": "Seeing what DreamGUI drew and what it cost without a debugger — DreamUI.Capture, DreamUI.Stats and the Insights scopes, stat DreamGUI, DreamGUI.Memory, the two verification switches, the diagnostic commands, the console variables for A/B runs, and the log categories."
+    },
+    {
+      "id": "tools/designer",
+      "sources": [
+        {
+          "path": "Docs/tools/designer.md"
+        }
+      ],
+      "format": "md",
+      "title": "The widget designer",
+      "description": "The DreamUI Designer, rebuilt against UMG's — picking by rect, resize handles and the anchor medallion, marquee selection and drag-to-reparent, the palette, the details panel, components, undo, the source-file menu, event routes, the Content Browser's menu and thumbnails, and what it can and cannot change on a class backed by a .dui."
+    },
+    {
+      "id": "tools/scripting",
+      "sources": [
+        {
+          "path": "Docs/tools/scripting.md"
+        }
+      ],
+      "format": "md",
+      "title": "Scripting and code entry points",
+      "description": "The Blueprint and C++ entry points for creating, showing and placing UI in the world (UDreamUIBPLibrary), the K2 nodes module, and editor Python that creates a Dream Widget Blueprint, points it at a .dui and compiles it."
+    },
+    {
+      "id": "tools/tests",
+      "sources": [
+        {
+          "path": "Docs/tools/tests.md"
+        }
+      ],
+      "format": "md",
+      "title": "The automation suite",
+      "description": "The plugin's own automation suite (more than 2400 tests in a full run), Invoke-DreamGUITests.ps1 and its presets, the static checks and their rules, the test host project, and the packaged text smoke test of the release gate."
+    },
+    {
+      "id": "tools/vscode",
+      "sources": [
+        {
+          "path": "Docs/tools/vscode.md"
+        }
+      ],
+      "format": "md",
+      "title": "The VS Code extension",
+      "description": "Installing DreamGUI Language Support, what it does, where its completion data DUI/.dui-symbols.json comes from, the bridge to the running editor, and its commands and settings."
+    },
+    {
+      "id": "plugin/duilanguage",
+      "sources": [
+        {
+          "path": "Docs/language/index.md"
+        }
+      ],
+      "format": "md",
+      "locale": "en"
+    }
+  ],
+  "exclude": [
+    "Docs/DuiLanguage.md",
+    "Docs/FontsAndPackaging.md",
+    "Docs/Migration.md",
+    "Docs/README.md"
+  ],
+  "siteUrl": "https://gui.toolchain.64hz.cn"
+}

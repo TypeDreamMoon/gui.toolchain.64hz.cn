@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamUIWidgetLibrary.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "4fb838c137d1eb1cc884b3be900ce4513584765a5cf74791905caff35d16e77b"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamuiwidgetlibrary.md",
+  "translationHash": "3457aac50f75de233a7011624dd524028a755df6cc32b404da9b1610440e49fd"
+}

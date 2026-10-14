@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/language/styles-and-resources.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "93007f20ce968e1c4336ce2b47484db7971ae02eae7f1fbde250f9eeb53c5a6d"
+    }
+  ],
+  "translationFile": "content/docs/dui/styles-and-resources.md",
+  "translationHash": "b72d8b760640521a749c662a36adabb92a3b2fc431f29d287cacbde20b17638e"
+}

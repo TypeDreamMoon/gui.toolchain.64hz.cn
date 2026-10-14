@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/controls/umg-parity.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "fb78c8c2e1b5e515d53e84ee0dd0b1e305441726606d3a12fc3a6a80d4311ae4"
+    }
+  ],
+  "translationFile": "content/docs/controls/umg-parity.md",
+  "translationHash": "e106e22ddd43a2c1cd1262d236a573e78e0156513df675499a95928c9ec78f3b"
+}

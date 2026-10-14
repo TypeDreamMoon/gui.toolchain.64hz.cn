@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/language/nodes-and-values.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "b1c3bcbf8e315b70c79e904c51ac63600b79872252fc5f7aeb5ec67cb38aafb0"
+    }
+  ],
+  "translationFile": "content/docs/dui/nodes-and-values.md",
+  "translationHash": "4cd155701bfda88e54a864c26fddf446b7923d77433500bad4d81ce386a6b04e"
+}

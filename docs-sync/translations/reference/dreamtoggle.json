@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamToggle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "ff13a8c58fe75cd3721f046c73bdb00344c740e4403d837586661708cd6d630e"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamtoggle.md",
+  "translationHash": "6121467c57d963f767e5f5c6586ea1d8c041e4439ccd767232924c98dd0f5fb9"
+}

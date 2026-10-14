@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamTextStyle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "832ae033091850988a642a3c5a81b25c57d171c24dd13d24c3c7b1b11f0d03a5"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamtextstyle.md",
+  "translationHash": "42dfeef42c5a0bb0b67541e30a05f65656cea359bd48cf3428f31c638dd7cfa5"
+}

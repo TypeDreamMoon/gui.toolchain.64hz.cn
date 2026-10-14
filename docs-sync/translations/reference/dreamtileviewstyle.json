@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamTileViewStyle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "552f169f2fe7d7277699ebb299807de3b2db478e07a69ac8246a4df312f1dcdc"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamtileviewstyle.md",
+  "translationHash": "8acd7286e8832d0e658c84f59d9d0b750e6710b62879f5572ed46e66fbfe5fff"
+}

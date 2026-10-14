@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamButtonStyle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "462e805579a8b80d06267c91cc14ccc86f52b606e0c3e63f665c0b53bbea1ca8"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreambuttonstyle.md",
+  "translationHash": "1231dfa1079d10bb270ca67d3f54e8ef947412594e94d7d2c9cd1492a96fee69"
+}

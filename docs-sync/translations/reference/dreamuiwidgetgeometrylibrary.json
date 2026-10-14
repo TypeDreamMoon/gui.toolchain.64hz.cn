@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamUIWidgetGeometryLibrary.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "a46c66fbe8332cbd29d9385635ede5c5b089396e66725e3d0fd75f509a354b31"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamuiwidgetgeometrylibrary.md",
+  "translationHash": "9ba727548b233e0c75190eec35d45fea9e850c268f7dc21ee281c1cbf2cc6bda"
+}

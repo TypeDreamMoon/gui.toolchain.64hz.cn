@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamRichTextStyle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "83ea7cdc9816b06056736b86453a93d4e4bc257b3492840cb98f675efad669f7"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamrichtextstyle.md",
+  "translationHash": "cf4838987260f0994d54938fc44fb43bde70ea07b5cb7ab5d2fd30e2bbec927d"
+}

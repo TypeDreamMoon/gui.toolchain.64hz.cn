@@ -22,9 +22,9 @@ Widget Root {
 
 id 是节点的身份。它同时是 widget 的名字、Blueprint 图表读的那个类成员变量、绑定解析时用的键、节点上字符串的本地化键。所以：
 
-- 它是一个 C++ 标识符：字母、数字和 `_`，不以数字开头（[DUI3002](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3002)）。
+- 它是一个 C++ 标识符：字母、数字和 `_`，不以数字开头（[DUI3002](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3002)）。
   ASCII 以外的字符算字母，所以 id 可以是中文。
-- 它在文件里唯一，比较时**不区分大小写**（[DUI3001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3001)）——它变成的变量是 `FName`，`FName` 不区分大小写。
+- 它在文件里唯一，比较时**不区分大小写**（[DUI3001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3001)）——它变成的变量是 `FName`，`FName` 不区分大小写。
 - 它不是关键字：`class`、`style`、`resources`、`slot`、`for`、`each`、`in`、`was`、`use`、`timeline`、`external`、`ease`。
 
 ```dui
@@ -43,7 +43,7 @@ Widget Root {
 }
 ```
 
-太长、`FName` 装不下的名字是 [DUI1006](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui1006)。
+太长、`FName` 装不下的名字是 [DUI1006](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui1006)。
 
 ### 样式子句与改名子句 [#样式子句与改名子句]
 
@@ -64,11 +64,11 @@ Widget Root {
 
 | 代码 | 情况 |
 | --- | --- |
-| [DUI3010](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3010) | `(was: X)` 时 X 仍是文件里某个节点的 id |
-| [DUI3011](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3011) | 两个节点都声称 `(was: X)` |
-| [DUI3012](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3012) | 名为 X 的节点写了 `(was: X)` |
-| [DUI3013](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3013) | 旧 id 同时是类的另一个成员的名字，图表引用不搬（警告） |
-| [DUI2008](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2008) | `(was: …)` 里不是恰好一个 id |
+| [DUI3010](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3010) | `(was: X)` 时 X 仍是文件里某个节点的 id |
+| [DUI3011](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3011) | 两个节点都声称 `(was: X)` |
+| [DUI3012](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3012) | 名为 X 的节点写了 `(was: X)` |
+| [DUI3013](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3013) | 旧 id 同时是类的另一个成员的名字，图表引用不搬（警告） |
+| [DUI2008](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2008) | `(was: …)` 里不是恰好一个 id |
 
 在 VS Code 里按 F2 给节点改名会替你写上这个子句，改回去时再把它删掉；设计器里改名也会写它。
 
@@ -97,7 +97,7 @@ Widget Root {
 后面那些就会重新编号。VS Code 里悬停在无名节点上会显示它编译成的 id。
 
 无名节点仍然有类成员变量——运行时靠它找到绑定所在的 widget——但那是一个隐藏变量：Blueprint 图表看不到它。
-代码要用到某个节点，就给它一个 id。无名节点不能写 `(was: …)`（[DUI2004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2004)）：
+代码要用到某个节点，就给它一个 id。无名节点不能写 `(was: …)`（[DUI2004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2004)）：
 没有旧名可改。
 
 一行里只有一个类型、没有 id、没有块也没有样式（如单独的 `Text`）仍然是 DUI2004：它同样可能是一个漏了 `=` 的属性。
@@ -150,7 +150,7 @@ VerticalBox Root {
 }
 ```
 
-没有一种对得上的类型是 [DUI3003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3003)。
+没有一种对得上的类型是 [DUI3003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3003)。
 
 ### 容器作为类型 [#容器作为类型]
 
@@ -179,16 +179,16 @@ Widget Categories : Lists {
 ```
 
 widget 和容器都有的属性名，算 widget 的。一个节点只有一个布局容器：类型已经是容器的节点再写 `+ HorizontalBox`
-是 [DUI5022](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5022)。
+是 [DUI5022](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5022)。
 
 ### 组件实例 [#组件实例]
 
 类型是一个类（上面 3 到 6）的节点，是那个组件的一个**实例**：它的内容来自那个类，它的行设的是那个类的属性。
-这个类必须是一个具体的 DreamUI user widget（[DUI5006](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5006)）；路径加载不到是
-[DUI5001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5001)。怎样写一个组件见[编写组件](/docs/dui/components)。
+这个类必须是一个具体的 DreamUI user widget（[DUI5006](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5006)）；路径加载不到是
+[DUI5001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5001)。怎样写一个组件见[编写组件](/docs/dui/components)。
 
 因为内置标签和容器最先判定，别名永远改变不了 `Text` 或 `VerticalBox` 的含义；试图这么做的别名会被拒绝
-（[DUI3018](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3018)）。
+（[DUI3018](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3018)）。
 
 编辑器启动时、以及执行 `DreamUI.ExportSymbols` 时，会写出 `DUI/.dui-symbols.json`：每个标签、容器和注册 widget
 连同它们的属性，供编辑器补全使用。
@@ -203,14 +203,14 @@ Widget Root {
 }
 ```
 
-`Name = Value`（没有 `=` 或箭头、或者后面什么也没有，是 [DUI2005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2005)）。名字是一个反射属性，或者一条点分路径，指进一个结构体属性里（`AnchorData.SizeDelta`）。
+`Name = Value`（没有 `=` 或箭头、或者后面什么也没有，是 [DUI2005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2005)）。名字是一个反射属性，或者一条点分路径，指进一个结构体属性里（`AnchorData.SizeDelta`）。
 裸名字的查找顺序是：先 widget，再它的视觉，再（类型是容器的节点）它的容器，最后它的各个行为；第一个有这个属性的拿走。
 
-- 谁都没有的名字是 [DUI4001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4001)，并给出最接近的名字。比如 `Width = 400` 会指向
+- 谁都没有的名字是 [DUI4001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4001)，并给出最接近的名字。比如 `Width = 400` 会指向
   `AnchorData.SizeDelta`。
-- 点分路径的头能解析、尾不能是 [DUI4002](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4002)。
-- 节点类型并不创建的视觉上的属性是 [DUI5002](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5002)。
-- 文本写不了的属性——transient、已废弃、对象图的一部分、委托——是 [DUI4006](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4006)。
+- 点分路径的头能解析、尾不能是 [DUI4002](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4002)。
+- 节点类型并不创建的视觉上的属性是 [DUI5002](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5002)。
+- 文本写不了的属性——transient、已废弃、对象图的一部分、委托——是 [DUI4006](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4006)。
 
 同一个块里把一个属性写两次，后写的赢。节点自己的行赢过它样式里的行。
 
@@ -267,16 +267,16 @@ Widget Root {
 
 每种值各自出错的方式：
 
-- **数字**读不出来——两个小数点、结尾一个点、后面粘着单位（`24px`）——是 [DUI1004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui1004)。
-- **字符串**到行尾还没闭合是 [DUI1002](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui1002)。没有 `\uXXXX`：`.dui` 文件是 UTF-8，直接写那个字符。
-- **颜色**位数不是 3、4、6、8 是 [DUI1005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui1005)。
-- **元组**元素个数不对是 [DUI4004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4004)；形状根本不可能是这个属性的类型是
-  [DUI4003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4003)。
-- **词**不是属性的枚举里声明过的值是 [DUI4005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4005)。
-- **资产路径**加载不到是 [DUI5001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5001)，长到 `FName` 装不下是
-  [DUI1007](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui1007)。
-- **资源**名不存在是 [DUI4007](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4007)。
-- **节点 id** 在文件里找不到对应节点是 [DUI5013](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5013)。
+- **数字**读不出来——两个小数点、结尾一个点、后面粘着单位（`24px`）——是 [DUI1004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui1004)。
+- **字符串**到行尾还没闭合是 [DUI1002](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui1002)。没有 `\uXXXX`：`.dui` 文件是 UTF-8，直接写那个字符。
+- **颜色**位数不是 3、4、6、8 是 [DUI1005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui1005)。
+- **元组**元素个数不对是 [DUI4004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4004)；形状根本不可能是这个属性的类型是
+  [DUI4003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4003)。
+- **词**不是属性的枚举里声明过的值是 [DUI4005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4005)。
+- **资产路径**加载不到是 [DUI5001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5001)，长到 `FName` 装不下是
+  [DUI1007](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui1007)。
+- **资源**名不存在是 [DUI4007](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4007)。
+- **节点 id** 在文件里找不到对应节点是 [DUI5013](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5013)。
 
 ### 标志位枚举 [#标志位枚举]
 
@@ -300,4 +300,4 @@ Widget Root {
 不写时，键是 `<节点 id>.<属性>`（上例的 `Hint.Text`）；`+` 块里的行，键的两段之间还会加上组件的类和它的位置。
 命名空间是 `class` 行给的路径（这里是 `/Game/UI/WBP_Dialog`），没有 `class` 行就用文件名。所以给节点改 id 会改变它的键：
 VS Code 改名时会提醒这一点，并告诉你可以用 `@key` 把旧键钉住。`@key(…)` 里不是恰好一个字符串、或者跟在一个非字符串的值后面，
-是 [DUI2009](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2009)。
+是 [DUI2009](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2009)。

@@ -2,7 +2,7 @@
   "version": 2,
   "status": "unreviewed",
   "sourceHash": null,
-  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
   "sources": [
     {
       "path": "Docs/language/slots-and-components.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/dui/slots-and-components.md",
-  "translationHash": "13a4bc4708a5da7d355330061a022f09aee45939b02b9d8e15937b7bd8827848"
+  "translationHash": "46e7cfbed80e909ec4221c568e255b78ec99282b612ea20a60e810c59e76d611"
 }

@@ -98,8 +98,8 @@ https://github.com/TypeDreamMoon/DreamGUI/blob/main/CHANGELOG.md
   只写一次，然后每个实例一行——同一个组件出现 N 次、只差几个值，设置页或菜单项列表就是这样构成的。表被读成它的每一行
   所代表的普通未命名子节点，所以下游什么都没变。每一行按它的第一个值命名（`Page_0__Row_City_Ruins`），因此插入行或调整行的
   顺序不会动到其他行的 id 和本地化键。一行可以以一个块结尾，写这一行在列之外还需要的东西。设计器会把一列的值写回它的
-  单元格，而一行写不出来的东西会被拒绝并说明原因（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7004)）。新增诊断码
-  [DUI2020](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2020) MalformedRows 和 [DUI3023](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3023)
+  单元格，而一行写不出来的东西会被拒绝并说明原因（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7004)）。新增诊断码
+  [DUI2020](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2020) MalformedRows 和 [DUI3023](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3023)
   DuplicateRowKey（警告）。见 [`rows`](/docs/dui/rows)。
 - **在 `.dui` 里用短名字引用组件。** `@Row Row1 { }` 是一个节点，它的类型由某个 `resources` 块里的 `Asset` 条目 `Row`
   指定——本文件的，或者 `use` 带进来的——这样一族组件只在给它们定样式的库里命名一次，每个界面写 `@Row`，而不必每一行都写
@@ -127,7 +127,7 @@ https://github.com/TypeDreamMoon/DreamGUI/blob/main/CHANGELOG.md
 - **设计器能写回新语法。** 一次编辑会落到持有那个值的行上，不管节点的类型是怎么写的；有 `@slot { … }` 块时写进块里；
   没有 id 的节点按为它生成的 id 定位。在设计器里新建的节点，用文件为它的类起的别名来写，或者写成它的容器类型；拖进组件
   命名 slot 的内容，写进那个 slot 的填充里。没有哪一行写着的东西，会说明而不是硬写：由 `if` 决定的可见性、承接不了这次改动的
-  简写是 [DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7004)，来自样式组件的值是 [DUI7005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7005)。
+  简写是 [DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7004)，来自样式组件的值是 [DUI7005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7005)。
   见[写回](/docs/dui/write-back)。
 - **渲染变换补间。** `UDreamWidget::RenderTranslationTo`、`RenderOffsetTo`（在画布平面上，保留深度）、`RenderScaleTo`
   和 `RenderAngleTo` 移动、缩放、旋转的是画出来的东西，从不动布局：它们是给由面板摆放的控件用的补间，这类控件的锚定位置和

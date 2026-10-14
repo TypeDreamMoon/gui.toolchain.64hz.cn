@@ -2,7 +2,7 @@
   "version": 2,
   "status": "unreviewed",
   "sourceHash": null,
-  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
   "sources": [
     {
       "path": "Docs/tools/designer.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/tools/designer.md",
-  "translationHash": "ca1b678a853535b2ab8cb5a410a489e379a98358c4af0f04504149c7058b5737"
+  "translationHash": "93a172df3ab60b69900998bf6955f529d24ee90892d161eda878e60c56dfc356"
 }

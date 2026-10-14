@@ -49,7 +49,7 @@ Widget Root {
 ## 表头 [#表头]
 
 表头是 `rows`、一个节点类型（标签、容器、别名、`@Name`、路径都行）、可选的 `: Style`，然后是括号里的**列**：属性名，可以是点分路径。
-每一列只能写一次（[DUI2020](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2020)；比较不区分大小写，两个只差大小写的列名指的是同一个属性）。
+每一列只能写一次（[DUI2020](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2020)；比较不区分大小写，两个只差大小写的列名指的是同一个属性）。
 
 ## 行 [#行]
 
@@ -70,7 +70,7 @@ HorizontalBox Palette {
 
 - 一行的值的个数必须和列数**完全**一样（DUI2020）。读不出来的行不产生 widget：少一个值，就只能按样式或类默认值去猜；多一个值，
   就是丢了作者写的东西——两种都是猜。
-- 两个值之间漏了逗号（`"A" "B"`）报的是语法错误（[DUI2001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2001)），而不是值的个数不对。
+- 两个值之间漏了逗号（`"A" "B"`）报的是语法错误（[DUI2001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2001)），而不是值的个数不对。
 - 值是**写**进去的，不是绑定：一列相当于 `=`，永远不是 `<-`。
 
 ## 行尾的块 [#行尾的块]
@@ -85,7 +85,7 @@ HorizontalBox Palette {
 
 这样插入一行或调换行序，**别的行**的 id 不会动，从 id 生成的本地化键（`Page_0__Row_City_Ruins.Label`）也不会动。
 
-- 两行的键生成了同一个 id 时会提示（[DUI3023](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3023)，警告）：第二行得到 `_1` 后缀，而这个后缀会随行序变化。
+- 两行的键生成了同一个 id 时会提示（[DUI3023](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3023)，警告）：第二行得到 `_1` 后缀，而这个后缀会随行序变化。
   给各行不同的第一个值。
 - 键里没有一个字符是 id 能装的（比如 `"--"`，或者一个元组），这一行就像普通无名节点一样按计数编号。
 - 类型里 id 装不下的字符同样换成 `_`：`nier.Row` 写作 `nier_Row`。
@@ -108,7 +108,7 @@ rows Row : ListRow (Label) {
 ## 设计器和编辑器 [#设计器和编辑器]
 
 设计器把一列的值写回它的格子里；行尾块里的行也能写回。行自己的那一行只写得下它的列，所以别的改动——给行改名、加 `+` 块、
-删除或移动行、在表格旁边放节点——都会被拒绝并说明原因（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7004)），见[设计器写回](/docs/dui/write-back)。
+删除或移动行、在表格旁边放节点——都会被拒绝并说明原因（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7004)），见[设计器写回](/docs/dui/write-back)。
 
 VS Code 扩展按编译器的方式读表格：每行一个以第一个值命名的无名 widget，读不通的表格报 DUI2020，键冲突报 DUI3023。格式化时每行保持在自己的那一行，
 保留作者对齐的列。

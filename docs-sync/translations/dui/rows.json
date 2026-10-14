@@ -2,7 +2,7 @@
   "version": 2,
   "status": "unreviewed",
   "sourceHash": null,
-  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
   "sources": [
     {
       "path": "Docs/language/rows.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/dui/rows.md",
-  "translationHash": "e16a583f638f370bd961861013b53abcf0fab2c88d1a8b041f4f47160eb1c073"
+  "translationHash": "03ea1adfce8ab8c4a1c4a143a7e083878079c8bfbd1db3d05f077aa9a2b2a2c0"
 }

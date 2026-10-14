@@ -61,18 +61,18 @@ Widget Root {
 （`Width`、`Height`——这些是 `Animatable*` 镜像属性，因为结构体没有属性轨道，锚定数据要靠它们才能打关键帧）。只有一份清单，所以一行能编译，
 就是一条你在动画编辑器里看得见的轨道。
 
-注意这里和赋值的不对称是有意的：`Width = 400` 作为赋值仍然是 [DUI4001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4001)，指向 `AnchorData.SizeDelta`。
+注意这里和赋值的不对称是有意的：`Width = 400` 作为赋值仍然是 [DUI4001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4001)，指向 `AnchorData.SizeDelta`。
 赋值写的是属性，时间线驱动的是轨道。
 
 时间线驱动的是数字、2/3/4 分量的向量和颜色；别的类型属于 `external` 时间线。
 
 | 代码 | 情况 |
 | --- | --- |
-| [DUI2014](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2014) | `timeline` 块或其中一行不合文法 |
-| [DUI3016](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3016) | 两个同名的时间线 |
-| [DUI5015](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5015) | 轨道路径找不到节点 |
-| [DUI5016](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5016) | 属性不存在于节点、它的视觉或行为上，没有标 `Interp`，或者类型不是轨道能驱动的 |
-| [DUI4003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4003) | 某个关键帧的值读不成这个属性的值 |
+| [DUI2014](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2014) | `timeline` 块或其中一行不合文法 |
+| [DUI3016](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3016) | 两个同名的时间线 |
+| [DUI5015](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5015) | 轨道路径找不到节点 |
+| [DUI5016](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5016) | 属性不存在于节点、它的视觉或行为上，没有标 `Interp`，或者类型不是轨道能驱动的 |
+| [DUI4003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4003) | 某个关键帧的值读不成这个属性的值 |
 
 ## 缓动 [#缓动]
 
@@ -87,7 +87,7 @@ Widget Root {
 `InOutElastic`、`InBack`、`OutBack`、`InOutBack`、`InBounce`、`OutBounce`、`InOutBounce`。
 
 枚举里还有一个 `CurveFloat`，但它指向一个曲线资产，关键帧上没有地方放资产，所以按名字拒绝。不认识的名字是
-[DUI5017](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5017)。
+[DUI5017](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5017)。
 
 ## 事件 [#事件]
 

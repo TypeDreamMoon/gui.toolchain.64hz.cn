@@ -65,13 +65,13 @@ MyProject/
 | 一个节点 | 树的根。 | [节点与值](/docs/dui/nodes-and-values) |
 
 这些语句的顺序随意：样式可以声明在穿它的节点下面。要编译成类的文件**恰好有一个**根节点，没有或多于一个都是
-[DUI2006](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2006)（没有根时，建树阶段还会报 [DUI5009](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5009)，原因见解析器的那条）。
+[DUI2006](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2006)（没有根时，建树阶段还会报 [DUI5009](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5009)，原因见解析器的那条）。
 没有根节点的文件是一个**库**：它可以被 `use`，但不能被编译。
 
-整个文件层面的几种错误：不能开始任何 token 的字符是 [DUI1001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui1001)；`/*` 一直等不到 `*/` 是
-[DUI1003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui1003)；`{` 没有配对的 `}` 是 [DUI2002](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2002)，`(` 没有配对的 `)` 是
-[DUI2003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2003)；文法要别的东西的地方出现了一个 token，是 [DUI2001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2001)，消息里会说出两者。
-块或括号嵌套超过 256 层是 [DUI2013](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2013)：手写或生成的界面远到不了这个深度，到了只能是写坏了的文件，
+整个文件层面的几种错误：不能开始任何 token 的字符是 [DUI1001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui1001)；`/*` 一直等不到 `*/` 是
+[DUI1003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui1003)；`{` 没有配对的 `}` 是 [DUI2002](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2002)，`(` 没有配对的 `)` 是
+[DUI2003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2003)；文法要别的东西的地方出现了一个 token，是 [DUI2001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2001)，消息里会说出两者。
+块或括号嵌套超过 256 层是 [DUI2013](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2013)：手写或生成的界面远到不了这个深度，到了只能是写坏了的文件，
 报一个行号总比递归到栈溢出、把编辑器连同没保存的工作一起带走要好。
 
 ### `class` 行 [#class-行]
@@ -79,10 +79,10 @@ MyProject/
 `class` 行做两件事：
 
 - 说明这个文件是哪个 Blueprint 的源码。把它编译进另一个 Blueprint 会警告
-  （[DUI6003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6003)）。
+  （[DUI6003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6003)）。
 - 它的路径是文件里每个本地化字符串的命名空间，所以文件改名后本地化键不会变。没有 `class` 行时，文件名就是命名空间。
 
-`class` 写了两次、路径为空、或者写在节点里面，是 [DUI2007](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2007)。
+`class` 写了两次、路径为空、或者写在节点里面，是 [DUI2007](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2007)。
 
 另一个文件用 `use "…" as Row` 把它当组件引用时，也是从这一行读出它的类；没有这一行，就只能由编辑器去找 Source File
 是它的那个 Blueprint（见 [`use`](/docs/dui/use)）。所以组件文件最好都写上 `class` 行。
@@ -106,7 +106,7 @@ MyProject/
 ### 编译 [#编译]
 
 编译读文件、建树、把树装成 Blueprint 的层级。出错时编译结果里是带 `DUInnnn` 的诊断。文件不存在或读不出来是
-[DUI6001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6001)，文件解析了但没产生树是 [DUI6002](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6002)。
+[DUI6001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6001)，文件解析了但没产生树是 [DUI6002](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6002)。
 ### 显示出来 [#显示出来]
 
 蓝图里用 **Create Dream Widget** 接 **Add to Viewport**，和 UMG 一样——文件的 `props` 和 `viewmodels` 条目就是创建节点上的引脚；
@@ -185,13 +185,13 @@ Widget Root {
 
 | 代码 | 阶段 |
 | --- | --- |
-| [DUI1xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui1xxx) | 词法：一串字符不成 token |
-| [DUI2xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2xxx) | 语法：token 不成文法 |
-| [DUI3xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3xxx) | 含义：合乎文法，但树对不上（id 重复、类型不认识） |
-| [DUI4xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4xxx) | 值：值放不进它所写的属性 |
-| [DUI5xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5xxx) | 建树：反射拒绝了写入，或目标对象不存在 |
-| [DUI6xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6xxx) | 编译：`.dui` 接不到它的 Blueprint 上 |
-| [DUI7xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7xxx) | 写回：设计器的改动放不进文本 |
+| [DUI1xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui1xxx) | 词法：一串字符不成 token |
+| [DUI2xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2xxx) | 语法：token 不成文法 |
+| [DUI3xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3xxx) | 含义：合乎文法，但树对不上（id 重复、类型不认识） |
+| [DUI4xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4xxx) | 值：值放不进它所写的属性 |
+| [DUI5xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5xxx) | 建树：反射拒绝了写入，或目标对象不存在 |
+| [DUI6xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6xxx) | 编译：`.dui` 接不到它的 Blueprint 上 |
+| [DUI7xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7xxx) | 写回：设计器的改动放不进文本 |
 
 VS Code 扩展在输入时就报单个文件能判定的那些，编辑器运行时还会把每次编译的结论送进 Problems 面板，见
 [VS Code 扩展](/docs/tools/vscode)。

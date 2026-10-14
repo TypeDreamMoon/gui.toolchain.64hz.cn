@@ -2,7 +2,7 @@
   "version": 2,
   "status": "unreviewed",
   "sourceHash": null,
-  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
   "sources": [
     {
       "path": "Docs/language/example.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/dui/example.md",
-  "translationHash": "456a2862f7fc7c765fa324cfdd84b0ac51410e0971a132b3abcc8f475bee3dae"
+  "translationHash": "8ece33972f01843218186d8563d80c201f32ce214c624d41c4c24293a854ab64"
 }

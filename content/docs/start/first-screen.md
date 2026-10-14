@@ -29,7 +29,7 @@ description: "用插件自带的 HelloDreamGUI.dui 走一遍从文本到屏幕�
 - **根布局**：随便选，选 None 也行 —— 编译时文件里的树会整个替换掉它。
 
 放在 `/Game/UI`，命名为 `WBP_HelloDreamGUI`。文件第一行 `class /Game/UI/WBP_HelloDreamGUI` 说的就是这个位置；
-两边对不上时编译会给出警告 [DUI6003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6003)，要么挪资产，要么改那一行。
+两边对不上时编译会给出警告 [DUI6003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6003)，要么挪资产，要么改那一行。
 
 ### 把它指向这个文件 [#把它指向这个文件]
 
@@ -148,7 +148,7 @@ key 都挂在这个路径下，所以文件改名时 key 不变。没有这一�
 
 一个没有自己可视部分（visual）的节点 —— 一个只为了装别的东西而存在的矩形。节点由类型、id 和一个可选的块组成。
 id（`Root`、`Card`……）就是这个控件的身份：控件的名字、蓝图图表里读到的成员变量、绑定解析时用的 key、
-本地化 key 都是它。它必须是合法的 C++ 标识符，并且在文件内不区分大小写地唯一（[DUI3001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3001)）。
+本地化 key 都是它。它必须是合法的 C++ 标识符，并且在文件内不区分大小写地唯一（[DUI3001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3001)）。
 
 ### `+ Overlay {}` [#-overlay-]
 
@@ -168,7 +168,7 @@ Overlay 按声明顺序叠放子节点，所以 `Backdrop` 写在前面，就画
 - `AnchorData.*` 是**节点自己的矩形**。`Root` 锚在 (0, 0)–(1, 1)、`SizeDelta` 为 (0, 0)，意思是"四边贴住父级、
   不留边"，在任何分辨率下都铺满它被加进去的东西；`Card` 的 `SizeDelta` (420, 220) 就是它的尺寸。
 - `@slot …` 是**这个节点对它上层那个面板提的要求**，也就是父级怎么安排它：`HorizontalAlignment`、
-  `VerticalAlignment`、`SizeRule`。父级没有布局面板时写 slot 行是 [DUI5003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5003)。
+  `VerticalAlignment`、`SizeRule`。父级没有布局面板时写 slot 行是 [DUI5003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5003)。
 
 两段文字上的 `WrapTextAt` 也和这个区别有关。一段文本有 `WrapTextAt` 时在那里折行，没有时按自己的宽度折行；
 而竖排的列在给子节点宽度**之前**先问它想要多高。所以放在 Fill 插槽里的文本要自己报一个折行宽度：

@@ -24,7 +24,7 @@ description: "设计器是 .dui 的图形前端——它的改动写进哪一行
 无名节点按为它造的 id 定位。嵌套的组件实例里面的内容属于另一个文件，这里不写；`for` 在运行时造的副本不是任何一行，也不写。
 
 文件在磁盘上被别人改了（比如在 VS Code 里保存），由此触发的重新编译以**文件**为准，不会把设计器里较旧的值刷回去。
-设计器有一个待写的改动、而文件在它底下变了，这次什么也不写（[DUI7002](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7002)）。
+设计器有一个待写的改动、而文件在它底下变了，这次什么也不写（[DUI7002](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7002)）。
 
 ## 结构上的改动 [#结构上的改动]
 
@@ -82,7 +82,7 @@ Widget Root {
 
 ## 设计器拒绝写的改动 [#设计器拒绝写的改动]
 
-有几种东西没有一行可以写进去，设计器会说出来（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7004)），而不是凭空造一行：
+有几种东西没有一行可以写进去，设计器会说出来（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7004)），而不是凭空造一行：
 
 - **由 `if` 显示或隐藏的 widget 的可见性。** 改条件，或者把 widget 移出分支。见 [if 与 for](/docs/dui/control-flow)。
 - **`@fill 2` 上 Fill 以外的 `SizeRule`。** 把它换成 `@slot SizeRule = …` 和 `@slot FillWeight = 2` 两行。
@@ -90,7 +90,7 @@ Widget Root {
   但不能从设计器删除、移动、命名一行或给它加 `+` 块，也不能在表格旁边放节点（那个位置在表格里面）——这些去改文本。
   见 [rows 表格](/docs/dui/rows)。
 
-来自样式 `+ Component` 行的值也不写（[DUI7005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7005)）：样式是共用的，节点自己又没有 `+` 行装这个改动。
+来自样式 `+ Component` 行的值也不写（[DUI7005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7005)）：样式是共用的，节点自己又没有 `+` 行装这个改动。
 在节点上加一行（`+ VerticalBox { Spacing = 20 }`），或者去改样式：
 
 ```dui
@@ -110,11 +110,11 @@ Widget Root {
 
 | 代码 | 情况 | 怎么办 |
 | --- | --- | --- |
-| [DUI7001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7001) | 改动在文件里没有落点：不认识的节点、被绑定的属性、没有块的槽位 | 被绑定的属性由绑定决定，改绑定；其余在文本里补上落点 |
-| [DUI7002](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7002) | 待写的改动期间文件变了，什么也没写 | 等设计器按新文本刷新后再改一次 |
-| [DUI7003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7003) | 语言写不出的值（非有限数），那一行保持不动 | 换一个有限的值 |
-| [DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7004) | 改动的东西没有哪一行写着：`if` 决定的可见性、写不下改动的简写、表格行 | 照上文改文本 |
-| [DUI7005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7005) | 改动的是样式 `+` 行给节点的值 | 在节点上加那一行，或改样式 |
+| [DUI7001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7001) | 改动在文件里没有落点：不认识的节点、被绑定的属性、没有块的槽位 | 被绑定的属性由绑定决定，改绑定；其余在文本里补上落点 |
+| [DUI7002](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7002) | 待写的改动期间文件变了，什么也没写 | 等设计器按新文本刷新后再改一次 |
+| [DUI7003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7003) | 语言写不出的值（非有限数），那一行保持不动 | 换一个有限的值 |
+| [DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7004) | 改动的东西没有哪一行写着：`if` 决定的可见性、写不下改动的简写、表格行 | 照上文改文本 |
+| [DUI7005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7005) | 改动的是样式 `+` 行给节点的值 | 在节点上加那一行，或改样式 |
 
 ## 向另一边走的那条缝 [#向另一边走的那条缝]
 

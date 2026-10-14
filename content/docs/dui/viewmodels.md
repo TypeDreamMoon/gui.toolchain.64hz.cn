@@ -43,11 +43,11 @@ UE 自己的 `UMVVMViewModelBase`——都会被同样地订阅，而 DreamGUI �
 
 | 代码 | 情况 |
 | --- | --- |
-| [DUI2021](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2021) | 一行不是 `类型 名字` 加可选来源的形状，或者块写在了节点里 |
-| [DUI3024](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3024) | 两个同名条目 |
-| [DUI6015](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6015) | 类型找不到类，或者找到两个 |
-| [DUI6016](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6016) | 名字已经被类的另一个成员占用 |
-| [DUI6017](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6017) | 对抽象类写 `= new` |
+| [DUI2021](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2021) | 一行不是 `类型 名字` 加可选来源的形状，或者块写在了节点里 |
+| [DUI3024](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3024) | 两个同名条目 |
+| [DUI6015](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6015) | 类型找不到类，或者找到两个 |
+| [DUI6016](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6016) | 名字已经被类的另一个成员占用 |
+| [DUI6017](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6017) | 对抽象类写 `= new` |
 
 父类是 C++ 类、并且已经有一个同名、正是这个类的对象引用属性时，这一行不另建变量，而是描述那个属性：它的对象从哪来。
 
@@ -176,13 +176,13 @@ protected:
 ```
 
 - 绑定读的成员必须对 Blueprint 可见：`BlueprintReadOnly` / `BlueprintReadWrite` 的属性，`BlueprintCallable` / `BlueprintPure` 的函数
-  （不可见的那一段报 [DUI5023](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5023)）。
+  （不可见的那一段报 [DUI5023](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5023)）。
 - `DREAM_VM_SET(Member, Value)` 在值变了的时候赋值并广播这个字段，没变时返回 false、不广播——每帧用同一个值调一次 setter，代价只是一次比较。
   `FText` 按显示出来的字符串比较。这个宏在任何有 FieldNotify 属性的 `INotifyFieldValueChanged` 类里都能用，不限于 `UDreamViewModel` 的子类。
 - 由别的值算出来的值（`Gold` 变了之后的 `GoldText`），在它的来源变化时用 `BroadcastFieldValueChanged` 宣布。由视图模型提供这种直接能显示的成员，
   就是它转换值的方式；没有另外的转换器。
 - 想在 UI 通过 `<->` 写回一个值时做出反应，就提供 `Set<Member>`（`BlueprintCallable`，一个参数）：`<->` 会调用它，而不是直接写属性。
-  属性只读、又没有这样的 setter，是 [DUI6020](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6020)。
+  属性只读、又没有这样的 setter，是 [DUI6020](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6020)。
 
 ### Blueprint、UnrealSharp 和 UE 的 MVVM [#blueprintunrealsharp-和-ue-的-mvvm]
 

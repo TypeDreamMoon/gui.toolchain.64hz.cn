@@ -12,7 +12,7 @@ description: "创作一个界面的完整循环：文本与设计器双向写回
   `DUI/.dui-symbols.json`，见 [VS Code 扩展](/docs/tools/vscode)。
 - **在设计器里改。** 设计器是这个文件的前端：在那里做的改动就是对文本的改动，写进存着那个值的那一行，
   或者在节点已有的行之后新起一行，文件其余部分逐字节不变。少数改动没有一行可写 —— 比如一个由 `if` 决定显隐的控件的可见性 ——
-  设计器会明说（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7004)），而不是替你发明一行。见[写回](/docs/dui/write-back)。
+  设计器会明说（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7004)），而不是替你发明一行。见[写回](/docs/dui/write-back)。
 
 ### 保存即重编译 [#保存即重编译]
 
@@ -50,8 +50,8 @@ description: "创作一个界面的完整循环：文本与设计器双向写回
 事件只有一种接法，到处写法相同：**路由**。`事件名 -> 处理函数` 指向**用户控件**上的一个函数 —— 也就是这棵树
 编译成的那个类，UMG 也把事件处理放在这里。编译器把每条路由解析进 `UDreamWidgetBlueprint::EventBindings`，
 `UDreamUserWidget::BindEventBindings` 在 Initialize 时挂上。在设计器里，同一件事是详情面板的 *Events* 一节：
-点 `+` 会建一个签名正确的自定义事件，并写好指向它的路由。处理函数不存在是 [DUI6004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6004)，
-参数对不上是 [DUI6005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6005)。
+点 `+` 会建一个签名正确的自定义事件，并写好指向它的路由。处理函数不存在是 [DUI6004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6004)，
+参数对不上是 [DUI6005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6005)。
 
 属性则用绑定驱动：`Text <- GetTitle()` 让属性跟着一个表达式走，`Value <-> Volume` 双向同步。见[绑定](/docs/dui/bindings)。
 

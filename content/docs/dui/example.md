@@ -197,8 +197,8 @@ Widget Root {
 | 成员 | 用在 | 要求 |
 | --- | --- | --- |
 | `HasUnsavedChanges` | `if` 的条件 | 无参数函数，返回布尔值 |
-| `KeyHints` | `for` 的源 | FieldNotify 的对象数组变量，元素有 `Label`（[DUI6006](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6006)、[DUI6007](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6007)） |
-| `HandleVolumeChanged`、`HandleDisplayModeChanged`、`HandleLanguageChanged` | `Changed ->` | 参数和事件一样：`(Index, Step)`（[DUI6004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6004)、[DUI6005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6005)） |
+| `KeyHints` | `for` 的源 | FieldNotify 的对象数组变量，元素有 `Label`（[DUI6006](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6006)、[DUI6007](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6007)） |
+| `HandleVolumeChanged`、`HandleDisplayModeChanged`、`HandleLanguageChanged` | `Changed ->` | 参数和事件一样：`(Index, Step)`（[DUI6004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6004)、[DUI6005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6005)） |
 | `HandleApply`、`HandleBack` | `OnClicked ->` | 参数和按钮的 `OnClicked` 一样 |
 
 行组件的类则什么都不用额外写：它的 props 和事件都由 `.dui` 声明，编译时生成。

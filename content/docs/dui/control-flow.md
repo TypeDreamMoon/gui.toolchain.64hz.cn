@@ -37,7 +37,7 @@ VerticalBox Root {
 所以切换就是改可见性：没走的那支是折叠（Collapsed），不是销毁，它的状态都还在。这也意味着 `if` 不是编译期条件：每一支都会建出来，
 文件里没有任何写法能把一个 widget 排除在类之外。一个根本不该存在的变体，应该是另一个类。
 
-- 一支里只能有 widget：属性、槽位行、`+` 块写在里面都是 [DUI2018](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2018)，槽位声明和循环也是。
+- 一支里只能有 widget：属性、槽位行、`+` 块写在里面都是 [DUI2018](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2018)，槽位声明和循环也是。
 - 分支里的 widget 自己也写了 `Shown` 时，要它所在的那支被选中、**并且**它自己的条件成立，它才显示。
 - `if` 只能写在节点里面。写在文件顶层，或者前面没有 `if` 的 `else`，都是 DUI2018；缺条件或缺块也是。
 - `else` 可以写在 `}` 所在的那一行，也可以写在下一行。
@@ -53,7 +53,7 @@ Widget Root {
 }
 ```
 
-在设计器里改一个由 `if` 决定可见性的 widget 的可见性，写回会拒绝（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7004)）：
+在设计器里改一个由 `if` 决定可见性的 widget 的可见性，写回会拒绝（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7004)）：
 没有哪一行写着它。改条件，或者把 widget 移出分支。见[设计器写回](/docs/dui/write-back)。
 
 ## `for` 和 `each` [#for-和-each]
@@ -120,26 +120,26 @@ Widget Inventory {
 
 ### 两者都要守的规则 [#两者都要守的规则]
 
-- 循环体**恰好是一个** widget，即模板（[DUI5021](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5021)、[DUI5012](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5012)）。
+- 循环体**恰好是一个** widget，即模板（[DUI5021](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5021)、[DUI5012](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5012)）。
   要重复几个 widget，就把它们包进一个容器。
 - 循环不能是根，也不能嵌套在另一个循环里（DUI5021、DUI5012）。要嵌套，就写一个组件，内层循环写在它自己的文件里，列表通过一个
   `props` 条目交给它。
 - `for` 要求宿主能接任意多个子节点（固定格位的宿主不行，DUI5021）；`each` 要求宿主上有 `+ UIListView`（或者一个可回收的滚动视图），
   否则是 DUI5012。
 - 循环体里唯一能写的绑定是单跳的 `Item.Member`，唯一能写的对象路由是 `Item.Func` / `Item.Func()`；写表达式、`<->`、路由到别的对象，
-  是 [DUI5014](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5014)。循环体里也不能 `emit`（[DUI6012](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6012)）。
-- 源必须在类上存在（[DUI6006](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6006)），而且是一个对象数组（[DUI6007](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6007)）。
+  是 [DUI5014](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5014)。循环体里也不能 `emit`（[DUI6012](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6012)）。
+- 源必须在类上存在（[DUI6006](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6006)），而且是一个对象数组（[DUI6007](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6007)）。
 - 数组的元素类已知时（`TArray<UItemVM*>`，而不是 `TArray<UObject*>`），`Item.Member` 必须是它的成员
-  （[DUI6021](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6021)），`Item.Func` 必须是它的函数，并且什么都不收或者收的恰好是事件发出的那些
-  （[DUI6022](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6022)）。元素是 `UObject` 的数组时，项的类要到运行时才知道，对不上的那一行在那时被跳过。
+  （[DUI6021](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6021)），`Item.Func` 必须是它的函数，并且什么都不收或者收的恰好是事件发出的那些
+  （[DUI6022](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6022)）。元素是 `UObject` 的数组时，项的类要到运行时才知道，对不上的那一行在那时被跳过。
 
 其余相关的代码：
 
 | 代码 | 情况 |
 | --- | --- |
-| [DUI2010](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2010) | 循环头不是 `<关键字> Var in Source` 或 `Source()` 的形状 |
-| [DUI3008](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3008) | 循环变量遮住了外层循环的变量（警告） |
-| [DUI5007](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5007) | 建树的调用方没有地方记录循环，循环被跳过（警告） |
+| [DUI2010](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2010) | 循环头不是 `<关键字> Var in Source` 或 `Source()` 的形状 |
+| [DUI3008](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3008) | 循环变量遮住了外层循环的变量（警告） |
+| [DUI5007](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5007) | 建树的调用方没有地方记录循环，循环被跳过（警告） |
 
 `for` 运行时造出来的副本不是文件里的任何一行，设计器写回会跳过它们；循环的模板也不会被设计器删掉或移出循环——没有东西可重复的循环建不起来。
 VS Code 在 `each` 循环体里输入 `Item.` 时，会按源的元素类型补全成员。

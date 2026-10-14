@@ -42,17 +42,17 @@ Widget Root {
 
 一个裸的 `Func()` 直接绑定那个函数；更复杂的表达式会被编译成一个生成的函数。对目标属性的要求：
 
-- 属性要有 setter（[DUI5005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5005)）——组件的 prop 例外，见[编写组件](/docs/dui/components)。
-- 只能绑定 widget、它的视觉或某个行为上的**整个**属性（[DUI5008](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5008)）：不能绑槽位属性、
+- 属性要有 setter（[DUI5005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5005)）——组件的 prop 例外，见[编写组件](/docs/dui/components)。
+- 只能绑定 widget、它的视觉或某个行为上的**整个**属性（[DUI5008](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5008)）：不能绑槽位属性、
   容器属性，也不能绑结构体里的某个字段（`AnchorData.SizeDelta <- …` 不行）。
 
 | 代码 | 情况 |
 | --- | --- |
-| [DUI2011](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2011) | 右边解析不了 |
-| [DUI5004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5004) | 类上没有这个函数，或者裸绑定的函数带参数 |
-| [DUI5011](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5011) | 编译器没法把这个表达式降成一个函数 |
-| [DUI5023](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5023) | 路径里有一段，它所在的类上没有，或者 Blueprint 看不到 |
-| [DUI5024](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5024) | 路径越过一个不是对象的值继续往下走 |
+| [DUI2011](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2011) | 右边解析不了 |
+| [DUI5004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5004) | 类上没有这个函数，或者裸绑定的函数带参数 |
+| [DUI5011](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5011) | 编译器没法把这个表达式降成一个函数 |
+| [DUI5023](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5023) | 路径里有一段，它所在的类上没有，或者 Blueprint 看不到 |
+| [DUI5024](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5024) | 路径越过一个不是对象的值继续往下走 |
 
 路径从类的一个变量开始（`viewmodels` 条目、prop 或者 Blueprint 变量），之后每一段都是前一段所持对象的类上的成员，必须对 Blueprint 可见。
 路径上有对象没设好时，绑定不求值，属性保留它原来的值。
@@ -101,7 +101,7 @@ Widget Root {
 | `->` | 按事件的种类，二者之一 | 任何事件 |
 
 单播委托装不下第二个监听者，所以在它上面写 `+=`；多播事件上写 `=` 就得扔掉控件自己和 Blueprint 图表接上的监听者——这两种都是
-[DUI5025](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5025)。
+[DUI5025](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5025)。
 
 右边是下面三种之一：
 
@@ -129,12 +129,12 @@ VerticalBox Root {
 
 | 代码 | 情况 |
 | --- | --- |
-| [DUI5010](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5010) | 左边不是目标上的事件 |
-| [DUI5025](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5025) | `+=` 写在单播委托上，或者 `=` 写在多播事件上 |
-| [DUI6004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6004) | 类上没有这个处理函数 |
-| [DUI6005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6005) | 处理函数的参数和事件的参数不一致 |
-| [DUI6018](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6018) | 路径走到的对象的类上没有这个函数，或者 Blueprint 不能调用它 |
-| [DUI6019](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6019) | 实参和函数对不上 |
+| [DUI5010](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5010) | 左边不是目标上的事件 |
+| [DUI5025](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5025) | `+=` 写在单播委托上，或者 `=` 写在多播事件上 |
+| [DUI6004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6004) | 类上没有这个处理函数 |
+| [DUI6005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6005) | 处理函数的参数和事件的参数不一致 |
+| [DUI6018](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6018) | 路径走到的对象的类上没有这个函数，或者 Blueprint 不能调用它 |
+| [DUI6019](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6019) | 实参和函数对不上 |
 
 编译器把每条路由解析进 `UDreamWidgetBlueprint::EventBindings`，`UDreamUserWidget::BindEventBindings` 在 Initialize 时把它们接上。
 在设计器里，同一件事就是细节面板的 *Events* 一节：那里的 `+` 会建一个签名正确的自定义事件，并写出指向它的路由。
@@ -164,7 +164,7 @@ Native.Slider Volume { Value <-> Settings.MasterVolume }
 ```
 
 写回一个成员时，对象的类上有 `BlueprintCallable` 的 `Set<Member>`（一个参数）就调用它，否则直接写这个成员并在那个对象上宣布变化。
-两种方式都写不了的成员是 [DUI6020](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6020)。
+两种方式都写不了的成员是 [DUI6020](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6020)。
 
 `<->` 是两半拼起来的：正向是一个生成的 getter，和任何绑定函数一样；反向是一条生成的路由
 `OnValueChangedBP -> 生成的 setter`。所有值类控件都通过 `OnValueChangedBP` 这个约定的名字广播变化，没有这个事件的目标会报

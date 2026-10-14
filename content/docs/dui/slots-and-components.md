@@ -37,7 +37,7 @@ Widget Root {
 | `bFillEmptySpace`、`FillSpanWhenLessThan`、`bForceNewLine` | 只有 WrapBox 读。 |
 | `Nudge` | 在面板算好的位置上再加一个固定偏移。 |
 
-父节点不排布面板的节点写了槽位行，是 [DUI5003](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5003)。
+父节点不排布面板的节点写了槽位行，是 [DUI5003](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5003)。
 
 ### 写成一块 [#写成一块]
 
@@ -79,7 +79,7 @@ Widget Root {
 ```
 
 `Value` 分到的宽度是 `Label` 的两倍。注意设计器写回的一个限制：在设计器里把 `@fill 2` 的 `SizeRule` 改成 Fill 以外的值，
-简写写不下这个改动，会被拒绝（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7004)），见[设计器写回](/docs/dui/write-back)。
+简写写不下这个改动，会被拒绝（[DUI7004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7004)），见[设计器写回](/docs/dui/write-back)。
 
 ## 组件：`+ Class` [#组件-class]
 
@@ -101,7 +101,7 @@ Widget Confirm {
 
 类按名字查找，会依次试插件的各种前缀：`VerticalBox` 找到竖排盒子容器，`UIButton` 找到按钮行为，写 `Button` 也行。
 完整的 `/Script/Module.Class` 路径同样可以（如 `/Script/DreamGUIControls.UIButton`）。解析不到任何 widget 能挂的东西——
-不存在、抽象、已废弃——是 [DUI3006](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3006)。
+不存在、抽象、已废弃——是 [DUI3006](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3006)。
 
 自身布局对象的一个例子：一个 `Spacer` 放在竖排盒子的 Fill 槽位里，占掉上下两条留下的高度：
 
@@ -125,7 +125,7 @@ VerticalBox Column {
 ### 一个节点只有一个布局容器 [#一个节点只有一个布局容器]
 
 在普通 `Widget` 上写 `+ VerticalBox` 和把类型写成 `VerticalBox` 是同一件事的两种写法，后者更短。第二个布局容器是
-[DUI5022](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5022)：
+[DUI5022](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5022)：
 
 ```text
 VerticalBox Column {
@@ -136,7 +136,7 @@ VerticalBox Column {
 ### 块里还能写什么 [#块里还能写什么]
 
 行为的 `+` 块里除了属性，还可以写事件路由和绑定，它们找的是这个行为的事件和属性。布局容器的属性不能绑定
-（[DUI5008](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5008)）。
+（[DUI5008](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5008)）。
 
 ```dui
 class /Game/UI/WBP_Menu

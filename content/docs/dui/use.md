@@ -52,7 +52,7 @@ VerticalBox Root {
 - 导入的**资源**也会成为本类的变量，图表和 Class Defaults 面板都看得到。导入的**样式**不会：样式只是按名字套用的一袋值。
 - **时间线**不随 `use` 合并：一个时间线会编译成这个类树上的一个对象和一个以它命名的类成员变量，导入它就等于两个类拥有同一个动画。
 - 同一个库经由两条路径到达（A 用了 B 和 C，B 和 C 都用了 D）只合并一次，不报错：为一个两条路都能到的库写两遍 `use` 不是错误。
-- 读不出、不能解析、或者兜回一个正在导入中的文件（循环），是 [DUI2012](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2012)。
+- 读不出、不能解析、或者兜回一个正在导入中的文件（循环），是 [DUI2012](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2012)。
 
 ## 组件：`use "…" as Row` [#组件use--as-row]
 
@@ -74,7 +74,7 @@ VerticalBox Root {
 
 - 优先用那个文件的 `class` 行。
 - 没有 `class` 行时，由编辑器去找 Source File 是这个文件的 Blueprint。没有编辑器——比如在 commandlet 里——就找不到，报
-  [DUI5018](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5018)；补一行 `class` 就好。
+  [DUI5018](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5018)；补一行 `class` 就好。
 
 只读那个文件的**头部**：它有没有根节点、`class` 行写的是什么。它自己的 `use` 行不往下跟。这不只是省事：一个给组件起名的库
 （`use "Row.dui" as Row`），往往也正是这些组件拿样式的地方（`Row.dui` 里写着 `use "Common.dui"`），要是跟下去就会绕回库本身、
@@ -93,7 +93,7 @@ Widget Root {
 }
 ```
 
-给一个背后没有 `.dui` 的类起短名。这里 `as` 是必须的：没有 `as` 的类路径是 [DUI2015](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2015)。
+给一个背后没有 `.dui` 的类起短名。这里 `as` 是必须的：没有 `as` 的类路径是 [DUI2015](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2015)。
 
 ## 命名空间：`use "…" as nier` [#命名空间use--as-nier]
 
@@ -120,7 +120,7 @@ VerticalBox Root {
 }
 ```
 
-本文件没有用 `use … as ns` 声明过的 `ns.` 是 [DUI3021](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3021)。不带 `as` 地 `use` 一个本身用了命名空间的库，
+本文件没有用 `use … as ns` 声明过的 `ns.` 是 [DUI3021](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3021)。不带 `as` 地 `use` 一个本身用了命名空间的库，
 那些命名空间也会一起来：`@pal.Ink` 在这里的解析和在声明 `pal` 的那个库里一样。
 
 ## 转发：库里的 `use … as` [#转发库里的-use--as]
@@ -153,11 +153,11 @@ Widget Root {
 
 `as` 后面的名字：
 
-- 是一个词，不是关键字（[DUI2015](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2015)，`use … as` 后面没有名字也是它）；
-- 不是某个内置标签或容器的名字（[DUI3018](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3018)）——别名永远改变不了 `Text` 或 `VerticalBox` 的含义；
-- 每个文件只给一次（[DUI3017](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3017)）。
+- 是一个词，不是关键字（[DUI2015](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2015)，`use … as` 后面没有名字也是它）；
+- 不是某个内置标签或容器的名字（[DUI3018](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3018)）——别名永远改变不了 `Text` 或 `VerticalBox` 的含义；
+- 每个文件只给一次（[DUI3017](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3017)）。
 
-别名找不到类——文件没有 `class` 行也没有对应的 Blueprint、或者路径加载不到东西——是 [DUI5018](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5018)。
+别名找不到类——文件没有 `class` 行也没有对应的 Blueprint、或者路径加载不到东西——是 [DUI5018](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5018)。
 VS Code 里遇到一个不认识的组件类型（DUI3003），如果工作区里恰好只有一个同名的组件文件，会提供补一行 `use "…" as X` 的快速修复。
 
 ## `@Name`：旧写法 [#name旧写法]
@@ -175,6 +175,6 @@ VerticalBox Root {
 }
 ```
 
-条目可以是本文件的，也可以是 `use` 进来的，所以同样可以在库里起一次名。条目不存在是 [DUI4007](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4007)，
-不是 `Asset` 是 [DUI4008](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4008)，指向的不是 user widget 是 [DUI5006](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5006)。
+条目可以是本文件的，也可以是 `use` 进来的，所以同样可以在库里起一次名。条目不存在是 [DUI4007](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4007)，
+不是 `Asset` 是 [DUI4008](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4008)，指向的不是 user widget 是 [DUI5006](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5006)。
 这种写法仍然有效，但 `use … as` 字更少，是首选。

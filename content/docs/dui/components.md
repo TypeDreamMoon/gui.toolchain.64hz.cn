@@ -95,11 +95,11 @@ prop 没有 setter——它是一个 Blueprint 变量——所以这条绑定在
 
 | 代码 | 情况 |
 | --- | --- |
-| [DUI2016](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2016) | 一行不是 `Type Name` 或 `Type Name = value`，或者 `props` 写在节点里面 |
-| [DUI3019](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3019) | 两行声明了同一个名字 |
-| [DUI6008](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6008) | 编译时：类型没有对应的 Blueprint pin |
-| [DUI6009](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6009) | 编译时：名字已被类的另一个成员以别的类型占用，或者是某个 widget 的 id |
-| [DUI6013](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6013) | 编译时：默认值装不进它的类型 |
+| [DUI2016](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2016) | 一行不是 `Type Name` 或 `Type Name = value`，或者 `props` 写在节点里面 |
+| [DUI3019](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3019) | 两行声明了同一个名字 |
+| [DUI6008](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6008) | 编译时：类型没有对应的 Blueprint pin |
+| [DUI6009](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6009) | 编译时：名字已被类的另一个成员以别的类型占用，或者是某个 widget 的 id |
+| [DUI6013](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6013) | 编译时：默认值装不进它的类型 |
 
 ## `events` 和 `emit` [#events-和-emit]
 
@@ -142,12 +142,12 @@ Widget Root {
 
 | 代码 | 情况 |
 | --- | --- |
-| [DUI2017](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2017) | 条目不是 `Name` 或 `Name(Type Param, …)`，或者 `events` 写在节点里面 |
-| [DUI3020](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3020) | 两个同名条目，或者一个参数写了两次 |
-| [DUI6010](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6010) | `emit` 了一个本文件没有声明的事件 |
-| [DUI6011](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6011) | `emit` 的参数和事件的参数对不上 |
-| [DUI6012](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6012) | `emit` 写在了编译不了的地方：循环体里，或者事件的参数 Blueprint 接不住 |
-| [DUI6014](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui6014) | 事件名和类的另一个成员重名 |
+| [DUI2017](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2017) | 条目不是 `Name` 或 `Name(Type Param, …)`，或者 `events` 写在节点里面 |
+| [DUI3020](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3020) | 两个同名条目，或者一个参数写了两次 |
+| [DUI6010](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6010) | `emit` 了一个本文件没有声明的事件 |
+| [DUI6011](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6011) | `emit` 的参数和事件的参数对不上 |
+| [DUI6012](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6012) | `emit` 写在了编译不了的地方：循环体里，或者事件的参数 Blueprint 接不住 |
+| [DUI6014](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui6014) | 事件名和类的另一个成员重名 |
 
 ## 槽位 [#槽位]
 
@@ -172,10 +172,10 @@ HorizontalBox Root {
 }
 ```
 
-- `slot` 写在树里洞所在的位置，名字和节点 id 共用一个空间：两个同名的槽位是 [DUI3001](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3001)
-  （原来的 [DUI3007](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3007) 已退役）。
+- `slot` 写在树里洞所在的位置，名字和节点 id 共用一个空间：两个同名的槽位是 [DUI3001](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3001)
+  （原来的 [DUI3007](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3007) 已退役）。
 - `default` 标出宿主没指名时内容进的那个槽位，替代了重写 `GetDefaultSlotName` 的做法。每个文件只能有一个
-  （[DUI3022](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3022)；同一个槽位写两次 `default` 是 [DUI2019](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2019)）。
+  （[DUI3022](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3022)；同一个槽位写两次 `default` 是 [DUI2019](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2019)）。
 - 块或样式负责洞的布局：组件、属性和槽位行——**不能**有子节点，因为里面放什么是宿主的事（DUI2019）。
 - 带布局容器的槽位能放多个 widget；不带的只放一个。
 - `(was: OldName)` 给槽位改名，和节点一样。
@@ -203,10 +203,10 @@ Widget Root {
 
 | 代码 | 情况 |
 | --- | --- |
-| [DUI5019](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5019) | 在不是组件实例的节点下面写 `slot Name { … }` 填槽 |
-| [DUI5020](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui5020) | 填的槽位组件没有声明 |
-| [DUI3009](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3009) | 父节点不接这个子节点：已经放满的内容 widget，或者同一个具名槽位填了两次 |
-| [DUI2019](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui2019) | 一个块既在声明又在填充 |
+| [DUI5019](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5019) | 在不是组件实例的节点下面写 `slot Name { … }` 填槽 |
+| [DUI5020](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui5020) | 填的槽位组件没有声明 |
+| [DUI3009](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3009) | 父节点不接这个子节点：已经放满的内容 widget，或者同一个具名槽位填了两次 |
+| [DUI2019](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui2019) | 一个块既在声明又在填充 |
 
 在设计器里把 widget 拖进一个实例的具名槽位，写回时会写进那个槽位的 `slot Detail { … }`；实例还没有这个块时会先写出它。
 见[设计器写回](/docs/dui/write-back)。

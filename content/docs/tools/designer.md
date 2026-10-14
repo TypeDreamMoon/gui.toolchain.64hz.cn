@@ -138,7 +138,7 @@ Is Enabled 在 Behavior 里。以前排在最下面、把 Layout 的行原样重
 写回时还会拒绝几种情况，"说出来而不是写进去"：一个值没法写成语言读得回来的字面量（今天只有非有限的浮点数），
 报 DUI7003；一个由 `if` 决定的可见性、一个无法承载这个改动的简写，报 DUI7004；
 一个来自样式里 `+ Component` 行的值，报 DUI7005——样式是共享的，写进去会移动所有用这个样式的节点。代码含义见
-[DUI7xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7xxx)。
+[DUI7xxx](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7xxx)。
 
 自己在设计器里搭层级、不指向 `.dui` 的类，以上限制都不存在。
 

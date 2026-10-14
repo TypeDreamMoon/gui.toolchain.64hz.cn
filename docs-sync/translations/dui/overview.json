@@ -2,7 +2,7 @@
   "version": 2,
   "status": "unreviewed",
   "sourceHash": null,
-  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
   "sources": [
     {
       "path": "Docs/language/overview.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/dui/overview.md",
-  "translationHash": "bf95cd4a876c4bdc268eb8e828ef487e0ae1f9c1cbc63bbd45bf28600f98cf47"
+  "translationHash": "ee1e8e3f8e18ab627c2a8c283c92749f2bfb7fe8a1da7f4508e5d7d90b6004e8"
 }

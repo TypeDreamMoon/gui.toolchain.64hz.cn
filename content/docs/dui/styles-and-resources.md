@@ -28,9 +28,9 @@ Widget Root {
 `Note` 最后是 14 号字、颜色 `#E05A47`。规则：
 
 - 样式可以继承另一个样式（`style Warning : Caption`）：先套基样式的行，再套派生样式的，最后是节点自己的。
-  兜回自己的继承链是 [DUI3015](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3015)。
-- `: Name` 指向一个本文件看不到的样式是 [DUI3004](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3004)。
-- 本地样式会遮住 `use` 进来的同名样式。一个文件里两个同名的本地样式是 [DUI3005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3005)。
+  兜回自己的继承链是 [DUI3015](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3015)。
+- `: Name` 指向一个本文件看不到的样式是 [DUI3004](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3004)。
+- 本地样式会遮住 `use` 进来的同名样式。一个文件里两个同名的本地样式是 [DUI3005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3005)。
 - 样式的声明顺序随意，可以写在穿它的节点后面。
 
 样式只是一袋值，按名字套用，它本身没有身份：它的值落到穿它的节点上，样式自己不会成为类的变量。
@@ -63,7 +63,7 @@ Widget Root {
 - 节点自己的 `@slot` 行赢过样式的。上例 `Right` 是 `Fill`（来自样式）加权重 2（来自节点）。
 - 样式里没有子节点：它是一袋行，不是一棵树。
 
-在设计器里改一个来自样式 `+` 行的值，不会被写回（[DUI7005](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui7005)）：样式是共用的，节点自己又没有
+在设计器里改一个来自样式 `+` 行的值，不会被写回（[DUI7005](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui7005)）：样式是共用的，节点自己又没有
 `+` 行来装这个改动。在节点上补一行（`+ VerticalBox { Spacing = 20 }`），或者去改样式。见[设计器写回](/docs/dui/write-back)。
 
 ### 跨文件的样式 [#跨文件的样式]
@@ -104,9 +104,9 @@ VerticalBox Root {
 `@Accent` 就代表 `#FF6600`，绑定表达式里也一样。`Asset` 条目也接受加引号的路径。
 
 - 类型对照的是条目**自己的值**（`Color Accent = 8` 在条目那一行报错，而不是在每个用到它的地方报形状不符）：
-  对不上是 [DUI4008](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4008)，写了五种以外的类型名也是。
-- 引用一个不存在的条目是 [DUI4007](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui4007)。
-- 条目在多个 `resources` 块之间累积；同一个名字声明两次是 [DUI3014](https://github.com/TypeDreamMoon/DreamGUI/blob/613cb23a4b318f9e6597ceae03a3d768b061d25c/Docs/zh-CN/diagnostics/codes.md#dui3014)。
+  对不上是 [DUI4008](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4008)，写了五种以外的类型名也是。
+- 引用一个不存在的条目是 [DUI4007](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui4007)。
+- 条目在多个 `resources` 块之间累积；同一个名字声明两次是 [DUI3014](https://github.com/TypeDreamMoon/DreamGUI/blob/305806ec15a1538f16e8d6a3b9707806f697a612/Docs/zh-CN/diagnostics/codes.md#dui3014)。
 - 每个条目都会成为编译出来的类的一个变量，所以图表和 Class Defaults 面板能看到 `@Accent` 是什么。`use` 进来的条目也一样；
   同名的本地条目遮住导入的。
 

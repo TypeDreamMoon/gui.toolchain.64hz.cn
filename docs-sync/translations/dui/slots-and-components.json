@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "a8882bc14bb2df3d028836b9c3c32805414d769041d106eaa56ce5c4b2f9ab1c",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/language/slots-and-components.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "32f935177990aeaa3818f00170a0cb227c58bdb94dc1581484a7ad0525b7957a"
+      "sourceHash": "f345a1afa281c9154f424a09f7d579e1f543d1325c32be35793d36b818ef9f07",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "f7edda355c043c36381e4a9f17bd9a65455197c411e813ff8e41da02edb6fa34"
     }
   ],
   "translationFile": "content/docs/dui/slots-and-components.md",
-  "translationHash": "46e7cfbed80e909ec4221c568e255b78ec99282b612ea20a60e810c59e76d611"
+  "translationHash": "5452fff08f72a5fda8b622891522acf40f403ca90e0d616187dad8eeeafbc7f6"
 }

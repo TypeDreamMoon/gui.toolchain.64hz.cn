@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "7b1952dac39dc0491ca3b05f4a1505424fa707a86ef5b89f20cc5807f9879cbf",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/concepts/lyrics.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "76302bf0fac4104847ca8660e6f9daa51c70be5d178f18044d7d67d3aa8dbe74"
+      "sourceHash": "056ca43342ab9a944c5b7b6d7af0fb3193f776aae60b0ad888435e27d6d6c988",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "8a11066ee532e65770028661c2fd188063be03f1d0b6e1c0701f1ae88a331af7"
     }
   ],
   "translationFile": "content/docs/concepts/lyrics.md",
-  "translationHash": "e30f296293ae9657fa7d1dbc882009ed277c4f08d6ca15defa726ecd092597da"
+  "translationHash": "8b677fdaccf7b5835b4da674a730d8e340de30bd3a0a50c593c8b7880fc54bc4"
 }

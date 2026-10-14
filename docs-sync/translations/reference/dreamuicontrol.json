@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "607e67cd4762b13178894cedb983c68e0c68dda1d54307f36333b68c4337f290",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamUIControl.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "2a0cee99232e5c3baa208167fd6f7cef3464a8cf6689b276b826ce52517f1db0"
+      "sourceHash": "97eeff036041af00cf55375d7ae5a7da2d5cf8f649caf42554b555200008981f",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "517b8fcbcb07099fb76cf28ec6f0dfaa4e01ea3da45a3e48d716d6cce2066ae4"
     }
   ],
   "translationFile": "content/docs/reference/dreamuicontrol.md",
-  "translationHash": "fc5a866c935fdfadeb94d78d3b6867b5869fa68a61abd95e2baa314d1b30fb60"
+  "translationHash": "ec1ef4bebc7f3efc77d97549332956922a3795b616f3adb2b3ea745a3326d06b"
 }

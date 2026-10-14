@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "8308c360b2676656b4ac80d596989007d748928704d52e2f4c0bae04e8837c2b",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamSlider.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "29f817ba7f8071c0c8b30b5f0a3ab5929ed50dad48bd8f55bf6b54591e1f5208"
+      "sourceHash": "ca7fc6f77626b01ce8823a40fa9aa20b6a15dae18dfdcf4b04bbea22854c0050",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "6bf49fe65de8e2ee44e5551666c30c2f3aa330bd3c2c4839ced8066ec39e5865"
     }
   ],
   "translationFile": "content/docs/reference/dreamslider.md",
-  "translationHash": "ae1270bcd392a670469c23cc101d4c651e6e74e6ba92aedf63e708be8c896993"
+  "translationHash": "053d8194690210681d73691c052cb30053573b4fbaabe75116e869fba7355ee0"
 }

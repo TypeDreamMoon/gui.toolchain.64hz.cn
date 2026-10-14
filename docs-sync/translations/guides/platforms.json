@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "a2bfd5379e36cad99c99723461c9f67008d27c0b759cd032be5771b17be71c11",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/guides/platforms.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "c826637e68de683cf6ec6f0d3ef043e9e119f0b1eeed578a052b8b8c41bd09f6"
+      "sourceHash": "80afd05d8e7bc689f33423b40986826c00d67e28b8693a30a6d35a745f6dfa84",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "049122787b01edddd0b0f28e9d99a43019f09f2fe006d87af33e35677290a33f"
     }
   ],
   "translationFile": "content/docs/guides/platforms.md",
-  "translationHash": "863684fc12e85cc1e5aaba7068a648dab2bc59c2391649c2cc78d55578918dac"
+  "translationHash": "9724b3e87ecd5d40ba492c41f2ef165fbd00e2646237ab1060241507a3a2406d"
 }

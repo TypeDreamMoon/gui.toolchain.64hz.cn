@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "97f21831869fe78465f49bbc3de75dee4d05e8d6c014d751c991398779dda0c7",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamButtonStyle.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "462e805579a8b80d06267c91cc14ccc86f52b606e0c3e63f665c0b53bbea1ca8"
+      "sourceHash": "a14faab7cbc02688e74d75d7153d76f57442841ab679e5647f0e9b0a876a3ca8",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "e8a829ca2f4343b51d22c83baaafcf9e500c49b27e5c198177d65b1f3a14d7f7"
     }
   ],
   "translationFile": "content/docs/reference/dreambuttonstyle.md",
-  "translationHash": "1231dfa1079d10bb270ca67d3f54e8ef947412594e94d7d2c9cd1492a96fee69"
+  "translationHash": "c536db35e0acc21216ffcf8a9957bc0800203b1da587f5834c892195eb041957"
 }

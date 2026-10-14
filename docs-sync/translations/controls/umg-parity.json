@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "e7e8c5a5a9c2678c4ede7345832fa0c799a4f49af2a99c84f74cb25cd0397eb5",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/controls/umg-parity.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "fb78c8c2e1b5e515d53e84ee0dd0b1e305441726606d3a12fc3a6a80d4311ae4"
+      "sourceHash": "cffde785f554a76018799c0f48f40bcdd25038c03af0d5c40adad6c9faa1332b",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "aec16feed54b43e86ccaca19bf2753d58ad8f0590ae11b575df8a8b02a0e7439"
     }
   ],
   "translationFile": "content/docs/controls/umg-parity.md",
-  "translationHash": "e106e22ddd43a2c1cd1262d236a573e78e0156513df675499a95928c9ec78f3b"
+  "translationHash": "aa69fd76eccae85f5fe16a9369920c4d2067610c15b7f35405a01c892ee9dc3a"
 }

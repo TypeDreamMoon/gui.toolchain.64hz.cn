@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "a9e0d575076eaf8a06d33b31d9d9fba659c15dfb40b6fc72b560e01100220f7a",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/language/example.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "55f163dd4c2efb87323d2f4bac31aa8a01ea34c3cdc8df46ce501f30805fb3d5"
+      "sourceHash": "e62682e2e8af05ae2b47815e614ebc833a6c6b4132a06360b0e841f561ef4809",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "89a15a5b9d6a20a66e051b402f5444be2cf2c2c9cd06c49c82aaa382738865f2"
     }
   ],
   "translationFile": "content/docs/dui/example.md",
-  "translationHash": "8ece33972f01843218186d8563d80c201f32ce214c624d41c4c24293a854ab64"
+  "translationHash": "a40868387b9b772ab0fd62d12d870034af0d393c91728ea3a7306131f0d7d2ae"
 }

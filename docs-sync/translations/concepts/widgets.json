@@ -2,7 +2,7 @@
   "version": 2,
   "status": "unreviewed",
   "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/concepts/widgets.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/concepts/widgets.md",
-  "translationHash": "71acffade95bc299373a4e52ea05f3e90e564d8338cb83367e017701fcd6ee0b"
+  "translationHash": "a2bf68f1fe64ab32543e9732474f2a6365198e7791e3ae559ad5085f45f2467a"
 }

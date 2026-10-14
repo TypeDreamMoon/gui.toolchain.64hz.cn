@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "a29159120e412f128ff49942141348ec4b0c3a09cacb43772613e8baae49fb38",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamUIFaceBrush.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "83aed74ea1f6752d8a804a28aad19031fb853f1687a566a34518a9c1e106a0be"
+      "sourceHash": "e911a092616bbae891bd3d249c0c8ae70a1133c6d18f110b4541d388fae49af5",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "e011cceed0bdcabc3ee3944b82e512eb5106ec8da8a90b19d2a5f749e5da1c75"
     }
   ],
   "translationFile": "content/docs/reference/dreamuifacebrush.md",
-  "translationHash": "dc944f1e7f403e0d1e3e0fc1d17883e5ffb3ded75c31bfd538691e594bdb28e7"
+  "translationHash": "bcf3e4941dfbcf19b3f89dbb5669c0ed9cd41b990f6d92544bb3ff4234adf41d"
 }

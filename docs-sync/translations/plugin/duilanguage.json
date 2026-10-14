@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "current",
+  "sourceHash": "62cb799f8dcd3eacb8479539085fa38e44c3836b3502cba42734f61e045b0b74",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
+  "sources": [
+    {
+      "path": "Docs/language/index.md",
+      "sourceHash": "ebbde6c01fef37d468363ed797368220f4e49c5f2c7cf0ef750c1c4d27ec645f",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "038d138d4f2dffb22079b21d73f65ebba047a2b2080b0c3b8ea3ac97f06acd3b"
+    }
+  ],
+  "translationFile": "content/docs/plugin/duilanguage.md",
+  "translationHash": "83017c2885ea5d1422cd30719177042f7b34a7b33b61b46b91c6d30c2ebe00dd"
+}

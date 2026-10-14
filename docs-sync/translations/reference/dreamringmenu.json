@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "33e9c5198e50c5fe81e80bc23f5fbb2cc95ae4028c9c98f84b518e657a6f4d79",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamRingMenu.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "dfcc43f69f2c9f62030ad1fd5788ca4e79b19a485afd483691086d1d99c7df14"
+      "sourceHash": "72557bdcdbd7e66331613e11f4762ab6240fccbdcaa86e8bfa3a1a67cfabf3eb",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "07c7e607fd27d68f8e27a050238c274bf00d5f5d8cb2ee3f5baf072ed9ac388a"
     }
   ],
   "translationFile": "content/docs/reference/dreamringmenu.md",
-  "translationHash": "6a7170bb4b0eaeb2b8ec0e16f4eca4ccd6b0afabdc0408c5c805804f429b8a34"
+  "translationHash": "25555d2111cccb169b7d8cbcb6bcca519530904f237112c220b297c9d8b3be2d"
 }

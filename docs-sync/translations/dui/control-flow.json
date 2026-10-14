@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "990d52b6aab45fb2c86145f41f6a516c379ff1c9d4f625be88a796ecdf8dcc12",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/language/control-flow.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "4c26608c89ad649b2fa15d1697526a122d5b2157d59f03376429adf2ca97cba5"
+      "sourceHash": "d672da54308e7ec38ea6776e811c966d860e05b83b2aaa2629cdbc8819d03cdc",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "4732fca7523243038e364da34d66e4443cd46fe967546a9f955c3a031cca94a8"
     }
   ],
   "translationFile": "content/docs/dui/control-flow.md",
-  "translationHash": "954c47a1847935a50f30a479edf227ca3669c62f11bffba34af559fbad313fbb"
+  "translationHash": "e527e6eef4829fb0d5fd04513e0fd5606efd3e8f7e5f79157cb7cf6c12a3cf63"
 }

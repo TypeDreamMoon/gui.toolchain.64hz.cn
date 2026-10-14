@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "a23492d1d11c92e15efbcf9751e572144d6f6db525f3a84e645b4c258c004e0c",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamInputKeySelectorStyle.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "a6eeaeddc800d7d6b643821d55941d5b87ad04fb67abd0f61734dc4f79dde001"
+      "sourceHash": "a5d66fd34d8024a88d900242b2b3de3c76e38464043749041298bf5f534be182",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "c5ae7473f4dc9a59a6f87c37a46985f3f114173d82db44bb4e5920ccc1fc8222"
     }
   ],
   "translationFile": "content/docs/reference/dreaminputkeyselectorstyle.md",
-  "translationHash": "d62389a8395627501f72b31b617922877cad817cd1d3af3ffa1be933ccdbb086"
+  "translationHash": "eee45902e0fe43da5f022b7f269282d9e1a2894d1855ac8dc3e480b0ecc62f12"
 }

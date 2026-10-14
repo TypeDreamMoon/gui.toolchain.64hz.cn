@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "2d45b469285e838b9ee0f1b189dd15c78303433eedd90d71308c51eaf20387bb",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamTextInputStyle.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "83f9d4039fea28bc25204377d43e48d89149439f462164c821f93a6126e0d87b"
+      "sourceHash": "3c5626a9164c6dcac06ce936f3c3cdcf3454abb810f1fb62f2893f53d82fa5ed",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "9ea2f97a8cc8ae50595b25c71bca9cc40af0c0360bd287664e9a5ae37e9cd3cb"
     }
   ],
   "translationFile": "content/docs/reference/dreamtextinputstyle.md",
-  "translationHash": "a7d9745a2d4c53379d0f749ec034cbde8b98723d971fe4d8becda889acc54461"
+  "translationHash": "92f8db95be8d5ee86532a67b63e5fbe951d3d6b3a4f9fc715d5cd85adda825ce"
 }

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "261420a10acdf4c771a9cbc64f02a6cdcd12b79362bb9fcc7a31c26bc5f2c636",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/tools/debugging.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "b6ab29c5c022696c0ae524960ec2870d876e5b022a3d45e795feb71aeaba0a90"
+      "sourceHash": "f9293a0cbe888e86c67bb7a0f6163104b5dc47f8901305fbe231f6970394d182",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "228f95552fd37050c0896383b05ced2ee42837a80e963f72106a323701aab19a"
     }
   ],
   "translationFile": "content/docs/tools/debugging.md",
-  "translationHash": "8520751e271ed75a7fb2d8782a51b59947915ff10acd714fe1ae5ffff27dc7e5"
+  "translationHash": "eeb3ae87c616b6606942232ea8ac94861cf5b58d5c28e8cb7a51bc0e04a5ff82"
 }

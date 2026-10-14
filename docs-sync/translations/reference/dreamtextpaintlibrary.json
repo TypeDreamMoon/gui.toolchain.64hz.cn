@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "740669a4961f42df7cd57adcd3d829340d94105c6962010566192bd35ec446c9",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamTextPaintLibrary.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "90cd20fc8297e96451295381836605ead8c677a4d74b5af21032da58f388f049"
+      "sourceHash": "a114e40fd4932572522b162ad5e2a8614c28bb2d21a93f31f11ad12b658e3dc0",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "e4595f772546c09521af8fb34055ac31bfcd09948ecaf2aaf8c11ca864fd3192"
     }
   ],
   "translationFile": "content/docs/reference/dreamtextpaintlibrary.md",
-  "translationHash": "3ff5f143710ce2253ae55448777212c700cb40472c0e8ede78a306b2e1e8ee56"
+  "translationHash": "0489daf6f695d993d64a707c45cd037561d2d43c924d698dd1f521621287fbe2"
 }

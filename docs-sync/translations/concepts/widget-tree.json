@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "bb75a35cb77471290f1bd66e17845e504f914725ae488b5733b4b6b9259c1ba6",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/concepts/widget-tree.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "9c80cd5afe2c7b72d7f13a1e2038c592baeb539dc132a356b5136e3863ccf364"
+      "sourceHash": "bd5acd01dd8e3802821c14c391c501346eec600f599b949bffe334dc0a769af2",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "e0ea5f2f595ea9944a065763789d4a03c80b95aab56dda1e99c119b457450b1a"
     }
   ],
   "translationFile": "content/docs/concepts/widget-tree.md",
-  "translationHash": "69468d4224f90b3f32209bb9d41020361962676816f92f30017782369659d4fa"
+  "translationHash": "d1303911c3b63c2a9b25d53d4786f9b1ce01a6dc076a937bf50825cf804d8a69"
 }

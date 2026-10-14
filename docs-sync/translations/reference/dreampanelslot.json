@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "93e1b0778b9b67179321ec10874fd5f6cd57f2a1ca33a216179ffe39f0f7f9e6",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamPanelSlot.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "81fd978aedeabbb4e532b156fd2f2f732808fc5da4727fee478eb8da68efd86b"
+      "sourceHash": "9fb2eee0d434cd49e002b88783cd09f9782a8a3dea1d9e0a4edbeaf1c894b836",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "97fa6a9b0a973ac459d899c14ff24683bcebf75aef19b2063e61c79338977d39"
     }
   ],
   "translationFile": "content/docs/reference/dreampanelslot.md",
-  "translationHash": "70cd0aa78ffd7bc7401fb413c6dba8c0c3040b311f8dec04a98cf46d5d86adf0"
+  "translationHash": "d53acb697a084a70e1cdb420ba8af04762e2023574ca889cf327d6564d53b9f0"
 }

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "da391a4c042e421ad034b4b91c4eaf8b39c54fd784351fe8a2a959a08ec8d9f8",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamLayoutContainerSafeZone.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "cdbda5b6c81befa2ff08a0175784bc411b5d2e1b60d21b416f113877af3c174e"
+      "sourceHash": "6974f29c45f4be015cb0856a3aa866f805875a03491fe0717146ff276979159a",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "b973e7eb9ab4289d533b4897abe0a7e907cd891448d8673a3038ae59a471f7c6"
     }
   ],
   "translationFile": "content/docs/reference/dreamlayoutcontainersafezone.md",
-  "translationHash": "ab953e5e513b12823be3d21ea9eaa0a8beef405a65452e961b0f80e54a3358fc"
+  "translationHash": "67d6b841e506be79a748c9d7c24e01b28eacfbf81b263aa1503d3c750c16204a"
 }

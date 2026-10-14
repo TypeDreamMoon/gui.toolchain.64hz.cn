@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "c2a66f6d7091b058dd9dc944d7cde6b3c490d145f95017a9e4fe7b0bdec3bf2f",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamRichTextStyle.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "83ea7cdc9816b06056736b86453a93d4e4bc257b3492840cb98f675efad669f7"
+      "sourceHash": "e7f127687c5f58543b638186e284c9021deaabdb2beaf33c192ef450a785e436",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "443a1583bda04e93d55f66c2fb47c283bbb8fbc04f5f7572914a6a3928603312"
     }
   ],
   "translationFile": "content/docs/reference/dreamrichtextstyle.md",
-  "translationHash": "cf4838987260f0994d54938fc44fb43bde70ea07b5cb7ab5d2fd30e2bbec927d"
+  "translationHash": "c6f24a870f40a5e804f21cb0476f855b816c5a63fbb355695c6c115157562de5"
 }

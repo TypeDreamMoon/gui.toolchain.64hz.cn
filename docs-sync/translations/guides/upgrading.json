@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "4241d3356b06b43db179039f48cf61b101f9b98ba5da5c1f89cc59472941c8c8",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/guides/upgrading.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "9ca7af881f37ca5dcbd7f529db0d247d114db92a0cb6fe0a52ac6448a524c614"
+      "sourceHash": "9fb678105bd2c4e87b248546a1b282bce80db3b29ad03299149291720f0b5880",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "f0563407a68996cf10a45e0a0c3e7ac3176d433967e6ad26ca87fab78d375bbe"
     }
   ],
   "translationFile": "content/docs/guides/upgrading.md",
-  "translationHash": "1140205dc14c4b859fafd27d80789d2bd627d3b377db536de366ad604f3cd4c6"
+  "translationHash": "1df7a8f5697e6224647a95afce6a4ce333a083a11150cdef788e43da79582b6c"
 }

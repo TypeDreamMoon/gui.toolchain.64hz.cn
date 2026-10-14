@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "5d3a37af76abac608866db1838501068eaa58e662b38153ba77b2a5a7b63c3b2",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamBorderStyle.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "ea1c271706ba4090b9d31fc4cd8319d9f4e53d2ecf77440970ec9fb1f262b352"
+      "sourceHash": "a4927d1119d0c84dc9bd587d7fb9d191437708001b986c634990ef723d4e7932",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "05170684822230d0cee6dcdd5f12baa0b5acc268f767e13b7a4141fb7d2d08c6"
     }
   ],
   "translationFile": "content/docs/reference/dreamborderstyle.md",
-  "translationHash": "6df6867da132ae59e27c3e6db08e9a82320998586e6c082734d6107f9f3631f7"
+  "translationHash": "bb724b46302f19b647ef962c30bc96692acff61d5c2418a365ff1a23b7a7edc7"
 }

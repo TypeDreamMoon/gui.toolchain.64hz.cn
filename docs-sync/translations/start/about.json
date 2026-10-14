@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "bda3385ed590b230a9ebcf9c354a021c29d55b97c02f8344eb341ec20bc2b235",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/getting-started/about.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "862d7153fced3440309aaa11234086ee20e07608efd4bdcf54cae754492547a9"
+      "sourceHash": "b2a7d056ebce9b5591e602824c1288e6d8935a13cba26a56dc98f40a5aad7915",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "bb400b2bdaf06a4e1092ca30fe70dc5a2d8caea961a4ea72f33186ebe49e4533"
     }
   ],
   "translationFile": "content/docs/start/about.md",
-  "translationHash": "a6b82243c2b6859a8d15695d5810a0cf69a4e5973552d3a90ac04be22717ba44"
+  "translationHash": "919ba0756aa6bd32f29cd22985dd3dd7eb58485bdfa8adfa7d0122589bdf0d03"
 }

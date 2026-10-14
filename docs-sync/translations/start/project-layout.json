@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "7eb081b5849fac521755c0e3bc4ff3356068eedaac3478e80990eeec680733fe",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/getting-started/project-layout.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "92c468f578d38e0a3753b35181179920e64dccafd6f23e827a28f441f821e6d7"
+      "sourceHash": "a246599f62984473f4b29078684fd137f45f60ebedbdeea65cecfbe7d823e541",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "6332c17235368ee70001f1eaed3598d89514fbc6a07622955132042cf90726a2"
     }
   ],
   "translationFile": "content/docs/start/project-layout.md",
-  "translationHash": "ff13b5a92d77d63cac01647d56b5f6dcfd34195c6f8ae0b0fbf9db0077442ade"
+  "translationHash": "c95b605496302fba54faff47fee83d5b23a2d9e4132cca814541939b18dfc484"
 }

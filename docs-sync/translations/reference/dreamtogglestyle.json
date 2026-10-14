@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "1c228cbd73d168f6fa7b284fb37160730a3a368c82540925fe9dfe2285ea8f2e",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamToggleStyle.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "53687aee24fff042b8b29ec9a6d8e6ec850d411c077425ddcb4ff9967d4b5cf9"
+      "sourceHash": "f2480f7b646985b398f23463ea5a440d71395056d10c277085237e0958b5fbb8",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "d51c5889af3a31d408c83e50723a6fdf1a8fc43e957b9fe8676061f485530602"
     }
   ],
   "translationFile": "content/docs/reference/dreamtogglestyle.md",
-  "translationHash": "6b15362b3979f52adf2a06d05509a0095da668ba399bf97085f25cc30929f567"
+  "translationHash": "78e0c5c56ed0e4c537011f68804d0ac0d3125e96daea87945ba5ab1be555e9f2"
 }

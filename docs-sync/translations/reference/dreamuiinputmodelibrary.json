@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "fadbc5cbb57baaa22d6c4feb9b56eba6b913901b8de58b05b443104620cc2502",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamUIInputModeLibrary.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "46f25f32a199ff4042436f5cb0d81b778190f3d3cc79bc5fe8065c27440e1017"
+      "sourceHash": "a3438591940b5ada4e93e6c0dbbdbd7bed3a61130e6f90e9eab34bf606243e0c",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "470308755942cd970caeb510e36bffa4fd25b72bdf3c0c73aaa0b934eb9f11ae"
     }
   ],
   "translationFile": "content/docs/reference/dreamuiinputmodelibrary.md",
-  "translationHash": "a076bd689b9392ad86de3bac745442b4971dcca230e546c399467212cb043712"
+  "translationHash": "f11042853b29d9f0eca52310dfbd96c580decb74de5727433860e6f8068753b4"
 }

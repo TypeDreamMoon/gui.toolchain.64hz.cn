@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "ea9bd2843f6caf45ce843f9a4c6d58d4d0ccc19b10f0e7f8566f9288bec848c8",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamLyricsLibrary.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "6108b8bd7b6b897d43f90818478f1951de6712e7ec6a83753f67ed860bf79257"
+      "sourceHash": "577d10ad00a7b60b4f3be07834b7be254df4c7e3e5ce3fd4ad4420e3261fa73d",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "2913b638f4917a029494285b682d71f99e018f78f86a6b5b0cd0171cfb4070c6"
     }
   ],
   "translationFile": "content/docs/reference/dreamlyricslibrary.md",
-  "translationHash": "5869a966af7e92d2d8760b43add98398fa0e0aaf9de8ecba41ea71d0337c7b1a"
+  "translationHash": "8aa6f2928f2cb96598668f50827cef5e8c7427a25400ea0a3a531f9365dfff46"
 }

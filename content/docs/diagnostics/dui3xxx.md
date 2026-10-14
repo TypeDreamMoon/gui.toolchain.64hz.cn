@@ -3,543 +3,146 @@ title: "DUI3xxx · 语义"
 description: "语法没错，但这棵树对不上：重复的 id、未知的类型。"
 ---
 
-# DUI3xxx · 语义 [#dui3xxx]
+## DUI3001
 
-本页由 `scripts/diagnostics/sync.py` 从插件的码表（`EDreamUIDiagnosticCode`）生成，卡片里的枚举名就是测试断言用的那个名字。
+`DuplicateNodeId`
 
-## DUI3001 [#dui3001]
+两个节点共用一个 id。
 
-**严重级别：** 错误 (`error`)
+## DUI3002
 
-**消息：**
+`InvalidNodeId`
 
-```text
-两个用了同一个 id 的节点。
-```
+一个不是标识符、以数字开头，或者是关键字的 id。
 
-**触发位置：** `DuplicateNodeId`
+## DUI3003
 
-**怎么会出现**：id 是节点的身份：它同时是 guid、类成员变量名、绑定的键和本地化键。比较不区分大小写，因为它最终变成一个 `FName`。重复的 id 永远不会被悄悄改成 `OkBtn_1`，那样会让你的绑定悄悄指向另一个节点。slot 和控件共用这个命名空间，所以两个同名的 slot、一个和控件同名的 slot 也是这个码；宿主里填充组件 slot 的 `slot Detail { … }` 不算。
+`UnknownNodeType`
 
-```dui
-Widget Root {
-    Text Title { Text = "Settings" }
-    Text title { Text = "Audio" }
-}
-```
+一个不是标签、容器、别名、已注册控件或路径的类型。
 
-**怎么改**：给其中一个改名；如果冲突来自一次改名，用 `(was: …)` 让下一次编译把引用迁移过去。
+## DUI3004
 
-## DUI3002 [#dui3002]
+`UnknownStyle`
 
-**严重级别：** 错误 (`error`)
+`: Name` 指向这个文件看不到的样式。
 
-**消息：**
+## DUI3005
 
-```text
-一个不是标识符、以数字开头或者是关键字的 id。
-```
+`DuplicateStyle`
 
-**触发位置：** `InvalidNodeId`
-
-**怎么会出现**：id 要能当 C++ 标识符：字母、数字和 `_`，不以数字开头（ASCII 以外的字符算字母，所以 id 可以是中文）。`2ndPanel` 会被拒绝，因为生成的类会把它声明成 `_2ndPanel`，照着文件里的名字写的绑定就全都对不上。`class`、`style`、`resources`、`slot`、`for`、`each`、`in`、`was`、`use`、`timeline`、`external`、`ease` 是关键字，不能当节点 id 或 slot 名；超过 `FName` 长度的 id 也报这个码。
-
-```dui
-Widget Root {
-    Text 2ndLine { }
-    Text external { }
-}
-```
-
-**怎么改**：换一个以字母或 `_` 开头、不是关键字的 id，比如 `SecondLine`。
-
-## DUI3003 [#dui3003]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个既不是标签、容器、别名、注册控件，也不是路径的节点类型。
-```
-
-**触发位置：** `UnknownNodeType`
-
-**怎么会出现**：节点类型按顺序解析：内置标签（`Text`、`Image` 等）、布局容器（`VerticalBox` 等）、`use … as` 给出的组件别名、注册标签（`Native.Button` 等）、资产路径（以 `/` 开头）。都对不上就报这个码；对带作用域或命名空间的名字，消息会列出那里实际有哪些。
-
-```dui
-Widget Root {
-    Txt Title { Text = "Settings" }
-}
-```
-
-**怎么改**：修正拼写；组件先用 `use "…" as Name` 引进来，或者写它的完整资产路径。
-
-## DUI3004 [#dui3004]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个指向这个文件看不到的样式的 : Name。
-```
-
-**触发位置：** `UnknownStyle`
-
-**怎么会出现**：节点的样式子句或者样式的基类，用了一个既没有在本文件声明、也没有被 `use` 带进来的样式名。样式可以写在戴它的节点下面，先后不影响。带命名空间的名字（`nier.Label`）如果命名空间本身没被声明，报的是 DUI3021 而不是这个码。
-
-```dui
-style Caption { FontSize = 14 }
-Text Note : Captoin { Text = "Ready" }
-```
-
-**怎么改**：修正样式名，或者 `use` 声明了它的那个库。
-
-## DUI3005 [#dui3005]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
 同一个文件里的两个同名样式。
-```
 
-**触发位置：** `DuplicateStyle`
+## DUI3006
 
-**怎么会出现**：本地样式可以遮蔽导入的同名样式，但两个本地样式同名时，构建器和写回器可能对“一个节点到底拿到了哪些属性”得出不同的答案，所以第二个被拒绝。
+`UnknownBehaviourClass`
 
-```dui
-style Caption { FontSize = 14 }
-style Caption { FontSize = 12 }
+`+ Name` 指向控件无法携带的东西。
 
-Text Note : Caption { Text = "Ready" }
-```
+## DUI3007
 
-**怎么改**：合并成一个，或者改名其中一个；要在一个样式上做变体，用继承，比如 `style Small : Caption`。
+`DuplicateSlotName_Retired`
 
-## DUI3006 [#dui3006]
+已退役；两个同名 slot 现在报 DUI3001。
 
-**严重级别：** 错误 (`error`)
+## DUI3008
 
-**消息：**
+`ShadowedLoopVariable`
 
-```text
-一个指向控件无法携带的东西的 + Name。
-```
-
-**触发位置：** `UnknownBehaviourClass`
-
-**怎么会出现**：`+` 后面的类名会依次加上插件的前缀去找（`UIButton` 和 `Button` 都能找到按钮行为），也可以写 `/Script/Module.Class` 全路径；找不到一个行为、布局容器或 layout-self 对象时报这个码。样式里的 `+` 行也一样。
-
-```dui
-Widget Confirm {
-    + UIButon { TransitionType = None }
-}
-```
-
-**怎么改**：修正类名，或者写出完整的 `/Script/…` 路径。
-
-## DUI3007 [#dui3007]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-这个码已经退役、从不报出，两个同名 slot 现在报 DUI3001。
-```
-
-**触发位置：** `DuplicateSlotName_Retired`
-
-## DUI3008 [#dui3008]
-
-**严重级别：** 警告 (`warning`)
-
-**消息：**
-
-```text
 一个遮蔽了外层循环变量的循环变量（警告）。
-```
 
-**触发位置：** `ShadowedLoopVariable`
+## DUI3009
 
-**怎么会出现**：嵌套的 `for` / `each` 用了和外层一样的变量名。它只是警告，因为遮蔽本身改变不了构建出来的树。不过循环本来就不能嵌套：构建时内层循环会被 DUI5021 或 DUI5012 拒绝。
+`ParentRefusedChild`
 
-```dui
-VerticalBox Groups {
-    for Item in GetGroups() {
-        VerticalBox Group {
-            for Item in GetEntries() {
-                Text Entry { Text <- Item.Name }
-            }
-        }
-    }
-}
-```
-
-**怎么改**：内层换一个变量名；更要紧的是把内层循环放进一个组件，由组件自己的文件去循环，列表经由它的 `props` 传进去。
-
-## DUI3009 [#dui3009]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
 一个不肯接受这个子节点的父节点：已经满了的内容控件，或者被填了两次的命名 slot。
-```
 
-**触发位置：** `ParentRefusedChild`
+## DUI3010
 
-**怎么会出现**：节点没问题，父节点也没问题，只是这一对不行。`SizeBox`、`ScaleBox`、`SafeZone`、`Border` 只放一个子节点；命名 slot 只放一个控件，同一个 slot 也不能填两次；嵌套成环同样被拒绝。挂接时多出来的子节点会被悄悄丢掉，没有这个码，你会得到一棵少了一截的树，而那一截明明就写在你的文件里。
+`RenameOldIdStillInUse`
 
-```dui
-SizeBox Box {
-    Text A { Text = "One" }
-    Text B { Text = "Two" }
-}
-```
+`(was: X)`，而 X 仍然是这个文件里的一个 id。
 
-**怎么改**：把几个子节点放进一个容器（比如 `VerticalBox { … }`）再放进去；需要一个 slot 放多个控件时，在声明里给它一个布局容器。
+## DUI3011
 
-## DUI3010 [#dui3010]
+`DuplicateWasId`
 
-**严重级别：** 错误 (`error`)
+两个节点都声称 `(was: X)`。
 
-**消息：**
+## DUI3012
 
-```text
-一个 (was: X)，而 X 仍然是这个文件里某个节点的 id。
-```
+`SelfRename`
 
-**触发位置：** `RenameOldIdStillInUse`
+在名为 X 的节点上使用 `(was: X)`。
 
-**怎么会出现**：你把节点从 X 改了名，又新建了一个叫 X 的节点。“把指向 X 的东西都搬过来”会把引用从一个确实存在、也需要它们的节点上搬走，所以拒绝；而且整个文件的迁移都不做，因为迁移了一半的文件比没迁移的更糟：下一次编译就不再从作者写下的样子出发了。
+## DUI3013
 
-```dui
-Widget Root {
-    Text Title (was: Heading) { Text = "Settings" }
-    Text Heading { Text = "Audio" }
-}
-```
+`RenameGraphReferenceAmbiguous`
 
-**怎么改**：先给另一个节点改名，或者删掉 `(was: Heading)`。
+旧 id 同时也是另一个成员的名字，因此图表引用不会被迁移（警告）。
 
-## DUI3011 [#dui3011]
+## DUI3014
 
-**严重级别：** 错误 (`error`)
+`DuplicateResource`
 
-**消息：**
-
-```text
-两个都声称 (was: X) 的节点。
-```
-
-**触发位置：** `DuplicateWasId`
-
-**怎么会出现**：一个旧名字不能变成两个新名字，没有办法决定由谁继承 X 的引用，所以整个文件的迁移都不做。
-
-```dui
-Widget Root {
-    Text Title (was: Heading) { }
-    Text Subtitle (was: Heading) { }
-}
-```
-
-**怎么改**：把子句留在要继承引用的那个节点上，删掉另一个。
-
-## DUI3012 [#dui3012]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个写在节点 X 自己身上的 (was: X)。
-```
-
-**触发位置：** `SelfRename`
-
-**怎么会出现**：改名子句说的是节点以前叫什么，名字没变就没有可迁移的东西，几乎一定是笔误；整个文件的迁移都不做。
-
-```dui
-Text Title (was: Title) { Text = "Settings" }
-```
-
-**怎么改**：删掉这个 `(was: …)`；如果是想改名，把新的 id 写在类型后面，旧的写进 `(was: …)`。
-
-## DUI3013 [#dui3013]
-
-**严重级别：** 警告 (`warning`)
-
-**消息：**
-
-```text
-一个同时是别的成员名字的旧 id，因此图表引用没有被迁移（警告）。
-```
-
-**触发位置：** `RenameGraphReferenceAmbiguous`
-
-**怎么会出现**：Blueprint 图表里的引用按名字解析。如果旧名字同时是这个 Blueprint 自己声明的变量、父类的成员，或者某个函数里的局部变量，改写所有对它的引用就会悄悄改动与这个控件毫无关系的代码，所以图表这一路不做。绑定和动画轨道这两路没有歧义，照常迁移。
-
-**怎么改**：手动把图表里的引用指向新名字，或者给另一个同名的东西改名。
-
-## DUI3014 [#dui3014]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
 两个同名的资源条目。
-```
 
-**触发位置：** `DuplicateResource`
+## DUI3015
 
-**怎么会出现**：条目会在多个 `resources` 块之间累积；一个名字声明了两次时，第一个处处生效，所以第二个被拒绝。
+`StyleCycle`
 
-```dui
-resources {
-    Color Accent = #FF6600
-    Color Accent = #E05A47
-}
-
-Text Note { Color = @Accent }
-```
-
-**怎么改**：删掉其中一个，或者给它改名。
-
-## DUI3015 [#dui3015]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
 一个沿着基类链继承了自己的样式。
-```
 
-**触发位置：** `StyleCycle`
+## DUI3016
 
-**怎么会出现**：`style A : B`，沿着基类往上走又回到了 A。这时什么都不应用，戴着这个样式的节点报这个码。
+`DuplicateTimeline`
 
-```dui
-style Caption : Warning { FontSize = 14 }
-style Warning : Caption { Color = #E05A47 }
-
-Text Note : Warning { Text = "Unsaved changes" }
-```
-
-**怎么改**：断开这个环，让其中一个不再继承另一个。
-
-## DUI3016 [#dui3016]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
 两个同名的时间轴。
-```
 
-**触发位置：** `DuplicateTimeline`
+## DUI3017
 
-**怎么会出现**：时间轴的名字既是动画的显示名，也是一个类成员变量（编译器为每个动画声明一个，和 UMG 为 `UWidgetAnimation` 做的一样），两个同名就是一个谁也访问不到的变量，和两个同名样式一样被拒绝。
+`DuplicateComponentAlias`
 
-```dui
-timeline Pulse external
-timeline Pulse { duration = 0.6 }
+两行 `use … as` 给出了同一个名字。
 
-Widget Root { }
-```
+## DUI3018
 
-**怎么改**：给其中一个改名。
+`AliasShadowsBuiltIn`
 
-## DUI3017 [#dui3017]
+一个与标签或容器同名的 `use … as` 名字。
 
-**严重级别：** 错误 (`error`)
+## DUI3019
 
-**消息：**
+`DuplicateProp`
 
-```text
-两行给出同一个名字的 use … as。
-```
+两行 `props` 声明了同一个名字。
 
-**触发位置：** `DuplicateComponentAlias`
+## DUI3020
 
-**怎么会出现**：第一行处处生效，第二行被拒绝，免得一个类型名因为远处的某一行而悄悄换了意思。
+`DuplicateEvent`
 
-```dui
-use "UI/Components/Row.dui" as Row
-use "UI/Components/NieR_Row.dui" as Row
+两个同名的 `events` 条目，或者一个参数写了两次。
 
-Widget Root { }
-```
+## DUI3021
 
-**怎么改**：给第二个换一个名字。
+`UnknownNamespace`
 
-## DUI3018 [#dui3018]
+`ns.Name`，其 `ns` 没有任何 `use … as ns` 声明。
 
-**严重级别：** 错误 (`error`)
+## DUI3022
 
-**消息：**
+`MultipleDefaultSlots`
 
-```text
-一个与标签或容器同名的 use … as 名字。
-```
+一个文件里有不止一个 `slot … default`。
 
-**触发位置：** `AliasShadowsBuiltIn`
+## DUI3023
 
-**怎么会出现**：节点类型先问内置标签和布局容器，再问别名，所以叫 `Text` 或 `VerticalBox` 的别名永远写不出来：别名改变不了 `Text` 的意思。
+`DuplicateRowKey`
 
-```dui
-use "UI/Components/Label.dui" as Text
+警告。一个 `rows` 表的两行，其第一个值构成了相同的 id；第二行的 id 随后会随顺序移动。
 
-Widget Root { }
-```
+## DUI3024
 
-**怎么改**：换一个不是标签或容器名的名字，比如 `Label`。
+`DuplicateViewModel`
 
-## DUI3019 [#dui3019]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-两行声明同一个名字的 props。
-```
-
-**触发位置：** `DuplicateProp`
-
-**怎么会出现**：一个名字只能是一个属性；第一行保留，第二行被拒绝。
-
-```dui
-props {
-    Text   Label
-    String Label
-}
-
-Widget Root { }
-```
-
-**怎么改**：删掉其中一行，或者给它改名。
-
-## DUI3020 [#dui3020]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-两个同名的 events 条目，或者一个条目里声明了两次的参数。
-```
-
-**触发位置：** `DuplicateEvent`
-
-**怎么会出现**：每个事件都会变成一个事件分发器，所以名字必须唯一；同一个事件的参数名也必须唯一。
-
-```dui
-events {
-    Picked(Number Index, Number Index)
-    Closed
-    Closed
-}
-
-Widget Root { }
-```
-
-**怎么改**：删掉重复的那个，或者给它改名。
-
-## DUI3021 [#dui3021]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个 ns 没有被任何 use … as ns 声明过的 ns.Name。
-```
-
-**触发位置：** `UnknownNamespace`
-
-**怎么会出现**：样式、资源和组件别名可以带命名空间前缀（`: nier.Label`、`@nier.Ink`、`nier.Row`），这个前缀必须来自 `use "…" as nier`。这种情况只报这一个码，不会再报一条“没有这个样式”，把你引去找一个并不存在的拼写错误。
-
-```dui
-Text Note : nier.Label { Text = "Ready" }
-```
-
-**怎么改**：加上 `use "UI/NieR_Common.dui" as nier`，或者修正前缀的拼写。
-
-## DUI3022 [#dui3022]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个文件里不止一个 slot … default。
-```
-
-**触发位置：** `MultipleDefaultSlots`
-
-**怎么会出现**：嵌套进来却没写 slot 名的内容只有一个去处。第一个保留默认的角色，这样已经按它编译过的宿主仍然一致。
-
-```dui
-Widget Root {
-    slot Rows default
-    slot Footer default
-}
-```
-
-**怎么改**：只在一个 slot 上写 `default`。
-
-## DUI3023 [#dui3023]
-
-**严重级别：** 警告 (`warning`)
-
-**消息：**
-
-```text
-一个 rows 表里第一个值生成了同一个 id 的两行（警告）。
-```
-
-**触发位置：** `DuplicateRowKey`
-
-**怎么会出现**：每一行的 id 来自它的第一个值（比如 `Page_0__Row_City_Ruins`），这样插入或调整行的顺序不会动到别的行的 id 和本地化键。两行的键生成了同一个 id，或者生成了文件里已经有的 id 时，后一行会在后面加上 `_1` 这样的序号，而这个序号连同它的本地化键会随着行的顺序移动，这恰恰是键列要避免的不稳定。
-
-```dui
-VerticalBox Menu {
-    rows Text (Text) {
-        "Audio"
-        "Audio"
-    }
-}
-```
-
-**怎么改**：让各行的第一个值互不相同；需要按名字找到的行，写成单独的节点。
-
-## DUI3024 [#dui3024]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-两个同名的 viewmodels 条目。
-```
-
-**触发位置：** `DuplicateViewModel`
-
-**怎么会出现**：每个条目会成为类上的一个变量，两个同名条目只能有一个变量。名字的比较不区分大小写，`Player` 和 `player` 是同一个变量。保留第一个。
-
-```dui
-viewmodels {
-    PlayerVM Player
-    PlayerVM player = global
-}
-```
-
-**怎么改**：给其中一个改名，或者删掉多余的那一行。
+两个同名的 `viewmodels` 条目。

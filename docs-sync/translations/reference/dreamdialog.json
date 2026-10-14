@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "42fc852560d2b443083cc2b0c9989a56979eb09a8bb835c233f1d053e59f869c",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamDialog.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "a4b095f539dfc21eb31c47cee010ab530237d9a0be4fa87c0b7e4f69238146a9"
+      "sourceHash": "2e1eef5c9a0bd9ff84326dc0b76fb3c1a8490535188f5345a56f5ccc1e1fe42d",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "fdccad8976e0bc79a9d80eb1924d122435ed0cad9edb6eb99a89b3acbe39e736"
     }
   ],
   "translationFile": "content/docs/reference/dreamdialog.md",
-  "translationHash": "66210bbed92550c9aadf233122915462fc979110201d3c7d9cd2addf452e959f"
+  "translationHash": "66055ead73b445b9c20d70dd592ab4bd347d97b9d0cbe35d8cd19e35277f0075"
 }

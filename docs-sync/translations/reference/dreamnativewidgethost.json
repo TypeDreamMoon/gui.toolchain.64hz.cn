@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "a0682992353f0cfa6ede40f42d2f38928382bd37f882ef1cbcde3e30146ad08f",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamNativeWidgetHost.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "c258c07f3a1c6757e304f4ab0ee50dc8f5668a4d47dd183a9a35b5c78cc93d42"
+      "sourceHash": "ee437c8a4e8f98153aba56e8a91db9dc7c424d7639ffb3712bb276f07e754405",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "ba3f39c61f0800a619bbc4e145fdbf1d706d9078e96b7ead0b77bd023f88c540"
     }
   ],
   "translationFile": "content/docs/reference/dreamnativewidgethost.md",
-  "translationHash": "b96dfb4fcef2c466c7bfdcb65939f84f836f87e8cb49169295ab7316bbb7928d"
+  "translationHash": "f0ecca0048e531d36555b30182623e593afa9a920ff87759f356b5059a4de795"
 }

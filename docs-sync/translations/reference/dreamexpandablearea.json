@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "2ec8ae8b162b2aa091bfa0d204597385896f6ba9e5965288721bef709aa42a29",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamExpandableArea.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "7e7d1fe9a8a2677359697a5df64fdc3ae51f3ae20eeaee62d1c614e37a507f39"
+      "sourceHash": "b3e658ca0e4150aad1607a0fd7914ee01e8b59f2a5bba0bb9b07617a99f671f1",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "6a5381ff461b8211a6a396df9f592075d5b48b4e0e5aa47334ef693e449d2507"
     }
   ],
   "translationFile": "content/docs/reference/dreamexpandablearea.md",
-  "translationHash": "8bb5bcf6a6ca59ed01650bb5b5fa1568abac1b442bd866847db2d1653aa43f41"
+  "translationHash": "7a1b176224126b189410bd4dfa7e11aac9bfac3a5c58daec16012d3a50923568"
 }

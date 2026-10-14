@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "a0867eecdd75c4d8bac7afa66ffc77dc103852ebd7d1c66bd68468184ae87fa1",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/concepts/rendering.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "a8994dc336d9a64b18f5ece64f30bdf8ddd0f24419b87f796cdefce3a04fff02"
+      "sourceHash": "d123b2bea8e2cee0d607fe193ab5a16fe3b4cef26164290cd57f9b18fc80dd86",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "a375f382aa5b3ddaa0c55856008ea82d9dfedd287ca6e7e57a1049c213da8b73"
     }
   ],
   "translationFile": "content/docs/concepts/rendering.md",
-  "translationHash": "680c70e136c73caf79d2a5f2ae56338d8df9ffb7bf8f56eeade298dc402948e4"
+  "translationHash": "b9eeac53ae652ae0e8dca5c7125f552ad4dc97d6f5506c8306c1b34fb8feea51"
 }

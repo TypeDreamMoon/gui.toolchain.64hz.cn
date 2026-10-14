@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "3fdf16be07076fa533c839b805e2d63311992b3139f797255713a74a1a9e214d",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamSpinBox.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "3b563a750a01be7d4adbf9cbbd1a9d6c8b287d6fb6e8f8df0e4600bef01275b4"
+      "sourceHash": "28db7bffc9a69e8c6ce287b3b92afa8f4f670bfc1185fd8701f5fd746b9a5cb8",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "c899dceec456f8c51b51218ecea830ffcfebcf929d6bedacf2c4ebf7349e0d2e"
     }
   ],
   "translationFile": "content/docs/reference/dreamspinbox.md",
-  "translationHash": "186902187ca90eb975713c846950b2dbd42b442667a8a1ca161b25568f50009f"
+  "translationHash": "958b43117587bcc41ffcd65224cdb0cbf49e555cda05ef4994c9a7a9e91fe1be"
 }

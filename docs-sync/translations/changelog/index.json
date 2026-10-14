@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "e031de401376cdf51434e13f4f4627a30b9b3c9fd1c5e5f816a6cbc68da69967",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/changelog/index.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "b2e84f49f9c9fd048c362bce1f88b011c65f4a8486efdbcb53fcd714651958c0"
+      "sourceHash": "ac03d8b5ef9fd25954782732f4abe88bc8bb368e3aab97950330c8f93e4d2c88",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "2a938beb28d1244ee7afb4757590f207a7629b5491ea8db8c28b2583d169da19"
     }
   ],
   "translationFile": "content/docs/changelog/index.md",
-  "translationHash": "3fc58ab2fe375977b0b029ae4b6f3c62f498b5fa8bccd6a8f844ce79b62e4403"
+  "translationHash": "55f860f91c4f7d0ff595cddc1a78f288444b6e7e5e82748ba2f8f3a9323181a0"
 }

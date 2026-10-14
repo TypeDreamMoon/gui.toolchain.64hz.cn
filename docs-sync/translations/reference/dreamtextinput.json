@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "d486888545115bff42c8d47d4c692360de308f1a60f6a0af75fb44ea0ffc7ca2",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamTextInput.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "9fdc86090a17554d28c0d252bd6aa309d4afa9a10a57626e4befcf2f14bbb7b5"
+      "sourceHash": "6fc7c8ef67bafa44926a6ffd328e021006a75b4fd92a4f2f7ee40b206e07810d",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "d9a6923b8823d6b7e210b3f4194d9e653143f47c6fc6a6ff2c75d5ed22d1c770"
     }
   ],
   "translationFile": "content/docs/reference/dreamtextinput.md",
-  "translationHash": "aa549f0d8c9c811f35b12d4784640559e6a31891a4b7fc562700d5a7439f6dcf"
+  "translationHash": "0b61adb4fd621dfc9ac5b66ab939f5c1ab9764dda2d52523e6ab85403f94b0d3"
 }

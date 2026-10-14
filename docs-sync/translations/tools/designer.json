@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "fec6dfeae0fb47599d757cc19d3fa27024123b5f43a8a475f3a226ad8ce0c98b",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/tools/designer.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "cb97dbb939a9934809e9933fa349698e4633c2d302ea8afd1b84dbce894a8e26"
+      "sourceHash": "3117ec5ee15e495cb4103bad877dc511a67c7944dd24d3504c033c1317d2f298",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "66cdc827aed96b2eb990de243f47538f01619db7ae1897a0c7a3def13da6514c"
     }
   ],
   "translationFile": "content/docs/tools/designer.md",
-  "translationHash": "93a172df3ab60b69900998bf6955f529d24ee90892d161eda878e60c56dfc356"
+  "translationHash": "26378b57d26ad63c21afa40884f46464f9b802461a197a5296e2bdc260ac4e7c"
 }

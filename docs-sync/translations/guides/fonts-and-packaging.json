@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "9c9671fedd00c8d1817ec1a8082ba1aca05b1b859a7670a8aa3ab3b692c87404",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/guides/fonts-and-packaging.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "1ed0edc3dc7fd23efc826103d53eed17617ad5f96335b736256a01e7ce9ff14d"
+      "sourceHash": "dbb61899820ea9f3a497143b924fefa562b69192965a951a85818c840c9edcd0",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "58e27493321eee6c280f740c88d8ad4a58cfb6e682b394015407f1c102c7cad9"
     }
   ],
   "translationFile": "content/docs/guides/fonts-and-packaging.md",
-  "translationHash": "73fa327214023f355d129a584fceb9754dad9b9d08cedace9aeb4c00f5f1a9fc"
+  "translationHash": "05d5bbbf2d5b855ff72b1334569b2b24cd13323bda90614f8eeaedb6f0cfb079"
 }

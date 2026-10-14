@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "aa3c0fda047f808ef0122ab3ffa447c2990be9693cd81984a7a4a8700822161e",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/concepts/input.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "0047aac07d93a993b2f73de4db1345cebf1f85e1f71a508282781190db1c742c"
+      "sourceHash": "501422b6a72ec4e4053b54c1c3a06413a3f6cc4c838c706bffe22c32694a7618",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "9c7e617b54ef268992d3f9453ff75c5fdde2e903e6f780d2aa91d7365a9513c0"
     }
   ],
   "translationFile": "content/docs/concepts/input.md",
-  "translationHash": "e6fbfee4c0c02e6b42b3a7a30bf3d74076b8a6187f11ffbdc1de1f2a0bb369cc"
+  "translationHash": "5bf3eedb28798da19cfa992c34a833fa93be536c0057e942764085a1f90805db"
 }

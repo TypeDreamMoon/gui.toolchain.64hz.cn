@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "f0177d5a05c2e201a7f7344922779b744131e81bffb47b470ff3c42b2e92748e",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamTabViewStyle.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "4483e98c7cd3ab77d7a4244c4d1b5ad6a0bf8770611ccbf46d0cd4cf31a742ce"
+      "sourceHash": "11f9e8bc8211be01c222d6a7709e84883fecabf4103e5fc9b97de9cbc59a05ae",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "d670f639cf49ebba9d686ebdef4aedadcea188323d09f3dd7a9f91e7db5184e0"
     }
   ],
   "translationFile": "content/docs/reference/dreamtabviewstyle.md",
-  "translationHash": "aa1fef66e4b0cf50228a7622be9cc4f5738d4d06da63f2c1559ca392e22a18a1"
+  "translationHash": "26d67ffc311a8bb3748f0cab3d5bad40826d9bbc4e476730f66016f2b8ef82b7"
 }

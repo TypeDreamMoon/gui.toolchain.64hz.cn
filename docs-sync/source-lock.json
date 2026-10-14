@@ -1,9 +1,9 @@
 {
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
-  "revision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "revision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "workingTree": false,
-  "translationSnapshotHash": "cee98ddf0e699955a0ae5ada3bac5dbcf52edccee6dad3a29558e244d3b3b35e",
+  "translationSnapshotHash": "2b9d2c2b6a89b59fe0d5f7fd23d4687bd560fa2d91f1150e9f0fc76f0d9f68df",
   "pages": {
     "changelog/index": {
       "hash": "e031de401376cdf51434e13f4f4627a30b9b3c9fd1c5e5f816a6cbc68da69967",
@@ -20,11 +20,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/changelog/index.md",
         "record": "docs-sync/translations/changelog/index.json",
-        "outputHash": "3fc58ab2fe375977b0b029ae4b6f3c62f498b5fa8bccd6a8f844ce79b62e4403",
-        "bodyHash": "39b19e4ea46b40e94e0457c7c2e2e825b8d1ca4c6c8d34a3edd600426005c2ff"
+        "outputHash": "55f860f91c4f7d0ff595cddc1a78f288444b6e7e5e82748ba2f8f3a9323181a0",
+        "bodyHash": "8b487bc47d039ceb5e16dfae1f203ec0041e70ea9fa0332b14269e1c00c028b0"
       }
     },
     "concepts/animation": {
@@ -42,11 +42,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/animation.md",
         "record": "docs-sync/translations/concepts/animation.json",
-        "outputHash": "b7fe6ce0b0be7b19182fbba62d01013c59bf540dcfd30e1acdfe80cca137f2cd",
-        "bodyHash": "52176247a900f3aac14029d0613fb2c398cd7c0cc95cf32b9247dc35272d5e67"
+        "outputHash": "492c67eb85aa7d4dbfd3a0ccc5b084b2f40546f4107e1ecc2aea65a60cbed36a",
+        "bodyHash": "d1801207bd4f82c4695f251d848cb65a038e179bcdd04dd8bcadf0636b64b0a1"
       }
     },
     "concepts/canvas": {
@@ -64,11 +64,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/canvas.md",
         "record": "docs-sync/translations/concepts/canvas.json",
-        "outputHash": "4d8e46af1e1b059384ba4e7e80cabe311252c880ad68b2b4cab3f9e8e0a38099",
-        "bodyHash": "2e4df2f7da248571318ef1cef75bd3856b4b07e18cf075eab06336d2bde40707"
+        "outputHash": "de301612dce35be76ee60681c03da64ef4a7eb4d555356cdbaf7fecb9e9a9bbc",
+        "bodyHash": "9b121403ba44ac67db424d6b17d8c4f90fd838d6e8fe69538566091c4fc31f25"
       }
     },
     "concepts/input": {
@@ -86,11 +86,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/input.md",
         "record": "docs-sync/translations/concepts/input.json",
-        "outputHash": "e6fbfee4c0c02e6b42b3a7a30bf3d74076b8a6187f11ffbdc1de1f2a0bb369cc",
-        "bodyHash": "08b6ec7dbe3a31c7bcb5f6aa06ee2dd2745c406006505607ac8058ce183d5b11"
+        "outputHash": "5bf3eedb28798da19cfa992c34a833fa93be536c0057e942764085a1f90805db",
+        "bodyHash": "840e380ee327e0908dac416ba01c7800ef3ba9cc741cbcf82bbca1856f5da3af"
       }
     },
     "concepts/layout": {
@@ -108,11 +108,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/layout.md",
         "record": "docs-sync/translations/concepts/layout.json",
-        "outputHash": "4096b769bbf8a2ced8318ddaf306be2f2d5dcded9ed591f8cffaf1992396c7ee",
-        "bodyHash": "c4d4dd36f52316f48dbd6092f4ad77ab8ee7d7d0a07498d8c967b9ed35cc19c3"
+        "outputHash": "44a5cdb13f44162b7ce138fa710054126adfb74205760a7d3335367c0b244de2",
+        "bodyHash": "40c6fe1157bec509440b9bd4130abe539a3c45c601a3fbb71b19999d6dabb0c9"
       }
     },
     "concepts/lyrics": {
@@ -130,11 +130,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/lyrics.md",
         "record": "docs-sync/translations/concepts/lyrics.json",
-        "outputHash": "e30f296293ae9657fa7d1dbc882009ed277c4f08d6ca15defa726ecd092597da",
-        "bodyHash": "d15b40e2d3deb4712e49b59dea8b0370561d7b0449fe36cf226e42e984377866"
+        "outputHash": "8b677fdaccf7b5835b4da674a730d8e340de30bd3a0a50c593c8b7880fc54bc4",
+        "bodyHash": "df0c79d00d3bf5158614d3c31177a8a82d57f1fd5436311293b10e137a36124e"
       }
     },
     "concepts/mesh-modifiers": {
@@ -152,11 +152,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/mesh-modifiers.md",
         "record": "docs-sync/translations/concepts/mesh-modifiers.json",
-        "outputHash": "82dbca7245e3f47618372165b6597742639df27018462334b1966b38fd5b9dbb",
-        "bodyHash": "2b45608878722dae87fd894f108c0abb31f65106fa34314c10b13bf0b863832e"
+        "outputHash": "882f0e247c6543bc2aab3aab42b5bd6cdd1987afb2ddec2d98b36ae16c2b1403",
+        "bodyHash": "a075413debce6e46e16b826f4b79f4c1bb40c89274edef48c0e397e01a55e2a6"
       }
     },
     "concepts/rendering": {
@@ -174,11 +174,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/rendering.md",
         "record": "docs-sync/translations/concepts/rendering.json",
-        "outputHash": "680c70e136c73caf79d2a5f2ae56338d8df9ffb7bf8f56eeade298dc402948e4",
-        "bodyHash": "c8ffafba54c471213dde3d99f3b03fb2615164df3972306094df5a009704904c"
+        "outputHash": "b9eeac53ae652ae0e8dca5c7125f552ad4dc97d6f5506c8306c1b34fb8feea51",
+        "bodyHash": "8cad8c53d7d0eb90f4fd371b3fa17cb61154397807b9e9df298f5e7c2eed666e"
       }
     },
     "concepts/sprites-and-meshes": {
@@ -196,11 +196,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/sprites-and-meshes.md",
         "record": "docs-sync/translations/concepts/sprites-and-meshes.json",
-        "outputHash": "d82238d82cc71538704ebb40e68ff5b7a56e601568cfcef3949231025ed0e7e3",
-        "bodyHash": "7bdd3d312434b99194ab342999c37168abbf39a8478961c11ef69b5360daf652"
+        "outputHash": "462d8194f11b9055259b5d45aadf8e72eb2aff5282cf7a82e96434bdf1d696dd",
+        "bodyHash": "be2101cb00ea767fe39bf0c4cbbb23022326c7b8db21cc66d6765485613b03b2"
       }
     },
     "concepts/text": {
@@ -218,11 +218,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/text.md",
         "record": "docs-sync/translations/concepts/text.json",
-        "outputHash": "eb7f139947ff284698b813076c619f9dbf869bbbc33a335ca1057eedb94730db",
-        "bodyHash": "0b96250fe11e2238d2e86b064ba7928aa450fe5678327249645101478b350549"
+        "outputHash": "1b05360c337ce171f8ffa9f77e205e3d588568faa2186a7750f665cd2c36c28f",
+        "bodyHash": "c2caa156dd5b5c0a7e529769ca16c1c5b885811c57ee98d0899898642dee0f62"
       }
     },
     "concepts/widget-blueprints": {
@@ -240,11 +240,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/widget-blueprints.md",
         "record": "docs-sync/translations/concepts/widget-blueprints.json",
-        "outputHash": "90e82f1c2032701804b5f7de66596cc5d81eb7589694412a69375643fff44d65",
-        "bodyHash": "43039ad7c6bfb818fa34feee0f9ec9e595047bfee446386e3a925f99d0fb4ebb"
+        "outputHash": "f50a94dc6cb9dec8b0dfc018de1901761d82067ba5aba59a4c114bb6dca8cd59",
+        "bodyHash": "bec381d02e9464219004adb7251fb23d878944867fecd08348d26a9e49fba5d1"
       }
     },
     "concepts/widget-tree": {
@@ -262,11 +262,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/widget-tree.md",
         "record": "docs-sync/translations/concepts/widget-tree.json",
-        "outputHash": "69468d4224f90b3f32209bb9d41020361962676816f92f30017782369659d4fa",
-        "bodyHash": "03e3e951f0c75f6ba4c869461e077b3807251485cbd687052063ff52eece7ebb"
+        "outputHash": "d1303911c3b63c2a9b25d53d4786f9b1ce01a6dc076a937bf50825cf804d8a69",
+        "bodyHash": "fd64d46a588622f1302d426603e542f4f13dc604a9acd589e667b2abd9e116c6"
       }
     },
     "concepts/widgets": {
@@ -287,8 +287,8 @@
         "status": "unreviewed",
         "output": "content/docs/concepts/widgets.md",
         "record": "docs-sync/translations/concepts/widgets.json",
-        "outputHash": "71acffade95bc299373a4e52ea05f3e90e564d8338cb83367e017701fcd6ee0b",
-        "bodyHash": "2cc1f3069ac83c4e38a0182fb7aa0c0237963c0b963fdb5a45ad26757988b6bd"
+        "outputHash": "a2bf68f1fe64ab32543e9732474f2a6365198e7791e3ae559ad5085f45f2467a",
+        "bodyHash": "a9b9c9da5069860b8bee88cfd66ec07378d5eeb80815567fe361617eab521462"
       }
     },
     "concepts/world-space": {
@@ -306,11 +306,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/world-space.md",
         "record": "docs-sync/translations/concepts/world-space.json",
-        "outputHash": "056705a92e05ef5130298d0045e3318e700f261bbb3ea674e23c872f6b0589af",
-        "bodyHash": "57f43b750546cee8aa7bc422e31965d80c17d7f1790e244e3d15e7b3d03ad669"
+        "outputHash": "2e1219167823a4b22287a08aa86aa6dc9e666d246331f6685661a489e34edaa6",
+        "bodyHash": "be152e6dd098b6c2a6976ed9cb872917a4b9999a6e4eaacfbc11f59c3df4cf7d"
       }
     },
     "controls/index": {
@@ -328,11 +328,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/controls/index.md",
         "record": "docs-sync/translations/controls/index.json",
-        "outputHash": "cc040a9de71e11c82676472a41a5a3a1d5b5841242eb56a93524968d114b8ba4",
-        "bodyHash": "0489305be47388931d79ad81e49db4c043ad1a58bf09944b71279986aab2e77b"
+        "outputHash": "e92103a20d92ba5d612f34325cb2b71ce87e945bd8e6fdd93e2febcdb02a5720",
+        "bodyHash": "19fe318b6d71cfc2c9a12ce49338155982f858662ccd968c2c16aa6f4b92adaa"
       }
     },
     "controls/styles": {
@@ -350,11 +350,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/controls/styles.md",
         "record": "docs-sync/translations/controls/styles.json",
-        "outputHash": "0ced3ceeba7edf9d825376f5b06d62b9d5a608805d6ab2df7ce351f3a6889007",
-        "bodyHash": "5fca5c2a7a8ad3c408bbdc767bd3d6935d59891fca0b270cb7edbb8a1cb757e1"
+        "outputHash": "259dc48a4ca6fe2bef95222d7c53e91997f2d59cbc73889e2e27f430a9caa27e",
+        "bodyHash": "b0b7cbf7d45cd19bfb42f0d9d752f221241af43e1228c56d327eed3be53c3b29"
       }
     },
     "controls/umg-parity": {
@@ -372,11 +372,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/controls/umg-parity.md",
         "record": "docs-sync/translations/controls/umg-parity.json",
-        "outputHash": "e106e22ddd43a2c1cd1262d236a573e78e0156513df675499a95928c9ec78f3b",
-        "bodyHash": "9064e2132a8c57067941259b3c286c7471782c4e234fe612344a96ea096ae92d"
+        "outputHash": "aa69fd76eccae85f5fe16a9369920c4d2067610c15b7f35405a01c892ee9dc3a",
+        "bodyHash": "1effa838ac70abcbaafc3d683b969cd56dae247efd2b428be3608525d89ac021"
       }
     },
     "diagnostics/dui1xxx": {
@@ -396,11 +396,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/diagnostics/dui1xxx.md",
         "record": "docs-sync/translations/diagnostics/dui1xxx.json",
-        "outputHash": "48a95ebc695ade3336b42641c668c97c59f7f4bf3fc2b3a033005c39b6bb64f6",
-        "bodyHash": "e9a9459ee3aec2e2c51bc29769b1922ec980734e59a5903e2cebfd4512296a25"
+        "outputHash": "3369ee975c8bd5f870f9185087eeab0661dffd3fb69f7b5efae8a64cfc31f70c",
+        "bodyHash": "d94ab91d2f5bbd7cabe089de1fef62a57138d73e38360e9cc6436d883d9b1b67"
       }
     },
     "diagnostics/dui2xxx": {
@@ -420,11 +420,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/diagnostics/dui2xxx.md",
         "record": "docs-sync/translations/diagnostics/dui2xxx.json",
-        "outputHash": "b182ac56ed30da4d35252cdf66d6ab9800d07534c706548edc73be7c04259ba5",
-        "bodyHash": "089e41ca95f0730867810ace70a7e5784f011b7a0cd246494913e8eefdd440c1"
+        "outputHash": "27225994749b9b2027e592f5e2ca64a99dc4b25b06876626d1424d13ac7dd2d4",
+        "bodyHash": "b1833cbfe40fffe719b45b1bd2b944386b27d58e1a7f6a4d2211137771b24afa"
       }
     },
     "diagnostics/dui3xxx": {
@@ -444,11 +444,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/diagnostics/dui3xxx.md",
         "record": "docs-sync/translations/diagnostics/dui3xxx.json",
-        "outputHash": "51da83e3f461a2be7d0edd768d87c1c45bab61e62c486f410e29124a427ce167",
-        "bodyHash": "8a1969edaf1f790e92c221117db713c46e3a17fdedd59fff02d179334980343e"
+        "outputHash": "7e291fefd9dcc9bc2e365364bc976a915ee08bf5f045434e31560c4e858f2682",
+        "bodyHash": "9e0dd3a88719c5947fdaee59943423e3e3a0cc306c47a7ea8d5f2bf89d85be41"
       }
     },
     "diagnostics/dui4xxx": {
@@ -468,11 +468,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/diagnostics/dui4xxx.md",
         "record": "docs-sync/translations/diagnostics/dui4xxx.json",
-        "outputHash": "f0d8b5a6a10cb6f9843f74e9f04e20793a65d0bcd5e419eb1e39817be6b3934b",
-        "bodyHash": "8245d16b0b9d8a287792f4033271a6a917f1a1312e9fe1bffcf107f9be4d5f0f"
+        "outputHash": "b671212c9a8f9de3d0f81308629c6df64477b05ec056d4ca363752ebd3b3dfc4",
+        "bodyHash": "e825ac692df6ceb35bc3bc848ac9bbffb7de34f4cda856ecd375231b7ef2fd36"
       }
     },
     "diagnostics/dui5xxx": {
@@ -492,11 +492,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/diagnostics/dui5xxx.md",
         "record": "docs-sync/translations/diagnostics/dui5xxx.json",
-        "outputHash": "f5dc53f95910d3f52886a7dc56f61e890b511369773209ea9f028c9dbb33421f",
-        "bodyHash": "cc23913c58efa3d9c4ba67e64c13f8590af74882b649a924c3ea488e0499b4d0"
+        "outputHash": "c9ad30adad997d66386cfc5af49a4681d2f420d5a876d8d3b71d20895dab76a6",
+        "bodyHash": "41e2825325f76741ae902d9b3acb957677744825beb29f56be37c3fe5d337932"
       }
     },
     "diagnostics/dui6xxx": {
@@ -516,11 +516,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/diagnostics/dui6xxx.md",
         "record": "docs-sync/translations/diagnostics/dui6xxx.json",
-        "outputHash": "a145bd81d0a6061a9d63641cc74203dcff477502e00d674d152442e95d131091",
-        "bodyHash": "528bc19328aa3630c1e412679dec1b953d7c6e7fdf07092483e2672ee009f6ab"
+        "outputHash": "043ee455efadd4e2e1aaaa016270b7a8610c286be05953e479c36a4d12fe4d6f",
+        "bodyHash": "3fc2900c6840caf80c004cbd12552d47e57e015264d66fcaf1188f54d1c68c15"
       }
     },
     "diagnostics/dui7xxx": {
@@ -540,11 +540,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/diagnostics/dui7xxx.md",
         "record": "docs-sync/translations/diagnostics/dui7xxx.json",
-        "outputHash": "6ff310292cfc37e2d1be631abc95a43126514b2972eea4e4c2febe1ff45a1fde",
-        "bodyHash": "a10a7309a0e0911b8987b3e7747f7d63d2bd7125b0abb0b5b04d7b72754096c3"
+        "outputHash": "54818c55de1018d1ad1a9d0e460472f76b322f91873e0ec317689c901749b978",
+        "bodyHash": "3ff5877690b1876e744713c7d7a35c87a54c49954ad99d80a08e5df47202f110"
       }
     },
     "diagnostics/index": {
@@ -562,11 +562,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/diagnostics/index.md",
         "record": "docs-sync/translations/diagnostics/index.json",
-        "outputHash": "123c5a08880451b73a75cb3b9157e7cd9309dbf398cc1fb0a28f97038b1c6cee",
-        "bodyHash": "6abca01ba18625bc4d98d70ab9161121f56917259f15cb25fbd4fce5bdbcfedf"
+        "outputHash": "6431faf188f8242e0e6ccc2269e8445e3de8ea0265fde330ade26cf925d74f2a",
+        "bodyHash": "ecce9496ab7a23cd643bf56ce3ad73451a61b1fda5d5393877acd214e8d86dda"
       }
     },
     "dui/bindings": {
@@ -584,11 +584,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/bindings.md",
         "record": "docs-sync/translations/dui/bindings.json",
-        "outputHash": "e8b718a46eb0d1e8bb45d967f3efbb312865a24db5aaaa89630e29f2cec763f1",
-        "bodyHash": "f7142753dbbabc502708d203581205db4dff62701a32477617942649f6c96c19"
+        "outputHash": "62bc4c1f556f7422656839d814776bea425adca80113e68ab79f51832cecce8a",
+        "bodyHash": "44a35a06e105af0535f62ff801e76a7130cc30289451a97a0a886e189dc218c0"
       }
     },
     "dui/components": {
@@ -606,11 +606,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/components.md",
         "record": "docs-sync/translations/dui/components.json",
-        "outputHash": "37fbd560bd1ffb01550245c9bafad340706c43bdde87836a20e7425eb8e03d94",
-        "bodyHash": "49664908ee8d86d5a885f52dca9b7e610e56e73f9c98dbd130afb25fbc341ef7"
+        "outputHash": "6f765c2c5aa6a7e82b53a642d6a9162787e37b2507d4854e4868379a017554c9",
+        "bodyHash": "913439dd536f3cafe071cec36c9bb156b19265b852b57a6875ba979203cafac2"
       }
     },
     "dui/control-flow": {
@@ -628,11 +628,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/control-flow.md",
         "record": "docs-sync/translations/dui/control-flow.json",
-        "outputHash": "954c47a1847935a50f30a479edf227ca3669c62f11bffba34af559fbad313fbb",
-        "bodyHash": "71b47d57bfb7cd5194a7272cba34fd73533642e266454864e99df9d27d672783"
+        "outputHash": "e527e6eef4829fb0d5fd04513e0fd5606efd3e8f7e5f79157cb7cf6c12a3cf63",
+        "bodyHash": "5d0e74b5ba62b3e47df1e62372a952d027754c831657172cfe15c5ffd4b8468d"
       }
     },
     "dui/example": {
@@ -650,11 +650,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/example.md",
         "record": "docs-sync/translations/dui/example.json",
-        "outputHash": "8ece33972f01843218186d8563d80c201f32ce214c624d41c4c24293a854ab64",
-        "bodyHash": "2bad86fcf2d04afcc955e3d0ae34eca672cb8c57014408c1409b46f0b87860ba"
+        "outputHash": "a40868387b9b772ab0fd62d12d870034af0d393c91728ea3a7306131f0d7d2ae",
+        "bodyHash": "e86d9d9126ea48016c3eae8b9dbd057bd4e3298b02b843c4c74e84a417617d80"
       }
     },
     "dui/nodes-and-values": {
@@ -672,11 +672,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/nodes-and-values.md",
         "record": "docs-sync/translations/dui/nodes-and-values.json",
-        "outputHash": "4cd155701bfda88e54a864c26fddf446b7923d77433500bad4d81ce386a6b04e",
-        "bodyHash": "ce5fbfbe99b451f90dc8af4d48a66e76eaa481620f31b5207a3abdf97475112d"
+        "outputHash": "e49b43e3be692a713b55caf988e2bb47c4839d5da56e5d0e3fef800a210742f8",
+        "bodyHash": "568410d05dad836532062153ccc07450ac9b1781aef361f3170a59ba95577ec1"
       }
     },
     "dui/overview": {
@@ -694,11 +694,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/overview.md",
         "record": "docs-sync/translations/dui/overview.json",
-        "outputHash": "ee1e8e3f8e18ab627c2a8c283c92749f2bfb7fe8a1da7f4508e5d7d90b6004e8",
-        "bodyHash": "e506725637dad2aa8de84ce77b27adee74e1951b0f5d9d3657d77eb66dbccde5"
+        "outputHash": "9033e20417487cd7c75beacd60f1f67616d1ac99eb075e5564b47b86ab4b9092",
+        "bodyHash": "8a0166f0ed88e84f93a4514937889e7ce563b9c0ff4c550cafbe9106f74a0fe4"
       }
     },
     "dui/rows": {
@@ -716,11 +716,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/rows.md",
         "record": "docs-sync/translations/dui/rows.json",
-        "outputHash": "03ea1adfce8ab8c4a1c4a143a7e083878079c8bfbd1db3d05f077aa9a2b2a2c0",
-        "bodyHash": "8ba1f79dc84c9606df8dac9c0a1c9d54f15c6b8c7ee1d8d570da4505fb2f642a"
+        "outputHash": "6afc472a0b8d2d07c58d66caed5a5eabee9bde647bfda7fe110dff1426c1e74a",
+        "bodyHash": "be714285942149a940b7e0c192224d28442d387822dce5a07505b283f835672c"
       }
     },
     "dui/slots-and-components": {
@@ -738,11 +738,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/slots-and-components.md",
         "record": "docs-sync/translations/dui/slots-and-components.json",
-        "outputHash": "46e7cfbed80e909ec4221c568e255b78ec99282b612ea20a60e810c59e76d611",
-        "bodyHash": "218f044be1b003a4dc88c6963aeb08d9ef7fe30c2495b6965b36243898c2a645"
+        "outputHash": "5452fff08f72a5fda8b622891522acf40f403ca90e0d616187dad8eeeafbc7f6",
+        "bodyHash": "a7becc1feb5fd4cbc0855580288d0cf8fc1f37c33e0e4de617ac4197c7d554ea"
       }
     },
     "dui/styles-and-resources": {
@@ -760,11 +760,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/styles-and-resources.md",
         "record": "docs-sync/translations/dui/styles-and-resources.json",
-        "outputHash": "b72d8b760640521a749c662a36adabb92a3b2fc431f29d287cacbde20b17638e",
-        "bodyHash": "f7349781d9a0caa8b268440b88bbeeafecdff1e4427f44a267228d26d490e04d"
+        "outputHash": "9bcb87fe19777d13c0834d56c363fa6f5ddcbe2fb40d40ff454bb8ae0b2899f5",
+        "bodyHash": "7957faa137c55db92466772a110ca116c8b8b002ce4ec1751f0d93a80e8e18e8"
       }
     },
     "dui/timelines": {
@@ -782,11 +782,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/timelines.md",
         "record": "docs-sync/translations/dui/timelines.json",
-        "outputHash": "09c93fc0cb9e5881831220bf4bf10ba359d47d4f4af1c75766b10d3d8025e83b",
-        "bodyHash": "033d70062414fa11454c9e0e00c82fa70ff68ea5f30541d6e4c20335bb9ec54d"
+        "outputHash": "2b3c581929511ca22d421051aec2f064c7c1faccd27e5fe21fb51024bc430296",
+        "bodyHash": "92d0f395cfe365a219ef54aac2290e9a7aee8c26a471f66763d108e5a561f4c6"
       }
     },
     "dui/use": {
@@ -804,11 +804,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/use.md",
         "record": "docs-sync/translations/dui/use.json",
-        "outputHash": "3e891c46795403379859b84559358766c418b4745100bf898e8e510115daead0",
-        "bodyHash": "418f582abcb9c1a7f9541a6466b1810c4d02dfe085021f1104024dd75cd440cc"
+        "outputHash": "a54d6be7632fce8caca26b8acb92bf712bfe11d2c1e23908143aad5a9c42a65e",
+        "bodyHash": "ac73926f60e75a6725e5307e47e610c09244f9ced6e0f5eca96637c3742c9dca"
       }
     },
     "dui/viewmodels": {
@@ -826,11 +826,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/viewmodels.md",
         "record": "docs-sync/translations/dui/viewmodels.json",
-        "outputHash": "118582def5800b66d26d43148ba86a61080d45d25016062740cd15898893d0f3",
-        "bodyHash": "c7940c9ffae4934c2c7f29fd63c764a42d199c2b6f7ac5d0362f8bc935c0086a"
+        "outputHash": "e60050870de658dd42f074c2ce8846c3d90eda307952c94a2ae7164bfa639072",
+        "bodyHash": "94ee0cfb8b0bf9f32bb6950ba4739965c8afb3c6894041acd06993449c8904c6"
       }
     },
     "dui/write-back": {
@@ -848,11 +848,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/dui/write-back.md",
         "record": "docs-sync/translations/dui/write-back.json",
-        "outputHash": "d0d0072b063732adaf88796675bfc225797be18c974558c42ed0593a48e43fcf",
-        "bodyHash": "175dd60908844411ac9b4116cf7e2b706846fcf41f75b9e7faf001736faa3a91"
+        "outputHash": "018983f47d654b917309c622489e15f1051351a35f0cbf5ee2de4fe60c009e51",
+        "bodyHash": "9efcb261d1487e973338b6dc1cb736571d32ab9196d90cd843613f6b522a64e3"
       }
     },
     "guides/fonts-and-packaging": {
@@ -870,11 +870,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/guides/fonts-and-packaging.md",
         "record": "docs-sync/translations/guides/fonts-and-packaging.json",
-        "outputHash": "73fa327214023f355d129a584fceb9754dad9b9d08cedace9aeb4c00f5f1a9fc",
-        "bodyHash": "a3d4aff1c71857ce492171df79d992430084a08611ed6b37b6d94187470e5dc0"
+        "outputHash": "05d5bbbf2d5b855ff72b1334569b2b24cd13323bda90614f8eeaedb6f0cfb079",
+        "bodyHash": "5451206a3269b9739628326a63f13323ab3664d97bd7ddeecb9dd1e3314ec831"
       }
     },
     "guides/migration": {
@@ -892,11 +892,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/guides/migration.md",
         "record": "docs-sync/translations/guides/migration.json",
-        "outputHash": "f7b4d7e3be4eaeefc6318a822e7b103d0091c045cbe9c6f9688779f9fd6bcff2",
-        "bodyHash": "3cb2a4253c7fdb950f6d288758a9b2709345c3b3ac26ebe7a270b730dffd97f8"
+        "outputHash": "fe40a88a3460d00cdc2479d252b89f0ab4b8bb156782ad6c6393289dcf6b8295",
+        "bodyHash": "0b31a25d88f5e10c44b27cbe70133659db360aa2dd65fdc145bdee51e1243c3e"
       }
     },
     "guides/platforms": {
@@ -914,11 +914,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/guides/platforms.md",
         "record": "docs-sync/translations/guides/platforms.json",
-        "outputHash": "863684fc12e85cc1e5aaba7068a648dab2bc59c2391649c2cc78d55578918dac",
-        "bodyHash": "a6815aebdc16f30382af86582abde199e2163d9ced4cce70b2573db44c18f55d"
+        "outputHash": "9724b3e87ecd5d40ba492c41f2ef165fbd00e2646237ab1060241507a3a2406d",
+        "bodyHash": "e0ef3539ca8c5b95ebdd5a4cf9ca9e7a7d0e3e73ce58e471b341ef56e7e5ebf6"
       }
     },
     "guides/upgrading": {
@@ -936,11 +936,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/guides/upgrading.md",
         "record": "docs-sync/translations/guides/upgrading.json",
-        "outputHash": "1140205dc14c4b859fafd27d80789d2bd627d3b377db536de366ad604f3cd4c6",
-        "bodyHash": "f9a307550fb8cf37300cd93d146e798ec8f0b3bd350fd250e1f52b58f248dd42"
+        "outputHash": "1df7a8f5697e6224647a95afce6a4ce333a083a11150cdef788e43da79582b6c",
+        "bodyHash": "37ac377eb9c576f9e71cd76e20d9b1acd2ea3af1b7f786301f01ff170bf25396"
       }
     },
     "index": {
@@ -958,11 +958,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/index.md",
         "record": "docs-sync/translations/index.json",
-        "outputHash": "e90d326d98214715b53fa229d57bb835af1e42054ed7bf295b9b46498348fb04",
-        "bodyHash": "e1deb99421208aaed6617913baa5726b29cbdc2b42a2647da210e1a737c914f9"
+        "outputHash": "d2fd16d4cba1f40471fe53b879410d724b0a03db6166dd3fa911abe5a072e421",
+        "bodyHash": "2b0fcc79b3805b4d4550eb26076387dbb4e921f7964b8aeeb3aa09505683f998"
       }
     },
     "reference/dreamborder": {
@@ -980,11 +980,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamborder.md",
         "record": "docs-sync/translations/reference/dreamborder.json",
-        "outputHash": "eb216cc6a0eac67ab165314ce8f260ff2a33b9542ffb229d5f60283505bee3ca",
-        "bodyHash": "322a0c17638320dba9c776d64ad22ab68ded89449746af6934a77b00ce5c4035"
+        "outputHash": "0e4e020972f944198b4f5c455330a9aedfec05fd4864dd0c853b7387d4dcae22",
+        "bodyHash": "834f2ad436e39a2e9974904445d753e224d04c85c3809affddddbb7f9ee9789a"
       }
     },
     "reference/dreamborderstyle": {
@@ -1002,11 +1002,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamborderstyle.md",
         "record": "docs-sync/translations/reference/dreamborderstyle.json",
-        "outputHash": "6df6867da132ae59e27c3e6db08e9a82320998586e6c082734d6107f9f3631f7",
-        "bodyHash": "a0f03d1df19831df352945aa020b14f4d7e081d8382066f26f20a601d5820c1d"
+        "outputHash": "bb724b46302f19b647ef962c30bc96692acff61d5c2418a365ff1a23b7a7edc7",
+        "bodyHash": "f67c37673843e6ed9e1dd179d1fde3e21a73fc36a05836a3ce5a3891be5bfc19"
       }
     },
     "reference/dreambutton": {
@@ -1024,11 +1024,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreambutton.md",
         "record": "docs-sync/translations/reference/dreambutton.json",
-        "outputHash": "e98dbd6ca4b9dcb01c2fce8df9a31e35cccd6c008fe51ea267c9bc9e64c7cdb3",
-        "bodyHash": "98045258fe75e6e6e621984655791e5266ff704b798a139774647b4806cd3e6b"
+        "outputHash": "4b3a59424931ba688151fc276f4ae91055b584c6376c6a8cbd8f2acc2514d63c",
+        "bodyHash": "8730ae67138b0101457c7d5102df25d2e85d7dc4dec428781cbf776d6fa1a54d"
       }
     },
     "reference/dreambuttonstyle": {
@@ -1046,11 +1046,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreambuttonstyle.md",
         "record": "docs-sync/translations/reference/dreambuttonstyle.json",
-        "outputHash": "1231dfa1079d10bb270ca67d3f54e8ef947412594e94d7d2c9cd1492a96fee69",
-        "bodyHash": "93f303fdd6624d978b6e0c8c699ef9d1353aab1a236e3be5d50f0f129318c523"
+        "outputHash": "c536db35e0acc21216ffcf8a9957bc0800203b1da587f5834c892195eb041957",
+        "bodyHash": "5f468c62d7225ff5ec69c1171bd0cd029a43bb81fadc7474ef958f16079bb1b4"
       }
     },
     "reference/dreamdialog": {
@@ -1068,11 +1068,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamdialog.md",
         "record": "docs-sync/translations/reference/dreamdialog.json",
-        "outputHash": "66210bbed92550c9aadf233122915462fc979110201d3c7d9cd2addf452e959f",
-        "bodyHash": "e9502e2c85e7aa6ef4378e24e1a21d4eead99ec3bdfd40602b83a9461852fed6"
+        "outputHash": "66055ead73b445b9c20d70dd592ab4bd347d97b9d0cbe35d8cd19e35277f0075",
+        "bodyHash": "bbae3a5f52a77f028eff4b3d0c9e5e66adf4e15f2e349735fcb469b059984140"
       }
     },
     "reference/dreamdialogstyle": {
@@ -1090,11 +1090,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamdialogstyle.md",
         "record": "docs-sync/translations/reference/dreamdialogstyle.json",
-        "outputHash": "1e2d7c7d102a777aa7920f4f24184d280983877bf9adca1cd671e3a4d641eb53",
-        "bodyHash": "ec24eb5040d22eb8f732d1cfda482680e6163063f1033281ceb0026d54bbfa5d"
+        "outputHash": "0b9713402b13f03a70b921d6934adfde632026ffc30c560151cb1879d6ae0092",
+        "bodyHash": "6ee04d6ff72394ba398e01c610677346fc7b8f099b809a1b22d7ecfaa7707f86"
       }
     },
     "reference/dreamdropdown": {
@@ -1112,11 +1112,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamdropdown.md",
         "record": "docs-sync/translations/reference/dreamdropdown.json",
-        "outputHash": "bf9b1ac3e618009af58a870a9d7d992affc41024f23e095a333371b0401256f3",
-        "bodyHash": "0431404a68d1c2e9d3542ecb000793f1688df4762d5e22f8c94170e30c7d8f7d"
+        "outputHash": "8a5fc4a2b003acc1add66a3bc50960d86dce312625cf1955749f115452c33cd3",
+        "bodyHash": "7d331a1299c56a9de9c9bbb6ee68ac0bfb4efc29dd3ad1215006de5feaca262d"
       }
     },
     "reference/dreamdropdownstyle": {
@@ -1134,11 +1134,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamdropdownstyle.md",
         "record": "docs-sync/translations/reference/dreamdropdownstyle.json",
-        "outputHash": "21608b703cb2c1777c7ffc11739fa132891cfd31f29b42bf5a7404824655c35c",
-        "bodyHash": "383575d4aa612437e4d7fb9140c1d1235a5eee9e1c6187fc0cfb9a804acca623"
+        "outputHash": "09736b5f687009fea15ce8953949e62d90b5ffb4b935b71bd83536aabd9e495f",
+        "bodyHash": "c8d01282029237c98146facfbcc5ad39aca77e116c660477a795167a48dc9616"
       }
     },
     "reference/dreameditabletext": {
@@ -1156,11 +1156,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreameditabletext.md",
         "record": "docs-sync/translations/reference/dreameditabletext.json",
-        "outputHash": "628b5e2280e1bf2a17414b88f8601d7c130eba14c9b5192e468a82360e17bde0",
-        "bodyHash": "4f0e1805ce59844ed4dc0b3e25becea21e9f6bb7466b94086035a3a1e55d8aa2"
+        "outputHash": "f5a8cfc0749f67f36bf3bb65fc6d532d464acba5a92fab408d3400a39a72cb52",
+        "bodyHash": "99e8040696ae2f8b0bc76eaa9b0130257d17b2fbdca35fb566757e7fbc13c539"
       }
     },
     "reference/dreamexpandablearea": {
@@ -1178,11 +1178,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamexpandablearea.md",
         "record": "docs-sync/translations/reference/dreamexpandablearea.json",
-        "outputHash": "8bb5bcf6a6ca59ed01650bb5b5fa1568abac1b442bd866847db2d1653aa43f41",
-        "bodyHash": "3114295675d9aeae7a490ae52e2b6eb4587980c6ae1b529335c54cdf08ce12db"
+        "outputHash": "7a1b176224126b189410bd4dfa7e11aac9bfac3a5c58daec16012d3a50923568",
+        "bodyHash": "575541049b93e3c4e4771095a1e6451121e7194f4b93daf7db3a947f24b9340f"
       }
     },
     "reference/dreamexpandableareastyle": {
@@ -1200,11 +1200,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamexpandableareastyle.md",
         "record": "docs-sync/translations/reference/dreamexpandableareastyle.json",
-        "outputHash": "95a04688623ee125325637e253f0ab61f82ef4ae56e62d50905772c8b1c50805",
-        "bodyHash": "da013df66d9d2873d78fbe704d4fd0586519359983ee121c26510a9ba0f515ce"
+        "outputHash": "741801546a3a493b7f0b7ce9be221772809000bec9effdbf05e3d97a60316c8f",
+        "bodyHash": "c72c51cf60442d021d3451713da516d6ea5e43dc8cdc03f044e85c16440cea66"
       }
     },
     "reference/dreaminputkeyselector": {
@@ -1222,11 +1222,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreaminputkeyselector.md",
         "record": "docs-sync/translations/reference/dreaminputkeyselector.json",
-        "outputHash": "fe428f31d7ca64f7be67a9254fb2234a3e256301c4920f0963d085e12a14250e",
-        "bodyHash": "5f59711806141b14cc9c2f6b678b9c0fa26d83405d5dd776f5d6eeb82f0a37cc"
+        "outputHash": "59b8f7de680c914a1bad076535ba56cfd9396ac6088f5626e7eefb538802f171",
+        "bodyHash": "0cc912b6af347d249db1e086641effad89127b5d9c75d2f4d3887be2daca23a5"
       }
     },
     "reference/dreaminputkeyselectorstyle": {
@@ -1244,11 +1244,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreaminputkeyselectorstyle.md",
         "record": "docs-sync/translations/reference/dreaminputkeyselectorstyle.json",
-        "outputHash": "d62389a8395627501f72b31b617922877cad817cd1d3af3ffa1be933ccdbb086",
-        "bodyHash": "f21e1e3b26a2c944edf25204e8df9b354a668ca427c46c08426d7205980b4f84"
+        "outputHash": "eee45902e0fe43da5f022b7f269282d9e1a2894d1855ac8dc3e480b0ecc62f12",
+        "bodyHash": "e88a1b84dccf73aff865522dcb4695335c1dfdc1f03c866a0a5f8d36fe8756a6"
       }
     },
     "reference/dreamlayoutcontainerborder": {
@@ -1266,11 +1266,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainerborder.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainerborder.json",
-        "outputHash": "202511a33b096e99624139f5b9320b17063e1b50b4a349e7c902fcb05406e7a5",
-        "bodyHash": "5150bb783c2a3142e4436e78a6cbe263d3d8af374df40feead49139dc5057445"
+        "outputHash": "f4f01e95976a9ef87ff169513ebbbb7cb48554d4bec796d49c1ff14fd018f371",
+        "bodyHash": "661f75817e68b24fc8ff9662f6d6835196bf1a2c369b6225a4856233d9ee9b19"
       }
     },
     "reference/dreamlayoutcontainercanvaspanel": {
@@ -1288,11 +1288,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainercanvaspanel.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainercanvaspanel.json",
-        "outputHash": "e33da70082025041e740600c275f19ac207e9dc47fc8b7b64bc3732c7660e62f",
-        "bodyHash": "f37d5e3509ef8e7059a0d21c8940e2e12277370c1a0970df089393dd695c49be"
+        "outputHash": "1450d3f944e7d733fa7bc7684ac90912c08b861725d78d6fe430ad1a8455994b",
+        "bodyHash": "1e951a86bcb892f1be361e8712731a2d3101e2637e96192858474b232ea9b44f"
       }
     },
     "reference/dreamlayoutcontainergridpanel": {
@@ -1310,11 +1310,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainergridpanel.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainergridpanel.json",
-        "outputHash": "390f18db5ab5e90a3ac161bbc9fc8f98c0026289be179e8358ed728889f0934f",
-        "bodyHash": "3199ce90e08dec0b5b8792353e69c3fade08f71f445be5f22ee7ae95d15d08b8"
+        "outputHash": "f32c99850b775c83e74cb0905d30d8a908ca373397457d37517a479de454d325",
+        "bodyHash": "0f9f57bfdda6af92d5d95e323032620dd6cd193bf847856ef2d6de06358aff0b"
       }
     },
     "reference/dreamlayoutcontainerhorizontalbox": {
@@ -1332,11 +1332,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainerhorizontalbox.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainerhorizontalbox.json",
-        "outputHash": "f55e0d2edab6e6dfb2c0722bae9c5bfeeb50a9e660151803186304aeafcb7a06",
-        "bodyHash": "0de977e43b013f579c19804cf76ac2163c1f7d39970c3e0ae39e954a35d7f917"
+        "outputHash": "c4cfb37ae4010b1cd7cda41c33cb045dcd5b241cb9b9d9d8303e906106b9a126",
+        "bodyHash": "7bd86eab68fb019f3a95429523103998ad5644ef5acab9e6af8942513a722f60"
       }
     },
     "reference/dreamlayoutcontainermenuanchor": {
@@ -1354,11 +1354,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainermenuanchor.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainermenuanchor.json",
-        "outputHash": "c9ceef4fef4ab5d5e19e5f63de6b4ab3090b68527d2d4cdbb32ba093cfa5f814",
-        "bodyHash": "5cd3d5e4c8cfee7af44e55998b84f33fad17d94ff58f882d67d05fa0950bc1b0"
+        "outputHash": "9d81ba910a458598f0c8d6f0432958fdc9a2a26b20166e634999c9dc5ec5746f",
+        "bodyHash": "ff954a677cf4e486e8b230a67b365dad4ed2b990c269d4ff3db4cb3365761c94"
       }
     },
     "reference/dreamlayoutcontaineroverlay": {
@@ -1376,11 +1376,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontaineroverlay.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontaineroverlay.json",
-        "outputHash": "402771b88dda19f57369e73d5877b4abf5a346240cf2c8bbaa7adbdc790600ff",
-        "bodyHash": "e5d446473e1921a29857276dc67ed5385596c17702387d188b968a866b3bf719"
+        "outputHash": "e67850b0344c2c269496f49c854985cf4df84d8cb712d381ec50884229ad6de8",
+        "bodyHash": "de2cbeaeac2a7a01f353f7944e3d250fbf42549f580302a7d1fa4674d0e29979"
       }
     },
     "reference/dreamlayoutcontainersafezone": {
@@ -1398,11 +1398,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainersafezone.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainersafezone.json",
-        "outputHash": "ab953e5e513b12823be3d21ea9eaa0a8beef405a65452e961b0f80e54a3358fc",
-        "bodyHash": "b92609170005fc361b6760ffa6e54107f1d22514dd129337c013202570c6829f"
+        "outputHash": "67d6b841e506be79a748c9d7c24e01b28eacfbf81b263aa1503d3c750c16204a",
+        "bodyHash": "24bab02a7c0d5ec93cfd83618124b0149949e47133270d456be6883bca5da2cb"
       }
     },
     "reference/dreamlayoutcontainerscalebox": {
@@ -1420,11 +1420,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainerscalebox.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainerscalebox.json",
-        "outputHash": "8878fe0fa96387d90cbbc8ac28d8dbc4c05f166c70a643a2859c0c666f372e48",
-        "bodyHash": "a72f5414ed4ead4f90b498bf7925727dea96ea86c034bdfcd4f4197606cedff8"
+        "outputHash": "5c5f4aea7d25d61716f39b57b94253e27a753ec80f3e7c13f6d86770e1affdba",
+        "bodyHash": "d8d96d3b10bc56a1eca7c59ffc26c48d9112c48a622412ee4750c97715bc9d33"
       }
     },
     "reference/dreamlayoutcontainerscrollbox": {
@@ -1442,11 +1442,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainerscrollbox.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainerscrollbox.json",
-        "outputHash": "23acd21dd131a4c0ae2662eec38ad453b0ab4d7205fcda5eb22254a6df52503c",
-        "bodyHash": "0e126a7a05d2f42b0cc81bb35b714b71c5f98956f5d0ec6ded68de7d93695233"
+        "outputHash": "2f68108172a41c822f4a2bfad141836888505e8a77081c30dce28db213af24db",
+        "bodyHash": "ea238d92cc059fc9a054bee88e43b921fa1d350482bb4744c26f457b367dfa5a"
       }
     },
     "reference/dreamlayoutcontainersizebox": {
@@ -1464,11 +1464,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainersizebox.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainersizebox.json",
-        "outputHash": "e502b172c773244c97df60f1afe6d82b2c4c92d4df3af7bbf0a0f64bd4ea2b80",
-        "bodyHash": "0e198908982c8177974fd8fc0a0d551ada842b52180132107bb0c29fc7bbf26c"
+        "outputHash": "598411ac19a88904833c95713452903c7a8927b5b391e1938f89176ed74ada36",
+        "bodyHash": "a745b0d7405dd65d945e70b4cc92383149ef7559c02906c14a78b8eaba5c18ca"
       }
     },
     "reference/dreamlayoutcontainerstackbox": {
@@ -1486,11 +1486,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainerstackbox.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainerstackbox.json",
-        "outputHash": "78e283a2e5a02bcb68d5307cc1067aa2dba3e6cadd26eb973a1820779d5065f7",
-        "bodyHash": "474eb59e6411c7f3960e1620dcab2ce8655cf46646dd6bce38dbe481563b70d5"
+        "outputHash": "2b3ee90f1402aa993d7a649744dd27d1a1327cc2e576c667a999e5fa4be81cfa",
+        "bodyHash": "1de287d9da9cffda2fefd2ab58c35ab858f380355e51428c5c7327dbba8aec5f"
       }
     },
     "reference/dreamlayoutcontaineruniformgridpanel": {
@@ -1508,11 +1508,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontaineruniformgridpanel.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontaineruniformgridpanel.json",
-        "outputHash": "c5149c85032234397962bd4782000998abc7fc28e6cdbf2aee695b6d629aac76",
-        "bodyHash": "3862b7b2dfcaec667a99160af9e17f97e49a7fd9c83996b27177132154bc2e93"
+        "outputHash": "208b67a8f1e11e3f46d2d0da4ce01c8dd5da113e19485000cdc16b4ca77ebfe4",
+        "bodyHash": "6cad0fe8613b05f9529d3cf7f1663cb2a7d7b956ee4d2ffd954aa1962ae1bde0"
       }
     },
     "reference/dreamlayoutcontainerverticalbox": {
@@ -1530,11 +1530,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainerverticalbox.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainerverticalbox.json",
-        "outputHash": "538d1f9944edb29fc957c0d74d59523df49cb611ad252b48afedc26f0e01b4e9",
-        "bodyHash": "37766399eeb060dc24c7a1d654d7febd7aeec582c2f005dd4eaa0c5945cb6094"
+        "outputHash": "642a281cbe00705e99ef68754dfed329c21d544c30394c5b7fa594216d6cd7a0",
+        "bodyHash": "dd02611cade0890966e07cf1441cbad4d2e8891f28252cd1f8a7be8aa738855f"
       }
     },
     "reference/dreamlayoutcontainerwidgetswitcher": {
@@ -1552,11 +1552,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainerwidgetswitcher.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainerwidgetswitcher.json",
-        "outputHash": "43874d59b13ad563211ef8f6ee6972004802bc947969fa13a18949648b08ff94",
-        "bodyHash": "9dc605b586727f6422e12cf8105185351390c8dc316f9983b4ec96f1a8096489"
+        "outputHash": "3ef50785a88573a1cc306761eff21d051f6bb8660f1f81eaa3f53c554a9d6ac6",
+        "bodyHash": "9c148e982e35f69a874019d6d0307ed2d4e17415c56c0caecccc3da5d181104f"
       }
     },
     "reference/dreamlayoutcontainerwrapbox": {
@@ -1574,11 +1574,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlayoutcontainerwrapbox.md",
         "record": "docs-sync/translations/reference/dreamlayoutcontainerwrapbox.json",
-        "outputHash": "cc0ecceb7ff1985f6649ee623b7bb6545ce736186a641d344dcf42b6bf53a700",
-        "bodyHash": "91449d6f66e634fbb149d5dc01865cb2255a2f3b83e59ae949083f3125410283"
+        "outputHash": "36a20616d6f41a72dda08098784f8a10fd6a4979747bcaf4dc301c90b4ce3cf0",
+        "bodyHash": "4a1db97badd66b21b827c2c07affa19ca73c41fa652547bf4df9f448b9953d9a"
       }
     },
     "reference/dreamliststyle": {
@@ -1596,11 +1596,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamliststyle.md",
         "record": "docs-sync/translations/reference/dreamliststyle.json",
-        "outputHash": "788f70b9d06a33a617112f0df7d4316b8c14a594e41963e57ad3523252fd5c63",
-        "bodyHash": "d8b5960dee2444eabf1b3b4ef77ba66dd22ecb797c007fe1b76ec68f208b9266"
+        "outputHash": "a4e4d884a01bdee914d1b38d753ba889977d58bc1e4dc4c97e88340e19f694aa",
+        "bodyHash": "c80361d42b63b7006aa203f045f83f85f127cc6f29974656c6d3e969f9a81fbc"
       }
     },
     "reference/dreamlistview": {
@@ -1618,11 +1618,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlistview.md",
         "record": "docs-sync/translations/reference/dreamlistview.json",
-        "outputHash": "283a48c63e987fe4bfb9c22480cf6e868fb1307e85268ef23e2bd5d87077ac99",
-        "bodyHash": "e170c2c238826692fa96386f7969a98dbf2e74d8ad6869d646c5f7e7f38a2c4d"
+        "outputHash": "e35dc66e03dfaab594f41836def7064f8ad930b47129885ab16e6a0a4beaeceb",
+        "bodyHash": "ca0fb5807bfe78032a89406d8ff8bff951dcc40648482ea491537faad2fbeb54"
       }
     },
     "reference/dreamlistviewbase": {
@@ -1640,11 +1640,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlistviewbase.md",
         "record": "docs-sync/translations/reference/dreamlistviewbase.json",
-        "outputHash": "be59cd774de8660539110bea7c525a5900178e660d58a202ddd1a8dfddfa944a",
-        "bodyHash": "ee4c351a1ab72b508c725decae33aeabeffb13d28959f212217ae0be6fcca7c5"
+        "outputHash": "2938b2338d586eaf78139a8e57216e70336c41904c43cdf00075840f93360301",
+        "bodyHash": "2bd11549a184156b98cfcc000ff04efb98f9af0d11b3aac99dac30e63899e9f9"
       }
     },
     "reference/dreamlyricslibrary": {
@@ -1662,11 +1662,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamlyricslibrary.md",
         "record": "docs-sync/translations/reference/dreamlyricslibrary.json",
-        "outputHash": "5869a966af7e92d2d8760b43add98398fa0e0aaf9de8ecba41ea71d0337c7b1a",
-        "bodyHash": "e605513b6a81142f92fc23e7aeade7ff9e6ee2e2552f4e047db23c63b20f4a42"
+        "outputHash": "8aa6f2928f2cb96598668f50827cef5e8c7427a25400ea0a3a531f9365dfff46",
+        "bodyHash": "678bf86f33ca553d28c719a0b78b51ccb913331c264aaa6367ecf6d094bf7ef0"
       }
     },
     "reference/dreammenuanchor": {
@@ -1684,11 +1684,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreammenuanchor.md",
         "record": "docs-sync/translations/reference/dreammenuanchor.json",
-        "outputHash": "1de953871bdcc3057fc39f993daab2d9b40ab5545c3cec74c0254ccedfd145e0",
-        "bodyHash": "a1bbe9f05730361d03d92dd5e7c0c1da92b3222cf9b04899893a2315a4282c14"
+        "outputHash": "90775d9d18baa9ed3b06be06ecf4140d9f91c237bf4e4b50fe1d9ee82fc19b37",
+        "bodyHash": "cebbcdd02ad6890e6d4df7a306cafac398a1c83309b2c115dfb2efb18db1506f"
       }
     },
     "reference/dreammenuanchorstyle": {
@@ -1706,11 +1706,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreammenuanchorstyle.md",
         "record": "docs-sync/translations/reference/dreammenuanchorstyle.json",
-        "outputHash": "5f52d37990d4bd0a90d54fb598e4960819eccce759d6babc877c790c52fab733",
-        "bodyHash": "acf0a8b508b5e604d3a705ba6880f03f67badb2bf01863427d5a98080c50ff2d"
+        "outputHash": "15fabdfe6c99acc2b5ee3405726454524bdc221615b1f7d787bf24976d9d9fd9",
+        "bodyHash": "9218affcb700618f3f5ddd222f01cc15413915034063e5273f4ad9e55c6bd8ab"
       }
     },
     "reference/dreammultilineeditabletext": {
@@ -1728,11 +1728,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreammultilineeditabletext.md",
         "record": "docs-sync/translations/reference/dreammultilineeditabletext.json",
-        "outputHash": "c6284730c6b6453e4f0456c4142125a4038b2f5f60f72b843842e1d7346b8c3b",
-        "bodyHash": "542610463d557fbd185a2a829c9fd7bd99b2c3122587f977a4e5dcdf1533e74a"
+        "outputHash": "65e88eb12cf4d61d635d65b5266e636bfb95f7392f31f2b52b71dea18d977729",
+        "bodyHash": "68e40248e1f07b24e682afd3c0ea43779e528e7f8a081b76eedba15b1dbe677e"
       }
     },
     "reference/dreamnativewidgethost": {
@@ -1750,11 +1750,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamnativewidgethost.md",
         "record": "docs-sync/translations/reference/dreamnativewidgethost.json",
-        "outputHash": "b96dfb4fcef2c466c7bfdcb65939f84f836f87e8cb49169295ab7316bbb7928d",
-        "bodyHash": "9dc2cf70354ff6d0e6ec725b78630c6895097948b79e9e917216b5c0c0833c06"
+        "outputHash": "f0ecca0048e531d36555b30182623e593afa9a920ff87759f356b5059a4de795",
+        "bodyHash": "55e744de600899318a7268eb9feb448088b2ed2f83595caddbe516f2ddf5771e"
       }
     },
     "reference/dreampanellayoutbase": {
@@ -1772,11 +1772,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreampanellayoutbase.md",
         "record": "docs-sync/translations/reference/dreampanellayoutbase.json",
-        "outputHash": "df822cbbe27c737b35436278db097dc86e43b2830069eaf9ca9597ba6c1d2873",
-        "bodyHash": "a9dca90dfa45bff74d61d7642587f388977dcc9b5719d158aef39fe994ac34b7"
+        "outputHash": "af50fcda57fb7ba9c1a403b60159179e6e420a8411a4123a0630999fbf16e4a9",
+        "bodyHash": "50b8d058499bf40c60ec91b205de4766e859557b44a4a48b0483f132431e7e92"
       }
     },
     "reference/dreampanelslot": {
@@ -1794,11 +1794,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreampanelslot.md",
         "record": "docs-sync/translations/reference/dreampanelslot.json",
-        "outputHash": "70cd0aa78ffd7bc7401fb413c6dba8c0c3040b311f8dec04a98cf46d5d86adf0",
-        "bodyHash": "2f56b38bd4e80b7bbffa990c50c02a5f06ab78287c6060f4f45fd636b1e86285"
+        "outputHash": "d53acb697a084a70e1cdb420ba8af04762e2023574ca889cf327d6564d53b9f0",
+        "bodyHash": "43f5c3ea8ff15795c16c245671577c0d79242f982836e2fe233cbef70b9b7669"
       }
     },
     "reference/dreamprogressbar": {
@@ -1816,11 +1816,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamprogressbar.md",
         "record": "docs-sync/translations/reference/dreamprogressbar.json",
-        "outputHash": "b20efeefba94d630e0f15dd53f7536ee1f2f64c9ab60e9d59825a1ceff433932",
-        "bodyHash": "bc6e8d566e12a843c7db492036a5bf92f1e541493ce300761574e93546c3980a"
+        "outputHash": "f26bafd80aaa48cd87958541b1e45900d05b2cf00c29a733527d2603dbb789bd",
+        "bodyHash": "b8db4161b2f896629712330759af34b887d15d48ee87e116c0fc5f32116dfd01"
       }
     },
     "reference/dreamprogressbarstyle": {
@@ -1838,11 +1838,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamprogressbarstyle.md",
         "record": "docs-sync/translations/reference/dreamprogressbarstyle.json",
-        "outputHash": "fb513a33745ead890de0463acb48fbb429367e42a0a59500c36dc1ff36dd4dc8",
-        "bodyHash": "afc274b30f091603c412d991b8c953482398ad821a9ce38c97749d0e856876d3"
+        "outputHash": "9906075c3ab5b311bde592c22ab75e4c8b441f0940b76e250441f9d4267eb6af",
+        "bodyHash": "8641ad9a84fcbf80f7b92acfb7d29e647eb643485714e98c8e93467167245e48"
       }
     },
     "reference/dreamradiobutton": {
@@ -1860,11 +1860,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamradiobutton.md",
         "record": "docs-sync/translations/reference/dreamradiobutton.json",
-        "outputHash": "0c5dac3a4fbcac2baf0df1127cc4d9515ef95416f8fd4f8d69ea8852e2792652",
-        "bodyHash": "546f17c4a8ef0e2b67c8433caac9480c137c1aca3f59bdabc1a8153b4d67b4d8"
+        "outputHash": "a5ccb901eeec30be7d4d7549440aac4694a0fe71e80d08bd295a9262311ee970",
+        "bodyHash": "60a03001625b7d24c7f3fd7aa5a15522ccf6d14ffe2cb83fbf60086cc4453ca9"
       }
     },
     "reference/dreamradiobuttonstyle": {
@@ -1882,11 +1882,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamradiobuttonstyle.md",
         "record": "docs-sync/translations/reference/dreamradiobuttonstyle.json",
-        "outputHash": "74c0beea5615a06cfdba641a68a068d86f1dc76c8ee87ad38fc4e7699b6a30ff",
-        "bodyHash": "6c990f5bf4e4c2c93c1b17160b365f7d87f6d96ac48be86ccdb73d229fc88b53"
+        "outputHash": "6e116967f2bc31fa130d76ff3894fcde7fd61192061b820b8671bbb43da08848",
+        "bodyHash": "f260dca32ab4eb28e2f967fa66437b445952e28b1af851d325b048b17c57f6d2"
       }
     },
     "reference/dreamrichtextblock": {
@@ -1904,11 +1904,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamrichtextblock.md",
         "record": "docs-sync/translations/reference/dreamrichtextblock.json",
-        "outputHash": "0785e590ae0c5243b8c93296f76c82e8eaf35c88c8fd282de6a1e1dd931eb029",
-        "bodyHash": "b5a3dc289608956a54253eb2c7cd23021ff4cc9b5ea965ec4f4d2a75deeb9f02"
+        "outputHash": "a163b3fcafb7001f00e5649e704d539fd241a6dba47c3056df9abbebbb8fd5bf",
+        "bodyHash": "aec7b40fd9b1268b3a3ed601f35c63fdb267c6df2118f129c37f4d2dc75eec60"
       }
     },
     "reference/dreamrichtextstyle": {
@@ -1926,11 +1926,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamrichtextstyle.md",
         "record": "docs-sync/translations/reference/dreamrichtextstyle.json",
-        "outputHash": "cf4838987260f0994d54938fc44fb43bde70ea07b5cb7ab5d2fd30e2bbec927d",
-        "bodyHash": "5cf90e1f58f19c13453daa655a0cd40a3015fcb0782fd2fd7c95af79a2f0e00d"
+        "outputHash": "c6f24a870f40a5e804f21cb0476f855b816c5a63fbb355695c6c115157562de5",
+        "bodyHash": "c6007948463ea4b86ca5d464856ff14af8059934a341f741132d8544fa0cb769"
       }
     },
     "reference/dreamringmenu": {
@@ -1948,11 +1948,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamringmenu.md",
         "record": "docs-sync/translations/reference/dreamringmenu.json",
-        "outputHash": "6a7170bb4b0eaeb2b8ec0e16f4eca4ccd6b0afabdc0408c5c805804f429b8a34",
-        "bodyHash": "97185a642ab9df0cdb20ec8d593711997da7af61fd156aa7237225e374403dc7"
+        "outputHash": "25555d2111cccb169b7d8cbcb6bcca519530904f237112c220b297c9d8b3be2d",
+        "bodyHash": "7e734f6d60329a91c75963dc4843d6ad6e6a3bcc7b2b235fa91747ece5370cf0"
       }
     },
     "reference/dreamringmenustyle": {
@@ -1970,11 +1970,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamringmenustyle.md",
         "record": "docs-sync/translations/reference/dreamringmenustyle.json",
-        "outputHash": "d28c18b5012004cb64bac4c5fe7a90314c193c9dbf0a51e68bb9088897824527",
-        "bodyHash": "134f9953c043e8b91b60620ba114077e2bad4ac3707b67df17163e8faec16f88"
+        "outputHash": "9a3c35a14bb1dbc28363679a9c3602df961401891b2788fe283355b0b86c7856",
+        "bodyHash": "e67be87c7c170b4ad552b2632c11beabf332ad5de80ab49aa9e9d26352d0c3db"
       }
     },
     "reference/dreamscrollbar": {
@@ -1992,11 +1992,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamscrollbar.md",
         "record": "docs-sync/translations/reference/dreamscrollbar.json",
-        "outputHash": "d17bbfb094f6444238a9f42f813677f23c954837e65041d5b3581ee9abcc6220",
-        "bodyHash": "c4e73fa0e4202d51fc200da439bbb33034a99da4a6be917038abc39a3d061fc3"
+        "outputHash": "bc834beb78da998f1256c7a840d7dc000bb159c16289e0ac95cac09c89702b33",
+        "bodyHash": "b6907417b2c8c6576f5a3a1c2b8b6fe267c445673f257972a2366eb564861563"
       }
     },
     "reference/dreamscrollbarstyle": {
@@ -2014,11 +2014,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamscrollbarstyle.md",
         "record": "docs-sync/translations/reference/dreamscrollbarstyle.json",
-        "outputHash": "84cd803f83ec5850d79ce3cdba24bb27e6cf4194c0779c9527296bb869dde43b",
-        "bodyHash": "f3f6ac7bcb626199d4c48f9b7f88daf86d7ecf4bfa9e34c76a6ebf87259c5782"
+        "outputHash": "9a5fb651a8bbcc04ad46db9af590cde7eec4e2bbe945ae3e04767f5ee7ca66dd",
+        "bodyHash": "f697d66855315b410dec185ed3b16fc28ffaac0aa3e18a5287aed4aff3fe342b"
       }
     },
     "reference/dreamscrollbox": {
@@ -2036,11 +2036,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamscrollbox.md",
         "record": "docs-sync/translations/reference/dreamscrollbox.json",
-        "outputHash": "944cd367cffdc450dc19578314b0539f5b583d0a4ab4d8f0ef152a63c4a28dcc",
-        "bodyHash": "a717ce332c46e68ad22f39fe0eef65a4b5b4a551e312a6923e520b302c1a2a7e"
+        "outputHash": "d1eed253cb62dd20a454390b8ffa9ec1f6afd0c512b3308b466a90db6c35db21",
+        "bodyHash": "cc53f41e4ca7ba486c7d48e314cddafb83703154925b3b7aae25510e8031f7de"
       }
     },
     "reference/dreamscrollboxstyle": {
@@ -2058,11 +2058,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamscrollboxstyle.md",
         "record": "docs-sync/translations/reference/dreamscrollboxstyle.json",
-        "outputHash": "e1838851d05427ee6f1f37421879e0838818de984685f8e54c8e12beff962b55",
-        "bodyHash": "c4a48bebc7d17013b877b0d9e164793ba666ed7733b9229a851ab97a393cd249"
+        "outputHash": "d3ea9bc2bb98f20c634b8e22936e38d3c61f27be49453f7a625997f9aaaefb81",
+        "bodyHash": "9ae44fc622f4c6c57f99bf6aaea26f793076c856988e5ac0798572bb9875e3fe"
       }
     },
     "reference/dreamslider": {
@@ -2080,11 +2080,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamslider.md",
         "record": "docs-sync/translations/reference/dreamslider.json",
-        "outputHash": "ae1270bcd392a670469c23cc101d4c651e6e74e6ba92aedf63e708be8c896993",
-        "bodyHash": "85679bb0cb04379080f9cce56cb33f5eee867a460eef23f8e37158e402ac473d"
+        "outputHash": "053d8194690210681d73691c052cb30053573b4fbaabe75116e869fba7355ee0",
+        "bodyHash": "0ca18b9f6d59ce8a9328d0f15d22b2352509071c26ad0d3059bc616e4d05b078"
       }
     },
     "reference/dreamsliderstyle": {
@@ -2102,11 +2102,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamsliderstyle.md",
         "record": "docs-sync/translations/reference/dreamsliderstyle.json",
-        "outputHash": "a47a905658a5b1d62ce8714b75035d5c6b6e74f7c2910c75ce8cfa1ef62fbe0e",
-        "bodyHash": "2ac6f827fae99e79d42f145462b89477c2809caffc9a039e169410ccef9f5ec9"
+        "outputHash": "1ff3c492f08c3d92caaacbe0efdeff0be4aa0634053ae322855c2e7eed2d25e8",
+        "bodyHash": "188a7a3e2a6aec912e88ef687e7701dab063b77888e7cdd6b6e39dd61788bcf9"
       }
     },
     "reference/dreamspinbox": {
@@ -2124,11 +2124,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamspinbox.md",
         "record": "docs-sync/translations/reference/dreamspinbox.json",
-        "outputHash": "186902187ca90eb975713c846950b2dbd42b442667a8a1ca161b25568f50009f",
-        "bodyHash": "931232d8f1908e4f45d485c5d912e4e75f3d2e237095cd821d815e037abbd086"
+        "outputHash": "958b43117587bcc41ffcd65224cdb0cbf49e555cda05ef4994c9a7a9e91fe1be",
+        "bodyHash": "350bfab1a8cb77cef39d55f6831795688c2227812421a0085f922ce7e0c12077"
       }
     },
     "reference/dreamspinboxstyle": {
@@ -2146,11 +2146,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamspinboxstyle.md",
         "record": "docs-sync/translations/reference/dreamspinboxstyle.json",
-        "outputHash": "9e626154498cd3f0a424339815f3a43215c487af69438930d7b8336e6083b778",
-        "bodyHash": "07e29640e0f213ce82c1dea6ac0ac8e9a19fed651ecb7ba15f5da0fbb27ff798"
+        "outputHash": "f776eedd11129fd0d7e9f8e6d9170203c7f7b8a1b62bfafa234a43ccd2cb5084",
+        "bodyHash": "24daba2cbee7a4223032b4bbf2c879997ef74858a4eb99accabc1aa8ba83a2d4"
       }
     },
     "reference/dreamtabview": {
@@ -2168,11 +2168,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtabview.md",
         "record": "docs-sync/translations/reference/dreamtabview.json",
-        "outputHash": "8f9b13e9dd27c0bdd33f9bf5267137deea28bdd40a958a539ace78f281ba224d",
-        "bodyHash": "7100a02506d143f5de876888b92c5b5093e9cc08f208831955ad82e93e122ec7"
+        "outputHash": "2369422a1e69171b4376d3aad929f4a6aa1d4a9c88a3619e77a403ea5458fa4d",
+        "bodyHash": "b6b284e6084159a7481b182449ae114f4be55c576a3acb5e8ceeb9230a6fa1ba"
       }
     },
     "reference/dreamtabviewstyle": {
@@ -2190,11 +2190,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtabviewstyle.md",
         "record": "docs-sync/translations/reference/dreamtabviewstyle.json",
-        "outputHash": "aa1fef66e4b0cf50228a7622be9cc4f5738d4d06da63f2c1559ca392e22a18a1",
-        "bodyHash": "d18c86f1d2837ce5351c30927fc0ae3442732664c16dc781a81bd71c5225fe03"
+        "outputHash": "26d67ffc311a8bb3748f0cab3d5bad40826d9bbc4e476730f66016f2b8ef82b7",
+        "bodyHash": "1e833747f4f8bbe88d857d0a1d3170a2462a9d0329baf4542a8179da4e73acb7"
       }
     },
     "reference/dreamtextinput": {
@@ -2212,11 +2212,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtextinput.md",
         "record": "docs-sync/translations/reference/dreamtextinput.json",
-        "outputHash": "aa549f0d8c9c811f35b12d4784640559e6a31891a4b7fc562700d5a7439f6dcf",
-        "bodyHash": "45404bc0cec927af65b9f3c93887f09a06e96ae93264e033577f65c4efd070cb"
+        "outputHash": "0b61adb4fd621dfc9ac5b66ab939f5c1ab9764dda2d52523e6ab85403f94b0d3",
+        "bodyHash": "6fb686d0b5e7a3e111637b3414fbf959a5ff0c4b587793f21a52b4ba0104f33a"
       }
     },
     "reference/dreamtextinputstyle": {
@@ -2234,11 +2234,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtextinputstyle.md",
         "record": "docs-sync/translations/reference/dreamtextinputstyle.json",
-        "outputHash": "a7d9745a2d4c53379d0f749ec034cbde8b98723d971fe4d8becda889acc54461",
-        "bodyHash": "f9092b461ac16750444f10f2e48f2cd36a8b303ae756d7ca888f68416eddeaeb"
+        "outputHash": "92f8db95be8d5ee86532a67b63e5fbe951d3d6b3a4f9fc715d5cd85adda825ce",
+        "bodyHash": "66ee58b0ad5a05d92a846c1f82b600bf877f936ea2fb73a00811c7f6ca09bb84"
       }
     },
     "reference/dreamtextpaintlibrary": {
@@ -2256,11 +2256,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtextpaintlibrary.md",
         "record": "docs-sync/translations/reference/dreamtextpaintlibrary.json",
-        "outputHash": "3ff5f143710ce2253ae55448777212c700cb40472c0e8ede78a306b2e1e8ee56",
-        "bodyHash": "7caa13971d800c60b034a0880d62a17ee533ed83e801fb60f78bd6c7fad9efb5"
+        "outputHash": "0489daf6f695d993d64a707c45cd037561d2d43c924d698dd1f521621287fbe2",
+        "bodyHash": "3a09cb8d62e9b4a9ddfff33f2c7595d1d6b25f1ea746291dc1d833c5573e8e7a"
       }
     },
     "reference/dreamtextstyle": {
@@ -2278,11 +2278,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtextstyle.md",
         "record": "docs-sync/translations/reference/dreamtextstyle.json",
-        "outputHash": "42dfeef42c5a0bb0b67541e30a05f65656cea359bd48cf3428f31c638dd7cfa5",
-        "bodyHash": "83dc4584c58d7ea0d4279117ab801113bbe04aedd8cf4f037a23e9f2d2b94d83"
+        "outputHash": "75e52ad1d68f221f2036ab573b451f14f5efade3dc48621849d0a20347626b7a",
+        "bodyHash": "1fa387063d545f937a409751554bce2c1bf9fb7cfbea9c362576f5951a92598d"
       }
     },
     "reference/dreamthrobber": {
@@ -2300,11 +2300,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamthrobber.md",
         "record": "docs-sync/translations/reference/dreamthrobber.json",
-        "outputHash": "715cca577f0235f0e25c201620d41a4a5543abf487b52b1ece918cd9cb7b2475",
-        "bodyHash": "419702e16da15588955abc45b89a2b39d23137506fd7e9e3d4cce9bb2e8e72b9"
+        "outputHash": "a65d5c2aa33cc9f493991072128ee7be7f98cb18fdf25c767b916d7efa4d51bf",
+        "bodyHash": "06890c21100a3e20d60257d3b8892298404c5f1d05cf8d86d6b1eb0a10c56cd3"
       }
     },
     "reference/dreamthrobberstyle": {
@@ -2322,11 +2322,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamthrobberstyle.md",
         "record": "docs-sync/translations/reference/dreamthrobberstyle.json",
-        "outputHash": "cd01a90997e520cdb83fc05c7dc209f99a46e283fb97b730e02b8ba6240523f3",
-        "bodyHash": "c7983197b01feff183dad13c5f9237260653bfb4d56c6742d2af46c8aca917f7"
+        "outputHash": "b31f35e72e86aa9de4f6f5e8ee4b82125782bbdd50f200e3c843f00d84b7729b",
+        "bodyHash": "88e8f2f3bb29bbab4fd6fa2ca8560d334c3f599b45c6870bd5a102ecc6a8e121"
       }
     },
     "reference/dreamtileview": {
@@ -2344,11 +2344,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtileview.md",
         "record": "docs-sync/translations/reference/dreamtileview.json",
-        "outputHash": "9f3db30903bdb4a05d994dca6326c7c890c9b649489631624268ff7be5a12b54",
-        "bodyHash": "c1ebafecda3d25792917ab2ee4ee774b982304429fc1113e4938d113ad90b88a"
+        "outputHash": "9fead83b49dfcababcbb6f3937e3be96d03c6d3bc511fcfdaa2b4ba7d8dd1c7a",
+        "bodyHash": "18ec4ce3b855dc31d48c0e40f01df590633a49ddca1376935c120824bdd51465"
       }
     },
     "reference/dreamtileviewstyle": {
@@ -2366,11 +2366,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtileviewstyle.md",
         "record": "docs-sync/translations/reference/dreamtileviewstyle.json",
-        "outputHash": "8acd7286e8832d0e658c84f59d9d0b750e6710b62879f5572ed46e66fbfe5fff",
-        "bodyHash": "0bb0ea4f140ab08866e38e68f91b575fed13b03f9b0a6f984334263d4f5a4260"
+        "outputHash": "9f77f06700106334269c81ac8515f2359b7fb91bb8ba8d61e657adafb3cef63f",
+        "bodyHash": "d1aa555417493db3524ed790ad5e8241bf4aee19215c1272f2cfc054869b0439"
       }
     },
     "reference/dreamtoggle": {
@@ -2388,11 +2388,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtoggle.md",
         "record": "docs-sync/translations/reference/dreamtoggle.json",
-        "outputHash": "6121467c57d963f767e5f5c6586ea1d8c041e4439ccd767232924c98dd0f5fb9",
-        "bodyHash": "0e79fbe975b3f49bad2a995a821948383fb6e6dbd4000519f73160f52fcc5768"
+        "outputHash": "63bffd2407cee39310f510f7c0545aebc7ae7c2f90d63466454193b6b2797637",
+        "bodyHash": "74a245141f5e22fd72d88da1cffe4693f39295883c5f5a78acd8fc1f32a69403"
       }
     },
     "reference/dreamtogglestyle": {
@@ -2410,11 +2410,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtogglestyle.md",
         "record": "docs-sync/translations/reference/dreamtogglestyle.json",
-        "outputHash": "6b15362b3979f52adf2a06d05509a0095da668ba399bf97085f25cc30929f567",
-        "bodyHash": "4206adb412b49f67d17874717ec7725031f572a536b32e0a3fbf0158fba74f9a"
+        "outputHash": "78e0c5c56ed0e4c537011f68804d0ac0d3125e96daea87945ba5ab1be555e9f2",
+        "bodyHash": "4f1c37e6bc6c9e8ffa697e54a9c407dd39c5ff7d0e32d9a73af59f55198bcab8"
       }
     },
     "reference/dreamtreeview": {
@@ -2432,11 +2432,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtreeview.md",
         "record": "docs-sync/translations/reference/dreamtreeview.json",
-        "outputHash": "bbac4193069e42e64291650b3be16a1b75a8aa06d24228fa6dabad552d4eea6c",
-        "bodyHash": "ff82b968a8703f8f0dfa0e95b2e1e56e4729d05a4e71541333fc9ef6a02d973f"
+        "outputHash": "1d5b9223b82b7054f38ab7862857280ebcc93723efa8b028941dd6d15cc241f8",
+        "bodyHash": "7135e29811e9e86a8e806689b3d59a0ec4829e74e869e7ac662b46f2b1eb68de"
       }
     },
     "reference/dreamtreeviewstyle": {
@@ -2454,11 +2454,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamtreeviewstyle.md",
         "record": "docs-sync/translations/reference/dreamtreeviewstyle.json",
-        "outputHash": "d5eb2eac412f50d283c9bbaafc051e10dfad0c26b9b25e4adb01b9cbb462c6d4",
-        "bodyHash": "d502b1f92ac7def97f724fa885dd1c17114a72b8c35a68539e96f79e6eb16af3"
+        "outputHash": "cbba1eed7b6fc01307a791d5082c5d28341a48cf42aa69cf70d62c27958c6193",
+        "bodyHash": "4163a4b249d345da8ee90630f29c2558790c5fb5425c00cd74655f8b6fe02f6c"
       }
     },
     "reference/dreamuianimationlibrary": {
@@ -2476,11 +2476,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuianimationlibrary.md",
         "record": "docs-sync/translations/reference/dreamuianimationlibrary.json",
-        "outputHash": "3f3bcc010d2ef4105c265c84f46428e7797818c6bf20d433a72202bc9f4a7184",
-        "bodyHash": "53b55d102dd62789c68c1db6551e2e32885a8163eca2536529b3971d21399b47"
+        "outputHash": "7d5847de4473ac2bc670fa7286c4bf41d88bd75d890a2b2ba6affa4b6326e249",
+        "bodyHash": "0334509cbb75d1d837bb7a10117d24d033300c59044a4b0530adbafd5b753f0d"
       }
     },
     "reference/dreamuibplibrary": {
@@ -2498,11 +2498,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuibplibrary.md",
         "record": "docs-sync/translations/reference/dreamuibplibrary.json",
-        "outputHash": "2c374c99bcd6ab04434e2dcaa03b5b8a9a8432d3bdb9d24b0c53aa97275480f5",
-        "bodyHash": "125e1993df70101ec7eb29f736c967702d6da6328f32aa207c43ad9f9b6b8b80"
+        "outputHash": "5197afeb844935c0d70a810c04103c95ec4e8a31078848f217268f6073a767a9",
+        "bodyHash": "6d9a5e0acf8954835c83dd13e97b2e1f716dbcf7ae369e6c7ff9cbf00ee15fb3"
       }
     },
     "reference/dreamuicapturelibrary": {
@@ -2520,11 +2520,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuicapturelibrary.md",
         "record": "docs-sync/translations/reference/dreamuicapturelibrary.json",
-        "outputHash": "8d431dc563288e94daa6dd4509e33513efcc74b0946ff7db39c7a20ff1012f89",
-        "bodyHash": "0b6d742933f726960b21ec43f97d20fdbdd9d0025e6921df4136e6fd2b13639a"
+        "outputHash": "9a4a4d47f29c670f5f3f3be1f6be9e7686ad7ebb8b756e0ca24091cf915c6c5a",
+        "bodyHash": "15fe62a6b674fead57e732e5177a9898e1205ad723b40e70327204592058d559"
       }
     },
     "reference/dreamuicontrol": {
@@ -2542,11 +2542,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuicontrol.md",
         "record": "docs-sync/translations/reference/dreamuicontrol.json",
-        "outputHash": "fc5a866c935fdfadeb94d78d3b6867b5869fa68a61abd95e2baa314d1b30fb60",
-        "bodyHash": "ed2a823f944905f3c40eb9bc42c57edcf7f7aa880d79c051f83b9cc170bb49ec"
+        "outputHash": "ec1ef4bebc7f3efc77d97549332956922a3795b616f3adb2b3ea745a3326d06b",
+        "bodyHash": "061674fa5ef28c81fb7307642a79285af94883e96004bfee70b0f44c5296e63b"
       }
     },
     "reference/dreamuifacebrush": {
@@ -2564,11 +2564,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuifacebrush.md",
         "record": "docs-sync/translations/reference/dreamuifacebrush.json",
-        "outputHash": "dc944f1e7f403e0d1e3e0fc1d17883e5ffb3ded75c31bfd538691e594bdb28e7",
-        "bodyHash": "27371e284e38f0c03be7b4be060f4445d38f412507759171c79f47fe57fb0a12"
+        "outputHash": "bcf3e4941dfbcf19b3f89dbb5669c0ed9cd41b990f6d92544bb3ff4234adf41d",
+        "bodyHash": "27384ce26d966f72db7e645eeb264b593c56404a3062ba154a78bcc4624562b7"
       }
     },
     "reference/dreamuiimagebrush": {
@@ -2586,11 +2586,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuiimagebrush.md",
         "record": "docs-sync/translations/reference/dreamuiimagebrush.json",
-        "outputHash": "b5771a48f0f7134c36f4f472ebe34a2b3cf40d693c9a1b5213f4775a2a9e07bb",
-        "bodyHash": "6c5a088c6a4f572293ac25703061daf8ce1bf126e5868c4985b99d573454b6d7"
+        "outputHash": "04a04f98549a62eb2259a239fb5f01b8209d771fd608bf94c11ff13b39ccb6e8",
+        "bodyHash": "8c6199340963e0722c9082bdead4da14eaae9c76f65b05ebcdc9828a79ab00f1"
       }
     },
     "reference/dreamuiinputmodelibrary": {
@@ -2608,11 +2608,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuiinputmodelibrary.md",
         "record": "docs-sync/translations/reference/dreamuiinputmodelibrary.json",
-        "outputHash": "a076bd689b9392ad86de3bac745442b4971dcca230e546c399467212cb043712",
-        "bodyHash": "beee047d1c99de2fec0ec50150a1914ed7632f45aacca023b687594bfe8d6ab9"
+        "outputHash": "f11042853b29d9f0eca52310dfbd96c580decb74de5727433860e6f8068753b4",
+        "bodyHash": "4a69f6d605474e53a974a5b3801505adece95185ef6b7e6c5cbd27a81a6ee2d9"
       }
     },
     "reference/dreamuilayoutlibrary": {
@@ -2630,11 +2630,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuilayoutlibrary.md",
         "record": "docs-sync/translations/reference/dreamuilayoutlibrary.json",
-        "outputHash": "9ccdff96cfb05ce4a86237d501b5e3f592779ccfb4dd1c086acc157fccf11e09",
-        "bodyHash": "c78708895f36e8f742506ad5c52aaa07e7ff8fa2df78b30e39b6d4dcc317639e"
+        "outputHash": "59be7398c048b566a83182c46bf4691ebc268ff66e3cd1022d37346557444690",
+        "bodyHash": "eab366e8dcc5cf6d1aa3def94afe41d2eac8ba7df1b52511285a21e50ee376e9"
       }
     },
     "reference/dreamuistatefaces": {
@@ -2652,11 +2652,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuistatefaces.md",
         "record": "docs-sync/translations/reference/dreamuistatefaces.json",
-        "outputHash": "42e2e810f697a9daf5e1332c0805c3c9874856aef49033b7f374c9a06798f850",
-        "bodyHash": "d57634ca8fdb1b2d2d5d464f5b8ffcdffba8d0d2783e36f334842fb1bca5e3c3"
+        "outputHash": "42df9ff5f1a61477cb6018bf1e0ed24c7dce2d594a9ce8c76ff87cf8a17d46b6",
+        "bodyHash": "ebfa2d914da31b940b846c08770d46f04e198d1d7328fcf895cbf7cbf13c0921"
       }
     },
     "reference/dreamuiwidgetgeometry": {
@@ -2674,11 +2674,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuiwidgetgeometry.md",
         "record": "docs-sync/translations/reference/dreamuiwidgetgeometry.json",
-        "outputHash": "69471bdf90ea38ec93a718993c5ae71c544aa0b59ecaac0ef89827d06b2ef4b0",
-        "bodyHash": "f9c25310bde795caa02b33b54d798b4455f76e1ed39faba7a4df5625a29fe0e2"
+        "outputHash": "ec798f6db8c93f734622075d555eb755f1b73a53ee675b02691a8e604a1b2881",
+        "bodyHash": "2d79938d538eb3c0cea6fd00233051e8f3817914fb66403ebd68737100f0e8ee"
       }
     },
     "reference/dreamuiwidgetgeometrylibrary": {
@@ -2696,11 +2696,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuiwidgetgeometrylibrary.md",
         "record": "docs-sync/translations/reference/dreamuiwidgetgeometrylibrary.json",
-        "outputHash": "9ba727548b233e0c75190eec35d45fea9e850c268f7dc21ee281c1cbf2cc6bda",
-        "bodyHash": "e377227683014ba184b08e6e605d22645b35bc9910dc28c337d88cec6732ffaf"
+        "outputHash": "d960336f91279d72e2e117691bd4b96715b114277d55a910ba9bf7e3f6d08da7",
+        "bodyHash": "3352abbdabb0ddd74cfc32bb2b2953622b3ce1a6569642289911c29d4e1b402a"
       }
     },
     "reference/dreamuiwidgetlibrary": {
@@ -2718,11 +2718,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuiwidgetlibrary.md",
         "record": "docs-sync/translations/reference/dreamuiwidgetlibrary.json",
-        "outputHash": "3457aac50f75de233a7011624dd524028a755df6cc32b404da9b1610440e49fd",
-        "bodyHash": "86a32084962b73549d92b0e6b0123efc6948ba70e63185b4d1a086d289f50e74"
+        "outputHash": "4e4b26daccfe9407f3813a0d466f796e52ca470c4000ff5669484842d85b47c1",
+        "bodyHash": "43befcf3ace937014d3dc0801102612569af2ba8d943b1bcbf2c1cd73f39809c"
       }
     },
     "reference/dreamuserwidget": {
@@ -2740,11 +2740,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamuserwidget.md",
         "record": "docs-sync/translations/reference/dreamuserwidget.json",
-        "outputHash": "ef4856ded44807d6cb346ee4bfb787624761a3a3048fce85cc3517029d1e225d",
-        "bodyHash": "b2c91cbc193d2ed0196c2c465cf3a844b77d676225deb55918f3e3557b853801"
+        "outputHash": "0241a08dae4b8fa3660703835e9581cdf5cf0a8e79c92f8bdfca6e87a368f1b9",
+        "bodyHash": "f104ca0cd279e90111db1ebc516cb3e4bf1b67e915bbce157c726e4ce0772663"
       }
     },
     "reference/dreamwidget": {
@@ -2762,11 +2762,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/dreamwidget.md",
         "record": "docs-sync/translations/reference/dreamwidget.json",
-        "outputHash": "07fdc8aab7e38e1e57783a201ba2596ad1a7bada7182181893e2f033405b042f",
-        "bodyHash": "43dad5b5977a784f0d2823d992a5600f55a60071901eb912c7cd68f05f10b2cf"
+        "outputHash": "c93875e0d4b0559909cdf9191dca30676ef4c86b8f12df147803d659789d6dc8",
+        "bodyHash": "cd21333341ed5dce62b4ab2f3d313a3ee7328fb7d41e0dfa727d699b92300715"
       }
     },
     "reference/index": {
@@ -2784,11 +2784,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/reference/index.md",
         "record": "docs-sync/translations/reference/index.json",
-        "outputHash": "f10912fa79a7027cca04bdb57d275ca82932f181f80605b22a36039ae5dd70c2",
-        "bodyHash": "5d717a0fcddb09e85f902e3d1d566bdf41a4699081744e9b0429e618b1e4b2be"
+        "outputHash": "1c909aa1ddae54fe8fe85996e70b1b5429500045cebb7ea039e8e3667853a6f4",
+        "bodyHash": "e90bd477d19e61f277a26785995561d6633c970df9fd780e2336098c8e55d7cd"
       }
     },
     "start/about": {
@@ -2806,11 +2806,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/start/about.md",
         "record": "docs-sync/translations/start/about.json",
-        "outputHash": "a6b82243c2b6859a8d15695d5810a0cf69a4e5973552d3a90ac04be22717ba44",
-        "bodyHash": "376584ad8ef650e0d631168816db8f1c57f98cf87995655e8c7cd342558a3e71"
+        "outputHash": "919ba0756aa6bd32f29cd22985dd3dd7eb58485bdfa8adfa7d0122589bdf0d03",
+        "bodyHash": "e36b0d34c56acc833c9515b95330b5c118ecf5bebba35f85b945de9b7a76e99f"
       }
     },
     "start/first-screen": {
@@ -2828,11 +2828,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/start/first-screen.md",
         "record": "docs-sync/translations/start/first-screen.json",
-        "outputHash": "7027c88fc49105e9b33e172fe089588d199a11b3ac66ba3f5a7482dacb56ed35",
-        "bodyHash": "1783d02af32fee9516fb1a648f53b219140dd3d103c74e7c87bef1fa67a4a4fc"
+        "outputHash": "577352529306079dc0f6a438b4f5c689149fe01830fb24f8efaaad079de49227",
+        "bodyHash": "93569c7c34bfe7854d5973eb339b4ed1db73c3160ccb56f77700ea1d1fbbefa3"
       }
     },
     "start/installation": {
@@ -2850,11 +2850,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/start/installation.md",
         "record": "docs-sync/translations/start/installation.json",
-        "outputHash": "1ae8166ea2e1c35527e4edc09df8e51d8b73bb8b890655744e499835cd7130f9",
-        "bodyHash": "ee1d965bc2799ebdd4d14dab01042d77fb6a3653dcf1559819e894a5d070c833"
+        "outputHash": "76a768dd511fa2635233bbb946e6f45e6dea5e2346e0a111908ab03ed346262d",
+        "bodyHash": "8191bfd22dd30ab58c977cee8c707afff6ab38002e3b000c3b69cbeb4bc0792d"
       }
     },
     "start/project-layout": {
@@ -2872,11 +2872,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/start/project-layout.md",
         "record": "docs-sync/translations/start/project-layout.json",
-        "outputHash": "ff13b5a92d77d63cac01647d56b5f6dcfd34195c6f8ae0b0fbf9db0077442ade",
-        "bodyHash": "6ed6e5b8eeaa8fc74cd38ff27b5c1458572c09e17be9f9d283477a5155daf0d6"
+        "outputHash": "c95b605496302fba54faff47fee83d5b23a2d9e4132cca814541939b18dfc484",
+        "bodyHash": "4df10079481637111298e80a213369478174251b4b2da6daab46e7ce9299f074"
       }
     },
     "start/workflow": {
@@ -2894,11 +2894,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/start/workflow.md",
         "record": "docs-sync/translations/start/workflow.json",
-        "outputHash": "800279e39b5617e4ca9beeb9097e3061e8de223e6f4d3dcd646f2e484fbd8efa",
-        "bodyHash": "84d2f40255bb6869bbfc6be229d6069801ed454d48e1dc89f75df594ff2a01ec"
+        "outputHash": "dde1a120f9516d580eb16974b18cd8e6a2b57ed76d1dde4acaa41fec8f87db83",
+        "bodyHash": "5300fdaac3d0a2140de653449dcd801b076023705e3009d499b7306cd3ed04d6"
       }
     },
     "tools/bench": {
@@ -2916,11 +2916,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/tools/bench.md",
         "record": "docs-sync/translations/tools/bench.json",
-        "outputHash": "736705ad794c2c2811ed4c8f832bfeadfba75859b0ba72b7bd47e3bbf1b1c1ca",
-        "bodyHash": "600caeba19b62f6648735ae5d541987c609e4acb7749fc2ce12de52e89362f74"
+        "outputHash": "79d6648d6183d00b5e54382ba2f7252173b614889186ff54caecc84d836deda4",
+        "bodyHash": "13a478e0f7000720c69f5624a7f8c68f4416bf45ce98d273023f23083c5c0b0d"
       }
     },
     "tools/debugging": {
@@ -2938,11 +2938,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/tools/debugging.md",
         "record": "docs-sync/translations/tools/debugging.json",
-        "outputHash": "8520751e271ed75a7fb2d8782a51b59947915ff10acd714fe1ae5ffff27dc7e5",
-        "bodyHash": "67ffda2f7f06489f4a1c3f90a8b9a58d4b85b5a91a4a69e3b335f55543c13d01"
+        "outputHash": "eeb3ae87c616b6606942232ea8ac94861cf5b58d5c28e8cb7a51bc0e04a5ff82",
+        "bodyHash": "956ee227f94a995412c085e7597a8c73a5787fff6856c203c2f470f74a1e9e16"
       }
     },
     "tools/designer": {
@@ -2960,11 +2960,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/tools/designer.md",
         "record": "docs-sync/translations/tools/designer.json",
-        "outputHash": "93a172df3ab60b69900998bf6955f529d24ee90892d161eda878e60c56dfc356",
-        "bodyHash": "34d4c76cc597b4c75bcea108eb9eaab820ff748c74509f3e8c5456eec396ca18"
+        "outputHash": "26378b57d26ad63c21afa40884f46464f9b802461a197a5296e2bdc260ac4e7c",
+        "bodyHash": "2af0470564551f688a67759764cc8fbd648f162d446cc0401e7410c25f33eb07"
       }
     },
     "tools/scripting": {
@@ -2982,11 +2982,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/tools/scripting.md",
         "record": "docs-sync/translations/tools/scripting.json",
-        "outputHash": "c99b9d157a82fefa4bb28ce95003be99b45b4b8c466fbf1d5a87e510b6c492b2",
-        "bodyHash": "6408abee27111a942aa592b74b757ed580167504b843517d06f29dcaa24c0b65"
+        "outputHash": "febf61b515ba9e40bd68045d49de5003761347c9e9ffc63007d998c3f8d27dc1",
+        "bodyHash": "12d50b57a73c22b32a77cd169455e5e530f0a4ae00b9aff22097799594f9ba7a"
       }
     },
     "tools/tests": {
@@ -3004,11 +3004,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/tools/tests.md",
         "record": "docs-sync/translations/tools/tests.json",
-        "outputHash": "b947930c79636b65fb226634ec2a78b305ba7a83b9b259ddf649301e0dc1c2d0",
-        "bodyHash": "9eb22d27be73c87b39ef8be6ee436dcbca3646e2ea4d321ebcc418a2571fef93"
+        "outputHash": "8f959b9e8c3583ae50efbb3e1b5a734b1928712b45d6636d7d970283177804e2",
+        "bodyHash": "0882ee14ac34f7bc0030a983404805c43e3dfaf47d5e4c91f86f760f561a1352"
       }
     },
     "tools/vscode": {
@@ -3026,11 +3026,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/tools/vscode.md",
         "record": "docs-sync/translations/tools/vscode.json",
-        "outputHash": "417543e7f5384617d619c082a088213408b9214014cd03f2e975d13d5e368b16",
-        "bodyHash": "9a10c0fdce554882fc0c54f6381d863adba2b92fb4ce8c99a0c7a506fdf00f38"
+        "outputHash": "8031ac84041ec57f5bc35925120a66a2214b1ec5bb926999461fa40ec508c2b7",
+        "bodyHash": "9fad2d39893a88fb3b66c8c210ba40f79cd5b7a797dc04212cc5ad391c39bc1f"
       }
     },
     "plugin/duilanguage": {
@@ -3048,7 +3048,11 @@
         }
       ],
       "translation": {
-        "status": "missing"
+        "status": "current",
+        "output": "content/docs/plugin/duilanguage.md",
+        "record": "docs-sync/translations/plugin/duilanguage.json",
+        "outputHash": "83017c2885ea5d1422cd30719177042f7b34a7b33b61b46b91c6d30c2ebe00dd",
+        "bodyHash": "c2d900b6d784bff809504c3f4aae18f4f6d8b1c4db5c43dc04b7e4d354087e78"
       }
     }
   }

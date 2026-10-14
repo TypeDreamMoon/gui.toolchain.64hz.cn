@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "bb645ceaf187e68af8a8bf1597e2a00df69b400c53a469e7c79e5fb1d42eeac4",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/concepts/mesh-modifiers.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "1654d67b99ae04d565d82af050c640937f24b7e3b9a0d0e228bfafe810f11dba"
+      "sourceHash": "f90a28d37d2467423a03437bff08d75641232e16f18b44bd25ee761e074562e5",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "e7563a1ca49e127ab7d35ae93b650f4a936a93bd38d6c33009ca077c04d4ac75"
     }
   ],
   "translationFile": "content/docs/concepts/mesh-modifiers.md",
-  "translationHash": "82dbca7245e3f47618372165b6597742639df27018462334b1966b38fd5b9dbb"
+  "translationHash": "882f0e247c6543bc2aab3aab42b5bd6cdd1987afb2ddec2d98b36ae16c2b1403"
 }

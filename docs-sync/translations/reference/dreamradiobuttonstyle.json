@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "2690daaeb56225c53fc0dca23e0f89be6772393cf31fb3ead71e3255f0c29fb1",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamRadioButtonStyle.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "d6b7aee201b0bc286638e515ddcaf06e680deb68a1d77ff64361af7b397c266d"
+      "sourceHash": "22aed1123b87c9462a2d507ecfe95179c7ea66d6a3630b1320cc96c0d032e938",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "69d24c3268c439c47bd41d332d04e290c3274337657434fbb81daedf7c421fff"
     }
   ],
   "translationFile": "content/docs/reference/dreamradiobuttonstyle.md",
-  "translationHash": "74c0beea5615a06cfdba641a68a068d86f1dc76c8ee87ad38fc4e7699b6a30ff"
+  "translationHash": "6e116967f2bc31fa130d76ff3894fcde7fd61192061b820b8671bbb43da08848"
 }

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "01c8ab87e7f328b2fd30d12675491551bcb3dcfb28d206abd4ecacf89d4eeb77",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/language/timelines.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "cb901b9999be338fd147a6fea287291edecc6c7805a508d01ae4162a4dd88473"
+      "sourceHash": "9cbeeedb3e2db7771555b5127cc55a041df50683e938f87a3d5667d4315e106a",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "1b72d80135c80fa8aa41bc59283c6c1f0167c8b3823f4bbdf55c010487c4a920"
     }
   ],
   "translationFile": "content/docs/dui/timelines.md",
-  "translationHash": "09c93fc0cb9e5881831220bf4bf10ba359d47d4f4af1c75766b10d3d8025e83b"
+  "translationHash": "2b3c581929511ca22d421051aec2f064c7c1faccd27e5fe21fb51024bc430296"
 }

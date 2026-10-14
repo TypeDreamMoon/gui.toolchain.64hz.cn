@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "fa8f790ddbd493d95cf252b4e7c0fc6d850baad05fc8c059296ebf760c88e25d",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/language/styles-and-resources.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "93007f20ce968e1c4336ce2b47484db7971ae02eae7f1fbde250f9eeb53c5a6d"
+      "sourceHash": "e4508239957aee4d7023a819a3f8688f245c9bd54a4b56c62234eb16a526ca1e",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "c8187c01bf0d751948f168a88e4724f1e121625ea54122ff76fd7286a558f85a"
     }
   ],
   "translationFile": "content/docs/dui/styles-and-resources.md",
-  "translationHash": "b72d8b760640521a749c662a36adabb92a3b2fc431f29d287cacbde20b17638e"
+  "translationHash": "9bcb87fe19777d13c0834d56c363fa6f5ddcbe2fb40d40ff454bb8ae0b2899f5"
 }

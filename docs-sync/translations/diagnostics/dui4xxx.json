@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "710064bfd2e8fdce90bbd118139939ad3e88858bfb9d609c7036d2472ac07e66",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/diagnostics/codes.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "82fcb3abdeb163967e13d4c201df289b2f82a7420ad096c71a1d5cd3578e5d34"
+      "sourceHash": "e92d9afab39ba64e75a20e50f7ca24b117970285fe164363fe98aa5e941dfe97",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "0b030bb0a900eec8d9b387b9b39f0d8f4662fa32c89d46dc77ff8d93202a2ed0"
     }
   ],
   "translationFile": "content/docs/diagnostics/dui4xxx.md",
-  "translationHash": "f0d8b5a6a10cb6f9843f74e9f04e20793a65d0bcd5e419eb1e39817be6b3934b"
+  "translationHash": "b671212c9a8f9de3d0f81308629c6df64477b05ec056d4ca363752ebd3b3dfc4"
 }

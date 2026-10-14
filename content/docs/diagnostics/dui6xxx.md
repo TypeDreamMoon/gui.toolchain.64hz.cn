@@ -3,528 +3,140 @@ title: "DUI6xxx · 编译"
 description: ".dui 挂不到它的 Blueprint 上。"
 ---
 
-# DUI6xxx · 编译 [#dui6xxx]
+## DUI6001
 
-本页由 `scripts/diagnostics/sync.py` 从插件的码表（`EDreamUIDiagnosticCode`）生成，卡片里的枚举名就是测试断言用的那个名字。
+`SourceFileUnreadable`
 
-## DUI6001 [#dui6001]
+Blueprint 的 Source File 不存在或读不出来。
 
-**严重级别：** 错误 (`error`)
+## DUI6002
 
-**消息：**
+`EmptyTree`
 
-```text
-Blueprint 的 Source File 指向一个不存在或读不出来的文件。
-```
+文件解析通过、却没有产生任何树。
 
-**触发位置：** `SourceFileUnreadable`
+## DUI6003
 
-**怎么会出现**：编译时按 Source File 找 `.dui`：相对路径依次在项目和各个插件的 `DUI/` 根下查找，`Plugin.Name:` 前缀指定一个插件的 `DUI/`，绝对路径照原样使用。消息会写出你写的路径、实际查找的位置和搜索过的根；`Plugin.Name:` 指向的插件没有启用或没有 `DUI/` 目录时也会单独说明。
+`ClassPathMismatch`
 
-**怎么改**：把文件放到某个 `DUI/` 根下（不是 `Content/`），或者修正 Blueprint 的 Source File。
+`class` 行指向的是另一个 Blueprint、而不是正在编译的这个（一条警告）。
 
-## DUI6002 [#dui6002]
+## DUI6004
 
-**严重级别：** 错误 (`error`)
+`EventHandlerNotFound`
 
-**消息：**
+`-> Handler` 指向一个类里没有的函数。
 
-```text
-一个解析通过、却没有产生任何树的文件。
-```
+## DUI6005
 
-**触发位置：** `EmptyTree`
+`EventHandlerSignatureMismatch`
 
-**怎么会出现**：构建器没有交回控件树。原因（比如某个节点类型解析不到）在同一次编译里已经由更早的诊断说过了，这一条报的是结果：没有东西可以编译进这个类。
+一个参数与事件不一致的处理函数。
 
-**怎么改**：先处理同一次编译里更早的那几条诊断。
+## DUI6006
 
-## DUI6003 [#dui6003]
+`EachSourceNotFound`
 
-**严重级别：** 警告 (`warning`)
-
-**消息：**
-
-```text
-一个指向了另一个 Blueprint、而不是正在编译的这个的 class 行（警告）。
-```
-
-**触发位置：** `ClassPathMismatch`
-
-**怎么会出现**：文件的 `class` 行写的资产不是当前正在编译的 Blueprint，比如复制了一个文件却没改 `class` 行。它只是警告：这一行的任务是提供稳定的本地化命名空间，写错只会让键漂移，不会破坏构建；本地化键仍然使用文件里写的名字。
-
-```dui
-class /Game/UI/WBP_Settings
-
-Widget Root { }
-```
-
-**怎么改**：把 `class` 行改成正在编译的 Blueprint 的路径；如果文件是有意在多个子类之间共享的，可以忽略这条警告。
-
-## DUI6004 [#dui6004]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个 -> Handler，而类里没有这个函数。
-```
-
-**触发位置：** `EventHandlerNotFound`
-
-**怎么会出现**：处理函数在这次编译正在构建的类上，构建器没法提前查找，所以由编译器检查：这个 Blueprint 上找不到这个名字的函数。事件这一半出错报的是 DUI5010。
-
-```dui
-Widget Confirm {
-    + UIButton { OnClick -> HandleConfrm }
-}
-```
-
-**怎么改**：修正函数名，或者在 Blueprint 里加上这个函数。
-
-## DUI6005 [#dui6005]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个参数与事件发出的参数不一致的处理函数。
-```
-
-**触发位置：** `EventHandlerSignatureMismatch`
-
-**怎么会出现**：函数找到了，但它的参数不是事件发出的那些（个数或类型不对）。
-
-**怎么改**：让函数的参数与事件的签名一致，或者换一个签名匹配的函数。
-
-## DUI6006 [#dui6006]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
 一个类里既没有同名函数、也没有同名变量的循环来源。
-```
 
-**触发位置：** `EachSourceNotFound`
+## DUI6007
 
-**怎么会出现**：`in GetOptions()` 需要这个类上有一个同名的无参函数，`in Options` 需要一个同名的数组变量。来源在这次编译正在构建的类上，所以这个检查在编译阶段做。
+`EachSourceNotObjectArray`
 
-```dui
-VerticalBox Options {
-    for Option in GetOptions() {
-        Text { Text <- Option.Label }
-    }
-}
-```
+一个不是对象数组的循环来源。
 
-**怎么改**：在 Blueprint 里声明这个函数或变量，或者修正名字。
+## DUI6008
 
-## DUI6007 [#dui6007]
+`PropTypeUnknown`
 
-**严重级别：** 错误 (`error`)
+一个没有对应 Blueprint 引脚类型的 `props` 或 `events` 类型。
 
-**消息：**
+## DUI6009
 
-```text
-一个提供的不是对象数组的循环来源。
-```
+`PropNameTaken`
 
-**触发位置：** `EachSourceNotObjectArray`
+一个已经被另一个类型不同的成员占用、或者与某个控件 id 相同的 `props` 名字。
 
-**怎么会出现**：来源存在，但它给出的不是对象数组。每一项的绑定通过反射读 `Item.Member`，元素必须有成员可读：`TArray<UMyRow*>` 可以，`TArray<FMyRow>` 和 `TArray<int32>` 不行。名字是对的，错的是类型，所以它不是 DUI6006。
+## DUI6010
 
-**怎么改**：让来源返回对象数组，比如把每一行做成一个 `UObject` 子类。
+`EmitUnknownEvent`
 
-## DUI6008 [#dui6008]
+`emit Name` 一个这个文件没有声明的事件。
 
-**严重级别：** 错误 (`error`)
+## DUI6011
 
-**消息：**
+`EmitArgumentMismatch`
 
-```text
-一个没有对应 Blueprint 引脚类型的 props 或 events 类型。
-```
+`emit` 的实参与事件参数不一致。
 
-**触发位置：** `PropTypeUnknown`
+## DUI6012
 
-**怎么会出现**：属性和事件参数的类型只能是 `Text`、`String`、`Number`、`Integer`、`Bool`、`Color`、`Vector2`、`Asset`、`Class`，或者 `Enum` 加枚举路径。拼错的类型名、`Enum` 后面没有路径、路径上没有枚举、枚举不是 `BlueprintType`，都报这个码。
+`EmitRouteUnsupported`
 
-```dui
-props {
-    Float Speed = 1
-}
+一个无法生成处理函数的 `emit`：在循环体里，或者事件的参数 Blueprint 无法承载。
 
-Widget Root { }
-```
+## DUI6013
 
-**怎么改**：换成上面列出的类型（这里是 `Number`）；枚举要可以作为 Blueprint 类型使用。
+`PropDefaultInvalid`
 
-## DUI6009 [#dui6009]
+一个声明的类型容纳不了的 `props` 默认值。
 
-**严重级别：** 错误 (`error`)
+## DUI6014
 
-**消息：**
+`EventNameTaken`
 
-```text
-一个已经被另一个类型不同的成员占用、或者与某个控件 id 相同的 props 名字。
-```
+一个已经被类的另一个成员占用的 `events` 名字。
 
-**触发位置：** `PropNameTaken`
+## DUI6015
 
-**怎么会出现**：每个属性会变成类的一个变量，名字不能已经被占用：一个控件 id（每个控件都有同名的类变量）、一个资源条目、这个 Blueprint 自己声明的成员、父类的函数。C++ 父类上有同名同类型的属性时会直接用它，类型不同则报这个码。
+`ViewModelClassUnknown`
 
-```dui
-props {
-    Text Title
-}
+一个找不到类、或者找到不止一个的 `viewmodels` 类型。
 
-VerticalBox Root {
-    Text Title { Text <- Title }
-}
-```
+## DUI6016
 
-**怎么改**：给其中一个改名；想用父类的属性，就按它的类型声明。
+`ViewModelNameTaken`
 
-## DUI6010 [#dui6010]
+一个已经被类的另一个成员占用的 `viewmodels` 名字。
 
-**严重级别：** 错误 (`error`)
+## DUI6017
 
-**消息：**
+`ViewModelSourceInvalid`
 
-```text
-一个 emit Name，而这个文件没有声明这个事件。
-```
+对抽象类写的 `= new`。
 
-**触发位置：** `EmitUnknownEvent`
+## DUI6018
 
-**怎么会出现**：`emit` 只能引发它自己文件的 `events` 块里声明的事件；块里没有这个名字，或者文件根本没有 `events` 块。
+`RouteMemberFunctionNotFound`
 
-```dui
-events {
-    Picked(Number Index)
-}
+`-> Path.Func` 的函数在对象的类上没有，或者 Blueprint 不能调用。
 
-Widget Row {
-    + UIButton { OnClick -> emit Pickd(0) }
-}
-```
+## DUI6019
 
-**怎么改**：修正事件名，或者在 `events` 块里声明它。
+`RouteArgumentMismatch`
 
-## DUI6011 [#dui6011]
+`-> Path.Func` 的实参和函数对不上，或者不带括号时，函数收的不是什么都不收、也不是事件发出的那些。
 
-**严重级别：** 错误 (`error`)
+## DUI6020
 
-**消息：**
+`TwoWayTargetReadOnly`
 
-```text
-一个实参与事件参数不一致的 emit。
-```
+`<-> Path.Member` 的成员写不回去：只读，且没有 `Set<Member>`。
 
-**触发位置：** `EmitArgumentMismatch`
+## DUI6021
 
-**怎么会出现**：`emit Name(…)` 的实参个数要等于事件声明的参数个数，每个实参的类型也要能作为对应参数的类型。
+`LoopItemMemberNotFound`
 
-```dui
-events {
-    Picked(Number Index)
-}
+`Item.Member`，而循环来源的元素类里没有它。
 
-Widget Row {
-    + UIButton { OnClick -> emit Picked() }
-}
-```
+## DUI6022
 
-**怎么改**：按事件的声明传实参，比如 `emit Picked(ValueIndex)`。
+`LoopItemRouteMismatch`
 
-## DUI6012 [#dui6012]
+`-> Item.Func`，而元素类里没有它，或者它的参数既不是什么都不收、也不是事件发出的那些。
 
-**严重级别：** 错误 (`error`)
+## DUI6023
 
-**消息：**
+`SourceFileWritePending`
 
-```text
-一个无法生成处理函数的 emit：在循环体里，或者事件的参数 Blueprint 无法承载。
-```
-
-**触发位置：** `EmitRouteUnsupported`
-
-**怎么会出现**：`-> emit` 会被编译成一个生成的处理函数。`for` / `each` 循环体里的控件是循环的副本而不是类的成员，那里放不下这样的函数；路由所在的事件如果发出的参数 Blueprint 函数接不住（比如一个 Blueprint 没有对应引脚的 `FDreamUIEventDelegate`），也生成不了。这里直接报出来，而不是让路由悄悄消失。
-
-```dui
-events {
-    Picked(Number Index)
-}
-
-VerticalBox Options {
-    for Option in GetOptions() {
-        Widget {
-            + UIButton { OnClick -> emit Picked(0) }
-        }
-    }
-}
-```
-
-**怎么改**：把事件路由到类的一个函数，在那个函数里引发这个事件；或者换一个参数 Blueprint 能接住的事件。
-
-## DUI6013 [#dui6013]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个声明的类型容纳不了的 props 默认值。
-```
-
-**触发位置：** `PropDefaultInvalid`
-
-**怎么会出现**：默认值要符合属性的类型：`Text` 和 `String` 是带引号的字符串，`Integer` 是整数，`Bool` 是 `true` 或 `false`，`Color` 是十六进制颜色，`Vector2` 是二元组，枚举要写它声明过的值，资产要真的存在，`@Name` 要指向一个资源条目。默认值被丢弃，否则这个变量会让读它的每个绑定和每一行宿主代码都失败。
-
-```dui
-props {
-    Integer Count = 1.5
-}
-
-Widget Root { }
-```
-
-**怎么改**：按类型改正默认值，比如 `Integer Count = 1`。
-
-## DUI6014 [#dui6014]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个已经被类的另一个成员占用的 events 名字。
-```
-
-**触发位置：** `EventNameTaken`
-
-**怎么会出现**：每个事件会变成一个事件分发器，名字不能已经属于：一个属性、一个控件、一个资源、这个 Blueprint 自己的变量或函数，或者父类上一个不是同参数分发器的成员。父类上同名同参数的分发器会直接拿来用。
-
-```dui
-events {
-    Title
-}
-
-VerticalBox Root {
-    Text Title { Text = "Settings" }
-}
-```
-
-**怎么改**：给事件或另一个成员改名。
-
-## DUI6015 [#dui6015]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-viewmodels 里的一个类型，找不到类，或者找到不止一个。
-```
-
-**触发位置：** `ViewModelClassUnknown`
-
-**怎么会出现**：类型可以是类的反射名（C++ 的 `UPlayerVM` 写作 `PlayerVM`）、完整路径（`/Script/MyGame.PlayerVM`、`/Game/UI/BP_PlayerVM`），或者 `use … as` 给的名字。短名字对不上任何类——拼错了、模块没加载、Blueprint 还不存在——是这一条；两个模块里各有一个同名的类时也是，编译器不替你挑。
-
-```dui
-viewmodels {
-    PlayrVM Player
-}
-```
-
-**怎么改**：修正类名；有歧义时写完整路径，或者写 `use /Script/MyGame.PlayerVM as PlayerVM`，再用这个名字。
-
-## DUI6016 [#dui6016]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个已经被类的另一个成员占用的 viewmodels 名字。
-```
-
-**触发位置：** `ViewModelNameTaken`
-
-**怎么会出现**：每个条目会变成类上的一个变量，所以名字不能已经属于一个控件、一个 prop、一个资源、一个事件，或者这个 Blueprint 自己的变量和函数。父类上有同名成员时分两种情况：父类是 C++ 类、那个成员正好是这个类的对象引用，这一行就是在描述那个属性（它的对象从哪来），不另建变量；父类自己的 `.dui` 已经声明过这个条目，或者同名成员不是这个类的引用，就是这一条。
-
-```dui
-viewmodels {
-    PlayerVM Title
-}
-
-VerticalBox Root {
-    Text Title { Text = "Status" }
-}
-```
-
-**怎么改**：给条目或另一个成员改名；要沿用父类 `.dui` 声明的条目，删掉这一行，子类会原样读它。
-
-## DUI6017 [#dui6017]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-一个没法兑现的来源：对抽象类写 = new。
-```
-
-**触发位置：** `ViewModelSourceInvalid`
-
-**怎么会出现**：`= new` 让控件在没被交到对象时自己建一个，而抽象类没有东西可建。`UDreamViewModel` 自己就是抽象的，要写的是它的子类。报错之后这个条目仍然是类上的一个变量，经过它的绑定照常编译，只是运行时不会去填它。（`global ""` 这样的空名字在解析时就已经是 DUI2021。）
-
-```dui
-viewmodels {
-    DreamViewModel State = new
-}
-```
-
-**怎么改**：写一个具体的类；或者去掉 `= new`，由宿主把对象交过来。
-
-## DUI6018 [#dui6018]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
--> Path.Func 的函数，在对象的类上没有，或者 Blueprint 不能调用。
-```
-
-**触发位置：** `RouteMemberFunctionNotFound`
-
-**怎么会出现**：路由右边的路径走到一个对象，最后一段是这个对象的类上的函数。函数不存在、不是 `BlueprintCallable`，或者是 `BlueprintPure`（纯函数只返回一个值，事件没有什么要它做的），都是这一条。
-
-```dui
-viewmodels {
-    SettingsVM Settings
-}
-
-VerticalBox Root {
-    Native.Button Apply { OnClicked += Settings.Aply() }
-}
-```
-
-**怎么改**：修正函数名；C++ 的函数写成 `UFUNCTION(BlueprintCallable)`。
-
-## DUI6019 [#dui6019]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
--> Path.Func 的实参和函数对不上。
-```
-
-**触发位置：** `RouteArgumentMismatch`
-
-**怎么会出现**：带括号时，括号里就是实参：类上的表达式，事件自己的参数按名字可用；个数和类型要和函数的参数一致。不带括号时，函数要么什么都不收，要么收的恰好是事件发出的那些。
-
-```dui
-viewmodels {
-    SettingsVM Settings
-}
-
-VerticalBox Root {
-    Native.Slider Volume { OnValueChanged += Settings.SetVolume(Value, 1) }
-}
-```
-
-**怎么改**：按函数的参数传实参；或者去掉括号，让函数直接收事件的参数。
-
-## DUI6020 [#dui6020]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-<-> Path.Member 的成员写不回去。
-```
-
-**触发位置：** `TwoWayTargetReadOnly`
-
-**怎么会出现**：`<->` 要把控件的变化写回这个成员：对象的类上有 `BlueprintCallable` 的 `Set<Member>`（收一个同类型的参数）时调用它，否则直接写属性并在对象上广播。属性对图表只读（`BlueprintReadOnly`）又没有这样的 setter 时，两条路都走不通——滑条会动一下又弹回去——所以编译时就拒绝。
-
-```dui
-viewmodels {
-    SettingsVM Settings
-}
-
-VerticalBox Root {
-    Native.Slider Volume { Value <-> Settings.MasterVolume }
-}
-```
-
-这里 `MasterVolume` 是 `BlueprintReadOnly`，`SettingsVM` 上也没有 `SetMasterVolume`。
-
-**怎么改**：给类加一个 `BlueprintCallable` 的 `SetMasterVolume(float)`；或者把属性改成 `BlueprintReadWrite`；只需要单向时写 `<-`。
-
-## DUI6021 [#dui6021]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-循环体里一个元素类上没有的 Item.Member。
-```
-
-**触发位置：** `LoopItemMemberNotFound`
-
-**怎么会出现**：循环源是某个具体类的对象数组（`TArray<UItemVM*>`）时，编译器知道每一项是什么类，就拿它来查 `Item.Member`。源是 `TArray<UObject*>` 时元素的类要到运行时才知道，这一行留给运行时去查，对不上的副本照旧静默跳过。
-
-```dui
-viewmodels {
-    InventoryVM Inventory
-}
-
-VerticalBox Root {
-    for Item in Inventory.Items {
-        Text { Text <- Item.Nmae }
-    }
-}
-```
-
-**怎么改**：修正成员名，或者给元素类加上这个成员。
-
-## DUI6022 [#dui6022]
-
-**严重级别：** 错误 (`error`)
-
-**消息：**
-
-```text
-循环体里一个 -> Item.Func，元素类上没有这个函数，或者参数对不上。
-```
-
-**触发位置：** `LoopItemRouteMismatch`
-
-**怎么会出现**：元素类已知时，`Event -> Item.Func` 和 `Event -> Item.Func()` 要求函数在元素类上，并且要么什么都不收，要么收的恰好是事件发出的那些。
-
-```dui
-viewmodels {
-    InventoryVM Inventory
-}
-
-VerticalBox Root {
-    for Item in Inventory.Items {
-        Native.Button { OnClicked += Item.Equip() }
-    }
-}
-```
-
-这里元素类 `ItemVM` 上没有 `Equip`。
-
-**怎么改**：修正函数名或参数；需要额外的实参时，让元素类提供一个不带参数的版本。
+文档里的修改无法写入，所以拒绝编译旧文件。

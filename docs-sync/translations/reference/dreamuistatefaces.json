@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "291c33a1f1336fd051855e86c4bd05294da6b2501e1f8fca2f3ef21baa28a4cc",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamUIStateFaces.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "86e3cc2f803a2c25c486072da7818b0eb00eb8b7715f2ddb27f1625be735dc8f"
+      "sourceHash": "dbbe8f1f4c4bedcfb81226258bacfe85b5b71f96245943c9a37182645e9f30de",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "c54cd659099e15e2b6350b59b9a8912f3eb448ea885eabc888f1c510a29d7fe0"
     }
   ],
   "translationFile": "content/docs/reference/dreamuistatefaces.md",
-  "translationHash": "42e2e810f697a9daf5e1332c0805c3c9874856aef49033b7f374c9a06798f850"
+  "translationHash": "42df9ff5f1a61477cb6018bf1e0ed24c7dce2d594a9ce8c76ff87cf8a17d46b6"
 }

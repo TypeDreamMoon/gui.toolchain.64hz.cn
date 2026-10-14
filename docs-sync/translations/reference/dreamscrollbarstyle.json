@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "fa98968462335c36442829471880ef9787adedd25f18f7e41d6d30a54c9501e9",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamScrollBarStyle.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "e18f707bfc70b01ef8b4f9d714e7a84666e99fd26d44cf7d07af6a85064f5a6d"
+      "sourceHash": "31428d1796b028a347d028c7ba344b3e8a13804d93bdf4d3b165ba16b0d0cb79",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "1b9258a0ed07c2f1eeaf16378f4f2be6b491bd6a932ff2cd2331c8c54af97436"
     }
   ],
   "translationFile": "content/docs/reference/dreamscrollbarstyle.md",
-  "translationHash": "84cd803f83ec5850d79ce3cdba24bb27e6cf4194c0779c9527296bb869dde43b"
+  "translationHash": "9a5fb651a8bbcc04ad46db9af590cde7eec4e2bbe945ae3e04767f5ee7ca66dd"
 }

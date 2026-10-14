@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "8299f05474b095a380a14fbef088de616bda59af3f6106850aab20f080728395",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamRichTextBlock.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "3b001d82258cd0e0816b53435c6d0ac203b13504dee299994219aaaff4378aee"
+      "sourceHash": "b221290fbb0590c367624726fde8358e4c5dc8264aff3c16e17a345481828473",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "d48602f3f0b57000c07395feb303e799fce35a4f2b60506f3631d8b5fdfd167b"
     }
   ],
   "translationFile": "content/docs/reference/dreamrichtextblock.md",
-  "translationHash": "0785e590ae0c5243b8c93296f76c82e8eaf35c88c8fd282de6a1e1dd931eb029"
+  "translationHash": "a163b3fcafb7001f00e5649e704d539fd241a6dba47c3056df9abbebbb8fd5bf"
 }

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
-  "sourceRevision": "305806ec15a1538f16e8d6a3b9707806f697a612",
+  "status": "current",
+  "sourceHash": "2a624e6c78a0b286509bc0dd666417d579c27dd8aa3af175fd8abf0f0df513ab",
+  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
   "sources": [
     {
       "path": "Docs/Reference/DreamEditableText.md",
-      "sourceHash": null,
-      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
-      "translationHash": "f6789dfdf5da0d1723f885dac6d08ae1af60db7ec9ef0f158db96049710a2f9a"
+      "sourceHash": "e094b44d6503d692089249e2b6568dff0fc867a3f62b2ca4fa20dd0f7feb73d8",
+      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "translationHash": "0041491efbc72ea6efb4ad59334bdd9729d994ebbe84cf2b9b2c6ce2c1559dbf"
     }
   ],
   "translationFile": "content/docs/reference/dreameditabletext.md",
-  "translationHash": "628b5e2280e1bf2a17414b88f8601d7c130eba14c9b5192e468a82360e17bde0"
+  "translationHash": "f5a8cfc0749f67f36bf3bb65fc6d532d464acba5a92fab408d3400a39a72cb52"
 }

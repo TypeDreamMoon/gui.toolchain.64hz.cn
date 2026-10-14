@@ -2,7 +2,7 @@
   "version": 2,
   "status": "current",
   "sourceHash": "7b1952dac39dc0491ca3b05f4a1505424fa707a86ef5b89f20cc5807f9879cbf",
-  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
+  "sourceRevision": "28e42607533aa70efa58203b66eb3fb0dc34a3be",
   "sources": [
     {
       "path": "Docs/concepts/lyrics.md",

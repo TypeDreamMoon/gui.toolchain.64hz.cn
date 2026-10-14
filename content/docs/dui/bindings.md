@@ -142,5 +142,5 @@ FieldNotify 成员和视图模型。`UDreamDataBinding` 提供了一条单独的
 跨加载没有意义，而且在组件应用另一个覆盖之前，没有什么需要恢复。
 
 这两个类都位于
-[`Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/44c71520f5df2461a7a748fd3c3b2eeaadd47c2a/Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h)。
+[`Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/28e42607533aa70efa58203b66eb3fb0dc34a3be/Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h)。
 文件名同时涵盖运行时绑定和响应式规则；没有单独的 `DreamDataBinding.h` 需要 include。

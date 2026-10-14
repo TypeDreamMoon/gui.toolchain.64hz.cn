@@ -6,7 +6,7 @@ description: "将项目迁移到 DreamGUI 1.0"
 # 将项目迁移到 DreamGUI 1.0 [#moving-a-project-to-dreamgui-10]
 
 1.0.0 是首个公开发行版。在此之前，本分叉的开发版被编号为 1.x、2.0 和 2.1 —— 见
-[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/44c71520f5df2461a7a748fd3c3b2eeaadd47c2a/CHANGELOG.md) —— 本指南沿用这一编号方式：这里的 2.1 指的是开发版，早于 1.0.0。
+[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/28e42607533aa70efa58203b66eb3fb0dc34a3be/CHANGELOG.md) —— 本指南沿用这一编号方式：这里的 2.1 指的是开发版，早于 1.0.0。
 
 针对五种项目：
 
@@ -20,7 +20,7 @@ description: "将项目迁移到 DreamGUI 1.0"
 
 带编号的章节讲的是从 LGUI、LexUI 或 1.x 构建迁移到 2.0 线；完成了这一步的项目之后再读
 [从 2.0 到 2.1](#from-20-to-21) 和 [从 2.1 到 1.0.0](#from-21-to-100)。这里说的一切都是为了保住你已有的东西。插件是什么、
-如何从零开始，见 [README](https://github.com/TypeDreamMoon/DreamGUI/blob/44c71520f5df2461a7a748fd3c3b2eeaadd47c2a/README.md)；每个版本新增了什么，见 [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/44c71520f5df2461a7a748fd3c3b2eeaadd47c2a/CHANGELOG.md)。
+如何从零开始，见 [README](https://github.com/TypeDreamMoon/DreamGUI/blob/28e42607533aa70efa58203b66eb3fb0dc34a3be/README.md)；每个版本新增了什么，见 [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/28e42607533aa70efa58203b66eb3fb0dc34a3be/CHANGELOG.md)。
 
 ## 从 1.0.0 到下一个发行版 [#from-100-to-the-next-release]
 
@@ -107,7 +107,7 @@ description: "将项目迁移到 DreamGUI 1.0"
 
 ## 从 2.0 到 2.1 [#from-20-to-21]
 
-适用于已经在 2.0 上的项目。没有任何重命名，因此不需要 redirect，打开项目之前也无需做任何事；下文说明之后可能看起来或表现不同的地方，以及你自己的 C++ 必须改动的地方。[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/44c71520f5df2461a7a748fd3c3b2eeaadd47c2a/CHANGELOG.md) 列出了新增的内容。
+适用于已经在 2.0 上的项目。没有任何重命名，因此不需要 redirect，打开项目之前也无需做任何事；下文说明之后可能看起来或表现不同的地方，以及你自己的 C++ 必须改动的地方。[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/28e42607533aa70efa58203b66eb3fb0dc34a3be/CHANGELOG.md) 列出了新增的内容。
 
 ### 升级之前 [#before-you-upgrade]
 
@@ -501,7 +501,7 @@ git clone https://github.com/TypeDreamMoon/DreamGUI.git Plugins/DreamGUI
 
 ## 6. 你自己的 C++ [#6-c-of-your-own]
 
-**模块。** 运行时现在是几个模块。你用到哪些模块的类型，就把哪些加进 `Build.cs`：`DreamGUIRenderer`（绘制、效果的渲染代理）、`DreamGUI`（控件、visual、画布）、`DreamGUIInput`（事件系统、射线检测器、导航、视口客户端）、`DreamGUIControls`（`Dream*` 控件和 `UI*` 行为）、`DreamGUIExtensions`（线、环、效果、渲染目标辅助）。什么在哪里，见 README 的[模块表](https://github.com/TypeDreamMoon/DreamGUI/blob/44c71520f5df2461a7a748fd3c3b2eeaadd47c2a/README.md#modules)。
+**模块。** 运行时现在是几个模块。你用到哪些模块的类型，就把哪些加进 `Build.cs`：`DreamGUIRenderer`（绘制、效果的渲染代理）、`DreamGUI`（控件、visual、画布）、`DreamGUIInput`（事件系统、射线检测器、导航、视口客户端）、`DreamGUIControls`（`Dream*` 控件和 `UI*` 行为）、`DreamGUIExtensions`（线、环、效果、渲染目标辅助）。什么在哪里，见 README 的[模块表](https://github.com/TypeDreamMoon/DreamGUI/blob/28e42607533aa70efa58203b66eb3fb0dc34a3be/README.md#modules)。
 
 **include。** 除 README 的[include 表](https://gui.toolchain.64hz.cn/en/docs/guides/migration)里那些之外，每个头文件都保留了原来的路径。
 

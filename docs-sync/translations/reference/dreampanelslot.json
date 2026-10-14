@@ -2,7 +2,7 @@
   "version": 2,
   "status": "current",
   "sourceHash": "93e1b0778b9b67179321ec10874fd5f6cd57f2a1ca33a216179ffe39f0f7f9e6",
-  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
+  "sourceRevision": "28e42607533aa70efa58203b66eb3fb0dc34a3be",
   "sources": [
     {
       "path": "Docs/Reference/DreamPanelSlot.md",

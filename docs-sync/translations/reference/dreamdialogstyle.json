@@ -2,7 +2,7 @@
   "version": 2,
   "status": "current",
   "sourceHash": "029633c65ac831792c4ad6719c7cd110fe5cebf079ee641aa3711e1a1b9d202d",
-  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
+  "sourceRevision": "28e42607533aa70efa58203b66eb3fb0dc34a3be",
   "sources": [
     {
       "path": "Docs/Reference/DreamDialogStyle.md",

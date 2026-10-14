@@ -2,7 +2,7 @@
   "version": 2,
   "status": "current",
   "sourceHash": "045c0d781fc997ede60542c7890d1934616a65bb2a58f58c821cd9ae9c6076ab",
-  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
+  "sourceRevision": "28e42607533aa70efa58203b66eb3fb0dc34a3be",
   "sources": [
     {
       "path": "Docs/language/bindings.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/dui/bindings.md",
-  "translationHash": "62bc4c1f556f7422656839d814776bea425adca80113e68ab79f51832cecce8a"
+  "translationHash": "6aa2319e55159d3231ce71a1602d1c00ba07f933716857a3257c332eb4676fa4"
 }

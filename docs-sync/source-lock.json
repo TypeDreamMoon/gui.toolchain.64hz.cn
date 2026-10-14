@@ -1,9 +1,9 @@
 {
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
-  "revision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
+  "revision": "28e42607533aa70efa58203b66eb3fb0dc34a3be",
   "workingTree": false,
-  "translationSnapshotHash": "2b9d2c2b6a89b59fe0d5f7fd23d4687bd560fa2d91f1150e9f0fc76f0d9f68df",
+  "translationSnapshotHash": "31006bd39ccb97609f5fcb545c6544c79899bd4f57a6a7ba2549f8b7a765b53e",
   "pages": {
     "changelog/index": {
       "hash": "e031de401376cdf51434e13f4f4627a30b9b3c9fd1c5e5f816a6cbc68da69967",
@@ -284,11 +284,11 @@
         }
       ],
       "translation": {
-        "status": "unreviewed",
+        "status": "current",
         "output": "content/docs/concepts/widgets.md",
         "record": "docs-sync/translations/concepts/widgets.json",
-        "outputHash": "a2bf68f1fe64ab32543e9732474f2a6365198e7791e3ae559ad5085f45f2467a",
-        "bodyHash": "a9b9c9da5069860b8bee88cfd66ec07378d5eeb80815567fe361617eab521462"
+        "outputHash": "45669e038542b22bad2cf1821ddd624bffda692a765c5c955bde7baaf7d74c55",
+        "bodyHash": "1337bc61c5ac393d6286c960ac8846bbe7c2d295fea7b604b2a7cf4075899428"
       }
     },
     "concepts/world-space": {
@@ -587,8 +587,8 @@
         "status": "current",
         "output": "content/docs/dui/bindings.md",
         "record": "docs-sync/translations/dui/bindings.json",
-        "outputHash": "62bc4c1f556f7422656839d814776bea425adca80113e68ab79f51832cecce8a",
-        "bodyHash": "44a35a06e105af0535f62ff801e76a7130cc30289451a97a0a886e189dc218c0"
+        "outputHash": "6aa2319e55159d3231ce71a1602d1c00ba07f933716857a3257c332eb4676fa4",
+        "bodyHash": "b4c00d192b7fc61ac42dd04ccd019c81dde23649fa4779fd8740e63f55f34c48"
       }
     },
     "dui/components": {
@@ -851,8 +851,8 @@
         "status": "current",
         "output": "content/docs/dui/write-back.md",
         "record": "docs-sync/translations/dui/write-back.json",
-        "outputHash": "018983f47d654b917309c622489e15f1051351a35f0cbf5ee2de4fe60c009e51",
-        "bodyHash": "9efcb261d1487e973338b6dc1cb736571d32ab9196d90cd843613f6b522a64e3"
+        "outputHash": "4b3118caa679d1043daab890476bc3e1564e9e50f3ebe3745f8ea477cbb2dd4f",
+        "bodyHash": "378caa8751e01999e0eb922d5ef8a24146c147ea4b101794c8660e1a5c71caa9"
       }
     },
     "guides/fonts-and-packaging": {
@@ -895,8 +895,8 @@
         "status": "current",
         "output": "content/docs/guides/migration.md",
         "record": "docs-sync/translations/guides/migration.json",
-        "outputHash": "fe40a88a3460d00cdc2479d252b89f0ab4b8bb156782ad6c6393289dcf6b8295",
-        "bodyHash": "0b31a25d88f5e10c44b27cbe70133659db360aa2dd65fdc145bdee51e1243c3e"
+        "outputHash": "60f4a0278ee47b91282c6b1c4ba77b72de0388485093d01662e2c48a8b02dfdd",
+        "bodyHash": "1f2772401fcd0692b16cae4a9fdde8c3cefc6410a89bbff95e68d01ad7da11e5"
       }
     },
     "guides/platforms": {
@@ -3051,8 +3051,8 @@
         "status": "current",
         "output": "content/docs/plugin/duilanguage.md",
         "record": "docs-sync/translations/plugin/duilanguage.json",
-        "outputHash": "83017c2885ea5d1422cd30719177042f7b34a7b33b61b46b91c6d30c2ebe00dd",
-        "bodyHash": "c2d900b6d784bff809504c3f4aae18f4f6d8b1c4db5c43dc04b7e4d354087e78"
+        "outputHash": "f7a303abc8edcbb67b24865b1e2820b4622e8d207aa093575bf819be670ba484",
+        "bodyHash": "e3f82843d1f8c169eacb37d869953086fa35bd8159d59e8a78db4905a6d7cfc6"
       }
     }
   }

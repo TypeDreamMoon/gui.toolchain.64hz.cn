@@ -2,7 +2,7 @@
   "version": 2,
   "status": "current",
   "sourceHash": "c2a66f6d7091b058dd9dc944d7cde6b3c490d145f95017a9e4fe7b0bdec3bf2f",
-  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
+  "sourceRevision": "28e42607533aa70efa58203b66eb3fb0dc34a3be",
   "sources": [
     {
       "path": "Docs/Reference/DreamRichTextStyle.md",

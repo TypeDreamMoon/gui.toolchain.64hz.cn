@@ -2,7 +2,7 @@
   "version": 2,
   "status": "current",
   "sourceHash": "8308c360b2676656b4ac80d596989007d748928704d52e2f4c0bae04e8837c2b",
-  "sourceRevision": "44c71520f5df2461a7a748fd3c3b2eeaadd47c2a",
+  "sourceRevision": "28e42607533aa70efa58203b66eb3fb0dc34a3be",
   "sources": [
     {
       "path": "Docs/Reference/DreamSlider.md",

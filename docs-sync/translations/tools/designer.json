@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/tools/designer.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "cb97dbb939a9934809e9933fa349698e4633c2d302ea8afd1b84dbce894a8e26"
+    }
+  ],
+  "translationFile": "content/docs/tools/designer.md",
+  "translationHash": "ca1b678a853535b2ab8cb5a410a489e379a98358c4af0f04504149c7058b5737"
+}

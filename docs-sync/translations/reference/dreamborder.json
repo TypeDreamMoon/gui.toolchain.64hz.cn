@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamBorder.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "fd43893996cf0cfd8a0cf445fb31999d66b045f739a808bc885fb97bd9201848"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamborder.md",
+  "translationHash": "eb216cc6a0eac67ab165314ce8f260ff2a33b9542ffb229d5f60283505bee3ca"
+}

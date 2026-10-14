@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamUIAnimationLibrary.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "df918afaace446aa9122ecc330a9c566e7cdfa5fcdcdc97372e76c3da073e7a4"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamuianimationlibrary.md",
+  "translationHash": "3f3bcc010d2ef4105c265c84f46428e7797818c6bf20d433a72202bc9f4a7184"
+}

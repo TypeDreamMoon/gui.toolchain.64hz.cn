@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamNativeWidgetHost.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "c258c07f3a1c6757e304f4ab0ee50dc8f5668a4d47dd183a9a35b5c78cc93d42"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamnativewidgethost.md",
+  "translationHash": "b96dfb4fcef2c466c7bfdcb65939f84f836f87e8cb49169295ab7316bbb7928d"
+}

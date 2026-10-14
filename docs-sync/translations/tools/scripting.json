@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/tools/scripting.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "c8b9569b6993d0166578782383031ec93f591b3e2151985855e1cbe0205fe3f9"
+    }
+  ],
+  "translationFile": "content/docs/tools/scripting.md",
+  "translationHash": "c99b9d157a82fefa4bb28ce95003be99b45b4b8c466fbf1d5a87e510b6c492b2"
+}

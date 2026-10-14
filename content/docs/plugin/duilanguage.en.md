@@ -153,7 +153,7 @@ The language reference is organized by topic. These links preserve the section n
 
 ## Diagnostics
 
-[Read this section](https://github.com/TypeDreamMoon/DreamGUI/blob/5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176/Docs/diagnostics/codes.md#diagnostics).
+[Read this section](https://github.com/TypeDreamMoon/DreamGUI/blob/d03670b32e0e607754f247bd18ebe76b873b325f/Docs/diagnostics/codes.md#diagnostics).
 
 ## A worked example
 

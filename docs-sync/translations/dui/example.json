@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/language/example.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "55f163dd4c2efb87323d2f4bac31aa8a01ea34c3cdc8df46ce501f30805fb3d5"
+    }
+  ],
+  "translationFile": "content/docs/dui/example.md",
+  "translationHash": "456a2862f7fc7c765fa324cfdd84b0ac51410e0971a132b3abcc8f475bee3dae"
+}

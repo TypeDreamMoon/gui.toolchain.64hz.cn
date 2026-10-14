@@ -202,7 +202,9 @@
       ],
       "format": "md",
       "title": "DUI1xxx · Lexer",
-      "description": "A character sequence that is not a token."
+      "description": "A character sequence that is not a token.",
+      "titleZh": "DUI1xxx · 词法",
+      "descriptionZh": "一串字符构不成任何记号。"
     },
     {
       "id": "diagnostics/dui2xxx",
@@ -215,7 +217,9 @@
       ],
       "format": "md",
       "title": "DUI2xxx · Parser",
-      "description": "Tokens that do not form the grammar."
+      "description": "Tokens that do not form the grammar.",
+      "titleZh": "DUI2xxx · 语法",
+      "descriptionZh": "记号拼不成语法。"
     },
     {
       "id": "diagnostics/dui3xxx",
@@ -228,7 +232,9 @@
       ],
       "format": "md",
       "title": "DUI3xxx · Meaning",
-      "description": "Grammatical, but the tree does not hold together: a duplicate id, an unknown type."
+      "description": "Grammatical, but the tree does not hold together: a duplicate id, an unknown type.",
+      "titleZh": "DUI3xxx · 语义",
+      "descriptionZh": "语法没错，但这棵树对不上：重复的 id、未知的类型。"
     },
     {
       "id": "diagnostics/dui4xxx",
@@ -241,7 +247,9 @@
       ],
       "format": "md",
       "title": "DUI4xxx · Values",
-      "description": "A value that does not fit the property it is written on."
+      "description": "A value that does not fit the property it is written on.",
+      "titleZh": "DUI4xxx · 取值",
+      "descriptionZh": "值和它写在的属性对不上。"
     },
     {
       "id": "diagnostics/dui5xxx",
@@ -254,7 +262,9 @@
       ],
       "format": "md",
       "title": "DUI5xxx · Building the tree",
-      "description": "Reflection refused the write, or the target object does not exist."
+      "description": "Reflection refused the write, or the target object does not exist.",
+      "titleZh": "DUI5xxx · 构建",
+      "descriptionZh": "反射拒绝了写入，或者目标对象不存在。"
     },
     {
       "id": "diagnostics/dui6xxx",
@@ -267,7 +277,9 @@
       ],
       "format": "md",
       "title": "DUI6xxx · Compiling",
-      "description": "The .dui could not be attached to its Blueprint."
+      "description": "The .dui could not be attached to its Blueprint.",
+      "titleZh": "DUI6xxx · 编译",
+      "descriptionZh": ".dui 挂不到它的 Blueprint 上。"
     },
     {
       "id": "diagnostics/dui7xxx",
@@ -280,7 +292,9 @@
       ],
       "format": "md",
       "title": "DUI7xxx · Write-back",
-      "description": "The designer's edit could not be put into the text."
+      "description": "The designer's edit could not be put into the text.",
+      "titleZh": "DUI7xxx · 写回",
+      "descriptionZh": "设计器的改动没法写回文本。"
     },
     {
       "id": "diagnostics/index",
@@ -1541,5 +1555,6 @@
     "Docs/FontsAndPackaging.md",
     "Docs/Migration.md",
     "Docs/README.md"
-  ]
+  ],
+  "siteUrl": "https://gui.toolchain.64hz.cn"
 }

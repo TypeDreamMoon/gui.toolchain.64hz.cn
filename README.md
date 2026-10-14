@@ -1,6 +1,6 @@
 # gui.toolchain.64hz.cn — the DreamGUI documentation site
 
-文档维护采用插件原文同步、AI 中文翻译 PR 与人工合并发布，配置见 [DOCS_SYNC.md](DOCS_SYNC.md)。
+中英文文档都在插件仓库维护。AI 配置留在本站，翻译 PR 开到插件仓库，人工合并后网站同步发布；见 [DOCS_SYNC.md](DOCS_SYNC.md)。
 
 The manual for [DreamGUI](https://github.com/TypeDreamMoon/DreamGUI): a 3D UI system for Unreal Engine 5.8.
 Chinese is the default locale, English lives under `/en`.
@@ -91,7 +91,7 @@ missing exported routes and anchors. Intentional links to the other locale are a
 
 ## Updating documentation
 
-Use the unified pipeline in [DOCS_SYNC.md](DOCS_SYNC.md). English references and diagnostics come from plugin documents; Chinese edits belong to reviewed translation PRs. The older reference/diagnostics scripts are historical and must not overwrite the reviewed pages.
+Use the unified pipeline in [DOCS_SYNC.md](DOCS_SYNC.md). English references and diagnostics come from plugin documents; Chinese lives in the plugin’s `Docs/zh-CN/` and is published after its translation PR is merged in the plugin repository. Keep website-only additions after `<!-- docs-sync:notes -->`. The older reference/diagnostics scripts are historical and must not overwrite the reviewed pages.
 
 ## Checking links
 

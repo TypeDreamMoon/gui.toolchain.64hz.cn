@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamEditableText.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "f6789dfdf5da0d1723f885dac6d08ae1af60db7ec9ef0f158db96049710a2f9a"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreameditabletext.md",
+  "translationHash": "628b5e2280e1bf2a17414b88f8601d7c130eba14c9b5192e468a82360e17bde0"
+}

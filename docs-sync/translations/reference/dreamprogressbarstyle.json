@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamProgressBarStyle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "d256fbb54df8ac2c924f3a45fb9924780e0edf955bda6c8e8edea366d1d59f44"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamprogressbarstyle.md",
+  "translationHash": "fb513a33745ead890de0463acb48fbb429367e42a0a59500c36dc1ff36dd4dc8"
+}

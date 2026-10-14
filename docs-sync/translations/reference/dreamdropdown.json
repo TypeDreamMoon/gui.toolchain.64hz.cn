@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamDropdown.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "2a2f0440ffd7c15c1ddda3dbf2e492b8447aa45be35b9b1368dcc2111da4944e"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamdropdown.md",
+  "translationHash": "bf9b1ac3e618009af58a870a9d7d992affc41024f23e095a333371b0401256f3"
+}

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamLayoutContainerStackBox.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "51f598796ba257405e26fc6ddd728679ff4cabd6e779e040af4c3eb02fabb91a"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamlayoutcontainerstackbox.md",
+  "translationHash": "78e283a2e5a02bcb68d5307cc1067aa2dba3e6cadd26eb973a1820779d5065f7"
+}

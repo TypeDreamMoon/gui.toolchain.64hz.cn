@@ -75,4 +75,4 @@ the windows to keep reloading and overwriting each other's state.
 `FDreamUIDocumentRegistry` prevents that by using the normalized absolute path as its key. The registry holds weak
 references; callers retain documents through `FDreamUIDocumentHandle`, a move-only, non-copyable scoped handle.
 The document API and this ownership contract are declared in
-[`Source/DreamGUIEditor/Public/Text/DreamUIDocument.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176/Source/DreamGUIEditor/Public/Text/DreamUIDocument.h).
+[`Source/DreamGUIEditor/Public/Text/DreamUIDocument.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/d03670b32e0e607754f247bd18ebe76b873b325f/Source/DreamGUIEditor/Public/Text/DreamUIDocument.h).

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamLayoutContainerBorder.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "2b6ea16189aed4de33888e1ca409bd0ba6af893c0cdb2986a38e59c0c859d587"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamlayoutcontainerborder.md",
+  "translationHash": "202511a33b096e99624139f5b9320b17063e1b50b4a349e7c902fcb05406e7a5"
+}

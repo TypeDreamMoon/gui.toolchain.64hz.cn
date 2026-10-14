@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/concepts/rendering.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "a8994dc336d9a64b18f5ece64f30bdf8ddd0f24419b87f796cdefce3a04fff02"
+    }
+  ],
+  "translationFile": "content/docs/concepts/rendering.md",
+  "translationHash": "680c70e136c73caf79d2a5f2ae56338d8df9ffb7bf8f56eeade298dc402948e4"
+}

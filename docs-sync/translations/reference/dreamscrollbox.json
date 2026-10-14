@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamScrollBox.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "4b6eae231e2b6588c26fba771abb4b4f65e9c74771de95efb95bc00a3fc664eb"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamscrollbox.md",
+  "translationHash": "944cd367cffdc450dc19578314b0539f5b583d0a4ab4d8f0ef152a63c4a28dcc"
+}

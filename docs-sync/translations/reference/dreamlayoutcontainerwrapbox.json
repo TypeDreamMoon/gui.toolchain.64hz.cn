@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamLayoutContainerWrapBox.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "2c555194c6012a00a597c93dd098ca538152a9c9b8f5fffa99cc528a8dea2266"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamlayoutcontainerwrapbox.md",
+  "translationHash": "cc0ecceb7ff1985f6649ee623b7bb6545ce736186a641d344dcf42b6bf53a700"
+}

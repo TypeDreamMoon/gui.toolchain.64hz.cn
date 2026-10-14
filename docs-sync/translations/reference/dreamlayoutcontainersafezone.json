@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamLayoutContainerSafeZone.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "cdbda5b6c81befa2ff08a0175784bc411b5d2e1b60d21b416f113877af3c174e"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamlayoutcontainersafezone.md",
+  "translationHash": "ab953e5e513b12823be3d21ea9eaa0a8beef405a65452e961b0f80e54a3358fc"
+}

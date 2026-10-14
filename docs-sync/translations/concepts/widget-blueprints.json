@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/concepts/widget-blueprints.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "2849e9a001cbe935de10bce7dcad9f0ef620aeb20ef2390aae646c780cf6b7a7"
+    }
+  ],
+  "translationFile": "content/docs/concepts/widget-blueprints.md",
+  "translationHash": "90e82f1c2032701804b5f7de66596cc5d81eb7589694412a69375643fff44d65"
+}

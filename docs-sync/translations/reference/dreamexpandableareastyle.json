@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamExpandableAreaStyle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "71831ef5259a7b8d1376051dce30b9f82ba691565559e6a5a83231d2964817d6"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamexpandableareastyle.md",
+  "translationHash": "95a04688623ee125325637e253f0ab61f82ef4ae56e62d50905772c8b1c50805"
+}

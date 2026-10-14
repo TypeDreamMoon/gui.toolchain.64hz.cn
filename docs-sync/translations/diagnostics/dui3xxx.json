@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/diagnostics/codes.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "82fcb3abdeb163967e13d4c201df289b2f82a7420ad096c71a1d5cd3578e5d34"
+    }
+  ],
+  "translationFile": "content/docs/diagnostics/dui3xxx.md",
+  "translationHash": "51da83e3f461a2be7d0edd768d87c1c45bab61e62c486f410e29124a427ce167"
+}

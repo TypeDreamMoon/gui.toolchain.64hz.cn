@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamInputKeySelector.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "1251d1102e0d8b4a9a1cd4b9a8b722b39d6b065f65b45ad75de4735e3d783b38"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreaminputkeyselector.md",
+  "translationHash": "fe428f31d7ca64f7be67a9254fb2234a3e256301c4920f0963d085e12a14250e"
+}

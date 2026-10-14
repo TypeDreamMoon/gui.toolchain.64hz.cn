@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamLayoutContainerWidgetSwitcher.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "9a2588a6d68885f324de31733b339c26c3a55b0a6efdbf2171f3beafa8ee21a3"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamlayoutcontainerwidgetswitcher.md",
+  "translationHash": "43874d59b13ad563211ef8f6ee6972004802bc947969fa13a18949648b08ff94"
+}

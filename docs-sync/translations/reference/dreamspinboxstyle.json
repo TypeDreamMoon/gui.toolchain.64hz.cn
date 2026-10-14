@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamSpinBoxStyle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "ee7c32ad44b0c0c74a5efe12d524ce44322b7fa490a09986617c7c27e65d6b7f"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamspinboxstyle.md",
+  "translationHash": "9e626154498cd3f0a424339815f3a43215c487af69438930d7b8336e6083b778"
+}

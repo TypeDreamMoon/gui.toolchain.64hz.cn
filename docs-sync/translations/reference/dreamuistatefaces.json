@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamUIStateFaces.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "86e3cc2f803a2c25c486072da7818b0eb00eb8b7715f2ddb27f1625be735dc8f"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamuistatefaces.md",
+  "translationHash": "42e2e810f697a9daf5e1332c0805c3c9874856aef49033b7f374c9a06798f850"
+}

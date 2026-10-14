@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/changelog/index.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "b2e84f49f9c9fd048c362bce1f88b011c65f4a8486efdbcb53fcd714651958c0"
+    }
+  ],
+  "translationFile": "content/docs/changelog/index.md",
+  "translationHash": "ecbdbc27a5fd0a7312b19d7028415619013e2b5d9caaf23a9b1dbdee99cef80f"
+}

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamUICaptureLibrary.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "1275cdd7febf9e8b7bfc909b3a2a8358cd4f7ae2db7a13632ba7cbd3e0dba325"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamuicapturelibrary.md",
+  "translationHash": "8d431dc563288e94daa6dd4509e33513efcc74b0946ff7db39c7a20ff1012f89"
+}

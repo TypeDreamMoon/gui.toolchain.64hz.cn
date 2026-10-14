@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/concepts/mesh-modifiers.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "1654d67b99ae04d565d82af050c640937f24b7e3b9a0d0e228bfafe810f11dba"
+    }
+  ],
+  "translationFile": "content/docs/concepts/mesh-modifiers.md",
+  "translationHash": "82dbca7245e3f47618372165b6597742639df27018462334b1966b38fd5b9dbb"
+}

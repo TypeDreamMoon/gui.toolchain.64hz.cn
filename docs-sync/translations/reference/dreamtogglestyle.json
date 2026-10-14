@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamToggleStyle.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "53687aee24fff042b8b29ec9a6d8e6ec850d411c077425ddcb4ff9967d4b5cf9"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamtogglestyle.md",
+  "translationHash": "6b15362b3979f52adf2a06d05509a0095da668ba399bf97085f25cc30929f567"
+}

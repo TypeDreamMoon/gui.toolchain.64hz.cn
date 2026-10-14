@@ -142,5 +142,5 @@ record the appearance temporarily overridden by a rule. They are deliberately no
 has no meaning across a load, and there is nothing to restore until the component applies another override.
 
 Both classes live in
-[`Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176/Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h).
+[`Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/d03670b32e0e607754f247bd18ebe76b873b325f/Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h).
 The filename covers both runtime binding and responsive rules; there is no separate `DreamDataBinding.h` to include.

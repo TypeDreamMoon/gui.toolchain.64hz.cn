@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/language/control-flow.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "4c26608c89ad649b2fa15d1697526a122d5b2157d59f03376429adf2ca97cba5"
+    }
+  ],
+  "translationFile": "content/docs/dui/control-flow.md",
+  "translationHash": "2dda9a576828dedff2442c67b051c7a6ed44e3029e1bd54e7c252bf9d1163be8"
+}

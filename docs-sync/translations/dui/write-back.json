@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/language/write-back.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "01ae7ad7eae3c6359f13e2e5823ec39285ece20c788dfc8cf6df921233f1e970"
+    }
+  ],
+  "translationFile": "content/docs/dui/write-back.md",
+  "translationHash": "ff1b07e85029d79a78d9782ef0e2363baa2def08e96e659c226f85bae8206b6b"
+}

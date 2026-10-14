@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/concepts/input.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "0047aac07d93a993b2f73de4db1345cebf1f85e1f71a508282781190db1c742c"
+    }
+  ],
+  "translationFile": "content/docs/concepts/input.md",
+  "translationHash": "e6fbfee4c0c02e6b42b3a7a30bf3d74076b8a6187f11ffbdc1de1f2a0bb369cc"
+}

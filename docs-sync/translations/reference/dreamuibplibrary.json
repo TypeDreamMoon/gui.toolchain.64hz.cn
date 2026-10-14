@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamUIBPLibrary.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "c8ed6a0e8b56c374a0cfed5130dd4d3d6d8d0b4015a1fa84c68ab176f786e9cc"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamuibplibrary.md",
+  "translationHash": "2c374c99bcd6ab04434e2dcaa03b5b8a9a8432d3bdb9d24b0c53aa97275480f5"
+}

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/concepts/world-space.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "197cd34d810f04e7a1b163a816f36f1763b3cf445300909affeff8e1ab914c0d"
+    }
+  ],
+  "translationFile": "content/docs/concepts/world-space.md",
+  "translationHash": "056705a92e05ef5130298d0045e3318e700f261bbb3ea674e23c872f6b0589af"
+}

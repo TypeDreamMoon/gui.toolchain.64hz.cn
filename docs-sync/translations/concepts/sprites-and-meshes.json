@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/concepts/sprites-and-meshes.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "0f990ff96d5fd31487c271eb379c3f324ad055f243407b8283abe80a61d5b248"
+    }
+  ],
+  "translationFile": "content/docs/concepts/sprites-and-meshes.md",
+  "translationHash": "d82238d82cc71538704ebb40e68ff5b7a56e601568cfcef3949231025ed0e7e3"
+}

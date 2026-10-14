@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "613cb23a4b318f9e6597ceae03a3d768b061d25c",
+  "sources": [
+    {
+      "path": "Docs/Reference/DreamLayoutContainerMenuAnchor.md",
+      "sourceHash": null,
+      "sourceRevision": "5d4e5ce0ebb734a3f2d46d5a371674cfa1b69176",
+      "translationHash": "51948a44c46e62e4d16732f945ffcd95b1b7b98608b970f696a1342c93ea376a"
+    }
+  ],
+  "translationFile": "content/docs/reference/dreamlayoutcontainermenuanchor.md",
+  "translationHash": "c9ceef4fef4ab5d5e19e5f63de6b4ab3090b68527d2d4cdbb32ba093cfa5f814"
+}

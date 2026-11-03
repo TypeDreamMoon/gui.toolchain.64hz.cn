@@ -31,4 +31,4 @@ An edit to something no line spells: a visibility an `if` decides, a shorthand t
 
 `PatchStyleComponentNotWritable`
 
-An edit to a value a style's `+` line gives the node; add the line to the node or change the style.
+An edit to a value a style's `+` line gives the node, from a caller that writes no override. The designer writes it as a `+` line on the node instead; a script can add that line, or change the style.

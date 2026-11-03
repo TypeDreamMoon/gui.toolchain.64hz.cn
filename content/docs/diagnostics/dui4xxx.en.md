@@ -50,3 +50,9 @@ A property text cannot write: transient, deprecated, part of the object graph, a
 `ResourceTypeMismatch`
 
 A resource whose value is not its declared type, or a non-`Asset` resource used as a node type.
+
+## DUI4009
+
+`ContainerTypeMismatch`
+
+A list on a property that is not an array or a set, a map on one that is not a map, a single value on a container, or a set or map of nodes (only an array can hold node ids).

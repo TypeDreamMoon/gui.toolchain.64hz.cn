@@ -128,3 +128,9 @@ A `rows` table that does not read: a column list that is not names, a column twi
 `MalformedViewModelsBlock`
 
 A `viewmodels` line that is not `Type Name`, `= new`, `= global ["Name"]` or `= parent ["Name"]` (an empty `""` name included), or a `viewmodels` block inside a node.
+
+## DUI2023
+
+`MalformedContainer`
+
+A list (`[a, b]`) or a map (`{ key: value }`) that does not read: a bracket never closed, two elements with no comma between them, or a map entry that is not `key: value`.

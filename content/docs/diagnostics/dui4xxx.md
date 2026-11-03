@@ -50,3 +50,9 @@ description: "值和它写在的属性对不上。"
 `ResourceTypeMismatch`
 
 一个其值不是所声明类型的资源，或者一个非 `Asset` 的资源被当作节点类型使用。
+
+## DUI4009
+
+`ContainerTypeMismatch`
+
+列表写在了不是数组或 Set 的属性上、Map 写在了不是 Map 的属性上、单个值写在了容器属性上，或者节点的 Set/Map（只有数组能存节点 id）。

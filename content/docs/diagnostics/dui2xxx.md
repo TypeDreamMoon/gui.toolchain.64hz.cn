@@ -128,3 +128,9 @@ description: "记号拼不成语法。"
 `MalformedViewModelsBlock`
 
 一行不是 `Type Name`、`= new`、`= global ["Name"]` 或 `= parent ["Name"]` 的 `viewmodels`（包括空的 `""` 名称），或者写在节点里的 `viewmodels` 块。
+
+## DUI2023
+
+`MalformedContainer`
+
+读不通的列表（`[a, b]`）或 Map（`{ 键: 值 }`）：括号没有闭合、两个元素之间缺逗号，或者 Map 的一项不是 `键: 值`。

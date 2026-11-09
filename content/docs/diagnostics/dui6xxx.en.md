@@ -140,3 +140,15 @@ A `viewmodels` name another member of the class already answers to.
 `SourceFileWritePending`
 
 The document has edits that could not be written, so compiling the older file was refused.
+
+## DUI6024
+
+`TranslationDoesNotFit`
+
+With DreamLoc in the project: a language's translation of a text, laid out in the text, is cut or runs past its box. A warning.
+
+## DUI6025
+
+`TranslationGlyphsMissing`
+
+With DreamLoc in the project: a language's translation of a text has characters no face of the text's font has. A warning.

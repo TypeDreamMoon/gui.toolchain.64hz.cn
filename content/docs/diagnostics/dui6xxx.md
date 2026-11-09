@@ -140,3 +140,15 @@ Blueprint 的 Source File 不存在或读不出来。
 `SourceFileWritePending`
 
 文档里的修改无法写入，所以拒绝编译旧文件。
+
+## DUI6024
+
+`TranslationDoesNotFit`
+
+工程里有 DreamLoc 时：某个语言的译文放进文字控件里排版后被截断，或排出了控件的框。警告。
+
+## DUI6025
+
+`TranslationGlyphsMissing`
+
+工程里有 DreamLoc 时：某个语言的译文里有字符，文字控件字体的所有字面都没有。警告。

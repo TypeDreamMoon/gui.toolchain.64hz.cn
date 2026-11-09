@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "470cdf91a1f4981d7773ad0e47dc2631303e106ee880e366c3ba83b700ef7cf0",
   "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
   "sources": [
     {
       "path": "Docs/diagnostics/codes.md",
-      "alignedRevision": "c4c440d0058d",
-      "alignedPage": "e92d9afab39b",
-      "translationHash": "8475ff3202d1488d52615eb158b77becba508640647f9754dc25808536871baa"
+      "alignedRevision": "7e0e17822ac5",
+      "alignedPage": "a6fbcf0d6a03",
+      "translationHash": "09861d52cd9b1577ffab7d275dadc66b56c3f532278ed5e5b07c858a17fcf9c9"
     }
   ],
   "translationFile": "content/docs/diagnostics/dui3xxx.md",

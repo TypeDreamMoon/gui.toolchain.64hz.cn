@@ -129,6 +129,12 @@ description: "记号拼不成语法。"
 
 一行不是 `Type Name`、`= new`、`= global ["Name"]` 或 `= parent ["Name"]` 的 `viewmodels`（包括空的 `""` 名称），或者写在节点里的 `viewmodels` 块。
 
+## DUI2022
+
+`MalformedTextAnnotation`
+
+`@note(…)` 里不是一个字符串、`@max(…)` 里不是一个不小于 1 的整数、它们跟在不是字符串的值后面、同一个注解写了两次，或者 `@noloc` 和 `@key`、`@note`、`@max` 写在一起。
+
 ## DUI2023
 
 `MalformedContainer`

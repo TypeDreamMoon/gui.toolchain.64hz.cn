@@ -129,6 +129,12 @@ A `rows` table that does not read: a column list that is not names, a column twi
 
 A `viewmodels` line that is not `Type Name`, `= new`, `= global ["Name"]` or `= parent ["Name"]` (an empty `""` name included), or a `viewmodels` block inside a node.
 
+## DUI2022
+
+`MalformedTextAnnotation`
+
+`@note(…)` not holding one string, `@max(…)` not one whole number of at least 1, either after a value that is not a string, an annotation written twice, or `@noloc` with `@key`, `@note` or `@max`.
+
 ## DUI2023
 
 `MalformedContainer`

@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamPanelSlot.md",
-      "sourceHash": "9fb2eee0d434cd49e002b88783cd09f9782a8a3dea1d9e0a4edbeaf1c894b836",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "97fa6a9b0a973ac459d899c14ff24683bcebf75aef19b2063e61c79338977d39"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "9fb2eee0d434",
+      "translationHash": "4d119bcaed89e5c55f4e8d158fda7cfd89b98a736b4617d3f834e6f9eed9e6a9"
     }
   ],
   "translationFile": "content/docs/reference/dreampanelslot.md",

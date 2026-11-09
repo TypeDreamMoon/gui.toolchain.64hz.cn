@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/tools/scripting.md",
-      "sourceHash": "22b5e3eef445d1f0b937c789e753fa7e653c1ff261a76e8d06f2299814d9ea7d",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "1a6b5e241b55766afe498dc7d8a26aeb59dcee041d7916bb52d8c6cb58a94774"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "22b5e3eef445",
+      "translationHash": "70da5f52cf86ff581d63fee8c3ac4a314e13776d41ceadddcbb36f11a81d6863"
     }
   ],
   "translationFile": "content/docs/tools/scripting.md",
-  "translationHash": "febf61b515ba9e40bd68045d49de5003761347c9e9ffc63007d998c3f8d27dc1"
+  "translationHash": "0e515cdbafee18cc21a34480925c5c2cc00cc34d4b5c87d18097e6a2778e60d4"
 }

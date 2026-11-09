@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamRingMenuStyle.md",
-      "sourceHash": "8aa276670d832731c4b371e425a7180df18fc51de62f3349d262dcd3371fee9e",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "7196964e73f81ff1d820c2f69f28ce2079c06791dbe2537a2b58934e8c7f20e0"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "8aa276670d83",
+      "translationHash": "0ffc375482d333574a5ca2885cb9db48fa38ad955fe7285c9c8661e287ea20d0"
     }
   ],
   "translationFile": "content/docs/reference/dreamringmenustyle.md",

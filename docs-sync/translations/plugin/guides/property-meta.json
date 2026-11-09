@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "status": "unreviewed",
+  "status": "outdated",
   "sourceHash": null,
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/guides/property-meta.md",
-      "alignedRevision": null,
-      "alignedPage": null,
+      "alignedRevision": "a25dbbe64733",
+      "alignedPage": "b125bd3af4b7",
       "translationHash": "c03b17f879ec35f72b2fc85f12992100180bcae7eb2a92cf05d68319dd2a03c6"
     }
   ],

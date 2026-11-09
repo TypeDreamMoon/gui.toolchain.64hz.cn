@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamInputKeySelector.md",
-      "sourceHash": "81ebb5a76f5f2c5efa160d3b5c57ac5dc4dd864e03d60f8f08348dd5567aa856",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "eb6a5a14c750488dfe8c7137a564abea2bb7502daad4d8e21621c7fa0d5f7980"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "81ebb5a76f5f",
+      "translationHash": "53a73de31b0ab6ba1df499fa6314a2f05b9a2cf6519b4a20d127bb7f26f708f2"
     }
   ],
   "translationFile": "content/docs/reference/dreaminputkeyselector.md",
-  "translationHash": "59b8f7de680c914a1bad076535ba56cfd9396ac6088f5626e7eefb538802f171"
+  "translationHash": "02742099f6466ab174ef217b725470039bc319b505158f49918295d321629141"
 }

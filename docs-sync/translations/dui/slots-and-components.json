@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/language/slots-and-components.md",
-      "sourceHash": "f345a1afa281c9154f424a09f7d579e1f543d1325c32be35793d36b818ef9f07",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "f7edda355c043c36381e4a9f17bd9a65455197c411e813ff8e41da02edb6fa34"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "f345a1afa281",
+      "translationHash": "1e6afd2e34d6ca33293a3c051ad3e3ead64f80c9a7d9fa6c7c637909fee25499"
     }
   ],
   "translationFile": "content/docs/dui/slots-and-components.md",
-  "translationHash": "5452fff08f72a5fda8b622891522acf40f403ca90e0d616187dad8eeeafbc7f6"
+  "translationHash": "61993e5042cb1d6a64888459b514d495cd1b898604464a93681af2de753d27e1"
 }

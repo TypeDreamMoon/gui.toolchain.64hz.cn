@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamUIControl.md",
-      "sourceHash": "97eeff036041af00cf55375d7ae5a7da2d5cf8f649caf42554b555200008981f",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "517b8fcbcb07099fb76cf28ec6f0dfaa4e01ea3da45a3e48d716d6cce2066ae4"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "97eeff036041",
+      "translationHash": "603839f3e838161c64c285c0d52ea6e1debdd0c03e576089b0a8d87ed4ca41a6"
     }
   ],
   "translationFile": "content/docs/reference/dreamuicontrol.md",
-  "translationHash": "ec1ef4bebc7f3efc77d97549332956922a3795b616f3adb2b3ea745a3326d06b"
+  "translationHash": "e9d6082d06938e05def087c9560f4cc7dd154796065374ff06edc332be61eea3"
 }

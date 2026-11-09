@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamRadioButtonStyle.md",
-      "sourceHash": "22aed1123b87c9462a2d507ecfe95179c7ea66d6a3630b1320cc96c0d032e938",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "69d24c3268c439c47bd41d332d04e290c3274337657434fbb81daedf7c421fff"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "22aed1123b87",
+      "translationHash": "9be24fcfef2bb0f2a2c6b10579722ba3418220d93e9997a727e79557c788338d"
     }
   ],
   "translationFile": "content/docs/reference/dreamradiobuttonstyle.md",

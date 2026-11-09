@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamDropdownStyle.md",
-      "sourceHash": "7b90bf547d24787283b39cf4de08c42a4b7b3a07e37ee52aec20c98f0fdad097",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "bd1d22710b60f32952183fd71e2332e37e8f54adeb1f0fff7983d6a2c41c2914"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "7b90bf547d24",
+      "translationHash": "e1873bba40d87bee27f78ad654e8fb664d619e18811a2bdbda347b7beefcd5b7"
     }
   ],
   "translationFile": "content/docs/reference/dreamdropdownstyle.md",

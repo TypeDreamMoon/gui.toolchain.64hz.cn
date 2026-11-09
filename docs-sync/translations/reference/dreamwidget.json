@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamWidget.md",
-      "sourceHash": "a4f38b0101904c419a5657564d263417b6d50eac63ec294416a41478d83b63a3",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "4b287a5d8ac1ca5d9a4181821b24cc38b74f7301cf90e837c91213b42abdf730"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "a4f38b010190",
+      "translationHash": "d42f7fd934988616caccff5d5aa03bf53688b73c9c79763a79afad8b3c22b1b7"
     }
   ],
   "translationFile": "content/docs/reference/dreamwidget.md",
-  "translationHash": "c93875e0d4b0559909cdf9191dca30676ef4c86b8f12df147803d659789d6dc8"
+  "translationHash": "156ae02c562eff9b9fa98977d79281ed6a10184bf54781f8fbb34f009d6b8448"
 }

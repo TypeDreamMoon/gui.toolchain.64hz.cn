@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamUICaptureLibrary.md",
-      "sourceHash": "ab95363be445981afbf1487a46a4213ab90db04ea5dc677109fe2efe0715e685",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "25ff8bafb4f1c5e171a72dad77e42cb13865881d07d3d145b007da658be92798"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "ab95363be445",
+      "translationHash": "fbcdfdce64f00dd1fe358a393964d9b571b144b2526a7e60f968d5fbdbb07052"
     }
   ],
   "translationFile": "content/docs/reference/dreamuicapturelibrary.md",

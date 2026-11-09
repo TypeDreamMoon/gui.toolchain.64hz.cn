@@ -6,8 +6,8 @@
   "sources": [
     {
       "path": "Docs/diagnostics/index.md",
-      "sourceHash": "976391367937792d4288721a5a5a09283d124ae1237d8e4f823a92bf179bbed8",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "alignedRevision": "c4c440d0058d",
+      "alignedPage": "976391367937",
       "translationHash": "57ff089ee1100b497f5b26faf5bca2353950569a0952cbc97b4115aa0eafa2e6"
     }
   ],

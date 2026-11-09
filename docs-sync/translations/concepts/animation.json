@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/concepts/animation.md",
-      "sourceHash": "fdf02a9a5cbe966650dc93124a2e393130d7ebb8a0d6bc8c222d33f354ee714b",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "a59a695b99126f97adedaedd195a223412d941def5e4376bd19885a4ea1bdd55"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "fdf02a9a5cbe",
+      "translationHash": "9c6f1acb0ed786c8b02955409f6f3c9103b9acc007834553149eb115d56366f0"
     }
   ],
   "translationFile": "content/docs/concepts/animation.md",
-  "translationHash": "492c67eb85aa7d4dbfd3a0ccc5b084b2f40546f4107e1ecc2aea65a60cbed36a"
+  "translationHash": "da68d804b6a9db42a2be0211d2347ebd7a833c12e1d3c203e39e682ed62d4f4c"
 }

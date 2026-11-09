@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "status": "unreviewed",
+  "status": "outdated",
   "sourceHash": null,
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/concepts/niagara.md",
-      "alignedRevision": null,
-      "alignedPage": null,
+      "alignedRevision": "a25dbbe64733",
+      "alignedPage": "9471523042bb",
       "translationHash": "388289280fecbb1b0d99b86e908a645b6ad276dd164c1b2f1ceabdb2194249b1"
     }
   ],

@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamBorderStyle.md",
-      "sourceHash": "a4927d1119d0c84dc9bd587d7fb9d191437708001b986c634990ef723d4e7932",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "05170684822230d0cee6dcdd5f12baa0b5acc268f767e13b7a4141fb7d2d08c6"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "a4927d1119d0",
+      "translationHash": "65eaa650ef7d45a7ac1bf5347366e175c96d7472ef9de7398f45072234594e6f"
     }
   ],
   "translationFile": "content/docs/reference/dreamborderstyle.md",

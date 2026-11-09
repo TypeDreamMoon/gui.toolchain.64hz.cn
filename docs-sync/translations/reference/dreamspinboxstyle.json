@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamSpinBoxStyle.md",
-      "sourceHash": "2eb208338121fbd3473cf058dd21d26d427de6d90bc49602517636afea5349da",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "2b1b7f40ca725790e479d32a396b994990b3efb73ad6fd76df9a9ab1f1b0a8f2"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "2eb208338121",
+      "translationHash": "4fe1d2963768c70f14c7d7fdc3d792852334f6312af2871fef5d27cdc7d0858b"
     }
   ],
   "translationFile": "content/docs/reference/dreamspinboxstyle.md",

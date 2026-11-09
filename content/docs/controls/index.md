@@ -5,29 +5,20 @@ description: "DreamGUIControls 中有什么——按类别划分的 Dream* 控�
 
 控件库位于 `DreamGUIControls` 模块中，在输入系统之上（L3）。它提供两层：
 
-- **`Dream*` 控件**：按钮、开关、滑条、列表、对话框……每一个都是
-  `UDreamUserWidget` 的子类，其**层级由代码构建**，而非从资产实例化。
-- **`UI*` 行为**：诸如 `UUIButton`、`UUIToggle` 和 `UUISlider` 这样的组件，你将它们挂到
-  一个普通 widget 上，让它像按钮一样响应。控件就是由它们组装而成的。
+- **`Dream*` 控件**：按钮、开关、滑条、列表、对话框……每一个都是 `UDreamUserWidget` 的子类，其**层级由代码构建**，而非从资产实例化。
+- **`UI*` 行为**：诸如 `UUIButton`、`UUIToggle` 和 `UUISlider` 这样的组件，你将它们挂到一个普通 widget 上，让它像按钮一样响应。控件就是由它们组装而成的。
 
 使用这些类型的 C++ 会在其 `Build.cs` 中加入 `DreamGUIControls`。资产则无需任何操作。
 
 ## 为什么控件的层级是代码 [#why-a-controls-hierarchy-is-code]
 
-插件的 `Content/Controls/` 中仍然保留着一组预制蓝图（`BP_Button`、`BP_Toggle`、
-`BP_Dropdown`……）——这是更早的做法，即控件是一棵可以打开并编辑的资产树。它有什么
-问题，在 `UDreamButton` 的头文件里说得很直白：`BP_Button` 发布数月却没有
-`UIButton`，所以点击它毫无反应，而且没有任何地方报告这一点。
+插件的 `Content/Controls/` 中仍然保留着一组预制蓝图（`BP_Button`、`BP_Toggle`、 `BP_Dropdown`……）——这是更早的做法，即控件是一棵可以打开并编辑的资产树。它有什么问题，在 `UDreamButton` 的头文件里说得很直白：`BP_Button` 发布数月却没有 `UIButton`，所以点击它毫无反应，而且没有任何地方报告这一点。
 
-由代码构建的控件没有半成品状态。`UDreamUIControl` 在 `NativeOnInitialized` 中按固定顺序依次运行
-树、部件、行为和外观，而行为始终是控件自己添加的。代价是这棵树没人能打开，所以
-**作者原本要伸手进层级里去改的一切都必须成为属性**——这正是每个控件的 `F…Style`
-结构体；参见[样式与样式表](/docs/controls/styles)。
+由代码构建的控件没有半成品状态。`UDreamUIControl` 在 `NativeOnInitialized` 中按固定顺序依次运行树、部件、行为和外观，而行为始终是控件自己添加的。代价是这棵树没人能打开，所以**作者原本要伸手进层级里去改的一切都必须成为属性**——这正是每个控件的 `F…Style` 结构体；参见[样式与样式表](/docs/controls/styles)。
 
 ## 控件 [#the-controls]
 
-`.dui` 标签一列是你在 `.dui` 中写的节点类型；类名链接到其生成的
-参考页。
+`.dui` 标签一列是你在 `.dui` 中写的节点类型；类名链接到其生成的参考页。
 
 ### 按钮与选择 [#buttons-and-choices]
 
@@ -66,9 +57,7 @@ description: "DreamGUIControls 中有什么——按类别划分的 Dream* 控�
 | [`UDreamScrollBox`](/docs/reference/dreamscrollbox) | `Native.ScrollBox` | 一个面、一个裁剪视口、在其中滑动的内容栈，以及一个滚动条 |
 | [`UDreamScrollBar`](/docs/reference/dreamscrollbar) | `Native.ScrollBar` | 一条轨道和一个把手；横竖同一个控件 |
 
-三种列表都派生自 [`UDreamListViewBase`](/docs/reference/dreamlistviewbase)，它持有
-视口、滚动条、行模板、行池和选中逻辑——"树就是会缩进的列表"
-这句话在类结构上是字面成立的。
+三种列表都派生自 [`UDreamListViewBase`](/docs/reference/dreamlistviewbase)，它持有视口、滚动条、行模板、行池和选中逻辑——"树就是会缩进的列表" 这句话在类结构上是字面成立的。
 
 ### 容器、弹层与导航 [#containers-popups-and-navigation]
 
@@ -88,13 +77,11 @@ description: "DreamGUIControls 中有什么——按类别划分的 Dream* 控�
 | --- | --- | --- |
 | [`UDreamNativeWidgetHost`](/docs/reference/dreamnativewidgethost) | `Native.NativeWidgetHost` | DreamGUI 层级里的一个洞，由一个 UMG widget 填上。见下文 [UMG 互操作](#umg-interop) |
 
-每个控件的基类是 [`UDreamUIControl`](/docs/reference/dreamuicontrol)，它是抽象的，
-没有标签。
+每个控件的基类是 [`UDreamUIControl`](/docs/reference/dreamuicontrol)，它是抽象的，没有标签。
 
 ## 在 .dui 里放控件 [#placing-a-control-from-dui]
 
-在 `.dui` 里，控件是由其**注册表标签**作类型的节点：`Scope.Name`，插件的控件
-都在 `Native` 下。
+在 `.dui` 里，控件是由其**注册表标签**作类型的节点：`Scope.Name`，插件的控件都在 `Native` 下。
 
 ```dui
 class /Game/UI/WBP_AudioSettings
@@ -133,16 +120,10 @@ VerticalBox Root {
 
 要点：
 
-- **节点的行设置控件的属性**：`MinValue` 和 `Value` 是 `UDreamSlider` 的，
-  命名与 UMG 一致（见[从 UMG 过来](/docs/controls/umg-parity)）。样式结构体用点路径写：`Style.TickChecked = #FF3355`。
-- **嵌套内容进入控件的默认洞。** `Native.Button` 里的 `Text { }` 就是
-  按钮的标签——按钮自己不绘制任何文字。开关没有洞；框旁边的文字是你
-  自己的布局，所以上面它和一个 `Text` 同处一个 `HorizontalBox` 里。
-- **事件用路由接**：`OnClicked -> HandleApply` 把控件的事件接到用户 widget 的同名函数上，
-  和接任何其他事件一样。
-- 打不出标签的类，可以用类路径作类型：`/Script/DreamGUIControls.DreamDialog Confirm { … }`。
-  但写回（designer 编辑文件）总是写标签：类路径带着类所在的模块名，
-  用类路径写出的文件，在类换模块的那天就读不回来了。
+- **节点的行设置控件的属性**：`MinValue` 和 `Value` 是 `UDreamSlider` 的，命名与 UMG 一致（见[从 UMG 过来](/docs/controls/umg-parity)）。样式结构体用点路径写：`Style.TickChecked = #FF3355`。
+- **嵌套内容进入控件的默认洞。** `Native.Button` 里的 `Text { }` 就是按钮的标签——按钮自己不绘制任何文字。开关没有洞；框旁边的文字是你自己的布局，所以上面它和一个 `Text` 同处一个 `HorizontalBox` 里。
+- **事件用路由接**：`OnClicked -> HandleApply` 把控件的事件接到用户 widget 的同名函数上，和接任何其他事件一样。
+- 打不出标签的类，可以用类路径作类型：`/Script/DreamGUIControls.DreamDialog Confirm { … }`。但写回（designer 编辑文件）总是写标签：类路径带着类所在的模块名，用类路径写出的文件，在类换模块的那天就读不回来了。
 
 标签不是内建在语言里的。一个类在自己的 `.cpp` 里用一行把自己登记到注册表：
 
@@ -223,10 +204,7 @@ Blueprint 子类想碰控件的部件，要等 **On Control Ready**（`OnControl
 
 ### UMG 叠在 DreamGUI 上 [#umg-over-dreamgui]
 
-另一个方向是两套 UI 共用同一个视口。打开 Slate 输入源（*Use Slate Input
-Source*）后，指针落在绘制于视口上层的 UMG 控件上时，以及某个 UMG 控件持有键盘焦点时的按键输入，都不归 DreamGUI 管。当玩家拥有 DreamGUI 焦点或 Tab 停靠点时，
-`UDreamGameViewportClient` 会从光秃秃的视口接管 Slate 自身的导航（Tab、方向键），这样 Slate
-就不会把焦点移进 UMG 层。输入的完整说明见[输入](/docs/concepts/input)。
+另一个方向是两套 UI 共用同一个视口。打开 Slate 输入源（*Use Slate Input Source*）后，指针落在绘制于视口上层的 UMG 控件上时，以及某个 UMG 控件持有键盘焦点时的按键输入，都不归 DreamGUI 管。当玩家拥有 DreamGUI 焦点或 Tab 停靠点时， `UDreamGameViewportClient` 会从光秃秃的视口接管 Slate 自身的导航（Tab、方向键），这样 Slate 就不会把焦点移进 UMG 层。输入的完整说明见[输入](/docs/concepts/input)。
 
 ## 示例 [#samples]
 

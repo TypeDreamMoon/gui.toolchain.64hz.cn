@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/concepts/input.md",
-      "sourceHash": "501422b6a72ec4e4053b54c1c3a06413a3f6cc4c838c706bffe22c32694a7618",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "9c7e617b54ef268992d3f9453ff75c5fdde2e903e6f780d2aa91d7365a9513c0"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "501422b6a72e",
+      "translationHash": "51a713f65c7dca3a92d54d0ca7b5767cfe9f57c440914c3ad3c8012177718bda"
     }
   ],
   "translationFile": "content/docs/concepts/input.md",
-  "translationHash": "5bf3eedb28798da19cfa992c34a833fa93be536c0057e942764085a1f90805db"
+  "translationHash": "82f0923fde11b39b692cdc72550d3d54661b5b08e5c7d922bf5d102fdf719827"
 }

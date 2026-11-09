@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamInputKeySelectorStyle.md",
-      "sourceHash": "a5d66fd34d8024a88d900242b2b3de3c76e38464043749041298bf5f534be182",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "c5ae7473f4dc9a59a6f87c37a46985f3f114173d82db44bb4e5920ccc1fc8222"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "a5d66fd34d80",
+      "translationHash": "1231f446c62bad54e625015ed5279b2d4c839dc9bb74e17c35f17fd87fd994d1"
     }
   ],
   "translationFile": "content/docs/reference/dreaminputkeyselectorstyle.md",

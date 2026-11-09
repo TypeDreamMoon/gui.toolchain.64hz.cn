@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamRichTextBlock.md",
-      "sourceHash": "b221290fbb0590c367624726fde8358e4c5dc8264aff3c16e17a345481828473",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "d48602f3f0b57000c07395feb303e799fce35a4f2b60506f3631d8b5fdfd167b"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "b221290fbb05",
+      "translationHash": "afcffc7971536dcd480917c5371feb368cbbda4dab243418b1c6b943987677fa"
     }
   ],
   "translationFile": "content/docs/reference/dreamrichtextblock.md",
-  "translationHash": "a163b3fcafb7001f00e5649e704d539fd241a6dba47c3056df9abbebbb8fd5bf"
+  "translationHash": "54d2ce32de981def81239c69f35e7912f65bf757babffdc81219fa7cfa82223e"
 }

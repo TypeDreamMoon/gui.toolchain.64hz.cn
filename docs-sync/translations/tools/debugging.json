@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/tools/debugging.md",
-      "sourceHash": "f9293a0cbe888e86c67bb7a0f6163104b5dc47f8901305fbe231f6970394d182",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "228f95552fd37050c0896383b05ced2ee42837a80e963f72106a323701aab19a"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "f9293a0cbe88",
+      "translationHash": "fed7376a970801d756650f97f2929f2243ded80ff67cbfee0cecc0c1227f0ed4"
     }
   ],
   "translationFile": "content/docs/tools/debugging.md",
-  "translationHash": "eeb3ae87c616b6606942232ea8ac94861cf5b58d5c28e8cb7a51bc0e04a5ff82"
+  "translationHash": "79c97d98b38cee4817b275b736f34efe74486a4a749271ed5642ba52de53a685"
 }

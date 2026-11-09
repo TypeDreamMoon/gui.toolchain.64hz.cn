@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/concepts/world-space.md",
-      "sourceHash": "def976a368ace7b84d758d7b18e174f6803c13c03ff722cc9b38c4e5cc4f7094",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "4b4a12f78116bd6826e776a701421e0bd82af04f14ee28d257e8cc5e4a485ce9"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "def976a368ac",
+      "translationHash": "1d87b6b5fc128138b519ea7f717cc29509c4e7a84c7ad6e3b14e127808ef6c92"
     }
   ],
   "translationFile": "content/docs/concepts/world-space.md",
-  "translationHash": "2e1219167823a4b22287a08aa86aa6dc9e666d246331f6685661a489e34edaa6"
+  "translationHash": "f702b8a2e95d3df840b8a8c233dc42db494a4be20b2e460fff642bfff2432aa6"
 }

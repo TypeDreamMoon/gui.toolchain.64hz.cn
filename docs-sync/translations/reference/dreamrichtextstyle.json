@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamRichTextStyle.md",
-      "sourceHash": "e7f127687c5f58543b638186e284c9021deaabdb2beaf33c192ef450a785e436",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "443a1583bda04e93d55f66c2fb47c283bbb8fbc04f5f7572914a6a3928603312"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "e7f127687c5f",
+      "translationHash": "596f60d4bf4cb792e81c07490cb8f23d684c026d828bc8df0192d3a7db425d01"
     }
   ],
   "translationFile": "content/docs/reference/dreamrichtextstyle.md",

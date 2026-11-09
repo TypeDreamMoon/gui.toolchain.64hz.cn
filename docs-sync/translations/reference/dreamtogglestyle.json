@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamToggleStyle.md",
-      "sourceHash": "f2480f7b646985b398f23463ea5a440d71395056d10c277085237e0958b5fbb8",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "d51c5889af3a31d408c83e50723a6fdf1a8fc43e957b9fe8676061f485530602"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "f2480f7b6469",
+      "translationHash": "f2e22fc34b1223524c7e662ff72845ea5e406073225d3bdd02666e1dfda90826"
     }
   ],
   "translationFile": "content/docs/reference/dreamtogglestyle.md",

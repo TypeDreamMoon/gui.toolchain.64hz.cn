@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/concepts/widget-blueprints.md",
-      "sourceHash": "b765acfc0a4d4d94ed7a9b8db7794e3bccfd4f625dfe9e538ffff924fb2b59b5",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "484a8d387792820bdd9bca17e9c26ed52edd580295648686ade8ccbad246e559"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "b765acfc0a4d",
+      "translationHash": "7129ac5726ce3cb6a1ee574de90e41f6094d9352a44236db82e83280fbe2fdc2"
     }
   ],
   "translationFile": "content/docs/concepts/widget-blueprints.md",
-  "translationHash": "f50a94dc6cb9dec8b0dfc018de1901761d82067ba5aba59a4c114bb6dca8cd59"
+  "translationHash": "8ce862ed397b04f9dc0eced9edc4f8ef713765dadd6a746bf6ca0f7bee9f371a"
 }

@@ -11,29 +11,17 @@ description: "UDreamThrobber"
 
 声明于 `Public/Controls/DreamThrobber.h` 中。
 
-一个层级结构由代码而非资源构成的 throbber：N 个小块脉冲闪烁，只表达“正在发生
-某事”。
+一个层级结构由代码而非资源构成的 throbber：N 个小块脉冲闪烁，只表达“正在发生某事”。
 
-用 UMG 的两个控件合成一个，这是本库已经做过三次的抉择：进度条有 Bar 和 Radial，
-而不是两个类；滑块有一个 Direction，而不是两套蓝图预设；滚动框有一个
-Orientation。小块的样式、周期、颜色和淡入淡出在 Throbber 和 CircularThrobber 之间完全
-相同；唯一的不同是小块的摆放位置，所以那是一个枚举，而不是一个类。调色板仍然提供
-两行——它们只差一次属性写入，就像两个滑块一样。
+用 UMG 的两个控件合成一个，这是本库已经做过三次的抉择：进度条有 Bar 和 Radial，而不是两个类；滑块有一个 Direction，而不是两套蓝图预设；滚动框有一个 Orientation。小块的样式、周期、颜色和淡入淡出在 Throbber 和 CircularThrobber 之间完全相同；唯一的不同是小块的摆放位置，所以那是一个枚举，而不是一个类。调色板仍然提供两行——它们只差一次属性写入，就像两个滑块一样。
+
+<a id="why-it-ticks-when-nothing-else-in-the-library-does"></a>
 
 为什么它会 tick，而库中其他一切都不会
 ---------------------------------------------------
-这里的其他每一个动画对象都是 TWEEN：它有起点、终点和持续时间，时钟
-由 tween 管理器掌管。throbber 没有这些——它会一直运行，直到有人把它移出屏幕
-——所以 tween 必须被永远重新启动，而每个小块一个循环 tween 就意味着 N 个
-对象，管理器每帧都要遍历它们，去做这个控件一遍就能完成的计算。于是它选择
-启用 NativeOnTick（对每个控件默认关闭，见 UDreamUserWidget::SetWantsTick）并自己
-写入不透明度。
+这里的其他每一个动画对象都是 TWEEN：它有起点、终点和持续时间，时钟由 tween 管理器掌管。throbber 没有这些——它会一直运行，直到有人把它移出屏幕 ——所以 tween 必须被永远重新启动，而每个小块一个循环 tween 就意味着 N 个对象，管理器每帧都要遍历它们，去做这个控件一遍就能完成的计算。于是它选择启用 NativeOnTick（对每个控件默认关闭，见 UDreamUserWidget::SetWantsTick）并自己写入不透明度。
 
-这也让它在 tween 管理器不存在的地方依然正确：管理器是一个世界
-子系统，在无头测试和设计师预览中会返回 null，在那里基于 tween 的
-throbber 只会静止不动。而这个 throbber 在任何调用它 tick 的地方都会动，在没有
-任何东西调用时则保持它的第一帧——这就是一个在设计师中
-看起来像 throbber 的 throbber，而不是一个空盒子。
+这也让它在 tween 管理器不存在的地方依然正确：管理器是一个世界子系统，在无头测试和设计师预览中会返回 null，在那里基于 tween 的 throbber 只会静止不动。而这个 throbber 在任何调用它 tick 的地方都会动，在没有任何东西调用时则保持它的第一帧——这就是一个在设计师中看起来像 throbber 的 throbber，而不是一个空盒子。
 
 没有 Play / Stop，出于 UMG 的理由：throbber 不是时间轴。把它移出屏幕即可停止。
 

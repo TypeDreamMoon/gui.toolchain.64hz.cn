@@ -6,8 +6,8 @@
   "sources": [
     {
       "path": "Docs/concepts/text.md",
-      "sourceHash": "bed4220149fa6eae84b4faf1ee5c0a3f5209930b594a3493f27faec11f5dd8a9",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "alignedRevision": "a25dbbe64733",
+      "alignedPage": "23cb6f2398cc",
       "translationHash": "9c10c0208885f49409b5ce6fd3da2105b8294c2606f8e39d0789a8b408a072c0"
     }
   ],

@@ -1,6 +1,6 @@
 ---
 title: "UDreamLayoutContainerBorder"
-description: "UMG 的 UBorder：单个子项、可设置内边距，由边框本身而非子项槽位决定对齐。"
+description: "UDreamLayoutContainerBorder"
 ---
 
 # UDreamLayoutContainerBorder [#udreamlayoutcontainerborder]

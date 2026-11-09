@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "13c4a7d5886ba864ac00321870fba8ad7c3d020b4999a2483bea88cc8880248d",
+  "status": "outdated",
+  "sourceHash": null,
   "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
   "sources": [
     {
       "path": "Docs/language/viewmodels.md",
-      "sourceHash": "0871c31b0c045e0cbb1377fff91ba48be6329fd7da63095fb456b89e5641b3a3",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "alignedRevision": "c4c440d0058d",
+      "alignedPage": "0871c31b0c04",
       "translationHash": "77d097e6b25b938b5efdddfd8db2af44f6a1a119c75591fbe230353c0deb959b"
     }
   ],

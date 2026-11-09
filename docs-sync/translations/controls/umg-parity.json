@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/controls/umg-parity.md",
-      "sourceHash": "cffde785f554a76018799c0f48f40bcdd25038c03af0d5c40adad6c9faa1332b",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "aec16feed54b43e86ccaca19bf2753d58ad8f0590ae11b575df8a8b02a0e7439"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "cffde785f554",
+      "translationHash": "ee0c7f21a6dd4adf2f986f0b16b1cb4c6bc5a3c38284fb413bcfcfd9691d60ab"
     }
   ],
   "translationFile": "content/docs/controls/umg-parity.md",
-  "translationHash": "aa69fd76eccae85f5fe16a9369920c4d2067610c15b7f35405a01c892ee9dc3a"
+  "translationHash": "86df7e37988d5b5f4efbce65d76ef74d84d1fd106a1cc88fc66b7b20eb3bbdf0"
 }

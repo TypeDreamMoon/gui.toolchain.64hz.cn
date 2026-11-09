@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamThrobberStyle.md",
-      "sourceHash": "ab1449a80f3b41d4aab5396340e1017c8e2131d4a3874270a211a0c23d2be25c",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "9df81d6ce1e6529e5e74e164ca8b97f209cd80487fc38625dd58ec1a403ee4cb"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "ab1449a80f3b",
+      "translationHash": "97fe595f3eefb6f13bf48aeadbd3a8b00745d71ad163df278eca5b3127acddbf"
     }
   ],
   "translationFile": "content/docs/reference/dreamthrobberstyle.md",
-  "translationHash": "b31f35e72e86aa9de4f6f5e8ee4b82125782bbdd50f200e3c843f00d84b7729b"
+  "translationHash": "eaa4993f7d97ecb2abac32f0625c8318ba1da98342b5dc8ff1ddd9a4caf8180d"
 }

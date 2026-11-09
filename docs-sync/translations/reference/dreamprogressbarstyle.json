@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamProgressBarStyle.md",
-      "sourceHash": "53ebf32b8a7c3cd709a2c4e3a51c1357ac3ff26e8748615ac6dfd6b8015d3bc2",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "f09f16050bebe5451137973fc4a79e2fb59beae43a1ee70779fa38051bf4966a"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "53ebf32b8a7c",
+      "translationHash": "94382910800c41f0ae13c6dd2114f2fa1da509598080ef1dac8143e3de3fbc4d"
     }
   ],
   "translationFile": "content/docs/reference/dreamprogressbarstyle.md",
-  "translationHash": "9906075c3ab5b311bde592c22ab75e4c8b441f0940b76e250441f9d4267eb6af"
+  "translationHash": "bd47084f7582f5f3d7d0a2256662a82a28d0fa51604b86f943306bcd94a1dd07"
 }

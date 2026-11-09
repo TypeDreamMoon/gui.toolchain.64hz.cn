@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/language/styles-and-resources.md",
-      "sourceHash": "e4508239957aee4d7023a819a3f8688f245c9bd54a4b56c62234eb16a526ca1e",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "c8187c01bf0d751948f168a88e4724f1e121625ea54122ff76fd7286a558f85a"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "e4508239957a",
+      "translationHash": "bb5a8eb1a92d3b3f28d2edb8edc901cec55b33d6a70eaf0a543ce4c953496975"
     }
   ],
   "translationFile": "content/docs/dui/styles-and-resources.md",
-  "translationHash": "9bcb87fe19777d13c0834d56c363fa6f5ddcbe2fb40d40ff454bb8ae0b2899f5"
+  "translationHash": "89e86b5e960b2945b13c8182181f2aac5d87ddf6d4cf478fc53e1da1db3e5973"
 }

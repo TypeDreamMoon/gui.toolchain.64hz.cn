@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamUIWidgetGeometry.md",
-      "sourceHash": "4327cb46d87fc9b9c37c74cf28c08cbb2195ecad8581979becc3c82a4f23a537",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "324110a4dc0304c3569832051e69c757123ab468ccd61f3cdeac1abb14c84a4d"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "4327cb46d87f",
+      "translationHash": "060087780163c1ab2e795a9653f095c0e380342c2d42ae3cab430723cd7bc07c"
     }
   ],
   "translationFile": "content/docs/reference/dreamuiwidgetgeometry.md",
-  "translationHash": "ec798f6db8c93f734622075d555eb755f1b73a53ee675b02691a8e604a1b2881"
+  "translationHash": "df056d9bd331782fbf45c6a5977174e96e63d6659ee086e30c4e25596727155b"
 }

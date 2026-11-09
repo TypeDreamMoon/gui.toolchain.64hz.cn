@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/getting-started/workflow.md",
-      "sourceHash": "2301f4d7a1ec9c71166c5de5c7eb1b2797b0e9f7eb426c350157ecdb2cab4e96",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "3ff47f4576e072f92454fe5f16622db6ccdeda0478457144d56bcf9a88e61cbc"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "2301f4d7a1ec",
+      "translationHash": "f121988fdaa2ccc899a938adcfe97ce30de436c37636245980baec684b32d91c"
     }
   ],
   "translationFile": "content/docs/start/workflow.md",
-  "translationHash": "dde1a120f9516d580eb16974b18cd8e6a2b57ed76d1dde4acaa41fec8f87db83"
+  "translationHash": "6326f6bfb9ca46494731dec246043399c20fa58001485e8fa645df47597858f8"
 }

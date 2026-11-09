@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "eacbb4d80b4f7ca6ba17eddd16c6a3a7c1d6bed0a991fdec38d55a7e4310c1f5",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/concepts/clip-masks.md",
-      "alignedRevision": null,
-      "alignedPage": null,
+      "alignedRevision": "a25dbbe64733",
+      "alignedPage": "44687c08ecd7",
       "translationHash": "5aee0e41a682f2adced27176e8d0042a01f76edaee2c17fa95d330f375502ab9"
     }
   ],

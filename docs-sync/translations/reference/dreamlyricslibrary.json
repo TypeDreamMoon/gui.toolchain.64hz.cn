@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamLyricsLibrary.md",
-      "sourceHash": "577d10ad00a7b60b4f3be07834b7be254df4c7e3e5ce3fd4ad4420e3261fa73d",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "2913b638f4917a029494285b682d71f99e018f78f86a6b5b0cd0171cfb4070c6"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "577d10ad00a7",
+      "translationHash": "b94c95e9b042d2a11607e9b2efa1e711af4d2c7bb2977347fb405cdf1e6f46ce"
     }
   ],
   "translationFile": "content/docs/reference/dreamlyricslibrary.md",

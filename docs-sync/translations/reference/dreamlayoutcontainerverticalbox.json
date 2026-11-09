@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamLayoutContainerVerticalBox.md",
-      "sourceHash": "ac07bd7d09c8f11564d84ef862fd19e42d110702ed715475f5d2093f7d1f1702",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "70d051719c392e26e6691e6cbcc161bbd875a86f6a2bbd9d427947cf5de98f96"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "ac07bd7d09c8",
+      "translationHash": "e0a781220b92fe7e35803096ac91bd2a3d80d6faef2f744c236ebce0f47e5534"
     }
   ],
   "translationFile": "content/docs/reference/dreamlayoutcontainerverticalbox.md",

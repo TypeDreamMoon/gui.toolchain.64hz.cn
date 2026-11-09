@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/language/control-flow.md",
-      "sourceHash": "d672da54308e7ec38ea6776e811c966d860e05b83b2aaa2629cdbc8819d03cdc",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "4732fca7523243038e364da34d66e4443cd46fe967546a9f955c3a031cca94a8"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "d672da54308e",
+      "translationHash": "8475a6f7c077f1566f71febee1df47f90b52973127be68f74c3ba12339af8ddc"
     }
   ],
   "translationFile": "content/docs/dui/control-flow.md",
-  "translationHash": "e527e6eef4829fb0d5fd04513e0fd5606efd3e8f7e5f79157cb7cf6c12a3cf63"
+  "translationHash": "72f7978b2fd1dbb1c53dc0c937742f4f1fc3bdff386a5c5dbf66c697d1abb540"
 }

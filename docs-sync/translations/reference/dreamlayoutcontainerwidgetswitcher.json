@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamLayoutContainerWidgetSwitcher.md",
-      "sourceHash": "c8c42de8155fcd8a9579916ee85076358ceba6b2b6be89947451dc4d84cb3a9e",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "c5b6e61e41d8b7f707f94f27d044bf39bfe213ca2e4c3b7ed40bc1f848a92fe8"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "c8c42de8155f",
+      "translationHash": "c0fce1fcbfb09203bca8a9b7b618ae42445c14777ba79f86b525cf201a1fcbe9"
     }
   ],
   "translationFile": "content/docs/reference/dreamlayoutcontainerwidgetswitcher.md",

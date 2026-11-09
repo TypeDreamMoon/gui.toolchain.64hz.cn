@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamLayoutContainerCanvasPanel.md",
-      "sourceHash": "282c823a1f2889a2c3c724ae6e90f956de21d4805035937a80012cf64c656d51",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "c3351e11cc3a11c5db257b8b85c2eb8d4777353cf1f6b8ee372c97d6fbb0e3d4"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "282c823a1f28",
+      "translationHash": "85a2940a1f97cedec2537ef03e1bf564ab473f1a2341d52980ca5cce88dee8dd"
     }
   ],
   "translationFile": "content/docs/reference/dreamlayoutcontainercanvaspanel.md",

@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamExpandableAreaStyle.md",
-      "sourceHash": "b39c789623ed9d2877e31a2fc95a2d2bf94722c6b60f8d5ccd74b3ba92e83688",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "4e1cd4110f4df0696d6a2176dfe82a66a953f16c81be839cbe52ce50274b2ab5"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "b39c789623ed",
+      "translationHash": "fa5042409af216ef400c4f1c27b6c56fe12b6d64fbf3b8bb21f71030ada0090d"
     }
   ],
   "translationFile": "content/docs/reference/dreamexpandableareastyle.md",

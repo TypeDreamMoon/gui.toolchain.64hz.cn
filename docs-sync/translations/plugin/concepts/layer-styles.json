@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "status": "unreviewed",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "4a9699ed239461926b3d2e59aafe671bbf1c04084e92d159d89ec0f3998255b5",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/concepts/layer-styles.md",
-      "alignedRevision": null,
-      "alignedPage": null,
+      "alignedRevision": "a25dbbe64733",
+      "alignedPage": "333d3416a78e",
       "translationHash": "32c4872530451adeb0dbb51f8aae70564fb8101bdb13c47de28e0a9ef6689048"
     }
   ],

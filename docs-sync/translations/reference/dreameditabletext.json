@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamEditableText.md",
-      "sourceHash": "e094b44d6503d692089249e2b6568dff0fc867a3f62b2ca4fa20dd0f7feb73d8",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "0041491efbc72ea6efb4ad59334bdd9729d994ebbe84cf2b9b2c6ce2c1559dbf"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "e094b44d6503",
+      "translationHash": "77baf562373d23b65fda4f3be56e1a7950d80b52d940eb24516f3c4143d30a45"
     }
   ],
   "translationFile": "content/docs/reference/dreameditabletext.md",
-  "translationHash": "f5a8cfc0749f67f36bf3bb65fc6d532d464acba5a92fab408d3400a39a72cb52"
+  "translationHash": "bba0643521b1e55abb8b7df303d1994d6dae450745ac270a506d7965c88afe86"
 }

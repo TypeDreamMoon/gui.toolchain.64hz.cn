@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamRingMenu.md",
-      "sourceHash": "72557bdcdbd7e66331613e11f4762ab6240fccbdcaa86e8bfa3a1a67cfabf3eb",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "07c7e607fd27d68f8e27a050238c274bf00d5f5d8cb2ee3f5baf072ed9ac388a"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "72557bdcdbd7",
+      "translationHash": "057d390ff423e63e6d6604d299f95dadbee2f4969352557ea81a5eff42231443"
     }
   ],
   "translationFile": "content/docs/reference/dreamringmenu.md",
-  "translationHash": "25555d2111cccb169b7d8cbcb6bcca519530904f237112c220b297c9d8b3be2d"
+  "translationHash": "4c5f4a3016f3a025ae7df13eed987374017249d9ca7153944f40159cfcf5d4a4"
 }

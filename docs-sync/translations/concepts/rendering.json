@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/concepts/rendering.md",
-      "sourceHash": "d123b2bea8e2cee0d607fe193ab5a16fe3b4cef26164290cd57f9b18fc80dd86",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "a375f382aa5b3ddaa0c55856008ea82d9dfedd287ca6e7e57a1049c213da8b73"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "d123b2bea8e2",
+      "translationHash": "9fe3f34518a759a9e82a0d3af5f3d61df46ee8d8154709059ce9519706f5a7d4"
     }
   ],
   "translationFile": "content/docs/concepts/rendering.md",
-  "translationHash": "b9eeac53ae652ae0e8dca5c7125f552ad4dc97d6f5506c8306c1b34fb8feea51"
+  "translationHash": "2b475c79e857c5d9e67b8e5640d86dd0d8f81237c03168cbed935dbb89ae84b8"
 }

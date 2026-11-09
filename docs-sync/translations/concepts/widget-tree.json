@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/concepts/widget-tree.md",
-      "sourceHash": "bd5acd01dd8e3802821c14c391c501346eec600f599b949bffe334dc0a769af2",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "e0ea5f2f595ea9944a065763789d4a03c80b95aab56dda1e99c119b457450b1a"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "bd5acd01dd8e",
+      "translationHash": "8005ba4e1d6b6d2891ebb138b9d5131426129b5d21011248abea288839039115"
     }
   ],
   "translationFile": "content/docs/concepts/widget-tree.md",
-  "translationHash": "d1303911c3b63c2a9b25d53d4786f9b1ce01a6dc076a937bf50825cf804d8a69"
+  "translationHash": "007efd8524bfce931f7b84372a44914a942991ab4e4875478b7ad75b4efd2bc8"
 }

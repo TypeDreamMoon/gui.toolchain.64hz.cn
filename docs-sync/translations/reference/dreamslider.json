@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamSlider.md",
-      "sourceHash": "ca7fc6f77626b01ce8823a40fa9aa20b6a15dae18dfdcf4b04bbea22854c0050",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "6bf49fe65de8e2ee44e5551666c30c2f3aa330bd3c2c4839ced8066ec39e5865"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "ca7fc6f77626",
+      "translationHash": "67df28e7d849edb7c385faaf26e6fe73d48694ba2f96f512a8a915ff1820e39c"
     }
   ],
   "translationFile": "content/docs/reference/dreamslider.md",

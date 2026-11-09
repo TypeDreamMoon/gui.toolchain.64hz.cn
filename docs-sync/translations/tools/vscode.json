@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/tools/vscode.md",
-      "sourceHash": "cc0fc74a1e194c1136a9ded5ef67881c1bc38773c6db4eb27fb3478e536097e7",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "19703ab545689cabba7f14fba035df9fb1242fa19b6df6db71ce08785d5f9332"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "cc0fc74a1e19",
+      "translationHash": "cf2fc61604b2331109f5e0bd914fa1c36b95240ae35cb01e74a3377f277c0515"
     }
   ],
   "translationFile": "content/docs/tools/vscode.md",
-  "translationHash": "8031ac84041ec57f5bc35925120a66a2214b1ec5bb926999461fa40ec508c2b7"
+  "translationHash": "fa2474e1dd134f36b318360e9a197d08558a9e735054ab1c4fe7e81e17785f8f"
 }

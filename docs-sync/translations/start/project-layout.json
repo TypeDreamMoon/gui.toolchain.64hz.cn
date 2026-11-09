@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/getting-started/project-layout.md",
-      "sourceHash": "a246599f62984473f4b29078684fd137f45f60ebedbdeea65cecfbe7d823e541",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "6332c17235368ee70001f1eaed3598d89514fbc6a07622955132042cf90726a2"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "a246599f6298",
+      "translationHash": "fdd31346b38b0061bf9c71b5666fc575a8cd0ec0b88942857e48436dad02466d"
     }
   ],
   "translationFile": "content/docs/start/project-layout.md",
-  "translationHash": "c95b605496302fba54faff47fee83d5b23a2d9e4132cca814541939b18dfc484"
+  "translationHash": "db929419201c54ea3cffe38fd5a12d637dffab65d695835899a2a40100aedf20"
 }

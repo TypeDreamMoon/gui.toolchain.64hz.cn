@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/concepts/lyrics.md",
-      "sourceHash": "056ca43342ab9a944c5b7b6d7af0fb3193f776aae60b0ad888435e27d6d6c988",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "8a11066ee532e65770028661c2fd188063be03f1d0b6e1c0701f1ae88a331af7"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "056ca43342ab",
+      "translationHash": "53beff78081f358f71baec093849fdb3075f227975593e49e6a72a642b817a77"
     }
   ],
   "translationFile": "content/docs/concepts/lyrics.md",
-  "translationHash": "8b677fdaccf7b5835b4da674a730d8e340de30bd3a0a50c593c8b7880fc54bc4"
+  "translationHash": "6b725e143f596f6d0722d5ff066a09d80c9cf245c145f9b82bc99542cdecbbda"
 }

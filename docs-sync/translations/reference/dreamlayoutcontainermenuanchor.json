@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamLayoutContainerMenuAnchor.md",
-      "sourceHash": "02654ade87c00730f2bd8266fb650b223db21391ed689694da14acee83d28c0c",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "1ac1a32b16bafd332e0f1d5040a841426e5594163b05b41e9023bc856ee35cba"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "02654ade87c0",
+      "translationHash": "cada94d4a10f227b6c9eb3e2320d6c88f3f9a252766520c75b9ed2855081c0d9"
     }
   ],
   "translationFile": "content/docs/reference/dreamlayoutcontainermenuanchor.md",

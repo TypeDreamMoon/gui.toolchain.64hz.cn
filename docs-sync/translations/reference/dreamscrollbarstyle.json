@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamScrollBarStyle.md",
-      "sourceHash": "31428d1796b028a347d028c7ba344b3e8a13804d93bdf4d3b165ba16b0d0cb79",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "1b9258a0ed07c2f1eeaf16378f4f2be6b491bd6a932ff2cd2331c8c54af97436"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "31428d1796b0",
+      "translationHash": "45aca0031dc72bfe820a1cc7b8356c6da887c286144971dd9304ad4f7fdff362"
     }
   ],
   "translationFile": "content/docs/reference/dreamscrollbarstyle.md",
-  "translationHash": "9a5fb651a8bbcc04ad46db9af590cde7eec4e2bbe945ae3e04767f5ee7ca66dd"
+  "translationHash": "d7d375731b742099f7ed5e500666e526b3520aa1fd2fc77c0f44f7ab10f874f9"
 }

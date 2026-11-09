@@ -11,8 +11,7 @@ description: "FDreamScrollBarStyle"
 
 滚动框：一个被裁剪的视口、在其中滑动的内容，以及旁边的滚动条。
 
-滚动条自身的外观是 FDreamScrollBarStyle —— 独立滚动条使用的同一个结构体，因此
-项目只需为滚动条设计一次样式，两者都会采用它。
+滚动条自身的外观是 FDreamScrollBarStyle —— 独立滚动条使用的同一个结构体，因此项目只需为滚动条设计一次样式，两者都会采用它。
 
 ## Properties [#properties]
 

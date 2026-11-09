@@ -6,8 +6,8 @@
   "sources": [
     {
       "path": "Docs/diagnostics/codes.md",
-      "sourceHash": "e92d9afab39ba64e75a20e50f7ca24b117970285fe164363fe98aa5e941dfe97",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "alignedRevision": "c4c440d0058d",
+      "alignedPage": "e92d9afab39b",
       "translationHash": "8475ff3202d1488d52615eb158b77becba508640647f9754dc25808536871baa"
     }
   ],

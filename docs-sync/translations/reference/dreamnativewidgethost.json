@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamNativeWidgetHost.md",
-      "sourceHash": "ee437c8a4e8f98153aba56e8a91db9dc7c424d7639ffb3712bb276f07e754405",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "ba3f39c61f0800a619bbc4e145fdbf1d706d9078e96b7ead0b77bd023f88c540"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "ee437c8a4e8f",
+      "translationHash": "edf218973d4d0972ecf28c6d42e7f6725511096169be431489d724d01e5d4f1f"
     }
   ],
   "translationFile": "content/docs/reference/dreamnativewidgethost.md",
-  "translationHash": "f0ecca0048e531d36555b30182623e593afa9a920ff87759f356b5059a4de795"
+  "translationHash": "29a3e2055056d47bcab97b3c46a1bf124ed4f34469b4c2408bbd9de919c0f468"
 }

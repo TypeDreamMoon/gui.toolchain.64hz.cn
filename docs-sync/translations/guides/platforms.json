@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/guides/platforms.md",
-      "sourceHash": "80afd05d8e7bc689f33423b40986826c00d67e28b8693a30a6d35a745f6dfa84",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "049122787b01edddd0b0f28e9d99a43019f09f2fe006d87af33e35677290a33f"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "80afd05d8e7b",
+      "translationHash": "e081fa60a58e16798bd4d58378a57cffaafc6a2f018e4aa9c0da6c3187536311"
     }
   ],
   "translationFile": "content/docs/guides/platforms.md",
-  "translationHash": "9724b3e87ecd5d40ba492c41f2ef165fbd00e2646237ab1060241507a3a2406d"
+  "translationHash": "48b2353c056e2ee7fda481464f797a8ba0429a5886322296ff0f754234a8788a"
 }

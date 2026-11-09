@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/language/write-back.md",
-      "sourceHash": "bcaf5e37334c679a72850f5f9f086bcb91625fa6d7df3c4e27425e13e21509e3",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "alignedRevision": "a25dbbe64733",
+      "alignedPage": "49b344e94d28",
       "translationHash": "50e4c025bd3618edc34637d41668f6721d1de4811732d95839b4de0d60bb52dd"
     }
   ],
   "translationFile": "content/docs/dui/write-back.md",
-  "translationHash": "a62395d88f5e5d071c842d07c5a73b17d18009d5043ec9259168a8b6da58a060"
+  "translationHash": "51730bdba382c03c8080b890e154f70fd585018616f1b5f30b06272d5abf02e9"
 }

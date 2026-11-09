@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamTextInputStyle.md",
-      "sourceHash": "3c5626a9164c6dcac06ce936f3c3cdcf3454abb810f1fb62f2893f53d82fa5ed",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "9ea2f97a8cc8ae50595b25c71bca9cc40af0c0360bd287664e9a5ae37e9cd3cb"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "3c5626a9164c",
+      "translationHash": "1f38a9592140645e34a3f2230521df941b3824c2eb45e12bf27cbdcd52b68041"
     }
   ],
   "translationFile": "content/docs/reference/dreamtextinputstyle.md",

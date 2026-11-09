@@ -11,9 +11,7 @@ description: "FDreamThrobberStyle"
 
 一个 throbber：N 个相同的碎片，在动画中，只表达“某事正在发生”。
 
-UMG 的两个控件只用一个控件和一种样式，这是本库已为进度条的
-Bar 和 Radial 以及滑块的 Direction 做出的取舍：碎片、周期和颜色都相同，
-唯一不同之处是碎片的放置位置。调色板仍提供两行。
+UMG 的两个控件只用一个控件和一种样式，这是本库已为进度条的 Bar 和 Radial 以及滑块的 Direction 做出的取舍：碎片、周期和颜色都相同，唯一不同之处是碎片的放置位置。调色板仍提供两行。
 
 ## 属性 [#properties]
 

@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamToggle.md",
-      "sourceHash": "9b4c67e7e229f3587c8591b786b399f2369144d7fcc6aa29ce39dfc936476e6f",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "9dd5dbc70dc0fd03e28f83f2fe302f094cbe422a37f1024944446ba4f88b297a"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "9b4c67e7e229",
+      "translationHash": "e8b759b93e43eb0e0cbfaf779ae9258442b997e6a2c15615ed43e0c7fd78c5a1"
     }
   ],
   "translationFile": "content/docs/reference/dreamtoggle.md",
-  "translationHash": "63bffd2407cee39310f510f7c0545aebc7ae7c2f90d63466454193b6b2797637"
+  "translationHash": "6f0a157ff3281c06155c0770c140dce815dc817a3633c2f466ce3bfc7d568477"
 }

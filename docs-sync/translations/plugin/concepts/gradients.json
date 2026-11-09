@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "status": "unreviewed",
+  "status": "outdated",
   "sourceHash": null,
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/concepts/gradients.md",
-      "alignedRevision": null,
-      "alignedPage": null,
+      "alignedRevision": "a25dbbe64733",
+      "alignedPage": "f97819653e69",
       "translationHash": "c0a7168cba7193df2ce3db4ba078b383efcf2b7082ac4542be839051a127a100"
     }
   ],

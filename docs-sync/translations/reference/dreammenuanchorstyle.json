@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamMenuAnchorStyle.md",
-      "sourceHash": "eeab9238acfc0c1b830abe709ebd05c788674c83b7575d603599e3300528759d",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "aed9b87eb9691f688c97f7841dcfe1c0a86465da90eae2537b3c65f82391ec49"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "eeab9238acfc",
+      "translationHash": "5cd91c04c82ce406860e8325698d32f81e58cd8aaf85f2a85faf5dd7cd6a401c"
     }
   ],
   "translationFile": "content/docs/reference/dreammenuanchorstyle.md",
-  "translationHash": "15fabdfe6c99acc2b5ee3405726454524bdc221615b1f7d787bf24976d9d9fd9"
+  "translationHash": "937511c430f964851fd08a59f5448782e134a09a2bc7aad9cb0f45493f266e70"
 }

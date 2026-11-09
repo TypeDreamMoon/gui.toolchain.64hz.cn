@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/concepts/canvas.md",
-      "sourceHash": "907e480a941288427b81135559d22ebed1c3113ec343f6ec0cc09f2da284c6f2",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "51edb7e6d5b6d61745491a6d1c3e088b5362be7a1b085af4e03dba46bfc57862"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "907e480a9412",
+      "translationHash": "9617ba4178532051cce0f379997b877085e7509df7442108983d00b563acc82d"
     }
   ],
   "translationFile": "content/docs/concepts/canvas.md",
-  "translationHash": "de301612dce35be76ee60681c03da64ef4a7eb4d555356cdbaf7fecb9e9a9bbc"
+  "translationHash": "ea4e3e6d4e1ac3b363d57f1aa0f2b99875861e9a79d0531cc70fb98637420a82"
 }

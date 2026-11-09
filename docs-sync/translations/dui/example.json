@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/language/example.md",
-      "sourceHash": "e62682e2e8af05ae2b47815e614ebc833a6c6b4132a06360b0e841f561ef4809",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "89a15a5b9d6a20a66e051b402f5444be2cf2c2c9cd06c49c82aaa382738865f2"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "e62682e2e8af",
+      "translationHash": "d680f4e534da85ce469e2cb2e35654f3ecdc365f50ef4f8a626a92b239a14658"
     }
   ],
   "translationFile": "content/docs/dui/example.md",
-  "translationHash": "a40868387b9b772ab0fd62d12d870034af0d393c91728ea3a7306131f0d7d2ae"
+  "translationHash": "455ca81263cab57caf06571f45def5a29e058f34dfab640ec9988f7ce80f362b"
 }

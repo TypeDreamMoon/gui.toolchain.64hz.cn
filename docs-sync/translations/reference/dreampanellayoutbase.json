@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamPanelLayoutBase.md",
-      "sourceHash": "3edef95a8d97170c8cd61ccbc141b2d4e34ccce134a1550da71da16b477980e2",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "f021197ae0ea85a8afe2598af8057be417a5de52fb53fd7d6eaefb31f9ca7aa1"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "3edef95a8d97",
+      "translationHash": "a799f1b02f7f33d2fed9518c8f802f922910858b48daa3dd9c560eff9b35097b"
     }
   ],
   "translationFile": "content/docs/reference/dreampanellayoutbase.md",

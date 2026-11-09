@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/guides/fonts-and-packaging.md",
-      "sourceHash": "dbb61899820ea9f3a497143b924fefa562b69192965a951a85818c840c9edcd0",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "58e27493321eee6c280f740c88d8ad4a58cfb6e682b394015407f1c102c7cad9"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "dbb61899820e",
+      "translationHash": "e2d9315f994aa1b37b355dbcbb67ec81384257e020a57ef57b484c3d214fbfdd"
     }
   ],
   "translationFile": "content/docs/guides/fonts-and-packaging.md",
-  "translationHash": "05d5bbbf2d5b855ff72b1334569b2b24cd13323bda90614f8eeaedb6f0cfb079"
+  "translationHash": "ce296946efa76c4d20452d305c845a71a588e86f90461ea35f3b2bcde6c24d5e"
 }

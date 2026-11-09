@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamScrollBoxStyle.md",
-      "sourceHash": "fc980c61051b30b5bd746049bdd6aa0f95bf2cb2db45913509d5c7f386e9d617",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "681f2d06a721a48a33612bf6173b3da66c45bd97ac9c5861b1364ba6802de005"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "fc980c61051b",
+      "translationHash": "db18a52fb69b06f342148b05aa63080112c87ed61eef90ee3f529add62c3dd37"
     }
   ],
   "translationFile": "content/docs/reference/dreamscrollboxstyle.md",

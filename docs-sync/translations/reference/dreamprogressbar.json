@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamProgressBar.md",
-      "sourceHash": "f02f32584cdbea7f423459aca469422d246cf5586aeb6a16087649c55aeacc32",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "d936e9b07db3679092c8863869a1a0fd948566819cd3fa37c80d4bc18ef69b02"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "f02f32584cdb",
+      "translationHash": "83d2aa3f4c2cddb1fd5871b9fe4f81ebe3d1b7b0db287d4328bf7db15700e751"
     }
   ],
   "translationFile": "content/docs/reference/dreamprogressbar.md",

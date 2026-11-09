@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/getting-started/first-screen.md",
-      "sourceHash": "c44b49179168db726f3164c742fac3c568747d58ce99b0beab62d44054ecfe2c",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "7c86509c7b9e086104ae3b6affabcf5f6c38de0923e06f0536e553fab9b1e672"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "c44b49179168",
+      "translationHash": "8a6e8187a4cba3ceb7ddbf5563a5b8e4bad66e2f7a399e026c40818902592779"
     }
   ],
   "translationFile": "content/docs/start/first-screen.md",

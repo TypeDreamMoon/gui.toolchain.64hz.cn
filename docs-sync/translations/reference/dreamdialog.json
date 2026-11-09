@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamDialog.md",
-      "sourceHash": "2e1eef5c9a0bd9ff84326dc0b76fb3c1a8490535188f5345a56f5ccc1e1fe42d",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "fdccad8976e0bc79a9d80eb1924d122435ed0cad9edb6eb99a89b3acbe39e736"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "2e1eef5c9a0b",
+      "translationHash": "21e9a7d437ca7165415d8ab753e17ff4db065ad19b44e41b213bdff92a8f90bc"
     }
   ],
   "translationFile": "content/docs/reference/dreamdialog.md",

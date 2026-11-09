@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/guides/upgrading.md",
-      "sourceHash": "9fb678105bd2c4e87b248546a1b282bce80db3b29ad03299149291720f0b5880",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "f0563407a68996cf10a45e0a0c3e7ac3176d433967e6ad26ca87fab78d375bbe"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "9fb678105bd2",
+      "translationHash": "e10d9146da13f3431c0cbc1a3a2601cd8a54207f46d601b711c9adb17d14af92"
     }
   ],
   "translationFile": "content/docs/guides/upgrading.md",
-  "translationHash": "1df7a8f5697e6224647a95afce6a4ce333a083a11150cdef788e43da79582b6c"
+  "translationHash": "bdc7c1e30e961c7297d9cc91c3885b93b120b7960a8a376c7266144720ac40ab"
 }

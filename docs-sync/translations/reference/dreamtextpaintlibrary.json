@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamTextPaintLibrary.md",
-      "sourceHash": "a114e40fd4932572522b162ad5e2a8614c28bb2d21a93f31f11ad12b658e3dc0",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "e4595f772546c09521af8fb34055ac31bfcd09948ecaf2aaf8c11ca864fd3192"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "a114e40fd493",
+      "translationHash": "460f44d0f134c4376946f92148face7e795f3440127ecbdcbd491075fa841041"
     }
   ],
   "translationFile": "content/docs/reference/dreamtextpaintlibrary.md",

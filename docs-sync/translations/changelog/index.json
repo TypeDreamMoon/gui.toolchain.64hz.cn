@@ -6,8 +6,8 @@
   "sources": [
     {
       "path": "Docs/changelog/index.md",
-      "sourceHash": "ac03d8b5ef9fd25954782732f4abe88bc8bb368e3aab97950330c8f93e4d2c88",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
+      "alignedRevision": "a25dbbe64733",
+      "alignedPage": "ee61c6af373f",
       "translationHash": "53691c55e2dd64d501d57bdffac0176e504d844a5cce36137d84dbbb622b17ed"
     }
   ],

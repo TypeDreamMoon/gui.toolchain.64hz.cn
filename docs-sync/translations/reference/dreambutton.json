@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamButton.md",
-      "sourceHash": "d505b4dd7ae01f806e80153b6699b09540d920d1075a6cadc25ae6337fca8b9c",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "ef1cc815a0c92dd93814eb5e48128343eee885cb6da89cb652e0cb2cd68399c3"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "d505b4dd7ae0",
+      "translationHash": "543d6ea588fb7b8fa8f81f411b337ac69bb969ce47f0758cea68df6d7aa60fa6"
     }
   ],
   "translationFile": "content/docs/reference/dreambutton.md",
-  "translationHash": "4b3a59424931ba688151fc276f4ae91055b584c6376c6a8cbd8f2acc2514d63c"
+  "translationHash": "127ecdb51d5293c92c9f8479b7e44c752ce58f436ae4c555fc3bb7c8b60feb5f"
 }

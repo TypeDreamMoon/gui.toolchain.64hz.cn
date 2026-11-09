@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamLayoutContainerStackBox.md",
-      "sourceHash": "511683f6a032cd71150ea9a4cf4375a53c31cffffccfeefda7c5206fb9cd9e29",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "838c2749125dcc106d398ff942b488484e394b47695aa26d201c98088a308a62"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "511683f6a032",
+      "translationHash": "a29b2eea997907357dacdb305305e6cf8827b77f2d74ca1a2a3e5f9446341ef4"
     }
   ],
   "translationFile": "content/docs/reference/dreamlayoutcontainerstackbox.md",
-  "translationHash": "2b3ee90f1402aa993d7a649744dd27d1a1327cc2e576c667a999e5fa4be81cfa"
+  "translationHash": "e52be44d004a92c7948d8a93627e7ef5f696c38b5202dbfce6fde66c333e2ac7"
 }

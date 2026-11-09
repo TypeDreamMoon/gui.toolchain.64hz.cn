@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/getting-started/about.md",
-      "sourceHash": "b2a7d056ebce9b5591e602824c1288e6d8935a13cba26a56dc98f40a5aad7915",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "bb400b2bdaf06a4e1092ca30fe70dc5a2d8caea961a4ea72f33186ebe49e4533"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "b2a7d056ebce",
+      "translationHash": "ce4186287457452523a324b73893679ce2137a9b968f76cf890123800ddaef0f"
     }
   ],
   "translationFile": "content/docs/start/about.md",
-  "translationHash": "919ba0756aa6bd32f29cd22985dd3dd7eb58485bdfa8adfa7d0122589bdf0d03"
+  "translationHash": "456da601a8c4959085af173c9383276c71a8b4707c38dcccbf33a6da67f79121"
 }

@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamLayoutContainerSafeZone.md",
-      "sourceHash": "6974f29c45f4be015cb0856a3aa866f805875a03491fe0717146ff276979159a",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "b973e7eb9ab4289d533b4897abe0a7e907cd891448d8673a3038ae59a471f7c6"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "6974f29c45f4",
+      "translationHash": "0430e059c3bc2d71e70dd2cb3cd554ad07556828e641c4d3f3bc35dadc045f9f"
     }
   ],
   "translationFile": "content/docs/reference/dreamlayoutcontainersafezone.md",

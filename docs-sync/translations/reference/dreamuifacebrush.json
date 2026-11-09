@@ -6,11 +6,11 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamUIFaceBrush.md",
-      "sourceHash": "e911a092616bbae891bd3d249c0c8ae70a1133c6d18f110b4541d388fae49af5",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "e011cceed0bdcabc3ee3944b82e512eb5106ec8da8a90b19d2a5f749e5da1c75"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "e911a092616b",
+      "translationHash": "1c0815b0cb99eb1f913e07a81f6f490b28ebe92f4b13448f33a5fb5380959390"
     }
   ],
   "translationFile": "content/docs/reference/dreamuifacebrush.md",
-  "translationHash": "bcf3e4941dfbcf19b3f89dbb5669c0ed9cd41b990f6d92544bb3ff4234adf41d"
+  "translationHash": "731a1ecc28f816c7537e01ff3de78d23fd68bd27974b3eebffe51e4b2c3438a8"
 }

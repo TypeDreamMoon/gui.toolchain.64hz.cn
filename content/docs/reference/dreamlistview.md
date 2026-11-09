@@ -13,12 +13,9 @@ description: "UDreamListView"
 
 一个层级结构由代码而非资产定义的列表：行由来源构建，处于可滚动的视口中。
 
-DreamGUI 风格下的 UMG ListView —— 并且刻意比它更小。没有需要实现的 entry-widget
-协议，也没有需要编写的数据源：设计师真正会去使用的两个属性（一组条目，以及选中哪一个）都是 UPROPERTY，因此 .dui、设计器、蓝图
-以及 `<->` 绑定都可以驱动它们，而无需任何人编写一行胶水代码。
+DreamGUI 风格下的 UMG ListView —— 并且刻意比它更小。没有需要实现的 entry-widget 协议，也没有需要编写的数据源：设计师真正会去使用的两个属性（一组条目，以及选中哪一个）都是 UPROPERTY，因此 .dui、设计器、蓝图以及 `<->` 绑定都可以驱动它们，而无需任何人编写一行胶水代码。
 
-关于树的形态、为何行是被放置而不是被排列、
-何时开始回收它们，以及 Native.List 如何与 `each` 语言特性并立，请参阅 UDreamListViewBase。
+关于树的形态、为何行是被放置而不是被排列、何时开始回收它们，以及 Native.List 如何与 `each` 语言特性并立，请参阅 UDreamListViewBase。
 
 ## 属性 [#properties]
 

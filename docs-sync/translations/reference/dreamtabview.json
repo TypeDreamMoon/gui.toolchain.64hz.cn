@@ -6,9 +6,9 @@
   "sources": [
     {
       "path": "Docs/Reference/DreamTabView.md",
-      "sourceHash": "3729cae7e17b2b571e6a20acc9b0dfc2272608c3144871ee0d7af2c06a3a268f",
-      "sourceRevision": "c4c440d0058d09df7ea097d0245d018307631407",
-      "translationHash": "c93ad1af68db7329750d9ca12b79582483f9a5425e0894e10e34588aa4313411"
+      "alignedRevision": "aa0301eb152c",
+      "alignedPage": "3729cae7e17b",
+      "translationHash": "aedfc56c5b19fbd58c49584a9ca4d0a5d13853882ba3c599c913b4360ae88034"
     }
   ],
   "translationFile": "content/docs/reference/dreamtabview.md",

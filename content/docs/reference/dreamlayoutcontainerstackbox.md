@@ -1,6 +1,6 @@
 ---
 title: "UDreamLayoutContainerStackBox"
-description: "UMG Stack Box"
+description: "UDreamLayoutContainerStackBox"
 ---
 
 # UDreamLayoutContainerStackBox [#udreamlayoutcontainerstackbox]

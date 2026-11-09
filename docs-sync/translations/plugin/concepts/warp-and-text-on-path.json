@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "sources": [
+    {
+      "path": "Docs/concepts/warp-and-text-on-path.md",
+      "alignedRevision": null,
+      "alignedPage": null,
+      "translationHash": "fe9aff1c8e389ccc789b7e6db9662544c66c385c6c47fc7e6d791c7018d5c02b"
+    }
+  ],
+  "translationFile": "content/docs/plugin/concepts/warp-and-text-on-path.md",
+  "translationHash": "ac175523eaddfe179ca879bc9b5e5c722a0930c4d8c6af7561d5d82981c0f561"
+}

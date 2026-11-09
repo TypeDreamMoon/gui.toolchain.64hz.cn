@@ -2,7 +2,7 @@
   "version": 2,
   "status": "current",
   "sourceHash": "a8882bc14bb2df3d028836b9c3c32805414d769041d106eaa56ce5c4b2f9ab1c",
-  "sourceRevision": "f407c46cad89d04557e1c80f272448ef5c13a38f",
+  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
   "sources": [
     {
       "path": "Docs/language/slots-and-components.md",

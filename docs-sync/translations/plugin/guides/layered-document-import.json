@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "sources": [
+    {
+      "path": "Docs/guides/layered-document-import.md",
+      "alignedRevision": null,
+      "alignedPage": null,
+      "translationHash": "a42c1927782617263fbc3fae80bcbf32e40b31625b0d05b49eb7dba75a4b2c48"
+    }
+  ],
+  "translationFile": "content/docs/plugin/guides/layered-document-import.md",
+  "translationHash": "218f71677faf4dfa66cf4e28e44455fcbc22828f773c483737bc6dd38ca96fac"
+}

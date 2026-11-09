@@ -7,7 +7,7 @@ description: "设计器是 .dui 的前端——一次编辑写进哪一行、手
 
 设计器是该文件的前端：在那里做的改动就是对文本的改动，写进保存该值的那一行——或者写进该节点其他行之后的新行——其余内容逐字节保持原样。
 
-**值。** 数字、字符串、元组、颜色、枚举和资产引用都写成语言读得回来的字面值。列表和 Set 写成 `[a, b]`，Map 写成 `{ 键: 值 }`，整个容器替换它那一行；Set 或 Map 只是顺序不同不算改动，真有改动时保留文件里原来的顺序、新条目加在后面。指向本层级另一个控件的引用（显式导航目标、开关的组）写成那个节点的 id；指向另一个文件组件内部的在这里没有 id，会被拒绝。
+**值。** 数字、字符串、元组、颜色、枚举和资产引用都写成语言读得回来的字面值。列表和 Set 写成 `[a, b]`，Map 写成 `{ 键: 值 }`，整个容器替换它那一行；Set 或 Map 只是顺序不同不算改动，真有改动时保留文件里原来的顺序、新条目加在后面。元素是没有简写的结构体时（图层样式的投影、调整图层的一项调整），写成它与结构体默认值不同的那些字段的带引号文本，和构建器读的一样：`Style.DropShadows = ["(Angle=45.000000,Distance=8.000000)"]`。指向本层级另一个控件的引用（显式导航目标、开关的组）写成那个节点的 id；指向另一个文件组件内部的在这里没有 id，会被拒绝。
 
 一次旋转——通过 2D 视图的旋转手柄、3D 视图的 gizmo 或细节面板完成——会写为欧拉角 `RelativeRotationEuler = (0, 0, 30)`：pitch、yaw 和 roll，单位为度；画布平面内的旋转就是 roll，正值表示顺时针。资产所保存的四元数没有拼写形式，也永远不会被写出。
 
@@ -56,4 +56,4 @@ description: "设计器是 .dui 的前端——一次编辑写进哪一行、手
 **每个文件只有一个文档，而不是每个编辑器窗口一个**。两个工具包为同一个文件持有各自独立的文档时，会有独立的文本和磁盘哈希：其中一个里的撤销在另一个看来可能像是外部编辑，导致这些窗口不断重新加载并覆盖彼此的状态。
 
 `FDreamUIDocumentRegistry` 通过把规范化后的绝对路径用作键来防止这种情况。注册表持有弱引用；调用方通过 `FDreamUIDocumentHandle` 保留文档，这是一个只可移动、不可复制的有作用域句柄。文档 API 和这一所有权契约声明于
-[`Source/DreamGUIEditor/Public/Text/DreamUIDocument.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/f407c46cad89d04557e1c80f272448ef5c13a38f/Source/DreamGUIEditor/Public/Text/DreamUIDocument.h)。
+[`Source/DreamGUIEditor/Public/Text/DreamUIDocument.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/Source/DreamGUIEditor/Public/Text/DreamUIDocument.h)。

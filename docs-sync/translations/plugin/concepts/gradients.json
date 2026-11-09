@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "sources": [
+    {
+      "path": "Docs/concepts/gradients.md",
+      "alignedRevision": null,
+      "alignedPage": null,
+      "translationHash": "c0a7168cba7193df2ce3db4ba078b383efcf2b7082ac4542be839051a127a100"
+    }
+  ],
+  "translationFile": "content/docs/plugin/concepts/gradients.md",
+  "translationHash": "c5e121d0e16d39c20e0429f99e568852f27188214d9679dec2884fe97bedd3ab"
+}

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "sources": [
+    {
+      "path": "Docs/concepts/blend-modes-and-groups.md",
+      "alignedRevision": null,
+      "alignedPage": null,
+      "translationHash": "7fba2d731b670152aae5472d1976beb828cc9bf0667b24e8fbfe47baac431998"
+    }
+  ],
+  "translationFile": "content/docs/plugin/concepts/blend-modes-and-groups.md",
+  "translationHash": "5bc6288d8afbc1db63a3f1eb397f00833d4d1381907a9b00c73576f163299cdc"
+}

@@ -11,8 +11,11 @@ holds the value -- or a new line after the node's others -- with everything else
 **Values.** Numbers, strings, tuples, colours, enums and asset references are written as the literals the language
 reads. A list or a set is written as `[a, b]` and a map as `{ key: value }`, the whole container replacing its line;
 a set or a map that only came back in another order is no change, and a changed one keeps the file's order with new
-entries after it. A reference to another widget of the hierarchy (an explicit navigation target, a toggle's group) is
-written as that node's bare id; one into another file's component has no id here and is refused.
+entries after it. An element that is a struct with no short form -- a layer style's drop shadow, an
+adjustment -- is the quoted text of its fields that differ from the struct's defaults, as the builder reads it:
+`Style.DropShadows = ["(Angle=45.000000,Distance=8.000000)"]`. A reference to another widget of the hierarchy (an
+explicit navigation target, a toggle's group) is written as that node's bare id; one into another file's component has
+no id here and is refused.
 
 A turn -- made with the 2D view's rotate handle, the 3D view's gizmo or the details panel -- is written as the euler,
 `RelativeRotationEuler = (0, 0, 30)`: pitch, yaw and roll in degrees, a turn in the canvas plane being the roll,
@@ -106,4 +109,4 @@ the windows to keep reloading and overwriting each other's state.
 `FDreamUIDocumentRegistry` prevents that by using the normalized absolute path as its key. The registry holds weak
 references; callers retain documents through `FDreamUIDocumentHandle`, a move-only, non-copyable scoped handle.
 The document API and this ownership contract are declared in
-[`Source/DreamGUIEditor/Public/Text/DreamUIDocument.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/f407c46cad89d04557e1c80f272448ef5c13a38f/Source/DreamGUIEditor/Public/Text/DreamUIDocument.h).
+[`Source/DreamGUIEditor/Public/Text/DreamUIDocument.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/Source/DreamGUIEditor/Public/Text/DreamUIDocument.h).

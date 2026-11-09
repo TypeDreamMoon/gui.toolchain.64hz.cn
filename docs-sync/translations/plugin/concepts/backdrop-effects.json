@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "sources": [
+    {
+      "path": "Docs/concepts/backdrop-effects.md",
+      "alignedRevision": null,
+      "alignedPage": null,
+      "translationHash": "d1c72dd4ae639ad88ed35058f7457576ead058d06a6b5725a933fe4dc132c7a5"
+    }
+  ],
+  "translationFile": "content/docs/plugin/concepts/backdrop-effects.md",
+  "translationHash": "d246dd1f58a4796460e4d4bbe70a79ecd94d0dfff48bc6ca7d2203c53096eaa2"
+}

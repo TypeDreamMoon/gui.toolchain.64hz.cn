@@ -1,30 +1,30 @@
 {
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
-  "revision": "f407c46cad89d04557e1c80f272448ef5c13a38f",
+  "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "workingTree": false,
-  "translationSnapshotHash": "70752f504e51c72b98c93c21bbfa02ae8534396f13d0afdde1a133cd022e5c0c",
+  "translationSnapshotHash": "b8400388caf7f888fafd058913a8fb190d2b79162f6f1ec06b0b047750bb1e2a",
   "pages": {
     "changelog/index": {
-      "hash": "e031de401376cdf51434e13f4f4627a30b9b3c9fd1c5e5f816a6cbc68da69967",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "b7d807b3036e20b823266d2ff9a67c25364f723d4ce82e4d8450061af3148ef9",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/changelog/index.en.md",
-      "outputHash": "edded1959a4e53ad0bdd728f38ad6d81722bdf60eb010f11ea1922681c2fb733",
+      "outputHash": "df900e73c1484f439f4bc45b93196ab8d10e40f512df2b82b68d6775b9526cd0",
       "locale": "en",
       "format": "md",
       "title": "Changelog",
       "sources": [
         {
           "path": "Docs/changelog/index.md",
-          "hash": "a9c87fc07740293ffad81c2ac68ec9d89aaab21e2ebf1e448c4405da4fba31fe"
+          "hash": "48f6a89a02c11139513e0ff362bdbf9d9ebc8b104e7fd06c294e076a2762bdd5"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/changelog/index.md",
         "record": "docs-sync/translations/changelog/index.json",
-        "outputHash": "55f860f91c4f7d0ff595cddc1a78f288444b6e7e5e82748ba2f8f3a9323181a0",
-        "bodyHash": "8b487bc47d039ceb5e16dfae1f203ec0041e70ea9fa0332b14269e1c00c028b0"
+        "outputHash": "4efabec740210017afa7e59841a9ea8a4c82fcba4eed7b0978adc541400c8c7c",
+        "bodyHash": "9e24c8a1c5f23c1fa9cd45125f46cf769b0da241e6a2e60246e747a8bf4c2ec0"
       }
     },
     "concepts/animation": {
@@ -138,25 +138,25 @@
       }
     },
     "concepts/mesh-modifiers": {
-      "hash": "bb645ceaf187e68af8a8bf1597e2a00df69b400c53a469e7c79e5fb1d42eeac4",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "12e4e4cbd1cf1f722341e2f27f7d248ce641394ef73b6965f05577e91af2748f",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/concepts/mesh-modifiers.en.md",
-      "outputHash": "f6de421a02cedd3206e66a8c2f2144dd1b737445cc9dbdf0a8f36c500e8786e7",
+      "outputHash": "2c259927d131c6bde7b846d47a11e52517c8ce22b84785cd2ba7810d83784144",
       "locale": "en",
       "format": "md",
       "title": "Mesh modifiers and text animation",
       "sources": [
         {
           "path": "Docs/concepts/mesh-modifiers.md",
-          "hash": "5df40a818f16281234bca25b4d55535132caecdadfbceeb3783fb7e84c8e1579"
+          "hash": "1f1c8500478d9a0b7ee88a93ede759038d12ea3b99b42fac540a0473adc8c1c2"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/concepts/mesh-modifiers.md",
         "record": "docs-sync/translations/concepts/mesh-modifiers.json",
-        "outputHash": "882f0e247c6543bc2aab3aab42b5bd6cdd1987afb2ddec2d98b36ae16c2b1403",
-        "bodyHash": "a075413debce6e46e16b826f4b79f4c1bb40c89274edef48c0e397e01a55e2a6"
+        "outputHash": "9d35f8dd7541d698c06c39161493a879ed841db8f73546a730ea7dec4ba561ee",
+        "bodyHash": "475fe128cf961058c1429fbc24177417b47e6b4fac0251f4c85706d991d3db23"
       }
     },
     "concepts/rendering": {
@@ -182,47 +182,47 @@
       }
     },
     "concepts/sprites-and-meshes": {
-      "hash": "bee05aaf9b4962b5d45696f0e19c18829736605549744d3b011f9950247ce1c2",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "d35297b9295ed66dd5e8e3e6c58886eaa1b0bbfbd0a4494303521fa6fd674861",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/concepts/sprites-and-meshes.en.md",
-      "outputHash": "8cdbf9a5e09e9d46dcc40e0200b7d84701f21695133b5404df8da037befefd29",
+      "outputHash": "5a42c9d12f5f913505e24ffe7ac89de0e4e3b6d92e368b4a001ea8abaf361ffa",
       "locale": "en",
       "format": "md",
       "title": "Custom meshes, sprites and atlases",
       "sources": [
         {
           "path": "Docs/concepts/sprites-and-meshes.md",
-          "hash": "7e00a702ed5fea8d8a297dd1ffc70c04d31829173a432fd4af75b7fe894e6746"
+          "hash": "abdfda660476524714432c44b49a1029e383f5a9a9b0bba7e8c656bc2764447c"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/concepts/sprites-and-meshes.md",
         "record": "docs-sync/translations/concepts/sprites-and-meshes.json",
-        "outputHash": "462d8194f11b9055259b5d45aadf8e72eb2aff5282cf7a82e96434bdf1d696dd",
-        "bodyHash": "be2101cb00ea767fe39bf0c4cbbb23022326c7b8db21cc66d6765485613b03b2"
+        "outputHash": "2bacaaf8be589d4f2deb866f5157db6a5944dcd0f03bfc8129efcce67806aa89",
+        "bodyHash": "e4445b0365323c0d84073b6952a4893f189d83f00d0650da56d2d5a1f3d9d386"
       }
     },
     "concepts/text": {
-      "hash": "00ae1258b32e7ed9c0d7e2903be6d73f787c7e34a77b0e9d45b73790dbb61172",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "45220cccff1e5f2361ba9ceeee3af0907a2150632fc996c47a5ab896dec3cb48",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/concepts/text.en.md",
-      "outputHash": "d5fb02141cc9ee90ec52ddfd4b18b71ef166ad2d5d0cb32a7d871571afb605ac",
+      "outputHash": "7ee86cb52d488ce82a8973b7562644fb4ec6cfa556a0e6f24ef175707476b63f",
       "locale": "en",
       "format": "md",
       "title": "Text",
       "sources": [
         {
           "path": "Docs/concepts/text.md",
-          "hash": "100aaf6406010d52b2694dc97c6827dc6ec5afa321eb087100aadd3d948b6e79"
+          "hash": "85b10d0cb4209c48c7072c8bf709b79c3293051b82f4ea2172007dc139eb04ad"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/concepts/text.md",
         "record": "docs-sync/translations/concepts/text.json",
-        "outputHash": "1b05360c337ce171f8ffa9f77e205e3d588568faa2186a7750f665cd2c36c28f",
-        "bodyHash": "c2caa156dd5b5c0a7e529769ca16c1c5b885811c57ee98d0899898642dee0f62"
+        "outputHash": "bc1dedb3a451270cc66f93b95aa9a6d1f11c63dae67ed86721d0f023d5f1e297",
+        "bodyHash": "99681f948b0bee35d6daf47e5b19f2d50ffcdedcd91d74efac4f1c8a250e9ac3"
       }
     },
     "concepts/widget-blueprints": {
@@ -270,25 +270,25 @@
       }
     },
     "concepts/widgets": {
-      "hash": "1312eab7b7ff5802914d332c852e25183e88fd97d1314b52c0146f1df62e09d6",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "2d2f866901f10cad1b59f65c6002d80e6375ec715a8d5e4c024a3f8ec38b24f9",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/concepts/widgets.en.md",
-      "outputHash": "6e72c43578f52c7b3d130a70d65bb2fb69efd4e69f7e5f9417d15ed6111fefbb",
+      "outputHash": "c449e1879b3ee2d6ae836622994c82f5f64ec117cd5fdf246b1e8f547aef8ad0",
       "locale": "en",
       "format": "md",
       "title": "The widget model",
       "sources": [
         {
           "path": "Docs/concepts/widgets.md",
-          "hash": "43205427c44b0a684b3d33a6f4b0d2c5ebc6a0121ce9ce086b2d84c8146cc39a"
+          "hash": "760e1ffdee13259bb7b8ca5d31e5b5e84162106bd211d33b048f114b95476528"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/concepts/widgets.md",
         "record": "docs-sync/translations/concepts/widgets.json",
-        "outputHash": "45669e038542b22bad2cf1821ddd624bffda692a765c5c955bde7baaf7d74c55",
-        "bodyHash": "1337bc61c5ac393d6286c960ac8846bbe7c2d295fea7b604b2a7cf4075899428"
+        "outputHash": "d476f4eac50495faafa0ba1d5885577b1b26a8739f1a484d64e275ef72e63032",
+        "bodyHash": "cfb757086bf9065d7a06e25381b5af5eb43c356658c5a79f746d5d9e896fa3fe"
       }
     },
     "concepts/world-space": {
@@ -587,8 +587,8 @@
         "status": "current",
         "output": "content/docs/dui/bindings.md",
         "record": "docs-sync/translations/dui/bindings.json",
-        "outputHash": "2acafdd7e959cc7d96a7142fa720ab6d07a8005b69d9421f7b1b695063a76e88",
-        "bodyHash": "724d51ec676311b189590113c9c849dd06b0c313a2f1cdd112348bd4e1878b35"
+        "outputHash": "5cb39b1b24ddea6bd7a9a0008285aaa1e117b1b8481289072964db35b877d4f1",
+        "bodyHash": "bdc5a7cd58840d94180d553e82d39bb9b9f1ea09289b2b0c7efb32e8533f5cd2"
       }
     },
     "dui/components": {
@@ -658,25 +658,25 @@
       }
     },
     "dui/nodes-and-values": {
-      "hash": "80310d582ebb4e2a052bc62844399b9a6f592fea050781a7f396bd39d65b2ead",
-      "revision": "f407c46cad89d04557e1c80f272448ef5c13a38f",
+      "hash": "89f49161aca7c8cac2d572df69d4d32cf6b4f963e24d8643278f5405075d7bd7",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/dui/nodes-and-values.en.md",
-      "outputHash": "21782ba05b6959af9317237ccbf3abd20d1880549553f06e9c1e0d58a5c00190",
+      "outputHash": "47015ded56cf5f002374937a6226c610f7aea7291d0f2108cf6aa9df07bcc655",
       "locale": "en",
       "format": "md",
       "title": "Nodes and values",
       "sources": [
         {
           "path": "Docs/language/nodes-and-values.md",
-          "hash": "595ff594f5c92627bf0ad437ce54409257e86cc57c435c175d2a2f92f0f9d762"
+          "hash": "92c2c91cb2e81f1dda3bc6a7af5ffc22394e785021aa691a8b1e09ed41ad570b"
         }
       ],
       "translation": {
         "status": "outdated",
         "output": "content/docs/dui/nodes-and-values.md",
         "record": "docs-sync/translations/dui/nodes-and-values.json",
-        "outputHash": "4b930a4e45a69562e923b5449aca3e586fa729aaaa1a29ab4c089d950d5bbef8",
-        "bodyHash": "a235038f22ebfc2937e096fab902143c569828045770b726356de1c5b32592a5"
+        "outputHash": "5b3b235e6c52eaacff4b8764b1b7b26a3bfaf4fc5b65e811228d6ae93e6e8714",
+        "bodyHash": "e69e19b1d19a6dec8b24005c5627a9a76a61165a0575ee32fc54431100bdba32"
       }
     },
     "dui/overview": {
@@ -834,25 +834,25 @@
       }
     },
     "dui/write-back": {
-      "hash": "0598bf509c5504b5d6e54062ade6d0cd899acb93e21222f3fed15e27997bd7ee",
-      "revision": "f407c46cad89d04557e1c80f272448ef5c13a38f",
+      "hash": "2085e9d1b7edaa5c8b6c291f6c3bb0f3a0de56d8bf1e455df284519cf72a06d0",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/dui/write-back.en.md",
-      "outputHash": "99a4c43397c712f90a52b3869326924cb416f83155d3fee82560854d5e2e7ab1",
+      "outputHash": "741214ab734bd0adf322eeddf1f8fbc2970dcb686e09f44e073c45d85016b366",
       "locale": "en",
       "format": "md",
       "title": "Designer write-back",
       "sources": [
         {
           "path": "Docs/language/write-back.md",
-          "hash": "c37521411ff82952389eec6c6761670c436a51489e58b046f7c745b865b7875d"
+          "hash": "119bc7d05bd083e02ad7e5ea450594764ce429f55180c89d220640fa12041a89"
         }
       ],
       "translation": {
         "status": "outdated",
         "output": "content/docs/dui/write-back.md",
         "record": "docs-sync/translations/dui/write-back.json",
-        "outputHash": "47dca01e1e78e4630d4d17b5f3818b97f671be6f2525703a602cac0ec75a3ef9",
-        "bodyHash": "37396ff7313d1b6350388d8019a1d65975ae5e2bd98edf7678bb1699d17085e7"
+        "outputHash": "a62395d88f5e5d071c842d07c5a73b17d18009d5043ec9259168a8b6da58a060",
+        "bodyHash": "17a27f086e08718679768943dd9905dd982ef2c36502968303ffb36b17153944"
       }
     },
     "guides/fonts-and-packaging": {
@@ -878,25 +878,25 @@
       }
     },
     "guides/migration": {
-      "hash": "34f100d2cb65c7a5312518c4ce057d1e2e7ae4eaf9aff2c2d1358ccb94db2991",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "836989bb474cc8b89e391096a33cadf8425a3c017e0831abaff4ddfdf722ccf6",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/guides/migration.en.md",
-      "outputHash": "6d4d3a0c5c7ebc32d39dd088d766dd23b75346c29f8ea63f90281747aa3cca5c",
+      "outputHash": "a3a1cd049bea9c1f29f5c1d5608a3fc835d8ae68932054b7741acf0338b08431",
       "locale": "en",
       "format": "md",
       "title": "Migrating from LGUI, LexUI or early builds",
       "sources": [
         {
           "path": "Docs/guides/migration.md",
-          "hash": "802b6cde2e7c195bdde4170ecb6b73f7720a2fcc0174e578898dcb85eb58e761"
+          "hash": "47cfc3013bdd2f22706f246b2a7b03caff8f7ac215648de5d299cabcaae0ccf3"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/guides/migration.md",
         "record": "docs-sync/translations/guides/migration.json",
-        "outputHash": "8be8b9a426e838fc2382a5ed3b98f193ed89981a182cbe4e9317e12f010fded7",
-        "bodyHash": "11d24c0af55ceb3f3b3724d4d675aaeedfcd5454514bb7f29613213df985968b"
+        "outputHash": "d4b53077ad960459e5bc7799e0e9ff4abd7ff5f3238ec64a9192a438a2b3e878",
+        "bodyHash": "796439610f83cfe57689058361f2afcb72cab0adec04399cf16dd3646126140d"
       }
     },
     "guides/platforms": {
@@ -944,25 +944,25 @@
       }
     },
     "index": {
-      "hash": "8d23a3a70414353162032a9379880b65f6fe176d813243bcf41b88edc7b2194e",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "57cc23632cdc6221d02fc0ba9eb8d26ac40ef7cf69c78f8fdb3b6ec5cd4f0d32",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/index.en.md",
-      "outputHash": "c7c99a2412d2da063013a27e5e1d168388844290d8b7e3bdebefb3b99c8bddfa",
+      "outputHash": "d33c25d977746d1f8b341cba4f5af4274d0ed41353d200d7a7092ab6d1ea3994",
       "locale": "en",
       "format": "md",
       "title": "Overview",
       "sources": [
         {
           "path": "Docs/index.md",
-          "hash": "f77900bdda8b3033b7d1b3eec50b96eaab740d4ac950a642971f93545c070162"
+          "hash": "caa67392caa6c154fc5e6d6601302fde702c149db0ca0e86668f647a1577d75c"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/index.md",
         "record": "docs-sync/translations/index.json",
-        "outputHash": "d2fd16d4cba1f40471fe53b879410d724b0a03db6166dd3fa911abe5a072e421",
-        "bodyHash": "2b0fcc79b3805b4d4550eb26076387dbb4e921f7964b8aeeb3aa09505683f998"
+        "outputHash": "515ac32b69c7da5a198f6f70b7cb5329760fb0de8d5121c25daf6ce31ddbe06a",
+        "bodyHash": "0901eeaf2e2f44ad1a8e517ae8e49ed3b96dc023652cda88d971392dd567f3d0"
       }
     },
     "reference/dreamborder": {
@@ -2748,21 +2748,21 @@
       }
     },
     "reference/dreamwidget": {
-      "hash": "d25c321261f42f252716471115fec1f47ff0a5c431c817ffcee920cf0f67d079",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "01c636ba3bd54f5a159cca249c35bfc205688ea789c83873befe5e2885df7d3c",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/reference/dreamwidget.en.md",
-      "outputHash": "e86e186350c42f31ab7c61ad12b5e403ff901da097dad136ffecdeb0463cfd2a",
+      "outputHash": "18833381e455f35c3197b80baddff3ccdcf29c6ead1bc303aa7eb9dbc9a6818a",
       "locale": "en",
       "format": "md",
       "title": "UDreamWidget",
       "sources": [
         {
           "path": "Docs/Reference/DreamWidget.md",
-          "hash": "a4f38b0101904c419a5657564d263417b6d50eac63ec294416a41478d83b63a3"
+          "hash": "56477e0579707c68df5f9fa6fcba2a5cdde5ede93ad6ad4554d46d499a8ef32d"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/reference/dreamwidget.md",
         "record": "docs-sync/translations/reference/dreamwidget.json",
         "outputHash": "c93875e0d4b0559909cdf9191dca30676ef4c86b8f12df147803d659789d6dc8",
@@ -2946,25 +2946,25 @@
       }
     },
     "tools/designer": {
-      "hash": "4f78de43fa3699ed63362c06ff53adfe17f37662120ebb0af23d952b34f429dc",
-      "revision": "f407c46cad89d04557e1c80f272448ef5c13a38f",
+      "hash": "50290bbfecb8f3e4a9e963c727c71c377be68383b8b68e51a6482486fa145554",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
       "output": "content/docs/tools/designer.en.md",
-      "outputHash": "a61f8351645fde23b606fdea13630220c253ccfd5c4c11fb1027bd008ef1ce29",
+      "outputHash": "37f432ec966ca68a6f451e0d7c8156154c533d23497428e3fb36356e1d17bc32",
       "locale": "en",
       "format": "md",
       "title": "The widget designer",
       "sources": [
         {
           "path": "Docs/tools/designer.md",
-          "hash": "fa04c42e95e63ff5982e34015e7ebe1e89ae3540f77fb98a108970b0e6d1e5c2"
+          "hash": "b5b7e7a415f0edf4e715f471f0abe2afe3de058724447e4d06f99e06eb343f8b"
         }
       ],
       "translation": {
         "status": "outdated",
         "output": "content/docs/tools/designer.md",
         "record": "docs-sync/translations/tools/designer.json",
-        "outputHash": "732df68428f6f6c7b9278fdc40dc2904ba3199f2c8790df1dc8cd257ab559c69",
-        "bodyHash": "d1d28638eebdcb530ed247799fb7e39ec497bd10d668ab14bdb2bf43f8a8169c"
+        "outputHash": "54e756700fa42d345a1beb0bac6e3726489e10c1d40adf150089377c006c65be",
+        "bodyHash": "715af198f2ed0004b021adde24248dcc23e4403fd95b46178fc6747c8ef89d14"
       }
     },
     "tools/scripting": {
@@ -3051,8 +3051,228 @@
         "status": "current",
         "output": "content/docs/plugin/duilanguage.md",
         "record": "docs-sync/translations/plugin/duilanguage.json",
-        "outputHash": "74c1e743b3a408eb776eebe97555d1a425acf2e9b8985df72e09dae21a70a8e2",
-        "bodyHash": "e4bf7fa1386115e624e42ac442813b1672cae69fb0bdd2a5b84c115946ed46a6"
+        "outputHash": "4a1732046fb3e49275926a646b539c3f42baea71b1da4231c91072d0dcee1f32",
+        "bodyHash": "5c0d1a4f3714732ea2638ce6ca1421eab0ec9ff1a1fc79f1dcb540c411b316d0"
+      }
+    },
+    "plugin/concepts/backdrop-effects": {
+      "hash": "ed1a9de71f7446b7da7f0ea6ea3b18840c7ddf9b4ec7cc127e71795928889ed9",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/concepts/backdrop-effects.en.md",
+      "outputHash": "fee604c4328cdd33c4460bf8168056806f2df2e8767a86741f1c8ae22668932d",
+      "locale": "en",
+      "format": "md",
+      "title": "Effects on what is behind",
+      "sources": [
+        {
+          "path": "Docs/concepts/backdrop-effects.md",
+          "hash": "8c3d0114621c8267c9d3b44b71a9fd281e7b58dcbd71d1bec0a1a884be29a699"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/concepts/backdrop-effects.md",
+        "record": "docs-sync/translations/plugin/concepts/backdrop-effects.json",
+        "outputHash": "d246dd1f58a4796460e4d4bbe70a79ecd94d0dfff48bc6ca7d2203c53096eaa2",
+        "bodyHash": "53025cddd153618c72d15707b34d8258590897db9bf5697168dd964b9b572436"
+      }
+    },
+    "plugin/concepts/blend-modes-and-groups": {
+      "hash": "d9ad1a8f9f8e9098a28332cd4f6c04c4b134baaa6d064f2a62d5954656f3b933",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/concepts/blend-modes-and-groups.en.md",
+      "outputHash": "8c0d1a0749ccfb4cc330d26caf90d859fdbcc66106a36136073386c2438302a5",
+      "locale": "en",
+      "format": "md",
+      "title": "Blend modes and layer groups",
+      "sources": [
+        {
+          "path": "Docs/concepts/blend-modes-and-groups.md",
+          "hash": "f8fb5a72cc574cd95a1d383df622db9c90f4e559d420e89febb8850bfda76fe5"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/concepts/blend-modes-and-groups.md",
+        "record": "docs-sync/translations/plugin/concepts/blend-modes-and-groups.json",
+        "outputHash": "5bc6288d8afbc1db63a3f1eb397f00833d4d1381907a9b00c73576f163299cdc",
+        "bodyHash": "ec140ec27cf9656330e608d95dff74b96e736085562420137bc5cf163741d892"
+      }
+    },
+    "plugin/concepts/clip-masks": {
+      "hash": "eacbb4d80b4f7ca6ba17eddd16c6a3a7c1d6bed0a991fdec38d55a7e4310c1f5",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/concepts/clip-masks.en.md",
+      "outputHash": "2cdcdbfefb082c3cddd48db82dbd65dc0973949f34b62120761568e055f5aed5",
+      "locale": "en",
+      "format": "md",
+      "title": "Clip masks and clipping to the layer below",
+      "sources": [
+        {
+          "path": "Docs/concepts/clip-masks.md",
+          "hash": "e006f7c9ce0701255ae0a66042a23c6066a009c340ada88b18ef020378d0c73f"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/concepts/clip-masks.md",
+        "record": "docs-sync/translations/plugin/concepts/clip-masks.json",
+        "outputHash": "8c7acafce9d4d2f3a8deb99fc32d0566882623abc862e387ef344375d302c2da",
+        "bodyHash": "774a498742a68f657d3e3d4a34f8d9d2cf52a3a7ca7fcbfa59b0967a8e539d11"
+      }
+    },
+    "plugin/concepts/gradients": {
+      "hash": "116f26eda3173de1725fe5738783565b69bfed818c034b4bf5187bbf40b45529",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/concepts/gradients.en.md",
+      "outputHash": "150991396b5d0db2f41a67d79281bfa7ed0fa27682a4e332c748990a23e88aeb",
+      "locale": "en",
+      "format": "md",
+      "title": "Gradients and viewport handles",
+      "sources": [
+        {
+          "path": "Docs/concepts/gradients.md",
+          "hash": "048679e99f2c58db8182653b1f5e673eabdbb9a8a0718e7bfab519e4c38c565f"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/concepts/gradients.md",
+        "record": "docs-sync/translations/plugin/concepts/gradients.json",
+        "outputHash": "c5e121d0e16d39c20e0429f99e568852f27188214d9679dec2884fe97bedd3ab",
+        "bodyHash": "8a4606e261fa149c314b22e9ea3354d215884ceb9f55b03de5cbe7f3ef2b0f6c"
+      }
+    },
+    "plugin/concepts/layer-styles": {
+      "hash": "4a9699ed239461926b3d2e59aafe671bbf1c04084e92d159d89ec0f3998255b5",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/concepts/layer-styles.en.md",
+      "outputHash": "36f05d871191201f51ce0b2f5f4d1039783f3162a6b24f655d2cc2d3b819079a",
+      "locale": "en",
+      "format": "md",
+      "title": "Layer styles, shape blends and light",
+      "sources": [
+        {
+          "path": "Docs/concepts/layer-styles.md",
+          "hash": "d2671369c449aa5eee2340cb9e208b8feba309861f9d13201f29ac70f246b300"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/concepts/layer-styles.md",
+        "record": "docs-sync/translations/plugin/concepts/layer-styles.json",
+        "outputHash": "a737e149e57513560514f1b5f2999cfc282fc891f6ccff9c7f826eb4ae581df1",
+        "bodyHash": "80393766fff21a4d7e3fb1c8aa6d180baaffcc194a1a2fabb4e9e8c73940996e"
+      }
+    },
+    "plugin/concepts/mask-transitions": {
+      "hash": "e5c694876980456a9e5c982471304adbecae3869dd6f0e23d8d8ce932550c499",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/concepts/mask-transitions.en.md",
+      "outputHash": "6f526da830635cf8a5a9872cc509558230429e28db36f3d1a7a2c5517d6525f1",
+      "locale": "en",
+      "format": "md",
+      "title": "Mask transitions",
+      "sources": [
+        {
+          "path": "Docs/concepts/mask-transitions.md",
+          "hash": "7a712e75de2891dc104c182a2c33bd2e9cc9bb4c78b9939132d90d4d95d1d41e"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/concepts/mask-transitions.md",
+        "record": "docs-sync/translations/plugin/concepts/mask-transitions.json",
+        "outputHash": "6aff6349e4e0ce3bd88fcd4148aa2d28e4c1380d65249d59ac31373f2f1d3cf6",
+        "bodyHash": "e4da99dcc5bf56bbca713f8634293acf0347e86ce97ae1e43e4bb0e1b5a8bb31"
+      }
+    },
+    "plugin/concepts/niagara": {
+      "hash": "b39193d00f6762d365f07fe26ffe27b609b3bf272da392f8dfc02752930cfe93",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/concepts/niagara.en.md",
+      "outputHash": "f52ba01a2a64baddbadaa015e685f0c4d9d4988975e44b29acbd39096a1e1467",
+      "locale": "en",
+      "format": "md",
+      "title": "Niagara particles",
+      "sources": [
+        {
+          "path": "Docs/concepts/niagara.md",
+          "hash": "e547bc434ecc2202599559dda34acd4f426527e6839006a278a403e43a7aef35"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/concepts/niagara.md",
+        "record": "docs-sync/translations/plugin/concepts/niagara.json",
+        "outputHash": "c3d7a721319ccb526494e3a2b62965d0bb69cd07f466ae6d5993b6e5b8daaeab",
+        "bodyHash": "54ac862ce1a4e1793260a992351f2ba335ca3a43c46da0138c4afba00860576f"
+      }
+    },
+    "plugin/concepts/warp-and-text-on-path": {
+      "hash": "cf842fe7361a9e5b86e975e11d22ca3a392554366f5f2a9f4607afecb2420205",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/concepts/warp-and-text-on-path.en.md",
+      "outputHash": "4effde6bab92f5d4a680fd208592436673ffe93097987b8b8b8286698bccd2ad",
+      "locale": "en",
+      "format": "md",
+      "title": "Warps, jellies and text on a path",
+      "sources": [
+        {
+          "path": "Docs/concepts/warp-and-text-on-path.md",
+          "hash": "0a2a7476a03e7374e3b610115ab53808f8ec6cd2e88d7669c12e804faff0f6ca"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/concepts/warp-and-text-on-path.md",
+        "record": "docs-sync/translations/plugin/concepts/warp-and-text-on-path.json",
+        "outputHash": "ac175523eaddfe179ca879bc9b5e5c722a0930c4d8c6af7561d5d82981c0f561",
+        "bodyHash": "3444b5bebec29f9ea0a6587b81a06ae39aac2c77e635cd5c7eafd82a9a47a2d4"
+      }
+    },
+    "plugin/guides/layered-document-import": {
+      "hash": "32213350a54708177607bde1c8ad7d994ed5af443831a052573280d62ecf2c7b",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/guides/layered-document-import.en.md",
+      "outputHash": "efb9275335d90cfc0ddef8209e0746f49ee1d267a2ae9c3e610ad6bc889481ff",
+      "locale": "en",
+      "format": "md",
+      "title": "Importing layered documents",
+      "sources": [
+        {
+          "path": "Docs/guides/layered-document-import.md",
+          "hash": "f1723aeb9a1cda34054713befbfff40b9c332f512bcb909bcd1fe923832dee3d"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/guides/layered-document-import.md",
+        "record": "docs-sync/translations/plugin/guides/layered-document-import.json",
+        "outputHash": "218f71677faf4dfa66cf4e28e44455fcbc22828f773c483737bc6dd38ca96fac",
+        "bodyHash": "06a72252cd3d3ba344ea776bdc676d7b504f1d213cbdb095f40dad85872e837d"
+      }
+    },
+    "plugin/guides/property-meta": {
+      "hash": "a9b83be1e43fb1b2f28b16d1284ec620fc469c3556b24775aaed48cb6c9b0c3c",
+      "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+      "output": "content/docs/plugin/guides/property-meta.en.md",
+      "outputHash": "2294ab330a495baf487aa28f1f5addd87a9f7094ab7335807a6e33dd2cb90cf9",
+      "locale": "en",
+      "format": "md",
+      "title": "Property meta tags",
+      "sources": [
+        {
+          "path": "Docs/guides/property-meta.md",
+          "hash": "7ba6941325072bfca3c12b22f23546fd9ffb514d897fc555137fa5d03d092428"
+        }
+      ],
+      "translation": {
+        "status": "unreviewed",
+        "output": "content/docs/plugin/guides/property-meta.md",
+        "record": "docs-sync/translations/plugin/guides/property-meta.json",
+        "outputHash": "b6b03054e5a4411c166da40d053440e8982d3a3817d7b394992218cbfbc6a0ad",
+        "bodyHash": "612366f4064f087b3d03d843dfcc7d8a16be58c2a632f1d0db30a1bd9e5d20bd"
       }
     }
   }

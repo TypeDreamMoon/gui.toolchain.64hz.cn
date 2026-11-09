@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "sources": [
+    {
+      "path": "Docs/guides/property-meta.md",
+      "alignedRevision": null,
+      "alignedPage": null,
+      "translationHash": "c03b17f879ec35f72b2fc85f12992100180bcae7eb2a92cf05d68319dd2a03c6"
+    }
+  ],
+  "translationFile": "content/docs/plugin/guides/property-meta.md",
+  "translationHash": "b6b03054e5a4411c166da40d053440e8982d3a3817d7b394992218cbfbc6a0ad"
+}

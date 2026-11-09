@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "sources": [
+    {
+      "path": "Docs/concepts/layer-styles.md",
+      "alignedRevision": null,
+      "alignedPage": null,
+      "translationHash": "32c4872530451adeb0dbb51f8aae70564fb8101bdb13c47de28e0a9ef6689048"
+    }
+  ],
+  "translationFile": "content/docs/plugin/concepts/layer-styles.md",
+  "translationHash": "a737e149e57513560514f1b5f2999cfc282fc891f6ccff9c7f826eb4ae581df1"
+}

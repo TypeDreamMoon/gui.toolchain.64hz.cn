@@ -2,7 +2,7 @@
   "version": 2,
   "status": "current",
   "sourceHash": "2d45b469285e838b9ee0f1b189dd15c78303433eedd90d71308c51eaf20387bb",
-  "sourceRevision": "f407c46cad89d04557e1c80f272448ef5c13a38f",
+  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
   "sources": [
     {
       "path": "Docs/Reference/DreamTextInputStyle.md",

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "unreviewed",
+  "sourceHash": null,
+  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "sources": [
+    {
+      "path": "Docs/concepts/mask-transitions.md",
+      "alignedRevision": null,
+      "alignedPage": null,
+      "translationHash": "467abfb6f776bb158fb55aacc5589469fb52264406037bb2e74b6b9b259ecda7"
+    }
+  ],
+  "translationFile": "content/docs/plugin/concepts/mask-transitions.md",
+  "translationHash": "6aff6349e4e0ce3bd88fcd4148aa2d28e4c1380d65249d59ac31373f2f1d3cf6"
+}

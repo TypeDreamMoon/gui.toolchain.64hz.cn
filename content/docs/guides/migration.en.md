@@ -6,7 +6,7 @@ description: "Moving assets saved against LGUI / LexUI, a project on the early s
 # Moving a project to DreamGUI 1.0
 
 1.0.0 is the first public release. The fork's development builds before it were numbered 1.x, 2.0 and 2.1 -- see the
-[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/d03670b32e0e607754f247bd18ebe76b873b325f/CHANGELOG.md) -- and this guide names them that way: a 2.1 here is the development build, older than 1.0.0.
+[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/CHANGELOG.md) -- and this guide names them that way: a 2.1 here is the development build, older than 1.0.0.
 
 For five kinds of project:
 
@@ -21,7 +21,7 @@ For five kinds of project:
 
 The numbered sections are the move to the 2.0 line from LGUI, LexUI or the 1.x builds; a project making it reads
 [From 2.0 to 2.1](#from-20-to-21) and [From 2.1 to 1.0.0](#from-21-to-100) afterwards. Everything here is about keeping what you have. What the plugin is and how to start from
-nothing is in the [README](https://github.com/TypeDreamMoon/DreamGUI/blob/d03670b32e0e607754f247bd18ebe76b873b325f/README.md); what each version added is in the [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/d03670b32e0e607754f247bd18ebe76b873b325f/CHANGELOG.md).
+nothing is in the [README](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/README.md); what each version added is in the [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/CHANGELOG.md).
 
 ## From 1.0.0 to the next release
 
@@ -112,6 +112,20 @@ outside them through, and a screen built around the old way will feel different:
   the widget was up, and hid and showed the widget to make the key work, can drop that step; nothing else changes. A
   screen that named an action on a live button ahead of time, meaning the key to work only later, sets the action
   when the key should start working.
+- **A rect block's gradients have stops.** `BodyGradient` and `BorderGradient` (`FDreamGradient`) take the place of the
+  two-colour gradient's properties, which are still read -- from assets and from `.dui` files -- and drawn, as two
+  stops, while the gradient has none: nothing to do for a project, and a rect block looks as it did to a level per
+  channel. The first edit of such a gradient in the designer writes its stops and replaces its two-colour lines in the
+  `.dui`. In C++ and Blueprint the setters `SetBodyGradientColor`, `…Center`, `…Radius`, `…Rotation`, the two unit
+  modes' and the border's are deprecated (they go on working, on the first stop, the centre, the radius and the angle once
+  there are stops); set the gradient with `SetBodyGradient` / `SetBorderGradient`. Their getters now return by value
+  (`FColor GetBodyGradientColor() const`), which breaks only code that took their address, and
+  `GetBorderGradientCenterUnitMode` answers the border gradient centre's unit mode rather than the corner radius's. A
+  material that calls `DreamUI_CalculateRectBlock` itself with its old arguments draws a rect block's gradients as plain
+  colours; passing the paint rows (`DreamUI_PaintDataTexture`) after the data texture draws them. See
+  [Gradients and viewport handles](/en/docs/plugin/concepts/gradients).
+- **A radial gradient's ellipse turns with its `Angle`.** A text paint whose radial gradient was left with an angle
+  other than 0 or 180 draws its ellipse turned; an angle of 180 puts the old look back.
 
 A C++ subclass of `UDreamSpinBox` or of the list family that overrides `NativeOnKeyDown` calls `Super` to keep these
 keys, as for any key the base answers.
@@ -154,7 +168,7 @@ below say what the redirects cover.
 
 For a project already on 2.0. Nothing was renamed, so no redirect is needed and nothing has to be done before opening
 the project; what follows is what can look or behave differently afterwards, and what C++ of your own has to change. The
-[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/d03670b32e0e607754f247bd18ebe76b873b325f/CHANGELOG.md) lists what is new.
+[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/CHANGELOG.md) lists what is new.
 
 ### Before you upgrade
 
@@ -590,7 +604,7 @@ report.
 `DreamGUIRenderer` (drawing, effects' render proxies), `DreamGUI` (widgets, visuals, canvases), `DreamGUIInput`
 (event systems, raycasters, navigation, the viewport client), `DreamGUIControls` (the `Dream*` controls and the
 `UI*` behaviours), `DreamGUIExtensions` (lines, rings, effects, render-target helpers). The README's
-[module table](https://github.com/TypeDreamMoon/DreamGUI/blob/d03670b32e0e607754f247bd18ebe76b873b325f/README.md#modules) says what is where.
+[module table](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/README.md#modules) says what is where.
 
 **Includes.** Every header kept its path except those in the README's
 [include table](https://gui.toolchain.64hz.cn/en/docs/guides/migration).

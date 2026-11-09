@@ -70,6 +70,8 @@ Widget Root {
   - [工具](/docs/tools/designer) — 设计器、VS Code 扩展、调试命令、测试套件、基准测试、脚本接口。
   - [迁移与升级](/docs/guides/migration) — 从 LGUI、LexUI 或早期构建迁过来，以及开发版之间的升级。
   - [打包与平台](/docs/guides/fonts-and-packaging) — 字体、彩色 emoji、ICU 数据怎么随游戏发出去；哪些平台真的跑过。
+  - [导入分层文档](/docs/plugin/guides/layered-document-import) — 把 .psd 或 .psb 导成 DreamUI 控件：每种图层变成什么、命名约定、字体、再次导入。
+  - [属性的 meta 标签](/docs/plugin/guides/property-meta) — 决定属性在细节面板里放在哪、是否隐藏、用什么控件的 `DreamGUI_` 标签；扩展的类怎么用。
   - [诊断码](/docs/diagnostics) — 每条 .dui 诊断都是一个 DUInnnn 代码，按编译阶段分成七族。
   - [API 参考](/docs/reference) — 从反射生成的逐类属性与函数参考，每页末尾附与 UMG 的对照。
   - [更新日志](/docs/changelog) — 每个版本改了什么。

@@ -159,7 +159,7 @@ CPU 侧算了一堆**每个控件一行/一块**的数据（控件属性、裁�
 
 | 类 | 模块 | 需要什么视觉 |
 | --- | --- | --- |
-| `UDreamImageSequencePlayer`（**`Abstract`**） | `DreamGUI` | — |
+| `UDreamImageSequencePlayer` (**`Abstract`**) | `DreamGUI` | — |
 | `UUISpriteSequencePlayer` | `DreamGUI` | `Sprite` 视觉 |
 | `UUISpriteSheetTexturePlayer` | `DreamGUIExtensions` | `Texture` 视觉 |
 
@@ -182,7 +182,7 @@ CPU 侧算了一堆**每个控件一行/一块**的数据（控件属性、裁�
 - **`CustomMesh` 在 `.dui` 里找不到** —— 故意的，有测试守着。
 - **自定义网格的源读的是控件宽高**，图形会随控件矩形缩放；要固定形状得自己控住控件尺寸。
 - **圆柱 / 弯曲平面是 3D 几何**，别指望它们和 2D 元素共用绘制调用。
-- **`PackingTag = ` `PackingTag = None` 的精灵不是精灵**；动态打包失败也会被**自动**清成 `None`。
+- **带有 `PackingTag = None` 的精灵不是精灵**；动态打包失败也会**自动**将其清除为 `None`。
 - **动态图集不会自己缩小**；要确定还内存得主动调 `Trim*`。
 - **`DisposeAtlasByPackingTag` 不许动默认 `"Main"`**，且调用前要保证屏幕上没有东西在画那些页。
 - **静态图集运行期不能加精灵**；超 `MaxTextureSize` **直接放弃打包**。
@@ -191,10 +191,7 @@ CPU 侧算了一堆**每个控件一行/一块**的数据（控件属性、裁�
 
 ## 还没证实的 [#not-yet-confirmed]
 
-- `UDreamUIDataTexture` / `UDreamUIDataAsTexture` 带的是 **2026 版权**（`TypeDreamMoon`），而精灵 / 图集
-  那批是 2019（`LexLiu`）；`CHANGELOG` 没有点名它们。
-- 内置保留的 `PackingTag` 只核到默认 `"Main"`；有没有别的保留 tag
-  **未逐一核**。
+- `UDreamUIDataTexture` / `UDreamUIDataAsTexture` 带的是 **2026 版权**（`TypeDreamMoon`），而精灵 / 图集那批是 2019（`LexLiu`）；`CHANGELOG` 没有点名它们。
+- 内置保留的 `PackingTag` 只核到默认 `"Main"`；有没有别的保留 tag **未逐一核**。
 - 动态图集回收的触发时机（除了「加页失败前」）**未逐条读实现**。
-- 这块**一个参考页都没有**（搜 sprite / atlas / custommesh / mesh 全空），全部
-  来自源码头文件。
+- 这块**一个参考页都没有**（搜 sprite / atlas / custommesh / mesh 全空），全部来自源码头文件。

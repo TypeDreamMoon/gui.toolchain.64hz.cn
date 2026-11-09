@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "a9b83be1e43fb1b2f28b16d1284ec620fc469c3556b24775aaed48cb6c9b0c3c",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/guides/property-meta.md",
-      "alignedRevision": "a25dbbe64733",
+      "alignedRevision": "8f976bed5d73",
       "alignedPage": "b125bd3af4b7",
-      "translationHash": "c03b17f879ec35f72b2fc85f12992100180bcae7eb2a92cf05d68319dd2a03c6"
+      "translationHash": "e05b286968c86b95e9661ccfaf6db69cd62eee7e2addacd3f64234159fe33766"
     }
   ],
   "translationFile": "content/docs/plugin/guides/property-meta.md",
-  "translationHash": "b6b03054e5a4411c166da40d053440e8982d3a3817d7b394992218cbfbc6a0ad"
+  "translationHash": "fc2828179945758355e930424c3ad98377280f9b6266a901fed89e52da8a0e3f"
 }

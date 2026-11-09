@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "045c0d781fc997ede60542c7890d1934616a65bb2a58f58c821cd9ae9c6076ab",
   "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
   "sources": [
     {
       "path": "Docs/language/bindings.md",
-      "alignedRevision": "c4c440d0058d",
+      "alignedRevision": "8f976bed5d73",
       "alignedPage": "c8aa37e0f057",
-      "translationHash": "d81d5062000ed0c2b6b687e2cce6c6a0c1465bef73ef3e80ea9e71241e1ce18f"
+      "translationHash": "4684fcdc358fbaa2253c4a6a5a1b49075c36f039a47f8cc656b0e22b097ee06d"
     }
   ],
   "translationFile": "content/docs/dui/bindings.md",
-  "translationHash": "f2d2de2e63711b53234ccac11f7c6b53dd913e9f0027e59233ccafd21d4648d5"
+  "translationHash": "bfd5ee5c742184d5e877122fbd8c92e015c2500468dec77064c26aa53c64c5df"
 }

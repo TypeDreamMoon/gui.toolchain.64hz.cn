@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "116f26eda3173de1725fe5738783565b69bfed818c034b4bf5187bbf40b45529",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/concepts/gradients.md",
-      "alignedRevision": "a25dbbe64733",
+      "alignedRevision": "8f976bed5d73",
       "alignedPage": "f97819653e69",
-      "translationHash": "c0a7168cba7193df2ce3db4ba078b383efcf2b7082ac4542be839051a127a100"
+      "translationHash": "41207c9935e8f39eff25181d5079ed2fe3cc801f8c59383bb85ec0285b81027e"
     }
   ],
   "translationFile": "content/docs/plugin/concepts/gradients.md",
-  "translationHash": "c5e121d0e16d39c20e0429f99e568852f27188214d9679dec2884fe97bedd3ab"
+  "translationHash": "5113cb389af13e581ab7aacfe595e926f608fd50987e266299fbee422dfb15c2"
 }

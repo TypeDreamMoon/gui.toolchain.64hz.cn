@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "b39193d00f6762d365f07fe26ffe27b609b3bf272da392f8dfc02752930cfe93",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/concepts/niagara.md",
-      "alignedRevision": "a25dbbe64733",
+      "alignedRevision": "8f976bed5d73",
       "alignedPage": "9471523042bb",
-      "translationHash": "388289280fecbb1b0d99b86e908a645b6ad276dd164c1b2f1ceabdb2194249b1"
+      "translationHash": "2a85e3c214fff550f8a3935e23b31074d67f3cdd6db41a5379eb714a6b0424bd"
     }
   ],
   "translationFile": "content/docs/plugin/concepts/niagara.md",
-  "translationHash": "c3d7a721319ccb526494e3a2b62965d0bb69cd07f466ae6d5993b6e5b8daaeab"
+  "translationHash": "7f296f335d767ec3bf2261002c82a4197ba046d668ad373c98906521a870bcf3"
 }

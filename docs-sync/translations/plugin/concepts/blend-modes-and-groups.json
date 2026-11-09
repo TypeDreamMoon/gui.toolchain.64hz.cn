@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "d9ad1a8f9f8e9098a28332cd4f6c04c4b134baaa6d064f2a62d5954656f3b933",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/concepts/blend-modes-and-groups.md",
-      "alignedRevision": "a25dbbe64733",
+      "alignedRevision": "8f976bed5d73",
       "alignedPage": "bcc210793197",
-      "translationHash": "7fba2d731b670152aae5472d1976beb828cc9bf0667b24e8fbfe47baac431998"
+      "translationHash": "bbda7b9386dc07b5600f1cffa76573c9ca9dbe9061088d52ab55444a842a0da7"
     }
   ],
   "translationFile": "content/docs/plugin/concepts/blend-modes-and-groups.md",
-  "translationHash": "5bc6288d8afbc1db63a3f1eb397f00833d4d1381907a9b00c73576f163299cdc"
+  "translationHash": "3060e4daca0b5accb9fbd26b65e45090c0d6ab9333c19c2a31c37b21ee83ffbd"
 }

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "2085e9d1b7edaa5c8b6c291f6c3bb0f3a0de56d8bf1e455df284519cf72a06d0",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/language/write-back.md",
-      "alignedRevision": "a25dbbe64733",
+      "alignedRevision": "8f976bed5d73",
       "alignedPage": "49b344e94d28",
-      "translationHash": "50e4c025bd3618edc34637d41668f6721d1de4811732d95839b4de0d60bb52dd"
+      "translationHash": "1daacefff812b9a39fac045241a221d052be08a96e2b587b1233392ac572da94"
     }
   ],
   "translationFile": "content/docs/dui/write-back.md",
-  "translationHash": "95907041d8bfa3843876b09bbd58b732b5b341c13a639df453fed166bd44abc8"
+  "translationHash": "f61ad2517ac0b7dadbd4b1d273610231f99ae7eeb65c342f57248fcc5b85567a"
 }

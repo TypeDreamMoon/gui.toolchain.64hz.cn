@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "50290bbfecb8f3e4a9e963c727c71c377be68383b8b68e51a6482486fa145554",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/tools/designer.md",
-      "alignedRevision": "a25dbbe64733",
+      "alignedRevision": "8f976bed5d73",
       "alignedPage": "1c375323a55f",
-      "translationHash": "6df4c4f93ab87c50eb3c6dfe563ed3ee521dc225744da15d414da51b2011adbd"
+      "translationHash": "1fda4dc4715f94c578fbca8f5fb24dccf978376ad9a68c5777d08e44038eb38e"
     }
   ],
   "translationFile": "content/docs/tools/designer.md",
-  "translationHash": "54e756700fa42d345a1beb0bac6e3726489e10c1d40adf150089377c006c65be"
+  "translationHash": "8f4d94bdec9c954a4f1c526ccb042fb1dcd527d5dab0f65d376f2ecd131ec093"
 }

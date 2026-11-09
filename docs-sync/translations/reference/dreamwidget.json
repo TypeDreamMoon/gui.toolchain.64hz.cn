@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "01c636ba3bd54f5a159cca249c35bfc205688ea789c83873befe5e2885df7d3c",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/Reference/DreamWidget.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "a4f38b010190",
-      "translationHash": "d42f7fd934988616caccff5d5aa03bf53688b73c9c79763a79afad8b3c22b1b7"
+      "alignedRevision": "8f976bed5d73",
+      "alignedPage": "56477e057970",
+      "translationHash": "2b37cccff4e48d8f05c5fc1f7337a880cf48813d39100a3aef96a611daa522ca"
     }
   ],
   "translationFile": "content/docs/reference/dreamwidget.md",
-  "translationHash": "156ae02c562eff9b9fa98977d79281ed6a10184bf54781f8fbb34f009d6b8448"
+  "translationHash": "930a11cc50802daa8a0dfaa1194d5cb238fb6996109010e820f7a54276e04039"
 }

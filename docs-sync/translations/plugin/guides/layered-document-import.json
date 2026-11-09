@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "32213350a54708177607bde1c8ad7d994ed5af443831a052573280d62ecf2c7b",
   "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
   "sources": [
     {
       "path": "Docs/guides/layered-document-import.md",
-      "alignedRevision": "a25dbbe64733",
+      "alignedRevision": "8f976bed5d73",
       "alignedPage": "238fd93bd0a8",
-      "translationHash": "a42c1927782617263fbc3fae80bcbf32e40b31625b0d05b49eb7dba75a4b2c48"
+      "translationHash": "7584bce35038f2a7f340eadc4c80864729492a878b3885be78d3655462937848"
     }
   ],
   "translationFile": "content/docs/plugin/guides/layered-document-import.md",
-  "translationHash": "218f71677faf4dfa66cf4e28e44455fcbc22828f773c483737bc6dd38ca96fac"
+  "translationHash": "af8b33665a5fb2c0f42067e4b030164ff5bf3806652ed62b9852f7cb5f3cbd78"
 }

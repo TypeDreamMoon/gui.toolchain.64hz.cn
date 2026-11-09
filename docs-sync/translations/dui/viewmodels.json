@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "13c4a7d5886ba864ac00321870fba8ad7c3d020b4999a2483bea88cc8880248d",
   "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
   "sources": [
     {
       "path": "Docs/language/viewmodels.md",
-      "alignedRevision": "c4c440d0058d",
+      "alignedRevision": "8f976bed5d73",
       "alignedPage": "0871c31b0c04",
-      "translationHash": "77d097e6b25b938b5efdddfd8db2af44f6a1a119c75591fbe230353c0deb959b"
+      "translationHash": "41fd8a755779a6005f573e56200edb8b3ecefb6d49efe6bf010d55700c570a69"
     }
   ],
   "translationFile": "content/docs/dui/viewmodels.md",
-  "translationHash": "e60050870de658dd42f074c2ce8846c3d90eda307952c94a2ae7164bfa639072"
+  "translationHash": "b5d2e78660096b8a20cee20ca404097c3d4123099d27a20c14b1d5d9c2fc49ee"
 }

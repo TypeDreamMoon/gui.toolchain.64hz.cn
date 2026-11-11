@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "33e9c5198e50c5fe81e80bc23f5fbb2cc95ae4028c9c98f84b518e657a6f4d79",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "sourceHash": "c7940a2d2b876a9d576518b74ff353650649874c859677abf523228406acdfe7",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamRingMenu.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/reference/dreamringmenu.md",
-  "translationHash": "4c5f4a3016f3a025ae7df13eed987374017249d9ca7153944f40159cfcf5d4a4"
+  "translationHash": "c37cd88f3ffa76293c51d070270879951da60469f6f7361925bd4752b60ab4e5"
 }

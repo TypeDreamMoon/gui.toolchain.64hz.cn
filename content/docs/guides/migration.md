@@ -3,8 +3,6 @@ title: "将项目迁移到 DreamGUI 1.0"
 description: "将项目迁移到 DreamGUI 1.0"
 ---
 
-# 将项目迁移到 DreamGUI 1.0 [#moving-a-project-to-dreamgui-10]
-
 1.0.0 是首个公开发行版。在此之前，本分叉的开发版被编号为 1.x、2.0 和 2.1 —— 见 [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/da707295f1b09e8d15c29ce996933e728fa219fc/CHANGELOG.md) —— 本指南沿用这一编号方式：这里的 2.1 指的是开发版，早于 1.0.0。
 
 针对五种项目：

@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "46c996131836bd2b5d1f7c40c47f9e61e7e90b8a10ebf5ef0707a179e70e5841",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "sourceHash": "c59d2561f17e2bbebe0a29ad65e6a6c35eea2a94a96809331118290dd6882d9f",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamMenuAnchor.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/reference/dreammenuanchor.md",
-  "translationHash": "90775d9d18baa9ed3b06be06ecf4140d9f91c237bf4e4b50fe1d9ee82fc19b37"
+  "translationHash": "13d4a324578e0c26698736f26967aad4ecf956c0e9af0c99eec2ec1e42fce61c"
 }

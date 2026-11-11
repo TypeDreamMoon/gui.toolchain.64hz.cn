@@ -1,9 +1,7 @@
 ---
-title: "The `.dui` language"
-description: "The `.dui` language"
+title: "Where a file lives"
+description: "Where a file lives"
 ---
-
-# The `.dui` language
 
 The language reference is organized by topic. These links preserve the section names of the previous single-file manual.
 
@@ -153,7 +151,7 @@ The language reference is organized by topic. These links preserve the section n
 
 ## Diagnostics
 
-[Read this section](https://github.com/TypeDreamMoon/DreamGUI/blob/d03670b32e0e607754f247bd18ebe76b873b325f/Docs/diagnostics/codes.md#diagnostics).
+[Read this section](https://github.com/TypeDreamMoon/DreamGUI/blob/da707295f1b09e8d15c29ce996933e728fa219fc/Docs/diagnostics/codes.md#diagnostics).
 
 ## A worked example
 

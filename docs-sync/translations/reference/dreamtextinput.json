@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "d486888545115bff42c8d47d4c692360de308f1a60f6a0af75fb44ea0ffc7ca2",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "sourceHash": "b36ceeb9734bbd8bb76deb6b6e948d7dc4c8c45d4e0e2c6b2c212ed369808e73",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamTextInput.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/reference/dreamtextinput.md",
-  "translationHash": "0b61adb4fd621dfc9ac5b66ab939f5c1ab9764dda2d52523e6ab85403f94b0d3"
+  "translationHash": "5e65152a92978567e65ea61941c9b4e8bfc04e9c7dab254eefb613fe58d430b5"
 }

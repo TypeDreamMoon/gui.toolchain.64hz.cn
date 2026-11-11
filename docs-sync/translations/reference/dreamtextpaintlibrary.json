@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "740669a4961f42df7cd57adcd3d829340d94105c6962010566192bd35ec446c9",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "sourceHash": "6a0aff1fde10266305ba18a093e4d2fa74221cb9623f796b17155609a2c9d052",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamTextPaintLibrary.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/reference/dreamtextpaintlibrary.md",
-  "translationHash": "0489daf6f695d993d64a707c45cd037561d2d43c924d698dd1f521621287fbe2"
+  "translationHash": "1f40a5dbb1eebd6fc3df2f74573647339509b892e613d36bc84e7cdd63225f9a"
 }

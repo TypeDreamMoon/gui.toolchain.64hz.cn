@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "7c78af06e8750bc6f7277908901b278a0e73e95facb106d03d0d793f34bf88ab",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "sourceHash": "7bfd977ea9de61cbade20e7bb71155a89c20aef7fbc2ca7bd2a3664b62d21d24",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamProgressBar.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/reference/dreamprogressbar.md",
-  "translationHash": "f26bafd80aaa48cd87958541b1e45900d05b2cf00c29a733527d2603dbb789bd"
+  "translationHash": "4292e1a5813d12427054a79a853c6d54ebb737debe5b348dfb78cb6e5818c4ff"
 }

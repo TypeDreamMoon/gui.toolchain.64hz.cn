@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "01c636ba3bd54f5a159cca249c35bfc205688ea789c83873befe5e2885df7d3c",
-  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "sourceHash": "aeb37aff2eb12fa3b14ef23c022cd9040a1ff185c4c54bca242af46aedbddae8",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamWidget.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/reference/dreamwidget.md",
-  "translationHash": "930a11cc50802daa8a0dfaa1194d5cb238fb6996109010e820f7a54276e04039"
+  "translationHash": "92464703698e299fae1ee58f038b9cf4d05b154a91fa2cb1edd4fdde4947e19b"
 }

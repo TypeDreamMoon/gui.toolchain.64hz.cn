@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "9bf03e05686286d451cbcb71a757b73f49a19ded5fe174e5ba9b711c32136ba8",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "sourceHash": "8bdebb2137089ab98d18129269a5ceb1b876e5a3276c05d2afecae80eea0ab03",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamListStyle.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/reference/dreamliststyle.md",
-  "translationHash": "a4e4d884a01bdee914d1b38d753ba889977d58bc1e4dc4c97e88340e19f694aa"
+  "translationHash": "ecc25f8c085f2c1650806b6ee9d3513fc202f5fbfaf57264649cfdbb5aae14cd"
 }

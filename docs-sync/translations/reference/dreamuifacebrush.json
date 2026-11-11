@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "a29159120e412f128ff49942141348ec4b0c3a09cacb43772613e8baae49fb38",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "sourceHash": "91359b9e00ffadca9b7c680af418a3f0dce45c3322f66ceaac38f27257f4f947",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamUIFaceBrush.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/reference/dreamuifacebrush.md",
-  "translationHash": "731a1ecc28f816c7537e01ff3de78d23fd68bd27974b3eebffe51e4b2c3438a8"
+  "translationHash": "3788c7dd60ae3e47e4bdcf46b779e7ea889b7a3f97f222facf6ab1a281051502"
 }

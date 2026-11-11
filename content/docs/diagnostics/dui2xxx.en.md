@@ -115,7 +115,7 @@ An `if` without its condition or block, an `else` with no `if`, or a branch hold
 
 `MalformedSlotDeclaration`
 
-A slot with `default` twice, or a block that both declares and fills.
+A slot with `default` twice, or a block that both declares and fills: a declaration holds components, properties, slot lines and `@tag` lines, and a fill holds widgets only (a `@tag` line beside them included).
 
 ## DUI2020
 
@@ -139,4 +139,10 @@ A `viewmodels` line that is not `Type Name`, `= new`, `= global ["Name"]` or `= 
 
 `MalformedContainer`
 
-A list (`[a, b]`) or a map (`{ key: value }`) that does not read: a bracket never closed, two elements with no comma between them, or a map entry that is not `key: value`.
+A list (`[a, b]`) or a map (`{ key: value }`) that does not read: a bracket never closed, two elements with no comma between them, or a map entry that is not `key: value`. A struct's first entry may go without a key.
+
+## DUI2024
+
+`MalformedTag`
+
+A `@tag` line that does not read: nothing after `@tag`, a number or a string, two names with no comma between them, a trailing comma. Also a `@tag` line in a `style`, or directly in a `for` / `each` body.

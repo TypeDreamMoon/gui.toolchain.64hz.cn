@@ -7,13 +7,13 @@ description: "A value that does not fit the property it is written on."
 
 `UnknownProperty`
 
-No property of that name; the nearest one is suggested.
+No property of that name; the nearest one is suggested. `@slot Size <- …` is one: `Size` is a shorthand for two properties, and a binding names `MinDesiredSize` and `MaxDesiredSize` separately.
 
 ## DUI4002
 
 `UnknownPropertyPathSegment`
 
-A dotted path whose head resolves and whose tail does not.
+A dotted path whose head resolves and whose tail does not, or a struct's field map naming a field the struct does not have.
 
 ## DUI4003
 
@@ -55,4 +55,4 @@ A resource whose value is not its declared type, or a non-`Asset` resource used 
 
 `ContainerTypeMismatch`
 
-A list on a property that is not an array or a set, a map on one that is not a map, a single value on a container, or a set or map of nodes (only an array can hold node ids).
+A list on a property that is not an array or a set, a map on one that is not a map, a single value on a container, or a set or map of nodes (only an array can hold node ids). A map entry with no key, on a real map or on a struct with no primary field, is one too.

@@ -25,7 +25,7 @@ A type that is no tag, container, alias, registered widget or path.
 
 `UnknownStyle`
 
-`: Name` naming no style this file sees.
+`: Name` naming no style this file sees; each unknown name in a clause is reported.
 
 ## DUI3005
 
@@ -146,3 +146,9 @@ Warning. Two rows of a `rows` table whose first values make the same id; the sec
 `DuplicateViewModel`
 
 Two `viewmodels` entries of one name.
+
+## DUI3025
+
+`StyleAlreadyApplied`
+
+Warning. A style named in a clause that an earlier name of the clause has already applied, as itself or as a base: naming it again changes nothing.

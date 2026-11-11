@@ -21,6 +21,14 @@ The language reference is organized by topic. These links preserve the section n
 
 [Read this section](/en/docs/dui/nodes-and-values#nodes-with-no-id).
 
+## Tags: `@tag`
+
+[Read this section](/en/docs/dui/nodes-and-values#tags-tag).
+
+### Finding widgets by tag
+
+[Read this section](/en/docs/dui/nodes-and-values#finding-widgets-by-tag).
+
 ## Node types
 
 [Read this section](/en/docs/dui/nodes-and-values#node-types).
@@ -33,9 +41,17 @@ The language reference is organized by topic. These links preserve the section n
 
 [Read this section](/en/docs/dui/nodes-and-values#values).
 
+### Structs as field maps
+
+[Read this section](/en/docs/dui/nodes-and-values#structs-as-field-maps).
+
 ## Slot lines: `@slot` and `@fill`
 
 [Read this section](/en/docs/dui/slots-and-components#slot-lines-slot-and-fill).
+
+### `@slot Size`
+
+[Read this section](/en/docs/dui/slots-and-components#slot-size).
 
 ## Components: `+ Class`
 
@@ -44,6 +60,10 @@ The language reference is organized by topic. These links preserve the section n
 ## Styles
 
 [Read this section](/en/docs/dui/styles-and-resources#styles).
+
+### Several styles
+
+[Read this section](/en/docs/dui/styles-and-resources#several-styles).
 
 ## Resources
 
@@ -151,7 +171,7 @@ The language reference is organized by topic. These links preserve the section n
 
 ## Diagnostics
 
-[Read this section](https://github.com/TypeDreamMoon/DreamGUI/blob/da707295f1b09e8d15c29ce996933e728fa219fc/Docs/diagnostics/codes.md#diagnostics).
+[Read this section](https://github.com/TypeDreamMoon/DreamGUI/blob/3bd78e3ae2021bef599c037b28e0955ce91ecfc1/Docs/diagnostics/codes.md#diagnostics).
 
 ## A worked example
 

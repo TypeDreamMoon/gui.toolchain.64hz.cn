@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "c361d218b60072e758ec727242c7ca96bf143acdfa9d20af0021aaa2484d0bd6",
-  "sourceRevision": "8f976bed5d73c24e3178b88fc881b82d1d41403f",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
   "sources": [
     {
       "path": "Docs/diagnostics/codes.md",

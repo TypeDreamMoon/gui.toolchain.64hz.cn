@@ -25,7 +25,7 @@ A value the language cannot spell (a non-finite number); its line is left alone.
 
 `PatchSyntaxNotWritable`
 
-An edit to something no line spells: a visibility an `if` decides, a shorthand that cannot be rewritten.
+An edit to something no line spells: a visibility an `if` decides, a shorthand that cannot be rewritten, a change to `Tags` that no line can take (written both ways, or a name an `@tag` line cannot hold).
 
 ## DUI7005
 

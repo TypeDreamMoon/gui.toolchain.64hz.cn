@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "e75f3d22595ea826ae26e7a5796b917fcef538354fad30a22ccadde4bbbe5eeb",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "sourceHash": "36d10faf6575574fa51627ca021cf5dbb1e67f1291f42a7c850d8a48a39732d4",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamSliderStyle.md",

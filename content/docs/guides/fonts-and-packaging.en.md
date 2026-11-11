@@ -3,8 +3,6 @@ title: "Fonts and packaging"
 description: "What a DreamGUI text needs to look in a packaged game the way it does in the editor — which fonts ship by themselves, how to add colour emoji, which ICU data to package, and how to check a package."
 ---
 
-# Fonts in a packaged game
-
 What a DreamGUI text needs to look in a packaged game the way it looks in the editor: which fonts ship by themselves and
 which you add, how to add a colour emoji font, which ICU data the game has to be packaged with, and how to check a
 package. Everything here is what the plugin does on Win64; no other platform has been built (see the README's

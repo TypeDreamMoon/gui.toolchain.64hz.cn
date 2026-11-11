@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "c2a66f6d7091b058dd9dc944d7cde6b3c490d145f95017a9e4fe7b0bdec3bf2f",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "sourceHash": "8f3344b4e8639c3caf3bfbdcdbb7a69c1360c5e61f350fb88a38abcab543e8fc",
+  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
   "sources": [
     {
       "path": "Docs/Reference/DreamRichTextStyle.md",

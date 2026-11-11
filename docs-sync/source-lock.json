@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
-  "revision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
+  "revision": "67cb4878821520d4cf3d6d052d3e9822d119cecf",
   "workingTree": false,
   "translationSnapshotHash": "5f5c0119888abe24d021fa72e8a41d8fedb5b0030f68b9e7edd27f7499f24bb4",
   "pages": {
@@ -603,8 +603,8 @@
         "status": "current",
         "output": "content/docs/dui/bindings.md",
         "record": "docs-sync/translations/dui/bindings.json",
-        "outputHash": "dbf1495ea49fd9c790d2dd23b2404eb03d9a5832ca863fe44278c1d19a205051",
-        "bodyHash": "327136cf8d6da9eac484d66210dcf47446e360a232f3e2a43a92d2e4a63a9fa1"
+        "outputHash": "f49b2e2a71605e7ff4504f89a158e37587d7e17f4131bf272ee278f8fa99eccb",
+        "bodyHash": "4c0fac476d4ba2b1c93f655096679ebd26129d092b7b82e8fcb12aa25badf06f"
       }
     },
     "dui/components": {
@@ -869,8 +869,8 @@
         "status": "current",
         "output": "content/docs/dui/write-back.md",
         "record": "docs-sync/translations/dui/write-back.json",
-        "outputHash": "4a7df0d58417e87352bd4c346b5459efcc44b57943b820a9195d77547d643375",
-        "bodyHash": "393612b6b0c38002e8d21df23bd039a60686da84048388912f621824c2923050"
+        "outputHash": "17ecfeb854a5c15458747218a5bcc0543b4daf016bc788a905890e9f0d6d736d",
+        "bodyHash": "2666a0b25830e001cae09697b1d4f5f79126bcde0a7526a9abe8e19ebea26a2e"
       }
     },
     "guides/fonts-and-packaging": {
@@ -915,8 +915,8 @@
         "output": "content/docs/guides/migration.md",
         "record": "docs-sync/translations/guides/migration.json",
         "pending": 2,
-        "outputHash": "ffb32ea48e2b7847893f4bf4a93304a61961dd5226a18991d64e1a5ab729951a",
-        "bodyHash": "84e8d9722e2e59e3c6648d06846b458beb80ccd1886700784d194610ad2308b7"
+        "outputHash": "95f40991916824d3b0320f434a70abc2ea2945dfa4c1fab03de42851c90e34e7",
+        "bodyHash": "afa6b56162871e2964d39f2e72cbd407ef90b271c08eeacf6efeed0a13244e18"
       }
     },
     "guides/platforms": {
@@ -3076,8 +3076,8 @@
         "status": "current",
         "output": "content/docs/plugin/duilanguage.md",
         "record": "docs-sync/translations/plugin/duilanguage.json",
-        "outputHash": "91b60b8a85d6bbef9de09a2ae66267c30871afe7a055b7358ff990c5ac0c5a71",
-        "bodyHash": "4629e16db9f5db98aa4839b234e44286d701c29a4aa70c4712326fc34846a8a0"
+        "outputHash": "6011f7412b0804a02b6b9be6450533c27663a9274b97a4ad88f9a331b798f8a3",
+        "bodyHash": "9def07377a292fbdb11a04e65825c06fef1e2c038a00f329e018c57402bca004"
       }
     },
     "plugin/concepts/backdrop-effects": {

@@ -160,6 +160,17 @@
       "description": "Putting the same widget Blueprint in a level — ADreamWorldWidgetActor and the properties of UDreamWorldWidgetComponent, the two render backends, interaction that needs no setup, attaching to a scene component from code, and what a Level Sequence can key."
     },
     {
+      "id": "contributing/index",
+      "sources": [
+        {
+          "path": "Docs/contributing/index.md"
+        }
+      ],
+      "format": "md",
+      "title": "Contributing",
+      "description": "How to report a problem, propose a change and get a pull request merged — the issue forms and the environment command, the repository's layout, building in a host project, the Quick test gate, what to update with a change, the docs and translation flow, and AI-assisted contributions."
+    },
+    {
       "id": "controls/index",
       "sources": [
         {
@@ -1473,6 +1484,17 @@
       "format": "md",
       "title": "Workflow",
       "description": "The whole loop of authoring a screen — text and designer writing back to each other, save-to-recompile, placing it on the screen or in the world, wiring interaction, animating, and looking when something is off."
+    },
+    {
+      "id": "tools/ai-agents",
+      "sources": [
+        {
+          "path": "Docs/tools/ai-agents.md"
+        }
+      ],
+      "format": "md",
+      "title": "Working with AI agents",
+      "description": "What an AI agent has to work with when it writes .dui — AGENTS.md, the language reference, the symbols file, the headless DreamUICompileWidgets commandlet and the diagnostics file — and the loop that gets a file from a request to a compiled widget Blueprint."
     },
     {
       "id": "tools/bench",

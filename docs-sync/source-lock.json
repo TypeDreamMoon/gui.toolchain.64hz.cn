@@ -3231,28 +3231,6 @@
         "bodyHash": "3444b5bebec29f9ea0a6587b81a06ae39aac2c77e635cd5c7eafd82a9a47a2d4"
       }
     },
-    "plugin/contributing/index": {
-      "hash": "3fb735c1cf9e0dac2e627f697c4a02cc54003c097f3e1d50f5c242d16dc6cbd3",
-      "revision": "1c0b9f478b64c38e770976578a3419f4096be5f4",
-      "output": "content/docs/plugin/contributing/index.en.md",
-      "outputHash": "53f6592d81de37697815898e21ea29f77b2b68504814fdae50c72eecc19105eb",
-      "locale": "en",
-      "format": "md",
-      "title": "Contributing",
-      "sources": [
-        {
-          "path": "Docs/contributing/index.md",
-          "hash": "f6db87066c5c6a7017d029762c738fd06c9ecaaf9befef4a4c5e79196a42ee41"
-        }
-      ],
-      "translation": {
-        "status": "current",
-        "output": "content/docs/plugin/contributing/index.md",
-        "record": "docs-sync/translations/plugin/contributing/index.json",
-        "outputHash": "b792b58464c4f0b1fadde2a49d196274dc03b6c5fe32eafe05cb83c9bec8b755",
-        "bodyHash": "f506ea6c4877f18765df14eff7663013afe6ba0261bb4e2f63a85b02668c71c6"
-      }
-    },
     "plugin/guides/layered-document-import": {
       "hash": "32213350a54708177607bde1c8ad7d994ed5af443831a052573280d62ecf2c7b",
       "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
@@ -3317,28 +3295,6 @@
         "record": "docs-sync/translations/plugin/guides/property-meta.json",
         "outputHash": "fc2828179945758355e930424c3ad98377280f9b6266a901fed89e52da8a0e3f",
         "bodyHash": "b74ccf82574dd38f88411d3a9a47e9992b3ad150f473b20308d8802a647400c7"
-      }
-    },
-    "plugin/tools/ai-agents": {
-      "hash": "46b106c4b67407f636648d33bb69356a476b6d4bd815b0e506af18c854bba54b",
-      "revision": "1c0b9f478b64c38e770976578a3419f4096be5f4",
-      "output": "content/docs/plugin/tools/ai-agents.en.md",
-      "outputHash": "596ba6d61532ca5e75a5127292a48e916e22d9dd2831f25e66642ffd90d2a94f",
-      "locale": "en",
-      "format": "md",
-      "title": "Working with AI agents",
-      "sources": [
-        {
-          "path": "Docs/tools/ai-agents.md",
-          "hash": "cbd520c7ef13141b9edf63821d893070ec63286d071e148b83a9c7ad780fcd65"
-        }
-      ],
-      "translation": {
-        "status": "current",
-        "output": "content/docs/plugin/tools/ai-agents.md",
-        "record": "docs-sync/translations/plugin/tools/ai-agents.json",
-        "outputHash": "569e89312005b129b9b21d6aa6983d115ee1eb80872d7623bb8caa126537b347",
-        "bodyHash": "1978f2bdf7bb520bc128ea8bcff0fbb58c07d00ec469d625d9dd1179463fed96"
       }
     }
   }

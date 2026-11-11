@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "8fa45102997dcf9b7611b453665faa8c092042af45aa619b4b2d44fd0258d034",
   "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/tools/debugging.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "f9293a0cbe88",
-      "translationHash": "fed7376a970801d756650f97f2929f2243ded80ff67cbfee0cecc0c1227f0ed4"
+      "alignedRevision": "67cb48788215",
+      "alignedPage": "31b75fedfbfd",
+      "translationHash": "424cdd1cba119d19d492d582d9ab370907569584efda9a55be364469656cc1d3"
     }
   ],
   "translationFile": "content/docs/tools/debugging.md",
-  "translationHash": "79c97d98b38cee4817b275b736f34efe74486a4a749271ed5642ba52de53a685"
+  "translationHash": "9253f12764c2f41113d17bc7297750b63c52f2aed8743c5a65bd63774c0c54f8"
 }

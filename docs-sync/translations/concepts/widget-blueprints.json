@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "0c6a089f2708e28441126af64de18f5db8605e3e2c6092d5fa4239f57581030b",
   "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/concepts/widget-blueprints.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "b765acfc0a4d",
-      "translationHash": "7129ac5726ce3cb6a1ee574de90e41f6094d9352a44236db82e83280fbe2fdc2"
+      "alignedRevision": "67cb48788215",
+      "alignedPage": "6d2d4c272b3e",
+      "translationHash": "c65eaccb63a04dda575a9076d2202e3106b424149be6344d3954caa737cc2a75"
     }
   ],
   "translationFile": "content/docs/concepts/widget-blueprints.md",
-  "translationHash": "8ce862ed397b04f9dc0eced9edc4f8ef713765dadd6a746bf6ca0f7bee9f371a"
+  "translationHash": "eae956ebf93b374705a60caf858c620ba6f294e05c4ad4f92afac7ce301c64b9"
 }

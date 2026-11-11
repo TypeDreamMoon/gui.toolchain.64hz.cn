@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "08a4538e711337af557af4a301e8b4066898b00425861d9b41781d40536a74a4",
   "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/guides/fonts-and-packaging.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "dbb61899820e",
-      "translationHash": "e2d9315f994aa1b37b355dbcbb67ec81384257e020a57ef57b484c3d214fbfdd"
+      "alignedRevision": "67cb48788215",
+      "alignedPage": "f2ccb272e059",
+      "translationHash": "8fa19fd6a01a5e1873c6f17fd29d808f6b2a190a90e4bb84275b41dbcaa8ec31"
     }
   ],
   "translationFile": "content/docs/guides/fonts-and-packaging.md",
-  "translationHash": "ce296946efa76c4d20452d305c845a71a588e86f90461ea35f3b2bcde6c24d5e"
+  "translationHash": "bd95f17859aec19b2e3f00ab489c0fed4a3d7bfcf1c49b2647d0fdd926dedd74"
 }

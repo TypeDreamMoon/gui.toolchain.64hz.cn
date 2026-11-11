@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "1dec83e0b74c17e82371ba7ac1fdb18ca828151509b0008bbf0abccfd3a783d0",
   "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/concepts/world-space.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "def976a368ac",
-      "translationHash": "1d87b6b5fc128138b519ea7f717cc29509c4e7a84c7ad6e3b14e127808ef6c92"
+      "alignedRevision": "67cb48788215",
+      "alignedPage": "ceacdaa3c3b5",
+      "translationHash": "7d6b53e0bd40f5eb3147f6e2de18527992067b76a5fd3e564fb1897291f6f263"
     }
   ],
   "translationFile": "content/docs/concepts/world-space.md",
-  "translationHash": "f702b8a2e95d3df840b8a8c233dc42db494a4be20b2e460fff642bfff2432aa6"
+  "translationHash": "eb21ec9f05f6d15399675bdb73769a551d28acdd8d79de6d021e5a92a48400ec"
 }

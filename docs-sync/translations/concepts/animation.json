@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "ac85b3c3f104b4e3180b423e2a8ec915071171b7877b0ee8e90063d47f202327",
   "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/concepts/animation.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "fdf02a9a5cbe",
-      "translationHash": "9c6f1acb0ed786c8b02955409f6f3c9103b9acc007834553149eb115d56366f0"
+      "alignedRevision": "67cb48788215",
+      "alignedPage": "428395707606",
+      "translationHash": "8f0c320ca04904d05da71cd3041e18217e388d937693d8f165c2df0be0e4fc7d"
     }
   ],
   "translationFile": "content/docs/concepts/animation.md",
-  "translationHash": "da68d804b6a9db42a2be0211d2347ebd7a833c12e1d3c203e39e682ed62d4f4c"
+  "translationHash": "03bf9a485106454c0dd71bcc9658b9d700f671df8927defe885206f7ab2b9054"
 }

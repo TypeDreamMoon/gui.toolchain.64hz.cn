@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "0897c0cb8cd074cb36ec12a010abcf132f5ca2dbb65be59eb33854a3e7a15a4c",
   "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/guides/upgrading.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "9fb678105bd2",
-      "translationHash": "e10d9146da13f3431c0cbc1a3a2601cd8a54207f46d601b711c9adb17d14af92"
+      "alignedRevision": "67cb48788215",
+      "alignedPage": "6a91d19a4491",
+      "translationHash": "a663261c199b66610465aad7e387d4c7e5686dbed34c7a2c752eb16dedc4f4ba"
     }
   ],
   "translationFile": "content/docs/guides/upgrading.md",
-  "translationHash": "bdc7c1e30e961c7297d9cc91c3885b93b120b7960a8a376c7266144720ac40ab"
+  "translationHash": "081146ad4f77b30881625a2ca09825b05870be9428dbf8851566328c59b8d063"
 }

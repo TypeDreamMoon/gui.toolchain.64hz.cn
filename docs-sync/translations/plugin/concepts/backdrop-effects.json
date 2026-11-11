@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "0e37b3de16bdec8b9e41f048236748577e6a2d7258a2224675013eafbbc9f8e4",
   "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/concepts/backdrop-effects.md",
-      "alignedRevision": "8f976bed5d73",
-      "alignedPage": "c92bb1d92b5e",
-      "translationHash": "8c84b84aa030b8aee0b47ac72a3b277d049debe99741b480559051384e8c54a2"
+      "alignedRevision": "67cb48788215",
+      "alignedPage": "75324846d69b",
+      "translationHash": "b0c4f1f370c00e1781df007de5d1d0fd0efb0baed67ac35a6369b30f43cebe3c"
     }
   ],
   "translationFile": "content/docs/plugin/concepts/backdrop-effects.md",
-  "translationHash": "d0a87f84341753cc5c00a54663fa9588e94273894a70a444fef166a2dd1357de"
+  "translationHash": "9d68599ce18d1b6374a85f938c7758971465582da763277de9c04622eb0dfcda"
 }

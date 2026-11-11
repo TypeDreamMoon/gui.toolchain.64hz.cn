@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "20916cc20ab084277aa0896b4bd8b0547167dd370329ba4ca9a4d9c8f4b30f94",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/tools/scripting.md",

@@ -6,7 +6,7 @@ description: "Moving assets saved against LGUI / LexUI, a project on the early s
 # Moving a project to DreamGUI 1.0
 
 1.0.0 is the first public release. The fork's development builds before it were numbered 1.x, 2.0 and 2.1 -- see the
-[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/CHANGELOG.md) -- and this guide names them that way: a 2.1 here is the development build, older than 1.0.0.
+[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/ae476f418edba8d3680d6027049b86683dc7e7f2/CHANGELOG.md) -- and this guide names them that way: a 2.1 here is the development build, older than 1.0.0.
 
 For five kinds of project:
 
@@ -21,7 +21,7 @@ For five kinds of project:
 
 The numbered sections are the move to the 2.0 line from LGUI, LexUI or the 1.x builds; a project making it reads
 [From 2.0 to 2.1](#from-20-to-21) and [From 2.1 to 1.0.0](#from-21-to-100) afterwards. Everything here is about keeping what you have. What the plugin is and how to start from
-nothing is in the [README](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/README.md); what each version added is in the [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/CHANGELOG.md).
+nothing is in the [README](https://github.com/TypeDreamMoon/DreamGUI/blob/ae476f418edba8d3680d6027049b86683dc7e7f2/README.md); what each version added is in the [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/ae476f418edba8d3680d6027049b86683dc7e7f2/CHANGELOG.md).
 
 ## From 1.0.0 to the next release
 
@@ -127,6 +127,15 @@ outside them through, and a screen built around the old way will feel different:
 - **A radial gradient's ellipse turns with its `Angle`.** A text paint whose radial gradient was left with an angle
   other than 0 or 180 draws its ellipse turned; an angle of 180 puts the old look back.
 
+- **A tween replaces the earlier tweens of the same property.** `RenderOpacityTo`, `RenderOffsetTo`, `ColorTo` and the other
+  property verbs stop the tweens already working on that object's property when they start; before, both ran and the last
+  to finish won. Code that relied on two running at once (a looping breath under a hover) gives the one that should share
+  `SetReplacesEarlierTweens(false)`. A tween in a `UDreamTweenerSequence` is not affected. See
+  [One tween per property](/en/docs/concepts/animation#one-tween-per-property).
+- **A text is no raycast target by default**, as UMG's TextBlock is not. A label laid over a button no longer takes the
+  button's hover and clicks. A text saved before keeps the `true` it was saved with, but a `.dui` builds its texts afresh when
+  it compiles, so a text there that is itself pressed (a link, a row's caption) now writes `bRaycastTarget = true`.
+
 A C++ subclass of `UDreamSpinBox` or of the list family that overrides `NativeOnKeyDown` calls `Super` to keep these
 keys, as for any key the base answers.
 
@@ -168,7 +177,7 @@ below say what the redirects cover.
 
 For a project already on 2.0. Nothing was renamed, so no redirect is needed and nothing has to be done before opening
 the project; what follows is what can look or behave differently afterwards, and what C++ of your own has to change. The
-[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/CHANGELOG.md) lists what is new.
+[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/ae476f418edba8d3680d6027049b86683dc7e7f2/CHANGELOG.md) lists what is new.
 
 ### Before you upgrade
 
@@ -604,7 +613,7 @@ report.
 `DreamGUIRenderer` (drawing, effects' render proxies), `DreamGUI` (widgets, visuals, canvases), `DreamGUIInput`
 (event systems, raycasters, navigation, the viewport client), `DreamGUIControls` (the `Dream*` controls and the
 `UI*` behaviours), `DreamGUIExtensions` (lines, rings, effects, render-target helpers). The README's
-[module table](https://github.com/TypeDreamMoon/DreamGUI/blob/9267a9409560dbaa0e864f0ed69610040b6aafcd/README.md#modules) says what is where.
+[module table](https://github.com/TypeDreamMoon/DreamGUI/blob/ae476f418edba8d3680d6027049b86683dc7e7f2/README.md#modules) says what is where.
 
 **Includes.** Every header kept its path except those in the README's
 [include table](https://gui.toolchain.64hz.cn/en/docs/guides/migration).

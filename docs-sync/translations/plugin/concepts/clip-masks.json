@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "eacbb4d80b4f7ca6ba17eddd16c6a3a7c1d6bed0a991fdec38d55a7e4310c1f5",
-  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/concepts/clip-masks.md",

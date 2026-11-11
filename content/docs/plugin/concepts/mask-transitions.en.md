@@ -68,3 +68,5 @@ floats.
   pixel: each is drawn over what is there, and two halves are not a whole. A hard edge (`Softness` 0) has none; so does a
   cross-fade inside an isolated [layer group](/en/docs/plugin/concepts/blend-modes-and-groups) on an opaque backdrop of its own.
 - A transition on a widget clips its subtree to the widget's rect while it is not fully shown.
+- A material of your own is moved by the mask only if it shades through `MF_DreamUI_Shade` (and takes its alpha as its
+  opacity); otherwise it stays whole while the rest of the subtree is revealed. See [Clip masks](/en/docs/plugin/concepts/clip-masks#what-it-costs).

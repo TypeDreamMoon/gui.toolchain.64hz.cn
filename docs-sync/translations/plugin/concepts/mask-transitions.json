@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "e5c694876980456a9e5c982471304adbecae3869dd6f0e23d8d8ce932550c499",
-  "sourceRevision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
   "sources": [
     {
       "path": "Docs/concepts/mask-transitions.md",

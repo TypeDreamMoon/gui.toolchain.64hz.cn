@@ -13,7 +13,7 @@ The Blueprint's Source File does not exist or cannot be read.
 
 `EmptyTree`
 
-The file parsed and produced no tree.
+The file parsed and produced no tree, and no other error says why. It is not reported beside another error: a node naming a type nothing resolves fails with its own code, and that is the whole report.
 
 ## DUI6003
 

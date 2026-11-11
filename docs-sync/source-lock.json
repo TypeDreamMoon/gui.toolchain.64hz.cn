@@ -1,29 +1,29 @@
 {
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
-  "revision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
+  "revision": "8c5cf74408bf693de357769d0ab086fe976e263f",
   "workingTree": false,
   "translationSnapshotHash": "6cd3181df9f632a4e97b472d4f1bed9a40dc0e370d7eb0d06aea149ffbccf74b",
   "pages": {
     "changelog/index": {
-      "hash": "81ae961ac40559e5ee1d3361fc0b6ec091059caacc2cb7053872f60c5f884e6d",
-      "revision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
+      "hash": "28daeeee2930f58e94f8a65671f885a9c8529d3c4ce98b052332dd5f1bb39290",
+      "revision": "8c5cf74408bf693de357769d0ab086fe976e263f",
       "output": "content/docs/changelog/index.en.md",
-      "outputHash": "ceff3c267ca41ffeccf5e1a6bfea1066b4c10d7e016132cc519680a8f105f132",
+      "outputHash": "3ea78ad945d0bcb231fa9834e007978cfe0174cece8a90ed172ed1629e45dc8f",
       "locale": "en",
       "format": "md",
       "title": "Changelog",
       "sources": [
         {
           "path": "Docs/changelog/index.md",
-          "hash": "c1669574f808ab62382a675ab92b21dd9ff315542aab26a1b271fa16ac414609"
+          "hash": "c36b979e6daab2e1b83e3599bbe3d3d6fcd937d5bde52a8386d3b4427c16e94c"
         }
       ],
       "translation": {
         "status": "outdated",
         "output": "content/docs/changelog/index.md",
         "record": "docs-sync/translations/changelog/index.json",
-        "pending": 6,
+        "pending": 8,
         "outputHash": "cbe8089912f745c4916e58fe15b0804d992ea189a17b1c1139f77af739eb90b4",
         "bodyHash": "e220ececa474efccdc17a9cd6d49cf639e42bb605b6c6070d2dda7d87806c815"
       }
@@ -206,23 +206,24 @@
       }
     },
     "concepts/text": {
-      "hash": "de5bf1aaf0d975fede1a059505f60eef563b268c0464807206eda98000aa1465",
-      "revision": "ae476f418edba8d3680d6027049b86683dc7e7f2",
+      "hash": "a444fe3b011549608ef072a835affead8ede8a1f8238d8dd8b4b1ffd1af8ee86",
+      "revision": "8c5cf74408bf693de357769d0ab086fe976e263f",
       "output": "content/docs/concepts/text.en.md",
-      "outputHash": "a0528e03f300ee86f9de777e037eb59c86642455c955e1e24157cc32dd4d983d",
+      "outputHash": "e9d578e07ac2af3056a73ed8cf322f271a7c028a8a14ae32c9e4e1da7e9bbc5e",
       "locale": "en",
       "format": "md",
       "title": "Text",
       "sources": [
         {
           "path": "Docs/concepts/text.md",
-          "hash": "b563ae6f7f12b21570a5196dbe0b7b727fb50063a5560c4a68a4cad55c258e85"
+          "hash": "e4f4dbd364c1dd83e370d3a9cf5fb944067deee239fd7701993babdf9f61dbd8"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/concepts/text.md",
         "record": "docs-sync/translations/concepts/text.json",
+        "pending": 2,
         "outputHash": "47322c23872ca7292598dd49f58d7f5f484bbbcd9fef78477d58f6bc340cec24",
         "bodyHash": "08f52c65447fd191db1b36d7fcd52ca0d583151ce0a1604e72eb7a13376456ce"
       }
@@ -597,8 +598,8 @@
         "status": "current",
         "output": "content/docs/dui/bindings.md",
         "record": "docs-sync/translations/dui/bindings.json",
-        "outputHash": "eeb3ad49ba94c4ce3d13253381003982aa8036521904180c2a905d1a9be9053d",
-        "bodyHash": "13b01efebd01229525009747434212dea5b95f54268e0756785c67d67f25ee99"
+        "outputHash": "010e141b4ef7c32b63b97a7fc4831d0d4581893e0dcf563074ce9874acf8c8b2",
+        "bodyHash": "32c8ca095b39cc8817b5e9829f6c190ff604df04e7cf34d1204902f251d79725"
       }
     },
     "dui/components": {
@@ -868,8 +869,8 @@
         "output": "content/docs/dui/write-back.md",
         "record": "docs-sync/translations/dui/write-back.json",
         "pending": 5,
-        "outputHash": "666e625a113be573515729c407ebb1319735f337e35c77bf00abe8ca13200fc3",
-        "bodyHash": "08c53471c503b786eaa40f39d4cc9f371ab04f25c98499ddb4666dde2914c6d3"
+        "outputHash": "bcaa4a80e3a91e293afa98941dc722e8aa316c1bf894823311cccd9df2f940e0",
+        "bodyHash": "57934d03da9f9049680c06f4c5712a8047d06a9f2c791500b1dcf4963b6e15e2"
       }
     },
     "guides/fonts-and-packaging": {
@@ -912,8 +913,8 @@
         "status": "current",
         "output": "content/docs/guides/migration.md",
         "record": "docs-sync/translations/guides/migration.json",
-        "outputHash": "93274bf4e09c8bb3abc206371242ce5f227dbca53c8632e2ece03b357e12db22",
-        "bodyHash": "c83fd222c856a6adf7e9a5946a980ab21a7077d978f431df9612d5328555c5c9"
+        "outputHash": "9011a3498194bfb8f609a5f5265526cf50f4c3ca6beabcde946764ee5ca74c4a",
+        "bodyHash": "da6940232d7fed15fa2ae2cf67b344a302da78a9f29e44aa6ad1ac0c0759ae2b"
       }
     },
     "guides/platforms": {
@@ -3073,8 +3074,8 @@
         "output": "content/docs/plugin/duilanguage.md",
         "record": "docs-sync/translations/plugin/duilanguage.json",
         "pending": 9,
-        "outputHash": "48fb4bd7b1f8651e509b8a2724f4d3276289cf66f2b01d2d30e09eebbe64370a",
-        "bodyHash": "a07134a0f70b32237eaa985c9ffaa8f0966efff9d4aa0b05359a7e28b9244ef2"
+        "outputHash": "0909e3987d9b78bc90ded8a92f31a2dab51d8e63e404a97d3515e35686002fc4",
+        "bodyHash": "5dd554ff60f3c9d27b5cf3c15d37947417d453bf0eafb85d7de24c165f5e2c64"
       }
     },
     "plugin/concepts/backdrop-effects": {
@@ -3276,24 +3277,24 @@
       }
     },
     "plugin/guides/pitfalls": {
-      "hash": "a7fac729d7f8772a6d376a43b1d3096e462628f602537d3a7258cd713eaf97ee",
-      "revision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
+      "hash": "58bd7b642f1914a7b3bc2cdda62c53af463cd8b09fd7ecb65f49fd026a03c4b3",
+      "revision": "8c5cf74408bf693de357769d0ab086fe976e263f",
       "output": "content/docs/plugin/guides/pitfalls.en.md",
-      "outputHash": "8dad79368e5553ec5f4d622c0dd9576e1ea68505dc25d28527be6daa0ae456e8",
+      "outputHash": "16ffac55725365a6714fe62d5202f33e2d8aaf22ad87fccc6f905868566e7914",
       "locale": "en",
       "format": "md",
       "title": "Common pitfalls",
       "sources": [
         {
           "path": "Docs/guides/pitfalls.md",
-          "hash": "9574b197acdc9444f44dea077145d25938ccf17a9aa205b983f720655bfaecff"
+          "hash": "0148aeb9570d60714f7f97ab719e3ecb0d46aa0c7fb6085c6dce9aee6ebdef85"
         }
       ],
       "translation": {
         "status": "outdated",
         "output": "content/docs/plugin/guides/pitfalls.md",
         "record": "docs-sync/translations/plugin/guides/pitfalls.json",
-        "pending": 5,
+        "pending": 6,
         "outputHash": "8e825f95a2a84fce5792ac401dda37afeb482e222cb7fd205b070acd65a3e149",
         "bodyHash": "4413c833eb738f3046f2488b2632ef682ceda049da7e08f73118e13426bdbe06"
       }

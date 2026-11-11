@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "7eb081b5849fac521755c0e3bc4ff3356068eedaac3478e80990eeec680733fe",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "1c0b9f478b64c38e770976578a3419f4096be5f4",
   "sources": [
     {
       "path": "Docs/getting-started/project-layout.md",

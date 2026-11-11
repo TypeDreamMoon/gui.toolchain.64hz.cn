@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
-  "revision": "002d87a3d835dab29e64dd240e4b223f6bf8a42f",
+  "revision": "1c0b9f478b64c38e770976578a3419f4096be5f4",
   "workingTree": false,
   "translationSnapshotHash": "7b6bdf27bd3563f422a0b67afd031ad261f03241842d9a202fb536a7614e700d",
   "pages": {
@@ -587,8 +587,8 @@
         "status": "current",
         "output": "content/docs/dui/bindings.md",
         "record": "docs-sync/translations/dui/bindings.json",
-        "outputHash": "bec562e804027ddafe6589eb5eeb424eac2675d0b6c024172c27cde0badd0ee5",
-        "bodyHash": "31bcd32a7f8da0f0fdd23b841e78302302719ab69d64745201eadaa6cb640228"
+        "outputHash": "a44f9ebc731e303e6b7a795d69eaf997968ff6a5863839f2002f1b23f4b8fa2a",
+        "bodyHash": "dbf15c77719f1faff33ac2ff038ca64c855fa68a5288fde08f23ae9e89f11b01"
       }
     },
     "dui/components": {
@@ -851,8 +851,8 @@
         "status": "current",
         "output": "content/docs/dui/write-back.md",
         "record": "docs-sync/translations/dui/write-back.json",
-        "outputHash": "d148a78faf449727926c202bafdf31f7615c79834d9d535e368665d5d82859cd",
-        "bodyHash": "fb98aec1db6b5b79f144aeb8e2cb997f4b6559f9981a8035211041afde17be39"
+        "outputHash": "b1bc61754bcf3d438a8c3c700d8ce65763a25caca6a31a92b731dc167f046b9b",
+        "bodyHash": "76a0833104b18b3d461e3db585e059013c14f760fc06c3f9390dea02a0a6ecc8"
       }
     },
     "guides/fonts-and-packaging": {
@@ -895,8 +895,8 @@
         "status": "current",
         "output": "content/docs/guides/migration.md",
         "record": "docs-sync/translations/guides/migration.json",
-        "outputHash": "482d5b661428dcdcc3cc4ed8ab41a757b08c8031ede80a58e7e8afc6fecbe8f3",
-        "bodyHash": "314efb2153a2c0ceb0dae074eced090dfae3c8a0a8fb58a4fc6ff31df510d939"
+        "outputHash": "04197e19b97d8f6b93f99beba2e7a3ad53a8b1c79f92be4f74677912047cb233",
+        "bodyHash": "6bf314ba79764f699201e428f57cec460e01575ad0c5a4d9fd91d7ae9f2f2be5"
       }
     },
     "guides/platforms": {
@@ -2858,23 +2858,24 @@
       }
     },
     "start/project-layout": {
-      "hash": "7eb081b5849fac521755c0e3bc4ff3356068eedaac3478e80990eeec680733fe",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "0dfbb79c5758a52a515fd8cb995c5f21f889fb205ad1cbd1d94dee8529a1a2d6",
+      "revision": "1c0b9f478b64c38e770976578a3419f4096be5f4",
       "output": "content/docs/start/project-layout.en.md",
-      "outputHash": "ae5d30d831956ec8b7dc73e0c145ddd790b77df27542ae0d63f83e6d862a180d",
+      "outputHash": "b0d62fc4c1c7734bcb4aa0a04d380371e28242e053ed72d900d4197ce1323c69",
       "locale": "en",
       "format": "md",
       "title": "Project layout",
       "sources": [
         {
           "path": "Docs/getting-started/project-layout.md",
-          "hash": "e488b6b953a197c581f22db5c2b24ddfb3dc2f88a96b71aafd9dbdd9d24d66b1"
+          "hash": "86e1309d6f1e84f834c1a370b261980a4ddf9b0cae4ea970e58957809df5410c"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/start/project-layout.md",
         "record": "docs-sync/translations/start/project-layout.json",
+        "pending": 1,
         "outputHash": "db929419201c54ea3cffe38fd5a12d637dffab65d695835899a2a40100aedf20",
         "bodyHash": "ea3118f64683edd1b2a12778f280c8c11496d99cbd36c286749bd010fd5f50b6"
       }
@@ -3051,8 +3052,8 @@
         "status": "current",
         "output": "content/docs/plugin/duilanguage.md",
         "record": "docs-sync/translations/plugin/duilanguage.json",
-        "outputHash": "357c948301c1e892adffb80a356f23185cfc1b9a91cf41c0f44e089c69bd22e3",
-        "bodyHash": "6f9770e2a999e40206c5e8b24052fcf019dc920ac92e923060bdb9ecbe2c34c7"
+        "outputHash": "1aae500495f804added01e2fe881e374b72571e56b16af232b9965f99883ce75",
+        "bodyHash": "dbdc4e4190fe15516de0ef62be5d2dd893e7ea0b4efe110bd47128acf7896dd1"
       }
     },
     "plugin/concepts/backdrop-effects": {
@@ -3231,6 +3232,24 @@
         "bodyHash": "3444b5bebec29f9ea0a6587b81a06ae39aac2c77e635cd5c7eafd82a9a47a2d4"
       }
     },
+    "plugin/contributing/index": {
+      "hash": "3fb735c1cf9e0dac2e627f697c4a02cc54003c097f3e1d50f5c242d16dc6cbd3",
+      "revision": "1c0b9f478b64c38e770976578a3419f4096be5f4",
+      "output": "content/docs/plugin/contributing/index.en.md",
+      "outputHash": "53f6592d81de37697815898e21ea29f77b2b68504814fdae50c72eecc19105eb",
+      "locale": "en",
+      "format": "md",
+      "title": "Contributing",
+      "sources": [
+        {
+          "path": "Docs/contributing/index.md",
+          "hash": "f6db87066c5c6a7017d029762c738fd06c9ecaaf9befef4a4c5e79196a42ee41"
+        }
+      ],
+      "translation": {
+        "status": "missing"
+      }
+    },
     "plugin/guides/layered-document-import": {
       "hash": "32213350a54708177607bde1c8ad7d994ed5af443831a052573280d62ecf2c7b",
       "revision": "9267a9409560dbaa0e864f0ed69610040b6aafcd",
@@ -3295,6 +3314,24 @@
         "record": "docs-sync/translations/plugin/guides/property-meta.json",
         "outputHash": "fc2828179945758355e930424c3ad98377280f9b6266a901fed89e52da8a0e3f",
         "bodyHash": "b74ccf82574dd38f88411d3a9a47e9992b3ad150f473b20308d8802a647400c7"
+      }
+    },
+    "plugin/tools/ai-agents": {
+      "hash": "46b106c4b67407f636648d33bb69356a476b6d4bd815b0e506af18c854bba54b",
+      "revision": "1c0b9f478b64c38e770976578a3419f4096be5f4",
+      "output": "content/docs/plugin/tools/ai-agents.en.md",
+      "outputHash": "596ba6d61532ca5e75a5127292a48e916e22d9dd2831f25e66642ffd90d2a94f",
+      "locale": "en",
+      "format": "md",
+      "title": "Working with AI agents",
+      "sources": [
+        {
+          "path": "Docs/tools/ai-agents.md",
+          "hash": "cbd520c7ef13141b9edf63821d893070ec63286d071e148b83a9c7ad780fcd65"
+        }
+      ],
+      "translation": {
+        "status": "missing"
       }
     }
   }

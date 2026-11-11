@@ -25,7 +25,7 @@ description: "语法没错，但这棵树对不上：重复的 id、未知的类
 
 `UnknownStyle`
 
-`: Name` 指向这个文件看不到的样式。
+`: Name` 指向这个文件看不到的样式；子句中每个未知名称都会被报告。
 
 ## DUI3005
 
@@ -146,3 +146,9 @@ description: "语法没错，但这棵树对不上：重复的 id、未知的类
 `DuplicateViewModel`
 
 两个同名的 `viewmodels` 条目。
+
+## DUI3025
+
+`StyleAlreadyApplied`
+
+警告。子句中指名的某个样式已被该子句中较早的名称以自身或基类的形式应用过：再写一次不会改变任何东西。

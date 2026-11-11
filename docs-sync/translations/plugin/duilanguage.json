@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "91a49eb676d85400461d9088303153d2be6d0272af0461840b9d3ce89c607fa7",
   "sourceRevision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
   "sources": [
     {
       "path": "Docs/language/index.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "ebbde6c01fef",
-      "translationHash": "c3598ca1a4605b205c7d02dd1a7214ff2bd525d6be0ef02a3c54bbd98c79eef7"
+      "alignedRevision": "821d72037ead",
+      "alignedPage": "9f8b2ec111be",
+      "translationHash": "8b62d8b45df361524732718b9ded262e3d2b4dddbd2468143b03de6836bf6ffd"
     }
   ],
   "translationFile": "content/docs/plugin/duilanguage.md",
-  "translationHash": "854fb607d77163a9ead507eaa809c1179a6f46b806f27a42b721dad30fe595b1"
+  "translationHash": "357c948301c1e892adffb80a356f23185cfc1b9a91cf41c0f44e089c69bd22e3"
 }

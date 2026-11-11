@@ -115,7 +115,7 @@ description: "记号拼不成语法。"
 
 `MalformedSlotDeclaration`
 
-一个写了两次 `default` 的 slot，或者一个既声明又填充的块。
+一个 slot 写了两次 `default`，或者一个既声明又填充的块：声明包含组件、属性、slot 行和 `@tag` 行，而填充只包含 widget（连同旁边的一行 `@tag` 也算）。
 
 ## DUI2020
 
@@ -139,4 +139,10 @@ description: "记号拼不成语法。"
 
 `MalformedContainer`
 
-读不通的列表（`[a, b]`）或 Map（`{ 键: 值 }`）：括号没有闭合、两个元素之间缺逗号，或者 Map 的一项不是 `键: 值`。
+读不通的列表（`[a, b]`）或 Map（`{ key: value }`）：括号没有闭合、两个元素之间缺逗号，或者 Map 的一项不是 `key: value`。struct 的第一项可以不带键。
+
+## DUI2024
+
+`MalformedTag`
+
+无法解析的 `@tag` 行：`@tag` 之后没有任何内容，或是一个数字或一个字符串，两个名称之间没有逗号，或末尾有逗号。还包括位于 `style` 中的 `@tag` 行，或直接位于 `for` / `each` 主体中。

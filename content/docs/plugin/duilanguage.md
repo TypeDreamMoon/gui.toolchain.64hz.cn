@@ -21,6 +21,14 @@ description: "`.dui` 语言"
 
 [阅读本节](/docs/dui/nodes-and-values#nodes-with-no-id)。
 
+## 标签：`@tag` [#tags-tag]
+
+[阅读本节](/docs/dui/nodes-and-values#tags-tag)。
+
+### 按标签查找控件 [#finding-widgets-by-tag]
+
+[阅读本节](/docs/dui/nodes-and-values#finding-widgets-by-tag)。
+
 ## 节点类型 [#node-types]
 
 [阅读本节](/docs/dui/nodes-and-values#node-types)。
@@ -33,9 +41,17 @@ description: "`.dui` 语言"
 
 [阅读本节](/docs/dui/nodes-and-values#values)。
 
+### 结构体作为字段映射 [#structs-as-field-maps]
+
+[阅读本节](/docs/dui/nodes-and-values#structs-as-field-maps)。
+
 ## 插槽行：`@slot` 与 `@fill` [#slot-lines-slot-and-fill]
 
 [阅读本节](/docs/dui/slots-and-components#slot-lines-slot-and-fill)。
+
+### `@slot Size` [#slot-size]
+
+[阅读本节](/docs/dui/slots-and-components#slot-size)。
 
 ## 组件：`+ Class` [#components--class]
 
@@ -44,6 +60,10 @@ description: "`.dui` 语言"
 ## 样式 [#styles]
 
 [阅读本节](/docs/dui/styles-and-resources#styles)。
+
+### 多个样式 [#several-styles]
+
+[阅读本节](/docs/dui/styles-and-resources#several-styles)。
 
 ## 资源 [#resources]
 
@@ -151,7 +171,7 @@ description: "`.dui` 语言"
 
 ## 诊断 [#diagnostics]
 
-[阅读本节](https://github.com/TypeDreamMoon/DreamGUI/blob/821d72037ead79c9b7055e30b912e7c4ad13277f/Docs/zh-CN/diagnostics/codes.md#diagnostics)。
+[阅读本节](https://github.com/TypeDreamMoon/DreamGUI/blob/002d87a3d835dab29e64dd240e4b223f6bf8a42f/Docs/zh-CN/diagnostics/codes.md#diagnostics)。
 
 ## 完整示例 [#a-worked-example]
 

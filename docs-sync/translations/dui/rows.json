@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "3ce78e734310bbb1d05ab1e64fae4b215df51bed0213ab33a2493a2a005ee247",
   "sourceRevision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
   "sources": [
     {
       "path": "Docs/language/rows.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "f1e39d582c43",
-      "translationHash": "696bea6d0e5c1c5bbb0be4d79e9f2ab07a4fbb37c6f9396d91188f1e04c89ecb"
+      "alignedRevision": "821d72037ead",
+      "alignedPage": "5ee30e16c8ff",
+      "translationHash": "a33c555b43db9a8e1b9d37a0d45dcde9db62b04fdf180789289f77b8cc990734"
     }
   ],
   "translationFile": "content/docs/dui/rows.md",
-  "translationHash": "f05f6442b9d069b1c90e44c0ecf62446bc93bc6b60177a0d6d8231e81e18e512"
+  "translationHash": "a08864af7387295c94568b42f6409c6c587158baac315d55235246a855259e56"
 }

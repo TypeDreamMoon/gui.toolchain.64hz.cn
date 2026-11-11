@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "0d526d3eb419b6dcf288ec379517863cb7c5de1097f7c2cf6f9767f9895d928d",
   "sourceRevision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
   "sources": [
     {
       "path": "Docs/language/nodes-and-values.md",
-      "alignedRevision": "67cb48788215",
-      "alignedPage": "197578ff76cf",
-      "translationHash": "8499d1457b58193721e4fed2fd55591b337b4bc3bcda75dc680833cf8e3d7209"
+      "alignedRevision": "821d72037ead",
+      "alignedPage": "78183cb533ed",
+      "translationHash": "9e9925268f974aa8b5dc984ce2e5ed4078de9510da3a04528aeb6dd8afae44a5"
     }
   ],
   "translationFile": "content/docs/dui/nodes-and-values.md",
-  "translationHash": "f34f80c142d9415c965a3b89b09ecdf2d1a99138fe4e7102b48873d89f32a54a"
+  "translationHash": "bd6eae65d622d5cd98d9dddbe60e7d362c2732a5f0a96807abfea68655bf8a72"
 }

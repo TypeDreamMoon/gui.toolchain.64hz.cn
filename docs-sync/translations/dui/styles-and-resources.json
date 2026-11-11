@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "fb1676550fa15def2d48a337c9a7344fe03a853b593224e0fb0ba19d8340e033",
   "sourceRevision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
   "sources": [
     {
       "path": "Docs/language/styles-and-resources.md",
-      "alignedRevision": "67cb48788215",
-      "alignedPage": "b9347dd6930b",
-      "translationHash": "45ef3ddcc6a0b54f8e186ba59b76ae94169ee082b51105de46d6ecfcc44e5bcc"
+      "alignedRevision": "821d72037ead",
+      "alignedPage": "7dbf2f487058",
+      "translationHash": "4b960f6fcfdbfb86cff0730175b1fdc2026789dce4f793f25342e6ffe9a24680"
     }
   ],
   "translationFile": "content/docs/dui/styles-and-resources.md",
-  "translationHash": "787d9a736e6c7ea134e55079d4c0baad91100eb3fad462b24ff7f5e08f0637c8"
+  "translationHash": "6bd536a4e426b3d81a260c894075c4eec11e37000fe488315108bff0ba455b58"
 }

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "fe95212935980adc196c197d2235f4593653acacb93db6fe7e90f6ca4156ec0a",
   "sourceRevision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
   "sources": [
     {
       "path": "Docs/language/slots-and-components.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "f345a1afa281",
-      "translationHash": "1e6afd2e34d6ca33293a3c051ad3e3ead64f80c9a7d9fa6c7c637909fee25499"
+      "alignedRevision": "821d72037ead",
+      "alignedPage": "fa0e88db355a",
+      "translationHash": "22aea8a5de0186e8f26fb13f3b7d381ef4b991e0e5653c4d123a4e54d727250c"
     }
   ],
   "translationFile": "content/docs/dui/slots-and-components.md",
-  "translationHash": "61993e5042cb1d6a64888459b514d495cd1b898604464a93681af2de753d27e1"
+  "translationHash": "cbb9f0f576dce37b03c54b04a13f4614fb82a10967ac0d872d559127160f9d36"
 }

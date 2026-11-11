@@ -107,4 +107,4 @@ Widget Detail {
 
 `ActiveRule` 是 `Transient`。私有的 `bHasBaselineAppearance`、`BaselineVisibility` 和 `BaselineRenderOpacity` 记录被规则临时覆盖的外观。它们故意不是 `UPROPERTY` 字段：这条记录跨加载没有意义，而且在组件应用另一个覆盖之前，没有什么需要恢复。
 
-这两个类都位于 [`Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/821d72037ead79c9b7055e30b912e7c4ad13277f/Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h)。文件名同时涵盖运行时绑定和响应式规则；没有单独的 `DreamDataBinding.h` 需要 include。
+这两个类都位于 [`Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/002d87a3d835dab29e64dd240e4b223f6bf8a42f/Source/DreamGUI/Public/Interaction/DreamResponsiveBinding.h)。文件名同时涵盖运行时绑定和响应式规则；没有单独的 `DreamDataBinding.h` 需要 include。

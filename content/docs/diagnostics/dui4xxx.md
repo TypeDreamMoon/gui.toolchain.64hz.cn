@@ -7,13 +7,13 @@ description: "值和它写在的属性对不上。"
 
 `UnknownProperty`
 
-没有这个名称的属性；会给出最接近的一个作为建议。
+没有该名称的属性；会给出最接近的一个作为建议。`@slot Size <- …` 就是其中之一：`Size` 是两个属性的简写，而绑定会分别指名 `MinDesiredSize` 和 `MaxDesiredSize`。
 
 ## DUI4002
 
 `UnknownPropertyPathSegment`
 
-一个点路径，其头部能解析而尾部不能。
+一个点路径，其头部能解析而尾部不能；或者 struct 的字段 Map 指名了该 struct 没有的字段。
 
 ## DUI4003
 
@@ -55,4 +55,4 @@ description: "值和它写在的属性对不上。"
 
 `ContainerTypeMismatch`
 
-列表写在了不是数组或 Set 的属性上、Map 写在了不是 Map 的属性上、单个值写在了容器属性上，或者节点的 Set/Map（只有数组能存节点 id）。
+列表写在了不是数组或 Set 的属性上、Map 写在了不是 Map 的属性上、单个值写在了容器属性上，或者节点的 Set/Map（只有数组能存节点 id）。在真正的 Map 上或在没有主字段的 struct 上，没有键的 Map 条目也算。

@@ -1,9 +1,9 @@
 {
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
-  "revision": "1c0b9f478b64c38e770976578a3419f4096be5f4",
+  "revision": "4f96efb2ce30618231546aa65042bc0cde0a3bc3",
   "workingTree": false,
-  "translationSnapshotHash": "7b6bdf27bd3563f422a0b67afd031ad261f03241842d9a202fb536a7614e700d",
+  "translationSnapshotHash": "57f02dd1f451281b293a20dcc94807a6bcfff724c31be9e7ed41ed6359cd1273",
   "pages": {
     "changelog/index": {
       "hash": "28daeeee2930f58e94f8a65671f885a9c8529d3c4ce98b052332dd5f1bb39290",
@@ -587,8 +587,8 @@
         "status": "current",
         "output": "content/docs/dui/bindings.md",
         "record": "docs-sync/translations/dui/bindings.json",
-        "outputHash": "a44f9ebc731e303e6b7a795d69eaf997968ff6a5863839f2002f1b23f4b8fa2a",
-        "bodyHash": "dbf15c77719f1faff33ac2ff038ca64c855fa68a5288fde08f23ae9e89f11b01"
+        "outputHash": "939308b91a8c363ce92c5005efa5821037b05452acb5e8488e68321e28de3884",
+        "bodyHash": "ee31bc4a9ba2819945e1e0be6295cf2ec9ea387674b5169ca62e2555c3ec36e2"
       }
     },
     "dui/components": {
@@ -851,8 +851,8 @@
         "status": "current",
         "output": "content/docs/dui/write-back.md",
         "record": "docs-sync/translations/dui/write-back.json",
-        "outputHash": "b1bc61754bcf3d438a8c3c700d8ce65763a25caca6a31a92b731dc167f046b9b",
-        "bodyHash": "76a0833104b18b3d461e3db585e059013c14f760fc06c3f9390dea02a0a6ecc8"
+        "outputHash": "69203ae4a4f51519d9d52e98ddb3217807b92092eded5144147ea77200884ac1",
+        "bodyHash": "a187869315b5f8a05d06c2ece26712de4558ed2d5fd025042ac615db22bd22bc"
       }
     },
     "guides/fonts-and-packaging": {
@@ -895,8 +895,8 @@
         "status": "current",
         "output": "content/docs/guides/migration.md",
         "record": "docs-sync/translations/guides/migration.json",
-        "outputHash": "04197e19b97d8f6b93f99beba2e7a3ad53a8b1c79f92be4f74677912047cb233",
-        "bodyHash": "6bf314ba79764f699201e428f57cec460e01575ad0c5a4d9fd91d7ae9f2f2be5"
+        "outputHash": "cb8118b676f1d7bd0943c7dea2773869ec21b4cf23dc74b386c66272d68144c6",
+        "bodyHash": "2da9f8a08d5f5fce633e46607cbaee90bd7309a3fc6009ad24bd4ed737337229"
       }
     },
     "guides/platforms": {
@@ -2872,12 +2872,11 @@
         }
       ],
       "translation": {
-        "status": "outdated",
+        "status": "current",
         "output": "content/docs/start/project-layout.md",
         "record": "docs-sync/translations/start/project-layout.json",
-        "pending": 1,
-        "outputHash": "db929419201c54ea3cffe38fd5a12d637dffab65d695835899a2a40100aedf20",
-        "bodyHash": "ea3118f64683edd1b2a12778f280c8c11496d99cbd36c286749bd010fd5f50b6"
+        "outputHash": "006f0397ed45770f9477b83b133340927f7236245ec116e1a9df0ecdac81e804",
+        "bodyHash": "773444c744319a25735464b333d67dcc37810937f467e4a65bfbb2b31e9de41e"
       }
     },
     "start/workflow": {
@@ -3052,8 +3051,8 @@
         "status": "current",
         "output": "content/docs/plugin/duilanguage.md",
         "record": "docs-sync/translations/plugin/duilanguage.json",
-        "outputHash": "1aae500495f804added01e2fe881e374b72571e56b16af232b9965f99883ce75",
-        "bodyHash": "dbdc4e4190fe15516de0ef62be5d2dd893e7ea0b4efe110bd47128acf7896dd1"
+        "outputHash": "a5b52c3134137697523ec737fc5f46f1dfb70b78b8e6584a15400486811004c0",
+        "bodyHash": "2e1ca63300be16ac078d851e0d017b7b70eb25befede518566096cb6ee51ad54"
       }
     },
     "plugin/concepts/backdrop-effects": {
@@ -3247,7 +3246,11 @@
         }
       ],
       "translation": {
-        "status": "missing"
+        "status": "current",
+        "output": "content/docs/plugin/contributing/index.md",
+        "record": "docs-sync/translations/plugin/contributing/index.json",
+        "outputHash": "b792b58464c4f0b1fadde2a49d196274dc03b6c5fe32eafe05cb83c9bec8b755",
+        "bodyHash": "f506ea6c4877f18765df14eff7663013afe6ba0261bb4e2f63a85b02668c71c6"
       }
     },
     "plugin/guides/layered-document-import": {
@@ -3331,7 +3334,11 @@
         }
       ],
       "translation": {
-        "status": "missing"
+        "status": "current",
+        "output": "content/docs/plugin/tools/ai-agents.md",
+        "record": "docs-sync/translations/plugin/tools/ai-agents.json",
+        "outputHash": "569e89312005b129b9b21d6aa6983d115ee1eb80872d7623bb8caa126537b347",
+        "bodyHash": "1978f2bdf7bb520bc128ea8bcff0fbb58c07d00ec469d625d9dd1179463fed96"
       }
     }
   }

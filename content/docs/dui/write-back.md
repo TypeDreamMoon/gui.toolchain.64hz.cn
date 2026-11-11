@@ -62,4 +62,4 @@ description: "设计器是 .dui 的前端——一次编辑写进哪一行、手
 
 **每个文件只有一个文档，而不是每个编辑器窗口一个**。两个工具包为同一个文件持有各自独立的文档时，会有独立的文本和磁盘哈希：其中一个里的撤销在另一个看来可能像是外部编辑，导致这些窗口不断重新加载并覆盖彼此的状态。
 
-`FDreamUIDocumentRegistry` 通过把规范化后的绝对路径用作键来防止这种情况。注册表持有弱引用；调用方通过 `FDreamUIDocumentHandle` 保留文档，这是一个只可移动、不可复制的有作用域句柄。文档 API 和这一所有权契约声明于 [`Source/DreamGUIEditor/Public/Text/DreamUIDocument.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/1c0b9f478b64c38e770976578a3419f4096be5f4/Source/DreamGUIEditor/Public/Text/DreamUIDocument.h)。
+`FDreamUIDocumentRegistry` 通过把规范化后的绝对路径用作键来防止这种情况。注册表持有弱引用；调用方通过 `FDreamUIDocumentHandle` 保留文档，这是一个只可移动、不可复制的有作用域句柄。文档 API 和这一所有权契约声明于 [`Source/DreamGUIEditor/Public/Text/DreamUIDocument.h`](https://github.com/TypeDreamMoon/DreamGUI/blob/4f96efb2ce30618231546aa65042bc0cde0a3bc3/Source/DreamGUIEditor/Public/Text/DreamUIDocument.h)。

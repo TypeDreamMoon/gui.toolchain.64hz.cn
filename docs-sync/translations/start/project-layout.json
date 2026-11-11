@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "0dfbb79c5758a52a515fd8cb995c5f21f889fb205ad1cbd1d94dee8529a1a2d6",
   "sourceRevision": "1c0b9f478b64c38e770976578a3419f4096be5f4",
   "sources": [
     {
       "path": "Docs/getting-started/project-layout.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "a246599f6298",
-      "translationHash": "fdd31346b38b0061bf9c71b5666fc575a8cd0ec0b88942857e48436dad02466d"
+      "alignedRevision": "1c0b9f478b64",
+      "alignedPage": "46d412b97276",
+      "translationHash": "6ad652e6e24ee0bcef6d085f29d1a863ed380d7a26e72380df9b7b61dcd0d617"
     }
   ],
   "translationFile": "content/docs/start/project-layout.md",
-  "translationHash": "db929419201c54ea3cffe38fd5a12d637dffab65d695835899a2a40100aedf20"
+  "translationHash": "006f0397ed45770f9477b83b133340927f7236245ec116e1a9df0ecdac81e804"
 }

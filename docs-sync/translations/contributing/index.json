@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "current",
+  "sourceHash": "69e9a3aa8fc39ab9f106edaaed4dcddc8cb6073738095908c6df088ecc987d17",
+  "sourceRevision": "4f96efb2ce30618231546aa65042bc0cde0a3bc3",
+  "sources": [
+    {
+      "path": "Docs/contributing/index.md",
+      "alignedRevision": "1c0b9f478b64",
+      "alignedPage": "abfb6a2031b6",
+      "translationHash": "ad06e201ddf6b3cfc2314abe80526b946a4c960444c4c86ca4dd5a4a34034501"
+    }
+  ],
+  "translationFile": "content/docs/contributing/index.md",
+  "translationHash": "4280616891956973e100848c62b2be619093e40a404aedc34e1f518a12636267"
+}

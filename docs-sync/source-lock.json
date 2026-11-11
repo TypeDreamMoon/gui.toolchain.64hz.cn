@@ -313,6 +313,28 @@
         "bodyHash": "eeffc9b58b8205c76731fd2bf41f7ddaeca64156e5ff4ea9d9a26d028804b771"
       }
     },
+    "contributing/index": {
+      "hash": "69e9a3aa8fc39ab9f106edaaed4dcddc8cb6073738095908c6df088ecc987d17",
+      "revision": "4f96efb2ce30618231546aa65042bc0cde0a3bc3",
+      "output": "content/docs/contributing/index.en.md",
+      "outputHash": "313f87d7e0c9a05cfea4223d4dc2b75839250016aeda4393f893c8be4b30ddfa",
+      "locale": "en",
+      "format": "md",
+      "title": "Contributing",
+      "sources": [
+        {
+          "path": "Docs/contributing/index.md",
+          "hash": "f6db87066c5c6a7017d029762c738fd06c9ecaaf9befef4a4c5e79196a42ee41"
+        }
+      ],
+      "translation": {
+        "status": "current",
+        "output": "content/docs/contributing/index.md",
+        "record": "docs-sync/translations/contributing/index.json",
+        "outputHash": "4280616891956973e100848c62b2be619093e40a404aedc34e1f518a12636267",
+        "bodyHash": "a086fddbb2dfcbd5f58e4b607a091e10bc7292e0ead0664dcdf54396d8bb4c24"
+      }
+    },
     "controls/index": {
       "hash": "ed5e6714fe709aa8878f1f51be053a65daa2fde6218374df64e888a9dc0cd877",
       "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
@@ -2899,6 +2921,28 @@
         "record": "docs-sync/translations/start/workflow.json",
         "outputHash": "fd26c1926ddc908c4ab4e68d947f6c9f2c174db966631e34af4d3332faa4942a",
         "bodyHash": "f219321f90d570b9387d522d34ac013c3a9a8a0b2b034b65c960e2cae793f7d7"
+      }
+    },
+    "tools/ai-agents": {
+      "hash": "cb1607c14cbb09a045f70f60671f4ba69fbf5bc3751652e36038727f5ac22c7c",
+      "revision": "4f96efb2ce30618231546aa65042bc0cde0a3bc3",
+      "output": "content/docs/tools/ai-agents.en.md",
+      "outputHash": "684ed45763e982b8f9f38efc512718116e487ad3dbca8d009fbee26d8f74a1f3",
+      "locale": "en",
+      "format": "md",
+      "title": "Working with AI agents",
+      "sources": [
+        {
+          "path": "Docs/tools/ai-agents.md",
+          "hash": "cbd520c7ef13141b9edf63821d893070ec63286d071e148b83a9c7ad780fcd65"
+        }
+      ],
+      "translation": {
+        "status": "current",
+        "output": "content/docs/tools/ai-agents.md",
+        "record": "docs-sync/translations/tools/ai-agents.json",
+        "outputHash": "858be51006293cb89d2933dd02d32c789778cce6bb71b052f491208ef8bac003",
+        "bodyHash": "b6fc0044cbc668e69f4760cb4b519bc43968a0fb2e381bd61505833697fa34c9"
       }
     },
     "tools/bench": {

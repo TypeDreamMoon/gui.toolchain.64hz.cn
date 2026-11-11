@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "current",
+  "sourceHash": "cb1607c14cbb09a045f70f60671f4ba69fbf5bc3751652e36038727f5ac22c7c",
+  "sourceRevision": "4f96efb2ce30618231546aa65042bc0cde0a3bc3",
+  "sources": [
+    {
+      "path": "Docs/tools/ai-agents.md",
+      "alignedRevision": "1c0b9f478b64",
+      "alignedPage": "e3a62e44ef04",
+      "translationHash": "5a416cfc00d44a1e637d8aaf51a59bc1a21371f0e6724415202d353abfefa7cf"
+    }
+  ],
+  "translationFile": "content/docs/tools/ai-agents.md",
+  "translationHash": "858be51006293cb89d2933dd02d32c789778cce6bb71b052f491208ef8bac003"
+}

@@ -3,8 +3,6 @@ title: "打包游戏中的字体"
 description: "打包游戏中的字体"
 ---
 
-# 打包游戏中的字体 [#fonts-in-a-packaged-game]
-
 DreamGUI 文本要在打包游戏里看起来和编辑器里一样，需要哪些条件：哪些字体会自己打包进去、哪些需要你添加、如何添加彩色 emoji 字体、游戏必须随包打包哪些 ICU 数据，以及如何检查一个包。这里的一切都是插件在 Win64 上的行为；没有构建过其他平台（见 README 的[平台](https://gui.toolchain.64hz.cn/en/docs/guides/platforms)）。
 
 ## 1. 哪些会自己打包进去 [#1-what-ships-by-itself]

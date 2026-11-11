@@ -3,8 +3,6 @@ title: "`.dui` 语言"
 description: "`.dui` 语言"
 ---
 
-# `.dui` 语言 [#the-dui-language]
-
 语言参考按主题组织。这些链接保留了之前单文件手册中的章节名称。
 
 ## 文件所在位置 [#where-a-file-lives]

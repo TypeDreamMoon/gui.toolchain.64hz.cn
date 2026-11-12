@@ -18,6 +18,7 @@ description: "UDreamRadioButton"
     /Script/DreamGUIControls.DreamRadioButton OptionA {
         bIsOn = true
         OnToggleChanged -> HandleOptionA
+    }
 
 ## 属性 [#properties]
 

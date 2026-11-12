@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "a645f071331fc746644dfcdc8f24fc347e7a154a1d14c8c0ad35d515ba18662d",
   "sourceRevision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
   "sources": [
     {
       "path": "Docs/guides/pitfalls.md",
-      "alignedRevision": "821d72037ead",
-      "alignedPage": "4db8d20b722e",
-      "translationHash": "23772dc8f36747411082e79d690ef57232bd85e8eeca1ad1e5ebf853063cfd17"
+      "alignedRevision": "94ee492e1e97",
+      "alignedPage": "177ca668420f",
+      "translationHash": "c807130fff1bb213b57d9ca0465da56791f710cf5dd7e182aec3cc2acf21f98f"
     }
   ],
   "translationFile": "content/docs/plugin/guides/pitfalls.md",
-  "translationHash": "af00ffaff9498c1bc0f0519d9ad1fd46af9fda3fd26cbe4ad003d1f2291e38a9"
+  "translationHash": "efbb3d806ed22a99c40aa5afa8b31da72f1d7337f9187bfcf9bcae05405ecbd4"
 }

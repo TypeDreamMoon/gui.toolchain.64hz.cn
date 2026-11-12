@@ -25,6 +25,7 @@ USpinBox 的务实内核：一个数字、一个范围、一个步进——以�
         Value = 5
         MaxValue = 10
         OnValueChanged -> HandleCount
+    }
 
 ## 属性 [#properties]
 

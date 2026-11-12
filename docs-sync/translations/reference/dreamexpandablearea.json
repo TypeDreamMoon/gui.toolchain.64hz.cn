@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "66a425dc5508279d55990fa532d88b6b2af17ea9b78627e040b13897ac45a79c",
   "sourceRevision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
   "sources": [
     {
       "path": "Docs/Reference/DreamExpandableArea.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "b3e658ca0e41",
-      "translationHash": "43b16a32d3ad805a86431d3be9071b84e00887a75718f396c329a00377a82f62"
+      "alignedRevision": "94ee492e1e97",
+      "alignedPage": "8e71a521bb6b",
+      "translationHash": "0e244e44e6142b80ee5ca0cfadb6c1793dafc441111584c5b3410f9ab9dfae0d"
     }
   ],
   "translationFile": "content/docs/reference/dreamexpandablearea.md",
-  "translationHash": "0b40c46d5718168051a8a5689bae6c855934aed72f6fc0c65866707b4e759be4"
+  "translationHash": "f1694d95389816bc40e10ef93c5d3740bc0c6547e1b1c26583279c7f535ff51b"
 }

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "52fe3eed2a0a095d4ea1912826658634c36b690fe4510242ca67e8c6f967bfa0",
   "sourceRevision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
   "sources": [
     {
       "path": "Docs/Reference/DreamDialog.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "2e1eef5c9a0b",
-      "translationHash": "21e9a7d437ca7165415d8ab753e17ff4db065ad19b44e41b213bdff92a8f90bc"
+      "alignedRevision": "94ee492e1e97",
+      "alignedPage": "666969fd73dc",
+      "translationHash": "8500a0c54d96f9668954f1b78d002b78976632da472fd9c9431dad7ad6621526"
     }
   ],
   "translationFile": "content/docs/reference/dreamdialog.md",
-  "translationHash": "58c7cbf97f7a9489980b422311defdc1db8ecca0d4f3c70ba276d324553d1eec"
+  "translationHash": "de635e08d149e9b222692a503e6c7b76c4cb7cad1a68a92837ed62111e0a11e2"
 }

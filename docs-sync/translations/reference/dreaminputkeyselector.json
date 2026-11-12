@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "8ff25284d82f2909d91821e46141bc489a7de141aa32dd2d0532269bea04a632",
   "sourceRevision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
   "sources": [
     {
       "path": "Docs/Reference/DreamInputKeySelector.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "81ebb5a76f5f",
-      "translationHash": "53a73de31b0ab6ba1df499fa6314a2f05b9a2cf6519b4a20d127bb7f26f708f2"
+      "alignedRevision": "94ee492e1e97",
+      "alignedPage": "8ac373a167f6",
+      "translationHash": "e4f826c579336f47c89688c1940ece8ffbcff29a57ee2afa62f9bdd3075071ec"
     }
   ],
   "translationFile": "content/docs/reference/dreaminputkeyselector.md",
-  "translationHash": "fefc31f4a576d54d94a9f2d6239769ae16a94937b8fdafc447aeaea159e29ad4"
+  "translationHash": "b803563a09e084049788d4182844eaf7c938f2d6992f4e46cf4ec3c0fa81d23f"
 }

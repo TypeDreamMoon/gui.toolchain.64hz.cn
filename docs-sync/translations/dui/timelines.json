@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "8c44d9ea83b346e9eb8fd592a1bdc35fd262652cb972854a4c2a338773e8dfa1",
   "sourceRevision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
   "sources": [
     {
       "path": "Docs/language/timelines.md",
-      "alignedRevision": "8f976bed5d73",
-      "alignedPage": "daedd7e45687",
-      "translationHash": "aaf7eaf33de972487d254d25aa50f63c358da2774b07addc45541baeb0d39e0e"
+      "alignedRevision": "94ee492e1e97",
+      "alignedPage": "07938ab5de85",
+      "translationHash": "26d2c42189d6efdcaffa2a80c9d285dddd1fdd91556df22d42693c1d64c49f2f"
     }
   ],
   "translationFile": "content/docs/dui/timelines.md",
-  "translationHash": "0125245ffed9bb6ea59256b75122cb334349da134139c59680c184b534dc3aac"
+  "translationHash": "5d705f695a4b6679b98f8f699c7c16104cf24b1f4067b39e2bb9f2d134a01ace"
 }

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "current",
+  "sourceHash": "c5ff90b4d696cf213e8e95c0de3044ecf8ed992400cf8aebb216376173d363ff",
+  "sourceRevision": "04f38a382a2fd3a2ec4ce54d770a0a8530c0b92c",
+  "sources": [
+    {
+      "path": "Docs/diagnostics/codes.md",
+      "alignedRevision": "94ee492e1e97",
+      "alignedPage": "f0cfc7447bfb",
+      "translationHash": "6bbd2e7a819faec53896ba0ed14fc2b9284af852484eecf4045401b1f8ca0f16"
+    }
+  ],
+  "translationFile": "content/docs/diagnostics/dui8xxx.md",
+  "translationHash": "03d270dbd643c42cd50b5c455c2044ab141d1bafbcdb7ab142b01a6716e60ca2"
+}

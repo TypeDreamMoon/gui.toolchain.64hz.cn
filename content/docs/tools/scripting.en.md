@@ -140,7 +140,7 @@ the parent class and the `.dui` it names. Every compiler message is logged and t
 failed. The manifest's format and the rest are in [Workflow](/en/docs/start/workflow#one-file-two-ways-in).
 
 To check, compile or lay out one file without writing a manifest, `.skill/dui.ps1` asks the engine what the
-[DreamMCP endpoint](/en/docs/plugin/tools/dreammcp) answers: `check <file>` / `check -All` (writes nothing), `compile <file>` (the Blueprint
+[DreamMCP endpoint](/en/docs/tools/dreammcp) answers: `check <file>` / `check -All` (writes nothing), `compile <file>` (the Blueprint
 the `class` line names, components first), `layout <file> -Width -Height -Sizes` (every node's rect and the layout
 problems). It uses an editor that is serving the project, or starts a headless host for the call, and exits 0 when the
 source has no error, 1 when it has, 2 when it could not run.

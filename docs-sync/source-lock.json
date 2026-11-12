@@ -569,6 +569,30 @@
         "bodyHash": "a33a9fd8cbc04386c0e636e102d6acee0270164e73951a1af0c10ff24942da1c"
       }
     },
+    "diagnostics/dui8xxx": {
+      "hash": "c5ff90b4d696cf213e8e95c0de3044ecf8ed992400cf8aebb216376173d363ff",
+      "revision": "04f38a382a2fd3a2ec4ce54d770a0a8530c0b92c",
+      "output": "content/docs/diagnostics/dui8xxx.en.md",
+      "outputHash": "0e10678159163278c505efe52f4096325e158ed8c44f40d09c74a3ef669919c6",
+      "locale": "en",
+      "format": "md",
+      "title": "DUI8xxx · Layout",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI8",
+          "hash": "28dc8097ed3ee0a6376415d0d7a2a5b138e42f3a983eaaf200ed4bda0b336e8c"
+        }
+      ],
+      "translation": {
+        "status": "current",
+        "output": "content/docs/diagnostics/dui8xxx.md",
+        "record": "docs-sync/translations/diagnostics/dui8xxx.json",
+        "outputHash": "03d270dbd643c42cd50b5c455c2044ab141d1bafbcdb7ab142b01a6716e60ca2",
+        "bodyHash": "919c4c22a0b945017e43059757cc94eddcc2df03451a7853d18207b17d77948e"
+      }
+    },
     "diagnostics/index": {
       "hash": "19583c651ba36c4b599eee72e6dcd9d2ebda11be4db201c31dcb4dc8a7e749bd",
       "revision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
@@ -2924,10 +2948,10 @@
       }
     },
     "tools/ai-agents": {
-      "hash": "13ee007b270edebd35d2da842d781e61b3358392198a703530f6b91a01ce7658",
-      "revision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
+      "hash": "553a4e75f7c0b0e74db4e928dd324111466be85ff17c05d492689e20d061a31d",
+      "revision": "04f38a382a2fd3a2ec4ce54d770a0a8530c0b92c",
       "output": "content/docs/tools/ai-agents.en.md",
-      "outputHash": "e1231b4a96aac1e31e55f65b685ec009c7481e91001941901bf6c5048b0617b0",
+      "outputHash": "0251cc869fd811c26e9079cf97c2db64c9a6a2fa8789ad176821a2739f8d14d7",
       "locale": "en",
       "format": "md",
       "title": "Working with AI agents",
@@ -2941,8 +2965,8 @@
         "status": "current",
         "output": "content/docs/tools/ai-agents.md",
         "record": "docs-sync/translations/tools/ai-agents.json",
-        "outputHash": "b4ce1b7ff01ed0178c2097853a2a5426f4870da9a42c19a989012c9696da4f8d",
-        "bodyHash": "ff679d7699accbd7998f0c08e3ac8b6b927e777a6d756627a163a2df1e6f8712"
+        "outputHash": "d3c79d45faf46a119f74b7e64500e4d5e9ea992a16db035279e1cffb4e5f5923",
+        "bodyHash": "3b69cd4bcd25dccfa148ec95272e77ee0cda1aa96117483250097f187fae3c20"
       }
     },
     "tools/bench": {
@@ -3011,11 +3035,33 @@
         "bodyHash": "724eaa3513b1e9f3b69308479c87bf4544ce8b9e467740765ebd5fc853078a84"
       }
     },
+    "tools/dreammcp": {
+      "hash": "2bdcdcc27e991a4024ce0dec9ba82f34578915b0591cce58d37ecc69b3958d38",
+      "revision": "04f38a382a2fd3a2ec4ce54d770a0a8530c0b92c",
+      "output": "content/docs/tools/dreammcp.en.md",
+      "outputHash": "b63bb861c09a7f619f4d72d27b85bc480302aad96f0f7af894227465403c3087",
+      "locale": "en",
+      "format": "md",
+      "title": "DreamMCP endpoint",
+      "sources": [
+        {
+          "path": "Docs/tools/dreammcp.md",
+          "hash": "c715c32ffcb8c844bba52e39bb7baaa510558c692983e21fbb5a533bd38c4a42"
+        }
+      ],
+      "translation": {
+        "status": "current",
+        "output": "content/docs/tools/dreammcp.md",
+        "record": "docs-sync/translations/tools/dreammcp.json",
+        "outputHash": "bd77ea0e7303519fc74d74ca7a5c7e82b88293967237ff758068f28b26ce6643",
+        "bodyHash": "2755d67ab664f64b5bd0fab2d4619efceb759c705279a7334d0a12320780a3ad"
+      }
+    },
     "tools/scripting": {
-      "hash": "29379fcb2914496f722924ed2ea1ca8bf778fc9d3bb8e3aba642c21f996df46c",
-      "revision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
+      "hash": "d124d9500db49bb7967a5c7ace24efb0cde7c7558ee38aad8bab73a22c2135cb",
+      "revision": "04f38a382a2fd3a2ec4ce54d770a0a8530c0b92c",
       "output": "content/docs/tools/scripting.en.md",
-      "outputHash": "2b99e22f9befe4f8d1d095b83b2787c8bac2312fe01bc9881f9eead69ea84e84",
+      "outputHash": "f7445728a6077ed2e347fd2d8a510f3eac7e3e41db56447930e25f8bc875d4f5",
       "locale": "en",
       "format": "md",
       "title": "Scripting and code entry points",
@@ -3029,8 +3075,8 @@
         "status": "current",
         "output": "content/docs/tools/scripting.md",
         "record": "docs-sync/translations/tools/scripting.json",
-        "outputHash": "7b2b2a66a482737a5c1d91eaea35deec1fbfcfac2d1773237c66e721af85a6ea",
-        "bodyHash": "1c852fd646f3413335ae41fb221636537ad87b41178fbd7b7dd6512d1a9f9500"
+        "outputHash": "76482a3277b95ef86bc66a4fa81fdd212e370ff28a60628380843b807d4491d5",
+        "bodyHash": "0a977b6ed34de17bc837b86a3fbc1222c2f2bf14874eb7634895c817a9b4a19a"
       }
     },
     "tools/tests": {

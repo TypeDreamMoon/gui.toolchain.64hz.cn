@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "29379fcb2914496f722924ed2ea1ca8bf778fc9d3bb8e3aba642c21f996df46c",
-  "sourceRevision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
+  "sourceHash": "d124d9500db49bb7967a5c7ace24efb0cde7c7558ee38aad8bab73a22c2135cb",
+  "sourceRevision": "04f38a382a2fd3a2ec4ce54d770a0a8530c0b92c",
   "sources": [
     {
       "path": "Docs/tools/scripting.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/tools/scripting.md",
-  "translationHash": "7b2b2a66a482737a5c1d91eaea35deec1fbfcfac2d1773237c66e721af85a6ea"
+  "translationHash": "76482a3277b95ef86bc66a4fa81fdd212e370ff28a60628380843b807d4491d5"
 }

@@ -12,7 +12,7 @@ see what it made. All of it is in the plugin.
 
 | Piece | Where | What it gives the agent |
 | --- | --- | --- |
-| DreamMCP | the [endpoint](/en/docs/plugin/tools/dreammcp), reached through a [DreamMCP server](https://github.com/TypeDreamMoon/dream-mcp) as the `dream_gui` tool | `check`, `compile`, `diagnostics`, `lookup`, `layout` (every node's rect in pixels and the layout problems, in words), `preview` (a picture and its figures), `info` — in the user's editor or a background engine, in a fraction of a second |
+| DreamMCP | the [endpoint](/en/docs/tools/dreammcp), reached through a [DreamMCP server](https://github.com/TypeDreamMoon/dream-mcp) as the `dream_gui` tool | `check`, `compile`, `diagnostics`, `lookup`, `layout` (every node's rect in pixels and the layout problems, in words), `preview` (a picture and its figures), `info` — in the user's editor or a background engine, in a fraction of a second |
 | The skills | `.skill/dream-gui-create`, `-verify`, `-diagnose`; published into `.claude/skills/` by `.skill/sync-skills.ps1` | Fixed steps, one command each: look names up, write, check, lay out, fix |
 | The references | `.skill/reference/`: `dui.md` (the whole language on one page), `example.md`, `pitfalls.md`, `controls.md`, `diagnostics.md` | What an author needs, each page standing alone; DreamMCP serves them through `reference` |
 | The agent guide | `AGENTS.md` at the plugin's root; `CLAUDE.md` imports it | The loop below and the rules agents get wrong |
@@ -65,7 +65,7 @@ project's `DUI/` folder exists.
 ### With the editor open
 
 The editor serves DreamMCP itself while *Project Settings ▸ Plugins ▸ Dream GUI ▸ Editor ▸ Enable DreamMCP Endpoint* is
-on ([the endpoint](/en/docs/plugin/tools/dreammcp)), so the agent's calls go to it, and a compile leaves the Blueprints in memory for you to save, as saving a
+on ([the endpoint](/en/docs/tools/dreammcp)), so the agent's calls go to it, and a compile leaves the Blueprints in memory for you to save, as saving a
 `.dui` does. Saving a `.dui` also recompiles the **loaded** classes built from it
 ([save to recompile](/en/docs/start/workflow#save-to-recompile)), and the editor rewrites
 `DUI/.dui-diagnostics.json` after each compile.

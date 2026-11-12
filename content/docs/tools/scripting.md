@@ -110,7 +110,7 @@ UnrealEditor-Cmd.exe <project>.uproject -run=DreamUICompileWidgets -Manifest=Too
 
 `-All` 会重新编译已存在的基于文本的控件蓝图；清单还会创建缺失的那些，每个都带有父类及其指定的 `.dui`。每条编译器消息都会写入日志，只要有失败，退出码就为非零。清单的格式及其他内容见 [工作流](/docs/start/workflow#one-file-two-ways-in)。
 
-要检查、编译或布局单个文件而无需编写清单，`.skill/dui.ps1` 会向引擎询问 [DreamMCP 端点](/docs/plugin/tools/dreammcp) 会回答什么：`check <file>` / `check -All`（不写入任何内容）、`compile <file>`（`class` 行指定的蓝图，先处理组件）、`layout <file> -Width -Height -Sizes`（每个节点的矩形和布局问题）。它使用正在服务该项目的编辑器，或为此次调用启动无头宿主，并在源文件没有错误时以 0 退出，有错误时以 1 退出，无法运行时以 2 退出。
+要检查、编译或布局单个文件而无需编写清单，`.skill/dui.ps1` 会向引擎询问 [DreamMCP 端点](/docs/tools/dreammcp) 会回答什么：`check <file>` / `check -All`（不写入任何内容）、`compile <file>`（`class` 行指定的蓝图，先处理组件）、`layout <file> -Width -Height -Sizes`（每个节点的矩形和布局问题）。它使用正在服务该项目的编辑器，或为此次调用启动无头宿主，并在源文件没有错误时以 0 退出，有错误时以 1 退出，无法运行时以 2 退出。
 
 ```powershell
 pwsh -NoProfile -File Plugins/DreamGUI/.skill/dui.ps1 check -All

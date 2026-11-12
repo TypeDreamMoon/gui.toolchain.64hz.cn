@@ -2,7 +2,7 @@
   "version": 2,
   "status": "current",
   "sourceHash": "2bdcdcc27e991a4024ce0dec9ba82f34578915b0591cce58d37ecc69b3958d38",
-  "sourceRevision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
+  "sourceRevision": "04f38a382a2fd3a2ec4ce54d770a0a8530c0b92c",
   "sources": [
     {
       "path": "Docs/tools/dreammcp.md",
@@ -11,6 +11,6 @@
       "translationHash": "898f38a93af36408d3607688eb760dc715c6125a5ac0eaec19e55138a911118e"
     }
   ],
-  "translationFile": "content/docs/plugin/tools/dreammcp.md",
+  "translationFile": "content/docs/tools/dreammcp.md",
   "translationHash": "bd77ea0e7303519fc74d74ca7a5c7e82b88293967237ff758068f28b26ce6643"
 }

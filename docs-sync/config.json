@@ -309,6 +309,21 @@
       "descriptionZh": "设计器的改动没法写回文本。"
     },
     {
+      "id": "diagnostics/dui8xxx",
+      "sources": [
+        {
+          "path": "Docs/diagnostics/codes.md",
+          "heading": "Diagnostics",
+          "diagnosticPrefix": "DUI8"
+        }
+      ],
+      "format": "md",
+      "title": "DUI8xxx · Layout",
+      "description": "A compiled screen, laid out at a viewport size, shows a problem. From DreamMCP's layout and preview only.",
+      "titleZh": "DUI8xxx · 布局",
+      "descriptionZh": "编译后的界面在某个视口尺寸下布局出了问题。只来自 DreamMCP 的 layout 和 preview。"
+    },
+    {
       "id": "diagnostics/index",
       "sources": [
         {
@@ -1528,6 +1543,17 @@
       "format": "md",
       "title": "The widget designer",
       "description": "The DreamUI Designer, rebuilt against UMG's — picking by rect, resize handles and the anchor medallion, marquee selection and drag-to-reparent, the palette, the details panel, components, undo, the source-file menu, event routes, the Content Browser's menu and thumbnails, and what it can and cannot change on a class backed by a .dui."
+    },
+    {
+      "id": "tools/dreammcp",
+      "sources": [
+        {
+          "path": "Docs/tools/dreammcp.md"
+        }
+      ],
+      "format": "md",
+      "title": "DreamMCP endpoint",
+      "description": "The HTTP endpoint a DreamMCP server reaches DreamGUI through — check, compile, layout, preview, diagnostics, lookup and info for .dui screens, in the user's editor or in a host the server starts — with what layout lists, the layout rules and their thresholds, and what preview measures."
     },
     {
       "id": "tools/scripting",

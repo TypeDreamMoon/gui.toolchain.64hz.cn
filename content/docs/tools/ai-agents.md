@@ -9,7 +9,7 @@ description: "AI 智能体在编写 .dui 时可以借助的资源——DreamMCP 
 
 | 组成部分 | 位置 | 为智能体提供什么 |
 | --- | --- | --- |
-| DreamMCP | 通过 [DreamMCP 服务器](https://github.com/TypeDreamMoon/dream-mcp) 以 `dream_gui` 工具的形式访问的[端点](/docs/plugin/tools/dreammcp) | `check`、`compile`、`diagnostics`、`lookup`、`layout`（每个节点的像素矩形和布局问题，用文字描述）、`preview`（一张图片及其数值）、`info`——在用户的编辑器或后台引擎中，只需几分之一秒 |
+| DreamMCP | 通过 [DreamMCP 服务器](https://github.com/TypeDreamMoon/dream-mcp) 以 `dream_gui` 工具的形式访问的[端点](/docs/tools/dreammcp) | `check`、`compile`、`diagnostics`、`lookup`、`layout`（每个节点的像素矩形和布局问题，用文字描述）、`preview`（一张图片及其数值）、`info`——在用户的编辑器或后台引擎中，只需几分之一秒 |
 | skills | `.skill/dream-gui-create`、`-verify`、`-diagnose`；由 `.skill/sync-skills.ps1` 发布到 `.claude/skills/` | 固定步骤，每步一条命令：查名称、编写、检查、布局、修复 |
 | 参考文档 | `.skill/reference/`：`dui.md`（整门语言浓缩于一页）、`example.md`、`pitfalls.md`、`controls.md`、`diagnostics.md` | 作者所需的内容，每页均可独立使用；DreamMCP 通过 `reference` 提供它们 |
 | 智能体指南 | 插件根目录下的 `AGENTS.md`；`CLAUDE.md` 导入它 | 下文的循环流程，以及智能体容易出错的规则 |
@@ -50,7 +50,7 @@ pwsh -NoProfile -File Plugins/DreamGUI/.skill/dui.ps1 layout DUI/Hello.dui -Size
 
 ### 在编辑器打开的情况下 [#with-the-editor-open]
 
-当 *Project Settings ▸ Plugins ▸ Dream GUI ▸ Editor ▸ Enable DreamMCP Endpoint* 开启时（[端点](/docs/plugin/tools/dreammcp)），编辑器自己就会提供 DreamMCP 服务，因此智能体的调用会发往它，而一次编译会把蓝图留在内存中供你保存，就像保存 `.dui` 一样。保存 `.dui` 还会重新编译由它构建的**已加载**类（[保存以重新编译](/docs/start/workflow#save-to-recompile)），并且编辑器会在每次编译后重写 `DUI/.dui-diagnostics.json`。
+当 *Project Settings ▸ Plugins ▸ Dream GUI ▸ Editor ▸ Enable DreamMCP Endpoint* 开启时（[端点](/docs/tools/dreammcp)），编辑器自己就会提供 DreamMCP 服务，因此智能体的调用会发往它，而一次编译会把蓝图留在内存中供你保存，就像保存 `.dui` 一样。保存 `.dui` 还会重新编译由它构建的**已加载**类（[保存以重新编译](/docs/start/workflow#save-to-recompile)），并且编辑器会在每次编译后重写 `DUI/.dui-diagnostics.json`。
 
 ## 智能体常犯的错误 [#what-agents-get-wrong]
 

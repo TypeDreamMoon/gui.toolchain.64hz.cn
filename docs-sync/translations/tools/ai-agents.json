@@ -1,8 +1,8 @@
 {
   "version": 2,
   "status": "current",
-  "sourceHash": "13ee007b270edebd35d2da842d781e61b3358392198a703530f6b91a01ce7658",
-  "sourceRevision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
+  "sourceHash": "553a4e75f7c0b0e74db4e928dd324111466be85ff17c05d492689e20d061a31d",
+  "sourceRevision": "04f38a382a2fd3a2ec4ce54d770a0a8530c0b92c",
   "sources": [
     {
       "path": "Docs/tools/ai-agents.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/tools/ai-agents.md",
-  "translationHash": "b4ce1b7ff01ed0178c2097853a2a5426f4870da9a42c19a989012c9696da4f8d"
+  "translationHash": "d3c79d45faf46a119f74b7e64500e4d5e9ea992a16db035279e1cffb4e5f5923"
 }

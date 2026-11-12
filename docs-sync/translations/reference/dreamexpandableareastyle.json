@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "c2a7d432243f22e11008d684b7c7373faa5b94f664751697d789251de15ad77b",
-  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
   "sources": [
     {
       "path": "Docs/Reference/DreamExpandableAreaStyle.md",

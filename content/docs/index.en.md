@@ -68,12 +68,12 @@ the viewport or drag into a level — step by step in [Your first screen](/en/do
   - [Concepts](/en/docs/concepts/widgets) — Widgets, canvases, world space, widget Blueprints, layout, text, rendering, input, animation.
   - [The .dui language](/en/docs/dui/overview) — Nodes and values, slots and components, styles, use, components, view models, bindings, if and for, rows, timelines, write-back.
   - [Controls](/en/docs/controls) — Buttons, toggles, sliders, lists, dialogs, tab views... plus style sheets and the member-by-member UMG comparison.
-  - [Tools](/en/docs/tools/designer) — The designer, the VS Code extension, debugging commands, the test suite, benchmarks, scripting.
+  - [Tools](/en/docs/tools/designer) — The designer, the VS Code extension, debugging commands, the test suite, benchmarks, scripting, AI agents and the DreamMCP endpoint.
   - [Migration and upgrades](/en/docs/guides/migration) — Coming from LGUI, LexUI or an early build, and upgrading between development builds.
   - [Packaging and platforms](/en/docs/guides/fonts-and-packaging) — Shipping fonts, colour emoji and ICU data with a game; which platforms have actually run.
   - [Importing layered documents](/en/docs/plugin/guides/layered-document-import) — A .psd or .psb as a DreamUI widget: what each layer becomes, naming conventions, fonts, importing again.
   - [Common pitfalls](/en/docs/plugin/guides/pitfalls) — Things that look like bugs and are not: tweens on one property, angle conventions, raycast targets, style overrides, fonts, effects inside groups, and where UMG's names differ.
   - [Property meta tags](/en/docs/plugin/guides/property-meta) — The `DreamGUI_` tags that place a property in the details panels, hide it or pick its control; how an extension's classes use them.
-  - [Diagnostics](/en/docs/diagnostics) — Every .dui diagnostic is a DUInnnn code, in seven families by compile stage.
+  - [Diagnostics](/en/docs/diagnostics) — Every .dui diagnostic is a DUInnnn code, in eight families by stage.
   - [API reference](/en/docs/reference) — Per-class property and function reference printed from reflection, each page ending with its UMG comparison.
   - [Changelog](/en/docs/changelog) — What changed in each version.

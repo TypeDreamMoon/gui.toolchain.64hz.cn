@@ -7,6 +7,7 @@
     "tests",
     "bench",
     "scripting",
-    "ai-agents"
+    "ai-agents",
+    "dreammcp"
   ]
 }

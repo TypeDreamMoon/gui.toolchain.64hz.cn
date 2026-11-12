@@ -3340,28 +3340,6 @@
         "outputHash": "fc2828179945758355e930424c3ad98377280f9b6266a901fed89e52da8a0e3f",
         "bodyHash": "b74ccf82574dd38f88411d3a9a47e9992b3ad150f473b20308d8802a647400c7"
       }
-    },
-    "plugin/tools/dreammcp": {
-      "hash": "2bdcdcc27e991a4024ce0dec9ba82f34578915b0591cce58d37ecc69b3958d38",
-      "revision": "94ee492e1e973edc7c3ead7319772338f9a534aa",
-      "output": "content/docs/plugin/tools/dreammcp.en.md",
-      "outputHash": "b63bb861c09a7f619f4d72d27b85bc480302aad96f0f7af894227465403c3087",
-      "locale": "en",
-      "format": "md",
-      "title": "DreamMCP endpoint",
-      "sources": [
-        {
-          "path": "Docs/tools/dreammcp.md",
-          "hash": "c715c32ffcb8c844bba52e39bb7baaa510558c692983e21fbb5a533bd38c4a42"
-        }
-      ],
-      "translation": {
-        "status": "current",
-        "output": "content/docs/plugin/tools/dreammcp.md",
-        "record": "docs-sync/translations/plugin/tools/dreammcp.json",
-        "outputHash": "bd77ea0e7303519fc74d74ca7a5c7e82b88293967237ff758068f28b26ce6643",
-        "bodyHash": "2755d67ab664f64b5bd0fab2d4619efceb759c705279a7334d0a12320780a3ad"
-      }
     }
   }
 }

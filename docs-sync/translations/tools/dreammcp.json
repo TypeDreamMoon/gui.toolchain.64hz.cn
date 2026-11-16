@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "9d2e115a5b4758daa12fc746a97dd0cda525359a25d08cbee4b0e4c5f926def5",
   "sourceRevision": "9b30513b83ffe568c00265053c2209681bc88355",
   "sources": [
     {
       "path": "Docs/tools/dreammcp.md",
-      "alignedRevision": "94ee492e1e97",
-      "alignedPage": "87afb9be66f3",
-      "translationHash": "898f38a93af36408d3607688eb760dc715c6125a5ac0eaec19e55138a911118e"
+      "alignedRevision": "9b30513b83ff",
+      "alignedPage": "dd0222599972",
+      "translationHash": "9e2869987e8217dec65bb822d96731361b90106d9c8f23402e98f559dbf04f86"
     }
   ],
   "translationFile": "content/docs/tools/dreammcp.md",
-  "translationHash": "bd77ea0e7303519fc74d74ca7a5c7e82b88293967237ff758068f28b26ce6643"
+  "translationHash": "672c6131f59bf2fb3ef0a3b6093b4b491e13cedfe64a2bd72dcbaafe3c3f1f50"
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "91a49eb676d85400461d9088303153d2be6d0272af0461840b9d3ce89c607fa7",
-  "sourceRevision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
   "sources": [
     {
       "path": "Docs/language/index.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/plugin/duilanguage.md",
-  "translationHash": "ee60d4170a4d1648404ce425dd9ffd90cc0b1c88b7c1c57409be77529a993143"
+  "translationHash": "e22df3233fe5ecc16f5bf11c4868024bb6383240ed9bda7729a828bbb64f0e55"
 }

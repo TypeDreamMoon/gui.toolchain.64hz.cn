@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
-  "revision": "65f5a087557932acd9f204f88a49341a65b89a5d",
+  "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
   "workingTree": false,
   "translationSnapshotHash": "17fefe352b686b5e43eb3aaa2936ff85835019dbcc866fe512fc4c3da3dbf6b7",
   "pages": {
@@ -331,8 +331,8 @@
         "status": "current",
         "output": "content/docs/contributing/index.md",
         "record": "docs-sync/translations/contributing/index.json",
-        "outputHash": "281c9c9be869f3d81186441c8a25b4bf3566b7c116adc17bc809cc72fde3b281",
-        "bodyHash": "232ab259d26557335a53c6320a7cfd896c51b59091c76fe401d9f6ba543ad95b"
+        "outputHash": "6f1bcdd13fba2ed67f140671f2a2d956ac4b7739058cfa5a79fa54e84a9ef055",
+        "bodyHash": "bd78adf638eb5c50bd4db0ec32c3be50348eee501252d53f5eeb4acab872646d"
       }
     },
     "controls/index": {
@@ -642,8 +642,8 @@
         "status": "current",
         "output": "content/docs/dui/bindings.md",
         "record": "docs-sync/translations/dui/bindings.json",
-        "outputHash": "c30f74d868f9794058df047d518b0754473a55b66b67d8cdd517458b1b51b97e",
-        "bodyHash": "20ac64cc2611e5ba3dbdb9f775c776d4ed5003120752aec962a61a02b0bb65f3"
+        "outputHash": "336feeeec4b064c218a28352029218e029f381886725f624f7ec836cd387d1c4",
+        "bodyHash": "af34561e09e5a7c63259767bd7fbdc0a10d48d7717076b5d7fe2159c6027c577"
       }
     },
     "dui/components": {
@@ -907,8 +907,8 @@
         "status": "current",
         "output": "content/docs/dui/write-back.md",
         "record": "docs-sync/translations/dui/write-back.json",
-        "outputHash": "85da1d6a06427959a802c42584c6e2de469cccb6c7c7c1699c33440474d23cb8",
-        "bodyHash": "17e16c10969a4cefad151215801c3c6490325ecf548c88381158bc171d68b779"
+        "outputHash": "021773a4b4df33a080de3ac4e24a2b45230c2d5729102c6288f11d24a52e2692",
+        "bodyHash": "16318f00a24412f3a14979107fd979cb799d1a68d48909279d9802722b1c56f0"
       }
     },
     "guides/fonts-and-packaging": {
@@ -951,8 +951,8 @@
         "status": "current",
         "output": "content/docs/guides/migration.md",
         "record": "docs-sync/translations/guides/migration.json",
-        "outputHash": "8c96054af427b0f40255d0bb8437615e7d4c0f164f73e2cb49915b8ca755958c",
-        "bodyHash": "2cc2234ddeff4f8d865f3e6cbd823a936c6245e92c272b6ef30b2d7f78059552"
+        "outputHash": "2010349921c7e4ca20e2562901f4cfef5669b2bc9d12d5dc025fcbcf6b4dc500",
+        "bodyHash": "34ec5f0ce9719c780c6c0a61d4a86115ace3274536cfe1eb833823a9a7885dcd"
       }
     },
     "guides/platforms": {
@@ -2958,23 +2958,24 @@
       }
     },
     "tools/ai-agents": {
-      "hash": "553a4e75f7c0b0e74db4e928dd324111466be85ff17c05d492689e20d061a31d",
-      "revision": "04f38a382a2fd3a2ec4ce54d770a0a8530c0b92c",
+      "hash": "c91af74e3d5105434b1596651f035832556e22a4cd5080df721479c5ac06fa58",
+      "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
       "output": "content/docs/tools/ai-agents.en.md",
-      "outputHash": "0251cc869fd811c26e9079cf97c2db64c9a6a2fa8789ad176821a2739f8d14d7",
+      "outputHash": "68249921ff626d7a42c850936a15d110ea362b2c20e48719c107edda82db1f21",
       "locale": "en",
       "format": "md",
       "title": "Working with AI agents",
       "sources": [
         {
           "path": "Docs/tools/ai-agents.md",
-          "hash": "1f2f1610e2b8f5c85d8a7ae45f94120afe2cee47d46926dfa31b96d6cc6a3e30"
+          "hash": "106094727835a373b26178b2f50c15be33532d422f6436f9a87ff52be0c6f5d9"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/tools/ai-agents.md",
         "record": "docs-sync/translations/tools/ai-agents.json",
+        "pending": 1,
         "outputHash": "d3c79d45faf46a119f74b7e64500e4d5e9ea992a16db035279e1cffb4e5f5923",
         "bodyHash": "3b69cd4bcd25dccfa148ec95272e77ee0cda1aa96117483250097f187fae3c20"
       }
@@ -3046,24 +3047,24 @@
       }
     },
     "tools/dreammcp": {
-      "hash": "650040b7ce15aae733c584b96e383a89184e3551e330bfb2dfec8767201c660a",
-      "revision": "65f5a087557932acd9f204f88a49341a65b89a5d",
+      "hash": "56bb4a5b65f8be25c7a29d297814ab96fe4ee600107ace77e8fd61a1da8aeb42",
+      "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
       "output": "content/docs/tools/dreammcp.en.md",
-      "outputHash": "67980acebe8b6c7535e9c1e45efcad4cf58fd914129a3af8b746ab0b08fd2c46",
+      "outputHash": "b091814d48b5ba1109fc2f6e1089f75d6bdeedbd221ac1fa57aabbc3f90ff6d5",
       "locale": "en",
       "format": "md",
       "title": "DreamMCP endpoint",
       "sources": [
         {
           "path": "Docs/tools/dreammcp.md",
-          "hash": "8a65fd33eeb860c4fae93209669b5d17432ef2a2f30a9f70f308803d078e7d40"
+          "hash": "f9deba0b4e9b12b259b8481a3a78a7658cb59b6d45971ebd538428d6eb9dcd5d"
         }
       ],
       "translation": {
         "status": "outdated",
         "output": "content/docs/tools/dreammcp.md",
         "record": "docs-sync/translations/tools/dreammcp.json",
-        "pending": 8,
+        "pending": 9,
         "outputHash": "672c6131f59bf2fb3ef0a3b6093b4b491e13cedfe64a2bd72dcbaafe3c3f1f50",
         "bodyHash": "722c1bdbdf5b1aeda1c6054b1ade1127c0401986a778466195292ddbb8b9ded7"
       }
@@ -3091,23 +3092,24 @@
       }
     },
     "tools/tests": {
-      "hash": "cc2c8ee3cfa135590d866ea04198cf24ee6a7f2dcc0e6bb9c7584cb068abcf3b",
-      "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+      "hash": "e9c65e95d45512a122223374dd8d267d4781666623305a92afd7ddea8132dc02",
+      "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
       "output": "content/docs/tools/tests.en.md",
-      "outputHash": "527761aba34eff664b3f0321cff19765dcf0330c896c033f3812644fb57a0ec9",
+      "outputHash": "b10819326a5afc187cd602106038edd2853ac106e892d1987f4041f525befa9b",
       "locale": "en",
       "format": "md",
       "title": "The automation suite",
       "sources": [
         {
           "path": "Docs/tools/tests.md",
-          "hash": "afbc0f2485c19b3573835b33df2a5820702c7d33036973560b9a5e27cdb6fcb2"
+          "hash": "e77c5931a09a6d9f77b1040af059696206effab234a9ef06e8200d57c096b69b"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/tools/tests.md",
         "record": "docs-sync/translations/tools/tests.json",
+        "pending": 1,
         "outputHash": "c1a7e4dd26447a7d6e8ef4bcb302c6bb890caf4da0a8d7b18c2f58847bdde9cd",
         "bodyHash": "56188aa5c685aecd0597c7f403216de4b391d3b85a746dbf6ec9ece966510738"
       }
@@ -3135,25 +3137,26 @@
       }
     },
     "plugin/duilanguage": {
-      "hash": "91a49eb676d85400461d9088303153d2be6d0272af0461840b9d3ce89c607fa7",
-      "revision": "3bd78e3ae2021bef599c037b28e0955ce91ecfc1",
+      "hash": "5c8d88a0a1e771e800897d038d90e1b7cd114392311dc426daf33020496e40f4",
+      "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
       "output": "content/docs/plugin/duilanguage.en.md",
-      "outputHash": "487f874d4414e4797bb013a9c4c4941ca64b1293f23f138d4c96d4060915e133",
+      "outputHash": "433d443af30999c2bc5e3392ebd8a0eacd066aa104f3eb74a647c4020b49ab54",
       "locale": "en",
       "format": "md",
       "title": "Where a file lives",
       "sources": [
         {
           "path": "Docs/language/index.md",
-          "hash": "9f8b2ec111be62d0194747e9bfae066d1d78497b350b04e0f261b5a083dd975b"
+          "hash": "d49ca40714f540387900acc6aeb022512a2891390979ebd7eb24266a401e31fa"
         }
       ],
       "translation": {
-        "status": "current",
+        "status": "outdated",
         "output": "content/docs/plugin/duilanguage.md",
         "record": "docs-sync/translations/plugin/duilanguage.json",
-        "outputHash": "ee60d4170a4d1648404ce425dd9ffd90cc0b1c88b7c1c57409be77529a993143",
-        "bodyHash": "ee6cd9c5eb82acc61eb95132da9ccf3be865fe487f0289b38af3379e81cbdb3d"
+        "pending": 6,
+        "outputHash": "e22df3233fe5ecc16f5bf11c4868024bb6383240ed9bda7729a828bbb64f0e55",
+        "bodyHash": "8299a9ef525b581acc0c2b4980de06d2c95d2e387a474f3bd8ad746a2a5d1c09"
       }
     },
     "plugin/concepts/backdrop-effects": {
@@ -3355,24 +3358,24 @@
       }
     },
     "plugin/guides/pitfalls": {
-      "hash": "3b61854e9698142570d848e9c21be7d9d37eb17b3e604cec14a2e1df5de921ea",
-      "revision": "65f5a087557932acd9f204f88a49341a65b89a5d",
+      "hash": "2b228ea3720868d684cbbca40a17b62957fa77f91bba282cf9e9082b34c8658d",
+      "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
       "output": "content/docs/plugin/guides/pitfalls.en.md",
-      "outputHash": "1d901eb2e077df4498469d3d9efc1c6ee7ac5b8a602fa4d821dd86da0e9403e3",
+      "outputHash": "72f9e46b341a018af16d4fcd7f2d5eb3820ef1e102cd1c9ddc52141c5316c22f",
       "locale": "en",
       "format": "md",
       "title": "Common pitfalls",
       "sources": [
         {
           "path": "Docs/guides/pitfalls.md",
-          "hash": "b64e7b8982ab57f0f6aed797a668b96154213e7c3029e5646bcc75ba387c0232"
+          "hash": "54350a84b8580fbc961b06d9a586cf2bda5189d4cab916903a5cc47fdba77c33"
         }
       ],
       "translation": {
         "status": "outdated",
         "output": "content/docs/plugin/guides/pitfalls.md",
         "record": "docs-sync/translations/plugin/guides/pitfalls.json",
-        "pending": 1,
+        "pending": 8,
         "outputHash": "efbb3d806ed22a99c40aa5afa8b31da72f1d7337f9187bfcf9bcae05405ecbd4",
         "bodyHash": "9ba11d0a3605d6244bd5de65fff78ddbec164b1336a106ea51494a8f55806843"
       }
@@ -3397,6 +3400,60 @@
         "record": "docs-sync/translations/plugin/guides/property-meta.json",
         "outputHash": "fc2828179945758355e930424c3ad98377280f9b6266a901fed89e52da8a0e3f",
         "bodyHash": "b74ccf82574dd38f88411d3a9a47e9992b3ad150f473b20308d8802a647400c7"
+      }
+    },
+    "plugin/language/building-blocks": {
+      "hash": "7b82520252a1dba3cd33d262353967ebd07dcfbf58d274d587e8d4a788eaf71b",
+      "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
+      "output": "content/docs/plugin/language/building-blocks.en.md",
+      "outputHash": "a191e0cfd35cfba8be0cb9a2daabca07114dd13d9669ff8334fdf19e9b7b2bc0",
+      "locale": "en",
+      "format": "md",
+      "title": "Building blocks",
+      "sources": [
+        {
+          "path": "Docs/language/building-blocks.md",
+          "hash": "2ea312779b2ba42bdc5a20955e1015b98400b406c2e009acb83aa9d918783d5f"
+        }
+      ],
+      "translation": {
+        "status": "missing"
+      }
+    },
+    "plugin/language/presets": {
+      "hash": "c50c475eaa53122e56e30778c8ce5a362946ba9cf3f65fe02391f47ba3b0b4f1",
+      "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
+      "output": "content/docs/plugin/language/presets.en.md",
+      "outputHash": "a6a21c68e6406b5becc83ccbd4c5135d9d03e2d83845b57cd80d153a33f3c8b1",
+      "locale": "en",
+      "format": "md",
+      "title": "Presets",
+      "sources": [
+        {
+          "path": "Docs/language/presets.md",
+          "hash": "539a587e1601f31c1aa502aa038cd228f76aa992d9bff3159ac93015794aae0b"
+        }
+      ],
+      "translation": {
+        "status": "missing"
+      }
+    },
+    "plugin/language/starter-screens": {
+      "hash": "bf52fad05c6a7cb4759e677943a9bf9cb293fa96520e32bb75da07edd76e333f",
+      "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
+      "output": "content/docs/plugin/language/starter-screens.en.md",
+      "outputHash": "35eef285d2fd6cb1aba0248011c471fc10871bfd8ec745984bbdf903185ade5f",
+      "locale": "en",
+      "format": "md",
+      "title": "Starter screens",
+      "sources": [
+        {
+          "path": "Docs/language/starter-screens.md",
+          "hash": "ad07e47e0e1dff7ddc028eb3454387c3d3e5054f7779dd9d4dcb867709fb568c"
+        }
+      ],
+      "translation": {
+        "status": "missing"
       }
     }
   }

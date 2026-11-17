@@ -171,8 +171,20 @@ The language reference is organized by topic. These links preserve the section n
 
 ## Diagnostics
 
-[Read this section](https://github.com/TypeDreamMoon/DreamGUI/blob/3bd78e3ae2021bef599c037b28e0955ce91ecfc1/Docs/diagnostics/codes.md#diagnostics).
+[Read this section](https://github.com/TypeDreamMoon/DreamGUI/blob/97ce5f7c184ab13425e25c72e8e0886c89b07bc8/Docs/diagnostics/codes.md#diagnostics).
 
 ## A worked example
 
 [Read this section](/en/docs/dui/example#a-worked-example).
+
+## Presets
+
+[Read this section](/en/docs/plugin/language/presets#presets).
+
+## Building blocks
+
+[Read this section](/en/docs/plugin/language/building-blocks#building-blocks).
+
+## Starter screens
+
+[Read this section](/en/docs/plugin/language/starter-screens#starter-screens).

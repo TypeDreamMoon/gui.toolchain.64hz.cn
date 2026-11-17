@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
-  "revision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
+  "revision": "fd544e6cc0c76c890877b3fee7dfd3e597791046",
   "workingTree": false,
   "translationSnapshotHash": "17fefe352b686b5e43eb3aaa2936ff85835019dbcc866fe512fc4c3da3dbf6b7",
   "pages": {
@@ -331,8 +331,8 @@
         "status": "current",
         "output": "content/docs/contributing/index.md",
         "record": "docs-sync/translations/contributing/index.json",
-        "outputHash": "6f1bcdd13fba2ed67f140671f2a2d956ac4b7739058cfa5a79fa54e84a9ef055",
-        "bodyHash": "bd78adf638eb5c50bd4db0ec32c3be50348eee501252d53f5eeb4acab872646d"
+        "outputHash": "82dae0d06f7e17c57ebb19381e07802a39f72cd22f584101e261409960dc7a3a",
+        "bodyHash": "50dbf65e33613752880f6320ba5948dd8fc0d875a41320310856dc7dde70408f"
       }
     },
     "controls/index": {
@@ -602,24 +602,24 @@
       }
     },
     "diagnostics/index": {
-      "hash": "ecdff31a23f314f6d08f07083e5680965b6c26e2d141517d6e46baedcf40edb1",
-      "revision": "65f5a087557932acd9f204f88a49341a65b89a5d",
+      "hash": "585637dabb5128c7465f38673a793955c5a8d0b03595f6ad4f14b34ccd2bfabc",
+      "revision": "fd544e6cc0c76c890877b3fee7dfd3e597791046",
       "output": "content/docs/diagnostics/index.en.md",
-      "outputHash": "26f4d568370bcbc0aadac9879d7d84eca1a4ba8651ff2c97e18e1e24e75bb7d3",
+      "outputHash": "370ecd717a5d09f2191fbcb0bc58545684ce9ea609b3d9fbc5e7671c4af5acaa",
       "locale": "en",
       "format": "md",
       "title": "Diagnostics",
       "sources": [
         {
           "path": "Docs/diagnostics/index.md",
-          "hash": "6f319c2f28a666112fb20e43d5397c17e1021e9a75b1cac107375981e5bbc90d"
+          "hash": "38e3b84a6716837b5fc0ed520c60d970d0602d6cc2c85499241fd499156e8fa8"
         }
       ],
       "translation": {
         "status": "outdated",
         "output": "content/docs/diagnostics/index.md",
         "record": "docs-sync/translations/diagnostics/index.json",
-        "pending": 4,
+        "pending": 7,
         "outputHash": "872ddc7ada6e012ca653ab8b9039bb7a9080ec1e1a00ac8758b398b39b9761c1",
         "bodyHash": "9eeaa8f269aea9d5ff11c1974a4d424c0d19370c50b1b6a42b81e1eaaa883a86"
       }
@@ -642,8 +642,8 @@
         "status": "current",
         "output": "content/docs/dui/bindings.md",
         "record": "docs-sync/translations/dui/bindings.json",
-        "outputHash": "336feeeec4b064c218a28352029218e029f381886725f624f7ec836cd387d1c4",
-        "bodyHash": "af34561e09e5a7c63259767bd7fbdc0a10d48d7717076b5d7fe2159c6027c577"
+        "outputHash": "38fd211d020b6f76184012b006c2e6561665f9583732ef87d1bc3f7bd26a0d85",
+        "bodyHash": "38b63ad9070ccf87b2e2d5ff673bf9252a7808cefde45382a7224b601587f304"
       }
     },
     "dui/components": {
@@ -907,8 +907,8 @@
         "status": "current",
         "output": "content/docs/dui/write-back.md",
         "record": "docs-sync/translations/dui/write-back.json",
-        "outputHash": "021773a4b4df33a080de3ac4e24a2b45230c2d5729102c6288f11d24a52e2692",
-        "bodyHash": "16318f00a24412f3a14979107fd979cb799d1a68d48909279d9802722b1c56f0"
+        "outputHash": "f4ff2841c1d1cd684d575183530d463624f2c5ebdbb06778c8db99aa55ca84f7",
+        "bodyHash": "6a2185070662487d1964cf3df18b5bdd07c97e48cb5c85277054e8da33bac6ab"
       }
     },
     "guides/fonts-and-packaging": {
@@ -951,8 +951,8 @@
         "status": "current",
         "output": "content/docs/guides/migration.md",
         "record": "docs-sync/translations/guides/migration.json",
-        "outputHash": "2010349921c7e4ca20e2562901f4cfef5669b2bc9d12d5dc025fcbcf6b4dc500",
-        "bodyHash": "34ec5f0ce9719c780c6c0a61d4a86115ace3274536cfe1eb833823a9a7885dcd"
+        "outputHash": "18a7b482d3bdfc26f2ab651901dd3ec13f5fb2163357d49d250be48277a6b712",
+        "bodyHash": "0c24e3985b76b7c0f8c0ed18c1d87b9f0c581d7eb80ea5d288f743324a5f581b"
       }
     },
     "guides/platforms": {
@@ -2847,6 +2847,24 @@
         "bodyHash": "87e2310679700475365d483cb43d46292bac68d6f17efb80ae2a927be248737e"
       }
     },
+    "start/cheatsheet": {
+      "hash": "b6f649de731ff373d9a5840b89824add0e207aaffe23ef63222eb6a51e40120b",
+      "revision": "fd544e6cc0c76c890877b3fee7dfd3e597791046",
+      "output": "content/docs/start/cheatsheet.en.md",
+      "outputHash": "3602ca7dc4106d473b86a4d99a086ddff8bd2ba531bea3f87aad3dfc06a996dd",
+      "locale": "en",
+      "format": "md",
+      "title": "Cheat sheet",
+      "sources": [
+        {
+          "path": "Docs/cheatsheet.md",
+          "hash": "f6f5f6aedd81d8eda8256207cba31fcf3e6ef800f97114964cce7ad2e2c92b41"
+        }
+      ],
+      "translation": {
+        "status": "missing"
+      }
+    },
     "start/about": {
       "hash": "bda3385ed590b230a9ebcf9c354a021c29d55b97c02f8344eb341ec20bc2b235",
       "revision": "d03670b32e0e607754f247bd18ebe76b873b325f",
@@ -3155,8 +3173,8 @@
         "output": "content/docs/plugin/duilanguage.md",
         "record": "docs-sync/translations/plugin/duilanguage.json",
         "pending": 6,
-        "outputHash": "e22df3233fe5ecc16f5bf11c4868024bb6383240ed9bda7729a828bbb64f0e55",
-        "bodyHash": "8299a9ef525b581acc0c2b4980de06d2c95d2e387a474f3bd8ad746a2a5d1c09"
+        "outputHash": "88a2a560cfd913811f9e7f171e8d1730d57de3037e5a2324cdd1fcb8bcb997a0",
+        "bodyHash": "1893eb3cd16a7640338756938f67ba077168346a58cff199a93d5a0b14a67852"
       }
     },
     "plugin/concepts/backdrop-effects": {
@@ -3456,5 +3474,10 @@
         "status": "missing"
       }
     }
+  },
+  "published": {
+    "public/diagnostics.json": "9edf91052a2770acadba7fc59bd2191b060e1e9db20a222137dcf31b5af3249c",
+    "public/llms-full.txt": "ad9edc7fa973f754c4ce996d7b384ce1d8ba03564345291541ef47be89c4a10e",
+    "public/llms.txt": "b20e3dc697eb3cf321d8f366a232094ba58df138389d9925b81ec7707aa02530"
   }
 }

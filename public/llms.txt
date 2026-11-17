@@ -1,0 +1,45 @@
+# DreamGUI
+
+> DreamGUI is a UI plugin for Unreal Engine 5.8 whose screens are written as text: a .dui file under a project's DUI/ folder is the source of one widget Blueprint, a tree of widgets with their properties, layout, styles, bindings and animations.
+
+`.dui` is not QML, XAML, UMG or CSS. Read the cheat sheet first, and look every node type and property up (DreamMCP's `lookup`, or the project's `DUI/.dui-symbols.json`) instead of guessing it: an unknown name is an error. A screen that compiles can still be laid out wrong; DreamMCP's `layout` reports what is off the screen, cut, too small, overlapping or out of its frame (DUI8xxx).
+
+Every diagnostic carries a code `DUInnnn`. diagnostics.json lists each code with its name, severity, stage, meaning, fix where the documentation has one, and documentation link.
+
+llms-full.txt holds the cheat sheet, the whole language, the worked example and the pitfalls page in one file.
+
+## Start here
+
+- [Cheat sheet](https://gui.toolchain.64hz.cn/en/docs/start/cheatsheet/): the language on one page; its complete files are compiled and laid out by the test suite
+- [The full language reference](https://gui.toolchain.64hz.cn/llms-full.txt): cheat sheet, language, worked example and pitfalls in one text file
+- [Diagnostics as JSON](https://gui.toolchain.64hz.cn/diagnostics.json): every DUInnnn: name, severity, stage, title, meaning, fix, doc
+
+## Language
+
+- [Overview](https://gui.toolchain.64hz.cn/en/docs/dui/overview/): what a file holds
+- [Nodes and values](https://gui.toolchain.64hz.cn/en/docs/dui/nodes-and-values/): nodes, ids, tags, every kind of value, positions and axes
+- [Slot lines and components](https://gui.toolchain.64hz.cn/en/docs/dui/slots-and-components/): @slot lines and + components
+- [Styles and resources](https://gui.toolchain.64hz.cn/en/docs/dui/styles-and-resources/): styles and resources
+- [use](https://gui.toolchain.64hz.cn/en/docs/dui/use/): using other files and classes
+- [Writing a component](https://gui.toolchain.64hz.cn/en/docs/dui/components/): writing a component: props, events, slots
+- [View models](https://gui.toolchain.64hz.cn/en/docs/dui/viewmodels/): view models
+- [Bindings and routes](https://gui.toolchain.64hz.cn/en/docs/dui/bindings/): bindings and routes
+- [if and for](https://gui.toolchain.64hz.cn/en/docs/dui/control-flow/): if, for and each
+- [rows tables](https://gui.toolchain.64hz.cn/en/docs/dui/rows/): rows tables
+- [Timelines](https://gui.toolchain.64hz.cn/en/docs/dui/timelines/): animations
+- [Worked example](https://gui.toolchain.64hz.cn/en/docs/dui/example/): a worked example
+- [Common pitfalls](https://gui.toolchain.64hz.cn/en/docs/plugin/guides/pitfalls/): what compiles and still comes out wrong
+- [The control library](https://gui.toolchain.64hz.cn/en/docs/controls/): every Native.* control
+
+## Tools
+
+- [Your first screen](https://gui.toolchain.64hz.cn/en/docs/start/first-screen/): write and compile a first screen
+- [Working with AI agents](https://gui.toolchain.64hz.cn/en/docs/tools/ai-agents/): skills for coding agents
+- [DreamMCP endpoint](https://gui.toolchain.64hz.cn/en/docs/tools/dreammcp/): the DreamMCP endpoint: check, compile, layout, preview, lookup
+- [Diagnostics](https://gui.toolchain.64hz.cn/en/docs/diagnostics/): every code, how to read a diagnostic
+
+## Optional
+
+- [Layout](https://gui.toolchain.64hz.cn/en/docs/concepts/layout/): how layout works
+- [Styles and style sheets](https://gui.toolchain.64hz.cn/en/docs/controls/styles/): control styles and style sheets
+- [Changelog](https://gui.toolchain.64hz.cn/en/docs/changelog/): release notes

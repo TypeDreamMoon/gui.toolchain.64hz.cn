@@ -2,7 +2,7 @@
   "version": 1,
   "repository": "TypeDreamMoon/DreamGUI",
   "branch": "main",
-  "tool": "0.3.2",
+  "tool": "0.3.3",
   "siteOnly": [],
   "pages": [
     {
@@ -1446,6 +1446,17 @@
       "description": "Every public DreamGUI class's properties, functions and events, printed from reflection, with its UMG comparison."
     },
     {
+      "id": "start/cheatsheet",
+      "sources": [
+        {
+          "path": "Docs/cheatsheet.md"
+        }
+      ],
+      "format": "md",
+      "title": "Cheat sheet",
+      "description": "The .dui language on one page: a file's statements, nodes, values and positions, slots and components, styles and resources, bindings, control flow, timelines, and the diagnostics that cost the most time."
+    },
+    {
       "id": "start/about",
       "sources": [
         {
@@ -1606,5 +1617,153 @@
     "Docs/README.md"
   ],
   "siteUrl": "https://gui.toolchain.64hz.cn",
-  "stripLeadingTitle": true
+  "stripLeadingTitle": true,
+  "llms": {
+    "title": "DreamGUI",
+    "summary": "DreamGUI is a UI plugin for Unreal Engine 5.8 whose screens are written as text: a .dui file under a project's DUI/ folder is the source of one widget Blueprint, a tree of widgets with their properties, layout, styles, bindings and animations.",
+    "details": [
+      "`.dui` is not QML, XAML, UMG or CSS. Read the cheat sheet first, and look every node type and property up (DreamMCP's `lookup`, or the project's `DUI/.dui-symbols.json`) instead of guessing it: an unknown name is an error. A screen that compiles can still be laid out wrong; DreamMCP's `layout` reports what is off the screen, cut, too small, overlapping or out of its frame (DUI8xxx).",
+      "Every diagnostic carries a code `DUInnnn`. diagnostics.json lists each code with its name, severity, stage, meaning, fix where the documentation has one, and documentation link.",
+      "llms-full.txt holds the cheat sheet, the whole language, the worked example and the pitfalls page in one file."
+    ],
+    "sections": [
+      {
+        "title": "Start here",
+        "links": [
+          {
+            "page": "start/cheatsheet",
+            "note": "the language on one page; its complete files are compiled and laid out by the test suite"
+          },
+          {
+            "file": "llms-full.txt",
+            "title": "The full language reference",
+            "note": "cheat sheet, language, worked example and pitfalls in one text file"
+          },
+          {
+            "file": "diagnostics.json",
+            "title": "Diagnostics as JSON",
+            "note": "every DUInnnn: name, severity, stage, title, meaning, fix, doc"
+          }
+        ]
+      },
+      {
+        "title": "Language",
+        "links": [
+          {
+            "page": "dui/overview",
+            "note": "what a file holds"
+          },
+          {
+            "page": "dui/nodes-and-values",
+            "note": "nodes, ids, tags, every kind of value, positions and axes"
+          },
+          {
+            "page": "dui/slots-and-components",
+            "note": "@slot lines and + components"
+          },
+          {
+            "page": "dui/styles-and-resources",
+            "note": "styles and resources"
+          },
+          {
+            "page": "dui/use",
+            "note": "using other files and classes"
+          },
+          {
+            "page": "dui/components",
+            "note": "writing a component: props, events, slots"
+          },
+          {
+            "page": "dui/viewmodels",
+            "note": "view models"
+          },
+          {
+            "page": "dui/bindings",
+            "note": "bindings and routes"
+          },
+          {
+            "page": "dui/control-flow",
+            "note": "if, for and each"
+          },
+          {
+            "page": "dui/rows",
+            "note": "rows tables"
+          },
+          {
+            "page": "dui/timelines",
+            "note": "animations"
+          },
+          {
+            "page": "dui/example",
+            "note": "a worked example"
+          },
+          {
+            "page": "plugin/guides/pitfalls",
+            "note": "what compiles and still comes out wrong"
+          },
+          {
+            "page": "controls/index",
+            "note": "every Native.* control"
+          }
+        ]
+      },
+      {
+        "title": "Tools",
+        "links": [
+          {
+            "page": "start/first-screen",
+            "note": "write and compile a first screen"
+          },
+          {
+            "page": "tools/ai-agents",
+            "note": "skills for coding agents"
+          },
+          {
+            "page": "tools/dreammcp",
+            "note": "the DreamMCP endpoint: check, compile, layout, preview, lookup"
+          },
+          {
+            "page": "diagnostics/index",
+            "note": "every code, how to read a diagnostic"
+          }
+        ]
+      },
+      {
+        "title": "Optional",
+        "links": [
+          {
+            "page": "concepts/layout",
+            "note": "how layout works"
+          },
+          {
+            "page": "controls/styles",
+            "note": "control styles and style sheets"
+          },
+          {
+            "page": "changelog/index",
+            "note": "release notes"
+          }
+        ]
+      }
+    ],
+    "full": [
+      "start/cheatsheet",
+      "dui/overview",
+      "dui/nodes-and-values",
+      "dui/slots-and-components",
+      "dui/styles-and-resources",
+      "dui/use",
+      "dui/components",
+      "dui/viewmodels",
+      "dui/bindings",
+      "dui/control-flow",
+      "dui/rows",
+      "dui/timelines",
+      "dui/example",
+      "plugin/guides/pitfalls"
+    ],
+    "publish": {
+      "diagnostics.json": "Docs/diagnostics/codes.json"
+    }
+  }
 }

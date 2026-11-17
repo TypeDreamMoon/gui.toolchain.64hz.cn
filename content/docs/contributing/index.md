@@ -3,7 +3,7 @@ title: "贡献"
 description: "如何报告问题、提出更改并让拉取请求获得合并——问题表单与环境命令、仓库布局、在宿主项目中构建、Quick 测试门禁、随更改需要更新的内容、文档与翻译流程，以及 AI 辅助贡献。"
 ---
 
-DreamGUI 在 [GitHub](https://github.com/TypeDreamMoon/DreamGUI) 上接收缺陷报告、提案、文档修复和拉取请求。本页是总览。拉取请求必须遵守的检查清单是仓库中的 [CONTRIBUTING.md](https://github.com/TypeDreamMoon/DreamGUI/blob/fd544e6cc0c76c890877b3fee7dfd3e597791046/CONTRIBUTING.md)。AI 代理从 [AGENTS.md](https://github.com/TypeDreamMoon/DreamGUI/blob/fd544e6cc0c76c890877b3fee7dfd3e597791046/AGENTS.md) 开始。
+DreamGUI 在 [GitHub](https://github.com/TypeDreamMoon/DreamGUI) 上接收缺陷报告、提案、文档修复和拉取请求。本页是总览。拉取请求必须遵守的检查清单是仓库中的 [CONTRIBUTING.md](https://github.com/TypeDreamMoon/DreamGUI/blob/65ca01a1300741cdd15e229baff9a52db0b70c84/CONTRIBUTING.md)。AI 代理从 [AGENTS.md](https://github.com/TypeDreamMoon/DreamGUI/blob/65ca01a1300741cdd15e229baff9a52db0b70c84/AGENTS.md) 开始。
 
 ## 报告问题 [#reporting-a-problem]
 
@@ -78,4 +78,4 @@ pwsh -NoProfile -File Tools/Tests/Invoke-DreamGUITests.ps1 -Project "<Project>/<
 
 ## 许可与行为准则 [#license-and-conduct]
 
-贡献内容按插件的 [MIT 许可证](https://github.com/TypeDreamMoon/DreamGUI/blob/fd544e6cc0c76c890877b3fee7dfd3e597791046/LICENSE) 授权；没有 CLA。[行为准则](https://github.com/TypeDreamMoon/.github/blob/main/CODE_OF_CONDUCT.md)与[安全策略](https://github.com/TypeDreamMoon/.github/blob/main/SECURITY.md)适用于本项目的每一个仓库。
+贡献内容按插件的 [MIT 许可证](https://github.com/TypeDreamMoon/DreamGUI/blob/65ca01a1300741cdd15e229baff9a52db0b70c84/LICENSE) 授权；没有 CLA。[行为准则](https://github.com/TypeDreamMoon/.github/blob/main/CODE_OF_CONDUCT.md)与[安全策略](https://github.com/TypeDreamMoon/.github/blob/main/SECURITY.md)适用于本项目的每一个仓库。

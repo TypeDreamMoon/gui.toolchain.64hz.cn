@@ -171,7 +171,7 @@ description: "`.dui` 语言"
 
 ## 诊断 [#diagnostics]
 
-[阅读本节](https://github.com/TypeDreamMoon/DreamGUI/blob/fd544e6cc0c76c890877b3fee7dfd3e597791046/Docs/zh-CN/diagnostics/codes.md#diagnostics)。
+[阅读本节](https://github.com/TypeDreamMoon/DreamGUI/blob/65ca01a1300741cdd15e229baff9a52db0b70c84/Docs/zh-CN/diagnostics/codes.md#diagnostics)。
 
 ## 完整示例 [#a-worked-example]
 

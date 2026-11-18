@@ -3,7 +3,7 @@ title: ".dui 速查表"
 description: ".dui 速查表"
 ---
 
-`.dui` 语言的一页速查：文件的形态，节点、属性与值的写法，样式与资源，绑定，控制流与时间轴，以及最耗时间的那些代码。本页中每个完整文件——首行为 `// DUI/<path>.dui` 的块——都由测试套件编译并布局，无错误也无警告。要了解某一行背后的规则，请阅读[语言](/docs/dui/overview)；要了解某个代码，请阅读[诊断](/docs/diagnostics)，或同一份数据的 JSON 形式，[`diagnostics/codes.json`](https://github.com/TypeDreamMoon/DreamGUI/blob/81ab704076de0a38dd0710130861cfd6bcff0396/Docs/diagnostics/codes.json)。
+`.dui` 语言的一页速查：文件的形态，节点、属性与值的写法，样式与资源，绑定，控制流与时间轴，以及最耗时间的那些代码。本页中每个完整文件——首行为 `// DUI/<path>.dui` 的块——都由测试套件编译并布局，无错误也无警告。要了解某一行背后的规则，请阅读[语言](/docs/dui/overview)；要了解某个代码，请阅读[诊断](/docs/diagnostics)，或同一份数据的 JSON 形式，[`diagnostics/codes.json`](https://github.com/TypeDreamMoon/DreamGUI/blob/50d9710c8d3ad69a881293630c95e050679ea91d/Docs/diagnostics/codes.json)。
 
 `.dui` 不是 QML、XAML、UMG 或 CSS。请查阅每个节点类型和属性（DreamMCP 的 `lookup`，或 `DUI/.dui-symbols.json`），而不是靠猜：未知名称是错误，而不是空操作。
 
@@ -195,7 +195,7 @@ Text Title {
 | 资源 | `@Accent` |
 | 列表/映射/结构体 | `[1, 2]` · `{ Hover: #FFCC00 }` · `{ Distance: 12, Angle: 45 }` |
 
-**位置：** 在盒子之外，节点由 `AnchorData` 放置——`AnchorMin`/`AnchorMax` 为 0 到 1，**(0, 0) 为左下角**、`Pivot`、`AnchoredPosition`（正 Y 为**向上**）、`SizeDelta`。`AnchorMin = (0, 0)`、`AnchorMax = (1, 1)`、`SizeDelta = (0, 0)` 填满父级。在盒子内部，盒子通过 `@slot` 行来放置它。`RenderTranslation = (X, Y, Z)`：X 是深度（负值更近），Y 向右，Z 向上。
+**位置：** 在盒子之外，节点由 `AnchorData` 放置——`AnchorMin`/`AnchorMax` 为 0 到 1，**(0, 0) 为左下角**、`Pivot`、`AnchoredPosition`（正 Y 为**向上**）、`SizeDelta`。`AnchorMin = (0, 0)`、`AnchorMax = (1, 1)`、`SizeDelta = (0, 0)` 填满父级。在盒子内部，盒子通过 `@slot` 行来放置它。`RenderTranslation = (X, Y, Z)`：X 是深度（负值更近），Y 向右，Z 向上。`RenderRotation = (Pitch, Yaw, Roll)`：正的 Yaw 会让右边缘更近，因此位于左侧的面板用负的 Yaw 朝向中间，位于右侧的面板用正的 Yaw；负的 Pitch 会让平面向后倾倒（上边缘更远）。`layout` 说明每个转过方向的面朝向哪边。
 
 ## 插槽与组件 [#slots-and-components]
 

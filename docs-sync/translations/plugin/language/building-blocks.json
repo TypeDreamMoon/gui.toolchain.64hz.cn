@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "66c256c3312498e4bf1d5e675811cdf2cd19c69b4db89434d1c12c88c870161f",
   "sourceRevision": "81ab704076de0a38dd0710130861cfd6bcff0396",
   "sources": [
     {
       "path": "Docs/language/building-blocks.md",
-      "alignedRevision": "4ac86e8f9b55",
-      "alignedPage": "fd3fad0491cb",
-      "translationHash": "aca0af56945c66b334d170954fabd851606d0136996ac4171a486c8f020aacc7"
+      "alignedRevision": "81ab704076de",
+      "alignedPage": "0da827e6a5aa",
+      "translationHash": "707ed128cd679997fe1c8ffcc503e5b428ac31a52dc503420a7d4d32a6f33759"
     }
   ],
   "translationFile": "content/docs/plugin/language/building-blocks.md",
-  "translationHash": "5788ec956b960dd8fcfe634529a2011f5c274e3ec26ccdbbe5505adc448419bb"
+  "translationHash": "c87cd181cecb6a004085183e6b54e022e4e6bee31dcbbd6f55c4cbdd7f51526c"
 }

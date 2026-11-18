@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "2e6ef8493d12c6fa4e08f4238ff8d69791c1159e6a396aa82fd67b3d7b9d7812",
   "sourceRevision": "0d3ba4f43fc5df970e34a76e5de9657856765a9c",
   "sources": [
     {
       "path": "Docs/concepts/widgets.md",
-      "alignedRevision": "67cb48788215",
-      "alignedPage": "fd529704f1be",
-      "translationHash": "cb2554d4388ec3d3ab952b739e20620efa0704481a32a395e241a07dcb7f2fb8"
+      "alignedRevision": "81ab704076de",
+      "alignedPage": "5d6865b1f7bd",
+      "translationHash": "e87bd171af3058086fb2e69ec85081807b0299405856373a6dcb40a909f85345"
     }
   ],
   "translationFile": "content/docs/concepts/widgets.md",
-  "translationHash": "5cbc9874ded4e06eab69dd7f5cb84c56216bd8765b579f554b0e40dccb4da34c"
+  "translationHash": "a474386b6bc92a8cff6d843062cb20b7748b4a289c09f36b15882f3182be0f03"
 }

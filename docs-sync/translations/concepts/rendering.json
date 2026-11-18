@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "775a529215ca45771e959ce74d4e2c657acc137275d12a655575e9099764839b",
   "sourceRevision": "0d3ba4f43fc5df970e34a76e5de9657856765a9c",
   "sources": [
     {
       "path": "Docs/concepts/rendering.md",
-      "alignedRevision": "4ac86e8f9b55",
-      "alignedPage": "72ed9aab28c0",
-      "translationHash": "12f8e55620a25da95b35e95495c5866e99bf2094009c15bbe719621f87544bfb"
+      "alignedRevision": "81ab704076de",
+      "alignedPage": "196c1a6d8144",
+      "translationHash": "b767a75c1e5c87ed3dfb302a7309dd8145ff2238a6593542818f9155471e91bd"
     }
   ],
   "translationFile": "content/docs/concepts/rendering.md",
-  "translationHash": "af768a5ff19037aeb1336efa41e8583daf768583424752b05a1f526515979c8b"
+  "translationHash": "baeaac61d05bd5489afb7d0c0b4ea2bc00f79782f8f68a2d5275d8755eab5fdf"
 }

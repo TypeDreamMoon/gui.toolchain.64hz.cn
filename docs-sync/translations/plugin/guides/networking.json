@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "current",
+  "sourceHash": "ed92fa12cb03865a4529a2f1b3b3ea0c1a65bb6ab05894b074e8517e034bdab8",
+  "sourceRevision": "0d3ba4f43fc5df970e34a76e5de9657856765a9c",
+  "sources": [
+    {
+      "path": "Docs/guides/networking.md",
+      "alignedRevision": "81ab704076de",
+      "alignedPage": "d0d99e0252ec",
+      "translationHash": "45ee71dba7a85f6c7d999369b1ba7f7317010f1350066356c02fb1d710d551ad"
+    }
+  ],
+  "translationFile": "content/docs/plugin/guides/networking.md",
+  "translationHash": "5442086655853a5454107808bae7ae939ba49a66e4d32747060e659c2ec2caff"
+}

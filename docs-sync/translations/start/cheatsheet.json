@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "ac24b943f8ba99d3efc6d7fef14120d547182c3b0835684551380635c6257f60",
   "sourceRevision": "81ab704076de0a38dd0710130861cfd6bcff0396",
   "sources": [
     {
       "path": "Docs/cheatsheet.md",
-      "alignedRevision": "4ac86e8f9b55",
-      "alignedPage": "f6f5f6aedd81",
-      "translationHash": "b1f8d9fdd55349af51fb5e666b523b0bab27f1b375c1bac3c4570fad0fdeabc3"
+      "alignedRevision": "81ab704076de",
+      "alignedPage": "42399d54a722",
+      "translationHash": "65f912c91e12697cbc34d0166fd85087139f6ac8e0732c2c3ba10df1fa105812"
     }
   ],
   "translationFile": "content/docs/start/cheatsheet.md",
-  "translationHash": "d81d387910abc73281defe1577a3c74477b0f8d181d0bc052aaf1cdc21dfe96c"
+  "translationHash": "2df707ce5845ce14a2f3d4dcdbc2737f04b28d5e7aeb6f5b2d8818b9721e43dc"
 }

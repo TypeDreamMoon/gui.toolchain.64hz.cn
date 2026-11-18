@@ -127,6 +127,8 @@ Tab 被关在里面的情况：模态、调暗了背景的对话框、以及循�
 - 扳机键翻页；**肩键切换**当前标签视图的标签，跳过禁用的、两端循环，提示栏显示“上一个标签”“下一个标签”。自己写的控件实现 `IDreamUITabSwitchTarget` 就能响应肩键。
 - 在 DreamGUI 的 UI-only 输入模式（`UDreamUIInputModeLibrary::SetInputModeUIOnly`）下，玩家用手柄时光标隐藏，回到鼠标或键盘时出现（`bHideCursorOnGamepad`）；别的模式下 DreamGUI 不碰光标。 `bAutoVirtualCursorOnGamepad`（默认关）在物理设备是手柄时显示一个虚拟光标。
 
+原生焦点指示器公开 `UUINavigationInputSelectionHandler::SetAnimDuration` 和 `GetAnimDuration`。使用 `FindFor(Widget)` 查找当前指示器。将其持续时间设为零会立即完成正在进行的移动或淡出，并使后续选择立即跳转，从而保留可见的焦点轮廓。负值和非有限持续时间会变为零。临时无障碍策略结束时，恢复之前的持续时间。新创建的指示器以其创作时设定的持续时间启动；也要将策略应用于替换项。重写选择事件的蓝图处理程序仍负责自身的动画。
+
 ## 弹出层、模态、提示和拖放 [#popups-modals-tooltips-drag-and-drop]
 
 **弹出层**（`UDreamUIPopupLayer`）每个玩家一层。弹出的东西 —— 下拉列表、菜单 —— 还是它原来那个控件；弹出层把它抬到玩家的屏幕根下、保持世界位置不变，这样它不会被祖先的边界裁掉，也不算进祖先的布局，就像 UMG 的下拉列表住在 Slate 的菜单栈里。弹出层负责外部点击、焦点、菜单嵌套，以及打开期间跟随移动的锚点。Back 只关最上面那个，关闭后焦点还给打开它的人。弹出层说明 Tab 在它里面做什么（`TabBehavior`）： `Cycle` 在里面转圈；`CloseAndContinue` 关掉它并从打开者那里继续走（下拉列表和菜单）。在一个打开的弹出层**前面**画着的层上按一下，会关掉弹出层，而且按下仍然到达那一层。

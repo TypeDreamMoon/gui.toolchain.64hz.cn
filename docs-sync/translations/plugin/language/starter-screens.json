@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "current",
+  "sourceHash": "bf52fad05c6a7cb4759e677943a9bf9cb293fa96520e32bb75da07edd76e333f",
+  "sourceRevision": "97ce5f7c184ab13425e25c72e8e0886c89b07bc8",
+  "sources": [
+    {
+      "path": "Docs/language/starter-screens.md",
+      "alignedRevision": "4ac86e8f9b55",
+      "alignedPage": "3c308f0af174",
+      "translationHash": "e3f45d7bd42ee5c039a2da931ce4ba2063d9ab7d4afe22d3927c280e43e6d43c"
+    }
+  ],
+  "translationFile": "content/docs/plugin/language/starter-screens.md",
+  "translationHash": "632e3c1d819a38bd5d369d97a91de17a568800b7e16c8dd07057278ef43e3c75"
+}

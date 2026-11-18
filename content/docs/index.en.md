@@ -70,7 +70,8 @@ the viewport or drag into a level — step by step in [Your first screen](/en/do
   - [Controls](/en/docs/controls) — Buttons, toggles, sliders, lists, dialogs, tab views... plus style sheets and the member-by-member UMG comparison.
   - [Tools](/en/docs/tools/designer) — The designer, the VS Code extension, debugging commands, the test suite, benchmarks, scripting, AI agents and the DreamMCP endpoint.
   - [Migration and upgrades](/en/docs/guides/migration) — Coming from LGUI, LexUI or an early build, and upgrading between development builds.
-  - [Packaging and platforms](/en/docs/guides/fonts-and-packaging) — Shipping fonts, colour emoji and ICU data with a game; which platforms have actually run.
+  - [Networking and multiplayer](/en/docs/plugin/guides/networking) — UI only where a local player sees it: dedicated and listen servers, the play-in-editor net modes, the warning a server world gives.
+- [Packaging and platforms](/en/docs/guides/fonts-and-packaging) — Shipping fonts, colour emoji and ICU data with a game; which platforms have actually run.
   - [Importing layered documents](/en/docs/plugin/guides/layered-document-import) — A .psd or .psb as a DreamUI widget: what each layer becomes, naming conventions, fonts, importing again.
   - [Common pitfalls](/en/docs/plugin/guides/pitfalls) — Things that look like bugs and are not: tweens on one property, angle conventions, raycast targets, style overrides, fonts, effects inside groups, and where UMG's names differ.
   - [Property meta tags](/en/docs/plugin/guides/property-meta) — The `DreamGUI_` tags that place a property in the details panels, hide it or pick its control; how an extension's classes use them.

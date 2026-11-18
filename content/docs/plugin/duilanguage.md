@@ -171,8 +171,20 @@ description: "`.dui` 语言"
 
 ## 诊断 [#diagnostics]
 
-[阅读本节](https://github.com/TypeDreamMoon/DreamGUI/blob/4ac86e8f9b558ee54b90d7919b40f23e6e66e37e/Docs/zh-CN/diagnostics/codes.md#diagnostics)。
+[阅读本节](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/Docs/zh-CN/diagnostics/codes.md#diagnostics)。
 
 ## 完整示例 [#a-worked-example]
 
 [阅读本节](/docs/dui/example#a-worked-example)。
+
+## 预设 [#presets]
+
+[阅读本节](/docs/plugin/language/presets#presets)。
+
+## 构建块 [#building-blocks]
+
+[阅读本节](/docs/plugin/language/building-blocks#building-blocks)。
+
+## 起始界面 [#starter-screens]
+
+[阅读本节](/docs/plugin/language/starter-screens#starter-screens)。

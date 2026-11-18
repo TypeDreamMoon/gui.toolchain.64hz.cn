@@ -2,15 +2,15 @@
   "version": 2,
   "status": "outdated",
   "sourceHash": null,
-  "sourceRevision": "4ac86e8f9b558ee54b90d7919b40f23e6e66e37e",
+  "sourceRevision": "0d3ba4f43fc5df970e34a76e5de9657856765a9c",
   "sources": [
     {
       "path": "Docs/concepts/rendering.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "d123b2bea8e2",
-      "translationHash": "9fe3f34518a759a9e82a0d3af5f3d61df46ee8d8154709059ce9519706f5a7d4"
+      "alignedRevision": "4ac86e8f9b55",
+      "alignedPage": "72ed9aab28c0",
+      "translationHash": "12f8e55620a25da95b35e95495c5866e99bf2094009c15bbe719621f87544bfb"
     }
   ],
   "translationFile": "content/docs/concepts/rendering.md",
-  "translationHash": "2b475c79e857c5d9e67b8e5640d86dd0d8f81237c03168cbed935dbb89ae84b8"
+  "translationHash": "af768a5ff19037aeb1336efa41e8583daf768583424752b05a1f526515979c8b"
 }

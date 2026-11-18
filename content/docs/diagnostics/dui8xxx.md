@@ -44,3 +44,21 @@ description: "编译后的界面在某个视口尺寸下布局出了问题。只
 `LayoutLowContrast`
 
 文本与背后内容的对比度低于 3 比 1（仅预览）。
+
+## DUI8008
+
+`LayoutOutsideFrame`
+
+绘制超出其所在面板或卡片的节点（标记为 `Bleed` 时除外）。
+
+## DUI8009
+
+`LayoutCoversText`
+
+绘制在并非其底板文本之上的、不接收指针的视觉元素（标记为 `Bleed` 时除外）。
+
+## DUI8010
+
+`LayoutUnbalanced`
+
+内容偏向一侧或留出大片空白区域的面板（信息级别）。

@@ -110,11 +110,19 @@ itself).
 ### Colour and blending
 
 Colours are authored in sRGB (`#RRGGBB` in a `.dui` is sRGB), and the shader turns vertex colour linear internally. Which
-values are blended depends on the target: in the viewport, where the shader gamma-corrects, DreamGUI blends
+values are blended depends on the target: in an SDR viewport, where the shader gamma-corrects, DreamGUI blends
 **sRGB-encoded values**; in a render target, whose sRGB format encodes after the blend, it blends in linear light. So a
 material that composites over a known ground inside itself, and has to agree with DreamGUI's blending, does its maths on
 sRGB-encoded values in the viewport and turns only the final straight colour linear. A multisampled canvas whose target is
 sRGB blends in sRGB as well.
+
+An active HDR display uses a linear floating-point working target. The renderer decodes the scene from
+PQ/Rec2020 or scRGB, draws UI with `1.0` representing paper white, resolves MSAA, and encodes the result back
+to the display transport. This preserves scene highlights and blends translucent UI in linear light.
+Paper white comes from the render target, with the engine's `r.HDR.UI.Luminance.Mode`, `r.HDR.UI.Luminance`
+and `r.HDR.UI.Level` overrides. A material doing its own compositing must use linear colours on this path.
+HDR metadata alone does not activate this conversion: the target must report active HDR output.
+Linear EXR captures retain their existing semantics. This path does not enable Windows HDR.
 
 Anti-aliasing is `AntiAliasingMethod` (`None` or MSAA) and `MSAASampleCount`, for all three DreamGUI-renderer modes; where
 the RHI reports no MSAA support the renderer falls back to none and warns once rather than pretending. Win64 is the only
@@ -130,8 +138,13 @@ pixel out, so a pixel the edge cuts is drawn as partly covered while an edge lyi
 vertex colour, so every material and platform takes it, with no render target and no extra pass. It applies on
 screen-space and render-target canvases; a world-space canvas has no one size of pixel and keeps MSAA for its edges, and
 an element under pixel snapping is on the grid already. While MSAA is on (and the platform can multisample) the samples
-smooth these outlines and a strip would only soften them further, so `Default` leaves it off; `On` adds it anyway. A plain rect -- an image, a nine-slice, a tiled image -- is left
-as it is: its edges sit on the pixel grid until it is rotated.
+smooth these outlines and a strip would only soften them further, so `Default` leaves it off; `On` adds it anyway. A plain
+rect -- an Image, Texture or Sprite drawn plain, nine-sliced, tiled or linearly filled -- gets the strip only while its
+sides are off the pixel rows and columns: turned in the canvas plane, tilted in a perspective, or under a shear. Unturned,
+its sides lie along them and are left as sharp as they were; it takes the strip on, and lets it go, as its transform
+crosses that line. A widget clipping to such an image as the layer below reads the quad as the image drew it, before the
+strip moved its corners. An element kept in a render layer is given its strip, or none, by its transform when its
+vertices were last made: the layer's own move does not remake them.
 
 ## Render-target canvases
 

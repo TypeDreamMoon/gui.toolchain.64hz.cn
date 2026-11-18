@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "current",
+  "sourceHash": "b6f649de731ff373d9a5840b89824add0e207aaffe23ef63222eb6a51e40120b",
+  "sourceRevision": "fd544e6cc0c76c890877b3fee7dfd3e597791046",
+  "sources": [
+    {
+      "path": "Docs/cheatsheet.md",
+      "alignedRevision": "4ac86e8f9b55",
+      "alignedPage": "f6f5f6aedd81",
+      "translationHash": "b1f8d9fdd55349af51fb5e666b523b0bab27f1b375c1bac3c4570fad0fdeabc3"
+    }
+  ],
+  "translationFile": "content/docs/start/cheatsheet.md",
+  "translationHash": "b75693e10b8c743e9e4a121deff5836dcdeca8892136afab4a29312b745585f9"
+}

@@ -4,7 +4,7 @@ description: "Moving assets saved against LGUI / LexUI, a project on the early s
 ---
 
 1.0.0 is the first public release. The fork's development builds before it were numbered 1.x, 2.0 and 2.1 -- see the
-[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/da707295f1b09e8d15c29ce996933e728fa219fc/CHANGELOG.md) -- and this guide names them that way: a 2.1 here is the development build, older than 1.0.0.
+[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/CHANGELOG.md) -- and this guide names them that way: a 2.1 here is the development build, older than 1.0.0.
 
 For five kinds of project:
 
@@ -19,7 +19,7 @@ For five kinds of project:
 
 The numbered sections are the move to the 2.0 line from LGUI, LexUI or the 1.x builds; a project making it reads
 [From 2.0 to 2.1](#from-20-to-21) and [From 2.1 to 1.0.0](#from-21-to-100) afterwards. Everything here is about keeping what you have. What the plugin is and how to start from
-nothing is in the [README](https://github.com/TypeDreamMoon/DreamGUI/blob/da707295f1b09e8d15c29ce996933e728fa219fc/README.md); what each version added is in the [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/da707295f1b09e8d15c29ce996933e728fa219fc/CHANGELOG.md).
+nothing is in the [README](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/README.md); what each version added is in the [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/CHANGELOG.md).
 
 ## From 1.0.0 to the next release
 
@@ -175,7 +175,7 @@ below say what the redirects cover.
 
 For a project already on 2.0. Nothing was renamed, so no redirect is needed and nothing has to be done before opening
 the project; what follows is what can look or behave differently afterwards, and what C++ of your own has to change. The
-[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/da707295f1b09e8d15c29ce996933e728fa219fc/CHANGELOG.md) lists what is new.
+[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/CHANGELOG.md) lists what is new.
 
 ### Before you upgrade
 
@@ -458,7 +458,8 @@ when nothing scrolls, collapses its built-in bar and hides an idle track.
 The UI manager does not start in a dedicated server's worlds, a play-in-editor server included
 (`UDreamUIManagerWorldSubsystem::ShouldRunForNetMode`): a server builds the widget trees its level holds without a
 manager, as a commandlet does, draws nothing and makes no renderer or paint rows. Code of your own that asks for the
-manager there gets null, as every DreamGUI caller already expects.
+manager there gets null, as every DreamGUI caller already expects. A widget created in such a world is reported once for
+the world as a warning; where to make UI instead is in [Networking and multiplayer](/en/docs/plugin/guides/networking).
 
 ### C++ of your own
 
@@ -611,7 +612,7 @@ report.
 `DreamGUIRenderer` (drawing, effects' render proxies), `DreamGUI` (widgets, visuals, canvases), `DreamGUIInput`
 (event systems, raycasters, navigation, the viewport client), `DreamGUIControls` (the `Dream*` controls and the
 `UI*` behaviours), `DreamGUIExtensions` (lines, rings, effects, render-target helpers). The README's
-[module table](https://github.com/TypeDreamMoon/DreamGUI/blob/da707295f1b09e8d15c29ce996933e728fa219fc/README.md#modules) says what is where.
+[module table](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/README.md#modules) says what is where.
 
 **Includes.** Every header kept its path except those in the README's
 [include table](https://gui.toolchain.64hz.cn/en/docs/guides/migration).

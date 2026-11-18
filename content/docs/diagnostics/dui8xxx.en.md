@@ -55,7 +55,7 @@ A node drawn past the panel or card it sits in (not when tagged `Bleed`).
 
 `LayoutCoversText`
 
-A visual that takes no pointer drawn over a text it is not the backplate of (not when tagged `Bleed`).
+A visual that takes no pointer drawn over a text it is not the backplate of, or a text laid across the edge of a small shape drawn under it (not when tagged `Bleed`).
 
 ## DUI8010
 

@@ -2,7 +2,7 @@
 
 > DreamGUI is a UI plugin for Unreal Engine 5.8 whose screens are written as text: a .dui file under a project's DUI/ folder is the source of one widget Blueprint, a tree of widgets with their properties, layout, styles, bindings and animations.
 
-The full text of the pages listed in https://gui.toolchain.64hz.cn/llms.txt, English, generated from the plugin repository TypeDreamMoon/DreamGUI at 0d3ba4f43fc5.
+The full text of the pages listed in https://gui.toolchain.64hz.cn/llms.txt, English, generated from the plugin repository TypeDreamMoon/DreamGUI at 81ab704076de.
 
 
 ---
@@ -15,7 +15,7 @@ One page of the `.dui` language: the shape of a file, how nodes, properties and 
 resources, bindings, control flow and timelines, and the codes that cost the most time. Every complete file on this
 page — a block whose first line is `// DUI/<path>.dui` — is compiled and laid out by the test suite with no error and
 no warning. For the rules behind a line, read [the language](https://gui.toolchain.64hz.cn/en/docs/dui/overview); for a code,
-[the diagnostics](https://gui.toolchain.64hz.cn/en/docs/diagnostics) or the same data as JSON, [`diagnostics/codes.json`](https://github.com/TypeDreamMoon/DreamGUI/blob/fd544e6cc0c76c890877b3fee7dfd3e597791046/Docs/diagnostics/codes.json).
+[the diagnostics](https://gui.toolchain.64hz.cn/en/docs/diagnostics) or the same data as JSON, [`diagnostics/codes.json`](https://github.com/TypeDreamMoon/DreamGUI/blob/81ab704076de0a38dd0710130861cfd6bcff0396/Docs/diagnostics/codes.json).
 
 `.dui` is not QML, XAML, UMG or CSS. Look every node type and property up (DreamMCP's `lookup`, or
 `DUI/.dui-symbols.json`) instead of guessing it: an unknown name is an error, not a no-op.
@@ -226,6 +226,9 @@ may leave the id out if a block or a style follows: `Text : Caption { Text = "Re
 bottom-left**, `Pivot`, `AnchoredPosition` (positive Y is **up**), `SizeDelta`. `AnchorMin = (0, 0)`,
 `AnchorMax = (1, 1)`, `SizeDelta = (0, 0)` fills the parent. Inside a box the box places it through `@slot` lines.
 `RenderTranslation = (X, Y, Z)`: X is depth (negative is nearer), Y right, Z up.
+`RenderRotation = (Pitch, Yaw, Roll)`: a positive Yaw brings the right edge nearer, so a panel on the left faces the
+middle with a negative Yaw and one on the right with a positive Yaw; a negative Pitch lays a plane back (top edge farther).
+`layout` says which way each turned face looks.
 
 ## Slots and components
 
@@ -320,7 +323,7 @@ timeline Celebrate external
 | [DUI8003](https://gui.toolchain.64hz.cn/en/docs/diagnostics/dui8xxx#dui8003) | warning | A node that draws or can be pressed under 1 px wide or high (an info for a plain widget with children), or a pressable control under 24 x 24 px. |
 | [DUI8004](https://gui.toolchain.64hz.cn/en/docs/diagnostics/dui8xxx#dui8004) | warning | Two pressable controls in one canvas overlapping on the screen by 2 px or more on both axes, wherever they are in the tree |
 | [DUI8008](https://gui.toolchain.64hz.cn/en/docs/diagnostics/dui8xxx#dui8008) | warning | A node that draws more than 4 px (and 5 % of its size) past the panel or card it sits in |
-| [DUI8009](https://gui.toolchain.64hz.cn/en/docs/diagnostics/dui8xxx#dui8009) | warning | A visual that takes no pointer, drawn after a text in its canvas, over 12 % or more of its glyphs -- or a small decoration lying mostly in the text's line. |
+| [DUI8009](https://gui.toolchain.64hz.cn/en/docs/diagnostics/dui8xxx#dui8009) | warning | A visual that takes no pointer, drawn after a text in its canvas, over 12 % or more of its glyphs -- or a small decoration lying mostly in the text's line |
 | [DUI8010](https://gui.toolchain.64hz.cn/en/docs/diagnostics/dui8xxx#dui8010) | info | A panel whose content keeps to one side (a band of 38 % or more empty), leaves a wide band empty across its middle, or spreads its rows thin |
 
 - A `Style.X = v` line changes nothing while the project has a style sheet: write `StyleSource = Inline` first.
@@ -619,8 +622,9 @@ The render transform moves where a node is drawn and leaves layout alone:
   larger, positive pushes it back -- Y is right and Z is up. `(0, -40, 0)` is 40 px to the left; `(-40, 0, 0)` is 40
   nearer.
 - `RenderRotation = (Pitch, Yaw, Roll)`, in degrees, about `RenderTransformPivot`: Yaw turns the node about its vertical
-  axis (positive brings its right edge nearer), Pitch about the horizontal one, Roll in the screen's plane (positive is
-  clockwise).
+  axis (positive brings its right edge nearer), Pitch about the horizontal one (positive brings its top edge nearer;
+  negative lays it back), Roll in the screen's plane (positive is clockwise). A panel on the left of the screen faces
+  the middle with a negative Yaw, one on the right with a positive Yaw.
 - `RenderScale = (X, Y, Z)` scales it as drawn.
 
 A list on a property that is not an array or a set, a map on one that is not a map, or a set or map of nodes, is
@@ -1726,6 +1730,63 @@ Each entry says what you see, why, and what to do; the page it links to has the 
   ClipToBounds`. [The panels](https://gui.toolchain.64hz.cn/en/docs/concepts/layout#the-panels).
 - **A world-space panel sits off its actor.** The component's `Pivot` and size go on the user widget; give the class's root
   node anchors from `(0, 0)` to `(1, 1)` and no size of its own. [World-space UI](https://gui.toolchain.64hz.cn/en/docs/concepts/world-space).
+- **A panel meant to face the middle of the screen faces away from it.** A positive Yaw brings a node's right edge
+  nearer and a positive Pitch its top edge, so the signs run the other way from what a first guess gives: a panel on
+  the left faces the middle with a negative Yaw, one on the right with a positive Yaw; a plane laid back like a table
+  takes a negative Pitch; a row of cards that curves toward the player goes from a negative Yaw on the left to a positive
+  one on the right, largest at the ends. `layout` and `preview` say which way each turned face looks as drawn
+  (`Panel RosterLeft, on the left: turned 14 degrees: faces toward the screen centre (right edge farther)`); read that
+  line after every turn. [Turned in 3D](https://gui.toolchain.64hz.cn/en/docs/plugin/language/building-blocks#turned-in-3d).
+
+```
+// DUI/Pitfalls/Facing.dui
+class /Game/UI/Pitfalls/WBP_Facing
+use "Theme.dui" as ui
+
+// The three turns, with their signs: a positive Yaw brings a node's right edge nearer, a positive Pitch its top edge.
+style Side {
+    AnchorData.AnchorMin = (0.5, 0.5)
+    AnchorData.AnchorMax = (0.5, 0.5)
+    AnchorData.Pivot = (0.5, 0.5)
+    AnchorData.SizeDelta = (360, 280)
+}
+style ArcCard : ui.Card {
+    @slot Size = (100, 150)
+}
+
+Widget Root : ui.FillParent {
+    RectBlock Backdrop : ui.ScreenBackdrop : ui.FillParent
+
+    // Two panels that face the middle: on the left a negative Yaw, on the right a positive one.
+    RectBlock FacingLeft : ui.Panel : Side {
+        AnchorData.AnchoredPosition = (-620, 160)
+        RenderRotation = (0, -16, 0)
+    }
+    RectBlock FacingRight : ui.Panel : Side {
+        AnchorData.AnchoredPosition = (620, 160)
+        RenderRotation = (0, 16, 0)
+    }
+
+    // A plane laid back, its far (top) edge narrower: a negative Pitch.
+    RectBlock Table : ui.Panel : Side {
+        AnchorData.AnchoredPosition = (0, -250)
+        AnchorData.SizeDelta = (720, 300)
+        RenderRotation = (-35, 0, 0)
+    }
+
+    // Cards that curve toward the player: negative left of the middle, positive right of it, the ends turned most.
+    HorizontalBox Arc : Side {
+        Spacing = 20
+        AnchorData.AnchoredPosition = (0, 160)
+        AnchorData.SizeDelta = (580, 150)
+        RectBlock CardA : ArcCard { RenderRotation = (0, -24, 0) }
+        RectBlock CardB : ArcCard { RenderRotation = (0, -12, 0) }
+        RectBlock CardC : ArcCard { RenderTranslation = (-20, 0, 0) }
+        RectBlock CardD : ArcCard { RenderRotation = (0, 12, 0) }
+        RectBlock CardE : ArcCard { RenderRotation = (0, 24, 0) }
+    }
+}
+```
 
 ## Rendering
 

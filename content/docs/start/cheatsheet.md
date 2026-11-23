@@ -3,7 +3,7 @@ title: ".dui 速查表"
 description: ".dui 速查表"
 ---
 
-`.dui` 语言的一页速查：文件的形态，节点、属性与值的写法，样式与资源，绑定，控制流与时间轴，以及最耗时间的那些代码。本页中每个完整文件——首行为 `// DUI/<path>.dui` 的块——都由测试套件编译并布局，无错误也无警告。要了解某一行背后的规则，请阅读[语言](/docs/dui/overview)；要了解某个代码，请阅读[诊断](/docs/diagnostics)，或同一份数据的 JSON 形式，[`diagnostics/codes.json`](https://github.com/TypeDreamMoon/DreamGUI/blob/5f3499ab06cd47d49984df6fccdfc175b9bf87a2/Docs/diagnostics/codes.json)。
+`.dui` 语言的一页速查：文件的形态，节点、属性与值的写法，样式与资源，绑定，控制流与时间轴，以及最耗时间的那些代码。本页中每个完整文件——首行为 `// DUI/<path>.dui` 的块——都由测试套件编译并布局，无错误也无警告。要了解某一行背后的规则，请阅读[语言](/docs/dui/overview)；要了解某个代码，请阅读[诊断](/docs/diagnostics)，或同一份数据的 JSON 形式，[`diagnostics/codes.json`](https://github.com/TypeDreamMoon/DreamGUI/blob/9513c3464b6fb7262e87e605d82c854be5cbf4c6/Docs/diagnostics/codes.json)。
 
 `.dui` 不是 QML、XAML、UMG 或 CSS。请查阅每个节点类型和属性（DreamMCP 的 `lookup`，或 `DUI/.dui-symbols.json`），而不是靠猜：未知名称是错误，而不是空操作。
 

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "5d91abd7083db24e0173636149921c4a126d1d29592628e9ccbc29acaa19bf44",
   "sourceRevision": "5f3499ab06cd47d49984df6fccdfc175b9bf87a2",
   "sources": [
     {
       "path": "Docs/guides/platforms.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "80afd05d8e7b",
-      "translationHash": "e081fa60a58e16798bd4d58378a57cffaafc6a2f018e4aa9c0da6c3187536311"
+      "alignedRevision": "5f3499ab06cd",
+      "alignedPage": "49e12ba6649a",
+      "translationHash": "00ee4ffc13b4393a16d437d0960010b468a0035fd9ab808def84e60022f6ff15"
     }
   ],
   "translationFile": "content/docs/guides/platforms.md",
-  "translationHash": "48b2353c056e2ee7fda481464f797a8ba0429a5886322296ff0f754234a8788a"
+  "translationHash": "e597916394f7ab01c22355e85589f819196b15d494a2e7c7fff0e83bb61ff7bd"
 }

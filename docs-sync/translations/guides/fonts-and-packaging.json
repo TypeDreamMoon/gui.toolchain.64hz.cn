@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "ecf1b1464d5bc8951ada8e4d79308ac7196877bf05712e87bbdcd3e1248a2800",
-  "sourceRevision": "da707295f1b09e8d15c29ce996933e728fa219fc",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "03381d9049bd280f14acea0c6ef2aa916af83b15",
   "sources": [
     {
       "path": "Docs/guides/fonts-and-packaging.md",

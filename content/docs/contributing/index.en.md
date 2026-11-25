@@ -5,7 +5,7 @@ description: "How to report a problem, propose a change and get a pull request m
 
 DreamGUI takes bug reports, proposals, docs fixes and pull requests on
 [GitHub](https://github.com/TypeDreamMoon/DreamGUI). This page is the overview. The checklist a pull request is held
-to is [CONTRIBUTING.md](https://github.com/TypeDreamMoon/DreamGUI/blob/4f96efb2ce30618231546aa65042bc0cde0a3bc3/CONTRIBUTING.md) in the repository. An AI agent starts at [AGENTS.md](https://github.com/TypeDreamMoon/DreamGUI/blob/4f96efb2ce30618231546aa65042bc0cde0a3bc3/AGENTS.md).
+to is [CONTRIBUTING.md](https://github.com/TypeDreamMoon/DreamGUI/blob/03381d9049bd280f14acea0c6ef2aa916af83b15/CONTRIBUTING.md) in the repository. An AI agent starts at [AGENTS.md](https://github.com/TypeDreamMoon/DreamGUI/blob/03381d9049bd280f14acea0c6ef2aa916af83b15/AGENTS.md).
 
 ## Reporting a problem
 
@@ -46,7 +46,7 @@ The whole layout is under [What is in the plugin folder](/en/docs/start/project-
 ## Building
 
 You need Unreal Engine 5.8 (source or launcher), PowerShell 7.2 or later, Python 3.8 or later and git. Win64 is the
-only platform built and run. Build in a project that has the checkout as `Plugins/DreamGUI`; the
+only platform the suite runs on. Build in a project that has the checkout as `Plugins/DreamGUI`; the
 [test host](/en/docs/tools/tests#the-test-host) is a minimal one, with the plugin as a git worktree of your clone:
 
 ```text
@@ -101,7 +101,7 @@ describes what an agent has to work with.
 
 ## License and conduct
 
-Contributions are licensed under the plugin's [MIT license](https://github.com/TypeDreamMoon/DreamGUI/blob/4f96efb2ce30618231546aa65042bc0cde0a3bc3/LICENSE); there is no CLA. The
+Contributions are licensed under the plugin's [MIT license](https://github.com/TypeDreamMoon/DreamGUI/blob/03381d9049bd280f14acea0c6ef2aa916af83b15/LICENSE); there is no CLA. The
 [code of conduct](https://github.com/TypeDreamMoon/.github/blob/main/CODE_OF_CONDUCT.md) and the
 [security policy](https://github.com/TypeDreamMoon/.github/blob/main/SECURITY.md) apply to every repository of the
 project.

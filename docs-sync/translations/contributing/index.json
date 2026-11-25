@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "69e9a3aa8fc39ab9f106edaaed4dcddc8cb6073738095908c6df088ecc987d17",
-  "sourceRevision": "4f96efb2ce30618231546aa65042bc0cde0a3bc3",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "03381d9049bd280f14acea0c6ef2aa916af83b15",
   "sources": [
     {
       "path": "Docs/contributing/index.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/contributing/index.md",
-  "translationHash": "54f3118a34bec7945853a70c790a96ec5a34d4fc5d2f736e080211dde75714ce"
+  "translationHash": "b7e8393eda1df33db20e8b23cb3c35f4af55c1141686304186c0bb25643ceca2"
 }

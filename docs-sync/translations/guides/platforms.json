@@ -2,7 +2,7 @@
   "version": 2,
   "status": "outdated",
   "sourceHash": null,
-  "sourceRevision": "03381d9049bd280f14acea0c6ef2aa916af83b15",
+  "sourceRevision": "27bf1c55f55adf0e6040619d0df53cef61d02182",
   "sources": [
     {
       "path": "Docs/guides/platforms.md",

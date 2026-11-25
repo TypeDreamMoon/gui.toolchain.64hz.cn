@@ -2,7 +2,7 @@
 
 > DreamGUI is a UI plugin for Unreal Engine 5.8 whose screens are written as text: a .dui file under a project's DUI/ folder is the source of one widget Blueprint, a tree of widgets with their properties, layout, styles, bindings and animations.
 
-The full text of the pages listed in https://gui.toolchain.64hz.cn/llms.txt, English, generated from the plugin repository TypeDreamMoon/DreamGUI at 27bf1c55f55a.
+The full text of the pages listed in https://gui.toolchain.64hz.cn/llms.txt, English, generated from the plugin repository TypeDreamMoon/DreamGUI at 448a710f6838.
 
 
 ---

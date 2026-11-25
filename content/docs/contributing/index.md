@@ -3,7 +3,7 @@ title: "贡献"
 description: "如何报告问题、提出更改并让拉取请求获得合并——问题表单与环境命令、仓库布局、在宿主项目中构建、Quick 测试门禁、随更改需要更新的内容、文档与翻译流程，以及 AI 辅助贡献。"
 ---
 
-DreamGUI 在 [GitHub](https://github.com/TypeDreamMoon/DreamGUI) 上接收缺陷报告、提案、文档修复和拉取请求。本页是总览。拉取请求必须遵守的检查清单是仓库中的 [CONTRIBUTING.md](https://github.com/TypeDreamMoon/DreamGUI/blob/448a710f68380456ed01761ebe6160db8066d131/CONTRIBUTING.md)。AI 代理从 [AGENTS.md](https://github.com/TypeDreamMoon/DreamGUI/blob/448a710f68380456ed01761ebe6160db8066d131/AGENTS.md) 开始。
+DreamGUI 在 [GitHub](https://github.com/TypeDreamMoon/DreamGUI) 上接收缺陷报告、提案、文档修复和拉取请求。本页是总览。拉取请求必须遵守的检查清单是仓库中的 [CONTRIBUTING.md](https://github.com/TypeDreamMoon/DreamGUI/blob/7d47bff7219363c6c4b24b59f0bc0fdf04d31ab9/CONTRIBUTING.md)。AI 代理从 [AGENTS.md](https://github.com/TypeDreamMoon/DreamGUI/blob/7d47bff7219363c6c4b24b59f0bc0fdf04d31ab9/AGENTS.md) 开始。
 
 ## 报告问题 [#reporting-a-problem]
 
@@ -40,7 +40,7 @@ pwsh -NoProfile -File Plugins/DreamGUI/Tools/Get-DreamGUIEnvironment.ps1
 
 ## 构建 [#building]
 
-你需要 Unreal Engine 5.8（源码版或启动器版）、PowerShell 7.2 或更高版本、Python 3.8 或更高版本以及 git。Win64 是唯一构建和运行的平台。请在将检出内容作为 `Plugins/DreamGUI` 的项目中构建；[测试宿主](/docs/tools/tests#the-test-host) 是一个最小项目，其中插件是你的克隆的 git 工作树：
+你需要 Unreal Engine 5.8（源码版或启动器版）、PowerShell 7.2 或更高版本、Python 3.8 或更高版本以及 git。Win64 是该套件唯一运行的平台。请在将检出内容作为 `Plugins/DreamGUI` 的项目中构建；[测试宿主](/docs/tools/tests#the-test-host) 是一个最小项目，其中插件是你的克隆的 git 工作树：
 
 ```text
 pwsh -NoProfile -File Tools/TestHost/New-DreamGUITestHost.ps1 -Root <host folder> -RepoPath <your clone> -Branch <your branch> -Detach -EngineRoot <engine root>
@@ -78,4 +78,4 @@ pwsh -NoProfile -File Tools/Tests/Invoke-DreamGUITests.ps1 -Project "<Project>/<
 
 ## 许可与行为准则 [#license-and-conduct]
 
-贡献内容按插件的 [MIT 许可证](https://github.com/TypeDreamMoon/DreamGUI/blob/448a710f68380456ed01761ebe6160db8066d131/LICENSE) 授权；没有 CLA。[行为准则](https://github.com/TypeDreamMoon/.github/blob/main/CODE_OF_CONDUCT.md)与[安全策略](https://github.com/TypeDreamMoon/.github/blob/main/SECURITY.md)适用于本项目的每一个仓库。
+贡献内容按插件的 [MIT 许可证](https://github.com/TypeDreamMoon/DreamGUI/blob/7d47bff7219363c6c4b24b59f0bc0fdf04d31ab9/LICENSE) 授权；没有 CLA。[行为准则](https://github.com/TypeDreamMoon/.github/blob/main/CODE_OF_CONDUCT.md)与[安全策略](https://github.com/TypeDreamMoon/.github/blob/main/SECURITY.md)适用于本项目的每一个仓库。

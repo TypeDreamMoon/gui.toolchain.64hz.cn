@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "status": "outdated",
-  "sourceHash": null,
+  "status": "current",
+  "sourceHash": "97a17d5ffd4a23a6020df098e4cb6194742a06449ebb6c6f391c00c2693ea76c",
   "sourceRevision": "4cca91ea01169cf18afc687995d6e2f2effd25f4",
   "sources": [
     {
       "path": "Docs/concepts/canvas.md",
-      "alignedRevision": "aa0301eb152c",
-      "alignedPage": "907e480a9412",
-      "translationHash": "9617ba4178532051cce0f379997b877085e7509df7442108983d00b563acc82d"
+      "alignedRevision": "448a710f6838",
+      "alignedPage": "40987417fe63",
+      "translationHash": "0a8991eb0e298a67e0b0467b32a98806fa9606903c0179c15bb063772ec2c381"
     }
   ],
   "translationFile": "content/docs/concepts/canvas.md",
-  "translationHash": "ea4e3e6d4e1ac3b363d57f1aa0f2b99875861e9a79d0531cc70fb98637420a82"
+  "translationHash": "bf494301e48f51097194fdf9a3f384950d337ddb96d313fe923ef21aa4435651"
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "794194ddeca669dc8e52b98371bc46b4000b6c8384356e62ace8e9199176eb1c",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "4cca91ea01169cf18afc687995d6e2f2effd25f4",
   "sources": [
     {
       "path": "Docs/concepts/canvas.md",

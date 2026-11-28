@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "23df8f217d102afc3768b22df815fac80b3ab94d82d0d19138d3588017caedaf",
-  "sourceRevision": "0d3ba4f43fc5df970e34a76e5de9657856765a9c",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "31fe34f7716b54ef15996f0e43f1e26d230bf18a",
   "sources": [
     {
       "path": "Docs/guides/migration.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/guides/migration.md",
-  "translationHash": "6a323b13d5c19de1a0fb895c4431dd0cac00d519a811aeb2fbd380f4aae7e3c8"
+  "translationHash": "cf846788dd8947cf5f260295c1e99fb946688ed7e3510d51c31e4ff8dfda4699"
 }

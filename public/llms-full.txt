@@ -2,7 +2,7 @@
 
 > DreamGUI is a UI plugin for Unreal Engine 5.8 whose screens are written as text: a .dui file under a project's DUI/ folder is the source of one widget Blueprint, a tree of widgets with their properties, layout, styles, bindings and animations.
 
-The full text of the pages listed in https://gui.toolchain.64hz.cn/llms.txt, English, generated from the plugin repository TypeDreamMoon/DreamGUI at 7d47bff72193.
+The full text of the pages listed in https://gui.toolchain.64hz.cn/llms.txt, English, generated from the plugin repository TypeDreamMoon/DreamGUI at 31fe34f7716b.
 
 
 ---
@@ -13,16 +13,16 @@ Source: https://gui.toolchain.64hz.cn/en/docs/start/cheatsheet/
 
 One page of the `.dui` language: the shape of a file, how nodes, properties and values are written, styles and
 resources, bindings, control flow and timelines, and the codes that cost the most time. Every complete file on this
-page — a block whose first line is `// DUI/<path>.dui` — is compiled and laid out by the test suite with no error and
-no warning. For the rules behind a line, read [the language](https://gui.toolchain.64hz.cn/en/docs/dui/overview); for a code,
-[the diagnostics](https://gui.toolchain.64hz.cn/en/docs/diagnostics) or the same data as JSON, [`diagnostics/codes.json`](https://github.com/TypeDreamMoon/DreamGUI/blob/81ab704076de0a38dd0710130861cfd6bcff0396/Docs/diagnostics/codes.json).
+page — a block whose first line is `// DUI/<path>.dui`, the path under the source folder — is compiled and laid out
+by the test suite with no error and no warning. For the rules behind a line, read [the language](https://gui.toolchain.64hz.cn/en/docs/dui/overview); for a code,
+[the diagnostics](https://gui.toolchain.64hz.cn/en/docs/diagnostics) or the same data as JSON, [`diagnostics/codes.json`](https://github.com/TypeDreamMoon/DreamGUI/blob/31fe34f7716b54ef15996f0e43f1e26d230bf18a/Docs/diagnostics/codes.json).
 
-`.dui` is not QML, XAML, UMG or CSS. Look every node type and property up (DreamMCP's `lookup`, or
-`DUI/.dui-symbols.json`) instead of guessing it: an unknown name is an error, not a no-op.
+`.dui` is not QML, XAML, UMG or CSS. Look every node type and property up (DreamMCP's `lookup`, or the
+symbols in `Intermediate/DreamSource/ui.db`) instead of guessing it: an unknown name is an error, not a no-op.
 
 ## A file
 
-A file lives under a `DUI/` folder (the project's or a plugin's), never under `Content/`. It is a list of statements,
+A file lives under a source folder (`DreamSource/UI/`, the project's or a plugin's), never under `Content/`. It is a list of statements,
 one per line or separated by `;`, in any order:
 
 | Statement | Purpose |
@@ -350,16 +350,17 @@ designer writes its edits back into the file. This page is the reference for wri
 
 ## Where a file lives
 
-Under a `DUI/` directory: the project's (`<Project>/DUI/`) or an enabled plugin's (`<Plugin>/DUI/`). Not under
-`Content/` -- a `.dui` is source, not an asset.
+Under a source folder: the project's (`<Project>/DreamSource/UI/` by default, set in *Project Settings ▸ Dream Source ▸
+UI*) or an enabled plugin's (`<Plugin>/DreamSource/UI/`). Not under `Content/` -- a `.dui` is source, not an asset. An
+older project's `DUI/` folder is still read; see [Project layout](https://gui.toolchain.64hz.cn/en/docs/start/project-layout#the-old-dui-folder).
 
 A path to another file -- in a Blueprint's Source File, or after `use` -- is written one of three ways:
 
 | Spelling | Means |
 |---|---|
-| `Panels/Settings.dui` | Relative to a `DUI/` root: the project's first, then each plugin's, the first that has the file. |
-| `Plugin.MyPlugin:Panels/Settings.dui` | That plugin's `DUI/` directory. |
-| `D:/Work/Proj/DUI/Panels/Settings.dui` | Absolute, used as written. |
+| `Panels/Settings.dui` | Relative to a source folder: the project's first, then each plugin's, the first that has the file. |
+| `Plugin.MyPlugin:Panels/Settings.dui` | That plugin's source folder. |
+| `D:/Work/Proj/DreamSource/UI/Panels/Settings.dui` | Absolute, used as written. |
 
 
 ## File structure
@@ -551,7 +552,8 @@ that class's properties. The class must be a concrete DreamUI user widget (DUI50
 Because tags and containers are asked first, an alias can never change what `Text` or `VerticalBox` means; an alias
 that tries is refused (DUI3018).
 
-`DUI/.dui-symbols.json`, which the editor writes on start and on `DreamUI.ExportSymbols`, lists every tag, container
+The symbols in `Intermediate/DreamSource/ui.db`, which the editor writes on start and on `DreamUI.ExportSymbols`, list
+every tag, container
 and registered widget with its properties, for an editor's completion.
 
 
@@ -632,7 +634,7 @@ DUI4009; a list or a map that does not read (a bracket never closed, a map entry
 
 A string can carry the key it is localized under: `Text = "OK" @key("Dialog.Confirm")`. Without one the key is
 `<node id>.<property>` -- with the component's class and position between the two for a line of a `+` block -- in the
-namespace the `class` line gives. A file without a `class` line uses its path under its `DUI/` folder
+namespace the `class` line gives. A file without a `class` line uses its path under its source folder
 (`Panels/Settings.dui`, `Plugin.X:Panels/Settings.dui`), the same on every machine.
 
 Three more annotations say what a translator needs, after the string and in any order:
@@ -1434,8 +1436,8 @@ Source: https://gui.toolchain.64hz.cn/en/docs/dui/example/
 ## A worked example
 
 A settings screen built from one row component. Three files: the component, a library that names it and styles the
-family, and the screen. Copied as they are into a project's `DUI/` folder, they compile and lay out with no error and no
-warning: the screen needs nothing from C++ or a Blueprint graph.
+family, and the screen. Copied as they are into a project's source folder (`DreamSource/UI/`, at the path after
+`DUI/`), they compile and lay out with no error and no warning: the screen needs nothing from C++ or a Blueprint graph.
 
 The row -- a label on the left, a value with arrows on the right -- declares what a host sets and hears:
 

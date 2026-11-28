@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "66c256c3312498e4bf1d5e675811cdf2cd19c69b4db89434d1c12c88c870161f",
-  "sourceRevision": "81ab704076de0a38dd0710130861cfd6bcff0396",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "31fe34f7716b54ef15996f0e43f1e26d230bf18a",
   "sources": [
     {
       "path": "Docs/language/building-blocks.md",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "ac24b943f8ba99d3efc6d7fef14120d547182c3b0835684551380635c6257f60",
-  "sourceRevision": "81ab704076de0a38dd0710130861cfd6bcff0396",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "31fe34f7716b54ef15996f0e43f1e26d230bf18a",
   "sources": [
     {
       "path": "Docs/cheatsheet.md",
@@ -12,5 +12,5 @@
     }
   ],
   "translationFile": "content/docs/start/cheatsheet.md",
-  "translationHash": "c6398f5b6f162df57e5e195ab4b3ea0ce93644b6d18e83f9cd8e007e9d271d62"
+  "translationHash": "fd81ddbb307e80f523eadb2f371937379fbeb746c20883c17e300eba3cae8fcc"
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "9a4f83ca092587e98c698a234180600de23fc14ed6e2930ea775e9978aff266b",
-  "sourceRevision": "a6721423cb94a7eaa4d0a69b128d3ab358ab2eef",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "31fe34f7716b54ef15996f0e43f1e26d230bf18a",
   "sources": [
     {
       "path": "Docs/concepts/widget-blueprints.md",

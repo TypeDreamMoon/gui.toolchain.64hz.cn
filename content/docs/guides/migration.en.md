@@ -4,7 +4,7 @@ description: "Moving assets saved against LGUI / LexUI, a project on the early s
 ---
 
 1.0.0 is the first public release. The fork's development builds before it were numbered 1.x, 2.0 and 2.1 -- see the
-[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/CHANGELOG.md) -- and this guide names them that way: a 2.1 here is the development build, older than 1.0.0.
+[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/31fe34f7716b54ef15996f0e43f1e26d230bf18a/CHANGELOG.md) -- and this guide names them that way: a 2.1 here is the development build, older than 1.0.0.
 
 For five kinds of project:
 
@@ -19,7 +19,7 @@ For five kinds of project:
 
 The numbered sections are the move to the 2.0 line from LGUI, LexUI or the 1.x builds; a project making it reads
 [From 2.0 to 2.1](#from-20-to-21) and [From 2.1 to 1.0.0](#from-21-to-100) afterwards. Everything here is about keeping what you have. What the plugin is and how to start from
-nothing is in the [README](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/README.md); what each version added is in the [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/CHANGELOG.md).
+nothing is in the [README](https://github.com/TypeDreamMoon/DreamGUI/blob/31fe34f7716b54ef15996f0e43f1e26d230bf18a/README.md); what each version added is in the [CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/31fe34f7716b54ef15996f0e43f1e26d230bf18a/CHANGELOG.md).
 
 ## From 1.0.0 to the next release
 
@@ -137,6 +137,12 @@ outside them through, and a screen built around the old way will feel different:
 A C++ subclass of `UDreamSpinBox` or of the list family that overrides `NativeOnKeyDown` calls `Super` to keep these
 keys, as for any key the base answers.
 
+`.dui` sources now live in `<Project>/DreamSource/UI/` (the folder is a project setting). A project's `DUI/` folder keeps
+working while there is no `DreamSource/UI/`; the editor says so once a session and offers to move it, and the VS Code
+extension's *DreamUI: Migrate DUI/ to DreamSource* does the same. Paths relative to the source folder stay as they are.
+Delete `DUI/.dui-symbols.json` and `DUI/.dui-diagnostics.json` if a move left them behind: the editor writes
+`Intermediate/DreamSource/ui.db` now. See [Project layout](/en/docs/start/project-layout#the-old-dui-folder).
+
 ## From 2.1 to 1.0.0
 
 For a project on the 2.1.0 development build. Nothing was renamed between the two, so an asset 2.1 saved naming the
@@ -175,7 +181,7 @@ below say what the redirects cover.
 
 For a project already on 2.0. Nothing was renamed, so no redirect is needed and nothing has to be done before opening
 the project; what follows is what can look or behave differently afterwards, and what C++ of your own has to change. The
-[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/CHANGELOG.md) lists what is new.
+[CHANGELOG](https://github.com/TypeDreamMoon/DreamGUI/blob/31fe34f7716b54ef15996f0e43f1e26d230bf18a/CHANGELOG.md) lists what is new.
 
 ### Before you upgrade
 
@@ -612,7 +618,7 @@ report.
 `DreamGUIRenderer` (drawing, effects' render proxies), `DreamGUI` (widgets, visuals, canvases), `DreamGUIInput`
 (event systems, raycasters, navigation, the viewport client), `DreamGUIControls` (the `Dream*` controls and the
 `UI*` behaviours), `DreamGUIExtensions` (lines, rings, effects, render-target helpers). The README's
-[module table](https://github.com/TypeDreamMoon/DreamGUI/blob/0d3ba4f43fc5df970e34a76e5de9657856765a9c/README.md#modules) says what is where.
+[module table](https://github.com/TypeDreamMoon/DreamGUI/blob/31fe34f7716b54ef15996f0e43f1e26d230bf18a/README.md#modules) says what is where.
 
 **Includes.** Every header kept its path except those in the README's
 [include table](https://gui.toolchain.64hz.cn/en/docs/guides/migration).

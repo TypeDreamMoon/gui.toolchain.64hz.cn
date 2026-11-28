@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "status": "current",
-  "sourceHash": "fd91edee65a6c6702bfd64808fef5b8ab36741466c27f41bab60ef2e945b9085",
-  "sourceRevision": "d03670b32e0e607754f247bd18ebe76b873b325f",
+  "status": "outdated",
+  "sourceHash": null,
+  "sourceRevision": "31fe34f7716b54ef15996f0e43f1e26d230bf18a",
   "sources": [
     {
       "path": "Docs/getting-started/first-screen.md",
